@@ -1,22 +1,15 @@
-sudo: required
+sudo: false
 dist: trusty
-language: generic
 os: linux
-
-matrix:
-  - PACKAGES="yarn"
+language: generic
 
 before_install:
   - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
-
 install:
-  - nvm install && nvm use && npm i -g yarn && yarn install
-
+  - nvm install && nvm use && npm install --global yarn && yarn install
 before_script:
-  - clang --version
-
+  - export PATH="$PATH:$HOME/.yarn/bin"
 script:
   - make all
-
 after_script:
   - echo $TRAVIS_COMMIT_RANGE

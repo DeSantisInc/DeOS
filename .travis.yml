@@ -10,15 +10,10 @@ before_install:
   - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
 
 install:
-  - if [ -n "$PACKAGES" ]; then travis_retry sudo curl https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -; fi
-  - if [ -n "$PACKAGES" ]; then travis_retry echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list; fi
-  - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get update; fi
-  - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get install --no-install-recommends --no-upgrade -qq $PACKAGES; fi
-  - if [ -n "$PACKAGES" ]; then travis_retry yarn install; fi
-  - nvm install
+  - nvm install && nvm use && npm i -g yarn && yarn install
 
 before_script:
-  - nvm use
+  - clang --version
 
 script:
   - make all

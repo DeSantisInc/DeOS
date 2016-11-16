@@ -6,7 +6,7 @@
     "webpack-dev-server": "^1.16.2",
     "webtorrent": "^0.97.2"
   },
-  "license": "MIT",
+  "license": "BSD-2-Clause",
   "main": "index.js",
   "name": "deos",
   "scripts": {

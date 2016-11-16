@@ -14,7 +14,7 @@ all: build
 	@$(PRINT) purple $@ stop
 
 build:
+	@chmod +x $(PRINT)
 	@$(PRINT) yellow $@ start
-	chmod +x $(PRINT)
 	clang --version
 	@$(PRINT) yellow $@ stop

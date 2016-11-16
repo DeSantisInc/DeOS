@@ -1,6 +1,5 @@
 #[DeOS Environment]
 IS_FALSE=0
-IS_LINUX=
 IS_MAC=Darwin
 IS_TRUE=1
 

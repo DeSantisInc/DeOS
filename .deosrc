@@ -1,0 +1,10 @@
+#[paths]
+PATH_BASE=$(CURDIR)
+PATH_BIN=$(PATH_BASE)/bin
+
+#[executables]
+PIP=$(shell which pip2.7)
+PRINT=$(PATH_BIN)/printm
+PY=$(shell which python2.7)
+SH=$(shell which bash)
+VENV=$(shell which virtualenv)

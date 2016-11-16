@@ -12,10 +12,11 @@ install:
   - if [ -n "$DPKG_ADD_ARCH" ]; then sudo dpkg --add-architecture "$DPKG_ADD_ARCH" ; fi
   - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get update; fi
   - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get install --no-install-recommends --no-upgrade -qq $PACKAGES; fi
-  - nvm install && nvm use
-  - sudo apt-get install yarn && yarn install
+  - nvm install
+  - sudo apt-get install yarn
 before_script:
-  - echo "before_script"
+  - nvm use
+  - yarn install
 script:
   - make all
 after_script:

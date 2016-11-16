@@ -14,8 +14,7 @@ install:
   - if [ -n "$PACKAGES" ]; then travis_retry echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list; fi
   - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get update; fi
   - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get install --no-install-recommends --no-upgrade -qq $PACKAGES; fi
-  - export PATH="$PATH:$HOME/.yarn/bin"
-  - yarn install
+  - if [ -n "$PACKAGES" ]; then travis_retry yarn install; fi
   - nvm install
 
 before_script:

@@ -6,10 +6,17 @@ language: generic
 before_install:
   - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
 install:
+  - sudo curl https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
   - if [ -n "$PPA" ]; then travis_retry sudo add-apt-repository "$PPA" -y; fi
   - if [ -n "$DPKG_ADD_ARCH" ]; then sudo dpkg --add-architecture "$DPKG_ADD_ARCH" ; fi
   - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get update; fi
   - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get install --no-install-recommends --no-upgrade -qq $PACKAGES; fi
+  - sudo apt-get install yarn
+  - yarn install
+  - nvm install
+before_script:
+  - nvm use
 script:
   - make all
 after_script:

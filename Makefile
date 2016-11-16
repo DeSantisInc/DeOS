@@ -10,7 +10,7 @@ include .deosrc
 
 all: build
 	@$(PRINT) purple $@ start
-	@echo "hello, world!"
+	yarn --version
 	@$(PRINT) purple $@ stop
 
 build:

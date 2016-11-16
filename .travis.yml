@@ -8,12 +8,11 @@ before_install:
 install:
   - sudo curl https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  - sudo apt-get update
+  - if [ -n "$PPA" ]; then travis_retry sudo add-apt-repository "$PPA" -y; fi
+  - if [ -n "$DPKG_ADD_ARCH" ]; then sudo dpkg --add-architecture "$DPKG_ADD_ARCH" ; fi
+  - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get update; fi
+  - if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get install --no-install-recommends --no-upgrade -qq $PACKAGES; fi
   - nvm install
-  #- if [ -n "$PPA" ]; then travis_retry sudo add-apt-repository "$PPA" -y; fi
-  #- if [ -n "$DPKG_ADD_ARCH" ]; then sudo dpkg --add-architecture "$DPKG_ADD_ARCH" ; fi
-  #- if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get update; fi
-  #- if [ -n "$PACKAGES" ]; then travis_retry sudo apt-get install --no-install-recommends --no-upgrade -qq $PACKAGES; fi
 before_script:
   - nvm use
 script:

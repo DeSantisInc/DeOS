@@ -10,11 +10,12 @@ include .deosrc
 
 all: build
 	@$(PRINT) purple $@ start
-	yarn --version
+	$(PATH_BIN)/deos
 	@$(PRINT) purple $@ stop
 
 build:
 	@chmod +x $(PRINT)
 	@$(PRINT) yellow $@ start
-	@echo $(DEOS_HOST_OS)
+	$(CC) -std=c89 -Wall -g -pthread $(PATH_DOJO)/main.c -o $(PATH_BIN)/deos
+	chmod +x $(PATH_BIN)/deos
 	@$(PRINT) yellow $@ stop

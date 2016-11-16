@@ -3,5 +3,18 @@ dist: trusty
 os: linux
 language: generic
 
+before_install:
+  - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
+install:
+  - sudo curl https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  - sudo apt-get update
+  - nvm install
+  - sudo apt-get install yarn
+  - yarn install
+before_script:
+  - nvm use
 script:
   - echo "Hello, world!"
+after_script:
+  - echo $TRAVIS_COMMIT_RANGE

@@ -1,8 +1,21 @@
-#[paths]
+#[DeOS Environment]
+IS_FALSE=0
+IS_LINUX=
+IS_MAC=Darwin
+IS_TRUE=1
+
+#[System]
+DEOS_APP_NAME=freebird
+DEOS_ASMJS=$(IS_FALSE)
+DEOS_CLEAN_ALL=$(IS_FALSE)
+DEOS_DEBUG=$(IS_TRUE)
+DEOS_HOST_OS=$(shell uname -s)
+
+#[Paths]
 PATH_BASE=$(CURDIR)
 PATH_BIN=$(PATH_BASE)/bin
 
-#[executables]
+#[Executables]
 PIP=$(shell which pip2.7)
 PRINT=$(PATH_BIN)/printm
 PY=$(shell which python2.7)

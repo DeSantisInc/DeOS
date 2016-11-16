@@ -16,5 +16,5 @@ all: build
 build:
 	@chmod +x $(PRINT)
 	@$(PRINT) yellow $@ start
-	clang --version
+	@echo $(DEOS_HOST_OS)
 	@$(PRINT) yellow $@ stop

@@ -20,10 +20,9 @@ build:
 	chmod +x $(PATH_BIN)/deos
 	@$(PRINT) yellow $@ stop
 
-dev:
+dev: down
 	vagrant up
-	#vagrant reload --provision
 	$(MAKE) vagrant.ssh
 
-reset:
-	@echo $@
+down:
+	vagrant destroy

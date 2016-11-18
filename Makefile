@@ -2,7 +2,7 @@ export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
 
-.PHONY: all build
+.PHONY: all build dev
 
 .SUBLIME_TARGETS: all
 
@@ -19,3 +19,10 @@ build:
 	$(CC) -std=c89 -Wall -g -pthread $(PATH_DOJO)/main.c -o $(PATH_BIN)/deos
 	chmod +x $(PATH_BIN)/deos
 	@$(PRINT) yellow $@ stop
+
+dev:
+	vagrant reload --provision
+	$(MAKE) vagrant.ssh
+
+reset:
+	@echo $@

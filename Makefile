@@ -21,7 +21,8 @@ build:
 	@$(PRINT) yellow $@ stop
 
 dev:
-	vagrant reload --provision
+	vagrant up
+	#vagrant reload --provision
 	$(MAKE) vagrant.ssh
 
 reset:

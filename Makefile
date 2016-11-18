@@ -1,9 +1,7 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
-
-.PHONY: all build dev
-
+.PHONY: all build dev test
 .SUBLIME_TARGETS: all
 
 include .deosrc
@@ -12,6 +10,9 @@ all: build
 	@$(PRINT) purple $@ start
 	$(PATH_BIN)/deos
 	@$(PRINT) purple $@ stop
+
+test:
+	nvm --version
 
 build:
 	@chmod +x $(PRINT)
@@ -22,7 +23,7 @@ build:
 
 dev: down
 	vagrant up
-	$(MAKE) vagrant.ssh
+	vagrant ssh -c "cd /vagrant; bash -i -c 'ipython'"
 
 down:
 	vagrant destroy

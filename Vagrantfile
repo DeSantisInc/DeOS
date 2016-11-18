@@ -16,7 +16,8 @@ Vagrant.configure("2") do |config|
     ln -s /vagrant/etc/nginx/nginx.conf /etc/nginx/nginx.conf
     if ! [ -L /etc/nginx/sites-available/default ]; then
       rm -rf /etc/nginx/sites-available/default
-      ln -s /vagrant/etc/nginx/sites-available/deos.conf /etc/nginx/sites-available/deos.conf
+      ln -s /vagrant/etc/nginx/sites-available/deos.conf \
+            /etc/nginx/sites-available/deos.conf
     fi
   SHELL
   config.vm.provision :shell, inline: <<-SHELL
@@ -34,7 +35,11 @@ Vagrant.configure("2") do |config|
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
     cd /vagrant && nvm install && nvm use
   SHELL
-  config.vm.provision :shell, privileged: false, run: "always", inline: <<-SHELL
-    jupyter notebook --notebook-dir=/vagrant/var/notebook --no-browser --ip=0.0.0.0 &
+  config.vm.provision :shell, privileged: false, 
+                              run: "always",
+                              inline: <<-SHELL
+    jupyter notebook --notebook-dir=/vagrant/var/notebook \
+                     --no-browser \
+                     --ip=0.0.0.0 &
   SHELL
 end

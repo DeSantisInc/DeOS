@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
     sudo apt-get install -y nginx
     rm /etc/nginx/nginx.conf
     ln -s /vagrant/etc/nginx/nginx.conf /etc/nginx/nginx.conf
-    if ! [ -L /etc/nginx/sites-available/default ]; then
+    if ![ -L /etc/nginx/sites-available/default ]; then
       rm -rf /etc/nginx/sites-available/default
       ln -s /vagrant/etc/nginx/sites-available/deos.conf \
             /etc/nginx/sites-available/deos.conf
@@ -35,9 +35,11 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :shell, privileged: false, inline: <<-SHELL
     ipython profile create vagrant
-    rm /home/vagrant/.ipython/profile_vagrant/ipython_config.py
-    ln -s /vagrant/etc/ipython/ipython_config.py \
-          /home/vagrant/.ipython/profile_vagrant/ipython_config.py
+    if ![ -L /home/vagrant/.ipython/profile_vagrant/ipython_config.py ]; then
+      rm /home/vagrant/.ipython/profile_vagrant/ipython_config.py
+      ln -s /vagrant/etc/ipython/ipython_config.py \
+            /home/vagrant/.ipython/profile_vagrant/ipython_config.py
+    fi
   SHELL
 
   config.vm.provision :shell, privileged: false, inline: <<-SHELL

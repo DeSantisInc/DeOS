@@ -23,7 +23,7 @@ build:
 
 dev: down
 	vagrant up
-	vagrant ssh -c "cd /vagrant; bash -i -c 'ipython'"
+	vagrant ssh -c "cd /vagrant; bash -i -c 'ipython --profile=vagrant'"
 
 down:
 	vagrant destroy

@@ -1,5 +1,4 @@
 #[dotfiles]
-.deos_history
 .DS_Store
 
 #[files]

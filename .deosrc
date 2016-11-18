@@ -43,7 +43,7 @@ EXE=$(DEOS_APP_NAME)
 endif
 
 #[DeOS Profile]
-include .deos_profile.example
+include .deos_profile
 
 #[Drivers]
 include config/deos.rules.vagrant.mk

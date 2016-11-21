@@ -49,7 +49,12 @@ Vagrant.configure("2") do |config|
     wget -qO- https://raw.github.com/creationix/nvm/v0.32.1/install.sh | sh
     export NVM_DIR="/home/vagrant/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    cd /vagrant && nvm install && nvm use
+    cd /vagrant \
+    && nvm install \
+    && nvm use \
+    && npm install --global yarn \
+    && yarn install
+    export PATH="$PATH:$HOME/.yarn/bin"
   SHELL
   config.vm.provision :shell, privileged:false, run:"always", inline:<<-SHELL
     jupyter notebook --notebook-dir=/vagrant/var/notebook \

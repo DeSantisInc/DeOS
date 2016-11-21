@@ -10,3 +10,6 @@
 [submodule "ext/DeWEB"]
 	path = ext/DeWEB
 	url = https://github.com/DeSantisInc/DeWEB.git
+[submodule "ext/DePOST"]
+	path = ext/DePOST
+	url = https://github.com/DeSantisInc/DePOST.git

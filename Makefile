@@ -12,7 +12,7 @@ all: logic
 
 down:; (vagrant destroy DeVM)
 
-ssh:; (vagrant ssh -c $(VM_CMD) DeVM)
+ssh:; (open ./dojo/index.html && vagrant ssh -c $(VM_CMD) DeVM)
 
 travis: logic.travis
 

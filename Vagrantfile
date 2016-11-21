@@ -41,6 +41,7 @@ Vagrant.configure("2") do |config|
       ln -s /vagrant/etc/nginx/sites-available/deos.conf \
             /etc/nginx/sites-available/deos.conf
     fi
+    sudo service nginx reload
   SHELL
   config.vm.provision :shell, inline:<<-SHELL
     apt-get install -y python2.7

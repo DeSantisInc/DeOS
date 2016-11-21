@@ -1,3 +1,6 @@
 [submodule "ext/DeNGINX"]
 	path = ext/DeNGINX
 	url = https://github.com/DeSantisInc/DeNGINX.git
+[submodule "ext/DeWIKI"]
+	path = ext/DeWIKI
+	url = https://github.com/DeSantisInc/DeWIKI.git

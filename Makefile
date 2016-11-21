@@ -8,6 +8,8 @@ include .deosrc
 
 all: logic
 
+travis: logic.travis
+
 test:
 	nvm --version
 

@@ -1,5 +1,7 @@
 #[logic]
 logic: logic.run.pre logic.run logic.run.post
+logic.travis: logic.run.pre logic.run.travis logic.run.post
+
 
 #[Build]
 logic.build: logic.clean $(OBJECTS)
@@ -36,6 +38,8 @@ logic.run.pre: logic.run.new
 #[Run]
 logic.run:
 	$(PATH_BIN)/logic
+logic.run.travis:
+	@echo "hello, world!"
 
 #[Post-Hook]
 logic.run.post:

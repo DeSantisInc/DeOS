@@ -1,4 +1,4 @@
-# [ΔOS: Decentralized Operating System](https://www.desantis.io) | [![Build Status](https://travis-ci.org/DeSantisInc/DeOS.svg?branch=master)](https://travis-ci.org/DeSantisInc/DeOS) [![Community](https://img.shields.io/badge/community-slack-orange.svg?style=flat)](https://desantis.im) ![License](https://img.shields.io/pypi/l/Django.svg)
+# [ΔOS: Decentralized Operating System](https://www.desantis.io) | [![Build Status](https://travis-ci.org/DeSantisInc/DeOS.svg?branch=master)](https://travis-ci.org/DeSantisInc/DeOS) [![Community](https://img.shields.io/badge/community-slack-orange.svg?style=flat)](https://desantis.im) ![License](https://raw.githubusercontent.com/DeSantisInc/DeOS/atd-release-v0.3-alpha/var/github/badges/license-bsd.svg)
 
 > *The languages of intelligence (writing) and self-interest (money) are the*
 > *mind's greatest creations; both must be decentralized or all is lost.*

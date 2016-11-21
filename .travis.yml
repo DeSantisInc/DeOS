@@ -9,6 +9,6 @@ install:
 before_script:
   - export PATH="$PATH:$HOME/.yarn/bin"
 script:
-  - make all
+  - make travis
 after_script:
   - echo $TRAVIS_COMMIT_RANGE

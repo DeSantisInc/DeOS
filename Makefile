@@ -10,16 +10,6 @@ all: logic
 
 travis: logic.travis
 
-test:
-	nvm --version
-
-build:
-	@chmod +x $(PRINT)
-	@$(PRINT) yellow $@ start
-	$(CC) -std=c89 -Wall -g -pthread $(PATH_DOJO)/main.c -o $(PATH_BIN)/deos
-	chmod +x $(PATH_BIN)/deos
-	@$(PRINT) yellow $@ stop
-
 dev: #down
 	vagrant up
 	$(MAKE) ssh

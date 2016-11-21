@@ -3,7 +3,7 @@ import validate from 'webpack-validator';
 import merge from 'webpack-merge';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-import baseConfig from './webpack.config.common';
+import baseConfig from './config.common';
 
 const config = validate(merge(baseConfig, {
   target: 'electron-renderer',

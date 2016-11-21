@@ -5,7 +5,7 @@ import validate from 'webpack-validator';
 import merge from 'webpack-merge';
 import formatter from 'eslint-formatter-pretty';
 
-import baseConfig from './webpack.config.common';
+import baseConfig from './config.common';
 
 const port = process.env.PORT || 3000;
 

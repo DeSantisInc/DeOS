@@ -81,3 +81,8 @@ include .deos_profile
 
 #[Drivers]
 include etc/deos/logic.mk
+include etc/deos/dht.mk
+include etc/deos/vagrant.mk
+include etc/deos/yarn.mk
+
+

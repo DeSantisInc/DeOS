@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import validate from 'webpack-validator';
 import merge from 'webpack-merge';
 
-import baseConfig from './webpack.config.common';
+import baseConfig from './config.common';
 
 export default validate(merge(baseConfig, {
   devtool: 'source-map',

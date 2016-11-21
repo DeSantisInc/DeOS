@@ -26,7 +26,7 @@ dev: #down
 	$(MAKE) ssh
 
 ssh:
-	vagrant ssh -c "cd /vagrant; bash -i -c 'ipython --profile=vagrant'"
+	vagrant ssh -c "cd /vagrant; bash -i -c 'ipython --profile=vagrant'" DeVM
 
 down:
-	vagrant destroy
+	vagrant destroy DeVM

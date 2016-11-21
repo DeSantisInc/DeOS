@@ -3,8 +3,10 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
-  config.vm.network :forwarded_port, guest:80, host:4567
-  config.vm.network :forwarded_port, guest:8888, host:8888
+  config.vm.network :forwarded_port, guest:80, host:4568
+  config.vm.network :forwarded_port, guest:8888, host:8889
+  config.vm.define :DeVM do |t|
+  end
   config.vm.provision :shell, inline:<<-SHELL
     apt-get update
     apt-get install -y build-essential

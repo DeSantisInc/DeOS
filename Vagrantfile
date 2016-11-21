@@ -69,6 +69,8 @@ Vagrant.configure("2") do |config|
     cd /vagrant && nvm install \
                 && nvm use \
                 && npm install --global yarn \
+                && yarn install \
+                && cd app \
                 && yarn install
     export PATH="$PATH:$HOME/.yarn/bin"
   SHELL

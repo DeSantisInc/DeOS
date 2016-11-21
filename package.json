@@ -10,7 +10,7 @@
   "main": "index.js",
   "name": "deos",
   "scripts": {
-    "all": "webpack-dev-server --progress --host 0.0.0.0 --port 8282 --watch-poll"
+    "all": "webpack-dev-server --inline --hot --progress --host 0.0.0.0 --port 8282 --watch-poll"
   },
   "version": "0.3.0"
 }

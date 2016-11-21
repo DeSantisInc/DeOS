@@ -51,6 +51,7 @@ Vagrant.configure("2") do |config|
     pip install --upgrade requests[security]
     pip install jupyter
     pip install ipyparallel
+    pip install docker-compose
     ipcluster nbextension enable
   SHELL
   config.vm.provision :shell, privileged:false, inline:<<-SHELL

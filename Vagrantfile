@@ -10,7 +10,23 @@ Vagrant.configure("2") do |config|
     apt-get install -y build-essential
     apt-get install -y libffi-dev
     apt-get install -y libssl-dev
+    apt-get install -y apt-transport-https
+    apt-get install -y ca-certificates
     apt-get install -y git
+  SHELL
+  config.vm.provision :shell, inline:<<-SHELL
+    apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 \
+                --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+    echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" \
+      | tee /etc/apt/sources.list.d/docker.list
+    apt-get update
+    apt-get install -y linux-image-extra-$(uname -r) \
+                       linux-image-extra-virtual
+    apt-get install -y docker-engine
+    sudo service docker start
+    sudo docker run hello-world
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
   SHELL
   config.vm.provision :shell, inline:<<-SHELL
     sudo apt-get install -y nginx

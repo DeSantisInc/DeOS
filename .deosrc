@@ -55,6 +55,7 @@ endif
 #[Make]
 A=start
 Z=stop
+VM_CMD="cd /vagrant; bash -i -c 'ipython --profile=vagrant'"
 #ifeq ($(DEOS_ASMJS),$(IS_TRUE))
 FILES=\
 $(PATH_SRC)/deArray.c\

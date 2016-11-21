@@ -1,21 +1,19 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
-.PHONY: all build dev logic ssh test
+
+.PHONY: all build logic ssh test vm
+
 .SUBLIME_TARGETS: all
 
 include .deosrc
 
 all: logic
 
+down:; (vagrant destroy DeVM)
+
+ssh:; (vagrant ssh -c $(VM_CMD) DeVM)
+
 travis: logic.travis
 
-dev: #down
-	vagrant up
-	$(MAKE) ssh
-
-ssh:
-	vagrant ssh -c "cd /vagrant; bash -i -c 'ipython --profile=vagrant'" DeVM
-
-down:
-	vagrant destroy DeVM
+vm:; (vagrant up; $(MAKE) ssh)

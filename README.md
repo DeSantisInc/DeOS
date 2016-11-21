@@ -18,4 +18,22 @@
 Δ make
 ```
 
+If you encounter an error message like below:
+
+```
+==> DeVM: Box 'ubuntu/trusty64' could not be found. Attempting to find and install...
+    DeVM: Box Provider: virtualbox
+    DeVM: Box Version: >= 0
+The box 'ubuntu/trusty64' could not be found or
+could not be accessed in the remote catalog. If this is a private
+box on HashiCorp's Atlas, please verify you're logged in via
+`vagrant login`. Also, please double-check the name. The expanded
+URL and error message are shown below:
+
+URL: ["https://atlas.hashicorp.com/ubuntu/trusty64"]
+Error: 
+```
+
+Try the solution here: http://stackoverflow.com/a/40521433
+
 ---

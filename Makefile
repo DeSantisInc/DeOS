@@ -1,15 +1,12 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
-.PHONY: all build dev test ssh
+.PHONY: all build dev logic ssh test
 .SUBLIME_TARGETS: all
 
 include .deosrc
 
-all: build
-	@$(PRINT) purple $@ start
-	$(PATH_BIN)/deos
-	@$(PRINT) purple $@ stop
+all: logic
 
 test:
 	nvm --version

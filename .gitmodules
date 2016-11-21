@@ -16,3 +16,9 @@
 [submodule "ext/DeSWN"]
 	path = ext/DeSWN
 	url = https://github.com/DeSantisInc/DeSWN.git
+[submodule "ext/DeVPN"]
+	path = ext/DeVPN
+	url = https://github.com/DeSantisInc/DeVPN.git
+[submodule "ext/DeDNS"]
+	path = ext/DeDNS
+	url = https://github.com/DeSantisInc/DeDNS.git

@@ -4,6 +4,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.network :forwarded_port, guest:80, host:4568
+  config.vm.network :forwarded_port, guest:8282, host:5454
   config.vm.network :forwarded_port, guest:8888, host:8889
   config.vm.define :DeVM do |t|
   end

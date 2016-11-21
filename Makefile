@@ -17,3 +17,5 @@ ssh:; (vagrant ssh -c $(VM_CMD) DeVM)
 travis: logic.travis
 
 vm:; (vagrant up; $(MAKE) ssh)
+
+webpack:; (yarn all)

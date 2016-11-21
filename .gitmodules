@@ -7,3 +7,6 @@
 [submodule "ext/DeGIT"]
 	path = ext/DeGIT
 	url = https://github.com/DeSantisInc/DeGIT.git
+[submodule "ext/DeWEB"]
+	path = ext/DeWEB
+	url = https://github.com/DeSantisInc/DeWEB.git

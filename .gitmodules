@@ -1,0 +1,3 @@
+[submodule "ext/DeNGINX"]
+	path = ext/DeNGINX
+	url = git@github.com:DeSantisInc/DeNGINX.git

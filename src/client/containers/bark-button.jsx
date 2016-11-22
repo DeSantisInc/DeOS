@@ -1,3 +1,5 @@
+// @flow
+
 import { connect } from 'react-redux';
 import Button from '../components/button';
 import { makeBark } from '../actions/dog-actions';

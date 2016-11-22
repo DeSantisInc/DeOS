@@ -38,5 +38,5 @@
   "main": "main.min.js",
   "name": "deos-app",
   "productName": "DeOS",
-  "version": "0.0.0"
+  "version": "0.3.0"
 }

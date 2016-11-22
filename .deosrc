@@ -23,7 +23,7 @@ PATH_EXT=$(PATH_BASE)/ext
 PATH_LIB=$(PATH_BASE)/lib
 PATH_OBJ=$(PATH_BUILD)/obj
 PATH_SRC=$(PATH_BASE)/src
-PATH_TMP=$(PATH_BASE)/tmp
+PATH_TMP=$(PATH_BASE)/.tmp
 PATH_WIKI=$(PATH_DOC)/wiki
 
 #[Executables]

@@ -1,6 +1,6 @@
 export default {
   output: {
-    filename: 'bundle.min.js'
+    filename: 'client-bundle.js',
   },
   devtool: 'source-map',
   module: {
@@ -8,11 +8,11 @@ export default {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        exclude: [/node_modules/]
-      }
-    ]
+        exclude: [/node_modules/],
+      },
+    ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
-  }
+    extensions: ['', '.js', '.jsx'],
+  },
 };

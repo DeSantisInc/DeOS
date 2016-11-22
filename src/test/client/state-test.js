@@ -1,5 +1,3 @@
-// @flow
-
 /* eslint-disable import/no-extraneous-dependencies, no-unused-expressions */
 
 import { createStore } from 'redux';
@@ -16,7 +14,7 @@ describe('App State', () => {
   describe('Dog', () => {
     beforeEach(() => {
       store = createStore(combineReducers({
-        dog: dogReducer
+        dog: dogReducer,
       }));
     });
     describe('makeBark', () => {

@@ -1,13 +1,9 @@
-// @flow
-
 class Dog {
-  name: string;
-
-  constructor(name: string) {
+  constructor(name) {
     this.name = name;
   }
 
-  bark(): string {
+  bark() {
     return `Wah wah, I am ${this.name}`;
   }
 
@@ -16,7 +12,6 @@ class Dog {
     console.log(this.bark());
     /* eslint-enable no-console */
   }
-
 }
 
 export default Dog;

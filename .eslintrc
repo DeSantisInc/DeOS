@@ -1,0 +1,21 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": "airbnb",
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "comma-dangle": "off",
+    "new-cap": [
+      2,
+      {
+        "capIsNewExceptions": [
+          "Map",
+          "List"
+        ]
+      }
+    ]
+  }
+}

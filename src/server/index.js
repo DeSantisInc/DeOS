@@ -1,5 +1,3 @@
-// @flow
-
 /* eslint-disable no-console */
 
 import Dog from '../shared/dog';

@@ -2,7 +2,7 @@ export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
 
-.PHONY: all build logic ssh test vm
+.PHONY: all build logic ssh start vm
 
 .SUBLIME_TARGETS: all
 
@@ -13,6 +13,10 @@ all: logic
 down:; (vagrant destroy DeVM)
 
 ssh:; (open ./dojo/index.html && vagrant ssh -c $(VM_CMD) DeVM)
+
+start:; (yarn start)
+
+test:; (yarn test)
 
 travis: logic.travis
 

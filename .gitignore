@@ -15,6 +15,7 @@ yarn-error.log
 #[folders]
 .nvm/
 .vagrant/
+build/app/
 node_modules/
 
 #[wildcards]

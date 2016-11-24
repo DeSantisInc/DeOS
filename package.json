@@ -1,4 +1,11 @@
 {
+  "babel": {
+    "presets": [
+      "flow",
+      "latest",
+      "react"
+    ]
+  },
   "dependencies": {
     "babel-polyfill": "^6.16.0",
     "immutable": "^3.8.1",
@@ -32,6 +39,31 @@
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
     "webpack-stream": "^3.2.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": [
+      "airbnb"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype",
+      "import"
+    ],
+    "rules": {
+      "comma-dangle": "off",
+      "new-cap": [
+        2,
+        {
+          "capIsNewExceptions": [
+            "Map",
+            "List"
+          ]
+        }
+      ]
+    }
   },
   "license": "BSD-2-Clause",
   "main": "index.js",

@@ -1,7 +1,0 @@
-{
-  "presets": [
-    "flow",
-    "latest",
-    "react"
-  ]
-}

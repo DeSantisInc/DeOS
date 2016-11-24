@@ -1,15 +1,23 @@
 module.exports = {
 
-  entry: "./dojo/entry.js",
+  entry: "./src/dev/entry.js",
 
   output: {
-    path: "./",
+
+    path: "./src/dev/",
+
     filename: "bundle.js"
+
   },
 
   module: {
+
     loaders: [
+
       { test: /\.css$/, loader: "style!css" }
+
     ]
+
   }
+
 };

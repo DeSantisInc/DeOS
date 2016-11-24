@@ -1,7 +1,13 @@
 export const paths = {
   "dirs": {
     "dist": "app",
-    "lib": "build/es5"
+    "lib": "var/build/es5",
+    "es5": {
+      "client": "var/build/es5/client",
+      "server": "var/build/es5/server",
+      "shared": "var/build/es5/shared",
+      "test": "build/es5/test"
+    }
   },
   "files": {
     "client": {
@@ -20,7 +26,7 @@ export const paths = {
       "all": "src/shared/**/*.js?(x)"
     },
     "tests": {
-      "all": "build/es5/test/**/*.js"
+      "all": "var/build/es5/test/**/*.js"
     }
   }
 };
@@ -36,4 +42,10 @@ export const allJS = [allSrcJS].concat(allConfigJS);
 
 export const buildDeps = ['lint', 'clean'];
 
-export const toClean = [paths.files.client.bundle, paths.dirs.lib];
+export const toClean = [
+  paths.files.client.bundle,
+  paths.dirs.es5.client,
+  paths.dirs.es5.server,
+  paths.dirs.es5.shared,
+  paths.dirs.es5.test
+];

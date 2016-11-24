@@ -11,7 +11,7 @@ export const paths = {
     },
     "config": {
       "gulp": "Gulpfile.babel.js",
-      "webpack": "webpack.config.babel.js"
+      "webpack": "etc/gulp/webpack.config.babel.js"
     },
     "server": {
       "all": "src/server/**/*.js?(x)"

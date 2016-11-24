@@ -8,7 +8,7 @@ import mocha from 'gulp-mocha';
 import del from 'del';
 import webpack from 'webpack-stream';
 
-import webpackConfig from './webpack.config.babel';
+import webpackConfig from './etc/gulp/webpack.config.babel';
 import { paths, allJS, allSrcJS, buildDeps, toClean } from './etc/gulp/paths';
 
 gulp.task('lint', () => gulp.src(allJS)

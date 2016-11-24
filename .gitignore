@@ -2,7 +2,7 @@
 .DS_Store
 
 #[files]
-/dist/client-bundle.js*
+/app/bundle.js*
 npm-debug.log
 yarn-error.log
 

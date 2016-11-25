@@ -19,3 +19,6 @@
 [submodule "ext/DeDNS"]
 	path = ext/DeDNS
 	url = https://github.com/DeSantisInc/DeDNS.git
+[submodule "ext/DeGIT"]
+	path = ext/DeGIT
+	url = https://github.com/DeSantisInc/DeGIT.git

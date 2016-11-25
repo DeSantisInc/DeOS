@@ -14,6 +14,10 @@ down:; (vagrant destroy DeVM)
 
 git:; (cd ./ext/DeGIT && make all)
 
+git.lint:; (cd ./ext/DeGIT && make lint)
+
+git.main:; (cd ./ext/DeGIT && make main)
+
 ssh:; (vagrant ssh -c $(VM_CMD) DeVM)
 
 start:; (yarn start)

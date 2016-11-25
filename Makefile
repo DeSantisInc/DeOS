@@ -12,9 +12,9 @@ all: logic
 
 down:; (vagrant destroy DeVM)
 
-degit:; (cd ./ext/DeGIT && make all)
+git:; (cd ./ext/DeGIT && make all)
 
-ssh:; (open ./ext/DeGIT/src/index.html && vagrant ssh -c $(VM_CMD) DeVM)
+ssh:; (vagrant ssh -c $(VM_CMD) DeVM)
 
 start:; (yarn start)
 

@@ -18,6 +18,8 @@ git.lint:; (cd ./ext/DeGIT && make lint)
 
 git.main:; (cd ./ext/DeGIT && make main)
 
+pug:; (yarn pug)
+
 ssh:; (vagrant ssh -c $(VM_CMD) DeVM)
 
 start:; (yarn start)

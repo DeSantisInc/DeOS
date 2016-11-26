@@ -13,7 +13,11 @@ export const paths = {
     "client": {
       "all": "src/client/**/*.js?(x)",
       "bundle": "app/bundle.js?(.map)",
-      "entry": "src/client/app.jsx"
+      "entry": "src/client/app.jsx",
+      "pug": {
+        "out": "app.min.html",
+        "in": "src/client/app.pug"
+      }
     },
     "config": {
       "gulp": "Gulpfile.babel.js",
@@ -40,7 +44,7 @@ export const allSrcJS = 'src/**/*.js?(x)';
 
 export const allJS = [allSrcJS].concat(allConfigJS);
 
-export const buildDeps = ['lint', 'clean'];
+export const buildDeps = ['lint', 'pug', 'clean'];
 
 export const toClean = [
   paths.files.client.bundle,

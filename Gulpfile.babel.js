@@ -4,12 +4,20 @@ import gulp from 'gulp';
 import babel from 'gulp-babel';
 import eslint from 'gulp-eslint';
 import flow from 'gulp-flowtype';
+import pug from 'gulp-pug';
 import mocha from 'gulp-mocha';
+import rename from 'gulp-rename';
 import del from 'del';
 import webpack from 'webpack-stream';
 
 import webpackConfig from './etc/gulp/webpack.config.babel';
 import { paths, allJS, allSrcJS, buildDeps, toClean } from './etc/gulp/paths';
+
+
+gulp.task('pug', () => gulp.src(paths.files.client.pug.in)
+                           .pipe(pug({}))
+                           .pipe(rename(paths.files.client.pug.out))
+                           .pipe(gulp.dest(paths.dirs.dist)));
 
 gulp.task('lint', () => gulp.src(allJS)
                             .pipe(eslint())

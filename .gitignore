@@ -1,1 +1,9 @@
 .DS_Store
+
+.nvm/
+
+.vagrant/
+
+npm-debug.log
+
+yarn-error.log

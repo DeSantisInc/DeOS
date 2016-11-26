@@ -38,6 +38,12 @@ test:; (yarn test)
 
 travis: logic.travis
 
-vm:; (vagrant up; $(MAKE) ssh)
+#vm:; (vagrant up; $(MAKE) ssh)
+
+vm:; (vagrant up)
+
+vm.ls:; (vagrant ssh -c "cd /vagrant; bash -i -c 'ls'" DeVM)
+
+vm.yarn.install:; (vagrant ssh -c "cd /vagrant; bash -i -c 'yarn install'" DeVM)
 
 webpack:; (yarn all)

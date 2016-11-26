@@ -49,6 +49,10 @@
     "sinon-chai": "^2.8.0",
     "webpack-stream": "^3.2.0"
   },
+  "devEngines": {
+    "node": ">=4.x",
+    "npm": ">=3.x"
+  },
   "eslintConfig": {
     "env": {
       "browser": true
@@ -79,8 +83,8 @@
   "name": "deos",
   "scripts": {
     "all": "webpack-dev-server --inline --hot --progress --host 0.0.0.0 --port 8282 --watch-poll",
-    "start": "gulp",
     "pug": "gulp pug",
+    "start": "gulp",
     "test": "gulp test"
   },
   "version": "0.3.0"

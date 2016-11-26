@@ -2,13 +2,17 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
+
 from subprocess import check_output
 
 PRINT=lambda x:print('\n%s\n'%x)
+
 SHELL=lambda x:print('\n%s'%check_output(x.split(' ')))
 
 CMD={'Δ':'\x1b[32;01mΔ \x1b[0m'}
+
 CMD['ls']=lambda:SHELL('ls -l')
+
 CMD['test']=lambda:PRINT('test')
 
 while not((lambda c:1 if c=='quit' else CMD[c]())(raw_input(CMD['Δ']))):pass

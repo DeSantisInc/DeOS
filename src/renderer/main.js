@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'dev') {
   require('electron-debug')(); // eslint-disable-line global-require
   const path = require('path'); // eslint-disable-line global-require
   // eslint-disable-next-line global-require
-  const p = path.join(__dirname, '../..', 'app', 'node_modules');
+  const p = path.join(__dirname, '..', 'app', 'node_modules');
   require('module').globalPaths.push(p); // eslint-disable-line
 }
 
@@ -45,7 +45,7 @@ const installExtensions = async () => {
 app.on('ready', async () => {
   await installExtensions();
   mainWindow = new BrowserWindow({ show: false, width: 1024, height: 728 });
-  mainWindow.loadURL(`file://${__dirname}/../../app/index.min.html`);
+  mainWindow.loadURL(`file://${__dirname}/../../../app/index.min.html`);
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.show();
     mainWindow.focus();

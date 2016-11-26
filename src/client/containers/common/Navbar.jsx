@@ -2,16 +2,17 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { Button,
-         Container,
-         InputGroup,
-         InputGroupAddon,
-         Input,
-         Navbar as BootstrapNavbar,
-         Nav,
-         NavItem,
-         NavLink
-       } from 'reactstrap';
+import {
+  Button,
+  Container,
+  InputGroup,
+  InputGroupAddon,
+  Input,
+  Navbar as BootstrapNavbar,
+  Nav,
+  NavItem,
+  NavLink,
+} from 'reactstrap';
 import MessagesModal from '../../components/common/modals/Messages';
 import styles from './Navbar.css';
 

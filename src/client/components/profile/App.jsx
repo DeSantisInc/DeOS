@@ -15,10 +15,10 @@ const TWEETS = [{
   body: '.@Blockstream Successfully Tests End-to-End #Bitcoin Lightning',
 }, {
   username: 'desantis',
-  body: 'This is the second tweet'
+  body: 'This is the second tweet',
 }];
 
-export default const App = () => (
+const App = () => (
   <div>
     <Navbar />
     <Header header_img_url={HEADER_IMG_URL} />
@@ -33,3 +33,5 @@ export default const App = () => (
     </Container>
   </div>
 );
+
+export default App;

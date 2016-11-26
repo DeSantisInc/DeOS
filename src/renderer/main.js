@@ -9,14 +9,17 @@ let menu;
 let template;
 
 if (process.env.NODE_ENV === 'prod') {
-  const sourceMapSupport = require('source-map-support'); // eslint-disable-line
+  // eslint-disable-next-line global-require
+  const sourceMapSupport = require('source-map-support');
+
   sourceMapSupport.install();
 }
 
 if (process.env.NODE_ENV === 'dev') {
   require('electron-debug')(); // eslint-disable-line global-require
-  const path = require('path'); // eslint-disable-line
-  const p = path.join(__dirname, '..', 'app', 'node_modules'); // eslint-disable-line
+  const path = require('path'); // eslint-disable-line global-require
+  // eslint-disable-next-line global-require
+  const p = path.join(__dirname, '../..', 'app', 'node_modules');
   require('module').globalPaths.push(p); // eslint-disable-line
 }
 
@@ -26,12 +29,10 @@ app.on('window-all-closed', () => {
 
 const installExtensions = async () => {
   if (process.env.NODE_ENV === 'dev') {
-    const installer = require('electron-devtools-installer'); // eslint-disable-line global-require
+    // eslint-disable-next-line global-require
+    const installer = require('electron-devtools-installer');
 
-    const extensions = [
-      'REACT_DEVELOPER_TOOLS',
-      'REDUX_DEVTOOLS',
-    ];
+    const extensions = ['REACT_DEVELOPER_TOOLS', 'REDUX_DEVTOOLS'];
     const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
     for (const name of extensions) {
       try {
@@ -43,33 +44,21 @@ const installExtensions = async () => {
 
 app.on('ready', async () => {
   await installExtensions();
-
-  mainWindow = new BrowserWindow({
-    show: false,
-    width: 1024,
-    height: 728,
-  });
-
-  mainWindow.loadURL(`file://${__dirname}/../app/index.min.html`);
-
+  mainWindow = new BrowserWindow({ show: false, width: 1024, height: 728 });
+  mainWindow.loadURL(`file://${__dirname}/../../app/index.min.html`);
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.show();
     mainWindow.focus();
   });
 
-  mainWindow.on('closed', () => {
-    mainWindow = null;
-  });
-
+  mainWindow.on('closed', () => { mainWindow = null; });
   if (process.env.NODE_ENV === 'dev') {
     mainWindow.openDevTools();
     mainWindow.webContents.on('context-menu', (e, props) => {
       const { x, y } = props;
       Menu.buildFromTemplate([{
         label: 'Inspect element',
-        click() {
-          mainWindow.inspectElement(x, y);
-        },
+        click() { mainWindow.inspectElement(x, y); },
       }]).popup(mainWindow);
     });
   }

@@ -18,8 +18,7 @@ export default validate(merge(baseConfig, {
     __filename: false,
   },
   output: {
-    path: __dirname,
-    filename: '../../app/main.min.js',
+    filename: './app/main.min.js',
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({

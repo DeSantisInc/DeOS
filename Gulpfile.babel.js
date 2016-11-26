@@ -10,7 +10,9 @@ import rename from 'gulp-rename';
 import del from 'del';
 import webpack from 'webpack-stream';
 
-import webpackConfig from './etc/gulp/webpack.config.babel';
+import webpackMainConfig from './etc/webpack/config.electron';
+import webpackRendererConfig from './etc/webpack/config.prod';
+
 import { paths, allJS, allSrcJS, buildDeps, toClean } from './etc/gulp/paths';
 
 gulp.task('pug', () => gulp.src(paths.files.client.pug.in)
@@ -34,7 +36,8 @@ gulp.task('test', ['build'], () => gulp.src(paths.files.tests.all)
                                        .pipe(mocha()));
 
 gulp.task('main', ['test'], () => gulp.src(paths.files.client.entry)
-                                      .pipe(webpack(webpackConfig))
+                                      .pipe(webpack(webpackMainConfig))
+                                      .pipe(webpack(webpackRendererConfig))
                                       .pipe(gulp.dest(paths.dirs.dist)));
 
 gulp.task('watch', () => gulp.watch(allSrcJS, ['main']));

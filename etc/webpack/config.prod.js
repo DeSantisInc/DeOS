@@ -11,7 +11,7 @@ const config = validate(merge(baseConfig, {
   entry: ['babel-polyfill', './src/client/app.jsx'],
   output: { publicPath: '/' },
   module: {
-    loaders:[
+    loaders: [
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css', 'sass'),
@@ -24,12 +24,14 @@ const config = validate(merge(baseConfig, {
         test: /^((?!\.global).)*\.css$/,
         loader: ExtractTextPlugin.extract('style-loader',
           'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'),
-      }
+      },
     ],
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.DefinePlugin({'process.env.NODE_ENV': JSON.stringify('prod')}),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('prod'),
+    }),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         screw_ie8: true,

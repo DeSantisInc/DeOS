@@ -36,6 +36,8 @@ export const paths = {
 };
 
 export const allConfigJS = [
+  './etc/webpack/config.electron.js',
+  './etc/webpack/config.prod.js',
   paths.files.config.gulp,
   paths.files.config.webpack
 ];

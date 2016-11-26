@@ -12,6 +12,8 @@ all: logic
 
 build:; (yarn run build)
 
+install:; (yarn install && cd app && yarn install)
+
 dev:; (yarn run dev)
 
 down:; (vagrant destroy DeVM)

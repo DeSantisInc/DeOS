@@ -2,15 +2,13 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
-
 from subprocess import check_output
 
-d={};d['Δ']='\x1b[32;01mΔ \x1b[0m'
+PRINT=lambda x:print('\n%s\n'%x)
+SHELL=lambda x:print('\n%s'%check_output(x.split(' ')))
 
-d['ls']=lambda:print('\n%s'%check_output(["ls","-l"]))
+CMD={'Δ':'\x1b[32;01mΔ \x1b[0m'}
+CMD['ls']=lambda:SHELL('ls -l')
+CMD['test']=lambda:PRINT('test')
 
-d['test']=lambda:print('\n%s\n' % 'test')
-
-if __name__ == "__main__":
-
-    while not((lambda c:1 if c=='quit' else d[c]())(raw_input(d['Δ']))):pass
+while not((lambda c:1 if c=='quit' else CMD[c]())(raw_input(CMD['Δ']))):pass

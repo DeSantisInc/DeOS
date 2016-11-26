@@ -10,6 +10,8 @@ include .deosrc
 
 all: logic
 
+build:; (yarn run build)
+
 dev:; (yarn run dev)
 
 down:; (vagrant destroy DeVM)

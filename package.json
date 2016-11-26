@@ -209,6 +209,7 @@
     "url": "git@github.com:DeSantisInc/DeOS.git"
   },
   "scripts": {
+    "build": "gulp build",
     "dev": "concurrently --kill-others \"yarn run dev-server\" \"yarn run dev-start\"",
     "dev-server": "cross-env NODE_ENV=dev node -r babel-register ./src/server/index.js",
     "dev-start": "cross-env HOT=1 NODE_ENV=dev electron -r babel-register -r babel-polyfill ./src/renderer/main.js",

@@ -15,8 +15,8 @@ export const paths = {
       "bundle": "app/bundle.js?(.map)",
       "entry": "src/client/app.jsx",
       "pug": {
-        "out": "app.min.html",
-        "in": "src/client/app.pug"
+        "out": "index.min.html",
+        "in": "src/client/index.pug"
       }
     },
     "config": {
@@ -47,6 +47,7 @@ export const allJS = [allSrcJS].concat(allConfigJS);
 export const buildDeps = ['lint', 'pug', 'clean'];
 
 export const toClean = [
+  `app/${paths.files.client.pug.out}`,
   paths.files.client.bundle,
   paths.dirs.es5.client,
   paths.dirs.es5.server,

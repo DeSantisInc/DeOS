@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from __future__ import print_function
+
+from subprocess import check_output
+
+d={};d['Δ']='\x1b[32;01mΔ \x1b[0m'
+
+d['ls']=lambda:print('\n%s'%check_output(["ls","-l"]))
+
+d['test']=lambda:print('\n%s\n' % 'test')
+
+if __name__ == "__main__":
+
+    while not((lambda c:1 if c=='quit' else d[c]())(raw_input(d['Δ']))):pass

@@ -8,7 +8,9 @@ export MAKEFLAGS=--no-print-directory
 
 include .deosrc
 
-all: logic
+all: deos
+
+deos:; (chmod +x bin/deos && clear && ./bin/deos)
 
 main:; (yarn run main)
 

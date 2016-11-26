@@ -1,10 +1,31 @@
 {
   "author": "Andrew DeSantis <andrew@desantis.email>",
   "babel": {
+    "compact": false,
+    "env": {
+      "dev": {
+        "presets": [
+          "react-hmre"
+        ]
+      },
+      "prod": {
+        "plugins": [
+          "babel-plugin-dev-expression"
+        ],
+        "presets": [
+          "react-optimize"
+        ]
+      }
+    },
+    "plugins": [
+      "add-module-exports"
+    ],
     "presets": [
+      "es2015",
       "flow",
       "latest",
-      "react"
+      "react",
+      "stage-0"
     ]
   },
   "dependencies": {
@@ -126,17 +147,24 @@
     "node": ">=4.x",
     "npm": ">=3.x"
   },
+  "directories": {
+    "buildResources": "var/assets"
+  },
   "eslintConfig": {
     "env": {
       "browser": true
     },
     "extends": [
-      "airbnb"
+      "airbnb",
+      "plugin:flowtype/recommended"
     ],
     "parser": "babel-eslint",
     "plugins": [
+      "flowtype-errors",
       "flowtype",
-      "import"
+      "import",
+      "promise",
+      "react"
     ],
     "rules": {
       "comma-dangle": "off",
@@ -148,12 +176,17 @@
             "List"
           ]
         }
-      ]
+      ],
+      "react/prefer-stateless-function": "off"
     }
   },
   "license": "BSD-2-Clause",
   "main": "index.js",
-  "name": "deos",
+  "name": "DeOS",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:DeSantisInc/DeOS.git"
+  },
   "scripts": {
     "all": "webpack-dev-server --inline --hot --progress --host 0.0.0.0 --port 8282 --watch-poll",
     "pug": "gulp pug",

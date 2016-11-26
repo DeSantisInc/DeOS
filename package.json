@@ -55,6 +55,7 @@
     "electron": "^1.4.4",
     "electron-debug": "^1.0.1",
     "electron-devtools-installer": "^2.0.1",
+    "eslint-formatter-pretty": "^1.1.0",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "font-awesome": "^4.6.3",
@@ -115,7 +116,6 @@
     "enzyme": "^2.5.1",
     "eslint": "^3.9.0",
     "eslint-config-airbnb": "^12.0.0",
-    "eslint-formatter-pretty": "^1.1.0",
     "eslint-import-resolver-webpack": "^0.6.0",
     "eslint-loader": "^1.6.0",
     "eslint-plugin-flowtype": "^2.25.0",
@@ -204,6 +204,7 @@
     "dev": "concurrently --kill-others \"yarn run dev-server\" \"yarn run dev-start\"",
     "dev-server": "cross-env NODE_ENV=dev node -r babel-register ./src/server/index.js",
     "dev-start": "cross-env HOT=1 NODE_ENV=dev electron -r babel-register -r babel-polyfill ./src/renderer/main.js",
+    "main": "cross-env NODE_ENV=dev gulp main",
     "pug": "gulp pug",
     "start": "gulp",
     "test": "gulp test"

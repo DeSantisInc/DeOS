@@ -26,7 +26,7 @@ import customReducer from './reducers/custom-reducer';
 import Index from './containers/pages/Index';
 import Profile from './containers/pages/Profile';
 import App from './containers/App';
-import './style.scss';
+import './index.scss';
 
 const initialState = Immutable.Map();
 const rootReducer = combineReducers({ dogReducer, routing: customReducer });

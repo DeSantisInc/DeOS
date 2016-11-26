@@ -8,7 +8,7 @@ import baseConfig from './config.common';
 const config = validate(merge(baseConfig, {
   target: 'electron-renderer',
   devtool: 'cheap-module-source-map',
-  entry: ['babel-polyfill', './src/client/app.jsx'],
+  entry: ['babel-polyfill', './src/client/index.jsx'],
   output: { publicPath: '/' },
   module: {
     loaders: [

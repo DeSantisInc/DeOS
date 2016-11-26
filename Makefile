@@ -10,6 +10,8 @@ include .deosrc
 
 all: logic
 
+main:; (yarn run main)
+
 build:; (yarn run build)
 
 install:; (yarn install && cd app && yarn install)

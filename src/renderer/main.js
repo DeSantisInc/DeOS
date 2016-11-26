@@ -45,7 +45,7 @@ const installExtensions = async () => {
 app.on('ready', async () => {
   await installExtensions();
   mainWindow = new BrowserWindow({ show: false, width: 1024, height: 728 });
-  mainWindow.loadURL(`file://${__dirname}/../../../app/index.min.html`);
+  mainWindow.loadURL(`file://${__dirname}/../../app/index.min.html`);
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.show();
     mainWindow.focus();

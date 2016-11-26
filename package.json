@@ -28,6 +28,27 @@
       "stage-0"
     ]
   },
+  "build": {
+    "app-category-type": "public.app-category.developer-tools",
+    "appId": "com.desantis.deos-electron",
+    "dmg": {
+      "background": "var/assets/osx/dmg-background.png",
+      "icon": "var/assets/osx/dmg-icon.icns"
+    },
+    "mac": {
+      "icon": "var/assets/osx/icon.icns"
+    },
+    "nsis": {
+      "installerHeaderIcon": "var/assets/windows/setup-icon.ico",
+      "oneClick": true
+    },
+    "win": {
+      "icon": "var/assets/windows/icon.ico",
+      "target": [
+        "nsis"
+      ]
+    }
+  },
   "dependencies": {
     "babel-polyfill": "^6.16.0",
     "bittorrent-dht": "^7.4.0",

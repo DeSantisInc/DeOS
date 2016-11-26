@@ -8,7 +8,7 @@ export default validate(merge(baseConfig, {
   devtool: 'source-map',
   entry: [
     'babel-polyfill',
-    './src/main.js',
+    './src/renderer/main.js',
   ],
   externals: [
     'source-map-support',
@@ -19,7 +19,7 @@ export default validate(merge(baseConfig, {
   },
   output: {
     path: __dirname,
-    filename: '../app/main.min.js',
+    filename: '../../app/main.min.js',
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({

@@ -15,7 +15,7 @@ export default validate(merge(baseConfig, {
   entry: [
     `webpack-hot-middleware/client?path=http://localhost:${port}/__webpack_hmr`,
     'babel-polyfill',
-    './src/index.jsx'
+    './src/client/app.jsx'
   ],
   output: {
     publicPath: `http://localhost:${port}/`

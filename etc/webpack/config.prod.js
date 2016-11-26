@@ -8,7 +8,7 @@ import baseConfig from './config.common';
 const config = validate(merge(baseConfig, {
   target: 'electron-renderer',
   devtool: 'cheap-module-source-map',
-  entry: ['babel-polyfill', './src/index.jsx'],
+  entry: ['babel-polyfill', './src/client/app.jsx'],
   output: { publicPath: '/' },
   module: {
     loaders:[
@@ -36,7 +36,7 @@ const config = validate(merge(baseConfig, {
         warnings: false,
       },
     }),
-    new ExtractTextPlugin('index.min.css', { allChunks: true }),
+    new ExtractTextPlugin('style.min.css', { allChunks: true }),
   ],
 }));
 

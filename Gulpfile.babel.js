@@ -13,7 +13,6 @@ import webpack from 'webpack-stream';
 import webpackConfig from './etc/gulp/webpack.config.babel';
 import { paths, allJS, allSrcJS, buildDeps, toClean } from './etc/gulp/paths';
 
-
 gulp.task('pug', () => gulp.src(paths.files.client.pug.in)
                            .pipe(pug({}))
                            .pipe(rename(paths.files.client.pug.out))

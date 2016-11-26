@@ -10,6 +10,8 @@ include .deosrc
 
 all: logic
 
+dev:; (yarn run dev)
+
 down:; (vagrant destroy DeVM)
 
 git:; (cd ./ext/DeGIT && make all)

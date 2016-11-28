@@ -14,10 +14,19 @@ export const paths = {
       'pug': {
         'in': 'src/client/index.pug',
         'out': 'index.min.html'
+      },
+      'server': {
+        'js': {
+          'all': 'src/server/**/*.js?(x)'
+        }
       }
     }
   }
 }
+
+export const allSrcJS = [
+  paths.files.server.js.all
+]
 
 export const toClean = [
   `app/${paths.files.client.pug.out}`,

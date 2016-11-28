@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import gulp from 'gulp';
+import babel from 'gulp-babel';
 import pug from 'gulp-pug';
 import rename from 'gulp-rename';
 import del from 'del';
@@ -13,7 +14,9 @@ gulp.task('pug', () => gulp.src(paths.files.client.pug.in)
 
 gulp.task('clean', () => del(toClean));
 
-gulp.task('build', ['pug']);
+gulp.task('build', ['pug'], () => gulp.src(allSrcJS)
+                                      .pipe(babel())
+                                      .pipe(gulp.dest(paths.dirs.lib)));
 
 gulp.task('main', ['clean', 'build']);
 

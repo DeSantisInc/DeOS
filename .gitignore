@@ -1,7 +1,9 @@
-.DS_Store
+*.o
 
+.DS_Store
 .nvm/
 .vagrant/
 
 npm-debug.log
 yarn-error.log
+bin/logic

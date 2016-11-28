@@ -5,13 +5,23 @@ export MAKEFLAGS=--no-print-directory
 .SUBLIME_TARGETS:all
 
 BASEDIR:=$(CURDIR)
+PATH_BIN=$(BASEDIR)/bin
+PATH_LIB=$(BASEDIR)/src
+PATH_SRC=$(BASEDIR)/src
+
 DEOS:=$(BASEDIR)/bin/deos
 PRINT:=$(BASEDIR)/bin/printm
+
 FILES:=.gitignore\
        LICENSE.md\
        Makefile\
        README.md\
+       yarn.lock\
+       app/yarn.lock\
        bin/deos\
-       bin/printm
+       bin/logic\
+       bin/printm\
+       src/deos/logic.mk\
+       var/build/obj/.gitkeep
 
 include src/deos/check.mk

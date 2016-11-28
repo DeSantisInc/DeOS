@@ -11,3 +11,7 @@ export const paths = {
     }
   }
 }
+
+export const toClean = [
+  `app/${paths.files.client.pug.out}`
+]

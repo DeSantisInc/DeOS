@@ -12,9 +12,9 @@ DEOS:=$(BASEDIR)/bin/deos
 PRINT:=$(BASEDIR)/bin/printm
 
 FILES:=.deosrc\
-	   .editorconfig\
-	   .gitattributes\
-	   .gitignore\
+       .editorconfig\
+       .gitattributes\
+       .gitignore\
        .nvmrc\
        .travis.yml\
        LICENSE.md\

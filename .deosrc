@@ -26,6 +26,7 @@ FILES:=.deosrc\
        bin/logic\
        bin/printm\
        src/deos/logic.mk\
+       src/deos/test.mk\
        src/flow/css-modules.js\
        src/ipython/ipython_config.py\
        src/atdlib.h\
@@ -46,4 +47,4 @@ FILES:=.deosrc\
        var/build/es5/.gitkeep\
        var/build/obj/.gitkeep
 
-include src/deos/check.mk
+include src/deos/test.mk

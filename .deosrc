@@ -1,21 +1,14 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
-
 .PHONY:all build check chmod
-
 .SUBLIME_TARGETS:all
 
 BASEDIR:=$(CURDIR)
-
 BIN:=$(BASEDIR)/bin
-
 LIB:=$(BASEDIR)/src
-
 SRC:=$(BASEDIR)/src
-
 DEOS:=$(BASEDIR)/bin/deos
-
 PRINT:=$(BASEDIR)/bin/printm
 
 FILES:=.gitignore\
@@ -29,6 +22,7 @@ FILES:=.gitignore\
        bin/logic\
        bin/printm\
        src/deos/logic.mk\
+       var/build/es5/.gitkeep\
        var/build/obj/.gitkeep
 
 include src/deos/check.mk

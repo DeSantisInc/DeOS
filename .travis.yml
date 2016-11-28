@@ -1,22 +1,15 @@
 dist: trusty
-
 language: generic
-
 os: linux
-
 sudo: false
 
 before_install:
   - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
-
 install:
   - nvm install && nvm use && npm install --global yarn && yarn install
-
 before_script:
   - export PATH="$PATH:$HOME/.yarn/bin"
-
 script:
   - make build
-
 after_script:
   - echo $TRAVIS_COMMIT_RANGE

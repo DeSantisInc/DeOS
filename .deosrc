@@ -18,7 +18,7 @@ DEOS:=$(BASEDIR)/bin/deos
 
 PRINT:=$(BASEDIR)/bin/printm
 
-VMCMD="cd /vagrant; bash -i -c 'ipython --profile=vagrant'"
+VMCMD:="cd /vagrant; bash -i -c 'ipython --profile=vagrant'"
 
 FILES:=.deosrc\
        .editorconfig\
@@ -58,4 +58,5 @@ FILES:=.deosrc\
        var/build/obj/.gitkeep
 
 include src/deos/test.mk
+
 include src/deos/vbox.mk

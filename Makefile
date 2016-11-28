@@ -1,6 +1,6 @@
 include .deosrc
 
-all: deos.vm #build; @($(DEOS) && echo)
+all: vm #build; @($(DEOS) && echo)
 
 app:; electron ./app/
 
@@ -18,6 +18,6 @@ install:; (yarn global add electron)
 
 ssh:; (vagrant ssh -c $(VMCMD) DeVM)
 
-vm:; (vagrant up)
+vm: deos.vm
 
 yarn:; @(yarn all)

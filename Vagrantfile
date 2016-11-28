@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, inline:<<-SHELL
     sudo apt-get install -y nginx
     rm /etc/nginx/nginx.conf
-    ln -s /vagrant/etc/nginx/nginx.conf /etc/nginx/nginx.conf
+    ln -s /vagrant/src/nginx/nginx.conf /etc/nginx/nginx.conf
     sudo service nginx reload
   SHELL
 

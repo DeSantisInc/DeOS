@@ -1,21 +1,14 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
-
 .PHONY:all build check chmod clean vm yarn
-
 .SUBLIME_TARGETS:all
 
 BASEDIR:=$(CURDIR)
-
 BIN:=$(BASEDIR)/bin
-
 LIB:=$(BASEDIR)/src
-
 SRC:=$(BASEDIR)/src
-
 DEOS:=$(BASEDIR)/bin/deos
-
 PRINT:=$(BASEDIR)/bin/printm
 
 FILES:=.deosrc\

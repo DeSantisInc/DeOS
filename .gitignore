@@ -12,6 +12,7 @@ yarn-error.log
 
 #[folders]
 app/node_modules/
+/lib/
 node_modules/
 
 #[wildcards]

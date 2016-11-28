@@ -8,5 +8,6 @@ c.AliasManager.user_aliases = [
     ('make', 'make'),
     ('pip', 'pip'),
     ('node', 'node'),
-    ('npm', 'npm')
+    ('npm', 'npm'),
+    ('yarn', 'yarn'),
 ]

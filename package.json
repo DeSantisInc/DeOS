@@ -1,11 +1,18 @@
 {
   "devDependencies": {
-    "electron": "^1.4.8"
+    "babel-preset-latest": "^6.16.0",
+    "del": "^2.2.2",
+    "electron": "^1.4.8",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-eslint": "^3.0.1"
   },
   "scripts": {
-    "all": "electron ./app/"
-  },
-  "dependencies": {
-    "electron": "^1.4.8"
+    "start": "gulp"
   }
 }

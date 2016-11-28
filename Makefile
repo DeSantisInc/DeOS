@@ -12,10 +12,10 @@ chmod:; (chmod +x $(PRINT) $(DEOS))
 
 install:; (yarn global add electron)
 
+gulp:; (yarn run start)
+
 rm: vm.uninstall
 
 ssh: vm.ssh
 
 vm: vm.install
-
-yarn:; (yarn all)

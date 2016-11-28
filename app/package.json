@@ -1,5 +1,9 @@
 {
-  "name"    : "DeOS",
-  "version" : "0.5.0",
-  "main"    : "main.js"
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.4",
+    "font-awesome": "^4.6.3"
+  },
+  "main": "main.js",
+  "name": "DeOS",
+  "version": "0.5.0"
 }

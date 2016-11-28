@@ -1,24 +1,21 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
-
 .PHONY:all build check chmod
-
 .SUBLIME_TARGETS:all
 
 BASEDIR:=$(CURDIR)
-
 BIN:=$(BASEDIR)/bin
-
 LIB:=$(BASEDIR)/src
-
 SRC:=$(BASEDIR)/src
-
 DEOS:=$(BASEDIR)/bin/deos
-
 PRINT:=$(BASEDIR)/bin/printm
 
-FILES:=.gitignore\
+FILES:=.deosrc\
+	   .editorconfig\
+	   .gitattributes\
+	   .gitignore\
+       .nvmrc\
        .travis.yml\
        LICENSE.md\
        Makefile\
@@ -29,6 +26,8 @@ FILES:=.gitignore\
        bin/logic\
        bin/printm\
        src/deos/logic.mk\
+       src/flow/css-modules.js\
+       src/ipython/ipython_config.py\
        src/atdlib.h\
        src/deArray.c\
        src/deArray.h\
@@ -40,6 +39,10 @@ FILES:=.gitignore\
        src/deList.h\
        src/deListNode.c\
        src/deListNode.h\
+       src/deNetwork.c\
+       src/deNetwork.h\
+       src/main.c\
+       var/assets/icons/512x512.png\
        var/build/es5/.gitkeep\
        var/build/obj/.gitkeep
 

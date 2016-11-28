@@ -16,8 +16,10 @@ down:; (vagrant destroy DeVM)
 
 install:; (yarn global add electron)
 
-ssh:; (vagrant ssh -c $(VMCMD) DeVM)
+rm: vm.uninstall
 
-vm: deos.vm
+ssh: vm.ssh
 
-yarn:; @(yarn all)
+vm: vm.install
+
+yarn:; (yarn all)

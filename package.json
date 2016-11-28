@@ -10,7 +10,9 @@
     "eslint-plugin-react": "^6.7.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
-    "gulp-eslint": "^3.0.1"
+    "gulp-eslint": "^3.0.1",
+    "gulp-pug": "^3.1.0",
+    "gulp-rename": "^1.2.2"
   },
   "scripts": {
     "start": "gulp"

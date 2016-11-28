@@ -1,7 +1,7 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
-.PHONY:all build check chmod
+.PHONY:all build check chmod clean yarn
 .SUBLIME_TARGETS:all
 
 BASEDIR:=$(CURDIR)

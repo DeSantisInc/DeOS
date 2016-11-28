@@ -1,9 +1,11 @@
 *.o
+*.pyc
 
 .DS_Store
 .nvm/
 .vagrant/
 
+node_modules/
 npm-debug.log
 yarn-error.log
 bin/logic

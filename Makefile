@@ -1,7 +1,9 @@
 include .deosrc
 
-all: chmod; @($(MAKE) check)
+all: build; @($(DEOS) && echo)
+
+build: chmod check
 
 check: deos.check; @(echo)
 
-chmod:; @(chmod +x $(PRINT))
+chmod:; @(chmod +x $(PRINT) $(DEOS))

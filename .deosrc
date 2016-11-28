@@ -1,11 +1,17 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
-.PHONY:all check chmod
+.PHONY:all build check chmod
 .SUBLIME_TARGETS:all
 
 BASEDIR:=$(CURDIR)
+DEOS:=$(BASEDIR)/bin/deos
 PRINT:=$(BASEDIR)/bin/printm
-FILES:=.gitignore LICENSE.md Makefile README.md test.txt
+FILES:=.gitignore\
+       LICENSE.md\
+       Makefile\
+       README.md\
+       bin/deos\
+       bin/printm
 
 include src/deos/check.mk

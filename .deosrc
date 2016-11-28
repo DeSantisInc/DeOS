@@ -1,18 +1,25 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
+
 .PHONY:all build check chmod
+
 .SUBLIME_TARGETS:all
 
 BASEDIR:=$(CURDIR)
-PATH_BIN=$(BASEDIR)/bin
-PATH_LIB=$(BASEDIR)/src
-PATH_SRC=$(BASEDIR)/src
+
+BIN:=$(BASEDIR)/bin
+
+LIB:=$(BASEDIR)/src
+
+SRC:=$(BASEDIR)/src
 
 DEOS:=$(BASEDIR)/bin/deos
+
 PRINT:=$(BASEDIR)/bin/printm
 
 FILES:=.gitignore\
+       .travis.yml\
        LICENSE.md\
        Makefile\
        README.md\

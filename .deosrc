@@ -1,14 +1,21 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
+
 .PHONY:all build check chmod
+
 .SUBLIME_TARGETS:all
 
 BASEDIR:=$(CURDIR)
+
 BIN:=$(BASEDIR)/bin
+
 LIB:=$(BASEDIR)/src
+
 SRC:=$(BASEDIR)/src
+
 DEOS:=$(BASEDIR)/bin/deos
+
 PRINT:=$(BASEDIR)/bin/printm
 
 FILES:=.gitignore\
@@ -22,6 +29,17 @@ FILES:=.gitignore\
        bin/logic\
        bin/printm\
        src/deos/logic.mk\
+       src/atdlib.h\
+       src/deArray.c\
+       src/deArray.h\
+       src/deContainer.c\
+       src/deContainer.h\
+       src/deGroup.c\
+       src/deGroup.h\
+       src/deList.c\
+       src/deList.h\
+       src/deListNode.c\
+       src/deListNode.h\
        var/build/es5/.gitkeep\
        var/build/obj/.gitkeep
 

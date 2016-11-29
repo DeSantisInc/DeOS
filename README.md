@@ -8,7 +8,7 @@
 
 ### Install:
 
-#### 1. Clone the `DeOS` repo:
+#### 1. Clone the DeOS repo:
 
 ```sh
 Δ git clone git@github.com:DeSantisInc/DeOS.git
@@ -26,10 +26,10 @@
 Δ brew cask install vagrant
 ```
 
-#### 4. Setup Ubuntu 16.04 Vagrant Box:
+#### 4. Install the Virtual Machine:
 
 ```sh
-Δ vagrant init bento/ubuntu-16.04
+Δ make vm
 ```
 
 ### Run:

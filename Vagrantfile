@@ -11,4 +11,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "./src/vagrant/node.sh"
   config.vm.provision :shell, path: "./src/vagrant/nvm.sh"
   config.vm.provision :shell, path: "./src/vagrant/yarn.sh"
+  config.vm.provision :shell, path: "./src/vagrant/docker.sh"
 end

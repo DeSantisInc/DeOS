@@ -44,10 +44,8 @@
 Δ make rm
 ```
 
-### Run:
+## Issues
 
-```sh
-Δ make
 ```
 
 If you encounter an error message like below:

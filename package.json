@@ -8,10 +8,13 @@
   "dependencies": {
     "babel-polyfill": "^6.16.0",
     "electron": "^1.4.8",
+    "immutable": "^3.8.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.6",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-actions": "^1.1.0",
+    "redux-immutable": "^3.0.8"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -45,11 +48,22 @@
     "extends": "airbnb",
     "plugins": [
       "import"
-    ]
+    ],
+    "rules": {
+      "new-cap": [
+        2,
+        {
+          "capIsNewExceptions": [
+            "Map",
+            "List"
+          ]
+        }
+      ]
+    }
   },
   "license": "BSD-2-Clause",
   "scripts": {
     "clean": "gulp clean",
-    "gulp": "gulp"
+    "gulp": "gulp main"
   }
 }

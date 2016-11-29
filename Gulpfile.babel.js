@@ -45,4 +45,6 @@ gulp.task('main', ['clean', 'lint', 'build'], () => {
     .pipe(gulp.dest(paths.dirs.dist));
 });
 
-gulp.task('default', ['main']);
+gulp.task('watch', () => gulp.watch(toLint, ['main']));
+
+gulp.task('default', ['watch', 'main']);

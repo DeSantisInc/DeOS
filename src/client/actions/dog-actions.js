@@ -1,6 +1,4 @@
-export const MAKE_BARK = 'MAKE_BARK';
+import { createAction } from 'redux-actions';
 
-export const makeBark = () => ({
-  type: MAKE_BARK,
-  payload: true,
-});
+export const MAKE_BARK = 'MAKE_BARK';
+export const makeBark = createAction(MAKE_BARK, () => true);

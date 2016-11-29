@@ -8,7 +8,7 @@
 
 ### Install:
 
-#### 1. Clone the DeOS repo:
+#### 1. Clone the repo:
 
 ```sh
 Δ git clone git@github.com:DeSantisInc/DeOS.git

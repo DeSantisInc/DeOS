@@ -1,6 +1,6 @@
-vm.down:; ([ -d $(BASEDIR)/.vagrant/ ] && vagrant destroy DeVM)
+vm.down:; ([ -d $(BASEDIR)/.vagrant/ ] && vagrant destroy DeVM --force)
 
-vm.install:; ([ ! -d $(BASEDIR)/.vagrant/ ] && vagrant up)
+vm.install:; ([ ! -d $(BASEDIR)/.vagrant/ ] && vagrant up --provider virtualbox)
 
 vm.ssh:; (vagrant ssh -c $(VMCMD) DeVM)
 

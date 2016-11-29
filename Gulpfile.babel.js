@@ -16,11 +16,11 @@ import { paths, toClean, toLint } from './src/gulp/config.paths';
 
 gulp.task('clean', () => del(toClean));
 
+// .pipe(eslint.failAfterError())
 gulp.task('lint', ['clean'], () => gulp.src(toLint)
                             .pipe(eslint())
                             .pipe(eslint.format())
-                            .pipe(eslint.failAfterError())
-                            .pipe(flow({ abort: true })));
+                            .pipe(flow({ abort: false })));
 
 gulp.task('build', ['lint'], () => {
   gulp.src(paths.files.client.js.all)

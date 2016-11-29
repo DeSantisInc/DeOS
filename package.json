@@ -79,7 +79,7 @@
   "license": "BSD-2-Clause",
   "scripts": {
     "clean": "gulp clean",
-    "gulp": "gulp main",
+    "gulp": "gulp",
     "test": "gulp test"
   }
 }

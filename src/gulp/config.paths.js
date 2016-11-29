@@ -1,5 +1,3 @@
-// @flow
-
 export const paths = {
   dirs: {
     dist: 'app',

@@ -13,12 +13,7 @@ import webpack from 'webpack-stream';
 import webpackConfig from './src/gulp/webpack.config.babel';
 import { paths, toClean, toLint } from './src/gulp/config.paths';
 
-gulp.task('pug', () => gulp.src(paths.files.client.pug.in)
-                           .pipe(pug({}))
-                           .pipe(rename(paths.files.client.pug.out))
-                           .pipe(gulp.dest(paths.dirs.dist)));
-
-gulp.task('clean', ['pug'], () => del(toClean));
+gulp.task('clean', () => del(toClean));
 
 gulp.task('lint', ['clean'], () => gulp.src(toLint)
                             .pipe(eslint())
@@ -43,7 +38,12 @@ gulp.task('build', ['lint'], () => {
       .pipe(gulp.dest(paths.dirs.es5.test));
 });
 
-gulp.task('main', ['build'], () => {
+gulp.task('pug', () => gulp.src(paths.files.client.pug.in)
+                           .pipe(pug({}))
+                           .pipe(rename(paths.files.client.pug.out))
+                           .pipe(gulp.dest(paths.dirs.dist)));
+
+gulp.task('main', ['build', 'pug'], () => {
   gulp.src(paths.files.client.js.entry)
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest(paths.dirs.dist));

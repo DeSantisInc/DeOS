@@ -1,4 +1,9 @@
 {
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
   "dependencies": {
     "electron": "^1.4.8"
   },
@@ -18,6 +23,12 @@
     "gulp-rename": "^1.2.2",
     "webpack": "^1.13.3",
     "webpack-stream": "^3.2.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "plugins": [
+      "import"
+    ]
   },
   "license": "BSD-2-Clause",
   "scripts": {

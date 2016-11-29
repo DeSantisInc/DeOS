@@ -1,3 +1,5 @@
+// @flow
+
 import Dog from '../common/dog';
 
 const toby = new Dog('Toby');

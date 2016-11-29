@@ -38,7 +38,7 @@
 Δ make ssh
 ```
 
-#### 6. Shutdown the Virtual Machine.
+#### 6. Shutdown the Virtual Machine:
 
 ```sh
 Δ make rm

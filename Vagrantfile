@@ -9,5 +9,6 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest:8888, host:1321
   config.vm.provision :shell, path: "./src/vagrant/common.sh"
   config.vm.provision :shell, path: "./src/vagrant/node.sh"
+  config.vm.provision :shell, path: "./src/vagrant/nvm.sh"
   config.vm.provision :shell, path: "./src/vagrant/yarn.sh"
 end

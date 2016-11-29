@@ -11,3 +11,5 @@ printd "sudo apt-get -y install libssl-dev 2> /dev/null"
 printd "sudo apt-get -y install git 2> /dev/null"
 
 printd "sudo apt-get -y install curl 2> /dev/null"
+
+exit 0

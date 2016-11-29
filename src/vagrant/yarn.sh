@@ -11,3 +11,5 @@ printd "sudo apt-get update && sudo apt-get -y install yarn 2> /dev/null"
 export PATH="$PATH:`yarn global bin`"
 
 printd "cd /vagrant && yarn install && cd app && yarn install"
+
+exit 0

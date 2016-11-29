@@ -3,6 +3,7 @@
 import gulp from 'gulp';
 import babel from 'gulp-babel';
 import eslint from 'gulp-eslint';
+import flow from 'gulp-flowtype';
 import mocha from 'gulp-mocha';
 import pug from 'gulp-pug';
 import rename from 'gulp-rename';
@@ -18,7 +19,8 @@ gulp.task('clean', () => del(toClean));
 gulp.task('lint', ['clean'], () => gulp.src(toLint)
                             .pipe(eslint())
                             .pipe(eslint.format())
-                            .pipe(eslint.failAfterError()));
+                            .pipe(eslint.failAfterError())
+                            .pipe(flow({ abort: true })));
 
 gulp.task('build', ['lint'], () => {
   gulp.src(paths.files.client.js.all)

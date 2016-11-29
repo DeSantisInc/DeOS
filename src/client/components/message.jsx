@@ -1,3 +1,5 @@
+// @flow
+
 import React, { PropTypes } from 'react';
 
 const Message = ({ message }) => <div>{message}</div>;

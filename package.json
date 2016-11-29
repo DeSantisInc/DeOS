@@ -1,6 +1,7 @@
 {
   "babel": {
     "presets": [
+      "flow",
       "latest",
       "react"
     ]
@@ -18,7 +19,9 @@
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.8",
+    "babel-preset-flow": "^1.0.0",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "chai": "^3.5.0",
@@ -28,12 +31,14 @@
     "del": "^2.2.2",
     "eslint": "^3.11.1",
     "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-flowtype": "^2.28.2",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "2.2.3",
     "eslint-plugin-react": "^6.7.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-eslint": "^3.0.1",
+    "gulp-flowtype": "^1.0.0",
     "gulp-mocha": "^3.0.1",
     "gulp-pug": "^3.1.0",
     "gulp-rename": "^1.2.2",
@@ -50,9 +55,14 @@
     "env": {
       "browser": true
     },
-    "extends": "airbnb",
+    "extends": [
+      "airbnb",
+      "plugin:flowtype/recommended"
+    ],
+    "parser": "babel-eslint",
     "plugins": [
-      "import"
+      "import",
+      "flowtype"
     ],
     "rules": {
       "new-cap": [

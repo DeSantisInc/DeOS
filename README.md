@@ -32,6 +32,18 @@
 Δ make vm
 ```
 
+#### 5. Connect to the Virtual Machine:
+
+```sh
+Δ make ssh
+```
+
+#### 6. Shutdown the Virtual Machine.
+
+```sh
+Δ make rm
+```
+
 ### Run:
 
 ```sh

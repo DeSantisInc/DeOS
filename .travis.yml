@@ -1,4 +1,4 @@
-dist: bento
+dist: xenial
 
 language: generic
 

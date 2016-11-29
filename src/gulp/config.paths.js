@@ -13,7 +13,8 @@ export const paths = {
     client: {
       js: {
         all: 'src/client/**/*.js?(x)',
-        entry: 'src/client/index.js',
+        entry: 'src/client/index.jsx',
+        out: 'app/bundle.min.js?(.map)',
       },
       pug: {
         in: 'src/client/index.pug',
@@ -55,7 +56,7 @@ export const toLint = [
 
 export const toClean = [
   `app/${paths.files.client.pug.out}`,
-  'app/bundle.min.js?(.map)',
+  paths.files.client.js.out,
   paths.dirs.es5.client,
   paths.dirs.es5.common,
   paths.dirs.es5.render,

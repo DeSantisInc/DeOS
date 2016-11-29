@@ -6,7 +6,9 @@ app:; electron ./app/
 
 build: chmod check
 
-check: deos.check; @(echo)
+check: #deos.check; @(echo)
+	yarn install
+	$(MAKE) gulp
 
 chmod:; (chmod +x $(PRINT) $(DEOS))
 

@@ -6,6 +6,7 @@
 .vagrant/
 
 #[files]
+app/bundle.min.js*
 app/index.min.html
 bin/logic
 npm-debug.log

@@ -5,8 +5,11 @@ import babel from 'gulp-babel';
 import eslint from 'gulp-eslint';
 import pug from 'gulp-pug';
 import rename from 'gulp-rename';
-import del from 'del';
 
+import del from 'del';
+import webpack from 'webpack-stream';
+
+import webpackConfig from './src/gulp/webpack.config.babel';
 import { paths, toClean, toLint } from './src/gulp/config.paths';
 
 gulp.task('pug', () => gulp.src(paths.files.client.pug.in)
@@ -36,6 +39,10 @@ gulp.task('lint', () => gulp.src(toLint)
 
 gulp.task('clean', () => del(toClean));
 
-gulp.task('main', ['clean', 'lint', 'build']);
+gulp.task('main', ['clean', 'lint', 'build'], () => {
+  gulp.src(paths.files.client.js.entry)
+    .pipe(webpack(webpackConfig))
+    .pipe(gulp.dest(paths.dirs.dist));
+});
 
 gulp.task('default', ['main']);

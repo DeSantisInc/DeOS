@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "babel-polyfill": "^6.16.0",
     "bootstrap": "4.0.0-alpha.4",
     "font-awesome": "^4.6.3"
   },

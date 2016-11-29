@@ -187,7 +187,7 @@ babel-code-frame@^6.16.0:
     esutils "^2.0.2"
     js-tokens "^2.0.0"
 
-babel-core@^6.0.2, babel-core@^6.18.0:
+babel-core@^6.0.0, babel-core@^6.0.2, babel-core@^6.18.0:
   version "6.18.2"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.18.2.tgz#d8bb14dd6986fa4f3566a26ceda3964fa0e04e5b"
   dependencies:
@@ -323,6 +323,15 @@ babel-helpers@^6.16.0:
   dependencies:
     babel-runtime "^6.0.0"
     babel-template "^6.16.0"
+
+babel-loader@^6.2.8:
+  version "6.2.8"
+  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-6.2.8.tgz#30d7183aef60afc140b36443676b7acb4c12ac9c"
+  dependencies:
+    find-cache-dir "^0.1.1"
+    loader-utils "^0.2.11"
+    mkdirp "^0.5.1"
+    object-assign "^4.0.1"
 
 babel-messages@^6.8.0:
   version "6.8.0"
@@ -547,6 +556,14 @@ babel-plugin-transform-strict-mode@^6.18.0:
   dependencies:
     babel-runtime "^6.0.0"
     babel-types "^6.18.0"
+
+babel-polyfill@^6.16.0:
+  version "6.16.0"
+  resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.16.0.tgz#2d45021df87e26a374b6d4d1a9c65964d17f2422"
+  dependencies:
+    babel-runtime "^6.9.1"
+    core-js "^2.4.0"
+    regenerator-runtime "^0.9.5"
 
 babel-preset-es2015@^6.16.0:
   version "6.18.0"
@@ -868,6 +885,10 @@ commander@^2.9.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
   dependencies:
     graceful-readlink ">= 1.0.0"
+
+commondir@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -1419,6 +1440,14 @@ fill-range@^2.1.0:
     randomatic "^1.1.3"
     repeat-element "^1.1.2"
     repeat-string "^1.5.2"
+
+find-cache-dir@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/find-cache-dir/-/find-cache-dir-0.1.1.tgz#c8defae57c8a52a8a784f9e31c57c742e993a0b9"
+  dependencies:
+    commondir "^1.0.1"
+    mkdirp "^0.5.1"
+    pkg-dir "^1.0.0"
 
 find-index@^0.1.1:
   version "0.1.1"
@@ -2517,13 +2546,13 @@ minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
-mkdirp@0.5.0, mkdirp@^0.5.0, mkdirp@~0.5.0:
+mkdirp@0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.0.tgz#1d73076a6df986cd9344e15e71fcc05a4c9abf12"
   dependencies:
     minimist "0.0.8"
 
-"mkdirp@>=0.5 0", mkdirp@^0.5.1, mkdirp@~0.5.1:
+"mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:

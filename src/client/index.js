@@ -1,6 +1,7 @@
+import 'babel-polyfill';
+
 import Dog from '../common/dog';
 
-const toby = new Dog('Toby');
+const browserToby = new Dog('Browser Toby');
 
-// eslint-disable-next-line no-console
-console.log(toby.bark());
+document.querySelector('.app').innerText = browserToby.bark();

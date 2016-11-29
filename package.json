@@ -34,11 +34,14 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.1",
     "gulp-pug": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "mocha": "^3.2.0",
     "node-sass": "^3.13.0",
     "sass-loader": "^4.0.2",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
     "webpack-stream": "^3.2.0"
@@ -66,6 +69,7 @@
   "license": "BSD-2-Clause",
   "scripts": {
     "clean": "gulp clean",
-    "gulp": "gulp main"
+    "gulp": "gulp main",
+    "test": "gulp test"
   }
 }

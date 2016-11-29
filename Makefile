@@ -12,7 +12,7 @@ chmod:; (chmod +x $(PRINT) $(DEOS))
 
 install:; (yarn global add electron)
 
-gulp:; (yarn run gulp)
+gulp:; (yarn run gulp && yarn run test)
 
 rm: vm.uninstall
 

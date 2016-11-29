@@ -3,6 +3,7 @@
 import gulp from 'gulp';
 import babel from 'gulp-babel';
 import eslint from 'gulp-eslint';
+import mocha from 'gulp-mocha';
 import pug from 'gulp-pug';
 import rename from 'gulp-rename';
 
@@ -17,7 +18,14 @@ gulp.task('pug', () => gulp.src(paths.files.client.pug.in)
                            .pipe(rename(paths.files.client.pug.out))
                            .pipe(gulp.dest(paths.dirs.dist)));
 
-gulp.task('build', ['pug'], () => {
+gulp.task('clean', ['pug'], () => del(toClean));
+
+gulp.task('lint', ['clean'], () => gulp.src(toLint)
+                            .pipe(eslint())
+                            .pipe(eslint.format())
+                            .pipe(eslint.failAfterError()));
+
+gulp.task('build', ['lint'], () => {
   gulp.src(paths.files.client.js.all)
       .pipe(babel())
       .pipe(gulp.dest(paths.dirs.es5.client));
@@ -30,20 +38,18 @@ gulp.task('build', ['pug'], () => {
   gulp.src(paths.files.server.js.all)
       .pipe(babel())
       .pipe(gulp.dest(paths.dirs.es5.server));
+  gulp.src(paths.files.test.js.all)
+      .pipe(babel())
+      .pipe(gulp.dest(paths.dirs.es5.test));
 });
 
-gulp.task('lint', () => gulp.src(toLint)
-                            .pipe(eslint())
-                            .pipe(eslint.format())
-                            .pipe(eslint.failAfterError()));
-
-gulp.task('clean', () => del(toClean));
-
-gulp.task('main', ['clean', 'lint', 'build'], () => {
+gulp.task('main', ['build'], () => {
   gulp.src(paths.files.client.js.entry)
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest(paths.dirs.dist));
 });
+
+gulp.task('test', () => gulp.src(paths.files.test.js.out).pipe(mocha()));
 
 gulp.task('watch', () => gulp.watch(toLint, ['main']));
 

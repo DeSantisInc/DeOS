@@ -44,9 +44,7 @@
 Δ make rm
 ```
 
-## Issues
-
-```
+### Known Issues
 
 If you encounter an error message like below:
 

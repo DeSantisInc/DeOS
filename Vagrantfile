@@ -7,10 +7,10 @@ Vagrant.configure("2") do |config|
   config.vm.define :DeVM do |t| end
   config.vm.network :forwarded_port, guest:80, host:1337
   config.vm.network :forwarded_port, guest:8888, host:1321
-  config.vm.provision :shell, path: "./src/vagrant/common.sh"
-  config.vm.provision :shell, path: "./src/vagrant/node.sh"
-  config.vm.provision :shell, path: "./src/vagrant/nvm.sh"
-  config.vm.provision :shell, path: "./src/vagrant/yarn.sh"
-  config.vm.provision :shell, path: "./src/vagrant/docker.sh"
-  config.vm.provision :shell, path: "./src/vagrant/compose.sh"
+  config.vm.provision :shell, path: "./src/devm/common.sh"
+  config.vm.provision :shell, path: "./src/devm/node.sh"
+  config.vm.provision :shell, path: "./src/devm/nvm.sh"
+  config.vm.provision :shell, path: "./src/devm/yarn.sh"
+  config.vm.provision :shell, path: "./src/devm/docker.sh"
+  config.vm.provision :shell, path: "./src/devm/compose.sh"
 end

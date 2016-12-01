@@ -9,14 +9,14 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest:5000, host:1335
   config.vm.network :forwarded_port, guest:8888, host:1336
   config.vm.network :forwarded_port, guest:80, host:1337
-  config.vm.provision :shell, path: "./src/devm/common.sh"
-  config.vm.provision :shell, path: "./src/devm/node.sh"
-  config.vm.provision :shell, path: "./src/devm/nvm.sh"
-  config.vm.provision :shell, path: "./src/devm/yarn.sh"
-  config.vm.provision :shell, path: "./src/devm/nginx.sh"
-  config.vm.provision :shell, path: "./src/devm/python.sh"
-  config.vm.provision :shell, path: "./src/devm/docker.sh"
-  config.vm.provision :shell, path: "./src/devm/compose.sh"
-  config.vm.provision :shell, path: "./src/devm/flask.sh"
-  config.vm.provision :shell, path: "./src/devm/jupyter.sh"
+  config.vm.provision :shell, path: "./src/devm/bootstrap.sh", :args => "-c"
+  config.vm.provision :shell, path: "./src/devm/bootstrap.sh", :args => "-n"
+  config.vm.provision :shell, path: "./src/devm/bootstrap.sh", :args => "-u"
+  config.vm.provision :shell, path: "./src/devm/bootstrap.sh", :args => "-y"
+  #config.vm.provision :shell, path: "./src/devm/nginx.sh"
+  #config.vm.provision :shell, path: "./src/devm/python.sh"
+  #config.vm.provision :shell, path: "./src/devm/docker.sh"
+  #config.vm.provision :shell, path: "./src/devm/compose.sh"
+  #config.vm.provision :shell, path: "./src/devm/flask.sh"
+  #config.vm.provision :shell, path: "./src/devm/jupyter.sh"
 end

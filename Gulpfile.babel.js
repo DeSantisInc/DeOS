@@ -11,8 +11,8 @@ import rename from 'gulp-rename';
 import del from 'del';
 import webpack from 'webpack-stream';
 
-import webpackConfig from './src/gulp/webpack.config.babel';
-import { paths, toClean, toLint } from './src/gulp/config.paths';
+import webpackConfig from './src/dejs/webpack.config.babel';
+import { paths, toClean, toLint } from './src/dejs/config.paths';
 
 gulp.task('clean', () => del(toClean));
 

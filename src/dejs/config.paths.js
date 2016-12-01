@@ -29,8 +29,8 @@ export const paths = {
     },
     config: {
       gulp: 'Gulpfile.babel.js',
-      paths: 'src/gulp/config.paths.js',
-      webpack: 'src/gulp/webpack.config.babel.js',
+      paths: 'src/dejs/config.paths.js',
+      webpack: 'src/dejs/webpack.config.babel.js',
     },
     render: {
       js: {

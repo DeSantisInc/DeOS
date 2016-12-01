@@ -4,7 +4,7 @@ import chai from 'chai';
 import { stub } from 'sinon';
 import sinonChai from 'sinon-chai';
 import { describe, it } from 'mocha';
-import Dog from '../../common/dog';
+import Dog from '../../shared/dog';
 
 chai.should();
 chai.use(sinonChai);

@@ -26,9 +26,9 @@ gulp.task('build', ['lint'], () => {
   gulp.src(paths.files.client.js.all)
       .pipe(babel())
       .pipe(gulp.dest(paths.dirs.es5.client));
-  gulp.src(paths.files.common.js.all)
+  gulp.src(paths.files.shared.js.all)
       .pipe(babel())
-      .pipe(gulp.dest(paths.dirs.es5.common));
+      .pipe(gulp.dest(paths.dirs.es5.shared));
   gulp.src(paths.files.render.js.all)
       .pipe(babel())
       .pipe(gulp.dest(paths.dirs.es5.render));

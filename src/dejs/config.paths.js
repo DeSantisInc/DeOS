@@ -3,7 +3,7 @@ export const paths = {
     dist: 'app',
     es5: {
       client: 'var/build/es5/client',
-      common: 'var/build/es5/common',
+      shared: 'var/build/es5/shared',
       render: 'var/build/es5/render',
       server: 'var/build/es5/server',
       test: 'var/build/es5/test',
@@ -22,9 +22,9 @@ export const paths = {
         out: 'index.min.html',
       },
     },
-    common: {
+    shared: {
       js: {
-        all: 'src/common/**/*.js?(x)',
+        all: 'src/shared/**/*.js?(x)',
       },
     },
     config: {
@@ -53,7 +53,7 @@ export const paths = {
 
 export const toLint = [
   paths.files.client.js.all,
-  paths.files.common.js.all,
+  paths.files.shared.js.all,
   paths.files.config.gulp,
   paths.files.config.paths,
   paths.files.config.webpack,
@@ -66,7 +66,7 @@ export const toClean = [
   `app/${paths.files.client.pug.out}`,
   paths.files.client.js.out,
   paths.dirs.es5.client,
-  paths.dirs.es5.common,
+  paths.dirs.es5.shared,
   paths.dirs.es5.render,
   paths.dirs.es5.server,
   paths.dirs.es5.test,

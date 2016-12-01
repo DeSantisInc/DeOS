@@ -4,8 +4,8 @@ printd() { printf "\x1b[34;01m########[ $1 ]########\x1b[34;01m\n"; echo "$1" | 
 
 printd "sudo apt-get install -y python-pip"
 
-printd "sudo pip install docker-compose"
+printd "sudo pip install --upgrade pip"
 
-printd "docker-compose -h"
+printd "sudo pip install docker-compose"
 
 exit 0

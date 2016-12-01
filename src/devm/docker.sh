@@ -1,23 +1,27 @@
 #!/usr/bin/env bash
 
-printd() { printf "\x1b[34;01m########[ $1 ]########\x1b[34;01m\n"; echo "$1" | bash; }
+sudo apt-get update
 
-printd "sudo apt-get install apt-transport-https ca-certificates"
+sudo apt-get install -y apt-transport-https ca-certificates
 
-printd "sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D"
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 
-printd "sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F76221572C52609D
 
-printd "sudo apt-get update"
+echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc/apt/sources.list.d/docker.list
 
-printd "apt-cache policy docker-engine"
+sudo apt-get update
 
-printd "sudo apt-get install -y docker-engine"
+apt-cache policy docker-engine
 
-printd "sudo systemctl status docker"
+sudo apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual
 
-printd 'sudo usermod -aG docker $(whoami)'
+sudo apt-get install -y docker-engine
 
-printd "docker run hello-world"
+sudo service docker start
+
+sudo usermod -aG docker $USER
+
+sudo systemctl enable docker
 
 exit 0

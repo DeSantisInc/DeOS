@@ -14,7 +14,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "./src/devm/nvm.sh"
   config.vm.provision :shell, path: "./src/devm/yarn.sh"
   config.vm.provision :shell, path: "./src/devm/nginx.sh"
+  config.vm.provision :shell, path: "./src/devm/python.sh"
   config.vm.provision :shell, path: "./src/devm/docker.sh"
   config.vm.provision :shell, path: "./src/devm/compose.sh"
-  config.vm.provision :shell, path: "./src/devm/python.sh"
+  config.vm.provision :shell, path: "./src/devm/flask.sh"
+  config.vm.provision :shell, path: "./src/devm/jupyter.sh"
 end

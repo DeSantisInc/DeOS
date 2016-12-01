@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-printd() { printf "\x1b[34;01m########[ $1 ]########\x1b[34;01m\n"; echo "$1" | bash; }
+printd() {
+    printf "\x1b[34;01m########[ $1 ]########\x1b[34;01m\n";
+    echo "$1" | bash;
+}
 
 printd "curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -"
 

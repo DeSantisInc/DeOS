@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 sudo apt-get update
 
 sudo apt-get install -y apt-transport-https ca-certificates
@@ -24,4 +22,4 @@ sudo usermod -aG docker $USER
 
 sudo systemctl enable docker
 
-exit 0
+EXIT_SUCCESS

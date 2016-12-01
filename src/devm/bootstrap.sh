@@ -10,10 +10,9 @@ EXIT_SUCCESS() {
 }
 
 export -f DERUN
-
 export -f EXIT_SUCCESS
 
-while getopts cnuy x
+while getopts cnuyxpdzfj x
 do
   case "$x" in
     c)  (chmod +x "/vagrant/src/devm/common.sh")
@@ -24,6 +23,18 @@ do
         (exec "/vagrant/src/devm/nvm.sh") ;;
     y)  (chmod +x "/vagrant/src/devm/yarn.sh")
         (exec "/vagrant/src/devm/yarn.sh") ;;
+    x)  (chmod +x "/vagrant/src/devm/nginx.sh")
+        (exec "/vagrant/src/devm/nginx.sh") ;;
+    p)  (chmod +x "/vagrant/src/devm/python.sh")
+        (exec "/vagrant/src/devm/python.sh") ;;
+    d)  (chmod +x "/vagrant/src/devm/docker.sh")
+        (exec "/vagrant/src/devm/docker.sh") ;;
+    z)  (chmod +x "/vagrant/src/devm/compose.sh")
+        (exec "/vagrant/src/devm/compose.sh") ;;
+    f)  (chmod +x "/vagrant/src/devm/flask.sh")
+        (exec "/vagrant/src/devm/flask.sh") ;;
+    j)  (chmod +x "/vagrant/src/devm/jupyter.sh")
+        (exec "/vagrant/src/devm/jupyter.sh") ;;
     ?)  EXIT_SUCCESS ;;
   esac
 done

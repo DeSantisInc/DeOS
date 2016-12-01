@@ -1,17 +1,10 @@
-#!/usr/bin/env bash
+DERUN "touch /vagrant/var/docker/python/app.py"
 
-printd() {
-    printf "\x1b[34;01m########[ $1 ]########\x1b[34;01m\n";
-    echo "$1" | bash;
-}
+DERUN "touch /vagrant/var/docker/python/requirements.txt"
 
-printd "touch /vagrant/var/docker/python/app.py"
+DERUN "touch /vagrant/var/docker/python/Dockerfile"
 
-printd "touch /vagrant/var/docker/python/requirements.txt"
-
-printd "touch /vagrant/var/docker/python/Dockerfile"
-
-printd "touch /vagrant/var/docker/python/docker-compose.yml"
+DERUN "touch /vagrant/var/docker/python/docker-compose.yml"
 
 cat <<EOT >> /vagrant/var/docker/python/app.py
 #!/usr/bin/env python
@@ -60,8 +53,8 @@ services:
     image: redis
 EOT
 
-printd "cd /vagrant/var/docker/python && docker-compose build"
+DERUN "cd /vagrant/var/docker/python && docker-compose build"
 
-printd "cd /vagrant/var/docker/python && docker-compose up -d"
+DERUN "cd /vagrant/var/docker/python && docker-compose up -d"
 
-exit 0
+EXIT_SUCCESS

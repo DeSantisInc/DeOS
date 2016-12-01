@@ -1,22 +1,15 @@
-#!/usr/bin/env bash
+DERUN "sudo apt-get install -y python2.7"
 
-printd() {
-    printf "\x1b[34;01m########[ $1 ]########\x1b[34;01m\n";
-    echo "$1" | bash;
-}
+DERUN "sudo apt-get install -y python-dev"
 
-printd "sudo apt-get install -y python2.7"
+DERUN "sudo apt-get install -y python-pip"
 
-printd "sudo apt-get install -y python-dev"
+DERUN "sudo pip install --upgrade pip"
 
-printd "sudo apt-get install -y python-pip"
+DERUN "sudo pip install ndg-httpsclient"
 
-printd "sudo pip install --upgrade pip"
+DERUN "sudo pip install pyasn1"
 
-printd "sudo pip install ndg-httpsclient"
+DERUN "sudo pip install --upgrade requests[security]"
 
-printd "sudo pip install pyasn1"
-
-printd "sudo pip install --upgrade requests[security]"
-
-exit 0
+EXIT_SUCCESS

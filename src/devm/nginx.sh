@@ -1,13 +1,6 @@
-#!/usr/bin/env bash
+DERUN "sudo apt-get install -y nginx"
 
-printd() {
-    printf "\x1b[34;01m########[ $1 ]########\x1b[34;01m\n";
-    echo "$1" | bash;
-}
-
-printd "sudo apt-get install -y nginx"
-
-printd "rm /etc/nginx/nginx.conf"
+DERUN "rm /etc/nginx/nginx.conf"
 
 cat <<EOT >> /vagrant/var/docker/nginx/nginx.conf
 user www-data;
@@ -47,8 +40,8 @@ http {
 }
 EOT
 
-printd "ln -s /vagrant/var/docker/nginx/nginx.conf /etc/nginx/nginx.conf"
+DERUN "ln -s /vagrant/var/docker/nginx/nginx.conf /etc/nginx/nginx.conf"
 
-printd "sudo service nginx reload"
+DERUN "sudo service nginx reload"
 
-exit 0
+EXIT_SUCCESS

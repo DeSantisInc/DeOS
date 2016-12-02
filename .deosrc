@@ -8,10 +8,9 @@ BASEDIR:=$(CURDIR)
 BIN:=$(BASEDIR)/bin
 LIB:=$(BASEDIR)/src
 SRC:=$(BASEDIR)/src
+DELTA:=$(BASEDIR)/bin/delta
 DEOS:=$(BASEDIR)/bin/deos
 PRINT:=$(BASEDIR)/bin/printm
-
-export ZT_NETWORK=
 
 export VM_BOX:=bento/ubuntu-16.04
 export VM_BOOTSTRAP:=./src/devm/bootstrap.sh
@@ -19,9 +18,12 @@ export VM_PATH:=/deos
 export VM_HOST:=1337
 export VM_GUEST:=80
 export VM_SHELL:=bash -c 'BASH_ENV=/etc/profile exec bash'
+export ZT_NETWORK:=565799d8f6747f84
 
-GIT_BITCOIN:=git@github.com:DeSantisInc/bitcoin.git
+UPCMD:="vagrant up --provider virtualbox"
 VMCMD:="cd /deos; bash -i -c 'ipython --profile=deos'"
+GIT_BITCOIN:=git@github.com:DeSantisInc/bitcoin.git
+
 FILES:=.deosrc\
        .editorconfig\
        .gitattributes\

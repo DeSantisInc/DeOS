@@ -8,9 +8,9 @@ DERUN "sudo apt-get update"
 
 DERUN "sudo apt-get -y install linux-image-extra-$(uname -r)"
 
-DERUN "sudo apt-get -y install linux-image-extra-virtual"
+DERUN "sudo apt-get -y install linux-image-extra-virtual 2> /dev/null"
 
-DERUN "sudo apt-get -y install docker-engine"
+DERUN "sudo apt-get -y install docker-engine 2> /dev/null"
 
 DERUN "sudo service docker start"
 

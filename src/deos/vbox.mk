@@ -1,10 +1,11 @@
 vm.down:; ([ -d $(BASEDIR)/.vagrant/ ] && vagrant destroy DeVM --force)
 
-vm.install:; ([ ! -d $(BASEDIR)/.vagrant/ ] && vagrant up --provider virtualbox)
+vm.install:; ([ ! -d $(BASEDIR)/.vagrant/ ] && $(DELTA) $(UPCMD))
 
 vm.ssh:; (vagrant ssh -c $(VMCMD) DeVM)
 
 vm.uninstall: vm.down
+	chmod +x $(BASEDIR)/bin/delta
 	-rm $(BASEDIR)/app/index.min.html
 	-rm -rf $(BASEDIR)/.zerotier/
 	-rm -rf $(BASEDIR)/.vagrant/

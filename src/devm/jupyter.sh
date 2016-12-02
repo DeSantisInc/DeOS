@@ -1,5 +1,5 @@
 DERUN "apt-get install -y ipython"
-DERUN "apt-get install -y ipython-notebook"
+DERUN "apt-get install -y ipython-notebook 2> /dev/null"
 DERUN "pip install jupyter"
 DERUN "pip install ipyparallel"
 DERUN "ipcluster nbextension enable"

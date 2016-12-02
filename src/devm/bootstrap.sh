@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DERUN() {
-  printf "\x1b[34;01m########[ $1 ]########\x1b[34;01m\n"
+  printf "\x1b[34;01mΔ => [ $1 ]\x1b[34;01m\n"
   echo "$1" | bash
 }
 

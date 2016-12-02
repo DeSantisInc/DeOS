@@ -21,3 +21,5 @@ rm: vm.uninstall
 sh: vm.ssh
 
 vm: vm.install
+
+zt: zt.install

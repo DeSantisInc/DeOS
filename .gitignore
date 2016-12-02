@@ -6,6 +6,7 @@
 .tmp/
 .vagrant/
 .virtualenvs/
+.zerotier/
 
 #[files]
 app/bundle.min.js*

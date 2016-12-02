@@ -62,3 +62,4 @@ FILES:=.deosrc\
 include src/deos/bitcoin.mk
 include src/deos/test.mk
 include src/deos/vbox.mk
+include src/deos/zerotier.mk

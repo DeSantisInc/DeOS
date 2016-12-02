@@ -1,8 +1,10 @@
 # BSD 2-Clause License
 
-**Copyright (c) 2013-2016 Andrew T. DeSantis. All rights reserved.**
+**Copyright (c) 2013-2016 Andrew T. DeSantis**
 
-**Copyright (c) 2016 DeSantis Inc. All rights reserved.**
+**Copyright (c) 2016 DeSantis Inc.**
+
+**All rights reserved.**
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -51,7 +53,9 @@ THE SOFTWARE.
 
 ## 21
 
-**Copyright (c) 2015-2016, 21 Inc. All rights reserved.**
+**Copyright (c) 2015-2016, 21 Inc.**
+
+**All rights reserved.**
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:

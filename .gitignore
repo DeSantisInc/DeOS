@@ -3,6 +3,7 @@
 
 #[dotfolders]
 .nvm/
+.tmp/
 .vagrant/
 
 #[files]

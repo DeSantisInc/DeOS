@@ -10,6 +10,8 @@ check: deos.check; @(echo)
 
 chmod:; (chmod +x $(PRINT) $(DEOS))
 
+ext: ext.bitcoin
+
 install:; (yarn global add electron)
 
 gulp:; (yarn run gulp && yarn run test)

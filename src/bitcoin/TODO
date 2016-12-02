@@ -1,0 +1,12 @@
+
+Checklist: https://en.bitcoin.it/wiki/Protocol_rules
+
+- block sigops total, not just count them.
+- difficulty.
+- subsidy.
+- median time.
+- reorg.
+- TX_SCRIPTHASH
+- TX_MULTISIG
+- peerman: fix bn_group()
+

@@ -2,8 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.ssh.paranoid = true
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+  config.ssh.paranoid = true
   config.vm.box = "bento/ubuntu-16.04"
   config.vm.define :DeVM do |t| end
   config.vm.network :forwarded_port, guest:5000, host:1335

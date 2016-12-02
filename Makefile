@@ -14,10 +14,10 @@ ext: ext.bitcoin ext.two1
 
 install:; (yarn global add electron)
 
-gulp:; (yarn run gulp && yarn run test)
+js:; (yarn run gulp && yarn run test)
 
 rm: vm.uninstall
 
-ssh: vm.ssh
+sh: vm.ssh
 
 vm: vm.install

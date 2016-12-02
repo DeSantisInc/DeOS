@@ -1,3 +1,3 @@
-DERUN "sudo pip install docker-compose"
+DERUN "pip install docker-compose"
 
 EXIT_SUCCESS

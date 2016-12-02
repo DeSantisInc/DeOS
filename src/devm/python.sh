@@ -1,8 +1,8 @@
-DERUN "apt-get install -y python2.7"
+DERUN "apt-get install -y python2.7 2> /dev/null"
 
-DERUN "apt-get install -y python-dev"
+DERUN "apt-get install -y python-dev 2> /dev/null"
 
-DERUN "apt-get install -y python-pip"
+DERUN "apt-get install -y python-pip 2> /dev/null"
 
 DERUN "pip install --upgrade pip"
 

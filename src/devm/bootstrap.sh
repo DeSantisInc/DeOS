@@ -12,7 +12,7 @@ EXIT_SUCCESS() {
 export -f DERUN
 export -f EXIT_SUCCESS
 
-while getopts cnuyxpdzfj x
+while getopts cnuyxpdbzfj x
 do
   case "$x" in
     c)  (chmod +x "/deos/src/devm/common.sh")
@@ -27,6 +27,8 @@ do
         (exec "/deos/src/devm/nginx.sh") ;;
     p)  (chmod +x "/deos/src/devm/python.sh")
         (exec "/deos/src/devm/python.sh") ;;
+    b)  (chmod +x "/deos/src/devm/dvm.sh")
+        (exec "/deos/src/devm/dvm.sh") ;;
     d)  (chmod +x "/deos/src/devm/docker.sh")
         (exec "/deos/src/devm/docker.sh") ;;
     z)  (chmod +x "/deos/src/devm/compose.sh")

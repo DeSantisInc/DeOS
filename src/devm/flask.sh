@@ -1,12 +1,12 @@
-DERUN "touch /vagrant/var/docker/python/app.py"
+DERUN "touch /deos/var/docker/python/app.py"
 
-DERUN "touch /vagrant/var/docker/python/requirements.txt"
+DERUN "touch /deos/var/docker/python/requirements.txt"
 
-DERUN "touch /vagrant/var/docker/python/Dockerfile"
+DERUN "touch /deos/var/docker/python/Dockerfile"
 
-DERUN "touch /vagrant/var/docker/python/docker-compose.yml"
+DERUN "touch /deos/var/docker/python/docker-compose.yml"
 
-cat <<EOT >> /vagrant/var/docker/python/app.py
+cat << EOF >> /deos/var/docker/python/app.py
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -23,22 +23,22 @@ def hello():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
-EOT
+EOF
 
-cat <<EOT >> /vagrant/var/docker/python/requirements.txt
+cat << EOF >> /deos/var/docker/python/requirements.txt
 flask
 redis
-EOT
+EOF
 
-cat <<EOT >> /vagrant/var/docker/python/Dockerfile
+cat << EOF >> /deos/var/docker/python/Dockerfile
 FROM python:2.7
 ADD . /code
 WORKDIR /code
 RUN pip install -r requirements.txt
 CMD python app.py
-EOT
+EOF
 
-cat <<EOT >> /vagrant/var/docker/python/docker-compose.yml
+cat << EOF >> /deos/var/docker/python/docker-compose.yml
 version: '2'
 services:
   web:
@@ -51,10 +51,10 @@ services:
      - redis
   redis:
     image: redis
-EOT
+EOF
 
-DERUN "cd /vagrant/var/docker/python && docker-compose build"
+DERUN "cd /deos/var/docker/python && docker-compose build"
 
-DERUN "cd /vagrant/var/docker/python && docker-compose up -d"
+DERUN "cd /deos/var/docker/python && docker-compose up -d"
 
 EXIT_SUCCESS

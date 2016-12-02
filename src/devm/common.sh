@@ -14,4 +14,8 @@ DERUN "apt-get -y install git 2> /dev/null"
 
 DERUN "apt-get -y install curl 2> /dev/null"
 
+DERUN "apt-get -y install apt-transport-https"
+
+DERUN "apt-get -y install ca-certificates"
+
 EXIT_SUCCESS

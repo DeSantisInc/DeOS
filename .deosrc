@@ -16,7 +16,7 @@ DEOS:=$(BASEDIR)/bin/deos
 
 PRINT:=$(BASEDIR)/bin/printm
 
-VMCMD:="cd /vagrant; bash -i -c 'ipython --profile=vagrant'"
+VMCMD:="cd /deos; bash -i -c 'ipython --profile=vagrant'"
 
 GIT_BITCOIN=git@github.com:DeSantisInc/bitcoin.git
 
@@ -60,6 +60,5 @@ FILES:=.deosrc\
        var/build/obj/.gitkeep
 
 include src/deos/bitcoin.mk
-include src/deos/two1.mk
 include src/deos/test.mk
 include src/deos/vbox.mk

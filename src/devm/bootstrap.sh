@@ -15,26 +15,26 @@ export -f EXIT_SUCCESS
 while getopts cnuyxpdzfj x
 do
   case "$x" in
-    c)  (chmod +x "/vagrant/src/devm/common.sh")
-        (exec "/vagrant/src/devm/common.sh") ;;
-    n)  (chmod +x "/vagrant/src/devm/node.sh")
-        (exec "/vagrant/src/devm/node.sh") ;;
-    u)  (chmod +x "/vagrant/src/devm/nvm.sh")
-        (exec "/vagrant/src/devm/nvm.sh") ;;
-    y)  (chmod +x "/vagrant/src/devm/yarn.sh")
-        (exec "/vagrant/src/devm/yarn.sh") ;;
-    x)  (chmod +x "/vagrant/src/devm/nginx.sh")
-        (exec "/vagrant/src/devm/nginx.sh") ;;
-    p)  (chmod +x "/vagrant/src/devm/python.sh")
-        (exec "/vagrant/src/devm/python.sh") ;;
-    d)  (chmod +x "/vagrant/src/devm/docker.sh")
-        (exec "/vagrant/src/devm/docker.sh") ;;
-    z)  (chmod +x "/vagrant/src/devm/compose.sh")
-        (exec "/vagrant/src/devm/compose.sh") ;;
-    f)  (chmod +x "/vagrant/src/devm/flask.sh")
-        (exec "/vagrant/src/devm/flask.sh") ;;
-    j)  (chmod +x "/vagrant/src/devm/jupyter.sh")
-        (exec "/vagrant/src/devm/jupyter.sh") ;;
+    c)  (chmod +x "/deos/src/devm/common.sh")
+        (exec "/deos/src/devm/common.sh") ;;
+    n)  (chmod +x "/deos/src/devm/node.sh")
+        (exec "/deos/src/devm/node.sh") ;;
+    u)  (chmod +x "/deos/src/devm/nvm.sh")
+        (exec "/deos/src/devm/nvm.sh") ;;
+    y)  (chmod +x "/deos/src/devm/yarn.sh")
+        (exec "/deos/src/devm/yarn.sh") ;;
+    x)  (chmod +x "/deos/src/devm/nginx.sh")
+        (exec "/deos/src/devm/nginx.sh") ;;
+    p)  (chmod +x "/deos/src/devm/python.sh")
+        (exec "/deos/src/devm/python.sh") ;;
+    d)  (chmod +x "/deos/src/devm/docker.sh")
+        (exec "/deos/src/devm/docker.sh") ;;
+    z)  (chmod +x "/deos/src/devm/compose.sh")
+        (exec "/deos/src/devm/compose.sh") ;;
+    f)  (chmod +x "/deos/src/devm/flask.sh")
+        (exec "/deos/src/devm/flask.sh") ;;
+    j)  (chmod +x "/deos/src/devm/jupyter.sh")
+        (exec "/deos/src/devm/jupyter.sh") ;;
     ?)  EXIT_SUCCESS ;;
   esac
 done

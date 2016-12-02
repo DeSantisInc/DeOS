@@ -1,6 +1,6 @@
 # 21: Build the Machine-Payable Web [![Build Status](https://travis-ci.org/21dotco/two1-python.svg?branch=master)](https://travis-ci.org/21dotco/two1-python)
 
-![21 logo](../../var/docs/img/21_banner.png "21")
+![21 logo](https://github.com/DeSantisInc/DeOS/blob/atd-deos-v0.6-alpha/var/docs/two1/img/21_banner.png?raw=true)
 
 21 is an open source Python library and command line interface for
 quickly building machine-payable web services. It allows you to

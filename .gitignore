@@ -5,6 +5,7 @@
 .nvm/
 .tmp/
 .vagrant/
+.virtualenvs/
 
 #[files]
 app/bundle.min.js*

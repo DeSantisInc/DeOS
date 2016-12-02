@@ -1,0 +1,3 @@
+[submodule "ext/zerotier"]
+	path = ext/zerotier
+	url = https://github.com/zerotier/ZeroTierOne.git

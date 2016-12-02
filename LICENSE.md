@@ -53,7 +53,7 @@ THE SOFTWARE.
 
 ## 21
 
-**Copyright (c) 2015-2016, 21 Inc.**
+**Copyright (c) 2015-2016 21 Inc.**
 
 **All rights reserved.**
 

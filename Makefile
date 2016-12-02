@@ -10,7 +10,7 @@ check: deos.check; @(echo)
 
 chmod:; (chmod +x $(PRINT) $(DEOS))
 
-ext: ext.bitcoin
+ext: ext.bitcoin ext.two1
 
 install:; (yarn global add electron)
 

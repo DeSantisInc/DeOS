@@ -20,6 +20,8 @@ VMCMD:="cd /vagrant; bash -i -c 'ipython --profile=vagrant'"
 
 GIT_BITCOIN=git@github.com:DeSantisInc/bitcoin.git
 
+GIT_TWO1=git@github.com:DeSantisInc/two1.git
+
 FILES:=.deosrc\
        .editorconfig\
        .gitattributes\
@@ -58,5 +60,6 @@ FILES:=.deosrc\
        var/build/obj/.gitkeep
 
 include src/deos/bitcoin.mk
+include src/deos/two1.mk
 include src/deos/test.mk
 include src/deos/vbox.mk

@@ -25,14 +25,14 @@ http {
     gzip_disable "msie6";
 
     upstream ipython_server {
-      server localhost:8282;
+      server localhost:8888;
     }
 
     server {
         listen 80;
         server_name localhost;
         location / {
-          proxy_pass http://ipython_server;
+          proxy_pass http://ipython_server/;
           proxy_http_version 1.1;
           proxy_set_header Upgrade \$http_upgrade;
           proxy_set_header Connection "upgrade";

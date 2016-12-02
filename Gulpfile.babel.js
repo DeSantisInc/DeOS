@@ -16,7 +16,6 @@ import { paths, toClean, toLint } from './src/dejs/config.paths';
 
 gulp.task('clean', () => del(toClean));
 
-// .pipe(eslint.failAfterError())
 gulp.task('lint', ['clean'], () => gulp.src(toLint)
                             .pipe(eslint())
                             .pipe(eslint.format())

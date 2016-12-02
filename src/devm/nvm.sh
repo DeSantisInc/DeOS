@@ -2,7 +2,7 @@ git clone https://github.com/creationix/nvm.git /home/vagrant/.nvm && cd /home/v
 
 source /home/vagrant/.nvm/nvm.sh
 
-cd /vagrant && nvm install && nvm use
+cd /deos && nvm install && nvm use
 
 n=$(which node); n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local
 

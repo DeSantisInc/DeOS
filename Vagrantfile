@@ -16,15 +16,17 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args=>"-c" # common
   config.vm.provision :unix_reboot
   config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args=>"-x" # nginx
-  #config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args=>"-n" # nodejs
-  #config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args=>"-u" # nvm
-  #config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args=>"-y" # yarn
+  config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args=>"-n" # nodejs
+  config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args=>"-u" # nvm
+  config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args=>"-y" # yarn
   config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args => "-p" # python
   config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args => "-d" # docker
   config.vm.provision :unix_reboot
   config.vm.provision :shell, privileged:false,
                               path:ENV['VM_BOOTSTRAP'], :args => "-b" # dvm
-  config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args => "-z" # compose
-  config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args => "-f" # flask
-  #config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args => "-j" # jupyter
+  config.vm.provision :shell, privileged:true,
+                              path:ENV['VM_BOOTSTRAP'], :args => "-z" # compose
+  config.vm.provision :shell, privileged:true,
+                              path:ENV['VM_BOOTSTRAP'], :args => "-f" # flask
+  config.vm.provision :shell, path:ENV['VM_BOOTSTRAP'], :args => "-j" # jupyter
 end

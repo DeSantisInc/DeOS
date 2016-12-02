@@ -45,4 +45,6 @@ DERUN "ln -s /deos/var/docker/nginx/nginx.conf /etc/nginx/nginx.conf"
 
 DERUN "sudo systemctl reload nginx"
 
+DERUN "sudo systemctl enable nginx"
+
 EXIT_SUCCESS

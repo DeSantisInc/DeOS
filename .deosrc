@@ -1,39 +1,25 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
-
 .PHONY:all build chmod clean install
-
 .SUBLIME_TARGETS:all
 
 BASEDIR:=$(CURDIR)
-
 BIN:=$(BASEDIR)/bin
-
 LIB:=$(BASEDIR)/src
-
 SRC:=$(BASEDIR)/src
-
 DEOS:=$(BASEDIR)/bin/deos
-
 PRINT:=$(BASEDIR)/bin/printm
 
 export VM_BOX:=bento/ubuntu-16.04
-
 export VM_BOOTSTRAP:=./src/devm/bootstrap.sh
-
 export VM_PATH:=/deos
-
 export VM_HOST:=1337
-
 export VM_GUEST:=80
-
 export VM_SHELL:=bash -c 'BASH_ENV=/etc/profile exec bash'
 
 GIT_BITCOIN:=git@github.com:DeSantisInc/bitcoin.git
-
-VMCMD:="cd /deos; bash -i -c 'ipython --profile=vagrant'"
-
+VMCMD:="cd /deos; bash -i -c 'ipython --profile=deos'"
 FILES:=.deosrc\
        .editorconfig\
        .gitattributes\
@@ -72,7 +58,5 @@ FILES:=.deosrc\
        var/build/obj/.gitkeep
 
 include src/deos/bitcoin.mk
-
 include src/deos/test.mk
-
 include src/deos/vbox.mk

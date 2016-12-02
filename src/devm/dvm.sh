@@ -1,15 +1,15 @@
 DERUN "curl -sL https://download.getcarina.com/dvm/latest/install.sh | sh"
 
-#source /root/.dvm/dvm.sh
+source /home/vagrant/.dvm/dvm.sh
 
-#echo "source /root/.dvm/dvm.sh" >> /home/vagrant/.bashrc
+export DOCKER_VERSION=1.8.2
 
-#echo "export DOCKER_VERSION=1.8.2" >> /home/vagrant/.bashrc
+dvm install
 
-#echo "dvm use" >> /home/vagrant/.bashrc
+echo "source /home/vagrant/.dvm/dvm.sh" >> /home/vagrant/.bashrc
 
-#export DOCKER_VERSION=1.8.2
+echo "export DOCKER_VERSION=1.8.2" >> /home/vagrant/.bashrc
 
-#dvm install
+echo "dvm use" >> /home/vagrant/.bashrc
 
 EXIT_SUCCESS

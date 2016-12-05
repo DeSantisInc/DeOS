@@ -12,6 +12,7 @@ SCRIPT
 Vagrant.configure("2") do |config|
   config.vm.define :DeVM do |t| end
   config.vm.box = ENV['VM_BOX']
+  config.vm.box_check_update = true
   config.ssh.paranoid = true
   config.ssh.shell = ENV['VM_SHELL']
   config.vm.network :forwarded_port,

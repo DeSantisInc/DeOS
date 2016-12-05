@@ -1,9 +1,9 @@
 name: com.twitter
 
 meta:
-- identity: false
 - type: namespace
 - kind: domain
+- identity: false
 
 dates:
 - created: 2000-01-21T16:28:17Z

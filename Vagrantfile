@@ -3,12 +3,6 @@
 
 require './src/devm/plugins/vagrant-provision-reboot-plugin'
 
-$script = <<SCRIPT
-curl -s https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg | gpg --import
-curl -s https://install.zerotier.com/ | gpg --output - >/tmp/zt-install.sh && bash /tmp/zt-install.sh
-sudo zerotier-cli join 565799d8f6747f84
-SCRIPT
-
 Vagrant.configure("2") do |config|
   config.vm.define :DeVM do |t| end
   config.vm.box = ENV['VM_BOX']
@@ -38,7 +32,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision :unix_reboot
   config.vm.provision :shell, # zerotier
     privileged:true,
-    inline:$script
+    path:ENV['VM_BOOTSTRAP'],
+    :args => "v"
   config.vm.provision :shell, # nginx
     privileged:true,
     path:ENV['VM_BOOTSTRAP'],

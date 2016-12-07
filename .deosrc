@@ -13,7 +13,7 @@ DEOS:=$(BASEDIR)/bin/deos
 PRINT:=$(BASEDIR)/bin/printm
 
 export VM_BOX:=bento/ubuntu-16.04
-export VM_BOOTSTRAP:=./src/devm/bootstrap.sh
+export VM_BOOTSTRAP:=./boot/install.sh
 export VM_PATH:=/deos
 export VM_HOST:=1337
 export VM_GUEST:=80

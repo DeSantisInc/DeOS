@@ -8,6 +8,6 @@ DERUN "apt-get -y install yarn 2> /dev/null"
 
 export PATH="$PATH:`yarn global bin`"
 
-DERUN "cd /deos && yarn install && cd app && yarn install"
+DERUN "cd /deos && yarn install && cd app/freebird && yarn install"
 
 EXIT_SUCCESS

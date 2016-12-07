@@ -1,0 +1,34 @@
+- .deos/
+- .git/
+- .vagrant/
+
+- app/
+- bin/
+- boot/
+- doc/
+- etc/
+- include/
+- src/
+- test/
+- var/
+
+- .deosconfig
+- .deosrc
+- .editorconfig
+- .flowconfig
+- .gitattributes
+- .gitignore
+- .nvmrc
+- .spec.yml
+- .travis.yml
+
+- package.json
+- setup.py
+- yarn.lock
+
+- Gulpfile.babel.js
+- Makefile
+- Vagrantfile
+
+- LICENSE.md
+- README.md

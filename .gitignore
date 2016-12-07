@@ -12,6 +12,7 @@
 app/bundle.min.js*
 app/index.min.html
 bin/logic
+blockstack.txt
 npm-debug.log
 yarn-error.log
 

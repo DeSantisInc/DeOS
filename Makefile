@@ -2,6 +2,8 @@ include .deosrc
 
 all: vm ssh #build; @($(DEOS) && echo)
 
+alt: _all
+
 app:; electron ./app/
 
 build: chmod check

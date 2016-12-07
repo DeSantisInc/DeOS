@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-require './src/devm/plugins/vagrant-provision-reboot-plugin'
+require './boot/plugins/vagrant-provision-reboot-plugin'
 
 Vagrant.configure("2") do |config|
   config.vm.define :DeVM do |t| end

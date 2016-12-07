@@ -11,7 +11,7 @@
     "redux-actions": "^1.1.0",
     "redux-immutable": "^3.0.8"
   },
-  "main": "main.js",
+  "main": "index.js",
   "name": "DeOS",
   "version": "0.6.0"
 }

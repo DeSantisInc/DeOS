@@ -13,18 +13,40 @@ DELTA:=$(BASEDIR)/bin/delta
 DEOS:=$(BASEDIR)/bin/deos
 PRINT:=$(BASEDIR)/bin/printm
 
+export VM_USER:=vagrant
+export VM_BASHRC:=/home/$(VM_USER)/.bashrc
 export VM_BOX:=bento/ubuntu-16.04
 export VM_BOOT:=./boot/install.sh
 export VM_PATH:=/deos
+export VM_PATH_ZT:=/var/lib/zerotier-one
 export VM_SHELL:=bash -c 'BASH_ENV=/etc/profile exec bash'
+export VM_SHELL_SSH:=bash -l
 
-export VM_HOST_0:=1337
-export VM_GUEST_0:=80
-export VM_HOST_1:=5000
-export VM_GUEST_1:=1335
-export VM_HOST_2:=8888
-export VM_GUEST_2:=1336
+export BOOT_DEBUG:=2> /dev/null
 
+export PORT_IN_0:=1337
+export PORT_OUT_0:=80
+export PORT_IN_1:=5000
+export PORT_OUT_1:=1335
+export PORT_IN_2:=8888
+export PORT_OUT_2:=1336
+
+export DOCKER_APT_REPO:=https://apt.dockerproject.org/repo
+export DOCKER_GPG_KEY:=58118E89F3A912897C070ADBF76221572C52609D
+export DOCKER_KEY_SERV:=hkp://ha.pool.sks-keyservers.net:80
+export DOCKER_UBUNTU:=ubuntu-xenial
+export DOCKER_SOURCES:=/etc/apt/sources.list.d/docker.list
+export DOCKER_VERSION:=1.8.2
+
+export DVM_ACTIVATE:=/home/$(VM_USER)/.dvm/dvm.sh
+export DVM_INSTALL:=https://download.getcarina.com/dvm/latest/install.sh
+
+export UBUNTU_GPG_KEY:=F76221572C52609D
+export UBUNTU_KEY_SERV:=keyserver.ubuntu.com
+
+export ZT_GPG_KEY:=https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg
+export ZT_INSTALL:=https://install.zerotier.com/
+export ZT_INSTALL_TMP:=/tmp/zt-install.sh
 export ZT_NETWORK:=565799d8f6747f84
 
 SSHCMD:="cd /deos; bash -i -c 'source venv/linux/python/bin/activate && bash'"
@@ -32,42 +54,43 @@ UPCMD:="vagrant up --provider virtualbox"
 VMCMD:="cd /deos; bash -i -c 'ipython --profile=deos'"
 GIT_BITCOIN:=git@github.com:DeSantisInc/bitcoin.git
 
-FILES:=.deosrc\
-       .editorconfig\
-       .gitattributes\
-       .gitignore\
-       .nvmrc\
-       .travis.yml\
-       LICENSE.md\
-       Makefile\
-       README.md\
-       Vagrantfile\
-       yarn.lock\
-       app/yarn.lock\
-       bin/deos\
-       bin/logic\
-       bin/printm\
-       src/deos/logic.mk\
-       src/deos/test.mk\
-       src/flow/css-modules.js\
-       src/ipython/ipython_config.py\
-       src/atdlib.h\
-       src/deArray.c\
-       src/deArray.h\
-       src/deContainer.c\
-       src/deContainer.h\
-       src/deGroup.c\
-       src/deGroup.h\
-       src/deList.c\
-       src/deList.h\
-       src/deListNode.c\
-       src/deListNode.h\
-       src/deNetwork.c\
-       src/deNetwork.h\
-       src/main.c\
-       var/assets/icons/512x512.png\
-       var/build/es5/.gitkeep\
-       var/build/obj/.gitkeep
+FILES:=\
+.deosrc\
+.editorconfig\
+.gitattributes\
+.gitignore\
+.nvmrc\
+.travis.yml\
+LICENSE.md\
+Makefile\
+README.md\
+Vagrantfile\
+yarn.lock\
+app/yarn.lock\
+bin/deos\
+bin/logic\
+bin/printm\
+src/deos/logic.mk\
+src/deos/test.mk\
+src/flow/css-modules.js\
+src/ipython/ipython_config.py\
+src/atdlib.h\
+src/deArray.c\
+src/deArray.h\
+src/deContainer.c\
+src/deContainer.h\
+src/deGroup.c\
+src/deGroup.h\
+src/deList.c\
+src/deList.h\
+src/deListNode.c\
+src/deListNode.h\
+src/deNetwork.c\
+src/deNetwork.h\
+src/main.c\
+var/assets/icons/512x512.png\
+var/build/es5/.gitkeep\
+var/build/obj/.gitkeep
 
 include src/install/bitcoin.mk
 include src/install/test.mk

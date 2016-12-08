@@ -1,8 +1,6 @@
-RUN "curl -sL https://download.getcarina.com/dvm/latest/install.sh | sh"
-source /home/vagrant/.dvm/dvm.sh
-export DOCKER_VERSION=1.8.2
-dvm install
-echo "source /home/vagrant/.dvm/dvm.sh" >> /home/vagrant/.bashrc
-echo "export DOCKER_VERSION=1.8.2" >> /home/vagrant/.bashrc
-echo "dvm use" >> /home/vagrant/.bashrc
+RUN "curl -sL $DVM_INSTALL | sh"
+source $DVM_ACTIVATE && dvm install
+echo "source $DVM_ACTIVATE" >> $VM_BASHRC
+echo "export DOCKER_VERSION=$DOCKER_VERSION" >> $VM_BASHRC
+echo "dvm use" >> $VM_BASHRC
 EXIT_SUCCESS

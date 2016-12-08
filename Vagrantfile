@@ -55,10 +55,10 @@ Vagrant.configure('2') do |config|
                         :args=>'-n'
     config.vm.provision :shell, # nvm
                     path:ENV['VM_BOOT'],
-                        :args => '-u'
+                        :args=>'-u'
     config.vm.provision :shell, # yarn
                     path:ENV['VM_BOOT'],
-                        :args => '-y'
+                        :args=>'-y'
   end
 
   config.vm.provision :shell, # python
@@ -98,7 +98,7 @@ Vagrant.configure('2') do |config|
   if ENV['SERVER'] != '0'
     config.vm.provision :shell, # jupyter
                     path:ENV['VM_BOOT'],
-                        :args => '-j'
+                        :args=>'-j'
   end
 
 end

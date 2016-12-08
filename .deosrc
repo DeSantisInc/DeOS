@@ -61,8 +61,8 @@ FILES:=.deosrc\
        var/build/es5/.gitkeep\
        var/build/obj/.gitkeep
 
-include src/devm/bitcoin.mk
-include src/devm/test.mk
-include src/devm/vbox.mk
-include src/devm/zerotier.mk
+include src/install/bitcoin.mk
+include src/install/test.mk
+include src/install/vbox.mk
+include src/install/zerotier.mk
 include host/Makefile

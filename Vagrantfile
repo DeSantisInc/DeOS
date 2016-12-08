@@ -6,13 +6,10 @@ require './boot/plugins/vagrant-provision-reboot-plugin'
 Vagrant.configure('2') do |config|
 
   config.vm.define :DeVM do |t| end
-
   config.vm.box = ENV['VM_BOX']
-
   config.vm.box_check_update = true
 
   config.ssh.paranoid = true
-
   if ARGV[0] == 'ssh' ? config.ssh.shell = ENV['VM_SHELL_SSH']
                       : config.ssh.shell = ENV['VM_SHELL']
   end
@@ -21,27 +18,23 @@ Vagrant.configure('2') do |config|
     config.vm.network :forwarded_port,
                  guest:ENV['PORT_IN_0'],
                   host:ENV['PORT_OUT_0']
-
     config.vm.network :forwarded_port,
                  guest:ENV['PORT_IN_1'],
                   host:ENV['PORT_OUT_1']
-
     config.vm.network :forwarded_port,
                  guest:ENV['PORT_IN_2'],
                   host:ENV['PORT_OUT_2']
   end
 
   config.vm.synced_folder '.', '/vagrant', disabled:true
-
   config.vm.synced_folder '.', ENV['VM_PATH']
-
   config.vm.synced_folder '.zerotier', ENV['VM_PATH_ZT'], owner:'root',
                                                           group:'root',
                                                          create:true
 
   config.vm.provision :shell, # bootstrap
                   path:ENV['VM_BOOT'],
-                   env:{'BOOT_DEBUG' => ENV['BOOT_DEBUG']},
+                   env:{'BOOT_DEBUG'=>ENV['BOOT_DEBUG']},
                       :args=>'-c'
 
   config.vm.provision :unix_reboot

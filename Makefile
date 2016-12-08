@@ -1,7 +1,9 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
+
 .PHONY:all build chmod clean install main picocoin run venv
+
 .SUBLIME_TARGETS:all
 
 include .deosrc

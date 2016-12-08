@@ -31,8 +31,8 @@ do
         (exec "/deos/src/devm/yarn.sh") ;;
     x)  (chmod +x "/deos/src/devm/nginx.sh")
         (exec "/deos/src/devm/nginx.sh") ;;
-    p)  (chmod +x "/deos/src/devm/python.sh")
-        (exec "/deos/src/devm/python.sh") ;;
+    p)  (chmod +x "/deos/boot/python.sh")
+        (exec "/deos/boot/python.sh") ;;
     b)  (chmod +x "/deos/src/devm/dvm.sh")
         (exec "/deos/src/devm/dvm.sh") ;;
     d)  (chmod +x "/deos/src/devm/docker.sh")

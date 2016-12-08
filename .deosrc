@@ -1,7 +1,7 @@
 export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
-.PHONY:all build chmod clean install
+.PHONY:all build chmod clean install run venv
 .SUBLIME_TARGETS:all
 
 BASEDIR:=$(CURDIR)

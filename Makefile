@@ -1,6 +1,12 @@
 include .deosrc
 
-all: vm ssh #build; @($(DEOS) && echo)
+all: run #vm ssh #build; @($(DEOS) && echo)
+
+run: venv
+	@echo $@
+
+venv:
+	@echo $@
 
 alt: _all
 

@@ -3,5 +3,4 @@
 
 #[except]
 !.gitignore
-!self/
-!sudo/
+!examples/

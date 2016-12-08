@@ -4,10 +4,17 @@ export MAKEFLAGS=--no-print-directory
 .PHONY:all build chmod clean install main picocoin run venv
 .SUBLIME_TARGETS:all
 
+IS_FALSE:=0
+IS_TRUE:=1
+IS_MAC:=Darwin
+IS_LINUX:=Linux
+
+HOST_OS:=$(shell uname -s)
 BASEDIR:=$(CURDIR)
 BIN:=$(BASEDIR)/bin
 LIB:=$(BASEDIR)/lib
 SRC:=$(BASEDIR)/src
+VENV:=$(BASEDIR)/venv
 DELTA:=$(BASEDIR)/bin/delta
 DEOS:=$(BASEDIR)/bin/deos
 PRINT:=$(BASEDIR)/bin/printm

@@ -3,10 +3,18 @@ include .deosrc
 all: run #vm ssh #build; @($(DEOS) && echo)
 
 run: venv
-	@echo $@
+	(python $(SRC)/main.py)
 
 venv:
-	@echo $@
+ifeq ($(HOST_OS), $(IS_MAC))
+	-rm -rf $(VENV)/darwin/python/
+	cd $(VENV)/darwin/ && virtualenv python
+	cp $(SRC)/templates/dotfiles/gitignore.txt $(VENV)/darwin/python/.gitignore
+ifeq ($(HOST_OS), $(IS_LINUX))
+	@echo $@-linux
+else
+	@echo "Your platform, $(HOST_OS), is not supported."
+endif
 
 main:
 	-(rm -rf $(BIN)/main*)

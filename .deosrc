@@ -3,19 +3,20 @@ IS_TRUE:=1
 IS_MAC:=Darwin
 IS_LINUX:=Linux
 
-DEBUG:=$(IS_FALSE)
-export SERVER:=$(IS_FALSE)
-export BUILDJS:=$(IS_FALSE)
 HOST_OS:=$(shell uname -s)
+
+DEBUG:=$(IS_FALSE)
+export BUILDJS:=$(IS_FALSE)
+export SERVER:=$(IS_FALSE)
 
 BASEDIR:=$(CURDIR)
 BIN:=$(BASEDIR)/bin
-LIB:=$(BASEDIR)/lib
-SRC:=$(BASEDIR)/src
-VENV:=$(BASEDIR)/venv
 DELTA:=$(BASEDIR)/bin/delta
 DEOS:=$(BASEDIR)/bin/deos
+LIB:=$(BASEDIR)/lib
 PRINT:=$(BASEDIR)/bin/printm
+SRC:=$(BASEDIR)/src
+VENV:=$(BASEDIR)/venv
 
 export VM_USER:=vagrant
 export VM_BASHRC:=/home/$(VM_USER)/.bashrc

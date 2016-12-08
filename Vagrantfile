@@ -47,11 +47,11 @@ Vagrant.configure('2') do |config|
                         'ZT_NETWORK'=>ENV['ZT_NETWORK']},
                       :args=>'-v'
 
-  if ENV['BUILDJS'] != '0'
-    config.vm.provision :shell, # nginx
-                    path:ENV['VM_BOOT'],
-                        :args=>'-x'
+  config.vm.provision :shell, # nginx
+                  path:ENV['VM_BOOT'],
+                      :args=>'-x'
 
+  if ENV['BUILDJS'] != '0'
     config.vm.provision :shell, # nodejs
                     path:ENV['VM_BOOT'],
                         :args=>'-n'

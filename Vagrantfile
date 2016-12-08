@@ -15,9 +15,12 @@ Vagrant.configure("2") do |config|
   config.vm.box = ENV['VM_BOX']
   config.vm.box_check_update = true
 
-  config.vm.network :forwarded_port, guest:ENV['VM_GUEST'], host:ENV['VM_HOST']
-  config.vm.network :forwarded_port, guest:5000, host:1335
-  config.vm.network :forwarded_port, guest:8888, host:1336
+  #config.vm.network :forwarded_port, guest:ENV['VM_GUEST_0'],
+                                      #host:ENV['VM_HOST_0']
+  config.vm.network :forwarded_port, guest:ENV['VM_GUEST_1'],
+                                      host:ENV['VM_HOST_1']
+  #config.vm.network :forwarded_port, guest:ENV['VM_GUEST_2'],
+                                      #host:ENV['VM_HOST_2']
 
   config.vm.synced_folder ".", "/vagrant", disabled:true
   config.vm.synced_folder ".", ENV['VM_PATH']
@@ -51,7 +54,7 @@ Vagrant.configure("2") do |config|
                       :args => "-z" # compose
   config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
                       :args => "-f" # flask
-  config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
-                      :args => "-j" # jupyter
+  #config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
+                      #:args => "-j" # jupyter
 
 end

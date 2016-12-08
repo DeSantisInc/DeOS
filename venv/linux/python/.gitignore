@@ -24,3 +24,23 @@
 
 #[except]
 !.gitignore
+#[ignore]
+*
+
+#[except]
+!.gitignore
+#[ignore]
+*
+
+#[except]
+!.gitignore
+#[ignore]
+*
+
+#[except]
+!.gitignore
+#[ignore]
+*
+
+#[except]
+!.gitignore

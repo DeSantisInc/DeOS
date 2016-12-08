@@ -4,9 +4,11 @@ cat << EOF >> /deos/var/docker/nginx/nginx.conf
 user www-data;
 worker_processes 4;
 pid /run/nginx.pid;
+
 events {
     worker_connections 768;
 }
+
 http {
     sendfile on;
     tcp_nopush on;

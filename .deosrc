@@ -16,9 +16,15 @@ PRINT:=$(BASEDIR)/bin/printm
 export VM_BOX:=bento/ubuntu-16.04
 export VM_BOOT:=./boot/install.sh
 export VM_PATH:=/deos
-export VM_HOST:=1337
-export VM_GUEST:=80
 export VM_SHELL:=bash -c 'BASH_ENV=/etc/profile exec bash'
+
+export VM_HOST_0:=1337
+export VM_GUEST_0:=80
+export VM_HOST_1:=5000
+export VM_GUEST_1:=1335
+export VM_HOST_2:=8888
+export VM_GUEST_2:=1336
+
 export ZT_NETWORK:=565799d8f6747f84
 
 SSHCMD:="cd /deos; bash -i -c 'source venv/linux/python/bin/activate && bash'"

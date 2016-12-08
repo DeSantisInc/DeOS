@@ -1,6 +1,8 @@
 vm.down:; ([ -d $(BASEDIR)/.vagrant/ ] && vagrant destroy DeVM --force)
 
-vm.install:; ([ ! -d $(BASEDIR)/.vagrant/ ] && $(DELTA) $(UPCMD))
+vm.install:
+	#-(vagrant box update --box bento/ubuntu-16.04)
+	([ ! -d $(BASEDIR)/.vagrant/ ] && $(DELTA) $(UPCMD))
 
 vm.ssh:; (vagrant ssh -c $(VMCMD) DeVM)
 

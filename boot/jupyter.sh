@@ -4,10 +4,12 @@ RUN "pip install jupyter"
 RUN "pip install ipyparallel"
 RUN "ipcluster nbextension enable"
 RUN "ipython profile create deos"
+
 if [ -L /root/.ipython/profile_deos/ipython_kernel_config.py ]; then
   RUN "rm /root/.ipython/profile_deos/ipython_kernel_config.py"
 fi
-cat << EOT >> /root/.ipython/profile_deos/ipython_kernel_config.py
+
+cat <<EOT>> /root/.ipython/profile_deos/ipython_kernel_config.py
 c = get_config()
 c.StoreMagics.autorestore = True
 c.InteractiveShell.editor = 'vim'
@@ -22,6 +24,7 @@ c.AliasManager.user_aliases = [
     ('yarn', 'yarn'),
 ]
 EOT
+
 sudo jupyter notebook --notebook-dir=/deos/var/notebook \
                       --no-browser --ip=0.0.0.0 &
 EXIT_SUCCESS

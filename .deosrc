@@ -3,11 +3,17 @@ IS_TRUE:=1
 IS_MAC:=Darwin
 IS_LINUX:=Linux
 
+DEBUG:=$(IS_FALSE)
 HOST_OS:=$(shell uname -s)
 
-DEBUG:=$(IS_FALSE)
+export BUILDDOCKER:=$(IS_TRUE)
 export BUILDJS:=$(IS_FALSE)
-export SERVER:=$(IS_FALSE)
+export BUILDNGINX:=$(IS_TRUE)
+export BUILDPY:=$(IS_TRUE)
+export BUILDZT:=$(IS_TRUE)
+export BUILDNOTEBOOK:=$(IS_FALSE)
+export FILESYNC:=$(IS_TRUE)
+export RUNSERVER:=$(IS_FALSE)
 
 BASEDIR:=$(CURDIR)
 BIN:=$(BASEDIR)/bin

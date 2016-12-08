@@ -1,6 +1,6 @@
 RUN "sudo apt-get install -y nginx 2> /dev/null"
 RUN "rm /etc/nginx/nginx.conf"
-cat << EOF >> /deos/var/docker/nginx/nginx.conf
+cat <<EOF>> /deos/var/docker/nginx/nginx.conf
 user www-data;
 worker_processes 4;
 pid /run/nginx.pid;

@@ -12,13 +12,9 @@
 
 * Install and build `gtiles`.
 
-* Install `blockstack` within a `virtualenv`.
-
 * Save the state of `blockstack`.
 
 * Load the state of `blockstack`.
-
-* Remove `.nvmrc`, use `env` variables.
 
 * Sync `rmt` documentation with `doc`.
 

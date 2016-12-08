@@ -50,19 +50,19 @@ Vagrant.configure("2") do |config|
   #  privileged:true,
   #  path:ENV['VM_BOOTSTRAP'],
   #  :args => "-y"
-  config.vm.provision :shell, # python
-    privileged:true,
-    path:ENV['VM_BOOTSTRAP'],
-    :args => "-p"
-  #config.vm.provision :shell, # docker
+  #config.vm.provision :shell, # python
   #  privileged:true,
   #  path:ENV['VM_BOOTSTRAP'],
-  #  :args => "-d"
-  #config.vm.provision :unix_reboot
-  #config.vm.provision :shell, # dvm
-  #  privileged:false,
-  #  path:ENV['VM_BOOTSTRAP'],
-  #  :args => "-b"
+  #  :args => "-p"
+  config.vm.provision :shell, # docker
+    privileged:true,
+    path:ENV['VM_BOOTSTRAP'],
+    :args => "-d"
+  config.vm.provision :unix_reboot
+  config.vm.provision :shell, # dvm
+    privileged:false,
+    path:ENV['VM_BOOTSTRAP'],
+    :args => "-b"
   #config.vm.provision :shell, # compose
   #  privileged:true,
   #  path:ENV['VM_BOOTSTRAP'],

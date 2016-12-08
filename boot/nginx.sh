@@ -1,7 +1,5 @@
-DERUN "sudo apt-get install -y nginx 2> /dev/null"
-
-DERUN "rm /etc/nginx/nginx.conf"
-
+RUN "sudo apt-get install -y nginx 2> /dev/null"
+RUN "rm /etc/nginx/nginx.conf"
 cat << EOF >> /deos/var/docker/nginx/nginx.conf
 user www-data;
 worker_processes 4;
@@ -40,11 +38,7 @@ http {
     }
 }
 EOF
-
-DERUN "ln -s /deos/var/docker/nginx/nginx.conf /etc/nginx/nginx.conf"
-
-DERUN "sudo systemctl reload nginx"
-
-DERUN "sudo systemctl enable nginx"
-
+RUN "ln -s /deos/var/docker/nginx/nginx.conf /etc/nginx/nginx.conf"
+RUN "sudo systemctl reload nginx"
+RUN "sudo systemctl enable nginx"
 EXIT_SUCCESS

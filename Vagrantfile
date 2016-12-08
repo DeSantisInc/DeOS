@@ -38,18 +38,18 @@ Vagrant.configure("2") do |config|
     privileged:true,
     path:ENV['VM_BOOTSTRAP'],
     :args => "-x"
-  #config.vm.provision :shell, # nodejs
-  #  privileged:true,
-  #  path:ENV['VM_BOOTSTRAP'],
-  #  :args => "-n"
-  #config.vm.provision :shell, # nvm
-  #  privileged:true,
-  #  path:ENV['VM_BOOTSTRAP'],
-  #  :args => "-u"
-  #config.vm.provision :shell, # yarn
-  #  privileged:true,
-  #  path:ENV['VM_BOOTSTRAP'],
-  #  :args => "-y"
+  config.vm.provision :shell, # nodejs
+    privileged:true,
+    path:ENV['VM_BOOTSTRAP'],
+    :args => "-n"
+  config.vm.provision :shell, # nvm
+    privileged:true,
+    path:ENV['VM_BOOTSTRAP'],
+    :args => "-u"
+  config.vm.provision :shell, # yarn
+    privileged:true,
+    path:ENV['VM_BOOTSTRAP'],
+    :args => "-y"
   config.vm.provision :shell, # python
     privileged:true,
     path:ENV['VM_BOOTSTRAP'],

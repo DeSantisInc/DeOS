@@ -9,8 +9,8 @@ EXIT_SUCCESS() {
   exit 0
 }
 
-export -f DERUN
 export -f RUN
+
 export -f EXIT_SUCCESS
 
 while getopts cnuyvxpdbzfj x

@@ -1,9 +1,5 @@
-RUN "touch /deos/var/docker/python/app.py"
-RUN "touch /deos/var/docker/python/requirements.txt"
-RUN "touch /deos/var/docker/python/Dockerfile"
-RUN "touch /deos/var/docker/python/docker-compose.yml"
-
-cat << EOF >> /deos/var/docker/python/app.py
+RUN "touch $DOCKER_PY_PATH/app.py"\
+&& cat <<EOF>> $DOCKER_PY_PATH/app.py
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -22,12 +18,14 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
 EOF
 
-cat << EOF >> /deos/var/docker/python/requirements.txt
+RUN "touch $DOCKER_PY_PATH/requirements.txt"\
+&& cat <<EOF>> $DOCKER_PY_PATH/requirements.txt
 flask
 redis
 EOF
 
-cat << EOF >> /deos/var/docker/python/Dockerfile
+RUN "touch $DOCKER_PY_PATH/Dockerfile"\
+&& cat <<EOF>> $DOCKER_PY_PATH/Dockerfile
 FROM python:2.7
 ADD . /code
 WORKDIR /code
@@ -35,7 +33,8 @@ RUN pip install -r requirements.txt
 CMD python app.py
 EOF
 
-cat << EOF >> /deos/var/docker/python/docker-compose.yml
+RUN "touch $DOCKER_PY_PATH/docker-compose.yml"\
+&& cat <<EOF>> $DOCKER_PY_PATH/docker-compose.yml
 version: '2'
 services:
   web:
@@ -50,6 +49,6 @@ services:
     image: redis
 EOF
 
-RUN "cd /deos/var/docker/python && docker-compose build"
-RUN "cd /deos/var/docker/python && docker-compose up -d"
+RUN "cd $DOCKER_PY_PATH && docker-compose build"
+RUN "cd $DOCKER_PY_PATH && docker-compose up -d"
 EXIT_SUCCESS

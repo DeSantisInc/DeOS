@@ -14,6 +14,9 @@ main:
 	(chmod +x $(BIN)/main)
 	($(BIN)/main)
 
+picocoin:
+	@echo $@
+
 alt: _all
 
 app:; electron ./app/

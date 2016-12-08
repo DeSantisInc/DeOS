@@ -1,9 +1,3 @@
-export MAKEFLAGS=--no-print-directory
-
-.DEFAULT_GOAL:=all
-.PHONY:all build chmod clean install main picocoin run venv
-.SUBLIME_TARGETS:all
-
 IS_FALSE:=0
 IS_TRUE:=1
 IS_MAC:=Darwin

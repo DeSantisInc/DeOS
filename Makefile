@@ -1,6 +1,13 @@
+export MAKEFLAGS=--no-print-directory
+
+.DEFAULT_GOAL:=all
+.PHONY:all build chmod clean install main picocoin run venv
+.SUBLIME_TARGETS:all
+
 include .deosrc
 
-all: run #vm ssh #build; @($(DEOS) && echo)
+all: run
+	(vagrant ssh -c "cd /deos/ && bash -i -c 'ipython --profile=deos'" DeVM)
 
 run: venv
 	(python $(SRC)/main.py)
@@ -10,7 +17,7 @@ ifeq ($(HOST_OS), $(IS_MAC))
 	-rm -rf $(VENV)/darwin/python/
 	cd $(VENV)/darwin/ && virtualenv python
 	cp $(SRC)/templates/dotfiles/gitignore.txt $(VENV)/darwin/python/.gitignore
-ifeq ($(HOST_OS), $(IS_LINUX))
+else ifeq ($(HOST_OS), $(IS_LINUX))
 	@echo $@-linux
 else
 	@echo "Your platform, $(HOST_OS), is not supported."

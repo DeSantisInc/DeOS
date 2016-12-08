@@ -4,7 +4,10 @@ IS_MAC:=Darwin
 IS_LINUX:=Linux
 
 DEBUG:=$(IS_FALSE)
+export SERVER:=$(IS_FALSE)
+export BUILDJS:=$(IS_FALSE)
 HOST_OS:=$(shell uname -s)
+
 BASEDIR:=$(CURDIR)
 BIN:=$(BASEDIR)/bin
 LIB:=$(BASEDIR)/lib

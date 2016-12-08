@@ -11,6 +11,7 @@ vm.uninstall: vm.down
 	-rm -rf $(BASEDIR)/.vagrant/
 	-rm -rf $(BASEDIR)/app/node_modules/
 	-rm -rf $(BASEDIR)/node_modules/
+	-rm -rf $(BASEDIR)/venv/
 	-rm -rf $(BASEDIR)/var/docker/nginx/ \
 		&& mkdir $(BASEDIR)/var/docker/nginx/ \
 		&& cp $(BASEDIR)/var/templates/gitignore.txt \

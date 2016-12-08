@@ -13,7 +13,7 @@ export -f RUN
 
 export -f EXIT_SUCCESS
 
-while getopts cnuyvxpdbzfj x
+while getopts cnuyvxpdbzfjr x
 do
   case "$x" in
     c)  (chmod +x "/deos/boot/bootstrap.sh")
@@ -28,6 +28,8 @@ do
         (exec "/deos/boot/nginx.sh") ;;
     p)  (chmod +x "/deos/boot/python.sh")
         (exec "/deos/boot/python.sh") ;;
+    r)  (chmod +x "/deos/boot/virtualenv.sh")
+        (exec "/deos/boot/virtualenv.sh") ;;
     b)  (chmod +x "/deos/boot/dvm.sh")
         (exec "/deos/boot/dvm.sh") ;;
     d)  (chmod +x "/deos/boot/docker.sh")

@@ -39,10 +39,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, privileged:true, path:ENV['VM_BOOTSTRAP'],
                       :args => "v" # zerotier
 
-  #config.vm.provision :shell, # nginx
-    #privileged:true,
-    #path:ENV['VM_BOOTSTRAP'],
-    #:args => "-x"
+  config.vm.provision :shell, privileged:true, path:ENV['VM_BOOTSTRAP'],
+                      :args => "-x" # nginx
+
   #config.vm.provision :shell, # nodejs
     #privileged:true,
     #path:ENV['VM_BOOTSTRAP'],

@@ -4,3 +4,8 @@
 #[except]
 !.gitignore
 
+#[ignore]
+*
+
+#[except]
+!.gitignore

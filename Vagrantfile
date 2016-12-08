@@ -38,41 +38,41 @@ Vagrant.configure("2") do |config|
     privileged:true,
     path:ENV['VM_BOOTSTRAP'],
     :args => "-x"
-  config.vm.provision :shell, # nodejs
-    privileged:true,
-    path:ENV['VM_BOOTSTRAP'],
-    :args => "-n"
-  config.vm.provision :shell, # nvm
-    privileged:true,
-    path:ENV['VM_BOOTSTRAP'],
-    :args => "-u"
-  config.vm.provision :shell, # yarn
-    privileged:true,
-    path:ENV['VM_BOOTSTRAP'],
-    :args => "-y"
-  config.vm.provision :shell, # python
-    privileged:true,
-    path:ENV['VM_BOOTSTRAP'],
-    :args => "-p"
-  config.vm.provision :shell, # docker
-    privileged:true,
-    path:ENV['VM_BOOTSTRAP'],
-    :args => "-d"
-  config.vm.provision :unix_reboot
-  config.vm.provision :shell, # dvm
-    privileged:false,
-    path:ENV['VM_BOOTSTRAP'],
-    :args => "-b"
-  config.vm.provision :shell, # compose
-    privileged:true,
-    path:ENV['VM_BOOTSTRAP'],
-    :args => "-z"
-  config.vm.provision :shell, # flask
-    privileged:true,
-    path:ENV['VM_BOOTSTRAP'],
-    :args => "-f"
-  config.vm.provision :shell, # jupyter
-    privileged:true,
-    path:ENV['VM_BOOTSTRAP'],
-    :args => "-j"
+  #config.vm.provision :shell, # nodejs
+  #  privileged:true,
+  #  path:ENV['VM_BOOTSTRAP'],
+  #  :args => "-n"
+  #config.vm.provision :shell, # nvm
+  #  privileged:true,
+  #  path:ENV['VM_BOOTSTRAP'],
+  #  :args => "-u"
+  #config.vm.provision :shell, # yarn
+  #  privileged:true,
+  #  path:ENV['VM_BOOTSTRAP'],
+  #  :args => "-y"
+  #config.vm.provision :shell, # python
+  #  privileged:true,
+  #  path:ENV['VM_BOOTSTRAP'],
+  #  :args => "-p"
+  #config.vm.provision :shell, # docker
+  #  privileged:true,
+  #  path:ENV['VM_BOOTSTRAP'],
+  #  :args => "-d"
+  #config.vm.provision :unix_reboot
+  #config.vm.provision :shell, # dvm
+  #  privileged:false,
+  #  path:ENV['VM_BOOTSTRAP'],
+  #  :args => "-b"
+  #config.vm.provision :shell, # compose
+  #  privileged:true,
+  #  path:ENV['VM_BOOTSTRAP'],
+  #  :args => "-z"
+  #config.vm.provision :shell, # flask
+  #  privileged:true,
+  #  path:ENV['VM_BOOTSTRAP'],
+  #  :args => "-f"
+  #config.vm.provision :shell, # jupyter
+  #  privileged:true,
+  #  path:ENV['VM_BOOTSTRAP'],
+  #  :args => "-j"
 end

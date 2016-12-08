@@ -5,18 +5,24 @@ DERUN() {
   echo "$1" | bash
 }
 
+RUN() {
+  printf "\x1b[34;01mΔ => [ $1 ]\x1b[34;01m\n"
+  echo "$1" | bash
+}
+
 EXIT_SUCCESS() {
   exit 0
 }
 
 export -f DERUN
+export -f RUN
 export -f EXIT_SUCCESS
 
 while getopts cnuyvxpdbzfj x
 do
   case "$x" in
-    c)  (chmod +x "/deos/src/devm/common.sh")
-        (exec "/deos/src/devm/common.sh") ;;
+    c)  (chmod +x "/deos/boot/bootstrap.sh")
+        (exec "/deos/boot/bootstrap.sh") ;;
     n)  (chmod +x "/deos/src/devm/node.sh")
         (exec "/deos/src/devm/node.sh") ;;
     u)  (chmod +x "/deos/src/devm/nvm.sh")

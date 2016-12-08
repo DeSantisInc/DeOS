@@ -33,28 +33,28 @@ Vagrant.configure("2") do |config|
   config.vm.provision :unix_reboot
   config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
                       :args => "-v" # zerotier
-  config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
-                      :args => "-x" # nginx
-  config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
-                      :args => "-n" # nodejs
-  config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
-                      :args => "-u" # nvm
+  #config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
+  #                    :args => "-x" # nginx
+  #config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
+  #                    :args => "-n" # nodejs
+  #config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
+  #                    :args => "-u" # nvm
   #config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
                       #:args => "-y" # yarn
   config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
                       :args => "-p" # python
   config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
                       :args => "-r" # virtualenv
-  config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
-                      :args => "-d" # docker
-  config.vm.provision :unix_reboot
-  config.vm.provision :shell, privileged:false, path:ENV['VM_BOOT'],
-                      :args => "-b" # dvm
-  config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
-                      :args => "-z" # compose
-  config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
-                      :args => "-f" # flask
   #config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
-                      #:args => "-j" # jupyter
+  #                    :args => "-d" # docker
+  #config.vm.provision :unix_reboot
+  #config.vm.provision :shell, privileged:false, path:ENV['VM_BOOT'],
+  #                    :args => "-b" # dvm
+  #config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
+  #                    :args => "-z" # compose
+  #config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
+  #                    :args => "-f" # flask
+  #config.vm.provision :shell, privileged:true, path:ENV['VM_BOOT'],
+  #                    :args => "-j" # jupyter
 
 end

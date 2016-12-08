@@ -55,14 +55,13 @@ Vagrant.configure("2") do |config|
     #privileged:true,
     #path:ENV['VM_BOOTSTRAP'],
     #:args => "-y"
-  #config.vm.provision :shell, # python
-    #privileged:true,
-    #path:ENV['VM_BOOTSTRAP'],
-    #:args => "-p"
-  #config.vm.provision :shell, # virtualenv
-    #privileged:true,
-    #path:ENV['VM_BOOTSTRAP'],
-    #:args => "-r"
+
+  config.vm.provision :shell, privileged:true, path:ENV['VM_BOOTSTRAP'],
+                      :args => "-p" # python
+
+  config.vm.provision :shell, privileged:true, path:ENV['VM_BOOTSTRAP'],
+                      :args => "-r" # virtualenv
+
   #config.vm.provision :shell, # docker
     #privileged:true,
     #path:ENV['VM_BOOTSTRAP'],
@@ -80,8 +79,8 @@ Vagrant.configure("2") do |config|
     #privileged:true,
     #path:ENV['VM_BOOTSTRAP'],
     #:args => "-f"
-  #config.vm.provision :shell, # jupyter
-    #privileged:true,
-    #path:ENV['VM_BOOTSTRAP'],
-    #:args => "-j"
+
+  config.vm.provision :shell, privileged:true, path:ENV['VM_BOOTSTRAP'],
+                      :args => "-j" # jupyter
+
 end

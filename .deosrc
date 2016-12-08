@@ -21,6 +21,7 @@ export VM_GUEST:=80
 export VM_SHELL:=bash -c 'BASH_ENV=/etc/profile exec bash'
 export ZT_NETWORK:=565799d8f6747f84
 
+SSHCMD:="cd /deos; bash -i -c 'source venv/linux/python/bin/activate && bash'"
 UPCMD:="vagrant up --provider virtualbox"
 VMCMD:="cd /deos; bash -i -c 'ipython --profile=deos'"
 GIT_BITCOIN:=git@github.com:DeSantisInc/bitcoin.git

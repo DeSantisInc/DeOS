@@ -7,20 +7,27 @@ export MAKEFLAGS=--no-print-directory
 include .deosrc
 
 all: run
-	(vagrant ssh -c "cd /deos/ && bash -i -c 'ipython --profile=deos'" DeVM)
+ifeq ($(HOST_OS), $(IS_MAC))
+	(vagrant ssh -c $(SSHCMD) DeVM)
+else
+	@(echo "'make $@' isn't yet supported on $(HOST_OS).")
+endif
 
 run: venv
+ifeq ($(HOST_OS), $(IS_MAC))
 	(python $(SRC)/main.py)
+else
+	@(echo "'make $@' isn't yet supported on $(HOST_OS).")
+endif
 
 venv:
 ifeq ($(HOST_OS), $(IS_MAC))
-	-rm -rf $(VENV)/darwin/python/
-	cd $(VENV)/darwin/ && virtualenv python
-	cp $(SRC)/templates/dotfiles/gitignore.txt $(VENV)/darwin/python/.gitignore
-else ifeq ($(HOST_OS), $(IS_LINUX))
-	@echo $@-linux
+	-(rm -rf $(VENV)/darwin/python/)
+	(cd $(VENV)/darwin/ && virtualenv python --no-site-packages)
+	(cp $(SRC)/templates/dotfiles/gitignore.txt \
+		$(VENV)/darwin/python/.gitignore)
 else
-	@echo "Your platform, $(HOST_OS), is not supported."
+	@(echo "'make $@' isn't yet supported on $(HOST_OS).")
 endif
 
 main:
@@ -30,7 +37,7 @@ main:
 	($(BIN)/main)
 
 picocoin:
-	@echo $@
+	@(echo $@)
 
 alt: _all
 

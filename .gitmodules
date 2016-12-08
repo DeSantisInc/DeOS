@@ -1,0 +1,3 @@
+[submodule "ext/picocoin"]
+	path = ext/picocoin
+	url = https://github.com/jgarzik/picocoin.git

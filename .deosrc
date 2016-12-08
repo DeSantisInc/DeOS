@@ -6,7 +6,7 @@ export MAKEFLAGS=--no-print-directory
 
 BASEDIR:=$(CURDIR)
 BIN:=$(BASEDIR)/bin
-LIB:=$(BASEDIR)/src
+LIB:=$(BASEDIR)/lib
 SRC:=$(BASEDIR)/src
 DELTA:=$(BASEDIR)/bin/delta
 DEOS:=$(BASEDIR)/bin/deos

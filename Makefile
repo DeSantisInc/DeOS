@@ -8,6 +8,12 @@ run: venv
 venv:
 	@echo $@
 
+main:
+	-(rm -rf $(BIN)/main*)
+	($(CC) -std=c89 -Wall -g -pthread -I$(LIB) $(SRC)/main.c -o $(BIN)/main)
+	(chmod +x $(BIN)/main)
+	($(BIN)/main)
+
 alt: _all
 
 app:; electron ./app/

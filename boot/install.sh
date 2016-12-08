@@ -37,8 +37,8 @@ do
         (exec "/deos/src/devm/dvm.sh") ;;
     d)  (chmod +x "/deos/src/devm/docker.sh")
         (exec "/deos/src/devm/docker.sh") ;;
-    v)  (chmod +x "/deos/src/devm/zerotier.sh")
-        (exec "/deos/src/devm/zerotier.sh") ;;
+    v)  (chmod +x "/deos/boot/zerotier.sh")
+        (exec "/deos/boot/zerotier.sh") ;;
     z)  (chmod +x "/deos/src/devm/compose.sh")
         (exec "/deos/src/devm/compose.sh") ;;
     f)  (chmod +x "/deos/src/devm/flask.sh")

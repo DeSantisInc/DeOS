@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "/vagrant",
     disabled:true
   config.vm.synced_folder ".", ENV['VM_PATH']
-  config.vm.synced_folder ".zerotier/", "/var/lib/zerotier-one",
+  config.vm.synced_folder "etc/zerotier/", "/var/lib/zerotier-one",
     owner:"root",
     group:"root",
     create:true
@@ -34,10 +34,10 @@ Vagrant.configure("2") do |config|
     privileged:true,
     path:ENV['VM_BOOTSTRAP'],
     :args => "v"
-  config.vm.provision :shell, # nginx
-    privileged:true,
-    path:ENV['VM_BOOTSTRAP'],
-    :args => "-x"
+  #config.vm.provision :shell, # nginx
+  #  privileged:true,
+  #  path:ENV['VM_BOOTSTRAP'],
+  #  :args => "-x"
   #config.vm.provision :shell, # nodejs
   #  privileged:true,
   #  path:ENV['VM_BOOTSTRAP'],

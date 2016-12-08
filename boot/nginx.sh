@@ -4,11 +4,9 @@ cat << EOF >> /deos/var/docker/nginx/nginx.conf
 user www-data;
 worker_processes 4;
 pid /run/nginx.pid;
-
 events {
     worker_connections 768;
 }
-
 http {
     sendfile on;
     tcp_nopush on;
@@ -21,11 +19,9 @@ http {
     error_log /var/log/nginx/error.log;
     gzip on;
     gzip_disable "msie6";
-
     upstream ipython_server {
       server localhost:8888;
     }
-
     server {
         listen 80;
         server_name localhost;

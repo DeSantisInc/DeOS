@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-require './boot/plugins/vagrant-provision-reboot-plugin'
+require './src/boot/plugins/vagrant-provision-reboot-plugin'
 
 Vagrant.configure('2') do |config|
 

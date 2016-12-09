@@ -44,11 +44,6 @@ main:
 	($(BIN)/main)
 	@$(PRINT) yellow $@ stop
 
-picocoin:
-	@(echo $@)
-
-alt: _all
-
 app:; electron ./app/
 
 build: chmod check

@@ -3,7 +3,7 @@
 
 #[dotfolders]
 .nvm/
-.tmp/
+.swap/
 .vagrant/
 .virtualenvs/
 .zerotier/

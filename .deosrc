@@ -7,16 +7,17 @@ DEBUG:=$(IS_FALSE)
 HOST_OS:=$(shell uname -s)
 
 export BUILDDOCKER:=$(IS_TRUE)
-export BUILDJS:=$(IS_FALSE)
+export BUILDJS:=$(IS_TRUE)
 export BUILDNGINX:=$(IS_TRUE)
 export BUILDPY:=$(IS_TRUE)
 export BUILDZT:=$(IS_TRUE)
-export BUILDNOTEBOOK:=$(IS_FALSE)
+export BUILDNOTEBOOK:=$(IS_TRUE)
 export FILESYNC:=$(IS_TRUE)
 export RUNSERVER:=$(IS_FALSE)
 
 BASEDIR:=$(CURDIR)
 BIN:=$(BASEDIR)/bin
+export BOOT:=$(BASEDIR)/boot
 DELTA:=$(BASEDIR)/bin/delta
 DEOS:=$(BASEDIR)/bin/deos
 LIB:=$(BASEDIR)/lib
@@ -30,6 +31,7 @@ export VM_BOX:=bento/ubuntu-16.04
 export VM_BOOT:=./boot/install.sh
 export VM_PATH:=/deos
 export VM_PATH_ZT:=/var/lib/zerotier-one
+export VM_PATH_NVM:=/home/$(VM_USER)/.nvm
 export VM_SHELL:=bash -c 'BASH_ENV=/etc/profile exec bash'
 export VM_SHELL_SSH:=bash -l
 
@@ -56,6 +58,9 @@ export DOCKER_VERSION:=1.8.2
 
 export DVM_ACTIVATE:=/home/$(VM_USER)/.dvm/dvm.sh
 export DVM_INSTALL:=https://download.getcarina.com/dvm/latest/install.sh
+
+export NODE_INSTALL:=https://deb.nodesource.com/setup_7.x
+export NVM_GIT_REPO:=https://github.com/creationix/nvm.git
 
 export UBUNTU_GPG_KEY:=F76221572C52609D
 export UBUNTU_KEY_SERV:=keyserver.ubuntu.com
@@ -108,8 +113,5 @@ var/assets/icons/512x512.png\
 var/build/es5/.gitkeep\
 var/build/obj/.gitkeep
 
-include src/install/bitcoin.mk
-include src/install/test.mk
-include src/install/vbox.mk
-include src/install/zerotier.mk
+include src/install/index.mk
 include host/Makefile

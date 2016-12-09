@@ -1,4 +1,4 @@
-RUN "sudo apt-get install -y nginx 2> /dev/null"
+RUN "sudo apt-get install -y nginx $BOOT_DEBUG"
 RUN "rm /etc/nginx/nginx.conf"
 cat <<EOF>> /deos/var/docker/nginx/nginx.conf
 user www-data;

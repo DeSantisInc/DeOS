@@ -54,25 +54,32 @@ Vagrant.configure('2') do |config|
   if ENV['BUILDNGINX'] != '0'
     config.vm.provision :shell, # nginx
                     path:ENV['VM_BOOT'],
+                     env:{'BOOT_DEBUG'=>ENV['BOOT_DEBUG']},
                         :args=>'-x'
   end # BUILDNGINX
 
   if ENV['BUILDJS'] != '0'
     config.vm.provision :shell, # nodejs
                     path:ENV['VM_BOOT'],
+                     env:{'BOOT_DEBUG'=>ENV['BOOT_DEBUG'],
+                          'NODE_INSTALL'=>ENV['NODE_INSTALL']},
                         :args=>'-n'
 
     config.vm.provision :shell, # nvm
                     path:ENV['VM_BOOT'],
+                     env:{'NVM_GIT_REPO'=>ENV['NVM_GIT_REPO'],
+                          'VM_PATH'=>ENV['VM_PATH'],
+                          'VM_PATH_NVM'=>ENV['VM_PATH_NVM']},
                         :args=>'-u'
 
-    config.vm.provision :shell, # yarn
-                    path:ENV['VM_BOOT'],
-                        :args=>'-y'
+    #config.vm.provision :shell, # yarn
+                    #path:ENV['VM_BOOT'],
+                        #:args=>'-y'
   end # BUILDJS
 
   if ENV['BUILDPY'] != '0'
     config.vm.provision :shell, # python
+                     env:{'BOOT_DEBUG'=>ENV['BOOT_DEBUG']},
                     path:ENV['VM_BOOT'],
                         :args=>'-p'
 

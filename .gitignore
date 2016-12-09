@@ -4,7 +4,6 @@
 #[dotfolders]
 .nvm/
 .vagrant/
-.virtualenvs/
 .zerotier/
 
 #[files]

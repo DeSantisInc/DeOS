@@ -21,6 +21,8 @@ export DeOS_CONFIG_FASTBOOT:=$(TRUE)
 export DeOS_HOST_OS:=$(shell uname -s)
 export DeOS_RUN_SERVER:=$(FALSE)
 export DeOS_VM_BOX:=bento/ubuntu-16.04
+export DeOS_VM_PATH:=/deos
+export DeOS_VM_PATH_ZT:=/var/lib/zerotier-one
 export DeOS_VM_USER:=vagrant
 export DeOS_VM_SHELL_DEFAULT:=bash -c 'BASH_ENV=/etc/profile exec bash'
 export DeOS_VM_SHELL_SSH:=bash -l
@@ -58,8 +60,6 @@ STATIC:=$(BASEDIR)/static
 VENV:=$(BASEDIR)/.deos/venv
 
 export VM_BASHRC:=/home/$(DeOS_VM_USER)/.bashrc
-export VM_PATH:=/deos
-export VM_PATH_ZT:=/var/lib/zerotier-one
 export VM_PATH_NVM:=/home/$(DeOS_VM_USER)/.nvm
 
 export DeOS_VM_PORT_GUEST_0:=1337

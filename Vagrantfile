@@ -8,9 +8,11 @@ Vagrant.configure('2') do |config|
   config.vm.define :DeVM do |t| end
 
   config.vm.box = ENV['DeOS_VM_BOX']
+
   config.vm.box_check_update = true
 
   config.ssh.paranoid = true
+
   if ARGV[0] == 'ssh' ? config.ssh.shell = ENV['DeOS_VM_SHELL_SSH']
                       : config.ssh.shell = ENV['DeOS_VM_SHELL_DEFAULT']
   end # set_shell
@@ -36,9 +38,9 @@ Vagrant.configure('2') do |config|
     config.vm.synced_folder '.', '/vagrant',
       disabled: true
 
-    config.vm.synced_folder '.', ENV['VM_PATH']
+    config.vm.synced_folder '.', ENV['DeOS_VM_PATH']
 
-    config.vm.synced_folder '.zerotier', ENV['VM_PATH_ZT'],
+    config.vm.synced_folder '.zerotier', ENV['DeOS_VM_PATH_ZT'],
       owner: 'root',
       group: 'root',
     create: true
@@ -86,6 +88,7 @@ Vagrant.configure('2') do |config|
   end # zerotier
 
   if ENV['DeOS_BUILD_NGINX'] != '0'
+
     config.vm.provision :shell,
       env: {
         'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
@@ -93,6 +96,7 @@ Vagrant.configure('2') do |config|
       },
       path: ENV['DeOS_BOOT_SCRIPT'],
     :args => ENV['DeOS_BOOT_ARGS_NGINX']
+
   end # nginx
 
   if ENV['BUILDJS'] != '0'
@@ -132,7 +136,6 @@ Vagrant.configure('2') do |config|
     :args=>ENV['DeOS_BOOT_ARGS_PYTHON']
 
     if ENV['DeOS_BUILD_BLOCKSTACK'] != '0'
-
       config.vm.provision :shell,
         env: {
           'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
@@ -140,15 +143,12 @@ Vagrant.configure('2') do |config|
         },
         path: ENV['DeOS_BOOT_SCRIPT'],
       :args => ENV['DeOS_BOOT_ARGS_BLOCKSTACK']
-
     end # blockstack
 
     if ENV['BUILDNOTEBOOK'] != '0'
-
       config.vm.provision :shell,
         path: ENV['DeOS_BOOT_SCRIPT'],
       :args=>'-j'
-
     end # jupyter
 
   end # python

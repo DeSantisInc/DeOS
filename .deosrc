@@ -10,11 +10,19 @@ export DeOS_BOOT_ARGS_DOCKER:=-e
 export DeOS_BOOT_ARGS_PYTHON:=-c
 export DeOS_BOOT_PATH:=/deos/src/boot
 export DeOS_BOOT_SCRIPT:=./src/boot/index.sh
+export DeOS_BUILD_BITCOIN:=$(FALSE)
+export DeOS_BUILD_BLOCKSTACK:=$(TRUE)
+export DeOS_BUILD_DOCKER:=$(TRUE)
+export DeOS_BUILD_PYTHON:=$(TRUE)
+export DeOS_CONFIG_DEBUG:=$(FALSE)
+export DeOS_HOST_OS:=$(shell uname -s)
+
 ifeq ($(DEBUG),$(IS_TRUE))
 export DeOS_BOOT_DEBUG:=
 else
 export DeOS_BOOT_DEBUG:=2> /dev/null
 endif
+
 ifeq ($(FASTBOOT),$(IS_TRUE))
 export DeOS_BUILD_APT_UPGRADE:=$(FALSE)
 export DeOS_CMD_APT_UPGRADE:=echo 'FASTBOOT!'
@@ -22,12 +30,6 @@ else
 export DeOS_BUILD_APT_UPGRADE:=$(TRUE)
 export DeOS_CMD_APT_UPGRADE:=apt-get -y upgrade $(DeOS_BOOT_DEBUG)
 endif
-export DeOS_BUILD_BITCOIN:=$(FALSE)
-export DeOS_BUILD_BLOCKSTACK:=$(TRUE)
-export DeOS_BUILD_DOCKER:=$(TRUE)
-export DeOS_BUILD_PYTHON:=$(TRUE)
-export DeOS_CONFIG_DEBUG:=$(FALSE)
-export DeOS_HOST_OS:=$(shell uname -s)
 
 ###
 

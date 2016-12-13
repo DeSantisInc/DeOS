@@ -2,16 +2,37 @@ export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
 
-.PHONY:all build chmod clean install main run venv
+.PHONY:all build chmod clean init install main run venv
 
 .SUBLIME_TARGETS:all
 
 include .deosrc
 
-all: build
+all: init build
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@echo $@
+else
+	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
+endif
+	@$(PRINT) cyan $@ stop
+
+init:
+	@$(PRINT) cyan $@ start
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	-mkdir $(BASEDIR)/.deos/
+	-mkdir $(BASEDIR)/.deos/bin/
+	-mkdir $(BASEDIR)/.deos/bin/darwin/
+	-mkdir $(BASEDIR)/.deos/bin/linux/
+	-mkdir $(BASEDIR)/.deos/ext/
+	-mkdir $(BASEDIR)/.deos/ext/darwin/
+	-mkdir $(BASEDIR)/.deos/ext/linux/
+	-mkdir $(BASEDIR)/.deos/obj/
+	-mkdir $(BASEDIR)/.deos/obj/darwin/
+	-mkdir $(BASEDIR)/.deos/obj/linux/
+	-mkdir $(BASEDIR)/.deos/venv/
+	-mkdir $(BASEDIR)/.deos/venv/darwin/
+	-mkdir $(BASEDIR)/.deos/venv/linux/
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
@@ -30,7 +51,10 @@ clean: chmod
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-$(MAKE) rm
+	-rm -rf $(BASEDIR)/.vagrant/
+	-rm -rf $(BASEDIR)/.zerotier/
 	-rm -rf $(VENV)/darwin/default/
+	-rm -rf $(VENV)/linux/default/
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
@@ -57,7 +81,7 @@ endif
 venv:
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	cd $(VENV)/darwin/ && virtualenv default --no-site-packages)
+	cd $(VENV)/darwin/ && virtualenv default --no-site-packages
 	cp $(STATIC)/templates/dotfiles/gitignore.txt \
 	   $(VENV)/darwin/default/.gitignore
 else

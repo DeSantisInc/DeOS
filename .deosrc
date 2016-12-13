@@ -1,4 +1,4 @@
-include src/host/shared.mk
+include src/host/common.mk
 
 DEBUG:=$(FALSE)
 FASTBOOT:=$(TRUE)

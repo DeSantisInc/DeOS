@@ -35,18 +35,25 @@ Vagrant.configure('2') do |config|
   end # DeOS_FILESYNC
 
   config.vm.provision :shell,
-                  path:ENV['DeOS_BOOT_SCRIPT'],
-                   env:{'BOOT_DEBUG'=>ENV['BOOT_DEBUG']},
-                      :args=>ENV['DeOS_BOOT_ARG_BOOTSTRAP']
+    env: {
+      'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
+      'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG'],
+      'DeOS_BUILD_APT_UPGRADE' => ENV['DeOS_BUILD_APT_UPGRADE']
+    },
+    path: ENV['DeOS_BOOT_SCRIPT'],
+  :args => ENV['DeOS_BOOT_ARGS_BOOTSTRAP']
 
   config.vm.provision :unix_reboot
 
   if ENV['DeOS_BUILD_BITCOIN'] != '0'
     config.vm.provision :shell,
-                    path:ENV['DeOS_BOOT_SCRIPT'],
-                     env:{'BOOT_DEBUG'=>ENV['BOOT_DEBUG']},
-                        :args=>ENV['DeOS_BOOT_ARG_BITCOIN']
-  end # DeOS_BUILD_BITCOIN
+      env: {
+        'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
+        'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG']
+      },
+      path: ENV['DeOS_BOOT_SCRIPT'],
+    :args => ENV['DeOS_BOOT_ARGS_BITCOIN']
+  end # bitcoin
 
   if ENV['BUILDZT'] != '0'
     config.vm.provision :shell, # zerotier
@@ -84,16 +91,18 @@ Vagrant.configure('2') do |config|
                         #:args=>'-y'
   end # BUILDJS
 
-  if ENV['BUILDPY'] != '0'
-    config.vm.provision :shell, # python
-                     env:{'BOOT_DEBUG'=>ENV['BOOT_DEBUG']},
-                    path:ENV['VM_BOOT'],
-                        :args=>'-p'
-
-    config.vm.provision :shell, # virtualenv
-                    path:ENV['VM_BOOT'],
-                        :args=>'-r'
-  end # BUILDPY
+  if ENV['DeOS_BUILD_PYTHON'] != '0'
+    config.vm.provision :shell,
+      env: {
+        'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
+        'DeOS_BOOT_DEBUG'=>ENV['DeOS_BOOT_DEBUG']
+      },
+      path:ENV['VM_BOOT'],
+    :args=>ENV['DeOS_BOOT_ARGS_PYTHON']
+    #config.vm.provision :shell, # virtualenv
+                    #path:ENV['VM_BOOT'],
+                        #:args=>'-r'
+  end # python
 
   if ENV['BUILDDOCKER'] != '0'
     config.vm.provision :shell, # docker

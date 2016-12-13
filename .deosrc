@@ -1,10 +1,15 @@
 include src/install/bootstrap.mk
 
-export DeOS_BOOT_ARG_BITCOIN:=-b
-export DeOS_BOOT_ARG_BOOTSTRAP:=-a
+export DeOS_BOOT_ARGS_BITCOIN:=-b
+export DeOS_BOOT_ARGS_BOOTSTRAP:=-a
+export DeOS_BOOT_ARGS_PYTHON:=-c
+export DeOS_BOOT_PATH:=/deos/src/boot
 export DeOS_BOOT_SCRIPT:=./src/boot/index.sh
 export DeOS_BUILD_APT_UPGRADE:=$(FALSE)
-export DeOS_BUILD_BITCOIN:=$(TRUE)
+export DeOS_BUILD_BITCOIN:=$(FALSE)
+export DeOS_BUILD_PYTHON:=$(TRUE)
+export DeOS_CONFIG_DEBUG:=$(FALSE)
+export DeOS_HOST_OS:=$(shell uname -s)
 
 ###
 
@@ -14,7 +19,6 @@ HOST_OS:=$(shell uname -s)
 export BUILDDOCKER:=$(FALSE)
 export BUILDJS:=$(FALSE)
 export BUILDNGINX:=$(FALSE)
-export BUILDPY:=$(FALSE)
 export BUILDZT:=$(FALSE)
 export BUILDNOTEBOOK:=$(FALSE)
 export DeOS_FILESYNC:=$(TRUE)
@@ -41,9 +45,9 @@ export VM_SHELL:=bash -c 'BASH_ENV=/etc/profile exec bash'
 export VM_SHELL_SSH:=bash -l
 
 ifeq ($(DEBUG), $(IS_TRUE))
-export BOOT_DEBUG:=
+export DeOS_BOOT_DEBUG:=
 else
-export BOOT_DEBUG:=2> /dev/null
+export DeOS_BOOT_DEBUG:=2> /dev/null
 endif
 
 export DeOS_VM_PORT_GUEST_0:=1337

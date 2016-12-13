@@ -17,6 +17,14 @@ MAINTAINER() {
   echo "$1" > /dev/null
 }
 
+PIP_INSTALL() {
+  RUN "pip install $1"
+}
+
+PIP_UPGRADE() {
+  RUN "pip install --upgrade $1"
+}
+
 UPDATE() {
   RUN "apt-get update"
 }
@@ -25,11 +33,16 @@ UPGRADE() {
   RUN "apt-get -y upgrade $DeOS_BOOT_DEBUG"
 }
 
+UPGRADE_PIP() {
+  PIP_UPGRADE "pip"
+}
+
 EXIT_SUCCESS() {
   exit 0
 }
 
-for op in RUN ADD_REPO INSTALL MAINTAINER UPDATE UPGRADE EXIT_SUCCESS; do
+for op in RUN ADD_REPO INSTALL MAINTAINER PIP_INSTALL PIP_UPGRADE UPDATE \
+          UPGRADE UPGRADE_PIP EXIT_SUCCESS; do
   export -f $op
 done
 

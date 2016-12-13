@@ -11,6 +11,7 @@ vm.uninstall: vm.down
 	-rm $(BASEDIR)/app/index.min.html
 	-rm -rf $(BASEDIR)/.zerotier/
 	-rm -rf $(BASEDIR)/.vagrant/
+	-rm -rf $(BASEDIR)/.venv/linux/default/
 	-rm -rf $(BASEDIR)/app/node_modules/
 	-rm -rf $(BASEDIR)/node_modules/
 	-rm -rf $(BASEDIR)/var/docker/nginx/ \

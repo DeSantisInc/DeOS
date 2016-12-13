@@ -36,16 +36,16 @@ Vagrant.configure('2') do |config|
     create: true
   end # file_sync
 
-  config.vm.provision :shell,
-    env: {
-      'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
-      'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG'],
-      'DeOS_BUILD_APT_UPGRADE' => ENV['DeOS_BUILD_APT_UPGRADE']
-    },
-    path: ENV['DeOS_BOOT_SCRIPT'],
-  :args => ENV['DeOS_BOOT_ARGS_BOOTSTRAP']
+  #config.vm.provision :shell,
+  #  env: {
+  #    'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
+  #    'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG'],
+  #    'DeOS_BUILD_APT_UPGRADE' => ENV['DeOS_BUILD_APT_UPGRADE']
+  #  },
+  #  path: ENV['DeOS_BOOT_SCRIPT'],
+  #:args => ENV['DeOS_BOOT_ARGS_BOOTSTRAP']
 
-  config.vm.provision :unix_reboot
+  #config.vm.provision :unix_reboot
 
   if ENV['DeOS_BUILD_BITCOIN'] != '0'
     config.vm.provision :shell,

@@ -30,7 +30,7 @@ UPDATE() {
 }
 
 UPGRADE() {
-  RUN "apt-get -y upgrade $DeOS_BOOT_DEBUG"
+  RUN "$DeOS_CMD_APT_UPGRADE"
 }
 
 UPGRADE_PIP() {

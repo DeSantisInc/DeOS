@@ -43,7 +43,8 @@ Vagrant.configure('2') do |config|
     env: {
       'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
       'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG'],
-      'DeOS_BUILD_APT_UPGRADE' => ENV['DeOS_BUILD_APT_UPGRADE']
+      'DeOS_BUILD_APT_UPGRADE' => ENV['DeOS_BUILD_APT_UPGRADE'],
+      'DeOS_CMD_APT_UPGRADE' => ENV['DeOS_CMD_APT_UPGRADE']
     },
     path: ENV['DeOS_BOOT_SCRIPT'],
   :args => ENV['DeOS_BOOT_ARGS_BOOTSTRAP']
@@ -54,7 +55,8 @@ Vagrant.configure('2') do |config|
     config.vm.provision :shell,
       env: {
         'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
-        'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG']
+        'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG'],
+        'DeOS_CMD_APT_UPGRADE' => ENV['DeOS_CMD_APT_UPGRADE']
       },
       path: ENV['DeOS_BOOT_SCRIPT'],
     :args => ENV['DeOS_BOOT_ARGS_BITCOIN']
@@ -63,7 +65,8 @@ Vagrant.configure('2') do |config|
   if ENV['BUILDZT'] != '0'
     config.vm.provision :shell, # zerotier
                     path:ENV['VM_BOOT'],
-                     env:{'ZT_GPG_KEY'=>ENV['ZT_GPG_KEY'],
+                     env:{'DeOS_CMD_APT_UPGRADE' => ENV['DeOS_CMD_APT_UPGRADE'],
+                          'ZT_GPG_KEY'=>ENV['ZT_GPG_KEY'],
                           'ZT_INSTALL'=>ENV['ZT_INSTALL'],
                           'ZT_INSTALL_TMP'=>ENV['ZT_INSTALL_TMP'],
                           'ZT_NETWORK'=>ENV['ZT_NETWORK']},
@@ -100,7 +103,8 @@ Vagrant.configure('2') do |config|
     config.vm.provision :shell,
       env: {
         'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
-        'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG']
+        'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG'],
+        'DeOS_CMD_APT_UPGRADE' => ENV['DeOS_CMD_APT_UPGRADE']
       },
       path:ENV['VM_BOOT'],
     :args=>ENV['DeOS_BOOT_ARGS_PYTHON']

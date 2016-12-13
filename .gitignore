@@ -16,12 +16,11 @@ app/bundle.min.js*
 app/index.min.html
 bin/logic
 bin/main*
-build/
 npm-debug.log
 yarn-error.log
 
 #[folders]
-app/node_modules/
+build/
 node_modules/
 
 #[wildcards]

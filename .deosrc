@@ -1,4 +1,4 @@
-include src/install/bootstrap.mk
+include src/install/config.mk
 
 export DeOS_BOOT_ARGS_BITCOIN:=-b
 export DeOS_BOOT_ARGS_BLOCKSTACK:=-d

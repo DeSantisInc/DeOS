@@ -1,4 +1,7 @@
+MAINTAINER "atd@bitcoin.sh"
+
 RUN "sudo apt-get install -y nginx $BOOT_DEBUG"
+
 RUN "rm /etc/nginx/nginx.conf"
 cat <<EOF>> /deos/var/docker/nginx/nginx.conf
 user www-data;
@@ -36,7 +39,11 @@ http {
     }
 }
 EOF
+
 RUN "ln -s /deos/var/docker/nginx/nginx.conf /etc/nginx/nginx.conf"
+
 RUN "sudo systemctl reload nginx"
+
 RUN "sudo systemctl enable nginx"
+
 EXIT_SUCCESS

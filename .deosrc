@@ -1,19 +1,24 @@
-IS_FALSE:=0
-IS_TRUE:=1
-IS_MAC:=Darwin
-IS_LINUX:=Linux
+include src/install/bootstrap.mk
 
-DEBUG:=$(IS_FALSE)
+export DeOS_BOOT_ARG_BITCOIN:=-b
+export DeOS_BOOT_ARG_BOOTSTRAP:=-a
+export DeOS_BOOT_SCRIPT:=./src/boot/index.sh
+export DeOS_BUILD_APT_UPGRADE:=$(FALSE)
+export DeOS_BUILD_BITCOIN:=$(TRUE)
+
+###
+
+DEBUG:=$(FALSE)
 HOST_OS:=$(shell uname -s)
 
-export BUILDDOCKER:=$(IS_TRUE)
-export BUILDJS:=$(IS_TRUE)
-export BUILDNGINX:=$(IS_TRUE)
-export BUILDPY:=$(IS_TRUE)
-export BUILDZT:=$(IS_TRUE)
-export BUILDNOTEBOOK:=$(IS_TRUE)
-export FILESYNC:=$(IS_TRUE)
-export RUNSERVER:=$(IS_FALSE)
+export BUILDDOCKER:=$(FALSE)
+export BUILDJS:=$(FALSE)
+export BUILDNGINX:=$(FALSE)
+export BUILDPY:=$(FALSE)
+export BUILDZT:=$(FALSE)
+export BUILDNOTEBOOK:=$(FALSE)
+export DeOS_FILESYNC:=$(TRUE)
+export DeOS_RUNSERVER:=$(FALSE)
 
 BASEDIR:=$(CURDIR)
 BIN:=$(BASEDIR)/bin
@@ -27,7 +32,7 @@ VENV:=$(BASEDIR)/venv
 
 export VM_USER:=vagrant
 export VM_BASHRC:=/home/$(VM_USER)/.bashrc
-export VM_BOX:=bento/ubuntu-16.04
+export DeOS_VMBOX:=bento/ubuntu-16.04
 export VM_BOOT:=./src/boot/index.sh
 export VM_PATH:=/deos
 export VM_PATH_ZT:=/var/lib/zerotier-one
@@ -41,12 +46,12 @@ else
 export BOOT_DEBUG:=2> /dev/null
 endif
 
-export PORT_IN_0:=1337
-export PORT_OUT_0:=80
-export PORT_IN_1:=5000
-export PORT_OUT_1:=1335
-export PORT_IN_2:=8888
-export PORT_OUT_2:=1336
+export DeOS_VM_PORT_GUEST_0:=1337
+export DeOS_VM_PORT_HOST_0:=80
+export DeOS_VM_PORT_GUEST_1:=5000
+export DeOS_VM_PORT_HOST_1:=1335
+export DeOS_VM_PORT_GUEST_2:=8888
+export DeOS_VM_PORT_HOST_2:=1336
 
 export DOCKER_APT_REPO:=https://apt.dockerproject.org/repo
 export DOCKER_GPG_KEY:=58118E89F3A912897C070ADBF76221572C52609D

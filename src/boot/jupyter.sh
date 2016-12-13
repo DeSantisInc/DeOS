@@ -1,8 +1,15 @@
+MAINTAINER "atd@bitcoin.sh"
+
 RUN "apt-get install -y ipython"
+
 RUN "apt-get install -y ipython-notebook 2> /dev/null"
+
 RUN "pip install jupyter"
+
 RUN "pip install ipyparallel"
+
 RUN "ipcluster nbextension enable"
+
 RUN "ipython profile create deos"
 
 if [ -L /root/.ipython/profile_deos/ipython_kernel_config.py ]; then
@@ -27,4 +34,5 @@ EOT
 
 sudo jupyter notebook --notebook-dir=/deos/var/notebook \
                       --no-browser --ip=0.0.0.0 &
+
 EXIT_SUCCESS

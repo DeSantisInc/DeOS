@@ -1,3 +1,4 @@
+MAINTAINER "atd@bitcoin.sh"
 git clone $NVM_GIT_REPO $VM_PATH_NVM\
 && cd $VM_PATH_NVM\
 && git checkout `git describe --abbrev=0 --tags`

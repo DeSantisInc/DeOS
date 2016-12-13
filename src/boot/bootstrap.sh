@@ -1,12 +1,15 @@
-RUN "apt-get update"
-RUN "apt-get -y upgrade $BOOT_DEBUG"
-RUN "apt-get -y install build-essential $BOOT_DEBUG"
-RUN "apt-get -y install llvm $BOOT_DEBUG"
-RUN "apt-get -y install clang $BOOT_DEBUG"
-RUN "apt-get -y install libffi-dev $BOOT_DEBUG"
-RUN "apt-get -y install libssl-dev $BOOT_DEBUG"
-RUN "apt-get -y install git $BOOT_DEBUG"
-RUN "apt-get -y install curl $BOOT_DEBUG"
-RUN "apt-get -y install apt-transport-https $BOOT_DEBUG"
-RUN "apt-get -y install ca-certificates $BOOT_DEBUG"
+MAINTAINER "atd@bitcoin.sh"
+
+UPDATE && UPGRADE
+
+INSTALL "build-essential"
+INSTALL "clang"
+INSTALL "llvm"
+INSTALL "libffi-dev"
+INSTALL "libssl-dev"
+INSTALL "git"
+INSTALL "curl"
+INSTALL "apt-transport-https"
+INSTALL "ca-certificates"
+
 EXIT_SUCCESS

@@ -1,3 +1,5 @@
+MAINTAINER "atd@bitcoin.sh"
+
 RUN "touch $DOCKER_PY_PATH/app.py"\
 && cat <<EOF>> $DOCKER_PY_PATH/app.py
 #!/usr/bin/env python
@@ -50,5 +52,7 @@ services:
 EOF
 
 RUN "cd $DOCKER_PY_PATH && docker-compose build"
+
 RUN "cd $DOCKER_PY_PATH && docker-compose up -d"
+
 EXIT_SUCCESS

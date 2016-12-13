@@ -3,6 +3,7 @@
 
 #[dotfolders]
 .nvm/
+.obj/
 .vagrant/
 .venv/
 .zerotier/

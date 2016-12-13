@@ -9,23 +9,51 @@ export MAKEFLAGS=--no-print-directory
 include .deosrc
 
 all: build
-	@$(PRINT) yellow $@ start
+	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@echo $@
 else
 	@(echo "'make $@' isn't yet supported on $(HOST_OS).")
 endif
-	@$(PRINT) yellow $@ stop
+	@$(PRINT) cyan $@ stop
 
 build: clean check
-	@$(PRINT) yellow $@ start
-	@-$(MAKE) vm
-	@$(PRINT) yellow $@ stop
+	@$(PRINT) cyan $@ start
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	-$(MAKE) vm
+else
+	@(echo "'make $@' isn't yet supported on $(HOST_OS).")
+endif
+	@$(PRINT) cyan $@ stop
 
 clean: chmod
-	@$(PRINT) yellow $@ start
-	@-$(MAKE) rm
-	@$(PRINT) yellow $@ stop
+	@$(PRINT) cyan $@ start
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	-$(MAKE) rm
+else
+	@(echo "'make $@' isn't yet supported on $(HOST_OS).")
+endif
+	@$(PRINT) cyan $@ stop
+
+chmod:
+	@$(PRINT) cyan $@ start
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	@-chmod +x $(PRINT) $(DEOS)
+else
+	@(echo "'make $@' isn't yet supported on $(HOST_OS).")
+endif
+	@$(PRINT) cyan $@ stop
+
+check:
+	@$(PRINT) cyan $@ start
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	-$(MAKE) deos.check
+else
+	@(echo "'make $@' isn't yet supported on $(HOST_OS).")
+endif
+	@$(PRINT) cyan $@ stop
+
+###
 
 run: venv
 	@$(PRINT) yellow $@ start
@@ -57,12 +85,6 @@ main:
 	@$(PRINT) yellow $@ stop
 
 app:; electron ./app/
-
-#build: chmod check
-
-check: deos.check
-
-chmod:; (chmod +x $(PRINT) $(DEOS))
 
 ext: ext.bitcoin ext.two1
 

@@ -2,7 +2,7 @@ export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
 
-.PHONY:all build chmod clean install main picocoin run venv
+.PHONY:all build chmod clean install main run venv
 
 .SUBLIME_TARGETS:all
 

@@ -1,19 +1,14 @@
 MAINTAINER "atd@bitcoin.sh"
-
 SUDO_INSTALL "nginx"
-
-RUN "rm /etc/nginx/nginx.conf"
-
-RUN "touch /deos/config/nginx/nginx.conf"\
+RM "/etc/nginx/nginx.conf"
+NEW "/deos/config/nginx/nginx.conf"\
 && cat <<EOF>> /deos/config/nginx/nginx.conf
 user www-data;
 worker_processes 4;
 pid /run/nginx.pid;
-
 events {
   worker_connections 768;
 }
-
 http {
   sendfile on;
   tcp_nopush on;
@@ -41,11 +36,7 @@ http {
   }
 }
 EOF
-
 RUN "ln -s /deos/config/nginx/nginx.conf /etc/nginx/nginx.conf"
-
 SYSD_RELOAD "nginx"
-
 SYSD_ENABLE "nginx"
-
 EXIT_SUCCESS

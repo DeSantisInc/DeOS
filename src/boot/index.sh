@@ -17,12 +17,20 @@ MAINTAINER() {
   echo "$1" > /dev/null
 }
 
+NEW() {
+  RUN "touch $1"
+}
+
 PIP_INSTALL() {
   RUN "pip install $1"
 }
 
 PIP_UPGRADE() {
   RUN "pip install --upgrade $1"
+}
+
+RM() {
+  RUN "rm -rf $1"
 }
 
 UPDATE() {
@@ -57,8 +65,8 @@ EXIT_FAILURE() {
   exit 1
 }
 
-for op in RUN ADD_REPO INSTALL MAINTAINER PIP_INSTALL PIP_UPGRADE UPDATE \
-          UPGRADE UPGRADE_PIP SUDO_INSTALL SYSD_RELOAD SYSD_ENABLE \
+for op in RUN ADD_REPO INSTALL MAINTAINER NEW PIP_INSTALL PIP_UPGRADE RM \
+          UPDATE UPGRADE UPGRADE_PIP SUDO_INSTALL SYSD_RELOAD SYSD_ENABLE \
           EXIT_FAILURE EXIT_SUCCESS; do
   export -f $op
 done

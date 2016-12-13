@@ -6,11 +6,8 @@ require './src/boot/plugins/vagrant-provision-reboot-plugin'
 Vagrant.configure('2') do |config|
 
   config.vm.define :DeVM do |t| end
-
   config.vm.box = ENV['DeOS_VMBOX']
-
   config.vm.box_check_update = true
-
   config.ssh.paranoid = true
 
   if ARGV[0] == 'ssh' ? config.ssh.shell = ENV['VM_SHELL_SSH']

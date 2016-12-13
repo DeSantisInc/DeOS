@@ -37,6 +37,18 @@ UPGRADE_PIP() {
   PIP_UPGRADE "pip"
 }
 
+SYSD_ENABLE() {
+  RUN "sudo systemctl enable $1"
+}
+
+SYSD_RELOAD() {
+  RUN "sudo systemctl reload $1"
+}
+
+SUDO_INSTALL() {
+  RUN "sudo apt-get -y install $1 $DeOS_BOOT_DEBUG"
+}
+
 EXIT_SUCCESS() {
   exit 0
 }
@@ -46,7 +58,8 @@ EXIT_FAILURE() {
 }
 
 for op in RUN ADD_REPO INSTALL MAINTAINER PIP_INSTALL PIP_UPGRADE UPDATE \
-          UPGRADE UPGRADE_PIP EXIT_FAILURE EXIT_SUCCESS; do
+          UPGRADE UPGRADE_PIP SUDO_INSTALL SYSD_RELOAD SYSD_ENABLE \
+          EXIT_FAILURE EXIT_SUCCESS; do
   export -f $op
 done
 

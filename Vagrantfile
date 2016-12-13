@@ -88,14 +88,13 @@ Vagrant.configure('2') do |config|
   end # zerotier
 
   if ENV['DeOS_BUILD_NGINX'] != '0'
-
     config.vm.provision :shell,
       env: {
-        'BOOT_DEBUG' => ENV['BOOT_DEBUG']
+        'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
+        'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG']
       },
-      path: ENV['VM_BOOT'],
-    :args=>'-e'
-
+      path: ENV['DeOS_BOOT_SCRIPT'],
+    :args => ENV['DeOS_BOOT_ARGS_NGINX']
   end # nginx
 
   if ENV['BUILDJS'] != '0'

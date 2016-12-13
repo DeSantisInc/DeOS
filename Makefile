@@ -61,6 +61,7 @@ endif
 build: clean check venv
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	-mkdir $(BASEDIR)/config/nginx/
 	-$(MAKE) vm
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
@@ -73,6 +74,7 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-$(MAKE) rm
 	-rm -rf $(BASEDIR)/.vagrant/
 	-rm -rf $(BASEDIR)/.zerotier/
+	-rm -rf $(BASEDIR)/config/nginx/
 	-rm -rf $(VENV)/darwin/default/
 	-rm -rf $(VENV)/linux/default/
 else

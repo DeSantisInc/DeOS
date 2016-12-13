@@ -43,13 +43,14 @@ while getopts abcnuyvxpdzfjr x; do
     a) EXEC "bootstrap" ;;
     b) EXEC "bitcoin" ;;
     c) EXEC "python" ;;
+    d) EXEC "blockstack" ;;
     n) EXEC "node" ;;
     u) EXEC "nvm" ;;
     y) EXEC "yarn" ;;
     x) EXEC "nginx" ;;
     r) EXEC "virtualenv" ;;
     m) EXEC "dvm" ;;
-    d) EXEC "docker" ;;
+    w) EXEC "docker" ;;
     v) EXEC "zerotier" ;;
     z) EXEC "compose" ;;
     f) EXEC "flask" ;;

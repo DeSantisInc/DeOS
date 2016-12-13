@@ -16,23 +16,25 @@ Vagrant.configure('2') do |config|
 
   if ENV['DeOS_RUNSERVER'] != '0'
     config.vm.network :forwarded_port,
-                 guest:ENV['DeOS_VM_PORT_GUEST_0'],
-                  host:ENV['DeOS_VM_PORT_HOST_0']
+      guest: ENV['DeOS_VM_PORT_GUEST_0'],
+      host: ENV['DeOS_VM_PORT_HOST_0']
     config.vm.network :forwarded_port,
-                 guest:ENV['DeOS_VM_PORT_GUEST_1'],
-                  host:ENV['DeOS_VM_PORT_HOST_1']
+      guest: ENV['DeOS_VM_PORT_GUEST_1'],
+      host: ENV['DeOS_VM_PORT_HOST_1']
     config.vm.network :forwarded_port,
-                 guest:ENV['DeOS_VM_PORT_GUEST_2'],
-                  host:ENV['DeOS_VM_PORT_HOST_2']
-  end # DeOS_RUNSERVER
+      guest: ENV['DeOS_VM_PORT_GUEST_2'],
+      host: ENV['DeOS_VM_PORT_HOST_2']
+  end # run_server
 
   if ENV['DeOS_FILESYNC'] != '0'
-    config.vm.synced_folder '.', '/vagrant', disabled:true
+    config.vm.synced_folder '.', '/vagrant',
+      disabled: true
     config.vm.synced_folder '.', ENV['VM_PATH']
-    config.vm.synced_folder '.zerotier', ENV['VM_PATH_ZT'], owner:'root',
-                                                            group:'root',
-                                                           create:true
-  end # DeOS_FILESYNC
+    config.vm.synced_folder '.zerotier', ENV['VM_PATH_ZT'],
+      owner: 'root',
+      group: 'root',
+    create: true
+  end # file_sync
 
   config.vm.provision :shell,
     env: {
@@ -95,7 +97,7 @@ Vagrant.configure('2') do |config|
     config.vm.provision :shell,
       env: {
         'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
-        'DeOS_BOOT_DEBUG'=>ENV['DeOS_BOOT_DEBUG']
+        'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG']
       },
       path:ENV['VM_BOOT'],
     :args=>ENV['DeOS_BOOT_ARGS_PYTHON']
@@ -103,6 +105,16 @@ Vagrant.configure('2') do |config|
                     #path:ENV['VM_BOOT'],
                         #:args=>'-r'
   end # python
+
+  if ENV['DeOS_BUILD_BLOCKSTACK'] != '0' && ENV['DeOS_BUILD_PYTHON'] != '0'
+    config.vm.provision :shell,
+      env: {
+        'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
+        'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG']
+      },
+      path: ENV['DeOS_BOOT_SCRIPT'],
+    :args => ENV['DeOS_BOOT_ARGS_BLOCKSTACK']
+  end # blockstack
 
   if ENV['BUILDDOCKER'] != '0'
     config.vm.provision :shell, # docker
@@ -115,7 +127,7 @@ Vagrant.configure('2') do |config|
                           'DOCKER_UBUNTU'=>ENV['DOCKER_UBUNTU'],
                           'UBUNTU_GPG_KEY'=>ENV['UBUNTU_GPG_KEY'],
                           'UBUNTU_KEY_SERV'=>ENV['UBUNTU_KEY_SERV']},
-                        :args=>'-d'
+                        :args=>'-w'
 
     config.vm.provision :unix_reboot
 

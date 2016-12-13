@@ -2,7 +2,7 @@ export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
 
-.PHONY:all build check chmod clean init rm sh venv vm zt
+.PHONY:all build check chmod clean init rm sh venv vm
 
 .SUBLIME_TARGETS:all
 
@@ -111,15 +111,6 @@ vm:
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-$(MAKE) vm.install
-else
-	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
-endif
-	@$(PRINT) cyan $@ stop
-
-zt:
-	@$(PRINT) cyan $@ start
-ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	-$(MAKE) zt.install
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif

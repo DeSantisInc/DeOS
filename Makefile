@@ -2,7 +2,7 @@ export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
 
-.PHONY:all build chmod clean init install main run venv
+.PHONY:all build check chmod clean init rm sh venv vm zt
 
 .SUBLIME_TARGETS:all
 
@@ -125,27 +125,23 @@ else
 endif
 	@$(PRINT) cyan $@ stop
 
-###
+#run: venv
+#	@$(PRINT) yellow $@ start
+#ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+#	(python $(SRC)/main.py)
+#else
+#	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
+#endif
+#	@$(PRINT) yellow $@ stop
 
-run: venv
-	@$(PRINT) yellow $@ start
-ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	(python $(SRC)/main.py)
-else
-	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
-endif
-	@$(PRINT) yellow $@ stop
+#main:
+#	@$(PRINT) yellow $@ start
+#	@-(rm -rf $(BIN)/main*)
+#	($(CC) -std=c89 -Wall -g -pthread -I$(LIB) $(SRC)/main.c -o $(BIN)/main)
+#	(chmod +x $(BIN)/main)
+#	($(BIN)/main)
+#	@$(PRINT) yellow $@ stop
 
-main:
-	@$(PRINT) yellow $@ start
-	@-(rm -rf $(BIN)/main*)
-	($(CC) -std=c89 -Wall -g -pthread -I$(LIB) $(SRC)/main.c -o $(BIN)/main)
-	(chmod +x $(BIN)/main)
-	($(BIN)/main)
-	@$(PRINT) yellow $@ stop
-
-app:; electron ./app/
-
-install:; (yarn global add electron)
-
-js:; (yarn run gulp && yarn run test)
+#app:; electron ./app/
+#install:; (yarn global add electron)
+#js:; (yarn run gulp && yarn run test)

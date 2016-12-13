@@ -2,7 +2,7 @@ export MAKEFLAGS=--no-print-directory
 
 .DEFAULT_GOAL:=all
 
-.PHONY:all build check chmod clean init rm sh venv vm
+.PHONY:all bin build check chmod clean init rm sh venv vm
 
 .SUBLIME_TARGETS:all
 
@@ -33,6 +33,26 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-mkdir $(BASEDIR)/.deos/venv/
 	-mkdir $(BASEDIR)/.deos/venv/darwin/
 	-mkdir $(BASEDIR)/.deos/venv/linux/
+	-$(MAKE) bin
+	-$(MAKE) chmod
+else
+	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
+endif
+	@$(PRINT) cyan $@ stop
+
+bin:
+	@$(PRINT) cyan $@ start
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	@echo $@
+else
+	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
+endif
+	@$(PRINT) cyan $@ stop
+
+chmod:
+	@$(PRINT) cyan $@ start
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	@-chmod +x $(PRINT) $(DEOS)
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
@@ -47,7 +67,7 @@ else
 endif
 	@$(PRINT) cyan $@ stop
 
-clean: chmod
+clean:
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-$(MAKE) rm
@@ -55,15 +75,6 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-rm -rf $(BASEDIR)/.zerotier/
 	-rm -rf $(VENV)/darwin/default/
 	-rm -rf $(VENV)/linux/default/
-else
-	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
-endif
-	@$(PRINT) cyan $@ stop
-
-chmod:
-	@$(PRINT) cyan $@ start
-ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	@-chmod +x $(PRINT) $(DEOS)
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif

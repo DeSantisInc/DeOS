@@ -1,7 +1,7 @@
 include src/host/common.mk
 
-DEBUG:=$(FALSE)
-FASTBOOT:=$(TRUE)
+BASEDIR:=$(CURDIR)
+BIN:=$(BASEDIR)/bin
 
 export DeOS_BOOT_ARGS_BITCOIN:=-b
 export DeOS_BOOT_ARGS_BLOCKSTACK:=-d
@@ -17,15 +17,21 @@ export DeOS_BUILD_DOCKER:=$(FALSE)
 export DeOS_BUILD_NGINX:=$(TRUE)
 export DeOS_BUILD_PYTHON:=$(FALSE)
 export DeOS_CONFIG_DEBUG:=$(FALSE)
+export DeOS_CONFIG_FASTBOOT:=$(TRUE)
 export DeOS_HOST_OS:=$(shell uname -s)
+export DeOS_RUN_SERVER:=$(TRUE)
+export DeOS_VM_BOX:=bento/ubuntu-16.04
+export DeOS_VM_USER:=vagrant
+export DeOS_VM_SHELL_DEFAULT:=bash -c 'BASH_ENV=/etc/profile exec bash'
+export DeOS_VM_SHELL_SSH:=bash -l
 
-ifeq ($(DEBUG),$(IS_TRUE))
+ifeq ($(DeOS_CONFIG_DEBUG),$(IS_TRUE))
 export DeOS_BOOT_DEBUG:=
 else
 export DeOS_BOOT_DEBUG:=2> /dev/null
 endif
 
-ifeq ($(FASTBOOT),$(IS_TRUE))
+ifeq ($(DeOS_CONFIG_FASTBOOT),$(IS_TRUE))
 export DeOS_BUILD_APT_UPGRADE:=$(FALSE)
 export DeOS_CMD_APT_UPGRADE:=echo 'FASTBOOT!'
 else
@@ -35,18 +41,13 @@ endif
 
 ###
 
-HOST_OS:=$(shell uname -s)
-
 export BUILDDOCKER:=$(FALSE)
 export BUILDJS:=$(FALSE)
 export BUILDNGINX:=$(FALSE)
 export BUILDZT:=$(FALSE)
 export BUILDNOTEBOOK:=$(FALSE)
 export DeOS_FILESYNC:=$(TRUE)
-export DeOS_RUNSERVER:=$(FALSE)
 
-BASEDIR:=$(CURDIR)
-BIN:=$(BASEDIR)/bin
 export BOOT:=$(BASEDIR)/boot
 DELTA:=$(BASEDIR)/bin/delta
 DEOS:=$(BASEDIR)/bin/deos
@@ -56,15 +57,10 @@ SRC:=$(BASEDIR)/src
 STATIC:=$(BASEDIR)/static
 VENV:=$(BASEDIR)/.deos/venv
 
-export VM_USER:=vagrant
-export VM_BASHRC:=/home/$(VM_USER)/.bashrc
-export DeOS_VMBOX:=bento/ubuntu-16.04
-export VM_BOOT:=./src/boot/index.sh
+export VM_BASHRC:=/home/$(DeOS_VM_USER)/.bashrc
 export VM_PATH:=/deos
 export VM_PATH_ZT:=/var/lib/zerotier-one
-export VM_PATH_NVM:=/home/$(VM_USER)/.nvm
-export VM_SHELL:=bash -c 'BASH_ENV=/etc/profile exec bash'
-export VM_SHELL_SSH:=bash -l
+export VM_PATH_NVM:=/home/$(DeOS_VM_USER)/.nvm
 
 export DeOS_VM_PORT_GUEST_0:=1337
 export DeOS_VM_PORT_HOST_0:=80
@@ -81,7 +77,7 @@ export DOCKER_UBUNTU:=ubuntu-xenial
 export DOCKER_SOURCES:=/etc/apt/sources.list.d/docker.list
 export DOCKER_VERSION:=1.8.2
 
-export DVM_ACTIVATE:=/home/$(VM_USER)/.dvm/dvm.sh
+export DVM_ACTIVATE:=/home/$(DeOS_VM_USER)/.dvm/dvm.sh
 export DVM_INSTALL:=https://download.getcarina.com/dvm/latest/install.sh
 
 export NODE_INSTALL:=https://deb.nodesource.com/setup_7.x

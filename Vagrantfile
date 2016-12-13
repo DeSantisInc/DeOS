@@ -7,17 +7,15 @@ Vagrant.configure('2') do |config|
 
   config.vm.define :DeVM do |t| end
 
-  config.vm.box = ENV['DeOS_VMBOX']
-
+  config.vm.box = ENV['DeOS_VM_BOX']
   config.vm.box_check_update = true
 
   config.ssh.paranoid = true
-
-  if ARGV[0] == 'ssh' ? config.ssh.shell = ENV['VM_SHELL_SSH']
-                      : config.ssh.shell = ENV['VM_SHELL']
+  if ARGV[0] == 'ssh' ? config.ssh.shell = ENV['DeOS_VM_SHELL_SSH']
+                      : config.ssh.shell = ENV['DeOS_VM_SHELL_DEFAULT']
   end # set_shell
 
-  if ENV['DeOS_RUNSERVER'] != '0'
+  if ENV['DeOS_RUN_SERVER'] != '0'
 
     config.vm.network :forwarded_port,
       guest: ENV['DeOS_VM_PORT_GUEST_0'],

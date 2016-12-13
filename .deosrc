@@ -49,7 +49,8 @@ DEOS:=$(BASEDIR)/bin/deos
 LIB:=$(BASEDIR)/lib
 PRINT:=$(BASEDIR)/bin/printm
 SRC:=$(BASEDIR)/src
-VENV:=$(BASEDIR)/venv
+STATIC:=$(BASEDIR)/static
+VENV:=$(BASEDIR)/.deos/venv
 
 export VM_USER:=vagrant
 export VM_BASHRC:=/home/$(VM_USER)/.bashrc

@@ -17,7 +17,7 @@ else
 endif
 	@$(PRINT) cyan $@ stop
 
-build: clean check
+build: clean check venv
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-$(MAKE) vm
@@ -30,6 +30,7 @@ clean: chmod
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-$(MAKE) rm
+	-rm -rf $(VENV)/darwin/default/
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
@@ -48,6 +49,17 @@ check:
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-$(MAKE) deos.check
+else
+	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
+endif
+	@$(PRINT) cyan $@ stop
+
+venv:
+	@$(PRINT) cyan $@ start
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	cd $(VENV)/darwin/ && virtualenv default --no-site-packages)
+	cp $(STATIC)/templates/dotfiles/gitignore.txt \
+	   $(VENV)/darwin/default/.gitignore
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
@@ -100,18 +112,6 @@ else
 endif
 	@$(PRINT) yellow $@ stop
 
-venv:
-	@$(PRINT) yellow $@ start
-ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	@-(rm -rf $(VENV)/darwin/python/)
-	(cd $(VENV)/darwin/ && virtualenv python --no-site-packages)
-	(cp $(SRC)/templates/dotfiles/gitignore.txt \
-		$(VENV)/darwin/python/.gitignore)
-else
-	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
-endif
-	@$(PRINT) yellow $@ stop
-
 main:
 	@$(PRINT) yellow $@ start
 	@-(rm -rf $(BIN)/main*)
@@ -121,8 +121,6 @@ main:
 	@$(PRINT) yellow $@ stop
 
 app:; electron ./app/
-
-ext: ext.bitcoin ext.two1
 
 install:; (yarn global add electron)
 

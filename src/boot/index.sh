@@ -55,22 +55,22 @@ EXEC() {
   exec "$DeOS_BOOT_PATH/$1.sh"
 }
 
-while getopts abcnuyvxpdzfjr x; do
+while getopts abcdefnuyvxpzijr x; do
   case "$x" in
     a) EXEC "bootstrap" ;;
     b) EXEC "bitcoin" ;;
     c) EXEC "python" ;;
     d) EXEC "blockstack" ;;
+    e) EXEC "nginx" ;;
+    f) EXEC "docker" ;;
     n) EXEC "node" ;;
     u) EXEC "nvm" ;;
     y) EXEC "yarn" ;;
-    x) EXEC "nginx" ;;
     r) EXEC "virtualenv" ;;
     m) EXEC "dvm" ;;
-    w) EXEC "docker" ;;
     v) EXEC "zerotier" ;;
     z) EXEC "compose" ;;
-    f) EXEC "flask" ;;
+    i) EXEC "flask" ;;
     j) EXEC "jupyter" ;;
     ?) EXIT_SUCCESS ;;
   esac

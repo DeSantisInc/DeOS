@@ -87,14 +87,14 @@ Vagrant.configure('2') do |config|
 
   end # zerotier
 
-  if ENV['BUILDNGINX'] != '0'
+  if ENV['DeOS_BUILD_NGINX'] != '0'
 
     config.vm.provision :shell,
       env: {
         'BOOT_DEBUG' => ENV['BOOT_DEBUG']
       },
       path: ENV['VM_BOOT'],
-    :args=>'-x'
+    :args=>'-e'
 
   end # nginx
 
@@ -194,7 +194,7 @@ Vagrant.configure('2') do |config|
         'DOCKER_PY_PATH' => ENV['DOCKER_PY_PATH']
       },
       path: ENV['DeOS_BOOT_SCRIPT'],
-    :args=>'-f' # flask
+    :args=>'-i' # flask
 
   end # docker
 

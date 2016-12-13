@@ -76,9 +76,13 @@ EXEC() {
   exec "$DeOS_BOOT_PATH/$1.sh"
 }
 
-while getopts abcdefnuyvxpzijr x; do
-  case "$x" in
-    a) EXEC "bootstrap" ;;
+PRINT() {
+  printf "\x1b[34;01mP => [ $1 ]\x1b[34;01m\n"
+}
+
+while getopts "a:bcdefnuyvxpzijr" OPT; do
+  case "$OPT" in
+    a) PRINT $OPTARG && EXEC "bootstrap" ;;
     b) EXEC "bitcoin" ;;
     c) EXEC "python" ;;
     d) EXEC "blockstack" ;;

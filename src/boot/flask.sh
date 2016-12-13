@@ -52,7 +52,6 @@ services:
 EOF
 
 RUN "cd $DOCKER_PY_PATH && docker-compose build"
-
 RUN "cd $DOCKER_PY_PATH && docker-compose up -d"
-
 EXIT_SUCCESS
+EXIT_FAILURE

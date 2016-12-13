@@ -36,3 +36,4 @@ sudo jupyter notebook --notebook-dir=/deos/var/notebook \
                       --no-browser --ip=0.0.0.0 &
 
 EXIT_SUCCESS
+EXIT_FAILURE

@@ -10,3 +10,4 @@ INSTALL "curl"
 INSTALL "apt-transport-https"
 INSTALL "ca-certificates"
 EXIT_SUCCESS
+EXIT_FAILURE

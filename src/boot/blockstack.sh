@@ -1,2 +1,3 @@
 MAINTAINER "atd@bitcoin.sh"
 EXIT_SUCCESS
+EXIT_FAILURE

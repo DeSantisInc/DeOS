@@ -8,3 +8,4 @@ PIP_UPGRADE "requests[security]"
 PIP_INSTALL "virtualenv"
 RUN "cd /deos/.deos/venv/linux/ && virtualenv default --no-site-packages"
 EXIT_SUCCESS
+EXIT_FAILURE

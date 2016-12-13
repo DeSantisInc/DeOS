@@ -6,3 +6,4 @@ RUN "apt-get -y install yarn 2> /dev/null"
 export PATH="$PATH:`yarn global bin`"
 RUN "cd /deos && yarn install && cd app/freebird && yarn install"
 EXIT_SUCCESS
+EXIT_FAILURE

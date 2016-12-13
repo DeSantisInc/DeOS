@@ -47,3 +47,4 @@ RUN "sudo systemctl reload nginx"
 RUN "sudo systemctl enable nginx"
 
 EXIT_SUCCESS
+EXIT_FAILURE

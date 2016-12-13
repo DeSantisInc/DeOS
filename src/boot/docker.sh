@@ -10,3 +10,4 @@ RUN "sudo service docker start"
 RUN "sudo usermod -aG docker vagrant"
 RUN "sudo systemctl enable docker"
 EXIT_SUCCESS
+EXIT_FAILURE

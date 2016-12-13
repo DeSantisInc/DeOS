@@ -33,36 +33,27 @@ for op in RUN ADD_REPO INSTALL MAINTAINER UPDATE UPGRADE EXIT_SUCCESS; do
   export -f $op
 done
 
+EXEC() {
+  chmod +x "$DeOS_BOOT_PATH/$1.sh"
+  exec "$DeOS_BOOT_PATH/$1.sh"
+}
+
 while getopts abcnuyvxpdzfjr x; do
   case "$x" in
-    a)  (chmod +x "$DeOS_BOOT_PATH/bootstrap.sh")
-        (exec "$DeOS_BOOT_PATH/bootstrap.sh") ;;
-    b)  (chmod +x "$DeOS_BOOT_PATH/bitcoin.sh")
-        (exec "$DeOS_BOOT_PATH/bitcoin.sh") ;;
-    c)  (chmod +x "$DeOS_BOOT_PATH/python.sh")
-        (exec "$DeOS_BOOT_PATH/python.sh") ;;
-    n)  (chmod +x "$DeOS_BOOT_PATH/node.sh")
-        (exec "$DeOS_BOOT_PATH/node.sh") ;;
-    u)  (chmod +x "$DeOS_BOOT_PATH/nvm.sh")
-        (exec "$DeOS_BOOT_PATH/nvm.sh") ;;
-    y)  (chmod +x "$DeOS_BOOT_PATH/yarn.sh")
-        (exec "$DeOS_BOOT_PATH/yarn.sh") ;;
-    x)  (chmod +x "$DeOS_BOOT_PATH/nginx.sh")
-        (exec "$DeOS_BOOT_PATH/nginx.sh") ;;
-    r)  (chmod +x "$DeOS_BOOT_PATH/virtualenv.sh")
-        (exec "$DeOS_BOOT_PATH/virtualenv.sh") ;;
-    m)  (chmod +x "$DeOS_BOOT_PATH/dvm.sh")
-        (exec "$DeOS_BOOT_PATH/dvm.sh") ;;
-    d)  (chmod +x "$DeOS_BOOT_PATH/docker.sh")
-        (exec "$DeOS_BOOT_PATH/docker.sh") ;;
-    v)  (chmod +x "$DeOS_BOOT_PATH/zerotier.sh")
-        (exec "$DeOS_BOOT_PATH/zerotier.sh") ;;
-    z)  (chmod +x "$DeOS_BOOT_PATH/compose.sh")
-        (exec "$DeOS_BOOT_PATH/compose.sh") ;;
-    f)  (chmod +x "$DeOS_BOOT_PATH/flask.sh")
-        (exec "$DeOS_BOOT_PATH/flask.sh") ;;
-    j)  (chmod +x "$DeOS_BOOT_PATH/jupyter.sh")
-        (exec "$DeOS_BOOT_PATH/jupyter.sh") ;;
-    ?)  EXIT_SUCCESS ;;
+    a) EXEC "bootstrap" ;;
+    b) EXEC "bitcoin" ;;
+    c) EXEC "python" ;;
+    n) EXEC "node" ;;
+    u) EXEC "nvm" ;;
+    y) EXEC "yarn" ;;
+    x) EXEC "nginx" ;;
+    r) EXEC "virtualenv" ;;
+    m) EXEC "dvm" ;;
+    d) EXEC "docker" ;;
+    v) EXEC "zerotier" ;;
+    z) EXEC "compose" ;;
+    f) EXEC "flask" ;;
+    j) EXEC "jupyter" ;;
+    ?) EXIT_SUCCESS ;;
   esac
 done

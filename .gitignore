@@ -3,6 +3,7 @@
 
 #[dotfolders]
 .blockstack/
+.deos/
 .ext/
 .nvm/
 .obj/

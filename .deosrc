@@ -1,21 +1,36 @@
-include src/host/config.mk
+include src/host/common.mk
+
+DEBUG:=$(FALSE)
+FASTBOOT:=$(TRUE)
 
 export DeOS_BOOT_ARGS_BITCOIN:=-b
 export DeOS_BOOT_ARGS_BLOCKSTACK:=-d
 export DeOS_BOOT_ARGS_BOOTSTRAP:=-a
+export DeOS_BOOT_ARGS_DOCKER:=-e
 export DeOS_BOOT_ARGS_PYTHON:=-c
 export DeOS_BOOT_PATH:=/deos/src/boot
 export DeOS_BOOT_SCRIPT:=./src/boot/index.sh
+ifeq ($(DEBUG),$(IS_TRUE))
+export DeOS_BOOT_DEBUG:=
+else
+export DeOS_BOOT_DEBUG:=2> /dev/null
+endif
+ifeq ($(FASTBOOT),$(IS_TRUE))
+export DeOS_BUILD_APT_UPGRADE:=$(FALSE)
+export DeOS_CMD_APT_UPGRADE:=echo 'FASTBOOT!'
+else
+export DeOS_BUILD_APT_UPGRADE:=$(TRUE)
+export DeOS_CMD_APT_UPGRADE:=apt-get -y upgrade $(DeOS_BOOT_DEBUG)
+endif
 export DeOS_BUILD_BITCOIN:=$(FALSE)
 export DeOS_BUILD_BLOCKSTACK:=$(TRUE)
+export DeOS_BUILD_DOCKER:=$(TRUE)
 export DeOS_BUILD_PYTHON:=$(TRUE)
 export DeOS_CONFIG_DEBUG:=$(FALSE)
 export DeOS_HOST_OS:=$(shell uname -s)
 
 ###
 
-DEBUG:=$(FALSE)
-FASTBOOT:=$(TRUE)
 HOST_OS:=$(shell uname -s)
 
 export BUILDDOCKER:=$(FALSE)
@@ -45,20 +60,6 @@ export VM_PATH_ZT:=/var/lib/zerotier-one
 export VM_PATH_NVM:=/home/$(VM_USER)/.nvm
 export VM_SHELL:=bash -c 'BASH_ENV=/etc/profile exec bash'
 export VM_SHELL_SSH:=bash -l
-
-ifeq ($(DEBUG), $(IS_TRUE))
-export DeOS_BOOT_DEBUG:=
-else
-export DeOS_BOOT_DEBUG:=2> /dev/null
-endif
-
-ifeq ($(FASTBOOT), $(IS_TRUE))
-export DeOS_BUILD_APT_UPGRADE:=$(FALSE)
-export DeOS_CMD_APT_UPGRADE:=echo 'FASTBOOT!'
-else
-export DeOS_BUILD_APT_UPGRADE:=$(TRUE)
-export DeOS_CMD_APT_UPGRADE:=apt-get -y upgrade $(DeOS_BOOT_DEBUG)
-endif
 
 export DeOS_VM_PORT_GUEST_0:=1337
 export DeOS_VM_PORT_HOST_0:=80

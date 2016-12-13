@@ -8,18 +8,28 @@ export MAKEFLAGS=--no-print-directory
 
 include .deosrc
 
-all: run
+all: build
 	@$(PRINT) yellow $@ start
-ifeq ($(HOST_OS), $(IS_MAC))
-	(vagrant ssh -c $(SSHCMD) DeVM)
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	@echo $@
 else
 	@(echo "'make $@' isn't yet supported on $(HOST_OS).")
 endif
 	@$(PRINT) yellow $@ stop
 
+build: clean check
+	@$(PRINT) yellow $@ start
+	@-$(MAKE) vm
+	@$(PRINT) yellow $@ stop
+
+clean: chmod
+	@$(PRINT) yellow $@ start
+	@-$(MAKE) rm
+	@$(PRINT) yellow $@ stop
+
 run: venv
 	@$(PRINT) yellow $@ start
-ifeq ($(HOST_OS), $(IS_MAC))
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	(python $(SRC)/main.py)
 else
 	@(echo "'make $@' isn't yet supported on $(HOST_OS).")
@@ -28,7 +38,7 @@ endif
 
 venv:
 	@$(PRINT) yellow $@ start
-ifeq ($(HOST_OS), $(IS_MAC))
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@-(rm -rf $(VENV)/darwin/python/)
 	(cd $(VENV)/darwin/ && virtualenv python --no-site-packages)
 	(cp $(SRC)/templates/dotfiles/gitignore.txt \
@@ -48,9 +58,9 @@ main:
 
 app:; electron ./app/
 
-build: chmod check
+#build: chmod check
 
-check: deos.check; @(echo)
+check: deos.check
 
 chmod:; (chmod +x $(PRINT) $(DEOS))
 

@@ -5,4 +5,3 @@ echo "source $DVM_ACTIVATE" >> $VM_BASHRC
 echo "export DOCKER_VERSION=$DOCKER_VERSION" >> $VM_BASHRC
 echo "dvm use" >> $VM_BASHRC
 EXIT_SUCCESS
-EXIT_FAILURE

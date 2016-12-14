@@ -1,10 +1,14 @@
-vm.down:; ([ -d $(BASEDIR)/.vagrant/ ] && vagrant destroy DeVM --force)
+vm.down:
+	[ -d $(BASEDIR)/.vagrant/ ] && vagrant destroy DeVM --force
+
+vm.update:
+	-vagrant box update --box bento/ubuntu-16.04
 
 vm.install:
-	#-(vagrant box update --box bento/ubuntu-16.04)
-	([ ! -d $(BASEDIR)/.vagrant/ ] && $(DELTA) $(UPCMD))
+	[ ! -d $(BASEDIR)/.vagrant/ ] && $(DELTA) $(UPCMD)
 
-vm.ssh:; (vagrant ssh -c $(VMCMD) DeVM)
+vm.ssh:
+	vagrant ssh -c $(VMCMD) DeVM
 
 vm.uninstall: vm.down
 	chmod +x $(BASEDIR)/bin/delta

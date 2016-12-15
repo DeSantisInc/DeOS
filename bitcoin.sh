@@ -72,7 +72,7 @@ chmod +x .deos/bin/darwin/delta
 cp src/deos.py .deos/bin/darwin/deos
 chmod +x .deos/bin/darwin/deos
 
-cp src/printm.py .deos/bin/darwin/printm
+cp src/print.py .deos/bin/darwin/printm
 chmod +x .deos/bin/darwin/printm
 
 rm -rf static/build/

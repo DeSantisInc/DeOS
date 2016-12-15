@@ -8,27 +8,17 @@ export MAKEFLAGS=--no-print-directory
 
 include .deosrc
 
-all: init build
-	@echo && $(PRINT) cyan $@ start
+all: init clean check build
+	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	@$(MAKE) templates
+	@(echo $@)
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
-	@$(PRINT) cyan $@ stop && echo
-
-templates:
-	@$(PRINT) magenta $@ start
-ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	-rm -rf build/
-	-mkdir build
-	chmod +x bin/denv && ./bin/denv
-else
-	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
-endif
-	@$(PRINT) magenta $@ stop
+	@$(PRINT) cyan $@ stop
 
 init:
+	@clear
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@-mkdir $(BASEDIR)/.deos/
 	@-mkdir $(BASEDIR)/.deos/bin/
@@ -65,7 +55,7 @@ else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
 
-build: clean check venv
+build: venv
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-mkdir $(BASEDIR)/config/nginx/
@@ -93,7 +83,7 @@ endif
 check:
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	-$(MAKE) deos.check
+	@-$(MAKE) deos.check
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif

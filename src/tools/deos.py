@@ -2,25 +2,66 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
-from subprocess import call, check_output
 
+import configobj
+import jsonschema
+import web
 
-EXEC=lambda x:print('\n%s'%check_output(x.split(' ')))
-PRINT=lambda x:print('\n%s\n'%x)
-SHELL=lambda x:call(x.split(' '))
+import simplejson as json
+import ruamel.yaml as yaml
 
+#config = configobj.ConfigObj('Deosfile.meta.ini')
+templates = "src/templates/"
 
-CMD={'Δ':'\x1b[32;01mΔ \x1b[0m'}
-CMD['down']=lambda:SHELL('make down')
-CMD['help']=lambda:PRINT('help')
-CMD['ls']=lambda:EXEC('ls')
-CMD['clear']=lambda:EXEC('clear')
-CMD['vm.ls']=lambda:SHELL('make vm.ls')
-CMD['build']=lambda:SHELL('make build')
-CMD['test']=lambda:PRINT('test')
-CMD['vm']=lambda:SHELL('make vm')
+def read(fname):
+    data = open(templates+fname).read()
+    data = data.replace('$','$$'
+              ).replace('Δ with', '$def with'
+              ).replace('Δ','$')
+    return data
 
+def write(fname, code):
+    with open(fname, 'w') as f:
+        f.write(code)
+
+def render(fname):
+    raw = read(fname)
+    code = web.template.Template(raw)
+    return code
+
+def build(fname, data):
+    code = render(fname)
+    return str(code(data)).replace(8*' ','\t'
+                         ).replace('$(False)', '$(FALSE)'
+                         ).replace('$(True)', '$(TRUE)'
+                         ).replace('\n\nifeq', '\nifeq'
+                         ).replace('\n\nelse', '\nelse'
+                         ).replace('\n\nendif', '\nendif'
+                         )[1:]
+
+def load():
+    data, schema = None, None
+    with open('Deosfile') as f:
+        raw = f.read().split('---')
+    if isinstance(raw, list):
+        if isinstance(raw[1], basestring):
+            data = yaml.safe_load(raw[2])
+        if isinstance(raw[0], basestring):
+            schema = yaml.safe_load(raw[1])
+    if isinstance(data, dict) and isinstance(schema, dict):
+        jsonschema.validate(data, schema)
+        print(json.dumps(data, sort_keys=True, indent=2))
+    else:
+        return None
+    return data
+
+def main():
+    data = load()
+    if isinstance(data, dict):
+        code = build('make/deosrc.mk', data['.deosrc'])
+        write('build/.deosrc', code)
+        code = build('make/makefile.mk', data['Makefile'])
+        write('build/Makefile', code)
 
 if __name__ == "__main__":
-    while not((lambda c:1 if c=='quit' else CMD[c]())(raw_input(CMD['Δ']))):
-        pass
+    main()

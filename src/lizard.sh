@@ -102,7 +102,7 @@ while getopts "c:efnuyvxpzijr" OPT; do
     c) if [ "$OPTARG" = "python" ]; then EXEC "python"
        else if [ "$OPTARG" = "bitcoind"  ]; then EXEC "bitcoind"
        else if [ "$OPTARG" = "blockstack" ]; then EXEC "blockstack"
-       else if [ "$OPTARG" = "bootstrap" ]; then EXEC "bootstrap"
+       else if [ "$OPTARG" = "init" ]; then EXEC "init"
        else echo 'else'
        fi; fi; fi; fi ;;
     e) EXEC "nginx" ;;

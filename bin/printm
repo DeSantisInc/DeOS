@@ -20,11 +20,11 @@ def main():
         color, cmd, action = _set_color(), sys.argv[2], sys.argv[3]
         if action == 'stop':
             action = 'exit'
-            template = '\x1b[1m%s[ ΔOS : make %s : %s ]\x1b[0m'
+            template = '\x1b[1m%s[ ΔOS : %s : make : %s ]\x1b[0m'
         else:
             action = 'init'
-            template = '\x1b[1m%s[ ΔOS : make %s : %s ]\x1b[0m'
-        print template % (color, cmd, action)
+            template = '\x1b[1m%s[ ΔOS : %s : make : %s ]\x1b[0m'
+        print template % (color, action, cmd)
 
 if __name__ == "__main__":
     main()

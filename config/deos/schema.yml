@@ -12,13 +12,13 @@ properties:
         required:
         - boot
         - build
-        - path
-        - script
         properties:
           boot:
             type: object
             required:
             - args
+            - path
+            - script
             properties:
               args:
                 type: object
@@ -42,6 +42,10 @@ properties:
                     type: string
                   python:
                     type: string
+              path:
+                type: string
+              script:
+                type: string
           build:
             type: object
             required:
@@ -61,7 +65,3 @@ properties:
                 type: boolean
               python:
                 type: boolean
-          path:
-            type: string
-          script:
-            type: string

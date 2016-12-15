@@ -8,6 +8,8 @@
         docker: -f
         nginx: -e
         python: -c
+      path: /deos/src/boot
+      script: ./src/boot/index.sh
     build:
       apt:
         upgrade: false
@@ -27,10 +29,8 @@
     config:
       debug: false
       fastboot: true
-    path: /deos/src/boot
     run:
       server: false
-    script: ./src/boot/index.sh
     vm:
       box: bento/ubuntu-16.04
       path: /deos

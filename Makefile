@@ -64,13 +64,13 @@ endif
 	@$(PRINT) magenta $@ stop
 
 check:
-	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	@$(PRINT) cyan $@ start
 	@-$(MAKE) deos.check
-else
-	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
-endif
 	@$(PRINT) cyan $@ stop
+else
+	@-$(MAKE) deos.check
+endif
 
 venv:
 	@$(PRINT) cyan $@ start

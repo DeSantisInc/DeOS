@@ -45,6 +45,11 @@ Vagrant.configure('2') do |config|
       group: 'root',
     create: true
 
+    config.vm.synced_folder '.blockstack', '/home/vagrant/.blockstack',
+      owner: 'vagrant',
+      group: 'vagrant',
+    create: true
+
   end # file_sync
 
   config.vm.provision :shell,
@@ -142,6 +147,7 @@ Vagrant.configure('2') do |config|
           'DeOS_BOOT_DEBUG' => ENV['DeOS_BOOT_DEBUG']
         },
         path: ENV['DeOS_BOOT_SCRIPT'],
+        privileged: false,
       :args => ENV['DeOS_BOOT_ARGS_BLOCKSTACK']
     end # blockstack
 

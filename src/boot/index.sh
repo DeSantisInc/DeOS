@@ -64,8 +64,8 @@ EXIT_FAILURE() {
   exit 1
 }
 
-for op in RUN ADD_REPO INSTALL MAINTAINER NEW PIP_INSTALL PIP_UPGRADE RM \
-          UPDATE UPGRADE UPGRADE_PIP SUDO_INSTALL SYSD_RELOAD SYSD_ENABLE \
+for op in RUN ADD_REPO INSTALL MAINTAINER NEW PIP_INSTALL PIP_UPGRADE RM\
+          UPDATE UPGRADE UPGRADE_PIP SUDO_INSTALL SYSD_RELOAD SYSD_ENABLE\
           EXIT_FAILURE EXIT_SUCCESS; do
   export -f $op
 done
@@ -82,7 +82,7 @@ PRINT() {
 while getopts "a:bcdefnuyvxpzijr" OPT; do
   case "$OPT" in
     a) PRINT $OPTARG && EXEC "bootstrap" ;;
-    b) EXEC "bitcoin" ;;
+    b) EXEC "bitcoin_core" ;;
     c) EXEC "python" ;;
     d) EXEC "blockstack" ;;
     e) EXEC "nginx" ;;

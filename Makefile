@@ -58,9 +58,6 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@-rm -rf $(BASEDIR)/.blockstack/
 	@-rm -rf $(BASEDIR)/.vagrant/
 	@-rm -rf $(BASEDIR)/.zerotier/
-	@-rm -rf $(BASEDIR)/config/nginx/
-	@-rm -rf $(VENV)/darwin/default/
-	@-rm -rf $(VENV)/linux/default/
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
@@ -89,6 +86,7 @@ endif
 rm:
 	@$(PRINT) yellow $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	[ -d $(BASEDIR)/.vagrant/ ] && rm -rf $(BASEDIR)/.deos/
 	-$(MAKE) vm.uninstall
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")

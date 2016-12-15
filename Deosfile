@@ -189,7 +189,6 @@ Makefile:
 .nvmrc:
   node:
     version:
-      prefix: v
       major: 7
       minor: 0
       patch: 0

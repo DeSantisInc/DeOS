@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 RUN() {
-  printf "\x1b[34;01mΔ => [ $1 ]\x1b[34;01m\n"; echo "$1" | bash
+  printf "\x1b[34;01mΔ => [ $1 ]\x1b[34;01m\n"
+  echo "$1" | bash
 }
 
 ADD_REPO() {
@@ -82,7 +83,7 @@ PRINT() {
 while getopts "a:bcdefnuyvxpzijr" OPT; do
   case "$OPT" in
     a) PRINT $OPTARG && EXEC "bootstrap" ;;
-    b) EXEC "bitcoin-core" ;;
+    b) EXEC "bitcoind" ;;
     c) EXEC "python" ;;
     d) EXEC "blockstack" ;;
     e) EXEC "nginx" ;;

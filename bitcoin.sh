@@ -66,13 +66,13 @@ utilitybelt==0.2.6
 virtualchain==0.14.0
 EOF
 
-cp src/build/delta.sh .deos/bin/darwin/delta
+cp src/delta.sh .deos/bin/darwin/delta
 chmod +x .deos/bin/darwin/delta
 
-cp src/build/deos.py .deos/bin/darwin/deos
+cp src/deos.py .deos/bin/darwin/deos
 chmod +x .deos/bin/darwin/deos
 
-cp src/build/printm.py .deos/bin/darwin/printm
+cp src/printm.py .deos/bin/darwin/printm
 chmod +x .deos/bin/darwin/printm
 
 rm -rf static/build/

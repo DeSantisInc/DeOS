@@ -11,8 +11,7 @@
       path: /deos/src/boot
       script: ./src/boot/index.sh
     build:
-      apt:
-        upgrade: false
+      upgrade: false
       bitcoin: false
       blockstack: false
       docker: false
@@ -38,6 +37,23 @@
       shell:
         default: bash -c 'BASH_ENV=/etc/profile exec bash'
         ssh: bash -l
+
+Makefile:
+  makeflags: --no-print-directory
+  default_goal: all
+  phony: all bin build check chmod clean init rm sh venv vm
+  sublime_targets: all
+  config_file: .deosrc
+  all:
+    hook:
+      pre: >
+        @echo && $(PRINT) cyan $@ start
+      post: >
+        @$(PRINT) cyan $@ stop && echo
+    if:host_os:is:mac: >
+      @$(MAKE) _build
+    else: >
+      @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 
 .editorconfig:
   root: true
@@ -88,30 +104,3 @@
   - make build
   after_script:
   - echo $TRAVIS_COMMIT_RANGE
-
-Makefile:
-  default_goal: all
-  makeflags: --no-print-directory
-  phony:
-  - all
-  - bin
-  - build
-  - check
-  - chmod
-  - clean
-  - init
-  - rm
-  - sh
-  - venv
-  - vm
-  rules:
-  - all:
-    - pre_hook: >
-        @echo && $(PRINT) cyan $@ start
-    - if:host_os:is:mac: >
-        @$(MAKE) _build
-    - else: >
-        @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
-    - post_hook: >
-        @$(PRINT) cyan $@ stop && echo
-  sublime_targets: all

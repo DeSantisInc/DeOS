@@ -34,6 +34,9 @@ def build(fname, data):
     return str(code(data)).replace(8*' ','\t'
                          ).replace('$(False)', '$(FALSE)'
                          ).replace('$(True)', '$(TRUE)'
+                         ).replace('\n\nifeq', '\nifeq'
+                         ).replace('\n\nelse', '\nelse'
+                         ).replace('\n\nendif', '\nendif'
                          )[1:]
 
 def load():
@@ -57,6 +60,8 @@ def main():
     if isinstance(data, dict):
         code = build('make/deosrc.mk', data['.deosrc'])
         write('build/.deosrc', code)
+        code = build('make/makefile.mk', data['Makefile'])
+        write('build/Makefile', code)
 
 if __name__ == "__main__":
     main()

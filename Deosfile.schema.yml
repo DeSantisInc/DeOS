@@ -54,6 +54,7 @@ properties:
             - docker
             - nginx
             - python
+            - upgrade
             properties:
               bitcoin:
                 type: boolean
@@ -64,4 +65,6 @@ properties:
               nginx:
                 type: boolean
               python:
+                type: boolean
+              upgrade:
                 type: boolean

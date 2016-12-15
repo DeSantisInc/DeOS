@@ -8,37 +8,44 @@ export MAKEFLAGS=--no-print-directory
 
 include .deosrc
 
-all: init build
-	@$(PRINT) cyan $@ start
+all: #init build
+	@echo && $(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	@echo $@
+	@$(MAKE) yaml
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
-	@$(PRINT) cyan $@ stop
+	@$(PRINT) cyan $@ stop && echo
+
+yaml:
+	@echo && $(PRINT) magenta $@ start
+ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	python main.py
+else
+	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
+endif
+	@$(PRINT) magenta $@ stop && echo
 
 init:
-	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	-mkdir $(BASEDIR)/.deos/
-	-mkdir $(BASEDIR)/.deos/bin/
-	-mkdir $(BASEDIR)/.deos/bin/darwin/
-	-mkdir $(BASEDIR)/.deos/bin/linux/
-	-mkdir $(BASEDIR)/.deos/ext/
-	-mkdir $(BASEDIR)/.deos/ext/darwin/
-	-mkdir $(BASEDIR)/.deos/ext/linux/
-	-mkdir $(BASEDIR)/.deos/obj/
-	-mkdir $(BASEDIR)/.deos/obj/darwin/
-	-mkdir $(BASEDIR)/.deos/obj/linux/
-	-mkdir $(BASEDIR)/.deos/venv/
-	-mkdir $(BASEDIR)/.deos/venv/darwin/
-	-mkdir $(BASEDIR)/.deos/venv/linux/
-	-$(MAKE) bin
-	-$(MAKE) chmod
+	@-mkdir $(BASEDIR)/.deos/
+	@-mkdir $(BASEDIR)/.deos/bin/
+	@-mkdir $(BASEDIR)/.deos/bin/darwin/
+	@-mkdir $(BASEDIR)/.deos/bin/linux/
+	@-mkdir $(BASEDIR)/.deos/ext/
+	@-mkdir $(BASEDIR)/.deos/ext/darwin/
+	@-mkdir $(BASEDIR)/.deos/ext/linux/
+	@-mkdir $(BASEDIR)/.deos/obj/
+	@-mkdir $(BASEDIR)/.deos/obj/darwin/
+	@-mkdir $(BASEDIR)/.deos/obj/linux/
+	@-mkdir $(BASEDIR)/.deos/venv/
+	@-mkdir $(BASEDIR)/.deos/venv/darwin/
+	@-mkdir $(BASEDIR)/.deos/venv/linux/
+	@-$(MAKE) bin
+	@-$(MAKE) chmod
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
-	@$(PRINT) cyan $@ stop
 
 bin:
 	@$(PRINT) cyan $@ start
@@ -50,13 +57,11 @@ endif
 	@$(PRINT) cyan $@ stop
 
 chmod:
-	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@-chmod +x $(PRINT) $(DEOS)
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
-	@$(PRINT) cyan $@ stop
 
 build: clean check venv
 	@$(PRINT) cyan $@ start
@@ -69,18 +74,18 @@ endif
 	@$(PRINT) cyan $@ stop
 
 clean:
-	@$(PRINT) cyan $@ start
+	@$(PRINT) magenta $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	-$(MAKE) rm
-	-rm -rf $(BASEDIR)/.vagrant/
-	-rm -rf $(BASEDIR)/.zerotier/
-	-rm -rf $(BASEDIR)/config/nginx/
-	-rm -rf $(VENV)/darwin/default/
-	-rm -rf $(VENV)/linux/default/
+	@-$(MAKE) rm
+	@-rm -rf $(BASEDIR)/.vagrant/
+	@-rm -rf $(BASEDIR)/.zerotier/
+	@-rm -rf $(BASEDIR)/config/nginx/
+	@-rm -rf $(VENV)/darwin/default/
+	@-rm -rf $(VENV)/linux/default/
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
-	@$(PRINT) cyan $@ stop
+	@$(PRINT) magenta $@ stop
 
 check:
 	@$(PRINT) cyan $@ start
@@ -103,13 +108,13 @@ endif
 	@$(PRINT) cyan $@ stop
 
 rm:
-	@$(PRINT) cyan $@ start
+	@$(PRINT) yellow $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-$(MAKE) vm.uninstall
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
-	@$(PRINT) cyan $@ stop
+	@$(PRINT) yellow $@ stop
 
 sh:
 	@$(PRINT) cyan $@ start

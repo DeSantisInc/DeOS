@@ -1,52 +1,11 @@
 MAINTAINER "atd@bitcoin.sh"
 VENV_CREATE "blockstack"
-CLONE "github.com" "blockstack" "dns-zone-file-py"
-CLONE "github.com" "blockstack" "blockstack-profiles-py"
-CLONE "github.com" "blockstack" "virtualchain"
-CLONE "github.com" "blockstack" "blockstack-cli"
-CLONE "github.com" "blockstack" "blockstack-core"
-CLONE "github.com" "blockstack" "blockstack-files"
-CLONE "github.com" "blockstack" "blockstack-gpg"
-CLONE "github.com" "blockstack" "blockstack-integration-tests"
-
-source /deos/.deos/venv/linux/blockstack/bin/activate\
-&& cd /deos/.deos/ext/linux/dns-zone-file-py/\
-&& python ./setup.py build\
-&& python ./setup.py install
-
-source /deos/.deos/venv/linux/blockstack/bin/activate\
-&& cd /deos/.deos/ext/linux/blockstack-profiles-py/\
-&& python ./setup.py build\
-&& python ./setup.py install
-
-source /deos/.deos/venv/linux/blockstack/bin/activate\
-&& cd /deos/.deos/ext/linux/virtualchain/\
-&& python ./setup.py build\
-&& python ./setup.py install
-
-source /deos/.deos/venv/linux/blockstack/bin/activate\
-&& cd /deos/.deos/ext/linux/blockstack-cli/\
-&& python ./setup.py build\
-&& python ./setup.py install
-
-source /deos/.deos/venv/linux/blockstack/bin/activate\
-&& cd /deos/.deos/ext/linux/blockstack-core/\
-&& python ./setup.py build\
-&& python ./setup.py install
-
-source /deos/.deos/venv/linux/blockstack/bin/activate\
-&& cd /deos/.deos/ext/linux/blockstack-files/\
-&& python ./setup.py build\
-&& python ./setup.py install
-
-source /deos/.deos/venv/linux/blockstack/bin/activate\
-&& cd /deos/.deos/ext/linux/blockstack-gpg/\
-&& python ./setup.py build\
-&& python ./setup.py install
-
-source /deos/.deos/venv/linux/blockstack/bin/activate\
-&& cd /deos/.deos/ext/linux/blockstack-integration-tests/\
-&& python ./setup.py build\
-&& python ./setup.py install
-
+for REPO in "dns-zone-file-py" "blockstack-profiles-py" "virtualchain"\
+            "blockstack-cli" "blockstack-core" "blockstack-files"\
+            "blockstack-gpg" "blockstack-integration-tests"; do
+  CLONE "github.com" "blockstack" "$REPO"
+  VENV_BUILD "blockstack" "$REPO"
+  VENV_INSTALL "blockstack" "$REPO"
+done
+RUN "blockstack"
 EXIT_SUCCESS

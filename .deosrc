@@ -5,7 +5,7 @@ BIN:=$(BASEDIR)/bin
 
 export DeOS_BOOT_ARGS_BITCOIN:=-c bitcoind
 export DeOS_BOOT_ARGS_BLOCKSTACK:=-c blockstack
-export DeOS_BOOT_ARGS_BOOTSTRAP:=-a test
+export DeOS_BOOT_ARGS_BOOTSTRAP:=-c bootstrap
 export DeOS_BOOT_ARGS_DOCKER:=-f
 export DeOS_BOOT_ARGS_NGINX:=-e
 export DeOS_BOOT_ARGS_PYTHON:=-c python

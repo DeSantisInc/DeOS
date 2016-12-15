@@ -1,22 +1,13 @@
 MAINTAINER "atd@bitcoin.sh"
-
 VENV_CREATE "blockstack"
-
-GIT_CLONE "github.com" "blockstack" "dns-zone-file-py"
-
-GIT_CLONE "github.com" "blockstack" "blockstack-profiles-py"
-
-GIT_CLONE "github.com" "blockstack" "virtualchain"
-
-GIT_CLONE "github.com" "blockstack" "blockstack-cli"
-
-GIT_CLONE "github.com" "blockstack" "blockstack-core"
-
-GIT_CLONE "github.com" "blockstack" "blockstack-files"
-
-GIT_CLONE "github.com" "blockstack" "blockstack-gpg"
-
-GIT_CLONE "github.com" "blockstack" "blockstack-integration-tests"
+CLONE "github.com" "blockstack" "dns-zone-file-py"
+CLONE "github.com" "blockstack" "blockstack-profiles-py"
+CLONE "github.com" "blockstack" "virtualchain"
+CLONE "github.com" "blockstack" "blockstack-cli"
+CLONE "github.com" "blockstack" "blockstack-core"
+CLONE "github.com" "blockstack" "blockstack-files"
+CLONE "github.com" "blockstack" "blockstack-gpg"
+CLONE "github.com" "blockstack" "blockstack-integration-tests"
 
 source /deos/.deos/venv/linux/blockstack/bin/activate\
 && cd /deos/.deos/ext/linux/dns-zone-file-py/\

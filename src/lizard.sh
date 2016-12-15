@@ -45,6 +45,14 @@ UPGRADE_PIP() {
   PIP_UPGRADE "pip"
 }
 
+GIT_CLONE() {
+  RUN "cd /deos/.deos/ext/linux/ && git clone https://$1/$2/$3"
+}
+
+VENV_CREATE() {
+  RUN "cd /deos/.deos/venv/linux/ && virtualenv $1 --no-site-packages"
+}
+
 SUDO_SYSD_ENABLE() {
   RUN "sudo systemctl enable $1"
 }
@@ -66,8 +74,8 @@ EXIT_FAILURE() {
 }
 
 for op in RUN ADD_REPO INSTALL MAINTAINER NEW PIP_INSTALL PIP_UPGRADE RM\
-          UPDATE UPGRADE UPGRADE_PIP SUDO_INSTALL SUDO_SYSD_RELOAD\
-          SUDO_SYSD_ENABLE EXIT_FAILURE EXIT_SUCCESS; do
+          UPDATE UPGRADE UPGRADE_PIP VENV_CREATE GIT_CLONE SUDO_INSTALL\
+          SUDO_SYSD_RELOAD SUDO_SYSD_ENABLE EXIT_FAILURE EXIT_SUCCESS; do
   export -f $op
 done
 

@@ -1,59 +1,58 @@
 MAINTAINER "atd@bitcoin.sh"
 
-cd /deos/.deos/venv/linux/\
-&& virtualenv blockstack --no-site-packages
+VENV_CREATE "blockstack"
 
-cd /deos/.deos/ext/linux/\
-&& git clone "https://github.com/blockstack/dns-zone-file-py"
+GIT_CLONE "github.com" "blockstack" "dns-zone-file-py"
+
+GIT_CLONE "github.com" "blockstack" "blockstack-profiles-py"
+
+GIT_CLONE "github.com" "blockstack" "virtualchain"
+
+GIT_CLONE "github.com" "blockstack" "blockstack-cli"
+
+GIT_CLONE "github.com" "blockstack" "blockstack-core"
+
+GIT_CLONE "github.com" "blockstack" "blockstack-files"
+
+GIT_CLONE "github.com" "blockstack" "blockstack-gpg"
+
+GIT_CLONE "github.com" "blockstack" "blockstack-integration-tests"
+
 source /deos/.deos/venv/linux/blockstack/bin/activate\
 && cd /deos/.deos/ext/linux/dns-zone-file-py/\
 && python ./setup.py build\
 && python ./setup.py install
 
-cd /deos/.deos/ext/linux/\
-&& git clone "https://github.com/blockstack/blockstack-profiles-py"
 source /deos/.deos/venv/linux/blockstack/bin/activate\
 && cd /deos/.deos/ext/linux/blockstack-profiles-py/\
 && python ./setup.py build\
 && python ./setup.py install
 
-cd /deos/.deos/ext/linux/\
-&& git clone "https://github.com/blockstack/virtualchain"
 source /deos/.deos/venv/linux/blockstack/bin/activate\
 && cd /deos/.deos/ext/linux/virtualchain/\
 && python ./setup.py build\
 && python ./setup.py install
 
-cd /deos/.deos/ext/linux/\
-&& git clone "https://github.com/blockstack/blockstack-cli"
 source /deos/.deos/venv/linux/blockstack/bin/activate\
 && cd /deos/.deos/ext/linux/blockstack-cli/\
 && python ./setup.py build\
 && python ./setup.py install
 
-cd /deos/.deos/ext/linux/\
-&& git clone "https://github.com/blockstack/blockstack-core"
 source /deos/.deos/venv/linux/blockstack/bin/activate\
 && cd /deos/.deos/ext/linux/blockstack-core/\
 && python ./setup.py build\
 && python ./setup.py install
 
-cd /deos/.deos/ext/linux/\
-&& git clone "https://github.com/blockstack/blockstack-files"
 source /deos/.deos/venv/linux/blockstack/bin/activate\
 && cd /deos/.deos/ext/linux/blockstack-files/\
 && python ./setup.py build\
 && python ./setup.py install
 
-cd /deos/.deos/ext/linux/\
-&& git clone "https://github.com/blockstack/blockstack-gpg"
 source /deos/.deos/venv/linux/blockstack/bin/activate\
 && cd /deos/.deos/ext/linux/blockstack-gpg/\
 && python ./setup.py build\
 && python ./setup.py install
 
-cd /deos/.deos/ext/linux/\
-&& git clone "https://github.com/blockstack/blockstack-integration-tests"
 source /deos/.deos/venv/linux/blockstack/bin/activate\
 && cd /deos/.deos/ext/linux/blockstack-integration-tests/\
 && python ./setup.py build\

@@ -77,6 +77,7 @@ clean:
 	@$(PRINT) magenta $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@-$(MAKE) rm
+	@-rm -rf $(BASEDIR)/.blockstack/
 	@-rm -rf $(BASEDIR)/.vagrant/
 	@-rm -rf $(BASEDIR)/.zerotier/
 	@-rm -rf $(BASEDIR)/config/nginx/
@@ -100,7 +101,7 @@ venv:
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	cd $(VENV)/darwin/ && virtualenv default --no-site-packages
-	cp $(STATIC)/templates/dotfiles/gitignore.txt \
+	cp $(SRC)/templates/git/gitignore.txt \
 	   $(VENV)/darwin/default/.gitignore
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")

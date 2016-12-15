@@ -7,7 +7,7 @@ import jsonschema
 import web
 import ruamel.yaml as yaml
 
-config = configobj.ConfigObj('deos.ini')
+config = configobj.ConfigObj('.deos.ini')
 
 def main():
     with open('.deos.yml') as f:

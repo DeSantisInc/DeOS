@@ -88,11 +88,15 @@ PRINT() {
   printf "\x1b[34;01mP => [ $1 ]\x1b[34;01m\n"
 }
 
-while getopts "a:bcdefnuyvxpzijr" OPT; do
+while getopts "a:bc:defnuyvxpzijr" OPT; do
   case "$OPT" in
+    c) if [ "$OPTARG" = "python" ]; then EXEC "python"
+       else if [ "$OPTARG" = "bitcoind"  ]; then EXEC "bitcoind"
+       else if [ "$OPTARG" = "blockstack" ]; then EXEC "blockstack"
+       else echo 'else'
+       fi; fi; fi ;;
     a) PRINT $OPTARG && EXEC "bootstrap" ;;
     b) EXEC "bitcoind" ;;
-    c) EXEC "python" ;;
     d) EXEC "blockstack" ;;
     e) EXEC "nginx" ;;
     f) EXEC "docker" ;;

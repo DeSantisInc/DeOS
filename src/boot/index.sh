@@ -44,11 +44,11 @@ UPGRADE_PIP() {
   PIP_UPGRADE "pip"
 }
 
-SYSD_ENABLE() {
+SUDO_SYSD_ENABLE() {
   RUN "sudo systemctl enable $1"
 }
 
-SYSD_RELOAD() {
+SUDO_SYSD_RELOAD() {
   RUN "sudo systemctl reload $1"
 }
 
@@ -65,14 +65,14 @@ EXIT_FAILURE() {
 }
 
 for op in RUN ADD_REPO INSTALL MAINTAINER NEW PIP_INSTALL PIP_UPGRADE RM\
-          UPDATE UPGRADE UPGRADE_PIP SUDO_INSTALL SYSD_RELOAD SYSD_ENABLE\
-          EXIT_FAILURE EXIT_SUCCESS; do
+          UPDATE UPGRADE UPGRADE_PIP SUDO_INSTALL SUDO_SYSD_RELOAD\
+          SUDO_SYSD_ENABLE EXIT_FAILURE EXIT_SUCCESS; do
   export -f $op
 done
 
 EXEC() {
-  chmod +x "$DeOS_BOOT_PATH/$1.sh"
-  exec "$DeOS_BOOT_PATH/$1.sh"
+  chmod +x "$DeOS_BOOT_PATH/$1.lz"
+  exec "$DeOS_BOOT_PATH/$1.lz"
 }
 
 PRINT() {
@@ -82,7 +82,7 @@ PRINT() {
 while getopts "a:bcdefnuyvxpzijr" OPT; do
   case "$OPT" in
     a) PRINT $OPTARG && EXEC "bootstrap" ;;
-    b) EXEC "bitcoin_core" ;;
+    b) EXEC "bitcoin-core" ;;
     c) EXEC "python" ;;
     d) EXEC "blockstack" ;;
     e) EXEC "nginx" ;;

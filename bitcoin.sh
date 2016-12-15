@@ -1,6 +1,8 @@
 #!/bin/sh
 
+make clean
 rm -rf .deos/
+
 mkdir .deos
 mkdir .deos/bin
 mkdir .deos/bin/darwin

@@ -3,8 +3,7 @@
 
 import sys
 
-def _set_color():
-    color = sys.argv[1]
+def get_color(color):
     if 'default' == color:
         return '\x1b[39;01m'
     elif 'black' == color:
@@ -25,7 +24,7 @@ def _set_color():
 
 def main():
     if 4 == len(sys.argv):
-        color, cmd, action = _set_color(), sys.argv[2], sys.argv[3]
+        color, cmd, action = get_color(sys.argv[1]), sys.argv[2], sys.argv[3]
         if action == 'stop':
             action = 'exit'
             template = '\x1b[1m%s[ ΔOS : %s : make : %s ]\x1b[0m'

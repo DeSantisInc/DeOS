@@ -13,7 +13,7 @@ include Δ(data['config_file'])
 all: #init build
 	Δ(data['all']['hook']['pre'])
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	Δ(data['all']['if:host:is:mac'])
+	Δ(data['all']['if:host;is:mac'])
 else
 	Δ(data['all']['else'])
 endif

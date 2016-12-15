@@ -37,6 +37,6 @@ http {
 }
 EOF
 RUN "ln -s /deos/.deos/etc/linux/nginx/nginx.conf /etc/nginx/nginx.conf"
-SYSD_RELOAD "nginx"
-SYSD_ENABLE "nginx"
+SUDO_SYSD_RELOAD "nginx"
+SUDO_SYSD_ENABLE "nginx"
 EXIT_SUCCESS

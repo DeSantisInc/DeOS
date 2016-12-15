@@ -5,7 +5,7 @@ version=v0.7-alpha.2
 [.deosrc]
 type=make
 
-[.{editor,flow}config]
+[{.editor,.flow}config]
 type=ini
 
 [.git{attributes,ignore}]
@@ -94,7 +94,7 @@ properties:
         config_file: {type: string}
         all:
           type: object
-          required: [hook, "if:host:is:mac", else]
+          required: [hook, "if:host;is:mac", else]
           hook:
             type: object
             required: [pre, post]
@@ -123,10 +123,10 @@ properties:
     cmd:
       apt:
         upgrade:
-          if:true: echo 'FASTBOOT!'
+          if;true: echo 'FASTBOOT!'
           else: apt-get -y upgrade $(DeOS_BOOT_DEBUG)
       debug:
-        if:true: null
+        if;true: null
         else: 2> /dev/null
     config:
       debug: false
@@ -153,7 +153,7 @@ Makefile:
         @echo && $(PRINT) cyan $@ start
       post: >
         @$(PRINT) cyan $@ stop && echo
-    if:host:is:mac: >
+    if:host;is:mac: >
       @$(MAKE) templates
     else: >
       @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")

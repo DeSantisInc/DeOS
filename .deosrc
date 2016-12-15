@@ -51,10 +51,10 @@ export BUILDNOTEBOOK:=$(FALSE)
 export DeOS_FILESYNC:=$(TRUE)
 
 export BOOT:=$(BASEDIR)/boot
-DELTA:=$(BASEDIR)/bin/delta
+DELTA:=$(BASEDIR)/.deos/bin/darwin/delta
 DEOS:=$(BASEDIR)/bin/deos
 LIB:=$(BASEDIR)/lib
-PRINT:=$(BASEDIR)/bin/printm
+PRINT:=$(BASEDIR)/.deos/bin/darwin/printm
 SRC:=$(BASEDIR)/src
 STATIC:=$(BASEDIR)/static
 VENV:=$(BASEDIR)/.deos/venv

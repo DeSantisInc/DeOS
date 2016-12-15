@@ -18,21 +18,7 @@ endif
 	@$(PRINT) cyan $@ stop
 
 init:
-	@clear
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	@-mkdir $(BASEDIR)/.deos/
-	@-mkdir $(BASEDIR)/.deos/bin/
-	@-mkdir $(BASEDIR)/.deos/bin/darwin/
-	@-mkdir $(BASEDIR)/.deos/bin/linux/
-	@-mkdir $(BASEDIR)/.deos/ext/
-	@-mkdir $(BASEDIR)/.deos/ext/darwin/
-	@-mkdir $(BASEDIR)/.deos/ext/linux/
-	@-mkdir $(BASEDIR)/.deos/obj/
-	@-mkdir $(BASEDIR)/.deos/obj/darwin/
-	@-mkdir $(BASEDIR)/.deos/obj/linux/
-	@-mkdir $(BASEDIR)/.deos/venv/
-	@-mkdir $(BASEDIR)/.deos/venv/darwin/
-	@-mkdir $(BASEDIR)/.deos/venv/linux/
 	@-$(MAKE) bin
 	@-$(MAKE) chmod
 else

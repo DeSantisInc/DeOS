@@ -8,16 +8,16 @@ export MAKEFLAGS=--no-print-directory
 
 include .deosrc
 
-all: #init build
+all: init build
 	@echo && $(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	@$(MAKE) _build
+	@$(MAKE) templates
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
 	@$(PRINT) cyan $@ stop && echo
 
-_build:
+templates:
 	@$(PRINT) magenta $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-rm -rf build/

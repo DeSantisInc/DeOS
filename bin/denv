@@ -14,7 +14,7 @@ def main():
         raw_data = f.read()
     if isinstance(raw_data, basestring):
         data = yaml.safe_load(raw_data)
-    with open('.deos-schema.yml') as f:
+    with open('config/deos/schema.yml') as f:
         raw_schema = f.read()
     if isinstance(raw_schema, basestring):
         schema = yaml.safe_load(raw_schema)

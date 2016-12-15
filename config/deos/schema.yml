@@ -1,0 +1,67 @@
+type: object
+required:
+- .deosrc
+properties:
+  .deosrc:
+    type: object
+    required:
+    - deos
+    properties:
+      deos:
+        type: object
+        required:
+        - boot
+        - build
+        - path
+        - script
+        properties:
+          boot:
+            type: object
+            required:
+            - args
+            properties:
+              args:
+                type: object
+                required:
+                - bitcoin
+                - blockstack
+                - bootstrap
+                - docker
+                - nginx
+                - python
+                properties:
+                  bitcoin:
+                    type: string
+                  blockstack:
+                    type: string
+                  bootstrap:
+                    type: string
+                  docker:
+                    type: string
+                  nginx:
+                    type: string
+                  python:
+                    type: string
+          build:
+            type: object
+            required:
+            - bitcoin
+            - blockstack
+            - docker
+            - nginx
+            - python
+            properties:
+              bitcoin:
+                type: boolean
+              blockstack:
+                type: boolean
+              docker:
+                type: boolean
+              nginx:
+                type: boolean
+              python:
+                type: boolean
+          path:
+            type: string
+          script:
+            type: string

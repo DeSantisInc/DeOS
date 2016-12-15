@@ -18,13 +18,13 @@ endif
 	@$(PRINT) cyan $@ stop && echo
 
 yaml:
-	@echo && $(PRINT) magenta $@ start
+	$(PRINT) magenta $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	python main.py
+	chmod +x bin/denv && ./bin/denv
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
-	@$(PRINT) magenta $@ stop && echo
+	@$(PRINT) magenta $@ stop
 
 init:
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))

@@ -1,45 +1,63 @@
-boot:
-  args:
-    bitcoin: -b
-    blockstack: -d
-    bootstrap: -a test
-    docker: -f
-    nginx: -e
-    python: -c
+.deosrc:
+  deos:
+    boot:
+      args:
+        bitcoin: -b
+        blockstack: -d
+        bootstrap: -a test
+        docker: -f
+        nginx: -e
+        python: -c
+    build:
+      apt:
+        upgrade: false
+      bitcoin: false
+      blockstack: false
+      docker: false
+      nginx: true
+      python: false
+    cmd:
+      apt:
+        upgrade:
+          if:true: echo 'FASTBOOT!'
+          else: apt-get -y upgrade $(DeOS_BOOT_DEBUG)
+      debug:
+        if:true: null
+        else: 2> /dev/null
+    config:
+      debug: false
+      fastboot: true
+    path: /deos/src/boot
+    run:
+      server: false
+    script: ./src/boot/index.sh
+    vm:
+      box: bento/ubuntu-16.04
+      path: /deos
+      user: vagrant
+      shell:
+        default: bash -c 'BASH_ENV=/etc/profile exec bash'
+        ssh: bash -l
 
-build:
-  apt:
-    upgrade: false
-  bitcoin: false
-  blockstack: false
-  docker: false
-  nginx: true
-  python: false
+.editorconfig:
+  root: true
+  any:
+    charset: utf-8
+    end_of_line: lf
+    indent:
+      size: 4
+      style: space
+    insert:
+      final_newline: true
+    trim:
+      trailing_whitespace: true
+  any.mk:
+    indent:
+      style: tab
+  any.sh:
+    indent:
+      size: 2
 
-cmd:
-  apt:
-    upgrade:
-      if:true: echo 'FASTBOOT!'
-      else: apt-get -y upgrade $(DeOS_BOOT_DEBUG)
-  debug:
-    if:true: null
-    else: 2> /dev/null
-
-config:
-  debug: false
-  fastboot: true
-
-path: /deos/src/boot
-
-run:
-  server: false
-
-script: ./src/boot/index.sh
-
-vm:
-  box: bento/ubuntu-16.04
-  path: /deos
-  user: vagrant
-  shell:
-    default: bash -c 'BASH_ENV=/etc/profile exec bash'
-    ssh: bash -l
+.flowconfig:
+  ignore:
+    - .*/node_modules/gulp-flowtype/.*

@@ -20,7 +20,8 @@ endif
 _build:
 	@$(PRINT) magenta $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	-rm .deosrc.tmp.mk
+	-rm -rf build/
+	-mkdir build
 	chmod +x bin/denv && ./bin/denv
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")

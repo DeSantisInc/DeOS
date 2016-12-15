@@ -1,0 +1,117 @@
+.deosrc:
+  deos:
+    boot:
+      args:
+        bitcoin: -b
+        blockstack: -d
+        bootstrap: -a test
+        docker: -f
+        nginx: -e
+        python: -c
+      path: /deos/src/boot
+      script: ./src/boot/index.sh
+    build:
+      apt:
+        upgrade: false
+      bitcoin: false
+      blockstack: false
+      docker: false
+      nginx: true
+      python: false
+    cmd:
+      apt:
+        upgrade:
+          if:true: echo 'FASTBOOT!'
+          else: apt-get -y upgrade $(DeOS_BOOT_DEBUG)
+      debug:
+        if:true: null
+        else: 2> /dev/null
+    config:
+      debug: false
+      fastboot: true
+    run:
+      server: false
+    vm:
+      box: bento/ubuntu-16.04
+      path: /deos
+      user: vagrant
+      shell:
+        default: bash -c 'BASH_ENV=/etc/profile exec bash'
+        ssh: bash -l
+
+.editorconfig:
+  root: true
+  _*:
+    charset: utf-8
+    end:of:
+      line: lf
+    indent:
+      size: 4
+      style: space
+    insert:
+      final:
+        newline: true
+    trim:
+      trailing:
+        whitespace: true
+  _*.mk:
+    indent:
+      style: tab
+  _*.sh:
+    indent:
+      size: 2
+
+.flowconfig:
+  ignore:
+    - .*/node_modules/gulp-flowtype/.*
+
+.nvmrc:
+  node:
+    version:
+      prefix: v
+      major: 7
+      minor: 0
+      patch: 0
+
+.travis.yml:
+  dist: trusty
+  language: generic
+  os: linux
+  sudo: false
+  before_install:
+  - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
+  install:
+  - nvm install && nvm use && npm install --global yarn && yarn install
+  before_script:
+  - export PATH="$PATH:$HOME/.yarn/bin"
+  script:
+  - make build
+  after_script:
+  - echo $TRAVIS_COMMIT_RANGE
+
+Makefile:
+  default_goal: all
+  makeflags: --no-print-directory
+  phony:
+  - all
+  - bin
+  - build
+  - check
+  - chmod
+  - clean
+  - init
+  - rm
+  - sh
+  - venv
+  - vm
+  rules:
+  - all:
+    - pre_hook: >
+        @echo && $(PRINT) cyan $@ start
+    - if:host_os:is:mac: >
+        @$(MAKE) _build
+    - else: >
+        @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
+    - post_hook: >
+        @$(PRINT) cyan $@ stop && echo
+  sublime_targets: all

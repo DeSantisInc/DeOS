@@ -10,7 +10,7 @@ import web
 import simplejson as json
 import ruamel.yaml as yaml
 
-config = configobj.ConfigObj('.deos.ini')
+config = configobj.ConfigObj('Deosfile.meta.ini')
 templates = "src/templates/"
 
 def read(fname):
@@ -37,11 +37,11 @@ def build(fname, data):
                          )[1:]
 
 def load():
-    with open('.deos.yml') as f:
+    with open('Deosfile.yml') as f:
         raw_data = f.read()
     if isinstance(raw_data, basestring):
         data = yaml.safe_load(raw_data)
-    with open('config/deos/schema.yml') as f:
+    with open('Deosfile.schema.yml') as f:
         raw_schema = f.read()
     if isinstance(raw_schema, basestring):
         schema = yaml.safe_load(raw_schema)
@@ -56,7 +56,7 @@ def main():
     data = load()
     if isinstance(data, dict):
         code = build('make/deosrc.mk', data['.deosrc'])
-        write('.deosrc.tmp.mk', code)
+        write('build/.deosrc', code)
 
 if __name__ == "__main__":
     main()

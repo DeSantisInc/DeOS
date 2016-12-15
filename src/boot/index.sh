@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 RUN() {
-  printf "\x1b[34;01mΔ => [ $1 ]\x1b[34;01m\n"
-  echo "$1" | bash
+  printf "\x1b[34;01mΔ => [ $1 ]\x1b[34;01m\n"; echo "$1" | bash
 }
 
 ADD_REPO() {

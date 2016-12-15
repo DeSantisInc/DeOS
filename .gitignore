@@ -1,5 +1,4 @@
 #[dotfiles]
-.deosrc.tmp.mk
 .DS_Store
 
 #[dotfolders]

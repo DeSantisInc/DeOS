@@ -2,13 +2,13 @@
 
 spinner() {
     while true; do
-        printf '\\\b'
+        printf '△\b'
         sleep 0.1
-        printf 'l\b'
+        printf '▷\b'
         sleep 0.1
-        printf '/\b'
+        printf '▽\b'
         sleep 0.1
-        printf -- '-\b'
+        printf -- '◁\b'
         sleep 0.1
     done
 }

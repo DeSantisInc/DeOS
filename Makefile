@@ -11,25 +11,16 @@ include .deosrc
 all: #init build
 	@echo && $(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	@$(MAKE) templates
+	@$(MAKE) _build
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
 	@$(PRINT) cyan $@ stop && echo
 
-templates:
+_build:
 	@$(PRINT) magenta $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-rm .deosrc.tmp.mk
-	python main.py
-else
-	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
-endif
-	@$(PRINT) magenta $@ stop
-
-yaml:
-	$(PRINT) magenta $@ start
-ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	chmod +x bin/denv && ./bin/denv
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")

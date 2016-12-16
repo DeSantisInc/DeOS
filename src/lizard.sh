@@ -49,6 +49,10 @@ CLONE() {
   RUN "cd /deos/.deos/ext/linux/ && git clone https://$1/$2/$3"
 }
 
+VENV_RUN() {
+  RUN "source /deos/.deos/venv/linux/$1/bin/activate && $2"
+}
+
 VENV_BUILD() {
   RUN "source /deos/.deos/venv/linux/$1/bin/activate && cd /deos/.deos/ext/linux/$2/ && python ./setup.py build"
 }
@@ -82,9 +86,9 @@ EXIT_FAILURE() {
 }
 
 for op in RUN ADD_REPO INSTALL MAINTAINER NEW PIP_INSTALL PIP_UPGRADE RM\
-          UPDATE UPGRADE UPGRADE_PIP VENV_BUILD VENV_CREATE VENV_INSTALL CLONE\
-          SUDO_INSTALL SUDO_SYSD_RELOAD SUDO_SYSD_ENABLE EXIT_FAILURE\
-          EXIT_SUCCESS; do
+          UPDATE UPGRADE UPGRADE_PIP VENV_BUILD VENV_CREATE VENV_INSTALL\
+          VENV_RUN CLONE SUDO_INSTALL SUDO_SYSD_RELOAD SUDO_SYSD_ENABLE\
+          EXIT_FAILURE EXIT_SUCCESS; do
   export -f $op
 done
 
@@ -100,7 +104,7 @@ PRINT() {
 while getopts "c:efnuyvxpzijr" OPT; do
   case "$OPT" in
     c) if [ "$OPTARG" = "python" ]; then EXEC "python"
-       else if [ "$OPTARG" = "bitcoind"  ]; then EXEC "bitcoind"
+       else if [ "$OPTARG" = "bitcoind" ]; then EXEC "bitcoind"
        else if [ "$OPTARG" = "blockstack" ]; then EXEC "blockstack"
        else if [ "$OPTARG" = "init" ]; then EXEC "init"
        else echo 'else'

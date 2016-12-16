@@ -7,5 +7,5 @@ for REPO in "dns-zone-file-py" "blockstack-profiles-py" "virtualchain"\
   VENV_BUILD "blockstack" "$REPO"
   VENV_INSTALL "blockstack" "$REPO"
 done
-VENV_RUN "blockstack" "echo -ne '\n' | blockstack"
+VENV_RUN "blockstack" "echo | blockstack"
 EXIT_SUCCESS

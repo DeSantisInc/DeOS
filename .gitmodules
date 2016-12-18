@@ -37,9 +37,6 @@
 [submodule "ext/bitcoin/python-bitcoinlib"]
 	path = ext/bitcoin/python-bitcoinlib
 	url = https://github.com/petertodd/python-bitcoinlib.git
-[submodule "app/gitiles"]
-	path = app/gitiles
-	url = https://github.com/google/gitiles.git
 [submodule "ext/bitcoin/picocoin"]
 	path = ext/bitcoin/picocoin
 	url = https://github.com/jgarzik/picocoin.git

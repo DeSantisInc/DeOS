@@ -78,5 +78,11 @@ chmod +x .deos/bin/darwin/printm
 rm -rf static/build/
 mkdir static/build
 
+make x=blockstack venv
+
+bash -c "\
+source .deos/venv/darwin/blockstack/bin/activate\
+&& pip install blockstack"
+
 .deos/bin/darwin/deos
-make all
+#make all

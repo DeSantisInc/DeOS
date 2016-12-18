@@ -77,9 +77,9 @@ endif
 venv:
 	@$(PRINT) cyan $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	cd $(VENV)/darwin/ && virtualenv default --no-site-packages
-	cp $(SRC)/templates/git/gitignore.txt \
-	   $(VENV)/darwin/default/.gitignore
+	[ "$(x)" = "blockstack" ]\
+	&& (cd $(VENV)/darwin/ && virtualenv blockstack --no-site-packages)\
+	|| (cd $(VENV)/darwin/ && virtualenv default --no-site-packages)
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 endif
@@ -88,7 +88,8 @@ endif
 rm:
 	@$(PRINT) yellow $@ start
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-	[ -d $(BASEDIR)/.vagrant/ ] && rm -rf $(BASEDIR)/.deos/
+	-rm -rf $(BASEDIR)/.deos/
+	#[ -d $(BASEDIR)/.vagrant/ ] && rm -rf $(BASEDIR)/.deos/
 	-$(MAKE) vm.uninstall
 else
 	@(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")

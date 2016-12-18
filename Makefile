@@ -19,6 +19,7 @@ endif
 
 install:
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	@-mkdir $(BASEDIR)/.swap/
 	sh $(BASEDIR)/src/install.sh
 endif
 
@@ -42,6 +43,7 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@-rm -rf $(BASEDIR)/.blockstack/
 	@-rm -rf $(BASEDIR)/.vagrant/
 	@-rm -rf $(BASEDIR)/.zerotier/
+	@-rm -rf $(BASEDIR)/.swap/
 	@$(PRINTM) magenta $@ stop
 endif
 

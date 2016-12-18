@@ -19,9 +19,6 @@ mkdir .deos/ext/linux
 mkdir .deos/obj
 mkdir .deos/obj/darwin
 mkdir .deos/obj/linux
-mkdir .deos/venv
-mkdir .deos/venv/darwin
-mkdir .deos/venv/linux
 mkdir .swap/
 
 touch .deos/etc/linux/python/requirements.txt

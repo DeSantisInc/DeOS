@@ -65,7 +65,7 @@ LIB:=$(BASEDIR)/lib
 PRINTM:=$(BASEDIR)/.deos/bin/darwin/printm
 SRC:=$(BASEDIR)/src
 STATIC:=$(BASEDIR)/var
-VENV:=$(BASEDIR)/.deos/venv
+VENV:=$(BASEDIR)/venv
 
 export VM_BASHRC:=/home/$(DeOS_VM_USER)/.bashrc
 export VM_PATH_NVM:=/home/$(DeOS_VM_USER)/.nvm

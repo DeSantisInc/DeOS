@@ -44,6 +44,10 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@-rm -rf $(BASEDIR)/.vagrant/
 	@-rm -rf $(BASEDIR)/.zerotier/
 	@-rm -rf $(BASEDIR)/.swap/
+	@-rm -rf $(VENV)/darwin/*
+	@-cp $(BASEDIR)/template/git/gitignore.tao.txt $(VENV)/darwin/.gitignore
+	@-rm -rf $(VENV)/linux/*
+	@-cp $(BASEDIR)/template/git/gitignore.tao.txt $(VENV)/linux/.gitignore
 	@$(PRINTM) magenta $@ stop
 endif
 

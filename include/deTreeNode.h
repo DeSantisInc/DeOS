@@ -53,7 +53,6 @@ If you would like to embed ΔOS within a commercial application or
 redistribute it in a modified binary form, contact DeSantis Inc.
 */
 
-
 #ifndef __DETREENODE__
 #define __DETREENODE__
 

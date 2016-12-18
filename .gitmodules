@@ -43,12 +43,6 @@
 [submodule "ext/bitcoin/picocoin"]
 	path = ext/bitcoin/picocoin
 	url = https://github.com/jgarzik/picocoin.git
-[submodule "ext/electrum/electrum"]
-	path = ext/electrum/electrum
-	url = https://github.com/spesmilo/electrum.git
-[submodule "ext/electrum/electrum-server"]
-	path = ext/electrum/electrum-server
-	url = https://github.com/spesmilo/electrum-server.git
 [submodule "doc/electrum"]
 	path = doc/electrum
 	url = https://github.com/spesmilo/electrum-docs.git
@@ -61,3 +55,45 @@
 [submodule "ext/zerotier/ZeroTierSDK"]
 	path = ext/zerotier/ZeroTierSDK
 	url = https://github.com/zerotier/ZeroTierSDK.git
+[submodule "ext/bittorrent/webtorrent"]
+	path = ext/bittorrent/webtorrent
+	url = https://github.com/feross/webtorrent.git
+[submodule "ext/bittorrent/bittorrent-dht"]
+	path = ext/bittorrent/bittorrent-dht
+	url = https://github.com/feross/bittorrent-dht.git
+[submodule "ext/bittorrent/bittorrent-peerid"]
+	path = ext/bittorrent/bittorrent-peerid
+	url = https://github.com/fisch0920/bittorrent-peerid.git
+[submodule "ext/bittorrent/bittorrent-protocol"]
+	path = ext/bittorrent/bittorrent-protocol
+	url = https://github.com/feross/bittorrent-protocol.git
+[submodule "ext/bittorrent/bittorrent-tracker"]
+	path = ext/bittorrent/bittorrent-tracker
+	url = https://github.com/feross/bittorrent-tracker.git
+[submodule "ext/bittorrent/create-torrent"]
+	path = ext/bittorrent/create-torrent
+	url = https://github.com/feross/create-torrent.git
+[submodule "ext/bittorrent/magnet-uri"]
+	path = ext/bittorrent/magnet-uri
+	url = https://github.com/feross/magnet-uri.git
+[submodule "ext/bittorrent/parse-torrent"]
+	path = ext/bittorrent/parse-torrent
+	url = https://github.com/feross/parse-torrent.git
+[submodule "ext/bittorrent/render-media"]
+	path = ext/bittorrent/render-media
+	url = https://github.com/feross/render-media.git
+[submodule "ext/bittorrent/torrent-discovery"]
+	path = ext/bittorrent/torrent-discovery
+	url = https://github.com/feross/torrent-discovery.git
+[submodule "ext/bittorrent/ut_metadata"]
+	path = ext/bittorrent/ut_metadata
+	url = https://github.com/feross/ut_metadata.git
+[submodule "ext/bittorrent/ut_pex"]
+	path = ext/bittorrent/ut_pex
+	url = https://github.com/fisch0920/ut_pex.git
+[submodule "ext/bittorrent/GitTorrent"]
+	path = ext/bittorrent/GitTorrent
+	url = https://github.com/cjb/GitTorrent.git
+[submodule "ext/bittorrent/ut_gittorrent"]
+	path = ext/bittorrent/ut_gittorrent
+	url = https://github.com/cjb/ut_gittorrent.git

@@ -130,9 +130,9 @@
 [submodule "ext/python/cpp"]
 	path = ext/python/cpp
 	url = https://github.com/evanplaice/pypreprocessor.git
-[submodule "app/gitiles"]
-	path = app/gitiles
+[submodule "app/git/gitiles"]
+	path = app/git/gitiles
 	url = https://gerrit.googlesource.com/gitiles.git
-[submodule "app/bucklets"]
-	path = app/bucklets
+[submodule "app/git/bucklets"]
+	path = app/git/bucklets
 	url = https://gerrit.googlesource.com/bucklets.git

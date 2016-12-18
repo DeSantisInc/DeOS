@@ -1,4 +1,4 @@
-MAINTAINER "atd@bitcoin.sh"
+MAINTAINER "atd@gmx.it"
 VENV_CREATE "blockstack"
 for REPO in "dns-zone-file-py" "blockstack-profiles-py" "virtualchain"\
             "blockstack-cli" "blockstack-core" "blockstack-files"\

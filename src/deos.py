@@ -10,7 +10,7 @@ import simplejson as json
 import web
 
 #config = configobj.ConfigObj('Deosfile.meta.ini')
-templates = "src/templates/"
+templates = "template/"
 
 def read(fname):
     data = open(templates+fname).read()
@@ -57,9 +57,9 @@ def load():
 def main():
     data = load()
     if isinstance(data, dict):
-        code = build('make/deosrc.mk', data['.deosrc'])
+        code = build('make/deosrc.tao.mk', data['.deosrc'])
         write('var/build/.deosrc', code)
-        code = build('make/makefile.mk', data['Makefile'])
+        code = build('make/makefile.tao.mk', data['Makefile'])
         write('var/build/Makefile', code)
 
 if __name__ == "__main__":

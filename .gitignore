@@ -9,6 +9,7 @@
 .ext/
 .nvm/
 .obj/
+.swap/
 .vagrant/
 .venv/
 .zerotier/

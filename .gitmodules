@@ -115,3 +115,18 @@
 [submodule "ext/web"]
 	path = ext/web
 	url = https://github.com/webpy/webpy.git
+[submodule "ext/bitcoin/bitcoin"]
+	path = ext/bitcoin/bitcoin
+	url = https://github.com/bitcoin/bitcoin.git
+[submodule "ext/bitcoin/libblkmaker"]
+	path = ext/bitcoin/libblkmaker
+	url = https://github.com/bitcoin/libblkmaker.git
+[submodule "ext/bitcoin/libbase58"]
+	path = ext/bitcoin/libbase58
+	url = https://github.com/bitcoin/libbase58.git
+[submodule "doc/bitcoin/bips"]
+	path = doc/bitcoin/bips
+	url = https://github.com/bitcoin/bips.git
+[submodule "doc/bitcoin/QA"]
+	path = doc/bitcoin/QA
+	url = https://github.com/bitcoin/QA.git

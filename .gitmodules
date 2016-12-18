@@ -97,3 +97,21 @@
 [submodule "ext/bittorrent/ut_gittorrent"]
 	path = ext/bittorrent/ut_gittorrent
 	url = https://github.com/cjb/ut_gittorrent.git
+[submodule "ext/bitcoin/electrum"]
+	path = ext/bitcoin/electrum
+	url = https://github.com/spesmilo/electrum.git
+[submodule "ext/bitcoin/electrum-server"]
+	path = ext/bitcoin/electrum-server
+	url = https://github.com/spesmilo/electrum-server.git
+[submodule "ext/bitcoin/two1-python"]
+	path = ext/bitcoin/two1-python
+	url = https://github.com/21dotco/two1-python.git
+[submodule "ext/bitcoin/two1-docker"]
+	path = ext/bitcoin/two1-docker
+	url = https://github.com/21dotco/two1-docker.git
+[submodule "ext/bitcoin/two1-sell-boilerplate"]
+	path = ext/bitcoin/two1-sell-boilerplate
+	url = https://github.com/21dotco/two1-sell-boilerplate.git
+[submodule "web"]
+	path = web
+	url = https://github.com/webpy/webpy.git

@@ -17,9 +17,9 @@ vm.uninstall: vm.down
 	-rm -rf $(BASEDIR)/node_modules/
 	-rm -rf $(BASEDIR)/var/docker/nginx/ \
 		&& mkdir $(BASEDIR)/var/docker/nginx/ \
-		&& cp $(BASEDIR)/var/templates/gitignore.txt \
+		&& cp $(BASEDIR)/templates/gitignore.tao.txt \
 		      $(BASEDIR)/var/docker/nginx/.gitignore
 	-rm -rf $(BASEDIR)/var/docker/python/ \
 		&& mkdir $(BASEDIR)/var/docker/python/ \
-		&& cp $(BASEDIR)/var/templates/gitignore.txt \
+		&& cp $(BASEDIR)/templates/gitignore.tao.txt \
 		      $(BASEDIR)/var/docker/python/.gitignore

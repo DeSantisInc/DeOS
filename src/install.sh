@@ -16,9 +16,6 @@ mkdir .deos/etc/linux/nginx
 mkdir .deos/ext
 mkdir .deos/ext/darwin
 mkdir .deos/ext/linux
-mkdir .deos/obj
-mkdir .deos/obj/darwin
-mkdir .deos/obj/linux
 
 #touch .deos/etc/linux/python/requirements.txt
 #cat <<EOF>> .deos/etc/linux/python/requirements.txt

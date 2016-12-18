@@ -1,3 +1,6 @@
 [submodule "app/terminal"]
 	path = app/terminal
 	url = https://github.com/zeit/hyper
+[submodule "dev/yubikey"]
+	path = dev/yubikey
+	url = https://github.com/scumjr/yubikeyedup

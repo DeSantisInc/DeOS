@@ -3,8 +3,8 @@ include host/common.mk
 BASEDIR:=$(CURDIR)
 BIN:=$(BASEDIR)/bin
 
-DeOS_YUBIKEY_GIT_REPO:=https://github.com/scumjr/yubikeyedup.git
-DeOS_YUBIKEY_PATH_DB:=$(BASEDIR)/var/data/yubikeys.sqlite3
+DeOS_YUBIKEY_GIT_REPO:=https://github.com/scumjr/yubikeyedup
+DeOS_YUBIKEY_PATH_DB:=$(BASEDIR)/data/private/yubikeys.sqlite3
 DeOS_YUBIKEY_PATH_SRC:=$(BASEDIR)/dev/yubikey/src
 DeOS_YUBIKEY_PATH_TOOLS:=$(BASEDIR)/dev/yubikey/tools
 

@@ -54,7 +54,7 @@ endif
 export BUILDDOCKER:=$(FALSE)
 export BUILDJS:=$(FALSE)
 export BUILDNGINX:=$(FALSE)
-export BUILDZT:=$(FALSE)
+export BUILDZT:=$(TRUE)
 export BUILDNOTEBOOK:=$(FALSE)
 export DeOS_FILESYNC:=$(TRUE)
 

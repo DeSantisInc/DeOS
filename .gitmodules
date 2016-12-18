@@ -1,9 +1,9 @@
 [submodule "app/terminal"]
 	path = app/terminal
-	url = https://github.com/zeit/hyper
+	url = https://github.com/zeit/hyper.git
 [submodule "dev/yubikey"]
 	path = dev/yubikey
-	url = https://github.com/scumjr/yubikeyedup
+	url = https://github.com/scumjr/yubikeyedup.git
 [submodule "ext/blockstack/blockstack-cli"]
 	path = ext/blockstack/blockstack-cli
 	url = https://github.com/blockstack/blockstack-cli.git

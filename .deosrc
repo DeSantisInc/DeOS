@@ -59,10 +59,10 @@ export BUILDNOTEBOOK:=$(FALSE)
 export DeOS_FILESYNC:=$(TRUE)
 
 export BOOT:=$(BASEDIR)/boot
-DELTA:=$(BASEDIR)/.deos/bin/darwin/spinner
+DELTA:=$(BASEDIR)/bin/darwin/spinner
 DEOS:=$(BASEDIR)/bin/deos
 LIB:=$(BASEDIR)/lib
-PRINTM:=$(BASEDIR)/.deos/bin/darwin/printm
+PRINTM:=$(BASEDIR)/bin/darwin/printm
 SRC:=$(BASEDIR)/src
 STATIC:=$(BASEDIR)/var
 VENV:=$(BASEDIR)/venv

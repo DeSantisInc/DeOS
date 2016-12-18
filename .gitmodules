@@ -1,3 +1,0 @@
-[submodule "terminal"]
-	path = app/hyper
-	url = https://github.com/desantis/hyper.git

@@ -61,12 +61,3 @@
 [submodule "ext/zerotier/ZeroTierSDK"]
 	path = ext/zerotier/ZeroTierSDK
 	url = https://github.com/zerotier/ZeroTierSDK.git
-[submodule "ext/bittorrent/webtorrent"]
-	path = ext/bittorrent/webtorrent
-	url = https://github.com/feross/webtorrent.git
-[submodule "ext/bittorrent/bittorrent-dht"]
-	path = ext/bittorrent/bittorrent-dht
-	url = https://github.com/feross/bittorrent-dht.git
-[submodule "ext/bittorrent/bittorrent-peerid"]
-	path = ext/bittorrent/bittorrent-peerid
-	url = https://github.com/fisch0920/bittorrent-peerid.git

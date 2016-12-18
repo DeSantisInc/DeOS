@@ -1,0 +1,419 @@
+[2016-09-06 03:48:05,615] [DEBUG] [spv:110] (31578) Using testnet/regtest
+WARN (31578): in test environment
+[2016-09-06 03:48:05,816] [DEBUG] [blockstack-test-scenario:591] (31578) Starting up bitcoind in regtest mode
+Bitcoin server starting
+[2016-09-06 03:48:05,827] [DEBUG] [blockstack-test-scenario:598] (31578) Waiting for bitcoind to start up
+[2016-09-06 03:48:06,828] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:07,832] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:08,836] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:09,839] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:10,843] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:11,846] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:12,849] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:13,082] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:13,313] [DEBUG] [blockstack-test-scenario:621] (31578) bitcoind -regtest is ready
+[2016-09-06 03:48:13,625] [DEBUG] [testlib:71] (31578) Wallet 92RVyTBdj4xC2M7KQo2kea6xwtHzomD136BM9eh6LKkonLkWaR4 (mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC)
+[2016-09-06 03:48:13,936] [DEBUG] [testlib:71] (31578) Wallet 934UTTHhRoBFdv4sj3Jt2QASm7GaJb3VxM8VcoeoXKmHSkUw2P4 (mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq)
+[2016-09-06 03:48:14,245] [DEBUG] [testlib:71] (31578) Wallet 93SiL3Qwt9p999a8w8c9eH9AmhcXiz98NNbaFBbVoPQuvpcsQpL (mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx)
+[2016-09-06 03:48:14,553] [DEBUG] [testlib:71] (31578) Wallet 92g8TYFgxoytqWG7s5VPSZ4uKva7kXUbDBXkVooKgZRGJ3vKUC8 (n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4)
+[2016-09-06 03:48:14,861] [DEBUG] [testlib:71] (31578) Wallet 931TJBFPbQvb6yvVjgDB4qKsHU7ArBFYdYaQmymKgNgEideRBtz (mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed)
+[2016-09-06 03:48:15,329] [DEBUG] [testlib:84] (31578) Multisig wallet 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz
+[2016-09-06 03:48:15,329] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:15,597] [DEBUG] [blockstack-test-scenario:642] (31578) Fill mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC with 50
+[2016-09-06 03:48:16,036] [DEBUG] [blockstack-test-scenario:642] (31578) Fill mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq with 50
+[2016-09-06 03:48:16,489] [DEBUG] [blockstack-test-scenario:642] (31578) Fill mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx with 50
+[2016-09-06 03:48:17,001] [DEBUG] [blockstack-test-scenario:642] (31578) Fill n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4 with 50
+[2016-09-06 03:48:17,562] [DEBUG] [blockstack-test-scenario:642] (31578) Fill mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed with 50
+[2016-09-06 03:48:19,192] [DEBUG] [blockstack-test-scenario:660] (31578) Fill 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz with 250
+
+Address mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC loaded with 5000000000 satoshis
+Address mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq loaded with 5000000000 satoshis
+Address mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx loaded with 5000000000 satoshis
+Address n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4 loaded with 5000000000 satoshis
+Address mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed loaded with 5000000000 satoshis
+Address 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz loaded with 25000000000 satoshis
+
+[2016-09-06 03:48:19,921] [DEBUG] [config:692] (31578) Load config from '/tmp/blockstack-test/blockstack-server.ini'
+Saving configuration to /tmp/blockstack-test/blockstack-server.ini
+Saving configuration to /tmp/blockstack-test/client/client.ini
+[2016-09-06 03:48:19,974] [DEBUG] [virtualchain_hooks:298] (31578) cache consistency: DB is not in RAM
+[2016-09-06 03:48:19,974] [INFO] [virtualchain_hooks:346] (31578) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 03:48:19,975] [WARNING] [namedb:148] (31578) Failed to open '/tmp/blockstack-test/blockstack-server.db'; creating a new database
+[2016-09-06 03:48:19,975] [DEBUG] [atlas:1089] (31578) Initializing Atlas DB at /tmp/blockstack-test/atlas.db
+[2016-09-06 03:48:20,130] [DEBUG] [atlas:1100] (31578) Queuing all zonefiles
+[2016-09-06 03:48:20,130] [DEBUG] [atlas:669] (31578) Queued 0 zonefiles from 256-255
+[2016-09-06 03:48:20,130] [DEBUG] [atlas:1103] (31578) Adding seed peers
+[2016-09-06 03:48:20,131] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:20,132] [DEBUG] [atlas:1062] (31578) Atlas DB exists at /tmp/blockstack-test/atlas.db
+[2016-09-06 03:48:20,132] [DEBUG] [atlas:1068] (31578) Synchronize zonefiles from 0 to 255
+[2016-09-06 03:48:20,135] [DEBUG] [atlas:669] (31578) Queued 0 zonefiles from 0-255
+[2016-09-06 03:48:20,135] [DEBUG] [atlas:1074] (31578) Refreshing seed peers
+[2016-09-06 03:48:20,135] [DEBUG] [atlas:1080] (31578) Loading peer table
+[2016-09-06 03:48:20,136] [DEBUG] [atlas:3493] (31578) Starting Atlas component 'zonefile_pusher'
+[2016-09-06 03:48:20,137] [DEBUG] [atlas:3412] (31578) localhost:16264: AtlasZonefilePusher step
+[2016-09-06 03:48:20,137] [DEBUG] [atlas:3493] (31578) Starting Atlas component 'health_checker'
+[2016-09-06 03:48:20,138] [DEBUG] [atlas:3150] (31578) localhost:16264: AtlasHealthChecker step
+[2016-09-06 03:48:20,138] [DEBUG] [atlas:3493] (31578) Starting Atlas component 'peer_crawler'
+[2016-09-06 03:48:20,138] [DEBUG] [atlas:3168] (31578) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 03:48:20,138] [DEBUG] [atlas:3044] (31578) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 03:48:20,138] [DEBUG] [atlas:3493] (31578) Starting Atlas component 'zonefile_crawler'
+[2016-09-06 03:48:20,139] [DEBUG] [atlas:3048] (31578) localhost:16264: max neighbors is 80
+[2016-09-06 03:48:20,139] [DEBUG] [atlas:2970] (31578) Add at most 10 new peers out of 0 options
+[2016-09-06 03:48:20,139] [DEBUG] [blockstackd:1297] (31578) Starting RPC
+[2016-09-06 03:48:20,139] [DEBUG] [atlas:3000] (31578) localhost:16264: revalidate old peers
+[2016-09-06 03:48:20,140] [DEBUG] [atlas:3241] (31578) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 03:48:20,140] [INFO] [blockstackd:338] (31578) Listening on 0.0.0.0:16264
+[2016-09-06 03:48:20,141] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:20,143] [DEBUG] [atlas:3281] (31578) localhost:16264: missing 0 zonefiles
+[2016-09-06 03:48:20,143] [DEBUG] [atlas:3362] (31578) localhost:16264: fetched 0 zonefiles
+[2016-09-06 03:48:20,145] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:20,304] [DEBUG] [blockstack-test-scenario:722] (31578) next block (now at 256)
+[2016-09-06 03:48:20,305] [DEBUG] [session:129] (31578) [31578] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 03:48:20,307] [DEBUG] [virtualchain_hooks:303] (31578) cache consistency: DB does not exist on disk
+[2016-09-06 03:48:20,307] [INFO] [virtualchain_hooks:346] (31578) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 03:48:20,310] [DEBUG] [indexer:220] (31578) Lastblock: 255 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 03:48:20,310] [WARNING] [namedb:148] (31578) Failed to open '/tmp/blockstack-test/blockstack-server.db'; creating a new database
+[2016-09-06 03:48:20,321] [DEBUG] [proxy:120] (31578) RPC http://localhost:16264 db_refresh
+[2016-09-06 03:48:20,322] [DEBUG] [blockstackd:314] (31578) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 03:48:20,322] [INFO] [virtualchain_hooks:369] (31578) Invalidating cached blockstack state
+[2016-09-06 03:48:20,323] [DEBUG] [virtualchain_hooks:298] (31578) cache consistency: DB is not in RAM
+[2016-09-06 03:48:20,323] [INFO] [virtualchain_hooks:346] (31578) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 03:48:20,326] [DEBUG] [indexer:220] (31578) Lastblock: 255 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 03:48:20,326] [WARNING] [namedb:148] (31578) Failed to open '/tmp/blockstack-test/blockstack-server.db'; creating a new database
+[2016-09-06 03:48:20,326] [DEBUG] [blockstackd:321] (31578) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 03:48:20] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 03:48:20,327] [DEBUG] [blockstack-test-scenario:312] (31578) sync virtualchain up to 256
+[2016-09-06 03:48:20,327] [DEBUG] [indexer:1130] (31578) Sync virtualchain state from 256 to 257
+
+blockstack opts
+{
+    "serve_zonefiles": true, 
+    "analytics_key": "abcdef0123456789", 
+    "profile_storage_drivers": "disk", 
+    "zonefiles": "/tmp/blockstack-test/zonefiles", 
+    "zonefile_storage_drivers": "disk", 
+    "backup_max_age": 30, 
+    "atlasdb_path": "/tmp/blockstack-test/atlas.db", 
+    "email": "", 
+    "atlas_hostname": "localhost", 
+    "serve_profiles": true, 
+    "atlas_blacklist": "", 
+    "backup_frequency": 3, 
+    "atlas": true, 
+    "announcers": "judecn.id,muneeb.id,shea256.id", 
+    "blockchain_proxy": true, 
+    "rpc_port": 16264, 
+    "server_version": "0.14.0", 
+    "atlas_seeds": ""
+}
+
+blockchain opts
+{
+    "bitcoind_use_https": false, 
+    "bitcoind_passwd": "blockstacksystem", 
+    "bitcoind_user": "blockstack", 
+    "bitcoind_server": "localhost", 
+    "bitcoind_spv_path": "/tmp/blockstack-test/spv_headers.dat", 
+    "bitcoind_p2p_port": 18444, 
+    "bitcoind_port": 18332, 
+    "bitcoind_regtest": true
+}
+
+blockchain service opts
+{
+    "multiprocessing_num_procs": 1, 
+    "spv_headers_path": "/tmp/blockstack-test/spv_headers.dat", 
+    "rpc_password": "blockstacksystem", 
+    "utxo_provider": "bitcoind_utxo", 
+    "port": 18332, 
+    "rpc_username": "blockstack", 
+    "multiprocessing_num_blocks": 10, 
+    "blockchain_port": 18332, 
+    "server": "localhost", 
+    "version_byte": 0, 
+    "use_https": false, 
+    "blockchain_server": "localhost"
+}
+blockchain headers: /tmp/blockstack-test/spv_headers.dat
+
+atlas node initialization
+
+
+bitcoind connection
+
+working_dir: /tmp/blockstack-test
+[06 Sep 2016 03:48:20] [DEBUG]	[virtualchain-bits]:	Will download SPV headers to /tmp/blockstack-test/spv_headers.dat
+[2016-09-06 03:48:20,327] [DEBUG] [spv:741] (31578) Synchronize testnet 0 to 256
+[2016-09-06 03:48:20,327] [DEBUG] [spv:761] (31578) connect to localhost:18444
+[2016-09-06 03:48:20,328] [DEBUG] [spv:365] (31578) handshake (version 60002)
+[2016-09-06 03:48:20,328] [DEBUG] [spv:368] (31578) send Version
+[2016-09-06 03:48:20,329] [DEBUG] [spv:381] (31578) handle version
+[2016-09-06 03:48:20,329] [DEBUG] [spv:383] (31578) send VerAck
+[2016-09-06 03:48:20,329] [DEBUG] [spv:355] (31578) send getheaders
+[2016-09-06 03:48:20,369] [DEBUG] [spv:400] (31578) handle ping
+[2016-09-06 03:48:20,369] [DEBUG] [spv:403] (31578) send pong
+[2016-09-06 03:48:20,383] [DEBUG] [spv:250] (31578) handle headers (256)
+[2016-09-06 03:48:20,383] [DEBUG] [spv:272] (31578) Receive 256 testnet headers (0 to 255)
+[2016-09-06 03:48:20,406] [DEBUG] [spv:777] (31578) synced headers from -1 to 256 in /tmp/blockstack-test/spv_headers.dat
+[2016-09-06 03:48:20,406] [DEBUG] [blocks:116] (31578) BlockDownloader: fetch blocks 256-256
+[2016-09-06 03:48:20,406] [DEBUG] [blocks:298] (31578) handshake (version 60002)
+[2016-09-06 03:48:20,406] [DEBUG] [blocks:301] (31578) send Version
+[2016-09-06 03:48:20,407] [DEBUG] [blocks:314] (31578) handle version
+[2016-09-06 03:48:20,407] [DEBUG] [blocks:316] (31578) send VerAck
+[2016-09-06 03:48:20,407] [DEBUG] [blocks:332] (31578) send getdata for 256-256 (68522fb9b6a7553bf25edff82dd23ca90eb55de9b6f029158a35a995078143d6-68522fb9b6a7553bf25edff82dd23ca90eb55de9b6f029158a35a995078143d6)
+[2016-09-06 03:48:20,448] [DEBUG] [blocks:357] (31578) handle ping
+[2016-09-06 03:48:20,448] [DEBUG] [blocks:360] (31578) send pong
+[2016-09-06 03:48:20,749] [DEBUG] [blocks:196] (31578) num blocks received = 0, num requested = 1
+[2016-09-06 03:48:20,750] [DEBUG] [blocks:562] (31578) handle block 256 (68522fb9b6a7553bf25edff82dd23ca90eb55de9b6f029158a35a995078143d6)
+[2016-09-06 03:48:20,750] [DEBUG] [blocks:650] (31578) Request 0 nulldata sender TXs
+[2016-09-06 03:48:20,751] [DEBUG] [indexer:1060] (31578) Process block 256 (0 virtual transactions)
+[2016-09-06 03:48:20,751] [DEBUG] [indexer:996] (31578) Compat: no db_scan_block
+[2016-09-06 03:48:20,751] [DEBUG] [virtualchain_hooks:666] (31578) Clear all expired names at 256
+[2016-09-06 03:48:20,751] [DEBUG] [virtualchain_hooks:669] (31578) Clear all expired preorders at 256
+[2016-09-06 03:48:20,751] [DEBUG] [virtualchain_hooks:672] (31578) Clear all expired namespace preorders at 256
+[2016-09-06 03:48:20,752] [DEBUG] [virtualchain_hooks:675] (31578) Clear all expired partial namespace imports at 256
+[2016-09-06 03:48:20,752] [DEBUG] [indexer:803] (31578) Snapshotting block 256
+[2016-09-06 03:48:20,752] [DEBUG] [indexer:724] (31578) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-06 03:48:20,753] [DEBUG] [virtualchain_hooks:708] (31578) Save database /tmp/blockstack-test/blockstack-server.db.tmp
+[2016-09-06 03:48:20,753] [DEBUG] [indexer:414] (31578) Rename 'lastblock': /tmp/blockstack-test/blockstack-server.lastblock.tmp --> /tmp/blockstack-test/blockstack-server.lastblock
+[2016-09-06 03:48:20,753] [DEBUG] [indexer:414] (31578) Rename 'snapshots': /tmp/blockstack-test/blockstack-server.snapshots.tmp --> /tmp/blockstack-test/blockstack-server.snapshots
+[2016-09-06 03:48:20,754] [DEBUG] [indexer:414] (31578) Rename 'db': /tmp/blockstack-test/blockstack-server.db.tmp --> /tmp/blockstack-test/blockstack-server.db
+[2016-09-06 03:48:20,754] [DEBUG] [indexer:1153] (31578) CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 03:48:20,754] [DEBUG] [indexer:1173] (31578) Last block is 256
+[2016-09-06 03:48:20,754] [INFO] [virtualchain:80] (31578) 0 seconds
+[2016-09-06 03:48:20,754] [DEBUG] [virtualchain_hooks:308] (31578) cache consistency: DB was modified; in-RAM copy is stale
+[2016-09-06 03:48:20,754] [INFO] [virtualchain_hooks:346] (31578) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 03:48:20,756] [DEBUG] [indexer:220] (31578) Lastblock: 256 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 03:48:20,766] [DEBUG] [proxy:120] (31578) RPC http://localhost:16264 db_refresh
+[2016-09-06 03:48:20,767] [DEBUG] [blockstackd:314] (31578) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 03:48:20,768] [INFO] [virtualchain_hooks:369] (31578) Invalidating cached blockstack state
+[2016-09-06 03:48:20,768] [DEBUG] [virtualchain_hooks:298] (31578) cache consistency: DB is not in RAM
+[2016-09-06 03:48:20,768] [INFO] [virtualchain_hooks:346] (31578) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 03:48:20,770] [DEBUG] [indexer:220] (31578) Lastblock: 256 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 03:48:20,770] [DEBUG] [blockstackd:321] (31578) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 03:48:20] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 03:48:20,771] [DEBUG] [blockstack-test-scenario:321] (31578) sync atlas node up to 256
+[2016-09-06 03:48:20,771] [DEBUG] [blockstack-test-scenario:326] (31578) Synchronize Atlas DB from 256 to 257
+[2016-09-06 03:48:20,771] [DEBUG] [atlas:669] (31578) Queued 0 zonefiles from 256-256
+[2016-09-06 03:48:20,901] [DEBUG] [atlas:3504] (31578) Stopping Atlas component 'zonefile_pusher'
+[2016-09-06 03:48:21,138] [DEBUG] [atlas:3150] (31578) localhost:16264: AtlasHealthChecker step
+[2016-09-06 03:48:21,138] [DEBUG] [atlas:3168] (31578) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 03:48:21,139] [DEBUG] [atlas:3504] (31578) Stopping Atlas component 'health_checker'
+[2016-09-06 03:48:21,139] [DEBUG] [atlas:3044] (31578) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 03:48:21,140] [DEBUG] [atlas:2970] (31578) Add at most 10 new peers out of 0 options
+[2016-09-06 03:48:21,140] [DEBUG] [atlas:3000] (31578) localhost:16264: revalidate old peers
+[2016-09-06 03:48:21,141] [DEBUG] [atlas:3241] (31578) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 03:48:21,141] [DEBUG] [atlas:3281] (31578) localhost:16264: missing 0 zonefiles
+[2016-09-06 03:48:21,142] [DEBUG] [atlas:3362] (31578) localhost:16264: fetched 0 zonefiles
+[2016-09-06 03:48:22,139] [DEBUG] [atlas:3504] (31578) Stopping Atlas component 'peer_crawler'
+[2016-09-06 03:48:22,141] [DEBUG] [atlas:3504] (31578) Stopping Atlas component 'zonefile_crawler'
+[2016-09-06 03:48:22,142] [DEBUG] [virtualchain_hooks:354] (31578) cache consistency: Using cached blockstack state
+[2016-09-06 03:48:22,227] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (!, 2e68656c2b6c6f)
+[2016-09-06 03:48:22,227] [DEBUG] [virtualchain_hooks:204] (31578) Parse NAMESPACE_READY: 2e68656c2b6c6f
+[2016-09-06 03:48:22,227] [ERROR] [namespaceready:118] (31578) Invalid namespace ID 'hel+lo'
+[2016-09-06 03:48:22,304] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (!, 2e)
+[2016-09-06 03:48:22,304] [ERROR] [virtualchain_hooks:207] (31578) NAMESPACE_READY: invalid length 1
+[2016-09-06 03:48:22,380] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (!, 2e68656c6c6f68656c6c6f68656c6c6f68656c6c6f)
+[2016-09-06 03:48:22,380] [DEBUG] [virtualchain_hooks:204] (31578) Parse NAMESPACE_READY: 2e68656c6c6f68656c6c6f68656c6c6f68656c6c6f
+[2016-09-06 03:48:22,380] [ERROR] [namespaceready:122] (31578) Invalid namespace of length 20
+[2016-09-06 03:48:22,454] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (!, 2e68656c2e6c6f)
+[2016-09-06 03:48:22,454] [DEBUG] [virtualchain_hooks:204] (31578) Parse NAMESPACE_READY: 2e68656c2e6c6f
+[2016-09-06 03:48:22,455] [ERROR] [namespaceready:118] (31578) Invalid namespace ID 'hel.lo'
+[2016-09-06 03:48:22,529] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (!, 2e48656c6c6f)
+[2016-09-06 03:48:22,529] [DEBUG] [virtualchain_hooks:204] (31578) Parse NAMESPACE_READY: 2e48656c6c6f
+[2016-09-06 03:48:22,529] [ERROR] [namespaceready:118] (31578) Invalid namespace ID 'Hello'
+[2016-09-06 03:48:22,603] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (!, 68656c6c6f)
+[2016-09-06 03:48:22,603] [DEBUG] [virtualchain_hooks:204] (31578) Parse NAMESPACE_READY: 68656c6c6f
+[2016-09-06 03:48:22,603] [ERROR] [namespaceready:111] (31578) Missing namespace delimiter .
+[2016-09-06 03:48:22,678] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (!, 2e68656c6c6f)
+[2016-09-06 03:48:22,678] [DEBUG] [virtualchain_hooks:204] (31578) Parse NAMESPACE_READY: 2e68656c6c6f
+[2016-09-06 03:48:22,753] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (!, )
+[2016-09-06 03:48:22,753] [ERROR] [virtualchain_hooks:207] (31578) NAMESPACE_READY: invalid length 0
+[2016-09-06 03:48:22,829] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (#, 111111111111111111111111111111111111111111)
+[2016-09-06 03:48:22,829] [ERROR] [virtualchain_hooks:214] (31578) ANNOUNCE: invalid length 21
+[2016-09-06 03:48:22,904] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (#, 1111111111111111111111111111111111111111)
+[2016-09-06 03:48:22,904] [DEBUG] [virtualchain_hooks:211] (31578) Parse ANNOUNCE: 1111111111111111111111111111111111111111
+[2016-09-06 03:48:22,978] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (#, 11111111111111111111111111111111111111)
+[2016-09-06 03:48:22,978] [ERROR] [virtualchain_hooks:214] (31578) ANNOUNCE: invalid length 19
+[2016-09-06 03:48:23,052] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (&, 111111110203404142434445464715666668656c2b6c6f)
+[2016-09-06 03:48:23,053] [DEBUG] [virtualchain_hooks:197] (31578) Parse NAMESPACE_REVEAL: 111111110203404142434445464715666668656c2b6c6f
+[2016-09-06 03:48:23,053] [ERROR] [namespacereveal:316] (31578) Invalid namespace parameters
+[2016-09-06 03:48:23,128] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (&, 11111111020340414243444546471566662e)
+[2016-09-06 03:48:23,128] [DEBUG] [virtualchain_hooks:197] (31578) Parse NAMESPACE_REVEAL: 11111111020340414243444546471566662e
+[2016-09-06 03:48:23,128] [ERROR] [namespacereveal:316] (31578) Invalid namespace parameters
+[2016-09-06 03:48:23,203] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (&, 111111110203404142434445464715666668656c6c6f68656c6c6f68656c6c6f68656c6c6f)
+[2016-09-06 03:48:23,203] [DEBUG] [virtualchain_hooks:197] (31578) Parse NAMESPACE_REVEAL: 111111110203404142434445464715666668656c6c6f68656c6c6f68656c6c6f68656c6c6f
+[2016-09-06 03:48:23,203] [ERROR] [namespacereveal:316] (31578) Invalid namespace parameters
+[2016-09-06 03:48:23,278] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (&, 111111110203404142434445464715666648652e6c2e6c6f)
+[2016-09-06 03:48:23,278] [DEBUG] [virtualchain_hooks:197] (31578) Parse NAMESPACE_REVEAL: 111111110203404142434445464715666648652e6c2e6c6f
+[2016-09-06 03:48:23,278] [ERROR] [namespacereveal:299] (31578) He.l.lo must only contain characters in the b40 char set
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/blockstack_client-0.14.0-py2.7.egg/blockstack_client/operations/namespacereveal.py", line 297, in parse
+    namespace_id_hash = hash_name( namespace_id, sender, register_addr=recipient_address )
+  File "/usr/local/lib/python2.7/dist-packages/blockstack_client-0.14.0-py2.7.egg/blockstack_client/scripts.py", line 130, in hash_name
+    bin_name = b40_to_bin(name)
+  File "/usr/local/lib/python2.7/dist-packages/blockstack_client-0.14.0-py2.7.egg/blockstack_client/b40.py", line 40, in b40_to_bin
+    raise ValueError('%s must only contain characters in the b40 char set' % s)
+ValueError: He.l.lo must only contain characters in the b40 char set
+[2016-09-06 03:48:23,279] [ERROR] [namespacereveal:300] (31578) Invalid namespace ID and/or sender
+[2016-09-06 03:48:23,354] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (&, 1111111102034041424344454647156666)
+[2016-09-06 03:48:23,354] [ERROR] [virtualchain_hooks:200] (31578) NAMESPACE_REVEAL: invalid length 17
+[2016-09-06 03:48:23,430] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (&, 111111110203404142434445464715666668656c6c6f)
+[2016-09-06 03:48:23,430] [DEBUG] [virtualchain_hooks:197] (31578) Parse NAMESPACE_REVEAL: 111111110203404142434445464715666668656c6c6f
+[2016-09-06 03:48:23,505] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (&, 111111110203404142434445464715666648656c6c6f)
+[2016-09-06 03:48:23,505] [DEBUG] [virtualchain_hooks:197] (31578) Parse NAMESPACE_REVEAL: 111111110203404142434445464715666648656c6c6f
+[2016-09-06 03:48:23,505] [ERROR] [namespacereveal:299] (31578) Hello must only contain characters in the b40 char set
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/blockstack_client-0.14.0-py2.7.egg/blockstack_client/operations/namespacereveal.py", line 297, in parse
+    namespace_id_hash = hash_name( namespace_id, sender, register_addr=recipient_address )
+  File "/usr/local/lib/python2.7/dist-packages/blockstack_client-0.14.0-py2.7.egg/blockstack_client/scripts.py", line 130, in hash_name
+    bin_name = b40_to_bin(name)
+  File "/usr/local/lib/python2.7/dist-packages/blockstack_client-0.14.0-py2.7.egg/blockstack_client/b40.py", line 40, in b40_to_bin
+    raise ValueError('%s must only contain characters in the b40 char set' % s)
+ValueError: Hello must only contain characters in the b40 char set
+[2016-09-06 03:48:23,505] [ERROR] [namespacereveal:300] (31578) Invalid namespace ID and/or sender
+[2016-09-06 03:48:23,580] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (+, 111111111111111111111111111111112222222222222222222222222222222222222222)
+[2016-09-06 03:48:23,581] [DEBUG] [virtualchain_hooks:162] (31578) Parse NAME_UPDATE: 111111111111111111111111111111112222222222222222222222222222222222222222
+[2016-09-06 03:48:23,656] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (+, 1111111111111111111111111111111133333333333333333333333333333333333333)
+[2016-09-06 03:48:23,656] [ERROR] [virtualchain_hooks:165] (31578) NAME_UPDATE: invalid length 35
+[2016-09-06 03:48:23,731] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (+, 11111111111111111111111111111111222222222222222222222222222222222222222200)
+[2016-09-06 03:48:23,731] [DEBUG] [virtualchain_hooks:162] (31578) Parse NAME_UPDATE: 11111111111111111111111111111111222222222222222222222222222222222222222200
+[2016-09-06 03:48:23,731] [ERROR] [update:152] (31578) Invalid update length 37
+[2016-09-06 03:48:23,809] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (*, 111111111111111111111111111111111111111122222222222222222222222222222222)
+[2016-09-06 03:48:23,809] [DEBUG] [virtualchain_hooks:190] (31578) Parse NAMESPACE_PREORDER: 111111111111111111111111111111111111111122222222222222222222222222222222
+[2016-09-06 03:48:23,885] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (*, 1111111111111111111111111111111111111111333333333333333333333333333333)
+[2016-09-06 03:48:23,885] [ERROR] [virtualchain_hooks:193] (31578) NAMESPACE_PREORDER: invalid length 35
+[2016-09-06 03:48:23,959] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (*, 11111111111111111111111111111111111111112222222222222222222222222222222200)
+[2016-09-06 03:48:23,959] [DEBUG] [virtualchain_hooks:190] (31578) Parse NAMESPACE_PREORDER: 11111111111111111111111111111111111111112222222222222222222222222222222200
+[2016-09-06 03:48:23,959] [ERROR] [namespacepreorder:159] (31578) Invalid namespace preorder payload length 37
+[2016-09-06 03:48:24,034] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (~, 68656c6c6f2e7465732e74)
+[2016-09-06 03:48:24,035] [DEBUG] [virtualchain_hooks:176] (31578) Parse NAME_REVOKE: 68656c6c6f2e7465732e74
+[2016-09-06 03:48:24,113] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (~, 68656c6c6f2e)
+[2016-09-06 03:48:24,113] [DEBUG] [virtualchain_hooks:176] (31578) Parse NAME_REVOKE: 68656c6c6f2e
+[2016-09-06 03:48:24,189] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (~, 68656c2b6c6f2e74657374)
+[2016-09-06 03:48:24,189] [DEBUG] [virtualchain_hooks:176] (31578) Parse NAME_REVOKE: 68656c2b6c6f2e74657374
+[2016-09-06 03:48:24,264] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (~, 68656c6c6f68656c6c6f68656c6c6f68656c6c6f68656c6c6f68656c6c6f68656c2e74657374)
+[2016-09-06 03:48:24,264] [ERROR] [virtualchain_hooks:143] (31578) Data too long: 38
+[2016-09-06 03:48:24,339] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (~, 68656c6c6f2e74657374)
+[2016-09-06 03:48:24,339] [DEBUG] [virtualchain_hooks:176] (31578) Parse NAME_REVOKE: 68656c6c6f2e74657374
+[2016-09-06 03:48:24,413] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (~, )
+[2016-09-06 03:48:24,413] [ERROR] [virtualchain_hooks:179] (31578) NAME_REVOKE: invalid length 0
+[2016-09-06 03:48:24,488] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (~, 68656c6c6f)
+[2016-09-06 03:48:24,488] [DEBUG] [virtualchain_hooks:176] (31578) Parse NAME_REVOKE: 68656c6c6f
+[2016-09-06 03:48:24,563] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (~, 48656c6c6f2e74657374)
+[2016-09-06 03:48:24,563] [DEBUG] [virtualchain_hooks:176] (31578) Parse NAME_REVOKE: 48656c6c6f2e74657374
+[2016-09-06 03:48:24,638] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (;, 68656c6c6f2e7465732e74)
+[2016-09-06 03:48:24,638] [DEBUG] [virtualchain_hooks:183] (31578) Parse NAME_IMPORT: 68656c6c6f2e7465732e74
+[2016-09-06 03:48:24,713] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (;, 68656c6c6f2e)
+[2016-09-06 03:48:24,713] [DEBUG] [virtualchain_hooks:183] (31578) Parse NAME_IMPORT: 68656c6c6f2e
+[2016-09-06 03:48:24,791] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (;, 68656c2b6c6f2e74657374)
+[2016-09-06 03:48:24,792] [DEBUG] [virtualchain_hooks:183] (31578) Parse NAME_IMPORT: 68656c2b6c6f2e74657374
+[2016-09-06 03:48:24,867] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (;, 68656c6c6f68656c6c6f68656c6c6f68656c6c6f68656c6c6f68656c6c6f68656c2e74657374)
+[2016-09-06 03:48:24,867] [ERROR] [virtualchain_hooks:143] (31578) Data too long: 38
+[2016-09-06 03:48:24,942] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (;, 68656c6c6f2e74657374)
+[2016-09-06 03:48:24,942] [DEBUG] [virtualchain_hooks:183] (31578) Parse NAME_IMPORT: 68656c6c6f2e74657374
+[2016-09-06 03:48:25,016] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (;, )
+[2016-09-06 03:48:25,017] [ERROR] [virtualchain_hooks:186] (31578) NAME_IMPORT: invalid length 0
+[2016-09-06 03:48:25,091] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (;, 68656c6c6f)
+[2016-09-06 03:48:25,091] [DEBUG] [virtualchain_hooks:183] (31578) Parse NAME_IMPORT: 68656c6c6f
+[2016-09-06 03:48:25,166] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (;, 48656c6c6f2e74657374)
+[2016-09-06 03:48:25,166] [DEBUG] [virtualchain_hooks:183] (31578) Parse NAME_IMPORT: 48656c6c6f2e74657374
+[2016-09-06 03:48:25,241] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (:, 68656c6c6f2e7465732e74)
+[2016-09-06 03:48:25,241] [DEBUG] [virtualchain_hooks:155] (31578) Parse NAME_REGISTRATION: 68656c6c6f2e7465732e74
+[2016-09-06 03:48:25,315] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (:, 68656c6c6f2e)
+[2016-09-06 03:48:25,315] [DEBUG] [virtualchain_hooks:155] (31578) Parse NAME_REGISTRATION: 68656c6c6f2e
+[2016-09-06 03:48:25,390] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (:, 68656c2b6c6f2e74657374)
+[2016-09-06 03:48:25,390] [DEBUG] [virtualchain_hooks:155] (31578) Parse NAME_REGISTRATION: 68656c2b6c6f2e74657374
+[2016-09-06 03:48:25,466] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (:, 68656c6c6f68656c6c6f68656c6c6f68656c6c6f68656c6c6f68656c6c6f68656c2e74657374)
+[2016-09-06 03:48:25,466] [ERROR] [virtualchain_hooks:143] (31578) Data too long: 38
+[2016-09-06 03:48:25,541] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (:, 68656c6c6f2e74657374)
+[2016-09-06 03:48:25,541] [DEBUG] [virtualchain_hooks:155] (31578) Parse NAME_REGISTRATION: 68656c6c6f2e74657374
+[2016-09-06 03:48:25,615] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (:, )
+[2016-09-06 03:48:25,616] [ERROR] [virtualchain_hooks:158] (31578) NAME_REGISTRATION: invalid length 0
+[2016-09-06 03:48:25,690] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (:, 68656c6c6f)
+[2016-09-06 03:48:25,690] [DEBUG] [virtualchain_hooks:155] (31578) Parse NAME_REGISTRATION: 68656c6c6f
+[2016-09-06 03:48:25,766] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (:, 48656c6c6f2e74657374)
+[2016-09-06 03:48:25,766] [DEBUG] [virtualchain_hooks:155] (31578) Parse NAME_REGISTRATION: 48656c6c6f2e74657374
+[2016-09-06 03:48:25,849] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (?, 111111111111111111111111111111111111111122222222222222222222222222222222)
+[2016-09-06 03:48:25,849] [DEBUG] [virtualchain_hooks:148] (31578) Parse NAME_PREORDER: 111111111111111111111111111111111111111122222222222222222222222222222222
+[2016-09-06 03:48:25,924] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (?, 1111111111111111111111111111111111111111333333333333333333333333333333)
+[2016-09-06 03:48:25,924] [ERROR] [virtualchain_hooks:151] (31578) NAME_PREORDER: invalid length 35
+[2016-09-06 03:48:25,999] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (?, 11111111111111111111111111111111111111112222222222222222222222222222222200)
+[2016-09-06 03:48:25,999] [DEBUG] [virtualchain_hooks:148] (31578) Parse NAME_PREORDER: 11111111111111111111111111111111111111112222222222222222222222222222222200
+[2016-09-06 03:48:26,074] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (>, 7e111111111111111111111111111111112222222222222222222222222222222200)
+[2016-09-06 03:48:26,074] [DEBUG] [virtualchain_hooks:169] (31578) Parse NAME_TRANSFER: 7e111111111111111111111111111111112222222222222222222222222222222200
+[2016-09-06 03:48:26,074] [ERROR] [transfer:153] (31578) Invalid transfer payload length 34
+[2016-09-06 03:48:26,152] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (>, 3e11111111111111111111111111111111333333333333333333333333333333)
+[2016-09-06 03:48:26,152] [DEBUG] [virtualchain_hooks:169] (31578) Parse NAME_TRANSFER: 3e11111111111111111111111111111111333333333333333333333333333333
+[2016-09-06 03:48:26,152] [ERROR] [transfer:153] (31578) Invalid transfer payload length 32
+[2016-09-06 03:48:26,227] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (>, 211111111111111111111111111111111122222222222222222222222222222222)
+[2016-09-06 03:48:26,227] [DEBUG] [virtualchain_hooks:169] (31578) Parse NAME_TRANSFER: 211111111111111111111111111111111122222222222222222222222222222222
+[2016-09-06 03:48:26,227] [ERROR] [transfer:161] (31578) Invalid disposition character
+[2016-09-06 03:48:26,301] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (>, 3e111111111111111111111111111111112222222222222222222222222222222200)
+[2016-09-06 03:48:26,301] [DEBUG] [virtualchain_hooks:169] (31578) Parse NAME_TRANSFER: 3e111111111111111111111111111111112222222222222222222222222222222200
+[2016-09-06 03:48:26,301] [ERROR] [transfer:153] (31578) Invalid transfer payload length 34
+[2016-09-06 03:48:26,376] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (>, 7e1111111111111111111111111111111122222222222222222222222222222222)
+[2016-09-06 03:48:26,376] [DEBUG] [virtualchain_hooks:169] (31578) Parse NAME_TRANSFER: 7e1111111111111111111111111111111122222222222222222222222222222222
+[2016-09-06 03:48:26,451] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (>, 7e11111111111111111111111111111111333333333333333333333333333333)
+[2016-09-06 03:48:26,451] [DEBUG] [virtualchain_hooks:169] (31578) Parse NAME_TRANSFER: 7e11111111111111111111111111111111333333333333333333333333333333
+[2016-09-06 03:48:26,451] [ERROR] [transfer:153] (31578) Invalid transfer payload length 32
+[2016-09-06 03:48:26,527] [WARNING] [virtualchain_hooks:424] (31578) No public key found for (>, 3e1111111111111111111111111111111122222222222222222222222222222222)
+[2016-09-06 03:48:26,527] [DEBUG] [virtualchain_hooks:169] (31578) Parse NAME_TRANSFER: 3e1111111111111111111111111111111122222222222222222222222222222222
+[2016-09-06 03:48:26,527] [INFO] [blockstack-test-scenario:495] (31578) Scenario checks passed; verifying history
+[2016-09-06 03:48:26,527] [DEBUG] [virtualchain_hooks:354] (31578) cache consistency: Using cached blockstack state
+[2016-09-06 03:48:26,527] [DEBUG] [blockstackd:2183] (31578) Rebuilding database from 256 to 256
+[2016-09-06 03:48:26,528] [DEBUG] [indexer:220] (31578) Lastblock: 255 (/tmp/blockstack-test-databases-buPuJT/work.256/blockstack-server.lastblock)
+[2016-09-06 03:48:26,528] [WARNING] [namedb:148] (31578) Failed to open '/tmp/blockstack-test-databases-buPuJT/work.256/blockstack.db.256'; creating a new database
+[2016-09-06 03:48:26,528] [DEBUG] [blockstackd:2195] (31578) Working DB: /tmp/blockstack-test-databases-buPuJT/work.256/blockstack.db.256
+[2016-09-06 03:48:26,528] [DEBUG] [blockstackd:2196] (31578) Untrusted DB: /tmp/blockstack-test-databases-buPuJT/blockstack.db.256
+[2016-09-06 03:48:26,529] [DEBUG] [indexer:1060] (31578) Process block 256 (0 virtual transactions)
+[2016-09-06 03:48:26,529] [DEBUG] [indexer:996] (31578) Compat: no db_scan_block
+[2016-09-06 03:48:26,529] [DEBUG] [virtualchain_hooks:666] (31578) Clear all expired names at 256
+[2016-09-06 03:48:26,529] [DEBUG] [virtualchain_hooks:669] (31578) Clear all expired preorders at 256
+[2016-09-06 03:48:26,529] [DEBUG] [virtualchain_hooks:672] (31578) Clear all expired namespace preorders at 256
+[2016-09-06 03:48:26,529] [DEBUG] [virtualchain_hooks:675] (31578) Clear all expired partial namespace imports at 256
+[2016-09-06 03:48:26,529] [DEBUG] [indexer:803] (31578) Snapshotting block 256
+[2016-09-06 03:48:26,529] [DEBUG] [indexer:724] (31578) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-06 03:48:26,529] [DEBUG] [virtualchain_hooks:708] (31578) Save database /tmp/blockstack-test-databases-buPuJT/work.256/blockstack-server.db.tmp
+[2016-09-06 03:48:26,529] [DEBUG] [indexer:414] (31578) Rename 'lastblock': /tmp/blockstack-test-databases-buPuJT/work.256/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-buPuJT/work.256/blockstack-server.lastblock
+[2016-09-06 03:48:26,530] [DEBUG] [indexer:414] (31578) Rename 'snapshots': /tmp/blockstack-test-databases-buPuJT/work.256/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-buPuJT/work.256/blockstack-server.snapshots
+[2016-09-06 03:48:26,530] [DEBUG] [indexer:414] (31578) Rename 'db': /tmp/blockstack-test-databases-buPuJT/work.256/blockstack-server.db.tmp --> /tmp/blockstack-test-databases-buPuJT/work.256/blockstack-server.db
+[2016-09-06 03:48:26,530] [DEBUG] [blockstackd:2207] (31578) VERIFY CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 03:48:26,530] [DEBUG] [indexer:220] (31578) Lastblock: 256 (/tmp/blockstack-test-databases-buPuJT/work.256/blockstack-server.lastblock)
+[2016-09-06 03:48:26,531] [INFO] [blockstack-test-scenario:506] (31578) History check passes!
+[2016-09-06 03:48:26,537] [DEBUG] [proxy:120] (31578) RPC http://localhost:16264 db_refresh
+[2016-09-06 03:48:26,538] [DEBUG] [blockstackd:314] (31578) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 03:48:26,538] [INFO] [virtualchain_hooks:369] (31578) Invalidating cached blockstack state
+[2016-09-06 03:48:26,538] [DEBUG] [virtualchain_hooks:298] (31578) cache consistency: DB is not in RAM
+[2016-09-06 03:48:26,538] [INFO] [virtualchain_hooks:346] (31578) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 03:48:26,539] [DEBUG] [indexer:220] (31578) Lastblock: 256 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 03:48:26,539] [DEBUG] [blockstackd:321] (31578) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 03:48:26] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 03:48:26,540] [DEBUG] [virtualchain_hooks:354] (31578) cache consistency: Using cached blockstack state
+[2016-09-06 03:48:26,548] [DEBUG] [testlib:831] (31578) SNV verify 0 names
+[2016-09-06 03:48:26,548] [INFO] [blockstack-test-scenario:521] (31578) SNV check passes!
+[2016-09-06 03:48:26,548] [DEBUG] [virtualchain_hooks:354] (31578) cache consistency: Using cached blockstack state
+[2016-09-06 03:48:26,548] [INFO] [blockstack-test-scenario:534] (31578) Atlas zonefile checks pass!
+[2016-09-06 03:48:26,549] [DEBUG] [blockstackd:1307] (31578) Shutting down RPC
+[2016-09-06 03:48:27,041] [DEBUG] [blockstackd:1310] (31578) RPC joined
+Bitcoin server stopping
+Not running (/tmp/blockstack-test/client/api_endpoint.pid)
+test !
+test #
+test &
+test +
+test *
+test ~
+test ;
+test :
+test ?
+test >
+
+
+verify 256 - 257 (/tmp/blockstack-test-databases-buPuJT/blockstack.db.256), expect 2a9148d8b13939723d2aca16c75c6d68
+
+
+SUCCESS blockstack_integration_tests.scenarios.nameop_parsing
+Not running (/tmp/blockstack-test/client/api_endpoint.pid)
+Bitcoin server stopping
+Bitcoin server starting

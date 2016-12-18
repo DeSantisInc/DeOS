@@ -1,0 +1,1557 @@
+[2016-09-05 20:12:22,852] [DEBUG] [spv:110] (21718) Using testnet/regtest
+[2016-09-05 20:12:23,032] [WARNING] [config:96] (21718) FIRST_BLOCK_MAINNET = 256
+[2016-09-05 20:12:23,032] [WARNING] [config:104] (21718) TX_MIN_CONFIRMATIONS = 0
+[2016-09-05 20:12:23,032] [WARNING] [config:273] (21718) CONFIG_PATH = /tmp/blockstack-test/client/client.ini
+WARN (21718): in test environment
+[2016-09-05 20:12:23,051] [WARNING] [config:328] (21718) NUM_CONFIRMATIONS = 0
+[2016-09-05 20:12:23,128] [DEBUG] [blockstack-test-scenario:576] (21718) Starting up bitcoind in regtest mode
+Bitcoin server starting
+[2016-09-05 20:12:23,140] [DEBUG] [blockstack-test-scenario:583] (21718) Waiting for bitcoind to start up
+[2016-09-05 20:12:24,141] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:25,146] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:26,150] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:27,154] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:28,158] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:29,161] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:30,164] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:30,351] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:30,711] [DEBUG] [blockstack-test-scenario:606] (21718) bitcoind -regtest is ready
+[2016-09-05 20:12:31,026] [DEBUG] [testlib:71] (21718) Wallet 92RVyTBdj4xC2M7KQo2kea6xwtHzomD136BM9eh6LKkonLkWaR4 (mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC)
+[2016-09-05 20:12:31,367] [DEBUG] [testlib:71] (21718) Wallet 934UTTHhRoBFdv4sj3Jt2QASm7GaJb3VxM8VcoeoXKmHSkUw2P4 (mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq)
+[2016-09-05 20:12:31,686] [DEBUG] [testlib:71] (21718) Wallet 93SiL3Qwt9p999a8w8c9eH9AmhcXiz98NNbaFBbVoPQuvpcsQpL (mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx)
+[2016-09-05 20:12:32,008] [DEBUG] [testlib:71] (21718) Wallet 92g8TYFgxoytqWG7s5VPSZ4uKva7kXUbDBXkVooKgZRGJ3vKUC8 (n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4)
+[2016-09-05 20:12:32,317] [DEBUG] [testlib:71] (21718) Wallet 931TJBFPbQvb6yvVjgDB4qKsHU7ArBFYdYaQmymKgNgEideRBtz (mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed)
+[2016-09-05 20:12:32,805] [DEBUG] [testlib:84] (21718) Multisig wallet 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz
+[2016-09-05 20:12:32,805] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:33,125] [DEBUG] [blockstack-test-scenario:627] (21718) Fill mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC with 50
+[2016-09-05 20:12:33,508] [DEBUG] [blockstack-test-scenario:627] (21718) Fill mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq with 50
+[2016-09-05 20:12:34,559] [DEBUG] [blockstack-test-scenario:627] (21718) Fill mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx with 50
+[2016-09-05 20:12:34,958] [DEBUG] [blockstack-test-scenario:627] (21718) Fill n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4 with 50
+[2016-09-05 20:12:35,344] [DEBUG] [blockstack-test-scenario:627] (21718) Fill mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed with 50
+[2016-09-05 20:12:37,321] [DEBUG] [blockstack-test-scenario:645] (21718) Fill 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz with 250
+
+Address mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC loaded with 5000000000 satoshis
+Address mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq loaded with 5000000000 satoshis
+Address mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx loaded with 5000000000 satoshis
+Address n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4 loaded with 5000000000 satoshis
+Address mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed loaded with 5000000000 satoshis
+Address 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz loaded with 25000000000 satoshis
+
+[2016-09-05 20:12:37,981] [DEBUG] [config:804] (21718) Load config from '/tmp/blockstack-test/blockstack-server.ini'
+Saving configuration to /tmp/blockstack-test/blockstack-server.ini
+Saving configuration to /tmp/blockstack-test/client/client.ini
+[2016-09-05 20:12:38,034] [DEBUG] [namedb:96] (21718) Initialize database from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-05 20:12:39,110] [DEBUG] [atlas:1089] (21718) Initializing Atlas DB at /tmp/blockstack-test/atlas.db
+[2016-09-05 20:12:39,258] [DEBUG] [atlas:1100] (21718) Queuing all zonefiles
+[2016-09-05 20:12:39,259] [DEBUG] [atlas:669] (21718) Queued 0 zonefiles from 256-255
+[2016-09-05 20:12:39,259] [DEBUG] [atlas:1103] (21718) Adding seed peers
+[2016-09-05 20:12:39,259] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:39,260] [DEBUG] [atlas:1062] (21718) Atlas DB exists at /tmp/blockstack-test/atlas.db
+[2016-09-05 20:12:39,260] [DEBUG] [atlas:1068] (21718) Synchronize zonefiles from 0 to 255
+[2016-09-05 20:12:39,261] [DEBUG] [db:1627] (21718) 0 name-preorder states at 0
+[2016-09-05 20:12:39,262] [DEBUG] [db:1638] (21718) 0 name-change states at 0
+[2016-09-05 20:12:39,262] [DEBUG] [db:1655] (21718) 0 preorders created at 0
+[2016-09-05 20:12:39,263] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 0
+[2016-09-05 20:12:39,263] [DEBUG] [db:1676] (21718) 0 namespace-change states at 0
+[2016-09-05 20:12:39,263] [DEBUG] [db:1627] (21718) 0 name-preorder states at 1
+[2016-09-05 20:12:39,263] [DEBUG] [db:1638] (21718) 0 name-change states at 1
+[2016-09-05 20:12:39,264] [DEBUG] [db:1655] (21718) 0 preorders created at 1
+[2016-09-05 20:12:39,264] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 1
+[2016-09-05 20:12:39,264] [DEBUG] [db:1676] (21718) 0 namespace-change states at 1
+[2016-09-05 20:12:39,264] [DEBUG] [db:1627] (21718) 0 name-preorder states at 2
+[2016-09-05 20:12:39,264] [DEBUG] [db:1638] (21718) 0 name-change states at 2
+[2016-09-05 20:12:39,265] [DEBUG] [db:1655] (21718) 0 preorders created at 2
+[2016-09-05 20:12:39,265] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 2
+[2016-09-05 20:12:39,265] [DEBUG] [db:1676] (21718) 0 namespace-change states at 2
+[2016-09-05 20:12:39,265] [DEBUG] [db:1627] (21718) 0 name-preorder states at 3
+[2016-09-05 20:12:39,265] [DEBUG] [db:1638] (21718) 0 name-change states at 3
+[2016-09-05 20:12:39,266] [DEBUG] [db:1655] (21718) 0 preorders created at 3
+[2016-09-05 20:12:39,266] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 3
+[2016-09-05 20:12:39,266] [DEBUG] [db:1676] (21718) 0 namespace-change states at 3
+[2016-09-05 20:12:39,266] [DEBUG] [db:1627] (21718) 0 name-preorder states at 4
+[2016-09-05 20:12:39,266] [DEBUG] [db:1638] (21718) 0 name-change states at 4
+[2016-09-05 20:12:39,267] [DEBUG] [db:1655] (21718) 0 preorders created at 4
+[2016-09-05 20:12:39,267] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 4
+[2016-09-05 20:12:39,267] [DEBUG] [db:1676] (21718) 0 namespace-change states at 4
+[2016-09-05 20:12:39,267] [DEBUG] [db:1627] (21718) 0 name-preorder states at 5
+[2016-09-05 20:12:39,268] [DEBUG] [db:1638] (21718) 0 name-change states at 5
+[2016-09-05 20:12:39,268] [DEBUG] [db:1655] (21718) 0 preorders created at 5
+[2016-09-05 20:12:39,268] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 5
+[2016-09-05 20:12:39,268] [DEBUG] [db:1676] (21718) 0 namespace-change states at 5
+[2016-09-05 20:12:39,268] [DEBUG] [db:1627] (21718) 0 name-preorder states at 6
+[2016-09-05 20:12:39,268] [DEBUG] [db:1638] (21718) 0 name-change states at 6
+[2016-09-05 20:12:39,268] [DEBUG] [db:1655] (21718) 0 preorders created at 6
+[2016-09-05 20:12:39,268] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 6
+[2016-09-05 20:12:39,268] [DEBUG] [db:1676] (21718) 0 namespace-change states at 6
+[2016-09-05 20:12:39,269] [DEBUG] [db:1627] (21718) 0 name-preorder states at 7
+[2016-09-05 20:12:39,269] [DEBUG] [db:1638] (21718) 0 name-change states at 7
+[2016-09-05 20:12:39,269] [DEBUG] [db:1655] (21718) 0 preorders created at 7
+[2016-09-05 20:12:39,269] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 7
+[2016-09-05 20:12:39,269] [DEBUG] [db:1676] (21718) 0 namespace-change states at 7
+[2016-09-05 20:12:39,269] [DEBUG] [db:1627] (21718) 0 name-preorder states at 8
+[2016-09-05 20:12:39,269] [DEBUG] [db:1638] (21718) 0 name-change states at 8
+[2016-09-05 20:12:39,269] [DEBUG] [db:1655] (21718) 0 preorders created at 8
+[2016-09-05 20:12:39,269] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 8
+[2016-09-05 20:12:39,270] [DEBUG] [db:1676] (21718) 0 namespace-change states at 8
+[2016-09-05 20:12:39,270] [DEBUG] [db:1627] (21718) 0 name-preorder states at 9
+[2016-09-05 20:12:39,270] [DEBUG] [db:1638] (21718) 0 name-change states at 9
+[2016-09-05 20:12:39,270] [DEBUG] [db:1655] (21718) 0 preorders created at 9
+[2016-09-05 20:12:39,270] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 9
+[2016-09-05 20:12:39,270] [DEBUG] [db:1676] (21718) 0 namespace-change states at 9
+[2016-09-05 20:12:39,270] [DEBUG] [db:1627] (21718) 0 name-preorder states at 10
+[2016-09-05 20:12:39,270] [DEBUG] [db:1638] (21718) 0 name-change states at 10
+[2016-09-05 20:12:39,270] [DEBUG] [db:1655] (21718) 0 preorders created at 10
+[2016-09-05 20:12:39,271] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 10
+[2016-09-05 20:12:39,271] [DEBUG] [db:1676] (21718) 0 namespace-change states at 10
+[2016-09-05 20:12:39,271] [DEBUG] [db:1627] (21718) 0 name-preorder states at 11
+[2016-09-05 20:12:39,271] [DEBUG] [db:1638] (21718) 0 name-change states at 11
+[2016-09-05 20:12:39,271] [DEBUG] [db:1655] (21718) 0 preorders created at 11
+[2016-09-05 20:12:39,271] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 11
+[2016-09-05 20:12:39,271] [DEBUG] [db:1676] (21718) 0 namespace-change states at 11
+[2016-09-05 20:12:39,271] [DEBUG] [db:1627] (21718) 0 name-preorder states at 12
+[2016-09-05 20:12:39,272] [DEBUG] [db:1638] (21718) 0 name-change states at 12
+[2016-09-05 20:12:39,272] [DEBUG] [db:1655] (21718) 0 preorders created at 12
+[2016-09-05 20:12:39,272] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 12
+[2016-09-05 20:12:39,272] [DEBUG] [db:1676] (21718) 0 namespace-change states at 12
+[2016-09-05 20:12:39,272] [DEBUG] [db:1627] (21718) 0 name-preorder states at 13
+[2016-09-05 20:12:39,272] [DEBUG] [db:1638] (21718) 0 name-change states at 13
+[2016-09-05 20:12:39,272] [DEBUG] [db:1655] (21718) 0 preorders created at 13
+[2016-09-05 20:12:39,272] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 13
+[2016-09-05 20:12:39,272] [DEBUG] [db:1676] (21718) 0 namespace-change states at 13
+[2016-09-05 20:12:39,273] [DEBUG] [db:1627] (21718) 0 name-preorder states at 14
+[2016-09-05 20:12:39,273] [DEBUG] [db:1638] (21718) 0 name-change states at 14
+[2016-09-05 20:12:39,273] [DEBUG] [db:1655] (21718) 0 preorders created at 14
+[2016-09-05 20:12:39,273] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 14
+[2016-09-05 20:12:39,273] [DEBUG] [db:1676] (21718) 0 namespace-change states at 14
+[2016-09-05 20:12:39,273] [DEBUG] [db:1627] (21718) 0 name-preorder states at 15
+[2016-09-05 20:12:39,273] [DEBUG] [db:1638] (21718) 0 name-change states at 15
+[2016-09-05 20:12:39,273] [DEBUG] [db:1655] (21718) 0 preorders created at 15
+[2016-09-05 20:12:39,273] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 15
+[2016-09-05 20:12:39,274] [DEBUG] [db:1676] (21718) 0 namespace-change states at 15
+[2016-09-05 20:12:39,274] [DEBUG] [db:1627] (21718) 0 name-preorder states at 16
+[2016-09-05 20:12:39,274] [DEBUG] [db:1638] (21718) 0 name-change states at 16
+[2016-09-05 20:12:39,274] [DEBUG] [db:1655] (21718) 0 preorders created at 16
+[2016-09-05 20:12:39,274] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 16
+[2016-09-05 20:12:39,274] [DEBUG] [db:1676] (21718) 0 namespace-change states at 16
+[2016-09-05 20:12:39,274] [DEBUG] [db:1627] (21718) 0 name-preorder states at 17
+[2016-09-05 20:12:39,274] [DEBUG] [db:1638] (21718) 0 name-change states at 17
+[2016-09-05 20:12:39,274] [DEBUG] [db:1655] (21718) 0 preorders created at 17
+[2016-09-05 20:12:39,275] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 17
+[2016-09-05 20:12:39,275] [DEBUG] [db:1676] (21718) 0 namespace-change states at 17
+[2016-09-05 20:12:39,275] [DEBUG] [db:1627] (21718) 0 name-preorder states at 18
+[2016-09-05 20:12:39,275] [DEBUG] [db:1638] (21718) 0 name-change states at 18
+[2016-09-05 20:12:39,275] [DEBUG] [db:1655] (21718) 0 preorders created at 18
+[2016-09-05 20:12:39,275] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 18
+[2016-09-05 20:12:39,275] [DEBUG] [db:1676] (21718) 0 namespace-change states at 18
+[2016-09-05 20:12:39,275] [DEBUG] [db:1627] (21718) 0 name-preorder states at 19
+[2016-09-05 20:12:39,276] [DEBUG] [db:1638] (21718) 0 name-change states at 19
+[2016-09-05 20:12:39,276] [DEBUG] [db:1655] (21718) 0 preorders created at 19
+[2016-09-05 20:12:39,276] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 19
+[2016-09-05 20:12:39,276] [DEBUG] [db:1676] (21718) 0 namespace-change states at 19
+[2016-09-05 20:12:39,276] [DEBUG] [db:1627] (21718) 0 name-preorder states at 20
+[2016-09-05 20:12:39,276] [DEBUG] [db:1638] (21718) 0 name-change states at 20
+[2016-09-05 20:12:39,276] [DEBUG] [db:1655] (21718) 0 preorders created at 20
+[2016-09-05 20:12:39,276] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 20
+[2016-09-05 20:12:39,276] [DEBUG] [db:1676] (21718) 0 namespace-change states at 20
+[2016-09-05 20:12:39,277] [DEBUG] [db:1627] (21718) 0 name-preorder states at 21
+[2016-09-05 20:12:39,277] [DEBUG] [db:1638] (21718) 0 name-change states at 21
+[2016-09-05 20:12:39,277] [DEBUG] [db:1655] (21718) 0 preorders created at 21
+[2016-09-05 20:12:39,277] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 21
+[2016-09-05 20:12:39,277] [DEBUG] [db:1676] (21718) 0 namespace-change states at 21
+[2016-09-05 20:12:39,277] [DEBUG] [db:1627] (21718) 0 name-preorder states at 22
+[2016-09-05 20:12:39,277] [DEBUG] [db:1638] (21718) 0 name-change states at 22
+[2016-09-05 20:12:39,277] [DEBUG] [db:1655] (21718) 0 preorders created at 22
+[2016-09-05 20:12:39,277] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 22
+[2016-09-05 20:12:39,278] [DEBUG] [db:1676] (21718) 0 namespace-change states at 22
+[2016-09-05 20:12:39,278] [DEBUG] [db:1627] (21718) 0 name-preorder states at 23
+[2016-09-05 20:12:39,278] [DEBUG] [db:1638] (21718) 0 name-change states at 23
+[2016-09-05 20:12:39,278] [DEBUG] [db:1655] (21718) 0 preorders created at 23
+[2016-09-05 20:12:39,278] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 23
+[2016-09-05 20:12:39,278] [DEBUG] [db:1676] (21718) 0 namespace-change states at 23
+[2016-09-05 20:12:39,278] [DEBUG] [db:1627] (21718) 0 name-preorder states at 24
+[2016-09-05 20:12:39,278] [DEBUG] [db:1638] (21718) 0 name-change states at 24
+[2016-09-05 20:12:39,279] [DEBUG] [db:1655] (21718) 0 preorders created at 24
+[2016-09-05 20:12:39,279] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 24
+[2016-09-05 20:12:39,279] [DEBUG] [db:1676] (21718) 0 namespace-change states at 24
+[2016-09-05 20:12:39,279] [DEBUG] [db:1627] (21718) 0 name-preorder states at 25
+[2016-09-05 20:12:39,279] [DEBUG] [db:1638] (21718) 0 name-change states at 25
+[2016-09-05 20:12:39,279] [DEBUG] [db:1655] (21718) 0 preorders created at 25
+[2016-09-05 20:12:39,279] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 25
+[2016-09-05 20:12:39,279] [DEBUG] [db:1676] (21718) 0 namespace-change states at 25
+[2016-09-05 20:12:39,279] [DEBUG] [db:1627] (21718) 0 name-preorder states at 26
+[2016-09-05 20:12:39,280] [DEBUG] [db:1638] (21718) 0 name-change states at 26
+[2016-09-05 20:12:39,280] [DEBUG] [db:1655] (21718) 0 preorders created at 26
+[2016-09-05 20:12:39,280] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 26
+[2016-09-05 20:12:39,280] [DEBUG] [db:1676] (21718) 0 namespace-change states at 26
+[2016-09-05 20:12:39,280] [DEBUG] [db:1627] (21718) 0 name-preorder states at 27
+[2016-09-05 20:12:39,280] [DEBUG] [db:1638] (21718) 0 name-change states at 27
+[2016-09-05 20:12:39,280] [DEBUG] [db:1655] (21718) 0 preorders created at 27
+[2016-09-05 20:12:39,280] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 27
+[2016-09-05 20:12:39,280] [DEBUG] [db:1676] (21718) 0 namespace-change states at 27
+[2016-09-05 20:12:39,280] [DEBUG] [db:1627] (21718) 0 name-preorder states at 28
+[2016-09-05 20:12:39,280] [DEBUG] [db:1638] (21718) 0 name-change states at 28
+[2016-09-05 20:12:39,280] [DEBUG] [db:1655] (21718) 0 preorders created at 28
+[2016-09-05 20:12:39,281] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 28
+[2016-09-05 20:12:39,281] [DEBUG] [db:1676] (21718) 0 namespace-change states at 28
+[2016-09-05 20:12:39,281] [DEBUG] [db:1627] (21718) 0 name-preorder states at 29
+[2016-09-05 20:12:39,281] [DEBUG] [db:1638] (21718) 0 name-change states at 29
+[2016-09-05 20:12:39,281] [DEBUG] [db:1655] (21718) 0 preorders created at 29
+[2016-09-05 20:12:39,281] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 29
+[2016-09-05 20:12:39,281] [DEBUG] [db:1676] (21718) 0 namespace-change states at 29
+[2016-09-05 20:12:39,281] [DEBUG] [db:1627] (21718) 0 name-preorder states at 30
+[2016-09-05 20:12:39,281] [DEBUG] [db:1638] (21718) 0 name-change states at 30
+[2016-09-05 20:12:39,281] [DEBUG] [db:1655] (21718) 0 preorders created at 30
+[2016-09-05 20:12:39,281] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 30
+[2016-09-05 20:12:39,281] [DEBUG] [db:1676] (21718) 0 namespace-change states at 30
+[2016-09-05 20:12:39,282] [DEBUG] [db:1627] (21718) 0 name-preorder states at 31
+[2016-09-05 20:12:39,282] [DEBUG] [db:1638] (21718) 0 name-change states at 31
+[2016-09-05 20:12:39,282] [DEBUG] [db:1655] (21718) 0 preorders created at 31
+[2016-09-05 20:12:39,282] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 31
+[2016-09-05 20:12:39,282] [DEBUG] [db:1676] (21718) 0 namespace-change states at 31
+[2016-09-05 20:12:39,282] [DEBUG] [db:1627] (21718) 0 name-preorder states at 32
+[2016-09-05 20:12:39,282] [DEBUG] [db:1638] (21718) 0 name-change states at 32
+[2016-09-05 20:12:39,282] [DEBUG] [db:1655] (21718) 0 preorders created at 32
+[2016-09-05 20:12:39,282] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 32
+[2016-09-05 20:12:39,282] [DEBUG] [db:1676] (21718) 0 namespace-change states at 32
+[2016-09-05 20:12:39,282] [DEBUG] [db:1627] (21718) 0 name-preorder states at 33
+[2016-09-05 20:12:39,283] [DEBUG] [db:1638] (21718) 0 name-change states at 33
+[2016-09-05 20:12:39,283] [DEBUG] [db:1655] (21718) 0 preorders created at 33
+[2016-09-05 20:12:39,283] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 33
+[2016-09-05 20:12:39,283] [DEBUG] [db:1676] (21718) 0 namespace-change states at 33
+[2016-09-05 20:12:39,283] [DEBUG] [db:1627] (21718) 0 name-preorder states at 34
+[2016-09-05 20:12:39,283] [DEBUG] [db:1638] (21718) 0 name-change states at 34
+[2016-09-05 20:12:39,283] [DEBUG] [db:1655] (21718) 0 preorders created at 34
+[2016-09-05 20:12:39,283] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 34
+[2016-09-05 20:12:39,283] [DEBUG] [db:1676] (21718) 0 namespace-change states at 34
+[2016-09-05 20:12:39,283] [DEBUG] [db:1627] (21718) 0 name-preorder states at 35
+[2016-09-05 20:12:39,283] [DEBUG] [db:1638] (21718) 0 name-change states at 35
+[2016-09-05 20:12:39,283] [DEBUG] [db:1655] (21718) 0 preorders created at 35
+[2016-09-05 20:12:39,284] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 35
+[2016-09-05 20:12:39,284] [DEBUG] [db:1676] (21718) 0 namespace-change states at 35
+[2016-09-05 20:12:39,284] [DEBUG] [db:1627] (21718) 0 name-preorder states at 36
+[2016-09-05 20:12:39,284] [DEBUG] [db:1638] (21718) 0 name-change states at 36
+[2016-09-05 20:12:39,284] [DEBUG] [db:1655] (21718) 0 preorders created at 36
+[2016-09-05 20:12:39,284] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 36
+[2016-09-05 20:12:39,284] [DEBUG] [db:1676] (21718) 0 namespace-change states at 36
+[2016-09-05 20:12:39,284] [DEBUG] [db:1627] (21718) 0 name-preorder states at 37
+[2016-09-05 20:12:39,284] [DEBUG] [db:1638] (21718) 0 name-change states at 37
+[2016-09-05 20:12:39,284] [DEBUG] [db:1655] (21718) 0 preorders created at 37
+[2016-09-05 20:12:39,284] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 37
+[2016-09-05 20:12:39,285] [DEBUG] [db:1676] (21718) 0 namespace-change states at 37
+[2016-09-05 20:12:39,285] [DEBUG] [db:1627] (21718) 0 name-preorder states at 38
+[2016-09-05 20:12:39,285] [DEBUG] [db:1638] (21718) 0 name-change states at 38
+[2016-09-05 20:12:39,285] [DEBUG] [db:1655] (21718) 0 preorders created at 38
+[2016-09-05 20:12:39,285] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 38
+[2016-09-05 20:12:39,285] [DEBUG] [db:1676] (21718) 0 namespace-change states at 38
+[2016-09-05 20:12:39,285] [DEBUG] [db:1627] (21718) 0 name-preorder states at 39
+[2016-09-05 20:12:39,285] [DEBUG] [db:1638] (21718) 0 name-change states at 39
+[2016-09-05 20:12:39,285] [DEBUG] [db:1655] (21718) 0 preorders created at 39
+[2016-09-05 20:12:39,285] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 39
+[2016-09-05 20:12:39,285] [DEBUG] [db:1676] (21718) 0 namespace-change states at 39
+[2016-09-05 20:12:39,286] [DEBUG] [db:1627] (21718) 0 name-preorder states at 40
+[2016-09-05 20:12:39,286] [DEBUG] [db:1638] (21718) 0 name-change states at 40
+[2016-09-05 20:12:39,286] [DEBUG] [db:1655] (21718) 0 preorders created at 40
+[2016-09-05 20:12:39,286] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 40
+[2016-09-05 20:12:39,286] [DEBUG] [db:1676] (21718) 0 namespace-change states at 40
+[2016-09-05 20:12:39,286] [DEBUG] [db:1627] (21718) 0 name-preorder states at 41
+[2016-09-05 20:12:39,286] [DEBUG] [db:1638] (21718) 0 name-change states at 41
+[2016-09-05 20:12:39,286] [DEBUG] [db:1655] (21718) 0 preorders created at 41
+[2016-09-05 20:12:39,286] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 41
+[2016-09-05 20:12:39,286] [DEBUG] [db:1676] (21718) 0 namespace-change states at 41
+[2016-09-05 20:12:39,286] [DEBUG] [db:1627] (21718) 0 name-preorder states at 42
+[2016-09-05 20:12:39,286] [DEBUG] [db:1638] (21718) 0 name-change states at 42
+[2016-09-05 20:12:39,287] [DEBUG] [db:1655] (21718) 0 preorders created at 42
+[2016-09-05 20:12:39,287] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 42
+[2016-09-05 20:12:39,287] [DEBUG] [db:1676] (21718) 0 namespace-change states at 42
+[2016-09-05 20:12:39,287] [DEBUG] [db:1627] (21718) 0 name-preorder states at 43
+[2016-09-05 20:12:39,287] [DEBUG] [db:1638] (21718) 0 name-change states at 43
+[2016-09-05 20:12:39,287] [DEBUG] [db:1655] (21718) 0 preorders created at 43
+[2016-09-05 20:12:39,287] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 43
+[2016-09-05 20:12:39,287] [DEBUG] [db:1676] (21718) 0 namespace-change states at 43
+[2016-09-05 20:12:39,287] [DEBUG] [db:1627] (21718) 0 name-preorder states at 44
+[2016-09-05 20:12:39,287] [DEBUG] [db:1638] (21718) 0 name-change states at 44
+[2016-09-05 20:12:39,287] [DEBUG] [db:1655] (21718) 0 preorders created at 44
+[2016-09-05 20:12:39,287] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 44
+[2016-09-05 20:12:39,288] [DEBUG] [db:1676] (21718) 0 namespace-change states at 44
+[2016-09-05 20:12:39,288] [DEBUG] [db:1627] (21718) 0 name-preorder states at 45
+[2016-09-05 20:12:39,288] [DEBUG] [db:1638] (21718) 0 name-change states at 45
+[2016-09-05 20:12:39,288] [DEBUG] [db:1655] (21718) 0 preorders created at 45
+[2016-09-05 20:12:39,288] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 45
+[2016-09-05 20:12:39,288] [DEBUG] [db:1676] (21718) 0 namespace-change states at 45
+[2016-09-05 20:12:39,288] [DEBUG] [db:1627] (21718) 0 name-preorder states at 46
+[2016-09-05 20:12:39,288] [DEBUG] [db:1638] (21718) 0 name-change states at 46
+[2016-09-05 20:12:39,288] [DEBUG] [db:1655] (21718) 0 preorders created at 46
+[2016-09-05 20:12:39,288] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 46
+[2016-09-05 20:12:39,288] [DEBUG] [db:1676] (21718) 0 namespace-change states at 46
+[2016-09-05 20:12:39,288] [DEBUG] [db:1627] (21718) 0 name-preorder states at 47
+[2016-09-05 20:12:39,289] [DEBUG] [db:1638] (21718) 0 name-change states at 47
+[2016-09-05 20:12:39,289] [DEBUG] [db:1655] (21718) 0 preorders created at 47
+[2016-09-05 20:12:39,289] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 47
+[2016-09-05 20:12:39,289] [DEBUG] [db:1676] (21718) 0 namespace-change states at 47
+[2016-09-05 20:12:39,289] [DEBUG] [db:1627] (21718) 0 name-preorder states at 48
+[2016-09-05 20:12:39,289] [DEBUG] [db:1638] (21718) 0 name-change states at 48
+[2016-09-05 20:12:39,289] [DEBUG] [db:1655] (21718) 0 preorders created at 48
+[2016-09-05 20:12:39,289] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 48
+[2016-09-05 20:12:39,289] [DEBUG] [db:1676] (21718) 0 namespace-change states at 48
+[2016-09-05 20:12:39,289] [DEBUG] [db:1627] (21718) 0 name-preorder states at 49
+[2016-09-05 20:12:39,289] [DEBUG] [db:1638] (21718) 0 name-change states at 49
+[2016-09-05 20:12:39,289] [DEBUG] [db:1655] (21718) 0 preorders created at 49
+[2016-09-05 20:12:39,290] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 49
+[2016-09-05 20:12:39,290] [DEBUG] [db:1676] (21718) 0 namespace-change states at 49
+[2016-09-05 20:12:39,290] [DEBUG] [db:1627] (21718) 0 name-preorder states at 50
+[2016-09-05 20:12:39,290] [DEBUG] [db:1638] (21718) 0 name-change states at 50
+[2016-09-05 20:12:39,290] [DEBUG] [db:1655] (21718) 0 preorders created at 50
+[2016-09-05 20:12:39,290] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 50
+[2016-09-05 20:12:39,290] [DEBUG] [db:1676] (21718) 0 namespace-change states at 50
+[2016-09-05 20:12:39,290] [DEBUG] [db:1627] (21718) 0 name-preorder states at 51
+[2016-09-05 20:12:39,290] [DEBUG] [db:1638] (21718) 0 name-change states at 51
+[2016-09-05 20:12:39,290] [DEBUG] [db:1655] (21718) 0 preorders created at 51
+[2016-09-05 20:12:39,290] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 51
+[2016-09-05 20:12:39,290] [DEBUG] [db:1676] (21718) 0 namespace-change states at 51
+[2016-09-05 20:12:39,291] [DEBUG] [db:1627] (21718) 0 name-preorder states at 52
+[2016-09-05 20:12:39,291] [DEBUG] [db:1638] (21718) 0 name-change states at 52
+[2016-09-05 20:12:39,291] [DEBUG] [db:1655] (21718) 0 preorders created at 52
+[2016-09-05 20:12:39,291] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 52
+[2016-09-05 20:12:39,291] [DEBUG] [db:1676] (21718) 0 namespace-change states at 52
+[2016-09-05 20:12:39,291] [DEBUG] [db:1627] (21718) 0 name-preorder states at 53
+[2016-09-05 20:12:39,291] [DEBUG] [db:1638] (21718) 0 name-change states at 53
+[2016-09-05 20:12:39,291] [DEBUG] [db:1655] (21718) 0 preorders created at 53
+[2016-09-05 20:12:39,291] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 53
+[2016-09-05 20:12:39,291] [DEBUG] [db:1676] (21718) 0 namespace-change states at 53
+[2016-09-05 20:12:39,291] [DEBUG] [db:1627] (21718) 0 name-preorder states at 54
+[2016-09-05 20:12:39,292] [DEBUG] [db:1638] (21718) 0 name-change states at 54
+[2016-09-05 20:12:39,292] [DEBUG] [db:1655] (21718) 0 preorders created at 54
+[2016-09-05 20:12:39,292] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 54
+[2016-09-05 20:12:39,292] [DEBUG] [db:1676] (21718) 0 namespace-change states at 54
+[2016-09-05 20:12:39,292] [DEBUG] [db:1627] (21718) 0 name-preorder states at 55
+[2016-09-05 20:12:39,292] [DEBUG] [db:1638] (21718) 0 name-change states at 55
+[2016-09-05 20:12:39,292] [DEBUG] [db:1655] (21718) 0 preorders created at 55
+[2016-09-05 20:12:39,292] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 55
+[2016-09-05 20:12:39,292] [DEBUG] [db:1676] (21718) 0 namespace-change states at 55
+[2016-09-05 20:12:39,292] [DEBUG] [db:1627] (21718) 0 name-preorder states at 56
+[2016-09-05 20:12:39,292] [DEBUG] [db:1638] (21718) 0 name-change states at 56
+[2016-09-05 20:12:39,292] [DEBUG] [db:1655] (21718) 0 preorders created at 56
+[2016-09-05 20:12:39,293] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 56
+[2016-09-05 20:12:39,293] [DEBUG] [db:1676] (21718) 0 namespace-change states at 56
+[2016-09-05 20:12:39,293] [DEBUG] [db:1627] (21718) 0 name-preorder states at 57
+[2016-09-05 20:12:39,293] [DEBUG] [db:1638] (21718) 0 name-change states at 57
+[2016-09-05 20:12:39,293] [DEBUG] [db:1655] (21718) 0 preorders created at 57
+[2016-09-05 20:12:39,293] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 57
+[2016-09-05 20:12:39,293] [DEBUG] [db:1676] (21718) 0 namespace-change states at 57
+[2016-09-05 20:12:39,293] [DEBUG] [db:1627] (21718) 0 name-preorder states at 58
+[2016-09-05 20:12:39,293] [DEBUG] [db:1638] (21718) 0 name-change states at 58
+[2016-09-05 20:12:39,293] [DEBUG] [db:1655] (21718) 0 preorders created at 58
+[2016-09-05 20:12:39,293] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 58
+[2016-09-05 20:12:39,293] [DEBUG] [db:1676] (21718) 0 namespace-change states at 58
+[2016-09-05 20:12:39,294] [DEBUG] [db:1627] (21718) 0 name-preorder states at 59
+[2016-09-05 20:12:39,294] [DEBUG] [db:1638] (21718) 0 name-change states at 59
+[2016-09-05 20:12:39,294] [DEBUG] [db:1655] (21718) 0 preorders created at 59
+[2016-09-05 20:12:39,294] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 59
+[2016-09-05 20:12:39,294] [DEBUG] [db:1676] (21718) 0 namespace-change states at 59
+[2016-09-05 20:12:39,294] [DEBUG] [db:1627] (21718) 0 name-preorder states at 60
+[2016-09-05 20:12:39,294] [DEBUG] [db:1638] (21718) 0 name-change states at 60
+[2016-09-05 20:12:39,294] [DEBUG] [db:1655] (21718) 0 preorders created at 60
+[2016-09-05 20:12:39,294] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 60
+[2016-09-05 20:12:39,294] [DEBUG] [db:1676] (21718) 0 namespace-change states at 60
+[2016-09-05 20:12:39,294] [DEBUG] [db:1627] (21718) 0 name-preorder states at 61
+[2016-09-05 20:12:39,294] [DEBUG] [db:1638] (21718) 0 name-change states at 61
+[2016-09-05 20:12:39,295] [DEBUG] [db:1655] (21718) 0 preorders created at 61
+[2016-09-05 20:12:39,295] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 61
+[2016-09-05 20:12:39,295] [DEBUG] [db:1676] (21718) 0 namespace-change states at 61
+[2016-09-05 20:12:39,295] [DEBUG] [db:1627] (21718) 0 name-preorder states at 62
+[2016-09-05 20:12:39,295] [DEBUG] [db:1638] (21718) 0 name-change states at 62
+[2016-09-05 20:12:39,295] [DEBUG] [db:1655] (21718) 0 preorders created at 62
+[2016-09-05 20:12:39,295] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 62
+[2016-09-05 20:12:39,295] [DEBUG] [db:1676] (21718) 0 namespace-change states at 62
+[2016-09-05 20:12:39,295] [DEBUG] [db:1627] (21718) 0 name-preorder states at 63
+[2016-09-05 20:12:39,295] [DEBUG] [db:1638] (21718) 0 name-change states at 63
+[2016-09-05 20:12:39,296] [DEBUG] [db:1655] (21718) 0 preorders created at 63
+[2016-09-05 20:12:39,296] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 63
+[2016-09-05 20:12:39,296] [DEBUG] [db:1676] (21718) 0 namespace-change states at 63
+[2016-09-05 20:12:39,296] [DEBUG] [db:1627] (21718) 0 name-preorder states at 64
+[2016-09-05 20:12:39,296] [DEBUG] [db:1638] (21718) 0 name-change states at 64
+[2016-09-05 20:12:39,296] [DEBUG] [db:1655] (21718) 0 preorders created at 64
+[2016-09-05 20:12:39,296] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 64
+[2016-09-05 20:12:39,296] [DEBUG] [db:1676] (21718) 0 namespace-change states at 64
+[2016-09-05 20:12:39,296] [DEBUG] [db:1627] (21718) 0 name-preorder states at 65
+[2016-09-05 20:12:39,296] [DEBUG] [db:1638] (21718) 0 name-change states at 65
+[2016-09-05 20:12:39,296] [DEBUG] [db:1655] (21718) 0 preorders created at 65
+[2016-09-05 20:12:39,296] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 65
+[2016-09-05 20:12:39,297] [DEBUG] [db:1676] (21718) 0 namespace-change states at 65
+[2016-09-05 20:12:39,297] [DEBUG] [db:1627] (21718) 0 name-preorder states at 66
+[2016-09-05 20:12:39,297] [DEBUG] [db:1638] (21718) 0 name-change states at 66
+[2016-09-05 20:12:39,297] [DEBUG] [db:1655] (21718) 0 preorders created at 66
+[2016-09-05 20:12:39,297] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 66
+[2016-09-05 20:12:39,297] [DEBUG] [db:1676] (21718) 0 namespace-change states at 66
+[2016-09-05 20:12:39,297] [DEBUG] [db:1627] (21718) 0 name-preorder states at 67
+[2016-09-05 20:12:39,297] [DEBUG] [db:1638] (21718) 0 name-change states at 67
+[2016-09-05 20:12:39,297] [DEBUG] [db:1655] (21718) 0 preorders created at 67
+[2016-09-05 20:12:39,297] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 67
+[2016-09-05 20:12:39,297] [DEBUG] [db:1676] (21718) 0 namespace-change states at 67
+[2016-09-05 20:12:39,297] [DEBUG] [db:1627] (21718) 0 name-preorder states at 68
+[2016-09-05 20:12:39,298] [DEBUG] [db:1638] (21718) 0 name-change states at 68
+[2016-09-05 20:12:39,298] [DEBUG] [db:1655] (21718) 0 preorders created at 68
+[2016-09-05 20:12:39,298] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 68
+[2016-09-05 20:12:39,298] [DEBUG] [db:1676] (21718) 0 namespace-change states at 68
+[2016-09-05 20:12:39,298] [DEBUG] [db:1627] (21718) 0 name-preorder states at 69
+[2016-09-05 20:12:39,298] [DEBUG] [db:1638] (21718) 0 name-change states at 69
+[2016-09-05 20:12:39,298] [DEBUG] [db:1655] (21718) 0 preorders created at 69
+[2016-09-05 20:12:39,298] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 69
+[2016-09-05 20:12:39,298] [DEBUG] [db:1676] (21718) 0 namespace-change states at 69
+[2016-09-05 20:12:39,298] [DEBUG] [db:1627] (21718) 0 name-preorder states at 70
+[2016-09-05 20:12:39,298] [DEBUG] [db:1638] (21718) 0 name-change states at 70
+[2016-09-05 20:12:39,298] [DEBUG] [db:1655] (21718) 0 preorders created at 70
+[2016-09-05 20:12:39,299] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 70
+[2016-09-05 20:12:39,299] [DEBUG] [db:1676] (21718) 0 namespace-change states at 70
+[2016-09-05 20:12:39,299] [DEBUG] [db:1627] (21718) 0 name-preorder states at 71
+[2016-09-05 20:12:39,299] [DEBUG] [db:1638] (21718) 0 name-change states at 71
+[2016-09-05 20:12:39,299] [DEBUG] [db:1655] (21718) 0 preorders created at 71
+[2016-09-05 20:12:39,299] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 71
+[2016-09-05 20:12:39,299] [DEBUG] [db:1676] (21718) 0 namespace-change states at 71
+[2016-09-05 20:12:39,299] [DEBUG] [db:1627] (21718) 0 name-preorder states at 72
+[2016-09-05 20:12:39,299] [DEBUG] [db:1638] (21718) 0 name-change states at 72
+[2016-09-05 20:12:39,299] [DEBUG] [db:1655] (21718) 0 preorders created at 72
+[2016-09-05 20:12:39,299] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 72
+[2016-09-05 20:12:39,299] [DEBUG] [db:1676] (21718) 0 namespace-change states at 72
+[2016-09-05 20:12:39,300] [DEBUG] [db:1627] (21718) 0 name-preorder states at 73
+[2016-09-05 20:12:39,300] [DEBUG] [db:1638] (21718) 0 name-change states at 73
+[2016-09-05 20:12:39,300] [DEBUG] [db:1655] (21718) 0 preorders created at 73
+[2016-09-05 20:12:39,300] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 73
+[2016-09-05 20:12:39,300] [DEBUG] [db:1676] (21718) 0 namespace-change states at 73
+[2016-09-05 20:12:39,300] [DEBUG] [db:1627] (21718) 0 name-preorder states at 74
+[2016-09-05 20:12:39,300] [DEBUG] [db:1638] (21718) 0 name-change states at 74
+[2016-09-05 20:12:39,300] [DEBUG] [db:1655] (21718) 0 preorders created at 74
+[2016-09-05 20:12:39,300] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 74
+[2016-09-05 20:12:39,300] [DEBUG] [db:1676] (21718) 0 namespace-change states at 74
+[2016-09-05 20:12:39,300] [DEBUG] [db:1627] (21718) 0 name-preorder states at 75
+[2016-09-05 20:12:39,301] [DEBUG] [db:1638] (21718) 0 name-change states at 75
+[2016-09-05 20:12:39,301] [DEBUG] [db:1655] (21718) 0 preorders created at 75
+[2016-09-05 20:12:39,301] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 75
+[2016-09-05 20:12:39,301] [DEBUG] [db:1676] (21718) 0 namespace-change states at 75
+[2016-09-05 20:12:39,301] [DEBUG] [db:1627] (21718) 0 name-preorder states at 76
+[2016-09-05 20:12:39,301] [DEBUG] [db:1638] (21718) 0 name-change states at 76
+[2016-09-05 20:12:39,301] [DEBUG] [db:1655] (21718) 0 preorders created at 76
+[2016-09-05 20:12:39,301] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 76
+[2016-09-05 20:12:39,301] [DEBUG] [db:1676] (21718) 0 namespace-change states at 76
+[2016-09-05 20:12:39,301] [DEBUG] [db:1627] (21718) 0 name-preorder states at 77
+[2016-09-05 20:12:39,301] [DEBUG] [db:1638] (21718) 0 name-change states at 77
+[2016-09-05 20:12:39,301] [DEBUG] [db:1655] (21718) 0 preorders created at 77
+[2016-09-05 20:12:39,302] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 77
+[2016-09-05 20:12:39,302] [DEBUG] [db:1676] (21718) 0 namespace-change states at 77
+[2016-09-05 20:12:39,302] [DEBUG] [db:1627] (21718) 0 name-preorder states at 78
+[2016-09-05 20:12:39,302] [DEBUG] [db:1638] (21718) 0 name-change states at 78
+[2016-09-05 20:12:39,302] [DEBUG] [db:1655] (21718) 0 preorders created at 78
+[2016-09-05 20:12:39,302] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 78
+[2016-09-05 20:12:39,302] [DEBUG] [db:1676] (21718) 0 namespace-change states at 78
+[2016-09-05 20:12:39,302] [DEBUG] [db:1627] (21718) 0 name-preorder states at 79
+[2016-09-05 20:12:39,302] [DEBUG] [db:1638] (21718) 0 name-change states at 79
+[2016-09-05 20:12:39,302] [DEBUG] [db:1655] (21718) 0 preorders created at 79
+[2016-09-05 20:12:39,302] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 79
+[2016-09-05 20:12:39,303] [DEBUG] [db:1676] (21718) 0 namespace-change states at 79
+[2016-09-05 20:12:39,303] [DEBUG] [db:1627] (21718) 0 name-preorder states at 80
+[2016-09-05 20:12:39,303] [DEBUG] [db:1638] (21718) 0 name-change states at 80
+[2016-09-05 20:12:39,303] [DEBUG] [db:1655] (21718) 0 preorders created at 80
+[2016-09-05 20:12:39,303] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 80
+[2016-09-05 20:12:39,303] [DEBUG] [db:1676] (21718) 0 namespace-change states at 80
+[2016-09-05 20:12:39,303] [DEBUG] [db:1627] (21718) 0 name-preorder states at 81
+[2016-09-05 20:12:39,303] [DEBUG] [db:1638] (21718) 0 name-change states at 81
+[2016-09-05 20:12:39,303] [DEBUG] [db:1655] (21718) 0 preorders created at 81
+[2016-09-05 20:12:39,303] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 81
+[2016-09-05 20:12:39,303] [DEBUG] [db:1676] (21718) 0 namespace-change states at 81
+[2016-09-05 20:12:39,303] [DEBUG] [db:1627] (21718) 0 name-preorder states at 82
+[2016-09-05 20:12:39,304] [DEBUG] [db:1638] (21718) 0 name-change states at 82
+[2016-09-05 20:12:39,304] [DEBUG] [db:1655] (21718) 0 preorders created at 82
+[2016-09-05 20:12:39,304] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 82
+[2016-09-05 20:12:39,304] [DEBUG] [db:1676] (21718) 0 namespace-change states at 82
+[2016-09-05 20:12:39,304] [DEBUG] [db:1627] (21718) 0 name-preorder states at 83
+[2016-09-05 20:12:39,304] [DEBUG] [db:1638] (21718) 0 name-change states at 83
+[2016-09-05 20:12:39,304] [DEBUG] [db:1655] (21718) 0 preorders created at 83
+[2016-09-05 20:12:39,304] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 83
+[2016-09-05 20:12:39,304] [DEBUG] [db:1676] (21718) 0 namespace-change states at 83
+[2016-09-05 20:12:39,304] [DEBUG] [db:1627] (21718) 0 name-preorder states at 84
+[2016-09-05 20:12:39,304] [DEBUG] [db:1638] (21718) 0 name-change states at 84
+[2016-09-05 20:12:39,304] [DEBUG] [db:1655] (21718) 0 preorders created at 84
+[2016-09-05 20:12:39,305] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 84
+[2016-09-05 20:12:39,305] [DEBUG] [db:1676] (21718) 0 namespace-change states at 84
+[2016-09-05 20:12:39,305] [DEBUG] [db:1627] (21718) 0 name-preorder states at 85
+[2016-09-05 20:12:39,305] [DEBUG] [db:1638] (21718) 0 name-change states at 85
+[2016-09-05 20:12:39,305] [DEBUG] [db:1655] (21718) 0 preorders created at 85
+[2016-09-05 20:12:39,305] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 85
+[2016-09-05 20:12:39,305] [DEBUG] [db:1676] (21718) 0 namespace-change states at 85
+[2016-09-05 20:12:39,305] [DEBUG] [db:1627] (21718) 0 name-preorder states at 86
+[2016-09-05 20:12:39,305] [DEBUG] [db:1638] (21718) 0 name-change states at 86
+[2016-09-05 20:12:39,305] [DEBUG] [db:1655] (21718) 0 preorders created at 86
+[2016-09-05 20:12:39,305] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 86
+[2016-09-05 20:12:39,305] [DEBUG] [db:1676] (21718) 0 namespace-change states at 86
+[2016-09-05 20:12:39,306] [DEBUG] [db:1627] (21718) 0 name-preorder states at 87
+[2016-09-05 20:12:39,306] [DEBUG] [db:1638] (21718) 0 name-change states at 87
+[2016-09-05 20:12:39,306] [DEBUG] [db:1655] (21718) 0 preorders created at 87
+[2016-09-05 20:12:39,306] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 87
+[2016-09-05 20:12:39,306] [DEBUG] [db:1676] (21718) 0 namespace-change states at 87
+[2016-09-05 20:12:39,306] [DEBUG] [db:1627] (21718) 0 name-preorder states at 88
+[2016-09-05 20:12:39,306] [DEBUG] [db:1638] (21718) 0 name-change states at 88
+[2016-09-05 20:12:39,306] [DEBUG] [db:1655] (21718) 0 preorders created at 88
+[2016-09-05 20:12:39,306] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 88
+[2016-09-05 20:12:39,306] [DEBUG] [db:1676] (21718) 0 namespace-change states at 88
+[2016-09-05 20:12:39,306] [DEBUG] [db:1627] (21718) 0 name-preorder states at 89
+[2016-09-05 20:12:39,307] [DEBUG] [db:1638] (21718) 0 name-change states at 89
+[2016-09-05 20:12:39,307] [DEBUG] [db:1655] (21718) 0 preorders created at 89
+[2016-09-05 20:12:39,307] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 89
+[2016-09-05 20:12:39,307] [DEBUG] [db:1676] (21718) 0 namespace-change states at 89
+[2016-09-05 20:12:39,307] [DEBUG] [db:1627] (21718) 0 name-preorder states at 90
+[2016-09-05 20:12:39,307] [DEBUG] [db:1638] (21718) 0 name-change states at 90
+[2016-09-05 20:12:39,307] [DEBUG] [db:1655] (21718) 0 preorders created at 90
+[2016-09-05 20:12:39,307] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 90
+[2016-09-05 20:12:39,307] [DEBUG] [db:1676] (21718) 0 namespace-change states at 90
+[2016-09-05 20:12:39,307] [DEBUG] [db:1627] (21718) 0 name-preorder states at 91
+[2016-09-05 20:12:39,307] [DEBUG] [db:1638] (21718) 0 name-change states at 91
+[2016-09-05 20:12:39,307] [DEBUG] [db:1655] (21718) 0 preorders created at 91
+[2016-09-05 20:12:39,308] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 91
+[2016-09-05 20:12:39,308] [DEBUG] [db:1676] (21718) 0 namespace-change states at 91
+[2016-09-05 20:12:39,308] [DEBUG] [db:1627] (21718) 0 name-preorder states at 92
+[2016-09-05 20:12:39,308] [DEBUG] [db:1638] (21718) 0 name-change states at 92
+[2016-09-05 20:12:39,308] [DEBUG] [db:1655] (21718) 0 preorders created at 92
+[2016-09-05 20:12:39,308] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 92
+[2016-09-05 20:12:39,308] [DEBUG] [db:1676] (21718) 0 namespace-change states at 92
+[2016-09-05 20:12:39,308] [DEBUG] [db:1627] (21718) 0 name-preorder states at 93
+[2016-09-05 20:12:39,308] [DEBUG] [db:1638] (21718) 0 name-change states at 93
+[2016-09-05 20:12:39,308] [DEBUG] [db:1655] (21718) 0 preorders created at 93
+[2016-09-05 20:12:39,308] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 93
+[2016-09-05 20:12:39,308] [DEBUG] [db:1676] (21718) 0 namespace-change states at 93
+[2016-09-05 20:12:39,309] [DEBUG] [db:1627] (21718) 0 name-preorder states at 94
+[2016-09-05 20:12:39,309] [DEBUG] [db:1638] (21718) 0 name-change states at 94
+[2016-09-05 20:12:39,309] [DEBUG] [db:1655] (21718) 0 preorders created at 94
+[2016-09-05 20:12:39,309] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 94
+[2016-09-05 20:12:39,309] [DEBUG] [db:1676] (21718) 0 namespace-change states at 94
+[2016-09-05 20:12:39,309] [DEBUG] [db:1627] (21718) 0 name-preorder states at 95
+[2016-09-05 20:12:39,309] [DEBUG] [db:1638] (21718) 0 name-change states at 95
+[2016-09-05 20:12:39,309] [DEBUG] [db:1655] (21718) 0 preorders created at 95
+[2016-09-05 20:12:39,309] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 95
+[2016-09-05 20:12:39,309] [DEBUG] [db:1676] (21718) 0 namespace-change states at 95
+[2016-09-05 20:12:39,309] [DEBUG] [db:1627] (21718) 0 name-preorder states at 96
+[2016-09-05 20:12:39,309] [DEBUG] [db:1638] (21718) 0 name-change states at 96
+[2016-09-05 20:12:39,310] [DEBUG] [db:1655] (21718) 0 preorders created at 96
+[2016-09-05 20:12:39,310] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 96
+[2016-09-05 20:12:39,310] [DEBUG] [db:1676] (21718) 0 namespace-change states at 96
+[2016-09-05 20:12:39,310] [DEBUG] [db:1627] (21718) 0 name-preorder states at 97
+[2016-09-05 20:12:39,310] [DEBUG] [db:1638] (21718) 0 name-change states at 97
+[2016-09-05 20:12:39,310] [DEBUG] [db:1655] (21718) 0 preorders created at 97
+[2016-09-05 20:12:39,310] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 97
+[2016-09-05 20:12:39,310] [DEBUG] [db:1676] (21718) 0 namespace-change states at 97
+[2016-09-05 20:12:39,310] [DEBUG] [db:1627] (21718) 0 name-preorder states at 98
+[2016-09-05 20:12:39,310] [DEBUG] [db:1638] (21718) 0 name-change states at 98
+[2016-09-05 20:12:39,310] [DEBUG] [db:1655] (21718) 0 preorders created at 98
+[2016-09-05 20:12:39,310] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 98
+[2016-09-05 20:12:39,311] [DEBUG] [db:1676] (21718) 0 namespace-change states at 98
+[2016-09-05 20:12:39,311] [DEBUG] [db:1627] (21718) 0 name-preorder states at 99
+[2016-09-05 20:12:39,311] [DEBUG] [db:1638] (21718) 0 name-change states at 99
+[2016-09-05 20:12:39,311] [DEBUG] [db:1655] (21718) 0 preorders created at 99
+[2016-09-05 20:12:39,311] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 99
+[2016-09-05 20:12:39,311] [DEBUG] [db:1676] (21718) 0 namespace-change states at 99
+[2016-09-05 20:12:39,311] [DEBUG] [db:1627] (21718) 0 name-preorder states at 100
+[2016-09-05 20:12:39,311] [DEBUG] [db:1638] (21718) 0 name-change states at 100
+[2016-09-05 20:12:39,311] [DEBUG] [db:1655] (21718) 0 preorders created at 100
+[2016-09-05 20:12:39,311] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 100
+[2016-09-05 20:12:39,311] [DEBUG] [db:1676] (21718) 0 namespace-change states at 100
+[2016-09-05 20:12:39,312] [DEBUG] [db:1627] (21718) 0 name-preorder states at 101
+[2016-09-05 20:12:39,312] [DEBUG] [db:1638] (21718) 0 name-change states at 101
+[2016-09-05 20:12:39,312] [DEBUG] [db:1655] (21718) 0 preorders created at 101
+[2016-09-05 20:12:39,312] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 101
+[2016-09-05 20:12:39,312] [DEBUG] [db:1676] (21718) 0 namespace-change states at 101
+[2016-09-05 20:12:39,312] [DEBUG] [db:1627] (21718) 0 name-preorder states at 102
+[2016-09-05 20:12:39,312] [DEBUG] [db:1638] (21718) 0 name-change states at 102
+[2016-09-05 20:12:39,312] [DEBUG] [db:1655] (21718) 0 preorders created at 102
+[2016-09-05 20:12:39,312] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 102
+[2016-09-05 20:12:39,312] [DEBUG] [db:1676] (21718) 0 namespace-change states at 102
+[2016-09-05 20:12:39,312] [DEBUG] [db:1627] (21718) 0 name-preorder states at 103
+[2016-09-05 20:12:39,312] [DEBUG] [db:1638] (21718) 0 name-change states at 103
+[2016-09-05 20:12:39,313] [DEBUG] [db:1655] (21718) 0 preorders created at 103
+[2016-09-05 20:12:39,313] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 103
+[2016-09-05 20:12:39,313] [DEBUG] [db:1676] (21718) 0 namespace-change states at 103
+[2016-09-05 20:12:39,313] [DEBUG] [db:1627] (21718) 0 name-preorder states at 104
+[2016-09-05 20:12:39,313] [DEBUG] [db:1638] (21718) 0 name-change states at 104
+[2016-09-05 20:12:39,313] [DEBUG] [db:1655] (21718) 0 preorders created at 104
+[2016-09-05 20:12:39,313] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 104
+[2016-09-05 20:12:39,313] [DEBUG] [db:1676] (21718) 0 namespace-change states at 104
+[2016-09-05 20:12:39,313] [DEBUG] [db:1627] (21718) 0 name-preorder states at 105
+[2016-09-05 20:12:39,313] [DEBUG] [db:1638] (21718) 0 name-change states at 105
+[2016-09-05 20:12:39,313] [DEBUG] [db:1655] (21718) 0 preorders created at 105
+[2016-09-05 20:12:39,313] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 105
+[2016-09-05 20:12:39,314] [DEBUG] [db:1676] (21718) 0 namespace-change states at 105
+[2016-09-05 20:12:39,314] [DEBUG] [db:1627] (21718) 0 name-preorder states at 106
+[2016-09-05 20:12:39,314] [DEBUG] [db:1638] (21718) 0 name-change states at 106
+[2016-09-05 20:12:39,314] [DEBUG] [db:1655] (21718) 0 preorders created at 106
+[2016-09-05 20:12:39,314] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 106
+[2016-09-05 20:12:39,314] [DEBUG] [db:1676] (21718) 0 namespace-change states at 106
+[2016-09-05 20:12:39,314] [DEBUG] [db:1627] (21718) 0 name-preorder states at 107
+[2016-09-05 20:12:39,314] [DEBUG] [db:1638] (21718) 0 name-change states at 107
+[2016-09-05 20:12:39,314] [DEBUG] [db:1655] (21718) 0 preorders created at 107
+[2016-09-05 20:12:39,314] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 107
+[2016-09-05 20:12:39,314] [DEBUG] [db:1676] (21718) 0 namespace-change states at 107
+[2016-09-05 20:12:39,315] [DEBUG] [db:1627] (21718) 0 name-preorder states at 108
+[2016-09-05 20:12:39,315] [DEBUG] [db:1638] (21718) 0 name-change states at 108
+[2016-09-05 20:12:39,315] [DEBUG] [db:1655] (21718) 0 preorders created at 108
+[2016-09-05 20:12:39,315] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 108
+[2016-09-05 20:12:39,315] [DEBUG] [db:1676] (21718) 0 namespace-change states at 108
+[2016-09-05 20:12:39,315] [DEBUG] [db:1627] (21718) 0 name-preorder states at 109
+[2016-09-05 20:12:39,315] [DEBUG] [db:1638] (21718) 0 name-change states at 109
+[2016-09-05 20:12:39,315] [DEBUG] [db:1655] (21718) 0 preorders created at 109
+[2016-09-05 20:12:39,315] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 109
+[2016-09-05 20:12:39,315] [DEBUG] [db:1676] (21718) 0 namespace-change states at 109
+[2016-09-05 20:12:39,315] [DEBUG] [db:1627] (21718) 0 name-preorder states at 110
+[2016-09-05 20:12:39,316] [DEBUG] [db:1638] (21718) 0 name-change states at 110
+[2016-09-05 20:12:39,316] [DEBUG] [db:1655] (21718) 0 preorders created at 110
+[2016-09-05 20:12:39,316] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 110
+[2016-09-05 20:12:39,316] [DEBUG] [db:1676] (21718) 0 namespace-change states at 110
+[2016-09-05 20:12:39,316] [DEBUG] [db:1627] (21718) 0 name-preorder states at 111
+[2016-09-05 20:12:39,316] [DEBUG] [db:1638] (21718) 0 name-change states at 111
+[2016-09-05 20:12:39,316] [DEBUG] [db:1655] (21718) 0 preorders created at 111
+[2016-09-05 20:12:39,316] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 111
+[2016-09-05 20:12:39,316] [DEBUG] [db:1676] (21718) 0 namespace-change states at 111
+[2016-09-05 20:12:39,316] [DEBUG] [db:1627] (21718) 0 name-preorder states at 112
+[2016-09-05 20:12:39,316] [DEBUG] [db:1638] (21718) 0 name-change states at 112
+[2016-09-05 20:12:39,316] [DEBUG] [db:1655] (21718) 0 preorders created at 112
+[2016-09-05 20:12:39,317] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 112
+[2016-09-05 20:12:39,317] [DEBUG] [db:1676] (21718) 0 namespace-change states at 112
+[2016-09-05 20:12:39,317] [DEBUG] [db:1627] (21718) 0 name-preorder states at 113
+[2016-09-05 20:12:39,317] [DEBUG] [db:1638] (21718) 0 name-change states at 113
+[2016-09-05 20:12:39,317] [DEBUG] [db:1655] (21718) 0 preorders created at 113
+[2016-09-05 20:12:39,317] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 113
+[2016-09-05 20:12:39,317] [DEBUG] [db:1676] (21718) 0 namespace-change states at 113
+[2016-09-05 20:12:39,317] [DEBUG] [db:1627] (21718) 0 name-preorder states at 114
+[2016-09-05 20:12:39,317] [DEBUG] [db:1638] (21718) 0 name-change states at 114
+[2016-09-05 20:12:39,317] [DEBUG] [db:1655] (21718) 0 preorders created at 114
+[2016-09-05 20:12:39,317] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 114
+[2016-09-05 20:12:39,318] [DEBUG] [db:1676] (21718) 0 namespace-change states at 114
+[2016-09-05 20:12:39,318] [DEBUG] [db:1627] (21718) 0 name-preorder states at 115
+[2016-09-05 20:12:39,318] [DEBUG] [db:1638] (21718) 0 name-change states at 115
+[2016-09-05 20:12:39,318] [DEBUG] [db:1655] (21718) 0 preorders created at 115
+[2016-09-05 20:12:39,318] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 115
+[2016-09-05 20:12:39,318] [DEBUG] [db:1676] (21718) 0 namespace-change states at 115
+[2016-09-05 20:12:39,318] [DEBUG] [db:1627] (21718) 0 name-preorder states at 116
+[2016-09-05 20:12:39,318] [DEBUG] [db:1638] (21718) 0 name-change states at 116
+[2016-09-05 20:12:39,318] [DEBUG] [db:1655] (21718) 0 preorders created at 116
+[2016-09-05 20:12:39,318] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 116
+[2016-09-05 20:12:39,318] [DEBUG] [db:1676] (21718) 0 namespace-change states at 116
+[2016-09-05 20:12:39,318] [DEBUG] [db:1627] (21718) 0 name-preorder states at 117
+[2016-09-05 20:12:39,319] [DEBUG] [db:1638] (21718) 0 name-change states at 117
+[2016-09-05 20:12:39,319] [DEBUG] [db:1655] (21718) 0 preorders created at 117
+[2016-09-05 20:12:39,319] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 117
+[2016-09-05 20:12:39,319] [DEBUG] [db:1676] (21718) 0 namespace-change states at 117
+[2016-09-05 20:12:39,319] [DEBUG] [db:1627] (21718) 0 name-preorder states at 118
+[2016-09-05 20:12:39,319] [DEBUG] [db:1638] (21718) 0 name-change states at 118
+[2016-09-05 20:12:39,319] [DEBUG] [db:1655] (21718) 0 preorders created at 118
+[2016-09-05 20:12:39,319] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 118
+[2016-09-05 20:12:39,319] [DEBUG] [db:1676] (21718) 0 namespace-change states at 118
+[2016-09-05 20:12:39,319] [DEBUG] [db:1627] (21718) 0 name-preorder states at 119
+[2016-09-05 20:12:39,319] [DEBUG] [db:1638] (21718) 0 name-change states at 119
+[2016-09-05 20:12:39,320] [DEBUG] [db:1655] (21718) 0 preorders created at 119
+[2016-09-05 20:12:39,320] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 119
+[2016-09-05 20:12:39,320] [DEBUG] [db:1676] (21718) 0 namespace-change states at 119
+[2016-09-05 20:12:39,320] [DEBUG] [db:1627] (21718) 0 name-preorder states at 120
+[2016-09-05 20:12:39,320] [DEBUG] [db:1638] (21718) 0 name-change states at 120
+[2016-09-05 20:12:39,320] [DEBUG] [db:1655] (21718) 0 preorders created at 120
+[2016-09-05 20:12:39,320] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 120
+[2016-09-05 20:12:39,320] [DEBUG] [db:1676] (21718) 0 namespace-change states at 120
+[2016-09-05 20:12:39,320] [DEBUG] [db:1627] (21718) 0 name-preorder states at 121
+[2016-09-05 20:12:39,320] [DEBUG] [db:1638] (21718) 0 name-change states at 121
+[2016-09-05 20:12:39,320] [DEBUG] [db:1655] (21718) 0 preorders created at 121
+[2016-09-05 20:12:39,320] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 121
+[2016-09-05 20:12:39,321] [DEBUG] [db:1676] (21718) 0 namespace-change states at 121
+[2016-09-05 20:12:39,321] [DEBUG] [db:1627] (21718) 0 name-preorder states at 122
+[2016-09-05 20:12:39,321] [DEBUG] [db:1638] (21718) 0 name-change states at 122
+[2016-09-05 20:12:39,321] [DEBUG] [db:1655] (21718) 0 preorders created at 122
+[2016-09-05 20:12:39,321] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 122
+[2016-09-05 20:12:39,321] [DEBUG] [db:1676] (21718) 0 namespace-change states at 122
+[2016-09-05 20:12:39,321] [DEBUG] [db:1627] (21718) 0 name-preorder states at 123
+[2016-09-05 20:12:39,321] [DEBUG] [db:1638] (21718) 0 name-change states at 123
+[2016-09-05 20:12:39,321] [DEBUG] [db:1655] (21718) 0 preorders created at 123
+[2016-09-05 20:12:39,321] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 123
+[2016-09-05 20:12:39,321] [DEBUG] [db:1676] (21718) 0 namespace-change states at 123
+[2016-09-05 20:12:39,321] [DEBUG] [db:1627] (21718) 0 name-preorder states at 124
+[2016-09-05 20:12:39,322] [DEBUG] [db:1638] (21718) 0 name-change states at 124
+[2016-09-05 20:12:39,322] [DEBUG] [db:1655] (21718) 0 preorders created at 124
+[2016-09-05 20:12:39,322] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 124
+[2016-09-05 20:12:39,322] [DEBUG] [db:1676] (21718) 0 namespace-change states at 124
+[2016-09-05 20:12:39,322] [DEBUG] [db:1627] (21718) 0 name-preorder states at 125
+[2016-09-05 20:12:39,322] [DEBUG] [db:1638] (21718) 0 name-change states at 125
+[2016-09-05 20:12:39,322] [DEBUG] [db:1655] (21718) 0 preorders created at 125
+[2016-09-05 20:12:39,322] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 125
+[2016-09-05 20:12:39,322] [DEBUG] [db:1676] (21718) 0 namespace-change states at 125
+[2016-09-05 20:12:39,322] [DEBUG] [db:1627] (21718) 0 name-preorder states at 126
+[2016-09-05 20:12:39,322] [DEBUG] [db:1638] (21718) 0 name-change states at 126
+[2016-09-05 20:12:39,322] [DEBUG] [db:1655] (21718) 0 preorders created at 126
+[2016-09-05 20:12:39,323] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 126
+[2016-09-05 20:12:39,323] [DEBUG] [db:1676] (21718) 0 namespace-change states at 126
+[2016-09-05 20:12:39,323] [DEBUG] [db:1627] (21718) 0 name-preorder states at 127
+[2016-09-05 20:12:39,323] [DEBUG] [db:1638] (21718) 0 name-change states at 127
+[2016-09-05 20:12:39,323] [DEBUG] [db:1655] (21718) 0 preorders created at 127
+[2016-09-05 20:12:39,323] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 127
+[2016-09-05 20:12:39,323] [DEBUG] [db:1676] (21718) 0 namespace-change states at 127
+[2016-09-05 20:12:39,323] [DEBUG] [db:1627] (21718) 0 name-preorder states at 128
+[2016-09-05 20:12:39,323] [DEBUG] [db:1638] (21718) 0 name-change states at 128
+[2016-09-05 20:12:39,323] [DEBUG] [db:1655] (21718) 0 preorders created at 128
+[2016-09-05 20:12:39,323] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 128
+[2016-09-05 20:12:39,324] [DEBUG] [db:1676] (21718) 0 namespace-change states at 128
+[2016-09-05 20:12:39,324] [DEBUG] [db:1627] (21718) 0 name-preorder states at 129
+[2016-09-05 20:12:39,324] [DEBUG] [db:1638] (21718) 0 name-change states at 129
+[2016-09-05 20:12:39,324] [DEBUG] [db:1655] (21718) 0 preorders created at 129
+[2016-09-05 20:12:39,324] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 129
+[2016-09-05 20:12:39,324] [DEBUG] [db:1676] (21718) 0 namespace-change states at 129
+[2016-09-05 20:12:39,324] [DEBUG] [db:1627] (21718) 0 name-preorder states at 130
+[2016-09-05 20:12:39,324] [DEBUG] [db:1638] (21718) 0 name-change states at 130
+[2016-09-05 20:12:39,324] [DEBUG] [db:1655] (21718) 0 preorders created at 130
+[2016-09-05 20:12:39,324] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 130
+[2016-09-05 20:12:39,324] [DEBUG] [db:1676] (21718) 0 namespace-change states at 130
+[2016-09-05 20:12:39,324] [DEBUG] [db:1627] (21718) 0 name-preorder states at 131
+[2016-09-05 20:12:39,325] [DEBUG] [db:1638] (21718) 0 name-change states at 131
+[2016-09-05 20:12:39,325] [DEBUG] [db:1655] (21718) 0 preorders created at 131
+[2016-09-05 20:12:39,325] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 131
+[2016-09-05 20:12:39,325] [DEBUG] [db:1676] (21718) 0 namespace-change states at 131
+[2016-09-05 20:12:39,325] [DEBUG] [db:1627] (21718) 0 name-preorder states at 132
+[2016-09-05 20:12:39,325] [DEBUG] [db:1638] (21718) 0 name-change states at 132
+[2016-09-05 20:12:39,325] [DEBUG] [db:1655] (21718) 0 preorders created at 132
+[2016-09-05 20:12:39,325] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 132
+[2016-09-05 20:12:39,325] [DEBUG] [db:1676] (21718) 0 namespace-change states at 132
+[2016-09-05 20:12:39,325] [DEBUG] [db:1627] (21718) 0 name-preorder states at 133
+[2016-09-05 20:12:39,325] [DEBUG] [db:1638] (21718) 0 name-change states at 133
+[2016-09-05 20:12:39,325] [DEBUG] [db:1655] (21718) 0 preorders created at 133
+[2016-09-05 20:12:39,326] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 133
+[2016-09-05 20:12:39,326] [DEBUG] [db:1676] (21718) 0 namespace-change states at 133
+[2016-09-05 20:12:39,326] [DEBUG] [db:1627] (21718) 0 name-preorder states at 134
+[2016-09-05 20:12:39,326] [DEBUG] [db:1638] (21718) 0 name-change states at 134
+[2016-09-05 20:12:39,326] [DEBUG] [db:1655] (21718) 0 preorders created at 134
+[2016-09-05 20:12:39,326] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 134
+[2016-09-05 20:12:39,326] [DEBUG] [db:1676] (21718) 0 namespace-change states at 134
+[2016-09-05 20:12:39,326] [DEBUG] [db:1627] (21718) 0 name-preorder states at 135
+[2016-09-05 20:12:39,326] [DEBUG] [db:1638] (21718) 0 name-change states at 135
+[2016-09-05 20:12:39,326] [DEBUG] [db:1655] (21718) 0 preorders created at 135
+[2016-09-05 20:12:39,326] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 135
+[2016-09-05 20:12:39,327] [DEBUG] [db:1676] (21718) 0 namespace-change states at 135
+[2016-09-05 20:12:39,327] [DEBUG] [db:1627] (21718) 0 name-preorder states at 136
+[2016-09-05 20:12:39,327] [DEBUG] [db:1638] (21718) 0 name-change states at 136
+[2016-09-05 20:12:39,327] [DEBUG] [db:1655] (21718) 0 preorders created at 136
+[2016-09-05 20:12:39,327] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 136
+[2016-09-05 20:12:39,327] [DEBUG] [db:1676] (21718) 0 namespace-change states at 136
+[2016-09-05 20:12:39,327] [DEBUG] [db:1627] (21718) 0 name-preorder states at 137
+[2016-09-05 20:12:39,327] [DEBUG] [db:1638] (21718) 0 name-change states at 137
+[2016-09-05 20:12:39,327] [DEBUG] [db:1655] (21718) 0 preorders created at 137
+[2016-09-05 20:12:39,327] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 137
+[2016-09-05 20:12:39,327] [DEBUG] [db:1676] (21718) 0 namespace-change states at 137
+[2016-09-05 20:12:39,327] [DEBUG] [db:1627] (21718) 0 name-preorder states at 138
+[2016-09-05 20:12:39,328] [DEBUG] [db:1638] (21718) 0 name-change states at 138
+[2016-09-05 20:12:39,328] [DEBUG] [db:1655] (21718) 0 preorders created at 138
+[2016-09-05 20:12:39,328] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 138
+[2016-09-05 20:12:39,328] [DEBUG] [db:1676] (21718) 0 namespace-change states at 138
+[2016-09-05 20:12:39,328] [DEBUG] [db:1627] (21718) 0 name-preorder states at 139
+[2016-09-05 20:12:39,328] [DEBUG] [db:1638] (21718) 0 name-change states at 139
+[2016-09-05 20:12:39,328] [DEBUG] [db:1655] (21718) 0 preorders created at 139
+[2016-09-05 20:12:39,328] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 139
+[2016-09-05 20:12:39,328] [DEBUG] [db:1676] (21718) 0 namespace-change states at 139
+[2016-09-05 20:12:39,328] [DEBUG] [db:1627] (21718) 0 name-preorder states at 140
+[2016-09-05 20:12:39,328] [DEBUG] [db:1638] (21718) 0 name-change states at 140
+[2016-09-05 20:12:39,328] [DEBUG] [db:1655] (21718) 0 preorders created at 140
+[2016-09-05 20:12:39,329] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 140
+[2016-09-05 20:12:39,329] [DEBUG] [db:1676] (21718) 0 namespace-change states at 140
+[2016-09-05 20:12:39,329] [DEBUG] [db:1627] (21718) 0 name-preorder states at 141
+[2016-09-05 20:12:39,329] [DEBUG] [db:1638] (21718) 0 name-change states at 141
+[2016-09-05 20:12:39,329] [DEBUG] [db:1655] (21718) 0 preorders created at 141
+[2016-09-05 20:12:39,329] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 141
+[2016-09-05 20:12:39,329] [DEBUG] [db:1676] (21718) 0 namespace-change states at 141
+[2016-09-05 20:12:39,329] [DEBUG] [db:1627] (21718) 0 name-preorder states at 142
+[2016-09-05 20:12:39,329] [DEBUG] [db:1638] (21718) 0 name-change states at 142
+[2016-09-05 20:12:39,329] [DEBUG] [db:1655] (21718) 0 preorders created at 142
+[2016-09-05 20:12:39,329] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 142
+[2016-09-05 20:12:39,329] [DEBUG] [db:1676] (21718) 0 namespace-change states at 142
+[2016-09-05 20:12:39,330] [DEBUG] [db:1627] (21718) 0 name-preorder states at 143
+[2016-09-05 20:12:39,330] [DEBUG] [db:1638] (21718) 0 name-change states at 143
+[2016-09-05 20:12:39,330] [DEBUG] [db:1655] (21718) 0 preorders created at 143
+[2016-09-05 20:12:39,330] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 143
+[2016-09-05 20:12:39,330] [DEBUG] [db:1676] (21718) 0 namespace-change states at 143
+[2016-09-05 20:12:39,330] [DEBUG] [db:1627] (21718) 0 name-preorder states at 144
+[2016-09-05 20:12:39,330] [DEBUG] [db:1638] (21718) 0 name-change states at 144
+[2016-09-05 20:12:39,330] [DEBUG] [db:1655] (21718) 0 preorders created at 144
+[2016-09-05 20:12:39,330] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 144
+[2016-09-05 20:12:39,330] [DEBUG] [db:1676] (21718) 0 namespace-change states at 144
+[2016-09-05 20:12:39,330] [DEBUG] [db:1627] (21718) 0 name-preorder states at 145
+[2016-09-05 20:12:39,330] [DEBUG] [db:1638] (21718) 0 name-change states at 145
+[2016-09-05 20:12:39,331] [DEBUG] [db:1655] (21718) 0 preorders created at 145
+[2016-09-05 20:12:39,331] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 145
+[2016-09-05 20:12:39,331] [DEBUG] [db:1676] (21718) 0 namespace-change states at 145
+[2016-09-05 20:12:39,331] [DEBUG] [db:1627] (21718) 0 name-preorder states at 146
+[2016-09-05 20:12:39,331] [DEBUG] [db:1638] (21718) 0 name-change states at 146
+[2016-09-05 20:12:39,331] [DEBUG] [db:1655] (21718) 0 preorders created at 146
+[2016-09-05 20:12:39,331] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 146
+[2016-09-05 20:12:39,331] [DEBUG] [db:1676] (21718) 0 namespace-change states at 146
+[2016-09-05 20:12:39,331] [DEBUG] [db:1627] (21718) 0 name-preorder states at 147
+[2016-09-05 20:12:39,331] [DEBUG] [db:1638] (21718) 0 name-change states at 147
+[2016-09-05 20:12:39,331] [DEBUG] [db:1655] (21718) 0 preorders created at 147
+[2016-09-05 20:12:39,331] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 147
+[2016-09-05 20:12:39,332] [DEBUG] [db:1676] (21718) 0 namespace-change states at 147
+[2016-09-05 20:12:39,332] [DEBUG] [db:1627] (21718) 0 name-preorder states at 148
+[2016-09-05 20:12:39,332] [DEBUG] [db:1638] (21718) 0 name-change states at 148
+[2016-09-05 20:12:39,332] [DEBUG] [db:1655] (21718) 0 preorders created at 148
+[2016-09-05 20:12:39,332] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 148
+[2016-09-05 20:12:39,332] [DEBUG] [db:1676] (21718) 0 namespace-change states at 148
+[2016-09-05 20:12:39,332] [DEBUG] [db:1627] (21718) 0 name-preorder states at 149
+[2016-09-05 20:12:39,332] [DEBUG] [db:1638] (21718) 0 name-change states at 149
+[2016-09-05 20:12:39,332] [DEBUG] [db:1655] (21718) 0 preorders created at 149
+[2016-09-05 20:12:39,332] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 149
+[2016-09-05 20:12:39,332] [DEBUG] [db:1676] (21718) 0 namespace-change states at 149
+[2016-09-05 20:12:39,333] [DEBUG] [db:1627] (21718) 0 name-preorder states at 150
+[2016-09-05 20:12:39,333] [DEBUG] [db:1638] (21718) 0 name-change states at 150
+[2016-09-05 20:12:39,333] [DEBUG] [db:1655] (21718) 0 preorders created at 150
+[2016-09-05 20:12:39,333] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 150
+[2016-09-05 20:12:39,333] [DEBUG] [db:1676] (21718) 0 namespace-change states at 150
+[2016-09-05 20:12:39,333] [DEBUG] [db:1627] (21718) 0 name-preorder states at 151
+[2016-09-05 20:12:39,333] [DEBUG] [db:1638] (21718) 0 name-change states at 151
+[2016-09-05 20:12:39,333] [DEBUG] [db:1655] (21718) 0 preorders created at 151
+[2016-09-05 20:12:39,333] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 151
+[2016-09-05 20:12:39,333] [DEBUG] [db:1676] (21718) 0 namespace-change states at 151
+[2016-09-05 20:12:39,333] [DEBUG] [db:1627] (21718) 0 name-preorder states at 152
+[2016-09-05 20:12:39,333] [DEBUG] [db:1638] (21718) 0 name-change states at 152
+[2016-09-05 20:12:39,334] [DEBUG] [db:1655] (21718) 0 preorders created at 152
+[2016-09-05 20:12:39,334] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 152
+[2016-09-05 20:12:39,334] [DEBUG] [db:1676] (21718) 0 namespace-change states at 152
+[2016-09-05 20:12:39,334] [DEBUG] [db:1627] (21718) 0 name-preorder states at 153
+[2016-09-05 20:12:39,334] [DEBUG] [db:1638] (21718) 0 name-change states at 153
+[2016-09-05 20:12:39,334] [DEBUG] [db:1655] (21718) 0 preorders created at 153
+[2016-09-05 20:12:39,334] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 153
+[2016-09-05 20:12:39,334] [DEBUG] [db:1676] (21718) 0 namespace-change states at 153
+[2016-09-05 20:12:39,334] [DEBUG] [db:1627] (21718) 0 name-preorder states at 154
+[2016-09-05 20:12:39,334] [DEBUG] [db:1638] (21718) 0 name-change states at 154
+[2016-09-05 20:12:39,334] [DEBUG] [db:1655] (21718) 0 preorders created at 154
+[2016-09-05 20:12:39,335] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 154
+[2016-09-05 20:12:39,335] [DEBUG] [db:1676] (21718) 0 namespace-change states at 154
+[2016-09-05 20:12:39,335] [DEBUG] [db:1627] (21718) 0 name-preorder states at 155
+[2016-09-05 20:12:39,335] [DEBUG] [db:1638] (21718) 0 name-change states at 155
+[2016-09-05 20:12:39,335] [DEBUG] [db:1655] (21718) 0 preorders created at 155
+[2016-09-05 20:12:39,335] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 155
+[2016-09-05 20:12:39,335] [DEBUG] [db:1676] (21718) 0 namespace-change states at 155
+[2016-09-05 20:12:39,335] [DEBUG] [db:1627] (21718) 0 name-preorder states at 156
+[2016-09-05 20:12:39,335] [DEBUG] [db:1638] (21718) 0 name-change states at 156
+[2016-09-05 20:12:39,335] [DEBUG] [db:1655] (21718) 0 preorders created at 156
+[2016-09-05 20:12:39,335] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 156
+[2016-09-05 20:12:39,335] [DEBUG] [db:1676] (21718) 0 namespace-change states at 156
+[2016-09-05 20:12:39,336] [DEBUG] [db:1627] (21718) 0 name-preorder states at 157
+[2016-09-05 20:12:39,336] [DEBUG] [db:1638] (21718) 0 name-change states at 157
+[2016-09-05 20:12:39,336] [DEBUG] [db:1655] (21718) 0 preorders created at 157
+[2016-09-05 20:12:39,336] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 157
+[2016-09-05 20:12:39,336] [DEBUG] [db:1676] (21718) 0 namespace-change states at 157
+[2016-09-05 20:12:39,336] [DEBUG] [db:1627] (21718) 0 name-preorder states at 158
+[2016-09-05 20:12:39,336] [DEBUG] [db:1638] (21718) 0 name-change states at 158
+[2016-09-05 20:12:39,336] [DEBUG] [db:1655] (21718) 0 preorders created at 158
+[2016-09-05 20:12:39,336] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 158
+[2016-09-05 20:12:39,336] [DEBUG] [db:1676] (21718) 0 namespace-change states at 158
+[2016-09-05 20:12:39,336] [DEBUG] [db:1627] (21718) 0 name-preorder states at 159
+[2016-09-05 20:12:39,337] [DEBUG] [db:1638] (21718) 0 name-change states at 159
+[2016-09-05 20:12:39,337] [DEBUG] [db:1655] (21718) 0 preorders created at 159
+[2016-09-05 20:12:39,337] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 159
+[2016-09-05 20:12:39,337] [DEBUG] [db:1676] (21718) 0 namespace-change states at 159
+[2016-09-05 20:12:39,337] [DEBUG] [db:1627] (21718) 0 name-preorder states at 160
+[2016-09-05 20:12:39,337] [DEBUG] [db:1638] (21718) 0 name-change states at 160
+[2016-09-05 20:12:39,337] [DEBUG] [db:1655] (21718) 0 preorders created at 160
+[2016-09-05 20:12:39,337] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 160
+[2016-09-05 20:12:39,337] [DEBUG] [db:1676] (21718) 0 namespace-change states at 160
+[2016-09-05 20:12:39,337] [DEBUG] [db:1627] (21718) 0 name-preorder states at 161
+[2016-09-05 20:12:39,337] [DEBUG] [db:1638] (21718) 0 name-change states at 161
+[2016-09-05 20:12:39,337] [DEBUG] [db:1655] (21718) 0 preorders created at 161
+[2016-09-05 20:12:39,338] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 161
+[2016-09-05 20:12:39,338] [DEBUG] [db:1676] (21718) 0 namespace-change states at 161
+[2016-09-05 20:12:39,338] [DEBUG] [db:1627] (21718) 0 name-preorder states at 162
+[2016-09-05 20:12:39,338] [DEBUG] [db:1638] (21718) 0 name-change states at 162
+[2016-09-05 20:12:39,338] [DEBUG] [db:1655] (21718) 0 preorders created at 162
+[2016-09-05 20:12:39,338] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 162
+[2016-09-05 20:12:39,338] [DEBUG] [db:1676] (21718) 0 namespace-change states at 162
+[2016-09-05 20:12:39,338] [DEBUG] [db:1627] (21718) 0 name-preorder states at 163
+[2016-09-05 20:12:39,338] [DEBUG] [db:1638] (21718) 0 name-change states at 163
+[2016-09-05 20:12:39,338] [DEBUG] [db:1655] (21718) 0 preorders created at 163
+[2016-09-05 20:12:39,338] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 163
+[2016-09-05 20:12:39,338] [DEBUG] [db:1676] (21718) 0 namespace-change states at 163
+[2016-09-05 20:12:39,339] [DEBUG] [db:1627] (21718) 0 name-preorder states at 164
+[2016-09-05 20:12:39,339] [DEBUG] [db:1638] (21718) 0 name-change states at 164
+[2016-09-05 20:12:39,339] [DEBUG] [db:1655] (21718) 0 preorders created at 164
+[2016-09-05 20:12:39,339] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 164
+[2016-09-05 20:12:39,339] [DEBUG] [db:1676] (21718) 0 namespace-change states at 164
+[2016-09-05 20:12:39,339] [DEBUG] [db:1627] (21718) 0 name-preorder states at 165
+[2016-09-05 20:12:39,339] [DEBUG] [db:1638] (21718) 0 name-change states at 165
+[2016-09-05 20:12:39,339] [DEBUG] [db:1655] (21718) 0 preorders created at 165
+[2016-09-05 20:12:39,339] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 165
+[2016-09-05 20:12:39,339] [DEBUG] [db:1676] (21718) 0 namespace-change states at 165
+[2016-09-05 20:12:39,339] [DEBUG] [db:1627] (21718) 0 name-preorder states at 166
+[2016-09-05 20:12:39,340] [DEBUG] [db:1638] (21718) 0 name-change states at 166
+[2016-09-05 20:12:39,340] [DEBUG] [db:1655] (21718) 0 preorders created at 166
+[2016-09-05 20:12:39,340] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 166
+[2016-09-05 20:12:39,340] [DEBUG] [db:1676] (21718) 0 namespace-change states at 166
+[2016-09-05 20:12:39,340] [DEBUG] [db:1627] (21718) 0 name-preorder states at 167
+[2016-09-05 20:12:39,340] [DEBUG] [db:1638] (21718) 0 name-change states at 167
+[2016-09-05 20:12:39,340] [DEBUG] [db:1655] (21718) 0 preorders created at 167
+[2016-09-05 20:12:39,340] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 167
+[2016-09-05 20:12:39,340] [DEBUG] [db:1676] (21718) 0 namespace-change states at 167
+[2016-09-05 20:12:39,340] [DEBUG] [db:1627] (21718) 0 name-preorder states at 168
+[2016-09-05 20:12:39,340] [DEBUG] [db:1638] (21718) 0 name-change states at 168
+[2016-09-05 20:12:39,341] [DEBUG] [db:1655] (21718) 0 preorders created at 168
+[2016-09-05 20:12:39,341] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 168
+[2016-09-05 20:12:39,341] [DEBUG] [db:1676] (21718) 0 namespace-change states at 168
+[2016-09-05 20:12:39,341] [DEBUG] [db:1627] (21718) 0 name-preorder states at 169
+[2016-09-05 20:12:39,341] [DEBUG] [db:1638] (21718) 0 name-change states at 169
+[2016-09-05 20:12:39,341] [DEBUG] [db:1655] (21718) 0 preorders created at 169
+[2016-09-05 20:12:39,341] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 169
+[2016-09-05 20:12:39,341] [DEBUG] [db:1676] (21718) 0 namespace-change states at 169
+[2016-09-05 20:12:39,341] [DEBUG] [db:1627] (21718) 0 name-preorder states at 170
+[2016-09-05 20:12:39,341] [DEBUG] [db:1638] (21718) 0 name-change states at 170
+[2016-09-05 20:12:39,341] [DEBUG] [db:1655] (21718) 0 preorders created at 170
+[2016-09-05 20:12:39,342] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 170
+[2016-09-05 20:12:39,342] [DEBUG] [db:1676] (21718) 0 namespace-change states at 170
+[2016-09-05 20:12:39,342] [DEBUG] [db:1627] (21718) 0 name-preorder states at 171
+[2016-09-05 20:12:39,342] [DEBUG] [db:1638] (21718) 0 name-change states at 171
+[2016-09-05 20:12:39,342] [DEBUG] [db:1655] (21718) 0 preorders created at 171
+[2016-09-05 20:12:39,342] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 171
+[2016-09-05 20:12:39,342] [DEBUG] [db:1676] (21718) 0 namespace-change states at 171
+[2016-09-05 20:12:39,342] [DEBUG] [db:1627] (21718) 0 name-preorder states at 172
+[2016-09-05 20:12:39,342] [DEBUG] [db:1638] (21718) 0 name-change states at 172
+[2016-09-05 20:12:39,342] [DEBUG] [db:1655] (21718) 0 preorders created at 172
+[2016-09-05 20:12:39,342] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 172
+[2016-09-05 20:12:39,342] [DEBUG] [db:1676] (21718) 0 namespace-change states at 172
+[2016-09-05 20:12:39,343] [DEBUG] [db:1627] (21718) 0 name-preorder states at 173
+[2016-09-05 20:12:39,343] [DEBUG] [db:1638] (21718) 0 name-change states at 173
+[2016-09-05 20:12:39,343] [DEBUG] [db:1655] (21718) 0 preorders created at 173
+[2016-09-05 20:12:39,343] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 173
+[2016-09-05 20:12:39,343] [DEBUG] [db:1676] (21718) 0 namespace-change states at 173
+[2016-09-05 20:12:39,343] [DEBUG] [db:1627] (21718) 0 name-preorder states at 174
+[2016-09-05 20:12:39,343] [DEBUG] [db:1638] (21718) 0 name-change states at 174
+[2016-09-05 20:12:39,344] [DEBUG] [db:1655] (21718) 0 preorders created at 174
+[2016-09-05 20:12:39,344] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 174
+[2016-09-05 20:12:39,344] [DEBUG] [db:1676] (21718) 0 namespace-change states at 174
+[2016-09-05 20:12:39,344] [DEBUG] [db:1627] (21718) 0 name-preorder states at 175
+[2016-09-05 20:12:39,344] [DEBUG] [db:1638] (21718) 0 name-change states at 175
+[2016-09-05 20:12:39,344] [DEBUG] [db:1655] (21718) 0 preorders created at 175
+[2016-09-05 20:12:39,344] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 175
+[2016-09-05 20:12:39,344] [DEBUG] [db:1676] (21718) 0 namespace-change states at 175
+[2016-09-05 20:12:39,344] [DEBUG] [db:1627] (21718) 0 name-preorder states at 176
+[2016-09-05 20:12:39,344] [DEBUG] [db:1638] (21718) 0 name-change states at 176
+[2016-09-05 20:12:39,344] [DEBUG] [db:1655] (21718) 0 preorders created at 176
+[2016-09-05 20:12:39,344] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 176
+[2016-09-05 20:12:39,345] [DEBUG] [db:1676] (21718) 0 namespace-change states at 176
+[2016-09-05 20:12:39,345] [DEBUG] [db:1627] (21718) 0 name-preorder states at 177
+[2016-09-05 20:12:39,345] [DEBUG] [db:1638] (21718) 0 name-change states at 177
+[2016-09-05 20:12:39,345] [DEBUG] [db:1655] (21718) 0 preorders created at 177
+[2016-09-05 20:12:39,345] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 177
+[2016-09-05 20:12:39,345] [DEBUG] [db:1676] (21718) 0 namespace-change states at 177
+[2016-09-05 20:12:39,345] [DEBUG] [db:1627] (21718) 0 name-preorder states at 178
+[2016-09-05 20:12:39,345] [DEBUG] [db:1638] (21718) 0 name-change states at 178
+[2016-09-05 20:12:39,345] [DEBUG] [db:1655] (21718) 0 preorders created at 178
+[2016-09-05 20:12:39,345] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 178
+[2016-09-05 20:12:39,345] [DEBUG] [db:1676] (21718) 0 namespace-change states at 178
+[2016-09-05 20:12:39,345] [DEBUG] [db:1627] (21718) 0 name-preorder states at 179
+[2016-09-05 20:12:39,346] [DEBUG] [db:1638] (21718) 0 name-change states at 179
+[2016-09-05 20:12:39,346] [DEBUG] [db:1655] (21718) 0 preorders created at 179
+[2016-09-05 20:12:39,346] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 179
+[2016-09-05 20:12:39,346] [DEBUG] [db:1676] (21718) 0 namespace-change states at 179
+[2016-09-05 20:12:39,346] [DEBUG] [db:1627] (21718) 0 name-preorder states at 180
+[2016-09-05 20:12:39,346] [DEBUG] [db:1638] (21718) 0 name-change states at 180
+[2016-09-05 20:12:39,346] [DEBUG] [db:1655] (21718) 0 preorders created at 180
+[2016-09-05 20:12:39,346] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 180
+[2016-09-05 20:12:39,346] [DEBUG] [db:1676] (21718) 0 namespace-change states at 180
+[2016-09-05 20:12:39,346] [DEBUG] [db:1627] (21718) 0 name-preorder states at 181
+[2016-09-05 20:12:39,346] [DEBUG] [db:1638] (21718) 0 name-change states at 181
+[2016-09-05 20:12:39,346] [DEBUG] [db:1655] (21718) 0 preorders created at 181
+[2016-09-05 20:12:39,347] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 181
+[2016-09-05 20:12:39,347] [DEBUG] [db:1676] (21718) 0 namespace-change states at 181
+[2016-09-05 20:12:39,347] [DEBUG] [db:1627] (21718) 0 name-preorder states at 182
+[2016-09-05 20:12:39,347] [DEBUG] [db:1638] (21718) 0 name-change states at 182
+[2016-09-05 20:12:39,347] [DEBUG] [db:1655] (21718) 0 preorders created at 182
+[2016-09-05 20:12:39,347] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 182
+[2016-09-05 20:12:39,347] [DEBUG] [db:1676] (21718) 0 namespace-change states at 182
+[2016-09-05 20:12:39,347] [DEBUG] [db:1627] (21718) 0 name-preorder states at 183
+[2016-09-05 20:12:39,347] [DEBUG] [db:1638] (21718) 0 name-change states at 183
+[2016-09-05 20:12:39,347] [DEBUG] [db:1655] (21718) 0 preorders created at 183
+[2016-09-05 20:12:39,347] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 183
+[2016-09-05 20:12:39,348] [DEBUG] [db:1676] (21718) 0 namespace-change states at 183
+[2016-09-05 20:12:39,348] [DEBUG] [db:1627] (21718) 0 name-preorder states at 184
+[2016-09-05 20:12:39,348] [DEBUG] [db:1638] (21718) 0 name-change states at 184
+[2016-09-05 20:12:39,348] [DEBUG] [db:1655] (21718) 0 preorders created at 184
+[2016-09-05 20:12:39,348] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 184
+[2016-09-05 20:12:39,348] [DEBUG] [db:1676] (21718) 0 namespace-change states at 184
+[2016-09-05 20:12:39,348] [DEBUG] [db:1627] (21718) 0 name-preorder states at 185
+[2016-09-05 20:12:39,348] [DEBUG] [db:1638] (21718) 0 name-change states at 185
+[2016-09-05 20:12:39,348] [DEBUG] [db:1655] (21718) 0 preorders created at 185
+[2016-09-05 20:12:39,348] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 185
+[2016-09-05 20:12:39,348] [DEBUG] [db:1676] (21718) 0 namespace-change states at 185
+[2016-09-05 20:12:39,348] [DEBUG] [db:1627] (21718) 0 name-preorder states at 186
+[2016-09-05 20:12:39,349] [DEBUG] [db:1638] (21718) 0 name-change states at 186
+[2016-09-05 20:12:39,349] [DEBUG] [db:1655] (21718) 0 preorders created at 186
+[2016-09-05 20:12:39,349] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 186
+[2016-09-05 20:12:39,349] [DEBUG] [db:1676] (21718) 0 namespace-change states at 186
+[2016-09-05 20:12:39,349] [DEBUG] [db:1627] (21718) 0 name-preorder states at 187
+[2016-09-05 20:12:39,349] [DEBUG] [db:1638] (21718) 0 name-change states at 187
+[2016-09-05 20:12:39,349] [DEBUG] [db:1655] (21718) 0 preorders created at 187
+[2016-09-05 20:12:39,349] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 187
+[2016-09-05 20:12:39,349] [DEBUG] [db:1676] (21718) 0 namespace-change states at 187
+[2016-09-05 20:12:39,349] [DEBUG] [db:1627] (21718) 0 name-preorder states at 188
+[2016-09-05 20:12:39,349] [DEBUG] [db:1638] (21718) 0 name-change states at 188
+[2016-09-05 20:12:39,349] [DEBUG] [db:1655] (21718) 0 preorders created at 188
+[2016-09-05 20:12:39,350] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 188
+[2016-09-05 20:12:39,350] [DEBUG] [db:1676] (21718) 0 namespace-change states at 188
+[2016-09-05 20:12:39,350] [DEBUG] [db:1627] (21718) 0 name-preorder states at 189
+[2016-09-05 20:12:39,350] [DEBUG] [db:1638] (21718) 0 name-change states at 189
+[2016-09-05 20:12:39,350] [DEBUG] [db:1655] (21718) 0 preorders created at 189
+[2016-09-05 20:12:39,350] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 189
+[2016-09-05 20:12:39,350] [DEBUG] [db:1676] (21718) 0 namespace-change states at 189
+[2016-09-05 20:12:39,350] [DEBUG] [db:1627] (21718) 0 name-preorder states at 190
+[2016-09-05 20:12:39,350] [DEBUG] [db:1638] (21718) 0 name-change states at 190
+[2016-09-05 20:12:39,350] [DEBUG] [db:1655] (21718) 0 preorders created at 190
+[2016-09-05 20:12:39,350] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 190
+[2016-09-05 20:12:39,350] [DEBUG] [db:1676] (21718) 0 namespace-change states at 190
+[2016-09-05 20:12:39,351] [DEBUG] [db:1627] (21718) 0 name-preorder states at 191
+[2016-09-05 20:12:39,351] [DEBUG] [db:1638] (21718) 0 name-change states at 191
+[2016-09-05 20:12:39,351] [DEBUG] [db:1655] (21718) 0 preorders created at 191
+[2016-09-05 20:12:39,351] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 191
+[2016-09-05 20:12:39,351] [DEBUG] [db:1676] (21718) 0 namespace-change states at 191
+[2016-09-05 20:12:39,351] [DEBUG] [db:1627] (21718) 0 name-preorder states at 192
+[2016-09-05 20:12:39,351] [DEBUG] [db:1638] (21718) 0 name-change states at 192
+[2016-09-05 20:12:39,351] [DEBUG] [db:1655] (21718) 0 preorders created at 192
+[2016-09-05 20:12:39,351] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 192
+[2016-09-05 20:12:39,351] [DEBUG] [db:1676] (21718) 0 namespace-change states at 192
+[2016-09-05 20:12:39,352] [DEBUG] [db:1627] (21718) 0 name-preorder states at 193
+[2016-09-05 20:12:39,352] [DEBUG] [db:1638] (21718) 0 name-change states at 193
+[2016-09-05 20:12:39,352] [DEBUG] [db:1655] (21718) 0 preorders created at 193
+[2016-09-05 20:12:39,352] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 193
+[2016-09-05 20:12:39,352] [DEBUG] [db:1676] (21718) 0 namespace-change states at 193
+[2016-09-05 20:12:39,352] [DEBUG] [db:1627] (21718) 0 name-preorder states at 194
+[2016-09-05 20:12:39,352] [DEBUG] [db:1638] (21718) 0 name-change states at 194
+[2016-09-05 20:12:39,352] [DEBUG] [db:1655] (21718) 0 preorders created at 194
+[2016-09-05 20:12:39,352] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 194
+[2016-09-05 20:12:39,352] [DEBUG] [db:1676] (21718) 0 namespace-change states at 194
+[2016-09-05 20:12:39,352] [DEBUG] [db:1627] (21718) 0 name-preorder states at 195
+[2016-09-05 20:12:39,352] [DEBUG] [db:1638] (21718) 0 name-change states at 195
+[2016-09-05 20:12:39,353] [DEBUG] [db:1655] (21718) 0 preorders created at 195
+[2016-09-05 20:12:39,353] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 195
+[2016-09-05 20:12:39,353] [DEBUG] [db:1676] (21718) 0 namespace-change states at 195
+[2016-09-05 20:12:39,353] [DEBUG] [db:1627] (21718) 0 name-preorder states at 196
+[2016-09-05 20:12:39,353] [DEBUG] [db:1638] (21718) 0 name-change states at 196
+[2016-09-05 20:12:39,353] [DEBUG] [db:1655] (21718) 0 preorders created at 196
+[2016-09-05 20:12:39,353] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 196
+[2016-09-05 20:12:39,353] [DEBUG] [db:1676] (21718) 0 namespace-change states at 196
+[2016-09-05 20:12:39,353] [DEBUG] [db:1627] (21718) 0 name-preorder states at 197
+[2016-09-05 20:12:39,353] [DEBUG] [db:1638] (21718) 0 name-change states at 197
+[2016-09-05 20:12:39,353] [DEBUG] [db:1655] (21718) 0 preorders created at 197
+[2016-09-05 20:12:39,353] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 197
+[2016-09-05 20:12:39,354] [DEBUG] [db:1676] (21718) 0 namespace-change states at 197
+[2016-09-05 20:12:39,354] [DEBUG] [db:1627] (21718) 0 name-preorder states at 198
+[2016-09-05 20:12:39,354] [DEBUG] [db:1638] (21718) 0 name-change states at 198
+[2016-09-05 20:12:39,354] [DEBUG] [db:1655] (21718) 0 preorders created at 198
+[2016-09-05 20:12:39,354] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 198
+[2016-09-05 20:12:39,354] [DEBUG] [db:1676] (21718) 0 namespace-change states at 198
+[2016-09-05 20:12:39,354] [DEBUG] [db:1627] (21718) 0 name-preorder states at 199
+[2016-09-05 20:12:39,354] [DEBUG] [db:1638] (21718) 0 name-change states at 199
+[2016-09-05 20:12:39,354] [DEBUG] [db:1655] (21718) 0 preorders created at 199
+[2016-09-05 20:12:39,354] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 199
+[2016-09-05 20:12:39,354] [DEBUG] [db:1676] (21718) 0 namespace-change states at 199
+[2016-09-05 20:12:39,354] [DEBUG] [db:1627] (21718) 0 name-preorder states at 200
+[2016-09-05 20:12:39,355] [DEBUG] [db:1638] (21718) 0 name-change states at 200
+[2016-09-05 20:12:39,355] [DEBUG] [db:1655] (21718) 0 preorders created at 200
+[2016-09-05 20:12:39,355] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 200
+[2016-09-05 20:12:39,355] [DEBUG] [db:1676] (21718) 0 namespace-change states at 200
+[2016-09-05 20:12:39,355] [DEBUG] [db:1627] (21718) 0 name-preorder states at 201
+[2016-09-05 20:12:39,355] [DEBUG] [db:1638] (21718) 0 name-change states at 201
+[2016-09-05 20:12:39,355] [DEBUG] [db:1655] (21718) 0 preorders created at 201
+[2016-09-05 20:12:39,355] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 201
+[2016-09-05 20:12:39,355] [DEBUG] [db:1676] (21718) 0 namespace-change states at 201
+[2016-09-05 20:12:39,355] [DEBUG] [db:1627] (21718) 0 name-preorder states at 202
+[2016-09-05 20:12:39,355] [DEBUG] [db:1638] (21718) 0 name-change states at 202
+[2016-09-05 20:12:39,356] [DEBUG] [db:1655] (21718) 0 preorders created at 202
+[2016-09-05 20:12:39,356] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 202
+[2016-09-05 20:12:39,356] [DEBUG] [db:1676] (21718) 0 namespace-change states at 202
+[2016-09-05 20:12:39,356] [DEBUG] [db:1627] (21718) 0 name-preorder states at 203
+[2016-09-05 20:12:39,356] [DEBUG] [db:1638] (21718) 0 name-change states at 203
+[2016-09-05 20:12:39,356] [DEBUG] [db:1655] (21718) 0 preorders created at 203
+[2016-09-05 20:12:39,356] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 203
+[2016-09-05 20:12:39,356] [DEBUG] [db:1676] (21718) 0 namespace-change states at 203
+[2016-09-05 20:12:39,356] [DEBUG] [db:1627] (21718) 0 name-preorder states at 204
+[2016-09-05 20:12:39,356] [DEBUG] [db:1638] (21718) 0 name-change states at 204
+[2016-09-05 20:12:39,356] [DEBUG] [db:1655] (21718) 0 preorders created at 204
+[2016-09-05 20:12:39,356] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 204
+[2016-09-05 20:12:39,357] [DEBUG] [db:1676] (21718) 0 namespace-change states at 204
+[2016-09-05 20:12:39,357] [DEBUG] [db:1627] (21718) 0 name-preorder states at 205
+[2016-09-05 20:12:39,357] [DEBUG] [db:1638] (21718) 0 name-change states at 205
+[2016-09-05 20:12:39,357] [DEBUG] [db:1655] (21718) 0 preorders created at 205
+[2016-09-05 20:12:39,357] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 205
+[2016-09-05 20:12:39,357] [DEBUG] [db:1676] (21718) 0 namespace-change states at 205
+[2016-09-05 20:12:39,357] [DEBUG] [db:1627] (21718) 0 name-preorder states at 206
+[2016-09-05 20:12:39,357] [DEBUG] [db:1638] (21718) 0 name-change states at 206
+[2016-09-05 20:12:39,357] [DEBUG] [db:1655] (21718) 0 preorders created at 206
+[2016-09-05 20:12:39,357] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 206
+[2016-09-05 20:12:39,357] [DEBUG] [db:1676] (21718) 0 namespace-change states at 206
+[2016-09-05 20:12:39,358] [DEBUG] [db:1627] (21718) 0 name-preorder states at 207
+[2016-09-05 20:12:39,358] [DEBUG] [db:1638] (21718) 0 name-change states at 207
+[2016-09-05 20:12:39,358] [DEBUG] [db:1655] (21718) 0 preorders created at 207
+[2016-09-05 20:12:39,358] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 207
+[2016-09-05 20:12:39,358] [DEBUG] [db:1676] (21718) 0 namespace-change states at 207
+[2016-09-05 20:12:39,358] [DEBUG] [db:1627] (21718) 0 name-preorder states at 208
+[2016-09-05 20:12:39,358] [DEBUG] [db:1638] (21718) 0 name-change states at 208
+[2016-09-05 20:12:39,358] [DEBUG] [db:1655] (21718) 0 preorders created at 208
+[2016-09-05 20:12:39,358] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 208
+[2016-09-05 20:12:39,358] [DEBUG] [db:1676] (21718) 0 namespace-change states at 208
+[2016-09-05 20:12:39,358] [DEBUG] [db:1627] (21718) 0 name-preorder states at 209
+[2016-09-05 20:12:39,358] [DEBUG] [db:1638] (21718) 0 name-change states at 209
+[2016-09-05 20:12:39,359] [DEBUG] [db:1655] (21718) 0 preorders created at 209
+[2016-09-05 20:12:39,359] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 209
+[2016-09-05 20:12:39,359] [DEBUG] [db:1676] (21718) 0 namespace-change states at 209
+[2016-09-05 20:12:39,359] [DEBUG] [db:1627] (21718) 0 name-preorder states at 210
+[2016-09-05 20:12:39,359] [DEBUG] [db:1638] (21718) 0 name-change states at 210
+[2016-09-05 20:12:39,359] [DEBUG] [db:1655] (21718) 0 preorders created at 210
+[2016-09-05 20:12:39,359] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 210
+[2016-09-05 20:12:39,359] [DEBUG] [db:1676] (21718) 0 namespace-change states at 210
+[2016-09-05 20:12:39,359] [DEBUG] [db:1627] (21718) 0 name-preorder states at 211
+[2016-09-05 20:12:39,360] [DEBUG] [db:1638] (21718) 0 name-change states at 211
+[2016-09-05 20:12:39,360] [DEBUG] [db:1655] (21718) 0 preorders created at 211
+[2016-09-05 20:12:39,360] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 211
+[2016-09-05 20:12:39,360] [DEBUG] [db:1676] (21718) 0 namespace-change states at 211
+[2016-09-05 20:12:39,360] [DEBUG] [db:1627] (21718) 0 name-preorder states at 212
+[2016-09-05 20:12:39,360] [DEBUG] [db:1638] (21718) 0 name-change states at 212
+[2016-09-05 20:12:39,360] [DEBUG] [db:1655] (21718) 0 preorders created at 212
+[2016-09-05 20:12:39,360] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 212
+[2016-09-05 20:12:39,360] [DEBUG] [db:1676] (21718) 0 namespace-change states at 212
+[2016-09-05 20:12:39,360] [DEBUG] [db:1627] (21718) 0 name-preorder states at 213
+[2016-09-05 20:12:39,361] [DEBUG] [db:1638] (21718) 0 name-change states at 213
+[2016-09-05 20:12:39,361] [DEBUG] [db:1655] (21718) 0 preorders created at 213
+[2016-09-05 20:12:39,361] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 213
+[2016-09-05 20:12:39,361] [DEBUG] [db:1676] (21718) 0 namespace-change states at 213
+[2016-09-05 20:12:39,361] [DEBUG] [db:1627] (21718) 0 name-preorder states at 214
+[2016-09-05 20:12:39,361] [DEBUG] [db:1638] (21718) 0 name-change states at 214
+[2016-09-05 20:12:39,361] [DEBUG] [db:1655] (21718) 0 preorders created at 214
+[2016-09-05 20:12:39,361] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 214
+[2016-09-05 20:12:39,361] [DEBUG] [db:1676] (21718) 0 namespace-change states at 214
+[2016-09-05 20:12:39,361] [DEBUG] [db:1627] (21718) 0 name-preorder states at 215
+[2016-09-05 20:12:39,361] [DEBUG] [db:1638] (21718) 0 name-change states at 215
+[2016-09-05 20:12:39,362] [DEBUG] [db:1655] (21718) 0 preorders created at 215
+[2016-09-05 20:12:39,362] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 215
+[2016-09-05 20:12:39,362] [DEBUG] [db:1676] (21718) 0 namespace-change states at 215
+[2016-09-05 20:12:39,362] [DEBUG] [db:1627] (21718) 0 name-preorder states at 216
+[2016-09-05 20:12:39,362] [DEBUG] [db:1638] (21718) 0 name-change states at 216
+[2016-09-05 20:12:39,362] [DEBUG] [db:1655] (21718) 0 preorders created at 216
+[2016-09-05 20:12:39,362] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 216
+[2016-09-05 20:12:39,362] [DEBUG] [db:1676] (21718) 0 namespace-change states at 216
+[2016-09-05 20:12:39,362] [DEBUG] [db:1627] (21718) 0 name-preorder states at 217
+[2016-09-05 20:12:39,362] [DEBUG] [db:1638] (21718) 0 name-change states at 217
+[2016-09-05 20:12:39,363] [DEBUG] [db:1655] (21718) 0 preorders created at 217
+[2016-09-05 20:12:39,363] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 217
+[2016-09-05 20:12:39,363] [DEBUG] [db:1676] (21718) 0 namespace-change states at 217
+[2016-09-05 20:12:39,363] [DEBUG] [db:1627] (21718) 0 name-preorder states at 218
+[2016-09-05 20:12:39,363] [DEBUG] [db:1638] (21718) 0 name-change states at 218
+[2016-09-05 20:12:39,363] [DEBUG] [db:1655] (21718) 0 preorders created at 218
+[2016-09-05 20:12:39,363] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 218
+[2016-09-05 20:12:39,363] [DEBUG] [db:1676] (21718) 0 namespace-change states at 218
+[2016-09-05 20:12:39,364] [DEBUG] [db:1627] (21718) 0 name-preorder states at 219
+[2016-09-05 20:12:39,364] [DEBUG] [db:1638] (21718) 0 name-change states at 219
+[2016-09-05 20:12:39,364] [DEBUG] [db:1655] (21718) 0 preorders created at 219
+[2016-09-05 20:12:39,364] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 219
+[2016-09-05 20:12:39,364] [DEBUG] [db:1676] (21718) 0 namespace-change states at 219
+[2016-09-05 20:12:39,364] [DEBUG] [db:1627] (21718) 0 name-preorder states at 220
+[2016-09-05 20:12:39,364] [DEBUG] [db:1638] (21718) 0 name-change states at 220
+[2016-09-05 20:12:39,364] [DEBUG] [db:1655] (21718) 0 preorders created at 220
+[2016-09-05 20:12:39,364] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 220
+[2016-09-05 20:12:39,365] [DEBUG] [db:1676] (21718) 0 namespace-change states at 220
+[2016-09-05 20:12:39,365] [DEBUG] [db:1627] (21718) 0 name-preorder states at 221
+[2016-09-05 20:12:39,365] [DEBUG] [db:1638] (21718) 0 name-change states at 221
+[2016-09-05 20:12:39,365] [DEBUG] [db:1655] (21718) 0 preorders created at 221
+[2016-09-05 20:12:39,365] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 221
+[2016-09-05 20:12:39,365] [DEBUG] [db:1676] (21718) 0 namespace-change states at 221
+[2016-09-05 20:12:39,365] [DEBUG] [db:1627] (21718) 0 name-preorder states at 222
+[2016-09-05 20:12:39,365] [DEBUG] [db:1638] (21718) 0 name-change states at 222
+[2016-09-05 20:12:39,365] [DEBUG] [db:1655] (21718) 0 preorders created at 222
+[2016-09-05 20:12:39,366] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 222
+[2016-09-05 20:12:39,366] [DEBUG] [db:1676] (21718) 0 namespace-change states at 222
+[2016-09-05 20:12:39,366] [DEBUG] [db:1627] (21718) 0 name-preorder states at 223
+[2016-09-05 20:12:39,366] [DEBUG] [db:1638] (21718) 0 name-change states at 223
+[2016-09-05 20:12:39,366] [DEBUG] [db:1655] (21718) 0 preorders created at 223
+[2016-09-05 20:12:39,366] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 223
+[2016-09-05 20:12:39,366] [DEBUG] [db:1676] (21718) 0 namespace-change states at 223
+[2016-09-05 20:12:39,367] [DEBUG] [db:1627] (21718) 0 name-preorder states at 224
+[2016-09-05 20:12:39,367] [DEBUG] [db:1638] (21718) 0 name-change states at 224
+[2016-09-05 20:12:39,367] [DEBUG] [db:1655] (21718) 0 preorders created at 224
+[2016-09-05 20:12:39,367] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 224
+[2016-09-05 20:12:39,367] [DEBUG] [db:1676] (21718) 0 namespace-change states at 224
+[2016-09-05 20:12:39,367] [DEBUG] [db:1627] (21718) 0 name-preorder states at 225
+[2016-09-05 20:12:39,367] [DEBUG] [db:1638] (21718) 0 name-change states at 225
+[2016-09-05 20:12:39,367] [DEBUG] [db:1655] (21718) 0 preorders created at 225
+[2016-09-05 20:12:39,367] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 225
+[2016-09-05 20:12:39,367] [DEBUG] [db:1676] (21718) 0 namespace-change states at 225
+[2016-09-05 20:12:39,368] [DEBUG] [db:1627] (21718) 0 name-preorder states at 226
+[2016-09-05 20:12:39,368] [DEBUG] [db:1638] (21718) 0 name-change states at 226
+[2016-09-05 20:12:39,368] [DEBUG] [db:1655] (21718) 0 preorders created at 226
+[2016-09-05 20:12:39,368] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 226
+[2016-09-05 20:12:39,368] [DEBUG] [db:1676] (21718) 0 namespace-change states at 226
+[2016-09-05 20:12:39,368] [DEBUG] [db:1627] (21718) 0 name-preorder states at 227
+[2016-09-05 20:12:39,368] [DEBUG] [db:1638] (21718) 0 name-change states at 227
+[2016-09-05 20:12:39,368] [DEBUG] [db:1655] (21718) 0 preorders created at 227
+[2016-09-05 20:12:39,368] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 227
+[2016-09-05 20:12:39,368] [DEBUG] [db:1676] (21718) 0 namespace-change states at 227
+[2016-09-05 20:12:39,368] [DEBUG] [db:1627] (21718) 0 name-preorder states at 228
+[2016-09-05 20:12:39,369] [DEBUG] [db:1638] (21718) 0 name-change states at 228
+[2016-09-05 20:12:39,369] [DEBUG] [db:1655] (21718) 0 preorders created at 228
+[2016-09-05 20:12:39,369] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 228
+[2016-09-05 20:12:39,369] [DEBUG] [db:1676] (21718) 0 namespace-change states at 228
+[2016-09-05 20:12:39,369] [DEBUG] [db:1627] (21718) 0 name-preorder states at 229
+[2016-09-05 20:12:39,369] [DEBUG] [db:1638] (21718) 0 name-change states at 229
+[2016-09-05 20:12:39,369] [DEBUG] [db:1655] (21718) 0 preorders created at 229
+[2016-09-05 20:12:39,369] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 229
+[2016-09-05 20:12:39,369] [DEBUG] [db:1676] (21718) 0 namespace-change states at 229
+[2016-09-05 20:12:39,369] [DEBUG] [db:1627] (21718) 0 name-preorder states at 230
+[2016-09-05 20:12:39,369] [DEBUG] [db:1638] (21718) 0 name-change states at 230
+[2016-09-05 20:12:39,370] [DEBUG] [db:1655] (21718) 0 preorders created at 230
+[2016-09-05 20:12:39,370] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 230
+[2016-09-05 20:12:39,370] [DEBUG] [db:1676] (21718) 0 namespace-change states at 230
+[2016-09-05 20:12:39,370] [DEBUG] [db:1627] (21718) 0 name-preorder states at 231
+[2016-09-05 20:12:39,370] [DEBUG] [db:1638] (21718) 0 name-change states at 231
+[2016-09-05 20:12:39,370] [DEBUG] [db:1655] (21718) 0 preorders created at 231
+[2016-09-05 20:12:39,370] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 231
+[2016-09-05 20:12:39,370] [DEBUG] [db:1676] (21718) 0 namespace-change states at 231
+[2016-09-05 20:12:39,371] [DEBUG] [db:1627] (21718) 0 name-preorder states at 232
+[2016-09-05 20:12:39,371] [DEBUG] [db:1638] (21718) 0 name-change states at 232
+[2016-09-05 20:12:39,371] [DEBUG] [db:1655] (21718) 0 preorders created at 232
+[2016-09-05 20:12:39,371] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 232
+[2016-09-05 20:12:39,371] [DEBUG] [db:1676] (21718) 0 namespace-change states at 232
+[2016-09-05 20:12:39,371] [DEBUG] [db:1627] (21718) 0 name-preorder states at 233
+[2016-09-05 20:12:39,371] [DEBUG] [db:1638] (21718) 0 name-change states at 233
+[2016-09-05 20:12:39,371] [DEBUG] [db:1655] (21718) 0 preorders created at 233
+[2016-09-05 20:12:39,372] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 233
+[2016-09-05 20:12:39,372] [DEBUG] [db:1676] (21718) 0 namespace-change states at 233
+[2016-09-05 20:12:39,372] [DEBUG] [db:1627] (21718) 0 name-preorder states at 234
+[2016-09-05 20:12:39,372] [DEBUG] [db:1638] (21718) 0 name-change states at 234
+[2016-09-05 20:12:39,372] [DEBUG] [db:1655] (21718) 0 preorders created at 234
+[2016-09-05 20:12:39,372] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 234
+[2016-09-05 20:12:39,372] [DEBUG] [db:1676] (21718) 0 namespace-change states at 234
+[2016-09-05 20:12:39,372] [DEBUG] [db:1627] (21718) 0 name-preorder states at 235
+[2016-09-05 20:12:39,372] [DEBUG] [db:1638] (21718) 0 name-change states at 235
+[2016-09-05 20:12:39,373] [DEBUG] [db:1655] (21718) 0 preorders created at 235
+[2016-09-05 20:12:39,373] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 235
+[2016-09-05 20:12:39,373] [DEBUG] [db:1676] (21718) 0 namespace-change states at 235
+[2016-09-05 20:12:39,373] [DEBUG] [db:1627] (21718) 0 name-preorder states at 236
+[2016-09-05 20:12:39,373] [DEBUG] [db:1638] (21718) 0 name-change states at 236
+[2016-09-05 20:12:39,373] [DEBUG] [db:1655] (21718) 0 preorders created at 236
+[2016-09-05 20:12:39,373] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 236
+[2016-09-05 20:12:39,373] [DEBUG] [db:1676] (21718) 0 namespace-change states at 236
+[2016-09-05 20:12:39,373] [DEBUG] [db:1627] (21718) 0 name-preorder states at 237
+[2016-09-05 20:12:39,373] [DEBUG] [db:1638] (21718) 0 name-change states at 237
+[2016-09-05 20:12:39,373] [DEBUG] [db:1655] (21718) 0 preorders created at 237
+[2016-09-05 20:12:39,374] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 237
+[2016-09-05 20:12:39,374] [DEBUG] [db:1676] (21718) 0 namespace-change states at 237
+[2016-09-05 20:12:39,374] [DEBUG] [db:1627] (21718) 0 name-preorder states at 238
+[2016-09-05 20:12:39,374] [DEBUG] [db:1638] (21718) 0 name-change states at 238
+[2016-09-05 20:12:39,374] [DEBUG] [db:1655] (21718) 0 preorders created at 238
+[2016-09-05 20:12:39,374] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 238
+[2016-09-05 20:12:39,374] [DEBUG] [db:1676] (21718) 0 namespace-change states at 238
+[2016-09-05 20:12:39,374] [DEBUG] [db:1627] (21718) 0 name-preorder states at 239
+[2016-09-05 20:12:39,374] [DEBUG] [db:1638] (21718) 0 name-change states at 239
+[2016-09-05 20:12:39,374] [DEBUG] [db:1655] (21718) 0 preorders created at 239
+[2016-09-05 20:12:39,374] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 239
+[2016-09-05 20:12:39,375] [DEBUG] [db:1676] (21718) 0 namespace-change states at 239
+[2016-09-05 20:12:39,375] [DEBUG] [db:1627] (21718) 0 name-preorder states at 240
+[2016-09-05 20:12:39,375] [DEBUG] [db:1638] (21718) 0 name-change states at 240
+[2016-09-05 20:12:39,375] [DEBUG] [db:1655] (21718) 0 preorders created at 240
+[2016-09-05 20:12:39,375] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 240
+[2016-09-05 20:12:39,375] [DEBUG] [db:1676] (21718) 0 namespace-change states at 240
+[2016-09-05 20:12:39,375] [DEBUG] [db:1627] (21718) 0 name-preorder states at 241
+[2016-09-05 20:12:39,375] [DEBUG] [db:1638] (21718) 0 name-change states at 241
+[2016-09-05 20:12:39,375] [DEBUG] [db:1655] (21718) 0 preorders created at 241
+[2016-09-05 20:12:39,375] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 241
+[2016-09-05 20:12:39,376] [DEBUG] [db:1676] (21718) 0 namespace-change states at 241
+[2016-09-05 20:12:39,376] [DEBUG] [db:1627] (21718) 0 name-preorder states at 242
+[2016-09-05 20:12:39,376] [DEBUG] [db:1638] (21718) 0 name-change states at 242
+[2016-09-05 20:12:39,376] [DEBUG] [db:1655] (21718) 0 preorders created at 242
+[2016-09-05 20:12:39,376] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 242
+[2016-09-05 20:12:39,376] [DEBUG] [db:1676] (21718) 0 namespace-change states at 242
+[2016-09-05 20:12:39,376] [DEBUG] [db:1627] (21718) 0 name-preorder states at 243
+[2016-09-05 20:12:39,376] [DEBUG] [db:1638] (21718) 0 name-change states at 243
+[2016-09-05 20:12:39,376] [DEBUG] [db:1655] (21718) 0 preorders created at 243
+[2016-09-05 20:12:39,376] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 243
+[2016-09-05 20:12:39,376] [DEBUG] [db:1676] (21718) 0 namespace-change states at 243
+[2016-09-05 20:12:39,376] [DEBUG] [db:1627] (21718) 0 name-preorder states at 244
+[2016-09-05 20:12:39,377] [DEBUG] [db:1638] (21718) 0 name-change states at 244
+[2016-09-05 20:12:39,377] [DEBUG] [db:1655] (21718) 0 preorders created at 244
+[2016-09-05 20:12:39,377] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 244
+[2016-09-05 20:12:39,377] [DEBUG] [db:1676] (21718) 0 namespace-change states at 244
+[2016-09-05 20:12:39,377] [DEBUG] [db:1627] (21718) 0 name-preorder states at 245
+[2016-09-05 20:12:39,377] [DEBUG] [db:1638] (21718) 0 name-change states at 245
+[2016-09-05 20:12:39,377] [DEBUG] [db:1655] (21718) 0 preorders created at 245
+[2016-09-05 20:12:39,377] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 245
+[2016-09-05 20:12:39,377] [DEBUG] [db:1676] (21718) 0 namespace-change states at 245
+[2016-09-05 20:12:39,377] [DEBUG] [db:1627] (21718) 0 name-preorder states at 246
+[2016-09-05 20:12:39,377] [DEBUG] [db:1638] (21718) 0 name-change states at 246
+[2016-09-05 20:12:39,378] [DEBUG] [db:1655] (21718) 0 preorders created at 246
+[2016-09-05 20:12:39,378] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 246
+[2016-09-05 20:12:39,378] [DEBUG] [db:1676] (21718) 0 namespace-change states at 246
+[2016-09-05 20:12:39,378] [DEBUG] [db:1627] (21718) 0 name-preorder states at 247
+[2016-09-05 20:12:39,378] [DEBUG] [db:1638] (21718) 0 name-change states at 247
+[2016-09-05 20:12:39,378] [DEBUG] [db:1655] (21718) 0 preorders created at 247
+[2016-09-05 20:12:39,378] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 247
+[2016-09-05 20:12:39,378] [DEBUG] [db:1676] (21718) 0 namespace-change states at 247
+[2016-09-05 20:12:39,378] [DEBUG] [db:1627] (21718) 0 name-preorder states at 248
+[2016-09-05 20:12:39,378] [DEBUG] [db:1638] (21718) 0 name-change states at 248
+[2016-09-05 20:12:39,378] [DEBUG] [db:1655] (21718) 0 preorders created at 248
+[2016-09-05 20:12:39,379] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 248
+[2016-09-05 20:12:39,379] [DEBUG] [db:1676] (21718) 0 namespace-change states at 248
+[2016-09-05 20:12:39,379] [DEBUG] [db:1627] (21718) 0 name-preorder states at 249
+[2016-09-05 20:12:39,379] [DEBUG] [db:1638] (21718) 0 name-change states at 249
+[2016-09-05 20:12:39,379] [DEBUG] [db:1655] (21718) 0 preorders created at 249
+[2016-09-05 20:12:39,379] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 249
+[2016-09-05 20:12:39,379] [DEBUG] [db:1676] (21718) 0 namespace-change states at 249
+[2016-09-05 20:12:39,379] [DEBUG] [db:1627] (21718) 0 name-preorder states at 250
+[2016-09-05 20:12:39,379] [DEBUG] [db:1638] (21718) 0 name-change states at 250
+[2016-09-05 20:12:39,379] [DEBUG] [db:1655] (21718) 0 preorders created at 250
+[2016-09-05 20:12:39,379] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 250
+[2016-09-05 20:12:39,380] [DEBUG] [db:1676] (21718) 0 namespace-change states at 250
+[2016-09-05 20:12:39,380] [DEBUG] [db:1627] (21718) 0 name-preorder states at 251
+[2016-09-05 20:12:39,380] [DEBUG] [db:1638] (21718) 0 name-change states at 251
+[2016-09-05 20:12:39,380] [DEBUG] [db:1655] (21718) 0 preorders created at 251
+[2016-09-05 20:12:39,380] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 251
+[2016-09-05 20:12:39,380] [DEBUG] [db:1676] (21718) 0 namespace-change states at 251
+[2016-09-05 20:12:39,380] [DEBUG] [db:1627] (21718) 0 name-preorder states at 252
+[2016-09-05 20:12:39,380] [DEBUG] [db:1638] (21718) 0 name-change states at 252
+[2016-09-05 20:12:39,380] [DEBUG] [db:1655] (21718) 0 preorders created at 252
+[2016-09-05 20:12:39,380] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 252
+[2016-09-05 20:12:39,380] [DEBUG] [db:1676] (21718) 0 namespace-change states at 252
+[2016-09-05 20:12:39,381] [DEBUG] [db:1627] (21718) 0 name-preorder states at 253
+[2016-09-05 20:12:39,381] [DEBUG] [db:1638] (21718) 0 name-change states at 253
+[2016-09-05 20:12:39,381] [DEBUG] [db:1655] (21718) 0 preorders created at 253
+[2016-09-05 20:12:39,381] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 253
+[2016-09-05 20:12:39,381] [DEBUG] [db:1676] (21718) 0 namespace-change states at 253
+[2016-09-05 20:12:39,381] [DEBUG] [db:1627] (21718) 0 name-preorder states at 254
+[2016-09-05 20:12:39,381] [DEBUG] [db:1638] (21718) 0 name-change states at 254
+[2016-09-05 20:12:39,381] [DEBUG] [db:1655] (21718) 0 preorders created at 254
+[2016-09-05 20:12:39,381] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 254
+[2016-09-05 20:12:39,381] [DEBUG] [db:1676] (21718) 0 namespace-change states at 254
+[2016-09-05 20:12:39,381] [DEBUG] [db:1627] (21718) 0 name-preorder states at 255
+[2016-09-05 20:12:39,382] [DEBUG] [db:1638] (21718) 0 name-change states at 255
+[2016-09-05 20:12:39,382] [DEBUG] [db:1655] (21718) 0 preorders created at 255
+[2016-09-05 20:12:39,382] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 255
+[2016-09-05 20:12:39,382] [DEBUG] [db:1676] (21718) 0 namespace-change states at 255
+[2016-09-05 20:12:39,382] [DEBUG] [atlas:669] (21718) Queued 0 zonefiles from 0-255
+[2016-09-05 20:12:39,382] [DEBUG] [atlas:1074] (21718) Refreshing seed peers
+[2016-09-05 20:12:39,382] [DEBUG] [atlas:1080] (21718) Loading peer table
+[2016-09-05 20:12:39,383] [DEBUG] [atlas:3493] (21718) Starting Atlas component 'zonefile_pusher'
+[2016-09-05 20:12:39,383] [DEBUG] [atlas:3412] (21718) localhost:16264: AtlasZonefilePusher step
+[2016-09-05 20:12:39,383] [DEBUG] [atlas:3493] (21718) Starting Atlas component 'health_checker'
+[2016-09-05 20:12:39,383] [DEBUG] [atlas:3493] (21718) Starting Atlas component 'peer_crawler'
+[2016-09-05 20:12:39,384] [DEBUG] [atlas:3150] (21718) localhost:16264: AtlasHealthChecker step
+[2016-09-05 20:12:39,384] [DEBUG] [atlas:3044] (21718) localhost:16264: AtlasPeerCrawler step
+[2016-09-05 20:12:39,384] [DEBUG] [atlas:3168] (21718) Refresh zonefile inventories for at most 0 peers
+[2016-09-05 20:12:39,384] [DEBUG] [atlas:3493] (21718) Starting Atlas component 'zonefile_crawler'
+[2016-09-05 20:12:39,384] [DEBUG] [atlas:3048] (21718) localhost:16264: max neighbors is 80
+[2016-09-05 20:12:39,384] [DEBUG] [atlas:2970] (21718) Add at most 10 new peers out of 0 options
+[2016-09-05 20:12:39,384] [DEBUG] [blockstackd:1301] (21718) Starting RPC
+[2016-09-05 20:12:39,385] [DEBUG] [atlas:3000] (21718) localhost:16264: revalidate old peers
+[2016-09-05 20:12:39,385] [INFO] [blockstackd:344] (21718) Listening on 0.0.0.0:16264
+[2016-09-05 20:12:39,385] [DEBUG] [atlas:3241] (21718) localhost:16264: AtlasZonefileCrawler step
+[2016-09-05 20:12:39,385] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:39,386] [DEBUG] [atlas:3281] (21718) localhost:16264: missing 0 zonefiles
+[2016-09-05 20:12:39,386] [DEBUG] [atlas:3362] (21718) localhost:16264: fetched 0 zonefiles
+[2016-09-05 20:12:39,388] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:39,523] [DEBUG] [blockstack-test-scenario:707] (21718) next block (now at 256)
+[2016-09-05 20:12:39,524] [DEBUG] [session:129] (21718) [21718] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-05 20:12:39,526] [DEBUG] [blockstack-test-scenario:306] (21718) sync virtualchain up to 256
+[2016-09-05 20:12:39,526] [DEBUG] [indexer:1130] (21718) Sync virtualchain state from 256 to 257
+
+blockstack opts
+{
+    "serve_zonefiles": true, 
+    "analytics_key": "abcdef0123456789", 
+    "profile_storage_drivers": "disk", 
+    "zonefiles": "/tmp/blockstack-test/zonefiles", 
+    "zonefile_storage_drivers": "disk", 
+    "backup_max_age": 30, 
+    "atlasdb_path": "/tmp/blockstack-test/atlas.db", 
+    "email": "", 
+    "atlas_hostname": "localhost", 
+    "serve_profiles": true, 
+    "atlas_blacklist": "", 
+    "backup_frequency": 3, 
+    "atlas": true, 
+    "announcers": "judecn.id,muneeb.id,shea256.id", 
+    "blockchain_proxy": true, 
+    "rpc_port": 16264, 
+    "server_version": "0.14.0", 
+    "atlas_seeds": ""
+}
+
+blockchain opts
+{
+    "bitcoind_use_https": false, 
+    "bitcoind_passwd": "blockstacksystem", 
+    "bitcoind_user": "blockstack", 
+    "bitcoind_server": "localhost", 
+    "bitcoind_spv_path": "/tmp/blockstack-test/spv_headers.dat", 
+    "bitcoind_p2p_port": 18444, 
+    "bitcoind_port": 18332, 
+    "bitcoind_regtest": true
+}
+
+blockchain service opts
+{
+    "multiprocessing_num_procs": 1, 
+    "spv_headers_path": "/tmp/blockstack-test/spv_headers.dat", 
+    "rpc_password": "blockstacksystem", 
+    "utxo_provider": "bitcoind_utxo", 
+    "port": 18332, 
+    "rpc_username": "blockstack", 
+    "multiprocessing_num_blocks": 10, 
+    "blockchain_port": 18332, 
+    "server": "localhost", 
+    "version_byte": 0, 
+    "use_https": false, 
+    "blockchain_server": "localhost"
+}
+blockchain headers: /tmp/blockstack-test/spv_headers.dat
+
+atlas node initialization
+
+
+bitcoind connection
+
+working_dir: /tmp/blockstack-test
+[05 Sep 2016 20:12:39] [DEBUG]	[virtualchain-bits]:	Will download SPV headers to /tmp/blockstack-test/spv_headers.dat
+[2016-09-05 20:12:39,527] [DEBUG] [spv:741] (21718) Synchronize testnet 0 to 256
+[2016-09-05 20:12:39,527] [DEBUG] [spv:761] (21718) connect to localhost:18444
+[2016-09-05 20:12:39,527] [DEBUG] [spv:365] (21718) handshake (version 60002)
+[2016-09-05 20:12:39,527] [DEBUG] [spv:368] (21718) send Version
+[2016-09-05 20:12:39,529] [DEBUG] [spv:381] (21718) handle version
+[2016-09-05 20:12:39,529] [DEBUG] [spv:383] (21718) send VerAck
+[2016-09-05 20:12:39,529] [DEBUG] [spv:355] (21718) send getheaders
+[2016-09-05 20:12:39,569] [DEBUG] [spv:400] (21718) handle ping
+[2016-09-05 20:12:39,569] [DEBUG] [spv:403] (21718) send pong
+[2016-09-05 20:12:39,584] [DEBUG] [spv:250] (21718) handle headers (256)
+[2016-09-05 20:12:39,584] [DEBUG] [spv:272] (21718) Receive 256 testnet headers (0 to 255)
+[2016-09-05 20:12:39,604] [DEBUG] [spv:777] (21718) synced headers from -1 to 256 in /tmp/blockstack-test/spv_headers.dat
+[2016-09-05 20:12:39,605] [DEBUG] [blocks:116] (21718) BlockDownloader: fetch blocks 256-256
+[2016-09-05 20:12:39,605] [DEBUG] [blocks:298] (21718) handshake (version 60002)
+[2016-09-05 20:12:39,605] [DEBUG] [blocks:301] (21718) send Version
+[2016-09-05 20:12:39,606] [DEBUG] [blocks:314] (21718) handle version
+[2016-09-05 20:12:39,606] [DEBUG] [blocks:316] (21718) send VerAck
+[2016-09-05 20:12:39,606] [DEBUG] [blocks:332] (21718) send getdata for 256-256 (10da478abaec10d823a2c2f245c9bdfa7d3d91009922c0789719e8295685114f-10da478abaec10d823a2c2f245c9bdfa7d3d91009922c0789719e8295685114f)
+[2016-09-05 20:12:39,644] [DEBUG] [blocks:357] (21718) handle ping
+[2016-09-05 20:12:39,644] [DEBUG] [blocks:360] (21718) send pong
+[2016-09-05 20:12:39,645] [DEBUG] [blocks:196] (21718) num blocks received = 0, num requested = 1
+[2016-09-05 20:12:39,645] [DEBUG] [blocks:562] (21718) handle block 256 (10da478abaec10d823a2c2f245c9bdfa7d3d91009922c0789719e8295685114f)
+[2016-09-05 20:12:39,646] [DEBUG] [blocks:650] (21718) Request 0 nulldata sender TXs
+[2016-09-05 20:12:39,646] [DEBUG] [indexer:1060] (21718) Process block 256 (0 virtual transactions)
+[2016-09-05 20:12:39,647] [DEBUG] [indexer:803] (21718) Snapshotting block 256
+[2016-09-05 20:12:39,647] [DEBUG] [indexer:724] (21718) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-05 20:12:39,648] [DEBUG] [indexer:414] (21718) Rename 'lastblock': /tmp/blockstack-test/blockstack-server.lastblock.tmp --> /tmp/blockstack-test/blockstack-server.lastblock
+[2016-09-05 20:12:39,648] [DEBUG] [indexer:414] (21718) Rename 'snapshots': /tmp/blockstack-test/blockstack-server.snapshots.tmp --> /tmp/blockstack-test/blockstack-server.snapshots
+[2016-09-05 20:12:39,648] [DEBUG] [indexer:1153] (21718) CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-05 20:12:39,648] [DEBUG] [indexer:1173] (21718) Last block is 256
+[2016-09-05 20:12:39,649] [INFO] [virtualchain:80] (21718) 0 seconds
+[2016-09-05 20:12:39,649] [DEBUG] [blockstack-test-scenario:309] (21718) sync atlas node up to 256
+[2016-09-05 20:12:39,649] [DEBUG] [blockstack-test-scenario:314] (21718) Synchronize Atlas DB from 256 to 257
+[2016-09-05 20:12:39,649] [DEBUG] [db:1627] (21718) 0 name-preorder states at 256
+[2016-09-05 20:12:39,650] [DEBUG] [db:1638] (21718) 0 name-change states at 256
+[2016-09-05 20:12:39,650] [DEBUG] [db:1655] (21718) 0 preorders created at 256
+[2016-09-05 20:12:39,650] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 256
+[2016-09-05 20:12:39,650] [DEBUG] [db:1676] (21718) 0 namespace-change states at 256
+[2016-09-05 20:12:39,650] [DEBUG] [atlas:669] (21718) Queued 0 zonefiles from 256-256
+[2016-09-05 20:12:39,892] [DEBUG] [atlas:3504] (21718) Stopping Atlas component 'zonefile_pusher'
+[2016-09-05 20:12:40,384] [DEBUG] [atlas:3150] (21718) localhost:16264: AtlasHealthChecker step
+[2016-09-05 20:12:40,385] [DEBUG] [atlas:3044] (21718) localhost:16264: AtlasPeerCrawler step
+[2016-09-05 20:12:40,385] [DEBUG] [atlas:3168] (21718) Refresh zonefile inventories for at most 0 peers
+[2016-09-05 20:12:40,385] [DEBUG] [atlas:3504] (21718) Stopping Atlas component 'health_checker'
+[2016-09-05 20:12:40,386] [DEBUG] [atlas:2970] (21718) Add at most 10 new peers out of 0 options
+[2016-09-05 20:12:40,386] [DEBUG] [atlas:3000] (21718) localhost:16264: revalidate old peers
+[2016-09-05 20:12:40,386] [DEBUG] [atlas:3241] (21718) localhost:16264: AtlasZonefileCrawler step
+[2016-09-05 20:12:40,387] [DEBUG] [atlas:3281] (21718) localhost:16264: missing 0 zonefiles
+[2016-09-05 20:12:40,387] [DEBUG] [atlas:3362] (21718) localhost:16264: fetched 0 zonefiles
+[2016-09-05 20:12:41,385] [DEBUG] [atlas:3504] (21718) Stopping Atlas component 'peer_crawler'
+[2016-09-05 20:12:41,386] [DEBUG] [atlas:3504] (21718) Stopping Atlas component 'zonefile_crawler'
+[2016-09-05 20:12:41,478] [ERROR] [namespaceready:167] (21718) Invalid namespace ID 'hel+lo'
+[2016-09-05 20:12:41,572] [ERROR] [namespaceready:171] (21718) Invalid namespace of length 0
+[2016-09-05 20:12:41,649] [ERROR] [namespaceready:171] (21718) Invalid namespace of length 20
+[2016-09-05 20:12:41,726] [ERROR] [namespaceready:167] (21718) Invalid namespace ID 'hel.lo'
+[2016-09-05 20:12:41,814] [ERROR] [namespaceready:167] (21718) Invalid namespace ID 'Hello'
+[2016-09-05 20:12:41,909] [ERROR] [namespaceready:160] (21718) Missing namespace delimiter '.'
+[2016-09-05 20:12:42,086] [ERROR] [namespaceready:156] (21718) empty namespace
+[2016-09-05 20:12:42,165] [ERROR] [announce:130] (21718) Not a 160-bit hash
+[2016-09-05 20:12:42,325] [ERROR] [announce:130] (21718) Not a 160-bit hash
+[2016-09-05 20:12:42,402] [ERROR] [namespacereveal:365] (21718) Invalid namespace parameters
+[2016-09-05 20:12:42,477] [ERROR] [namespacereveal:365] (21718) Invalid namespace parameters
+[2016-09-05 20:12:42,553] [ERROR] [namespacereveal:365] (21718) Invalid namespace parameters
+[2016-09-05 20:12:42,636] [ERROR] [namespacereveal:349] (21718) Invalid namespace ID and/or sender script
+[2016-09-05 20:12:42,868] [ERROR] [namespacereveal:349] (21718) Invalid namespace ID and/or sender script
+[2016-09-05 20:12:43,025] [ERROR] [update:211] (21718) Invalid update length 35
+[2016-09-05 20:12:43,101] [ERROR] [update:211] (21718) Invalid update length 37
+[2016-09-05 20:12:43,250] [ERROR] [namespacepreorder:160] (21718) Invalid namespace preorder payload length 35
+[2016-09-05 20:12:43,327] [ERROR] [namespacepreorder:160] (21718) Invalid namespace preorder payload length 37
+[2016-09-05 20:12:44,031] [ERROR] [nameimport:369] (21718) Name 'hello.tes.t' is invalid
+[2016-09-05 20:12:44,112] [ERROR] [nameimport:369] (21718) Name 'hello.' is invalid
+[2016-09-05 20:12:44,189] [ERROR] [nameimport:369] (21718) Name 'hel+lo.test' is invalid
+[2016-09-05 20:12:44,267] [ERROR] [nameimport:369] (21718) Name 'hellohellohellohellohellohellohel.test' is invalid
+[2016-09-05 20:12:44,423] [ERROR] [nameimport:369] (21718) Name '' is invalid
+[2016-09-05 20:12:44,504] [ERROR] [nameimport:369] (21718) Name 'hello' is invalid
+[2016-09-05 20:12:44,586] [ERROR] [nameimport:369] (21718) Name 'Hello.test' is invalid
+[2016-09-05 20:12:45,533] [ERROR] [transfer:331] (21718) Invalid transfer payload length 34
+[2016-09-05 20:12:45,616] [ERROR] [transfer:331] (21718) Invalid transfer payload length 32
+[2016-09-05 20:12:45,696] [ERROR] [transfer:339] (21718) Invalid disposition character
+[2016-09-05 20:12:45,777] [ERROR] [transfer:331] (21718) Invalid transfer payload length 34
+[2016-09-05 20:12:46,021] [ERROR] [transfer:331] (21718) Invalid transfer payload length 32
+[2016-09-05 20:12:46,164] [INFO] [blockstack-test-scenario:480] (21718) Scenario checks passed; verifying history
+[2016-09-05 20:12:46,164] [DEBUG] [namedb:98] (21718) Connect to database '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-05 20:12:46,165] [DEBUG] [indexer:220] (21718) Lastblock: 256 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-05 20:12:46,166] [DEBUG] [consensus:250] (21718) Rebuilding database from 256 to 256
+[2016-09-05 20:12:46,167] [DEBUG] [namedb:98] (21718) Connect to database '/tmp/blockstack-test-databases-K2ArHa/blockstack.db.256'
+[2016-09-05 20:12:46,167] [DEBUG] [namedb:96] (21718) Initialize database from '/tmp/blockstack-test-databases-K2ArHa/work.256/blockstack.db.256'
+[2016-09-05 20:12:47,522] [DEBUG] [indexer:220] (21718) Lastblock: 255 (/tmp/blockstack-test-databases-K2ArHa/work.256/blockstack-server.lastblock)
+[2016-09-05 20:12:47,524] [DEBUG] [db:1627] (21718) 0 name-preorder states at 256
+[2016-09-05 20:12:47,524] [DEBUG] [db:1638] (21718) 0 name-change states at 256
+[2016-09-05 20:12:47,525] [DEBUG] [db:1655] (21718) 0 preorders created at 256
+[2016-09-05 20:12:47,525] [DEBUG] [db:1665] (21718) 0 namespace-preorder states at 256
+[2016-09-05 20:12:47,525] [DEBUG] [db:1676] (21718) 0 namespace-change states at 256
+[2016-09-05 20:12:47,525] [DEBUG] [consensus:147] (21718) Records at 256: 0
+[2016-09-05 20:12:47,525] [DEBUG] [indexer:1060] (21718) Process block 256 (0 virtual transactions)
+[2016-09-05 20:12:47,525] [DEBUG] [indexer:803] (21718) Snapshotting block 256
+[2016-09-05 20:12:47,526] [DEBUG] [indexer:724] (21718) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-05 20:12:47,526] [DEBUG] [indexer:414] (21718) Rename 'lastblock': /tmp/blockstack-test-databases-K2ArHa/work.256/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-K2ArHa/work.256/blockstack-server.lastblock
+[2016-09-05 20:12:47,526] [DEBUG] [indexer:414] (21718) Rename 'snapshots': /tmp/blockstack-test-databases-K2ArHa/work.256/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-K2ArHa/work.256/blockstack-server.snapshots
+[2016-09-05 20:12:47,527] [DEBUG] [consensus:272] (21718) VERIFY CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-05 20:12:47,527] [INFO] [blockstack-test-scenario:491] (21718) History check passes!
+[2016-09-05 20:12:47,537] [DEBUG] [blockstackd:316] (21718) Inbound RPC begin rpc_db_refresh(())
+
+
+rpc_db_refresh(())
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/blockstack_server-0.14.0-py2.7.egg/blockstack/blockstackd.py", line 320, in _dispatch
+    res = self.server.funcs["rpc_" + str(method)](*params, **con_info)
+KeyError: 'rpc_db_refresh'
+
+
+
+127.0.0.1 - - [05/Sep/2016 20:12:47] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-05 20:12:47,538] [DEBUG] [namedb:98] (21718) Connect to database '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-05 20:12:47,539] [DEBUG] [indexer:220] (21718) Lastblock: 256 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-05 20:12:47,547] [DEBUG] [testlib:832] (21718) SNV verify 0 names
+[2016-09-05 20:12:47,547] [INFO] [blockstack-test-scenario:506] (21718) SNV check passes!
+[2016-09-05 20:12:47,547] [DEBUG] [namedb:98] (21718) Connect to database '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-05 20:12:47,548] [DEBUG] [indexer:220] (21718) Lastblock: 256 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-05 20:12:47,548] [INFO] [blockstack-test-scenario:519] (21718) Atlas zonefile checks pass!
+[2016-09-05 20:12:47,548] [DEBUG] [blockstackd:1311] (21718) Shutting down RPC
+[2016-09-05 20:12:48,039] [DEBUG] [blockstackd:1314] (21718) RPC joined
+Bitcoin server stopping
+Not running (/tmp/blockstack-test/client/api_endpoint.pid)
+test !
+test #
+test &
+test +
+test *
+test ~
+test ;
+test :
+test ?
+test >
+
+
+verify 256 - 257 (/tmp/blockstack-test-databases-K2ArHa/blockstack.db.256), expect 2a9148d8b13939723d2aca16c75c6d68
+
+
+SUCCESS blockstack_integration_tests.scenarios.nameop_parsing
+Not running (/tmp/blockstack-test/client/api_endpoint.pid)
+Bitcoin server stopping
+Bitcoin server starting

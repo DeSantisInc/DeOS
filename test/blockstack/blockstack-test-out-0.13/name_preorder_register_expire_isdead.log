@@ -1,0 +1,18 @@
+[2016-09-07 11:17:33,581] [DEBUG] [spv:110] (13978) Using testnet/regtest
+WARN (13978): in test environment
+[2016-09-07 11:17:33,782] [DEBUG] [blockstack-test-scenario:591] (13978) Starting up bitcoind in regtest mode
+Bitcoin server starting
+[2016-09-07 11:17:33,797] [DEBUG] [blockstack-test-scenario:598] (13978) Waiting for bitcoind to start up
+Traceback (most recent call last):
+  File "/usr/local/bin/blockstack-test-scenario", line 4, in <module>
+    __import__('pkg_resources').run_script('blockstack-integration-tests==0.14.0', 'blockstack-test-scenario')
+  File "/usr/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 719, in run_script
+    self.require(requires)[0].run_script(script_name, ns)
+  File "/usr/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 1505, in run_script
+    exec(code, namespace, namespace)
+  File "/usr/local/lib/python2.7/dist-packages/blockstack_integration_tests-0.14.0-py2.7.egg/EGG-INFO/scripts/blockstack-test-scenario", line 842, in <module>
+    bitcoin_regtest_reset()
+  File "/usr/local/lib/python2.7/dist-packages/blockstack_integration_tests-0.14.0-py2.7.egg/EGG-INFO/scripts/blockstack-test-scenario", line 601, in bitcoin_regtest_reset
+    time.sleep(1)
+KeyboardInterrupt
+Bitcoin server starting

@@ -1,0 +1,1950 @@
+[2016-09-01 20:51:18,839] [DEBUG] [spv:110] (24181) Using testnet/regtest
+[2016-09-01 20:51:18,971] [WARNING] [config:96] (24181) FIRST_BLOCK_MAINNET = 256
+[2016-09-01 20:51:18,971] [WARNING] [config:104] (24181) TX_MIN_CONFIRMATIONS = 0
+[2016-09-01 20:51:18,971] [WARNING] [config:273] (24181) CONFIG_PATH = /tmp/blockstack-test/client/client.ini
+WARN (24181): in test environment
+[2016-09-01 20:51:18,985] [WARNING] [config:328] (24181) NUM_CONFIRMATIONS = 0
+[2016-09-01 20:51:19,057] [DEBUG] [blockstack-test-scenario:554] (24181) Starting up bitcoind in regtest mode
+Bitcoin server starting
+[2016-09-01 20:51:19,071] [DEBUG] [blockstack-test-scenario:561] (24181) Waiting for bitcoind to start up
+[2016-09-01 20:51:20,072] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:21,077] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:22,080] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:23,084] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:24,088] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:25,092] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:25,201] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:25,447] [DEBUG] [blockstack-test-scenario:584] (24181) bitcoind -regtest is ready
+[2016-09-01 20:51:25,764] [DEBUG] [testlib:71] (24181) Wallet 92RVyTBdj4xC2M7KQo2kea6xwtHzomD136BM9eh6LKkonLkWaR4 (mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC)
+[2016-09-01 20:51:26,070] [DEBUG] [testlib:71] (24181) Wallet 934UTTHhRoBFdv4sj3Jt2QASm7GaJb3VxM8VcoeoXKmHSkUw2P4 (mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq)
+[2016-09-01 20:51:26,378] [DEBUG] [testlib:71] (24181) Wallet 93SiL3Qwt9p999a8w8c9eH9AmhcXiz98NNbaFBbVoPQuvpcsQpL (mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx)
+[2016-09-01 20:51:26,685] [DEBUG] [testlib:71] (24181) Wallet 92g8TYFgxoytqWG7s5VPSZ4uKva7kXUbDBXkVooKgZRGJ3vKUC8 (n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4)
+[2016-09-01 20:51:26,994] [DEBUG] [testlib:71] (24181) Wallet 931TJBFPbQvb6yvVjgDB4qKsHU7ArBFYdYaQmymKgNgEideRBtz (mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed)
+[2016-09-01 20:51:27,300] [DEBUG] [testlib:71] (24181) Wallet 92rKoeoL9KJYpcZwJCWc5YX3s14M2QY6eqKAFHQDBNcF6cEZgFe (mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9)
+[2016-09-01 20:51:27,607] [DEBUG] [testlib:71] (24181) Wallet 91onAG4BsvDUuiuLuJyQbFM5XGCRdWij6L94XCho4h3kDVb4svf (mzq1bGkwPZzz5HCQJN2CuErBCCVCvZdu6a)
+[2016-09-01 20:51:27,919] [DEBUG] [testlib:71] (24181) Wallet 92uyM6ERLdDsM5KQGKcZCoibpmHaKtbTf5ViLzefsAkt4BciQvu (msRqhLkzbGef23awMJ3SKg6RjnkPLKGs4P)
+[2016-09-01 20:51:28,227] [DEBUG] [testlib:71] (24181) Wallet 93P1EWuepeG3u3XwiQ3o1qakfHzAtMd1qR6ngzF7J7RLci4nc1w (mqXD632uTjTT2Ays7E46daCKH15VhXuYDG)
+[2016-09-01 20:51:28,766] [DEBUG] [testlib:84] (24181) Multisig wallet 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz
+[2016-09-01 20:51:28,766] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:29,021] [DEBUG] [blockstack-test-scenario:605] (24181) Fill mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC with 50
+[2016-09-01 20:51:29,490] [DEBUG] [blockstack-test-scenario:605] (24181) Fill mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq with 50
+[2016-09-01 20:51:29,878] [DEBUG] [blockstack-test-scenario:605] (24181) Fill mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx with 50
+[2016-09-01 20:51:30,300] [DEBUG] [blockstack-test-scenario:605] (24181) Fill n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4 with 50
+[2016-09-01 20:51:30,753] [DEBUG] [blockstack-test-scenario:605] (24181) Fill mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed with 50
+[2016-09-01 20:51:31,226] [DEBUG] [blockstack-test-scenario:605] (24181) Fill mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9 with 50
+[2016-09-01 20:51:31,668] [DEBUG] [blockstack-test-scenario:605] (24181) Fill mzq1bGkwPZzz5HCQJN2CuErBCCVCvZdu6a with 50
+[2016-09-01 20:51:32,087] [DEBUG] [blockstack-test-scenario:605] (24181) Fill msRqhLkzbGef23awMJ3SKg6RjnkPLKGs4P with 50
+[2016-09-01 20:51:32,610] [DEBUG] [blockstack-test-scenario:605] (24181) Fill mqXD632uTjTT2Ays7E46daCKH15VhXuYDG with 50
+[2016-09-01 20:51:34,314] [DEBUG] [blockstack-test-scenario:623] (24181) Fill 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz with 250
+
+Address mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC loaded with 5000000000 satoshis
+Address mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq loaded with 5000000000 satoshis
+Address mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx loaded with 5000000000 satoshis
+Address n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4 loaded with 5000000000 satoshis
+Address mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed loaded with 5000000000 satoshis
+Address mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9 loaded with 5000000000 satoshis
+Address mzq1bGkwPZzz5HCQJN2CuErBCCVCvZdu6a loaded with 5000000000 satoshis
+Address msRqhLkzbGef23awMJ3SKg6RjnkPLKGs4P loaded with 5000000000 satoshis
+Address mqXD632uTjTT2Ays7E46daCKH15VhXuYDG loaded with 5000000000 satoshis
+Address 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz loaded with 25000000000 satoshis
+
+[2016-09-01 20:51:34,958] [DEBUG] [config:804] (24181) Load config from '/tmp/blockstack-test/blockstack-server.ini'
+Saving configuration to /tmp/blockstack-test/blockstack-server.ini
+Saving configuration to /tmp/blockstack-test/client/client.ini
+[2016-09-01 20:51:35,015] [DEBUG] [namedb:96] (24181) Initialize database from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-01 20:51:36,011] [DEBUG] [atlas:1089] (24181) Initializing Atlas DB at /tmp/blockstack-test/atlas.db
+[2016-09-01 20:51:36,257] [DEBUG] [atlas:1100] (24181) Queuing all zonefiles
+[2016-09-01 20:51:36,257] [DEBUG] [atlas:669] (24181) Queued 0 zonefiles from 256-255
+[2016-09-01 20:51:36,258] [DEBUG] [atlas:1103] (24181) Adding seed peers
+[2016-09-01 20:51:36,258] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:36,258] [DEBUG] [atlas:1062] (24181) Atlas DB exists at /tmp/blockstack-test/atlas.db
+[2016-09-01 20:51:36,259] [DEBUG] [atlas:1068] (24181) Synchronize zonefiles from 0 to 255
+[2016-09-01 20:51:36,259] [DEBUG] [db:1627] (24181) 0 name-preorder states at 0
+[2016-09-01 20:51:36,259] [DEBUG] [db:1638] (24181) 0 name-change states at 0
+[2016-09-01 20:51:36,259] [DEBUG] [db:1655] (24181) 0 preorders created at 0
+[2016-09-01 20:51:36,260] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 0
+[2016-09-01 20:51:36,260] [DEBUG] [db:1676] (24181) 0 namespace-change states at 0
+[2016-09-01 20:51:36,260] [DEBUG] [db:1627] (24181) 0 name-preorder states at 1
+[2016-09-01 20:51:36,260] [DEBUG] [db:1638] (24181) 0 name-change states at 1
+[2016-09-01 20:51:36,260] [DEBUG] [db:1655] (24181) 0 preorders created at 1
+[2016-09-01 20:51:36,260] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 1
+[2016-09-01 20:51:36,260] [DEBUG] [db:1676] (24181) 0 namespace-change states at 1
+[2016-09-01 20:51:36,260] [DEBUG] [db:1627] (24181) 0 name-preorder states at 2
+[2016-09-01 20:51:36,260] [DEBUG] [db:1638] (24181) 0 name-change states at 2
+[2016-09-01 20:51:36,260] [DEBUG] [db:1655] (24181) 0 preorders created at 2
+[2016-09-01 20:51:36,261] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 2
+[2016-09-01 20:51:36,261] [DEBUG] [db:1676] (24181) 0 namespace-change states at 2
+[2016-09-01 20:51:36,261] [DEBUG] [db:1627] (24181) 0 name-preorder states at 3
+[2016-09-01 20:51:36,261] [DEBUG] [db:1638] (24181) 0 name-change states at 3
+[2016-09-01 20:51:36,261] [DEBUG] [db:1655] (24181) 0 preorders created at 3
+[2016-09-01 20:51:36,261] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 3
+[2016-09-01 20:51:36,261] [DEBUG] [db:1676] (24181) 0 namespace-change states at 3
+[2016-09-01 20:51:36,261] [DEBUG] [db:1627] (24181) 0 name-preorder states at 4
+[2016-09-01 20:51:36,261] [DEBUG] [db:1638] (24181) 0 name-change states at 4
+[2016-09-01 20:51:36,261] [DEBUG] [db:1655] (24181) 0 preorders created at 4
+[2016-09-01 20:51:36,261] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 4
+[2016-09-01 20:51:36,262] [DEBUG] [db:1676] (24181) 0 namespace-change states at 4
+[2016-09-01 20:51:36,262] [DEBUG] [db:1627] (24181) 0 name-preorder states at 5
+[2016-09-01 20:51:36,262] [DEBUG] [db:1638] (24181) 0 name-change states at 5
+[2016-09-01 20:51:36,262] [DEBUG] [db:1655] (24181) 0 preorders created at 5
+[2016-09-01 20:51:36,262] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 5
+[2016-09-01 20:51:36,262] [DEBUG] [db:1676] (24181) 0 namespace-change states at 5
+[2016-09-01 20:51:36,262] [DEBUG] [db:1627] (24181) 0 name-preorder states at 6
+[2016-09-01 20:51:36,262] [DEBUG] [db:1638] (24181) 0 name-change states at 6
+[2016-09-01 20:51:36,262] [DEBUG] [db:1655] (24181) 0 preorders created at 6
+[2016-09-01 20:51:36,262] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 6
+[2016-09-01 20:51:36,262] [DEBUG] [db:1676] (24181) 0 namespace-change states at 6
+[2016-09-01 20:51:36,263] [DEBUG] [db:1627] (24181) 0 name-preorder states at 7
+[2016-09-01 20:51:36,263] [DEBUG] [db:1638] (24181) 0 name-change states at 7
+[2016-09-01 20:51:36,263] [DEBUG] [db:1655] (24181) 0 preorders created at 7
+[2016-09-01 20:51:36,263] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 7
+[2016-09-01 20:51:36,263] [DEBUG] [db:1676] (24181) 0 namespace-change states at 7
+[2016-09-01 20:51:36,263] [DEBUG] [db:1627] (24181) 0 name-preorder states at 8
+[2016-09-01 20:51:36,263] [DEBUG] [db:1638] (24181) 0 name-change states at 8
+[2016-09-01 20:51:36,263] [DEBUG] [db:1655] (24181) 0 preorders created at 8
+[2016-09-01 20:51:36,263] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 8
+[2016-09-01 20:51:36,263] [DEBUG] [db:1676] (24181) 0 namespace-change states at 8
+[2016-09-01 20:51:36,263] [DEBUG] [db:1627] (24181) 0 name-preorder states at 9
+[2016-09-01 20:51:36,264] [DEBUG] [db:1638] (24181) 0 name-change states at 9
+[2016-09-01 20:51:36,264] [DEBUG] [db:1655] (24181) 0 preorders created at 9
+[2016-09-01 20:51:36,264] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 9
+[2016-09-01 20:51:36,264] [DEBUG] [db:1676] (24181) 0 namespace-change states at 9
+[2016-09-01 20:51:36,264] [DEBUG] [db:1627] (24181) 0 name-preorder states at 10
+[2016-09-01 20:51:36,264] [DEBUG] [db:1638] (24181) 0 name-change states at 10
+[2016-09-01 20:51:36,264] [DEBUG] [db:1655] (24181) 0 preorders created at 10
+[2016-09-01 20:51:36,264] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 10
+[2016-09-01 20:51:36,264] [DEBUG] [db:1676] (24181) 0 namespace-change states at 10
+[2016-09-01 20:51:36,264] [DEBUG] [db:1627] (24181) 0 name-preorder states at 11
+[2016-09-01 20:51:36,264] [DEBUG] [db:1638] (24181) 0 name-change states at 11
+[2016-09-01 20:51:36,265] [DEBUG] [db:1655] (24181) 0 preorders created at 11
+[2016-09-01 20:51:36,265] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 11
+[2016-09-01 20:51:36,265] [DEBUG] [db:1676] (24181) 0 namespace-change states at 11
+[2016-09-01 20:51:36,265] [DEBUG] [db:1627] (24181) 0 name-preorder states at 12
+[2016-09-01 20:51:36,265] [DEBUG] [db:1638] (24181) 0 name-change states at 12
+[2016-09-01 20:51:36,265] [DEBUG] [db:1655] (24181) 0 preorders created at 12
+[2016-09-01 20:51:36,265] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 12
+[2016-09-01 20:51:36,265] [DEBUG] [db:1676] (24181) 0 namespace-change states at 12
+[2016-09-01 20:51:36,265] [DEBUG] [db:1627] (24181) 0 name-preorder states at 13
+[2016-09-01 20:51:36,265] [DEBUG] [db:1638] (24181) 0 name-change states at 13
+[2016-09-01 20:51:36,265] [DEBUG] [db:1655] (24181) 0 preorders created at 13
+[2016-09-01 20:51:36,265] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 13
+[2016-09-01 20:51:36,266] [DEBUG] [db:1676] (24181) 0 namespace-change states at 13
+[2016-09-01 20:51:36,266] [DEBUG] [db:1627] (24181) 0 name-preorder states at 14
+[2016-09-01 20:51:36,266] [DEBUG] [db:1638] (24181) 0 name-change states at 14
+[2016-09-01 20:51:36,266] [DEBUG] [db:1655] (24181) 0 preorders created at 14
+[2016-09-01 20:51:36,266] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 14
+[2016-09-01 20:51:36,266] [DEBUG] [db:1676] (24181) 0 namespace-change states at 14
+[2016-09-01 20:51:36,266] [DEBUG] [db:1627] (24181) 0 name-preorder states at 15
+[2016-09-01 20:51:36,266] [DEBUG] [db:1638] (24181) 0 name-change states at 15
+[2016-09-01 20:51:36,266] [DEBUG] [db:1655] (24181) 0 preorders created at 15
+[2016-09-01 20:51:36,266] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 15
+[2016-09-01 20:51:36,267] [DEBUG] [db:1676] (24181) 0 namespace-change states at 15
+[2016-09-01 20:51:36,267] [DEBUG] [db:1627] (24181) 0 name-preorder states at 16
+[2016-09-01 20:51:36,267] [DEBUG] [db:1638] (24181) 0 name-change states at 16
+[2016-09-01 20:51:36,267] [DEBUG] [db:1655] (24181) 0 preorders created at 16
+[2016-09-01 20:51:36,267] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 16
+[2016-09-01 20:51:36,267] [DEBUG] [db:1676] (24181) 0 namespace-change states at 16
+[2016-09-01 20:51:36,267] [DEBUG] [db:1627] (24181) 0 name-preorder states at 17
+[2016-09-01 20:51:36,267] [DEBUG] [db:1638] (24181) 0 name-change states at 17
+[2016-09-01 20:51:36,267] [DEBUG] [db:1655] (24181) 0 preorders created at 17
+[2016-09-01 20:51:36,267] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 17
+[2016-09-01 20:51:36,267] [DEBUG] [db:1676] (24181) 0 namespace-change states at 17
+[2016-09-01 20:51:36,268] [DEBUG] [db:1627] (24181) 0 name-preorder states at 18
+[2016-09-01 20:51:36,268] [DEBUG] [db:1638] (24181) 0 name-change states at 18
+[2016-09-01 20:51:36,268] [DEBUG] [db:1655] (24181) 0 preorders created at 18
+[2016-09-01 20:51:36,268] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 18
+[2016-09-01 20:51:36,268] [DEBUG] [db:1676] (24181) 0 namespace-change states at 18
+[2016-09-01 20:51:36,268] [DEBUG] [db:1627] (24181) 0 name-preorder states at 19
+[2016-09-01 20:51:36,268] [DEBUG] [db:1638] (24181) 0 name-change states at 19
+[2016-09-01 20:51:36,268] [DEBUG] [db:1655] (24181) 0 preorders created at 19
+[2016-09-01 20:51:36,268] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 19
+[2016-09-01 20:51:36,268] [DEBUG] [db:1676] (24181) 0 namespace-change states at 19
+[2016-09-01 20:51:36,268] [DEBUG] [db:1627] (24181) 0 name-preorder states at 20
+[2016-09-01 20:51:36,269] [DEBUG] [db:1638] (24181) 0 name-change states at 20
+[2016-09-01 20:51:36,269] [DEBUG] [db:1655] (24181) 0 preorders created at 20
+[2016-09-01 20:51:36,269] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 20
+[2016-09-01 20:51:36,269] [DEBUG] [db:1676] (24181) 0 namespace-change states at 20
+[2016-09-01 20:51:36,269] [DEBUG] [db:1627] (24181) 0 name-preorder states at 21
+[2016-09-01 20:51:36,269] [DEBUG] [db:1638] (24181) 0 name-change states at 21
+[2016-09-01 20:51:36,269] [DEBUG] [db:1655] (24181) 0 preorders created at 21
+[2016-09-01 20:51:36,269] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 21
+[2016-09-01 20:51:36,269] [DEBUG] [db:1676] (24181) 0 namespace-change states at 21
+[2016-09-01 20:51:36,269] [DEBUG] [db:1627] (24181) 0 name-preorder states at 22
+[2016-09-01 20:51:36,269] [DEBUG] [db:1638] (24181) 0 name-change states at 22
+[2016-09-01 20:51:36,270] [DEBUG] [db:1655] (24181) 0 preorders created at 22
+[2016-09-01 20:51:36,270] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 22
+[2016-09-01 20:51:36,270] [DEBUG] [db:1676] (24181) 0 namespace-change states at 22
+[2016-09-01 20:51:36,270] [DEBUG] [db:1627] (24181) 0 name-preorder states at 23
+[2016-09-01 20:51:36,270] [DEBUG] [db:1638] (24181) 0 name-change states at 23
+[2016-09-01 20:51:36,270] [DEBUG] [db:1655] (24181) 0 preorders created at 23
+[2016-09-01 20:51:36,270] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 23
+[2016-09-01 20:51:36,270] [DEBUG] [db:1676] (24181) 0 namespace-change states at 23
+[2016-09-01 20:51:36,270] [DEBUG] [db:1627] (24181) 0 name-preorder states at 24
+[2016-09-01 20:51:36,270] [DEBUG] [db:1638] (24181) 0 name-change states at 24
+[2016-09-01 20:51:36,270] [DEBUG] [db:1655] (24181) 0 preorders created at 24
+[2016-09-01 20:51:36,270] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 24
+[2016-09-01 20:51:36,271] [DEBUG] [db:1676] (24181) 0 namespace-change states at 24
+[2016-09-01 20:51:36,271] [DEBUG] [db:1627] (24181) 0 name-preorder states at 25
+[2016-09-01 20:51:36,271] [DEBUG] [db:1638] (24181) 0 name-change states at 25
+[2016-09-01 20:51:36,271] [DEBUG] [db:1655] (24181) 0 preorders created at 25
+[2016-09-01 20:51:36,271] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 25
+[2016-09-01 20:51:36,271] [DEBUG] [db:1676] (24181) 0 namespace-change states at 25
+[2016-09-01 20:51:36,271] [DEBUG] [db:1627] (24181) 0 name-preorder states at 26
+[2016-09-01 20:51:36,271] [DEBUG] [db:1638] (24181) 0 name-change states at 26
+[2016-09-01 20:51:36,271] [DEBUG] [db:1655] (24181) 0 preorders created at 26
+[2016-09-01 20:51:36,271] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 26
+[2016-09-01 20:51:36,271] [DEBUG] [db:1676] (24181) 0 namespace-change states at 26
+[2016-09-01 20:51:36,272] [DEBUG] [db:1627] (24181) 0 name-preorder states at 27
+[2016-09-01 20:51:36,272] [DEBUG] [db:1638] (24181) 0 name-change states at 27
+[2016-09-01 20:51:36,272] [DEBUG] [db:1655] (24181) 0 preorders created at 27
+[2016-09-01 20:51:36,272] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 27
+[2016-09-01 20:51:36,272] [DEBUG] [db:1676] (24181) 0 namespace-change states at 27
+[2016-09-01 20:51:36,272] [DEBUG] [db:1627] (24181) 0 name-preorder states at 28
+[2016-09-01 20:51:36,272] [DEBUG] [db:1638] (24181) 0 name-change states at 28
+[2016-09-01 20:51:36,272] [DEBUG] [db:1655] (24181) 0 preorders created at 28
+[2016-09-01 20:51:36,272] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 28
+[2016-09-01 20:51:36,272] [DEBUG] [db:1676] (24181) 0 namespace-change states at 28
+[2016-09-01 20:51:36,272] [DEBUG] [db:1627] (24181) 0 name-preorder states at 29
+[2016-09-01 20:51:36,273] [DEBUG] [db:1638] (24181) 0 name-change states at 29
+[2016-09-01 20:51:36,273] [DEBUG] [db:1655] (24181) 0 preorders created at 29
+[2016-09-01 20:51:36,273] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 29
+[2016-09-01 20:51:36,273] [DEBUG] [db:1676] (24181) 0 namespace-change states at 29
+[2016-09-01 20:51:36,273] [DEBUG] [db:1627] (24181) 0 name-preorder states at 30
+[2016-09-01 20:51:36,273] [DEBUG] [db:1638] (24181) 0 name-change states at 30
+[2016-09-01 20:51:36,273] [DEBUG] [db:1655] (24181) 0 preorders created at 30
+[2016-09-01 20:51:36,273] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 30
+[2016-09-01 20:51:36,273] [DEBUG] [db:1676] (24181) 0 namespace-change states at 30
+[2016-09-01 20:51:36,273] [DEBUG] [db:1627] (24181) 0 name-preorder states at 31
+[2016-09-01 20:51:36,273] [DEBUG] [db:1638] (24181) 0 name-change states at 31
+[2016-09-01 20:51:36,274] [DEBUG] [db:1655] (24181) 0 preorders created at 31
+[2016-09-01 20:51:36,274] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 31
+[2016-09-01 20:51:36,274] [DEBUG] [db:1676] (24181) 0 namespace-change states at 31
+[2016-09-01 20:51:36,274] [DEBUG] [db:1627] (24181) 0 name-preorder states at 32
+[2016-09-01 20:51:36,274] [DEBUG] [db:1638] (24181) 0 name-change states at 32
+[2016-09-01 20:51:36,274] [DEBUG] [db:1655] (24181) 0 preorders created at 32
+[2016-09-01 20:51:36,274] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 32
+[2016-09-01 20:51:36,274] [DEBUG] [db:1676] (24181) 0 namespace-change states at 32
+[2016-09-01 20:51:36,274] [DEBUG] [db:1627] (24181) 0 name-preorder states at 33
+[2016-09-01 20:51:36,274] [DEBUG] [db:1638] (24181) 0 name-change states at 33
+[2016-09-01 20:51:36,274] [DEBUG] [db:1655] (24181) 0 preorders created at 33
+[2016-09-01 20:51:36,274] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 33
+[2016-09-01 20:51:36,275] [DEBUG] [db:1676] (24181) 0 namespace-change states at 33
+[2016-09-01 20:51:36,275] [DEBUG] [db:1627] (24181) 0 name-preorder states at 34
+[2016-09-01 20:51:36,275] [DEBUG] [db:1638] (24181) 0 name-change states at 34
+[2016-09-01 20:51:36,275] [DEBUG] [db:1655] (24181) 0 preorders created at 34
+[2016-09-01 20:51:36,275] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 34
+[2016-09-01 20:51:36,275] [DEBUG] [db:1676] (24181) 0 namespace-change states at 34
+[2016-09-01 20:51:36,275] [DEBUG] [db:1627] (24181) 0 name-preorder states at 35
+[2016-09-01 20:51:36,275] [DEBUG] [db:1638] (24181) 0 name-change states at 35
+[2016-09-01 20:51:36,275] [DEBUG] [db:1655] (24181) 0 preorders created at 35
+[2016-09-01 20:51:36,275] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 35
+[2016-09-01 20:51:36,275] [DEBUG] [db:1676] (24181) 0 namespace-change states at 35
+[2016-09-01 20:51:36,276] [DEBUG] [db:1627] (24181) 0 name-preorder states at 36
+[2016-09-01 20:51:36,276] [DEBUG] [db:1638] (24181) 0 name-change states at 36
+[2016-09-01 20:51:36,276] [DEBUG] [db:1655] (24181) 0 preorders created at 36
+[2016-09-01 20:51:36,276] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 36
+[2016-09-01 20:51:36,276] [DEBUG] [db:1676] (24181) 0 namespace-change states at 36
+[2016-09-01 20:51:36,276] [DEBUG] [db:1627] (24181) 0 name-preorder states at 37
+[2016-09-01 20:51:36,276] [DEBUG] [db:1638] (24181) 0 name-change states at 37
+[2016-09-01 20:51:36,276] [DEBUG] [db:1655] (24181) 0 preorders created at 37
+[2016-09-01 20:51:36,276] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 37
+[2016-09-01 20:51:36,276] [DEBUG] [db:1676] (24181) 0 namespace-change states at 37
+[2016-09-01 20:51:36,276] [DEBUG] [db:1627] (24181) 0 name-preorder states at 38
+[2016-09-01 20:51:36,277] [DEBUG] [db:1638] (24181) 0 name-change states at 38
+[2016-09-01 20:51:36,277] [DEBUG] [db:1655] (24181) 0 preorders created at 38
+[2016-09-01 20:51:36,277] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 38
+[2016-09-01 20:51:36,277] [DEBUG] [db:1676] (24181) 0 namespace-change states at 38
+[2016-09-01 20:51:36,277] [DEBUG] [db:1627] (24181) 0 name-preorder states at 39
+[2016-09-01 20:51:36,277] [DEBUG] [db:1638] (24181) 0 name-change states at 39
+[2016-09-01 20:51:36,277] [DEBUG] [db:1655] (24181) 0 preorders created at 39
+[2016-09-01 20:51:36,277] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 39
+[2016-09-01 20:51:36,277] [DEBUG] [db:1676] (24181) 0 namespace-change states at 39
+[2016-09-01 20:51:36,277] [DEBUG] [db:1627] (24181) 0 name-preorder states at 40
+[2016-09-01 20:51:36,277] [DEBUG] [db:1638] (24181) 0 name-change states at 40
+[2016-09-01 20:51:36,278] [DEBUG] [db:1655] (24181) 0 preorders created at 40
+[2016-09-01 20:51:36,278] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 40
+[2016-09-01 20:51:36,278] [DEBUG] [db:1676] (24181) 0 namespace-change states at 40
+[2016-09-01 20:51:36,278] [DEBUG] [db:1627] (24181) 0 name-preorder states at 41
+[2016-09-01 20:51:36,278] [DEBUG] [db:1638] (24181) 0 name-change states at 41
+[2016-09-01 20:51:36,278] [DEBUG] [db:1655] (24181) 0 preorders created at 41
+[2016-09-01 20:51:36,278] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 41
+[2016-09-01 20:51:36,278] [DEBUG] [db:1676] (24181) 0 namespace-change states at 41
+[2016-09-01 20:51:36,278] [DEBUG] [db:1627] (24181) 0 name-preorder states at 42
+[2016-09-01 20:51:36,278] [DEBUG] [db:1638] (24181) 0 name-change states at 42
+[2016-09-01 20:51:36,278] [DEBUG] [db:1655] (24181) 0 preorders created at 42
+[2016-09-01 20:51:36,279] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 42
+[2016-09-01 20:51:36,279] [DEBUG] [db:1676] (24181) 0 namespace-change states at 42
+[2016-09-01 20:51:36,279] [DEBUG] [db:1627] (24181) 0 name-preorder states at 43
+[2016-09-01 20:51:36,279] [DEBUG] [db:1638] (24181) 0 name-change states at 43
+[2016-09-01 20:51:36,279] [DEBUG] [db:1655] (24181) 0 preorders created at 43
+[2016-09-01 20:51:36,279] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 43
+[2016-09-01 20:51:36,279] [DEBUG] [db:1676] (24181) 0 namespace-change states at 43
+[2016-09-01 20:51:36,279] [DEBUG] [db:1627] (24181) 0 name-preorder states at 44
+[2016-09-01 20:51:36,279] [DEBUG] [db:1638] (24181) 0 name-change states at 44
+[2016-09-01 20:51:36,279] [DEBUG] [db:1655] (24181) 0 preorders created at 44
+[2016-09-01 20:51:36,279] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 44
+[2016-09-01 20:51:36,280] [DEBUG] [db:1676] (24181) 0 namespace-change states at 44
+[2016-09-01 20:51:36,280] [DEBUG] [db:1627] (24181) 0 name-preorder states at 45
+[2016-09-01 20:51:36,280] [DEBUG] [db:1638] (24181) 0 name-change states at 45
+[2016-09-01 20:51:36,280] [DEBUG] [db:1655] (24181) 0 preorders created at 45
+[2016-09-01 20:51:36,280] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 45
+[2016-09-01 20:51:36,280] [DEBUG] [db:1676] (24181) 0 namespace-change states at 45
+[2016-09-01 20:51:36,280] [DEBUG] [db:1627] (24181) 0 name-preorder states at 46
+[2016-09-01 20:51:36,280] [DEBUG] [db:1638] (24181) 0 name-change states at 46
+[2016-09-01 20:51:36,280] [DEBUG] [db:1655] (24181) 0 preorders created at 46
+[2016-09-01 20:51:36,280] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 46
+[2016-09-01 20:51:36,280] [DEBUG] [db:1676] (24181) 0 namespace-change states at 46
+[2016-09-01 20:51:36,281] [DEBUG] [db:1627] (24181) 0 name-preorder states at 47
+[2016-09-01 20:51:36,281] [DEBUG] [db:1638] (24181) 0 name-change states at 47
+[2016-09-01 20:51:36,281] [DEBUG] [db:1655] (24181) 0 preorders created at 47
+[2016-09-01 20:51:36,281] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 47
+[2016-09-01 20:51:36,281] [DEBUG] [db:1676] (24181) 0 namespace-change states at 47
+[2016-09-01 20:51:36,281] [DEBUG] [db:1627] (24181) 0 name-preorder states at 48
+[2016-09-01 20:51:36,281] [DEBUG] [db:1638] (24181) 0 name-change states at 48
+[2016-09-01 20:51:36,281] [DEBUG] [db:1655] (24181) 0 preorders created at 48
+[2016-09-01 20:51:36,281] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 48
+[2016-09-01 20:51:36,281] [DEBUG] [db:1676] (24181) 0 namespace-change states at 48
+[2016-09-01 20:51:36,282] [DEBUG] [db:1627] (24181) 0 name-preorder states at 49
+[2016-09-01 20:51:36,282] [DEBUG] [db:1638] (24181) 0 name-change states at 49
+[2016-09-01 20:51:36,282] [DEBUG] [db:1655] (24181) 0 preorders created at 49
+[2016-09-01 20:51:36,282] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 49
+[2016-09-01 20:51:36,282] [DEBUG] [db:1676] (24181) 0 namespace-change states at 49
+[2016-09-01 20:51:36,282] [DEBUG] [db:1627] (24181) 0 name-preorder states at 50
+[2016-09-01 20:51:36,282] [DEBUG] [db:1638] (24181) 0 name-change states at 50
+[2016-09-01 20:51:36,283] [DEBUG] [db:1655] (24181) 0 preorders created at 50
+[2016-09-01 20:51:36,283] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 50
+[2016-09-01 20:51:36,283] [DEBUG] [db:1676] (24181) 0 namespace-change states at 50
+[2016-09-01 20:51:36,283] [DEBUG] [db:1627] (24181) 0 name-preorder states at 51
+[2016-09-01 20:51:36,283] [DEBUG] [db:1638] (24181) 0 name-change states at 51
+[2016-09-01 20:51:36,283] [DEBUG] [db:1655] (24181) 0 preorders created at 51
+[2016-09-01 20:51:36,283] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 51
+[2016-09-01 20:51:36,284] [DEBUG] [db:1676] (24181) 0 namespace-change states at 51
+[2016-09-01 20:51:36,284] [DEBUG] [db:1627] (24181) 0 name-preorder states at 52
+[2016-09-01 20:51:36,284] [DEBUG] [db:1638] (24181) 0 name-change states at 52
+[2016-09-01 20:51:36,284] [DEBUG] [db:1655] (24181) 0 preorders created at 52
+[2016-09-01 20:51:36,284] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 52
+[2016-09-01 20:51:36,284] [DEBUG] [db:1676] (24181) 0 namespace-change states at 52
+[2016-09-01 20:51:36,285] [DEBUG] [db:1627] (24181) 0 name-preorder states at 53
+[2016-09-01 20:51:36,285] [DEBUG] [db:1638] (24181) 0 name-change states at 53
+[2016-09-01 20:51:36,285] [DEBUG] [db:1655] (24181) 0 preorders created at 53
+[2016-09-01 20:51:36,285] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 53
+[2016-09-01 20:51:36,285] [DEBUG] [db:1676] (24181) 0 namespace-change states at 53
+[2016-09-01 20:51:36,285] [DEBUG] [db:1627] (24181) 0 name-preorder states at 54
+[2016-09-01 20:51:36,285] [DEBUG] [db:1638] (24181) 0 name-change states at 54
+[2016-09-01 20:51:36,285] [DEBUG] [db:1655] (24181) 0 preorders created at 54
+[2016-09-01 20:51:36,286] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 54
+[2016-09-01 20:51:36,286] [DEBUG] [db:1676] (24181) 0 namespace-change states at 54
+[2016-09-01 20:51:36,286] [DEBUG] [db:1627] (24181) 0 name-preorder states at 55
+[2016-09-01 20:51:36,286] [DEBUG] [db:1638] (24181) 0 name-change states at 55
+[2016-09-01 20:51:36,286] [DEBUG] [db:1655] (24181) 0 preorders created at 55
+[2016-09-01 20:51:36,286] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 55
+[2016-09-01 20:51:36,286] [DEBUG] [db:1676] (24181) 0 namespace-change states at 55
+[2016-09-01 20:51:36,287] [DEBUG] [db:1627] (24181) 0 name-preorder states at 56
+[2016-09-01 20:51:36,287] [DEBUG] [db:1638] (24181) 0 name-change states at 56
+[2016-09-01 20:51:36,287] [DEBUG] [db:1655] (24181) 0 preorders created at 56
+[2016-09-01 20:51:36,287] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 56
+[2016-09-01 20:51:36,287] [DEBUG] [db:1676] (24181) 0 namespace-change states at 56
+[2016-09-01 20:51:36,287] [DEBUG] [db:1627] (24181) 0 name-preorder states at 57
+[2016-09-01 20:51:36,287] [DEBUG] [db:1638] (24181) 0 name-change states at 57
+[2016-09-01 20:51:36,288] [DEBUG] [db:1655] (24181) 0 preorders created at 57
+[2016-09-01 20:51:36,288] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 57
+[2016-09-01 20:51:36,288] [DEBUG] [db:1676] (24181) 0 namespace-change states at 57
+[2016-09-01 20:51:36,288] [DEBUG] [db:1627] (24181) 0 name-preorder states at 58
+[2016-09-01 20:51:36,288] [DEBUG] [db:1638] (24181) 0 name-change states at 58
+[2016-09-01 20:51:36,288] [DEBUG] [db:1655] (24181) 0 preorders created at 58
+[2016-09-01 20:51:36,288] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 58
+[2016-09-01 20:51:36,289] [DEBUG] [db:1676] (24181) 0 namespace-change states at 58
+[2016-09-01 20:51:36,289] [DEBUG] [db:1627] (24181) 0 name-preorder states at 59
+[2016-09-01 20:51:36,289] [DEBUG] [db:1638] (24181) 0 name-change states at 59
+[2016-09-01 20:51:36,289] [DEBUG] [db:1655] (24181) 0 preorders created at 59
+[2016-09-01 20:51:36,289] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 59
+[2016-09-01 20:51:36,289] [DEBUG] [db:1676] (24181) 0 namespace-change states at 59
+[2016-09-01 20:51:36,290] [DEBUG] [db:1627] (24181) 0 name-preorder states at 60
+[2016-09-01 20:51:36,290] [DEBUG] [db:1638] (24181) 0 name-change states at 60
+[2016-09-01 20:51:36,290] [DEBUG] [db:1655] (24181) 0 preorders created at 60
+[2016-09-01 20:51:36,290] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 60
+[2016-09-01 20:51:36,290] [DEBUG] [db:1676] (24181) 0 namespace-change states at 60
+[2016-09-01 20:51:36,290] [DEBUG] [db:1627] (24181) 0 name-preorder states at 61
+[2016-09-01 20:51:36,290] [DEBUG] [db:1638] (24181) 0 name-change states at 61
+[2016-09-01 20:51:36,291] [DEBUG] [db:1655] (24181) 0 preorders created at 61
+[2016-09-01 20:51:36,291] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 61
+[2016-09-01 20:51:36,291] [DEBUG] [db:1676] (24181) 0 namespace-change states at 61
+[2016-09-01 20:51:36,291] [DEBUG] [db:1627] (24181) 0 name-preorder states at 62
+[2016-09-01 20:51:36,291] [DEBUG] [db:1638] (24181) 0 name-change states at 62
+[2016-09-01 20:51:36,291] [DEBUG] [db:1655] (24181) 0 preorders created at 62
+[2016-09-01 20:51:36,292] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 62
+[2016-09-01 20:51:36,292] [DEBUG] [db:1676] (24181) 0 namespace-change states at 62
+[2016-09-01 20:51:36,292] [DEBUG] [db:1627] (24181) 0 name-preorder states at 63
+[2016-09-01 20:51:36,292] [DEBUG] [db:1638] (24181) 0 name-change states at 63
+[2016-09-01 20:51:36,292] [DEBUG] [db:1655] (24181) 0 preorders created at 63
+[2016-09-01 20:51:36,292] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 63
+[2016-09-01 20:51:36,292] [DEBUG] [db:1676] (24181) 0 namespace-change states at 63
+[2016-09-01 20:51:36,293] [DEBUG] [db:1627] (24181) 0 name-preorder states at 64
+[2016-09-01 20:51:36,293] [DEBUG] [db:1638] (24181) 0 name-change states at 64
+[2016-09-01 20:51:36,293] [DEBUG] [db:1655] (24181) 0 preorders created at 64
+[2016-09-01 20:51:36,293] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 64
+[2016-09-01 20:51:36,293] [DEBUG] [db:1676] (24181) 0 namespace-change states at 64
+[2016-09-01 20:51:36,293] [DEBUG] [db:1627] (24181) 0 name-preorder states at 65
+[2016-09-01 20:51:36,293] [DEBUG] [db:1638] (24181) 0 name-change states at 65
+[2016-09-01 20:51:36,294] [DEBUG] [db:1655] (24181) 0 preorders created at 65
+[2016-09-01 20:51:36,294] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 65
+[2016-09-01 20:51:36,294] [DEBUG] [db:1676] (24181) 0 namespace-change states at 65
+[2016-09-01 20:51:36,294] [DEBUG] [db:1627] (24181) 0 name-preorder states at 66
+[2016-09-01 20:51:36,294] [DEBUG] [db:1638] (24181) 0 name-change states at 66
+[2016-09-01 20:51:36,294] [DEBUG] [db:1655] (24181) 0 preorders created at 66
+[2016-09-01 20:51:36,294] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 66
+[2016-09-01 20:51:36,295] [DEBUG] [db:1676] (24181) 0 namespace-change states at 66
+[2016-09-01 20:51:36,295] [DEBUG] [db:1627] (24181) 0 name-preorder states at 67
+[2016-09-01 20:51:36,295] [DEBUG] [db:1638] (24181) 0 name-change states at 67
+[2016-09-01 20:51:36,295] [DEBUG] [db:1655] (24181) 0 preorders created at 67
+[2016-09-01 20:51:36,295] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 67
+[2016-09-01 20:51:36,295] [DEBUG] [db:1676] (24181) 0 namespace-change states at 67
+[2016-09-01 20:51:36,295] [DEBUG] [db:1627] (24181) 0 name-preorder states at 68
+[2016-09-01 20:51:36,296] [DEBUG] [db:1638] (24181) 0 name-change states at 68
+[2016-09-01 20:51:36,296] [DEBUG] [db:1655] (24181) 0 preorders created at 68
+[2016-09-01 20:51:36,296] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 68
+[2016-09-01 20:51:36,296] [DEBUG] [db:1676] (24181) 0 namespace-change states at 68
+[2016-09-01 20:51:36,296] [DEBUG] [db:1627] (24181) 0 name-preorder states at 69
+[2016-09-01 20:51:36,296] [DEBUG] [db:1638] (24181) 0 name-change states at 69
+[2016-09-01 20:51:36,296] [DEBUG] [db:1655] (24181) 0 preorders created at 69
+[2016-09-01 20:51:36,297] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 69
+[2016-09-01 20:51:36,297] [DEBUG] [db:1676] (24181) 0 namespace-change states at 69
+[2016-09-01 20:51:36,297] [DEBUG] [db:1627] (24181) 0 name-preorder states at 70
+[2016-09-01 20:51:36,297] [DEBUG] [db:1638] (24181) 0 name-change states at 70
+[2016-09-01 20:51:36,297] [DEBUG] [db:1655] (24181) 0 preorders created at 70
+[2016-09-01 20:51:36,297] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 70
+[2016-09-01 20:51:36,297] [DEBUG] [db:1676] (24181) 0 namespace-change states at 70
+[2016-09-01 20:51:36,298] [DEBUG] [db:1627] (24181) 0 name-preorder states at 71
+[2016-09-01 20:51:36,298] [DEBUG] [db:1638] (24181) 0 name-change states at 71
+[2016-09-01 20:51:36,298] [DEBUG] [db:1655] (24181) 0 preorders created at 71
+[2016-09-01 20:51:36,298] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 71
+[2016-09-01 20:51:36,298] [DEBUG] [db:1676] (24181) 0 namespace-change states at 71
+[2016-09-01 20:51:36,298] [DEBUG] [db:1627] (24181) 0 name-preorder states at 72
+[2016-09-01 20:51:36,298] [DEBUG] [db:1638] (24181) 0 name-change states at 72
+[2016-09-01 20:51:36,299] [DEBUG] [db:1655] (24181) 0 preorders created at 72
+[2016-09-01 20:51:36,299] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 72
+[2016-09-01 20:51:36,299] [DEBUG] [db:1676] (24181) 0 namespace-change states at 72
+[2016-09-01 20:51:36,299] [DEBUG] [db:1627] (24181) 0 name-preorder states at 73
+[2016-09-01 20:51:36,299] [DEBUG] [db:1638] (24181) 0 name-change states at 73
+[2016-09-01 20:51:36,299] [DEBUG] [db:1655] (24181) 0 preorders created at 73
+[2016-09-01 20:51:36,300] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 73
+[2016-09-01 20:51:36,300] [DEBUG] [db:1676] (24181) 0 namespace-change states at 73
+[2016-09-01 20:51:36,300] [DEBUG] [db:1627] (24181) 0 name-preorder states at 74
+[2016-09-01 20:51:36,300] [DEBUG] [db:1638] (24181) 0 name-change states at 74
+[2016-09-01 20:51:36,300] [DEBUG] [db:1655] (24181) 0 preorders created at 74
+[2016-09-01 20:51:36,300] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 74
+[2016-09-01 20:51:36,300] [DEBUG] [db:1676] (24181) 0 namespace-change states at 74
+[2016-09-01 20:51:36,300] [DEBUG] [db:1627] (24181) 0 name-preorder states at 75
+[2016-09-01 20:51:36,301] [DEBUG] [db:1638] (24181) 0 name-change states at 75
+[2016-09-01 20:51:36,301] [DEBUG] [db:1655] (24181) 0 preorders created at 75
+[2016-09-01 20:51:36,301] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 75
+[2016-09-01 20:51:36,301] [DEBUG] [db:1676] (24181) 0 namespace-change states at 75
+[2016-09-01 20:51:36,301] [DEBUG] [db:1627] (24181) 0 name-preorder states at 76
+[2016-09-01 20:51:36,301] [DEBUG] [db:1638] (24181) 0 name-change states at 76
+[2016-09-01 20:51:36,301] [DEBUG] [db:1655] (24181) 0 preorders created at 76
+[2016-09-01 20:51:36,302] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 76
+[2016-09-01 20:51:36,302] [DEBUG] [db:1676] (24181) 0 namespace-change states at 76
+[2016-09-01 20:51:36,302] [DEBUG] [db:1627] (24181) 0 name-preorder states at 77
+[2016-09-01 20:51:36,302] [DEBUG] [db:1638] (24181) 0 name-change states at 77
+[2016-09-01 20:51:36,302] [DEBUG] [db:1655] (24181) 0 preorders created at 77
+[2016-09-01 20:51:36,302] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 77
+[2016-09-01 20:51:36,302] [DEBUG] [db:1676] (24181) 0 namespace-change states at 77
+[2016-09-01 20:51:36,302] [DEBUG] [db:1627] (24181) 0 name-preorder states at 78
+[2016-09-01 20:51:36,303] [DEBUG] [db:1638] (24181) 0 name-change states at 78
+[2016-09-01 20:51:36,303] [DEBUG] [db:1655] (24181) 0 preorders created at 78
+[2016-09-01 20:51:36,303] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 78
+[2016-09-01 20:51:36,303] [DEBUG] [db:1676] (24181) 0 namespace-change states at 78
+[2016-09-01 20:51:36,303] [DEBUG] [db:1627] (24181) 0 name-preorder states at 79
+[2016-09-01 20:51:36,303] [DEBUG] [db:1638] (24181) 0 name-change states at 79
+[2016-09-01 20:51:36,304] [DEBUG] [db:1655] (24181) 0 preorders created at 79
+[2016-09-01 20:51:36,304] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 79
+[2016-09-01 20:51:36,304] [DEBUG] [db:1676] (24181) 0 namespace-change states at 79
+[2016-09-01 20:51:36,304] [DEBUG] [db:1627] (24181) 0 name-preorder states at 80
+[2016-09-01 20:51:36,304] [DEBUG] [db:1638] (24181) 0 name-change states at 80
+[2016-09-01 20:51:36,304] [DEBUG] [db:1655] (24181) 0 preorders created at 80
+[2016-09-01 20:51:36,304] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 80
+[2016-09-01 20:51:36,305] [DEBUG] [db:1676] (24181) 0 namespace-change states at 80
+[2016-09-01 20:51:36,305] [DEBUG] [db:1627] (24181) 0 name-preorder states at 81
+[2016-09-01 20:51:36,305] [DEBUG] [db:1638] (24181) 0 name-change states at 81
+[2016-09-01 20:51:36,305] [DEBUG] [db:1655] (24181) 0 preorders created at 81
+[2016-09-01 20:51:36,305] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 81
+[2016-09-01 20:51:36,305] [DEBUG] [db:1676] (24181) 0 namespace-change states at 81
+[2016-09-01 20:51:36,305] [DEBUG] [db:1627] (24181) 0 name-preorder states at 82
+[2016-09-01 20:51:36,305] [DEBUG] [db:1638] (24181) 0 name-change states at 82
+[2016-09-01 20:51:36,305] [DEBUG] [db:1655] (24181) 0 preorders created at 82
+[2016-09-01 20:51:36,305] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 82
+[2016-09-01 20:51:36,305] [DEBUG] [db:1676] (24181) 0 namespace-change states at 82
+[2016-09-01 20:51:36,306] [DEBUG] [db:1627] (24181) 0 name-preorder states at 83
+[2016-09-01 20:51:36,306] [DEBUG] [db:1638] (24181) 0 name-change states at 83
+[2016-09-01 20:51:36,306] [DEBUG] [db:1655] (24181) 0 preorders created at 83
+[2016-09-01 20:51:36,306] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 83
+[2016-09-01 20:51:36,306] [DEBUG] [db:1676] (24181) 0 namespace-change states at 83
+[2016-09-01 20:51:36,306] [DEBUG] [db:1627] (24181) 0 name-preorder states at 84
+[2016-09-01 20:51:36,306] [DEBUG] [db:1638] (24181) 0 name-change states at 84
+[2016-09-01 20:51:36,306] [DEBUG] [db:1655] (24181) 0 preorders created at 84
+[2016-09-01 20:51:36,306] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 84
+[2016-09-01 20:51:36,306] [DEBUG] [db:1676] (24181) 0 namespace-change states at 84
+[2016-09-01 20:51:36,306] [DEBUG] [db:1627] (24181) 0 name-preorder states at 85
+[2016-09-01 20:51:36,306] [DEBUG] [db:1638] (24181) 0 name-change states at 85
+[2016-09-01 20:51:36,307] [DEBUG] [db:1655] (24181) 0 preorders created at 85
+[2016-09-01 20:51:36,307] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 85
+[2016-09-01 20:51:36,307] [DEBUG] [db:1676] (24181) 0 namespace-change states at 85
+[2016-09-01 20:51:36,307] [DEBUG] [db:1627] (24181) 0 name-preorder states at 86
+[2016-09-01 20:51:36,307] [DEBUG] [db:1638] (24181) 0 name-change states at 86
+[2016-09-01 20:51:36,307] [DEBUG] [db:1655] (24181) 0 preorders created at 86
+[2016-09-01 20:51:36,307] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 86
+[2016-09-01 20:51:36,307] [DEBUG] [db:1676] (24181) 0 namespace-change states at 86
+[2016-09-01 20:51:36,307] [DEBUG] [db:1627] (24181) 0 name-preorder states at 87
+[2016-09-01 20:51:36,307] [DEBUG] [db:1638] (24181) 0 name-change states at 87
+[2016-09-01 20:51:36,307] [DEBUG] [db:1655] (24181) 0 preorders created at 87
+[2016-09-01 20:51:36,307] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 87
+[2016-09-01 20:51:36,308] [DEBUG] [db:1676] (24181) 0 namespace-change states at 87
+[2016-09-01 20:51:36,308] [DEBUG] [db:1627] (24181) 0 name-preorder states at 88
+[2016-09-01 20:51:36,308] [DEBUG] [db:1638] (24181) 0 name-change states at 88
+[2016-09-01 20:51:36,308] [DEBUG] [db:1655] (24181) 0 preorders created at 88
+[2016-09-01 20:51:36,308] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 88
+[2016-09-01 20:51:36,308] [DEBUG] [db:1676] (24181) 0 namespace-change states at 88
+[2016-09-01 20:51:36,308] [DEBUG] [db:1627] (24181) 0 name-preorder states at 89
+[2016-09-01 20:51:36,308] [DEBUG] [db:1638] (24181) 0 name-change states at 89
+[2016-09-01 20:51:36,308] [DEBUG] [db:1655] (24181) 0 preorders created at 89
+[2016-09-01 20:51:36,308] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 89
+[2016-09-01 20:51:36,308] [DEBUG] [db:1676] (24181) 0 namespace-change states at 89
+[2016-09-01 20:51:36,308] [DEBUG] [db:1627] (24181) 0 name-preorder states at 90
+[2016-09-01 20:51:36,309] [DEBUG] [db:1638] (24181) 0 name-change states at 90
+[2016-09-01 20:51:36,309] [DEBUG] [db:1655] (24181) 0 preorders created at 90
+[2016-09-01 20:51:36,309] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 90
+[2016-09-01 20:51:36,309] [DEBUG] [db:1676] (24181) 0 namespace-change states at 90
+[2016-09-01 20:51:36,309] [DEBUG] [db:1627] (24181) 0 name-preorder states at 91
+[2016-09-01 20:51:36,309] [DEBUG] [db:1638] (24181) 0 name-change states at 91
+[2016-09-01 20:51:36,309] [DEBUG] [db:1655] (24181) 0 preorders created at 91
+[2016-09-01 20:51:36,309] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 91
+[2016-09-01 20:51:36,309] [DEBUG] [db:1676] (24181) 0 namespace-change states at 91
+[2016-09-01 20:51:36,309] [DEBUG] [db:1627] (24181) 0 name-preorder states at 92
+[2016-09-01 20:51:36,309] [DEBUG] [db:1638] (24181) 0 name-change states at 92
+[2016-09-01 20:51:36,309] [DEBUG] [db:1655] (24181) 0 preorders created at 92
+[2016-09-01 20:51:36,310] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 92
+[2016-09-01 20:51:36,310] [DEBUG] [db:1676] (24181) 0 namespace-change states at 92
+[2016-09-01 20:51:36,310] [DEBUG] [db:1627] (24181) 0 name-preorder states at 93
+[2016-09-01 20:51:36,310] [DEBUG] [db:1638] (24181) 0 name-change states at 93
+[2016-09-01 20:51:36,310] [DEBUG] [db:1655] (24181) 0 preorders created at 93
+[2016-09-01 20:51:36,310] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 93
+[2016-09-01 20:51:36,310] [DEBUG] [db:1676] (24181) 0 namespace-change states at 93
+[2016-09-01 20:51:36,310] [DEBUG] [db:1627] (24181) 0 name-preorder states at 94
+[2016-09-01 20:51:36,310] [DEBUG] [db:1638] (24181) 0 name-change states at 94
+[2016-09-01 20:51:36,310] [DEBUG] [db:1655] (24181) 0 preorders created at 94
+[2016-09-01 20:51:36,310] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 94
+[2016-09-01 20:51:36,310] [DEBUG] [db:1676] (24181) 0 namespace-change states at 94
+[2016-09-01 20:51:36,311] [DEBUG] [db:1627] (24181) 0 name-preorder states at 95
+[2016-09-01 20:51:36,311] [DEBUG] [db:1638] (24181) 0 name-change states at 95
+[2016-09-01 20:51:36,311] [DEBUG] [db:1655] (24181) 0 preorders created at 95
+[2016-09-01 20:51:36,311] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 95
+[2016-09-01 20:51:36,311] [DEBUG] [db:1676] (24181) 0 namespace-change states at 95
+[2016-09-01 20:51:36,311] [DEBUG] [db:1627] (24181) 0 name-preorder states at 96
+[2016-09-01 20:51:36,311] [DEBUG] [db:1638] (24181) 0 name-change states at 96
+[2016-09-01 20:51:36,311] [DEBUG] [db:1655] (24181) 0 preorders created at 96
+[2016-09-01 20:51:36,311] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 96
+[2016-09-01 20:51:36,311] [DEBUG] [db:1676] (24181) 0 namespace-change states at 96
+[2016-09-01 20:51:36,311] [DEBUG] [db:1627] (24181) 0 name-preorder states at 97
+[2016-09-01 20:51:36,312] [DEBUG] [db:1638] (24181) 0 name-change states at 97
+[2016-09-01 20:51:36,312] [DEBUG] [db:1655] (24181) 0 preorders created at 97
+[2016-09-01 20:51:36,312] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 97
+[2016-09-01 20:51:36,312] [DEBUG] [db:1676] (24181) 0 namespace-change states at 97
+[2016-09-01 20:51:36,312] [DEBUG] [db:1627] (24181) 0 name-preorder states at 98
+[2016-09-01 20:51:36,312] [DEBUG] [db:1638] (24181) 0 name-change states at 98
+[2016-09-01 20:51:36,312] [DEBUG] [db:1655] (24181) 0 preorders created at 98
+[2016-09-01 20:51:36,312] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 98
+[2016-09-01 20:51:36,312] [DEBUG] [db:1676] (24181) 0 namespace-change states at 98
+[2016-09-01 20:51:36,312] [DEBUG] [db:1627] (24181) 0 name-preorder states at 99
+[2016-09-01 20:51:36,312] [DEBUG] [db:1638] (24181) 0 name-change states at 99
+[2016-09-01 20:51:36,312] [DEBUG] [db:1655] (24181) 0 preorders created at 99
+[2016-09-01 20:51:36,312] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 99
+[2016-09-01 20:51:36,313] [DEBUG] [db:1676] (24181) 0 namespace-change states at 99
+[2016-09-01 20:51:36,313] [DEBUG] [db:1627] (24181) 0 name-preorder states at 100
+[2016-09-01 20:51:36,313] [DEBUG] [db:1638] (24181) 0 name-change states at 100
+[2016-09-01 20:51:36,313] [DEBUG] [db:1655] (24181) 0 preorders created at 100
+[2016-09-01 20:51:36,313] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 100
+[2016-09-01 20:51:36,313] [DEBUG] [db:1676] (24181) 0 namespace-change states at 100
+[2016-09-01 20:51:36,313] [DEBUG] [db:1627] (24181) 0 name-preorder states at 101
+[2016-09-01 20:51:36,313] [DEBUG] [db:1638] (24181) 0 name-change states at 101
+[2016-09-01 20:51:36,313] [DEBUG] [db:1655] (24181) 0 preorders created at 101
+[2016-09-01 20:51:36,313] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 101
+[2016-09-01 20:51:36,313] [DEBUG] [db:1676] (24181) 0 namespace-change states at 101
+[2016-09-01 20:51:36,313] [DEBUG] [db:1627] (24181) 0 name-preorder states at 102
+[2016-09-01 20:51:36,314] [DEBUG] [db:1638] (24181) 0 name-change states at 102
+[2016-09-01 20:51:36,314] [DEBUG] [db:1655] (24181) 0 preorders created at 102
+[2016-09-01 20:51:36,314] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 102
+[2016-09-01 20:51:36,314] [DEBUG] [db:1676] (24181) 0 namespace-change states at 102
+[2016-09-01 20:51:36,314] [DEBUG] [db:1627] (24181) 0 name-preorder states at 103
+[2016-09-01 20:51:36,314] [DEBUG] [db:1638] (24181) 0 name-change states at 103
+[2016-09-01 20:51:36,314] [DEBUG] [db:1655] (24181) 0 preorders created at 103
+[2016-09-01 20:51:36,314] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 103
+[2016-09-01 20:51:36,314] [DEBUG] [db:1676] (24181) 0 namespace-change states at 103
+[2016-09-01 20:51:36,314] [DEBUG] [db:1627] (24181) 0 name-preorder states at 104
+[2016-09-01 20:51:36,314] [DEBUG] [db:1638] (24181) 0 name-change states at 104
+[2016-09-01 20:51:36,314] [DEBUG] [db:1655] (24181) 0 preorders created at 104
+[2016-09-01 20:51:36,315] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 104
+[2016-09-01 20:51:36,315] [DEBUG] [db:1676] (24181) 0 namespace-change states at 104
+[2016-09-01 20:51:36,315] [DEBUG] [db:1627] (24181) 0 name-preorder states at 105
+[2016-09-01 20:51:36,315] [DEBUG] [db:1638] (24181) 0 name-change states at 105
+[2016-09-01 20:51:36,315] [DEBUG] [db:1655] (24181) 0 preorders created at 105
+[2016-09-01 20:51:36,315] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 105
+[2016-09-01 20:51:36,315] [DEBUG] [db:1676] (24181) 0 namespace-change states at 105
+[2016-09-01 20:51:36,315] [DEBUG] [db:1627] (24181) 0 name-preorder states at 106
+[2016-09-01 20:51:36,315] [DEBUG] [db:1638] (24181) 0 name-change states at 106
+[2016-09-01 20:51:36,315] [DEBUG] [db:1655] (24181) 0 preorders created at 106
+[2016-09-01 20:51:36,315] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 106
+[2016-09-01 20:51:36,316] [DEBUG] [db:1676] (24181) 0 namespace-change states at 106
+[2016-09-01 20:51:36,316] [DEBUG] [db:1627] (24181) 0 name-preorder states at 107
+[2016-09-01 20:51:36,316] [DEBUG] [db:1638] (24181) 0 name-change states at 107
+[2016-09-01 20:51:36,316] [DEBUG] [db:1655] (24181) 0 preorders created at 107
+[2016-09-01 20:51:36,316] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 107
+[2016-09-01 20:51:36,316] [DEBUG] [db:1676] (24181) 0 namespace-change states at 107
+[2016-09-01 20:51:36,316] [DEBUG] [db:1627] (24181) 0 name-preorder states at 108
+[2016-09-01 20:51:36,316] [DEBUG] [db:1638] (24181) 0 name-change states at 108
+[2016-09-01 20:51:36,316] [DEBUG] [db:1655] (24181) 0 preorders created at 108
+[2016-09-01 20:51:36,316] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 108
+[2016-09-01 20:51:36,317] [DEBUG] [db:1676] (24181) 0 namespace-change states at 108
+[2016-09-01 20:51:36,317] [DEBUG] [db:1627] (24181) 0 name-preorder states at 109
+[2016-09-01 20:51:36,317] [DEBUG] [db:1638] (24181) 0 name-change states at 109
+[2016-09-01 20:51:36,317] [DEBUG] [db:1655] (24181) 0 preorders created at 109
+[2016-09-01 20:51:36,317] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 109
+[2016-09-01 20:51:36,317] [DEBUG] [db:1676] (24181) 0 namespace-change states at 109
+[2016-09-01 20:51:36,317] [DEBUG] [db:1627] (24181) 0 name-preorder states at 110
+[2016-09-01 20:51:36,318] [DEBUG] [db:1638] (24181) 0 name-change states at 110
+[2016-09-01 20:51:36,318] [DEBUG] [db:1655] (24181) 0 preorders created at 110
+[2016-09-01 20:51:36,318] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 110
+[2016-09-01 20:51:36,318] [DEBUG] [db:1676] (24181) 0 namespace-change states at 110
+[2016-09-01 20:51:36,318] [DEBUG] [db:1627] (24181) 0 name-preorder states at 111
+[2016-09-01 20:51:36,318] [DEBUG] [db:1638] (24181) 0 name-change states at 111
+[2016-09-01 20:51:36,318] [DEBUG] [db:1655] (24181) 0 preorders created at 111
+[2016-09-01 20:51:36,319] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 111
+[2016-09-01 20:51:36,319] [DEBUG] [db:1676] (24181) 0 namespace-change states at 111
+[2016-09-01 20:51:36,319] [DEBUG] [db:1627] (24181) 0 name-preorder states at 112
+[2016-09-01 20:51:36,319] [DEBUG] [db:1638] (24181) 0 name-change states at 112
+[2016-09-01 20:51:36,319] [DEBUG] [db:1655] (24181) 0 preorders created at 112
+[2016-09-01 20:51:36,319] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 112
+[2016-09-01 20:51:36,319] [DEBUG] [db:1676] (24181) 0 namespace-change states at 112
+[2016-09-01 20:51:36,320] [DEBUG] [db:1627] (24181) 0 name-preorder states at 113
+[2016-09-01 20:51:36,320] [DEBUG] [db:1638] (24181) 0 name-change states at 113
+[2016-09-01 20:51:36,320] [DEBUG] [db:1655] (24181) 0 preorders created at 113
+[2016-09-01 20:51:36,320] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 113
+[2016-09-01 20:51:36,320] [DEBUG] [db:1676] (24181) 0 namespace-change states at 113
+[2016-09-01 20:51:36,320] [DEBUG] [db:1627] (24181) 0 name-preorder states at 114
+[2016-09-01 20:51:36,320] [DEBUG] [db:1638] (24181) 0 name-change states at 114
+[2016-09-01 20:51:36,320] [DEBUG] [db:1655] (24181) 0 preorders created at 114
+[2016-09-01 20:51:36,321] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 114
+[2016-09-01 20:51:36,321] [DEBUG] [db:1676] (24181) 0 namespace-change states at 114
+[2016-09-01 20:51:36,321] [DEBUG] [db:1627] (24181) 0 name-preorder states at 115
+[2016-09-01 20:51:36,321] [DEBUG] [db:1638] (24181) 0 name-change states at 115
+[2016-09-01 20:51:36,321] [DEBUG] [db:1655] (24181) 0 preorders created at 115
+[2016-09-01 20:51:36,321] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 115
+[2016-09-01 20:51:36,321] [DEBUG] [db:1676] (24181) 0 namespace-change states at 115
+[2016-09-01 20:51:36,322] [DEBUG] [db:1627] (24181) 0 name-preorder states at 116
+[2016-09-01 20:51:36,322] [DEBUG] [db:1638] (24181) 0 name-change states at 116
+[2016-09-01 20:51:36,322] [DEBUG] [db:1655] (24181) 0 preorders created at 116
+[2016-09-01 20:51:36,322] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 116
+[2016-09-01 20:51:36,322] [DEBUG] [db:1676] (24181) 0 namespace-change states at 116
+[2016-09-01 20:51:36,322] [DEBUG] [db:1627] (24181) 0 name-preorder states at 117
+[2016-09-01 20:51:36,322] [DEBUG] [db:1638] (24181) 0 name-change states at 117
+[2016-09-01 20:51:36,323] [DEBUG] [db:1655] (24181) 0 preorders created at 117
+[2016-09-01 20:51:36,323] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 117
+[2016-09-01 20:51:36,323] [DEBUG] [db:1676] (24181) 0 namespace-change states at 117
+[2016-09-01 20:51:36,323] [DEBUG] [db:1627] (24181) 0 name-preorder states at 118
+[2016-09-01 20:51:36,323] [DEBUG] [db:1638] (24181) 0 name-change states at 118
+[2016-09-01 20:51:36,323] [DEBUG] [db:1655] (24181) 0 preorders created at 118
+[2016-09-01 20:51:36,323] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 118
+[2016-09-01 20:51:36,324] [DEBUG] [db:1676] (24181) 0 namespace-change states at 118
+[2016-09-01 20:51:36,324] [DEBUG] [db:1627] (24181) 0 name-preorder states at 119
+[2016-09-01 20:51:36,324] [DEBUG] [db:1638] (24181) 0 name-change states at 119
+[2016-09-01 20:51:36,324] [DEBUG] [db:1655] (24181) 0 preorders created at 119
+[2016-09-01 20:51:36,324] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 119
+[2016-09-01 20:51:36,324] [DEBUG] [db:1676] (24181) 0 namespace-change states at 119
+[2016-09-01 20:51:36,324] [DEBUG] [db:1627] (24181) 0 name-preorder states at 120
+[2016-09-01 20:51:36,324] [DEBUG] [db:1638] (24181) 0 name-change states at 120
+[2016-09-01 20:51:36,324] [DEBUG] [db:1655] (24181) 0 preorders created at 120
+[2016-09-01 20:51:36,324] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 120
+[2016-09-01 20:51:36,325] [DEBUG] [db:1676] (24181) 0 namespace-change states at 120
+[2016-09-01 20:51:36,325] [DEBUG] [db:1627] (24181) 0 name-preorder states at 121
+[2016-09-01 20:51:36,325] [DEBUG] [db:1638] (24181) 0 name-change states at 121
+[2016-09-01 20:51:36,325] [DEBUG] [db:1655] (24181) 0 preorders created at 121
+[2016-09-01 20:51:36,325] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 121
+[2016-09-01 20:51:36,325] [DEBUG] [db:1676] (24181) 0 namespace-change states at 121
+[2016-09-01 20:51:36,325] [DEBUG] [db:1627] (24181) 0 name-preorder states at 122
+[2016-09-01 20:51:36,325] [DEBUG] [db:1638] (24181) 0 name-change states at 122
+[2016-09-01 20:51:36,325] [DEBUG] [db:1655] (24181) 0 preorders created at 122
+[2016-09-01 20:51:36,325] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 122
+[2016-09-01 20:51:36,325] [DEBUG] [db:1676] (24181) 0 namespace-change states at 122
+[2016-09-01 20:51:36,326] [DEBUG] [db:1627] (24181) 0 name-preorder states at 123
+[2016-09-01 20:51:36,326] [DEBUG] [db:1638] (24181) 0 name-change states at 123
+[2016-09-01 20:51:36,326] [DEBUG] [db:1655] (24181) 0 preorders created at 123
+[2016-09-01 20:51:36,326] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 123
+[2016-09-01 20:51:36,326] [DEBUG] [db:1676] (24181) 0 namespace-change states at 123
+[2016-09-01 20:51:36,326] [DEBUG] [db:1627] (24181) 0 name-preorder states at 124
+[2016-09-01 20:51:36,326] [DEBUG] [db:1638] (24181) 0 name-change states at 124
+[2016-09-01 20:51:36,326] [DEBUG] [db:1655] (24181) 0 preorders created at 124
+[2016-09-01 20:51:36,326] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 124
+[2016-09-01 20:51:36,327] [DEBUG] [db:1676] (24181) 0 namespace-change states at 124
+[2016-09-01 20:51:36,327] [DEBUG] [db:1627] (24181) 0 name-preorder states at 125
+[2016-09-01 20:51:36,327] [DEBUG] [db:1638] (24181) 0 name-change states at 125
+[2016-09-01 20:51:36,327] [DEBUG] [db:1655] (24181) 0 preorders created at 125
+[2016-09-01 20:51:36,327] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 125
+[2016-09-01 20:51:36,327] [DEBUG] [db:1676] (24181) 0 namespace-change states at 125
+[2016-09-01 20:51:36,327] [DEBUG] [db:1627] (24181) 0 name-preorder states at 126
+[2016-09-01 20:51:36,328] [DEBUG] [db:1638] (24181) 0 name-change states at 126
+[2016-09-01 20:51:36,328] [DEBUG] [db:1655] (24181) 0 preorders created at 126
+[2016-09-01 20:51:36,328] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 126
+[2016-09-01 20:51:36,328] [DEBUG] [db:1676] (24181) 0 namespace-change states at 126
+[2016-09-01 20:51:36,328] [DEBUG] [db:1627] (24181) 0 name-preorder states at 127
+[2016-09-01 20:51:36,328] [DEBUG] [db:1638] (24181) 0 name-change states at 127
+[2016-09-01 20:51:36,328] [DEBUG] [db:1655] (24181) 0 preorders created at 127
+[2016-09-01 20:51:36,328] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 127
+[2016-09-01 20:51:36,328] [DEBUG] [db:1676] (24181) 0 namespace-change states at 127
+[2016-09-01 20:51:36,328] [DEBUG] [db:1627] (24181) 0 name-preorder states at 128
+[2016-09-01 20:51:36,328] [DEBUG] [db:1638] (24181) 0 name-change states at 128
+[2016-09-01 20:51:36,328] [DEBUG] [db:1655] (24181) 0 preorders created at 128
+[2016-09-01 20:51:36,329] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 128
+[2016-09-01 20:51:36,329] [DEBUG] [db:1676] (24181) 0 namespace-change states at 128
+[2016-09-01 20:51:36,329] [DEBUG] [db:1627] (24181) 0 name-preorder states at 129
+[2016-09-01 20:51:36,329] [DEBUG] [db:1638] (24181) 0 name-change states at 129
+[2016-09-01 20:51:36,329] [DEBUG] [db:1655] (24181) 0 preorders created at 129
+[2016-09-01 20:51:36,329] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 129
+[2016-09-01 20:51:36,329] [DEBUG] [db:1676] (24181) 0 namespace-change states at 129
+[2016-09-01 20:51:36,329] [DEBUG] [db:1627] (24181) 0 name-preorder states at 130
+[2016-09-01 20:51:36,329] [DEBUG] [db:1638] (24181) 0 name-change states at 130
+[2016-09-01 20:51:36,329] [DEBUG] [db:1655] (24181) 0 preorders created at 130
+[2016-09-01 20:51:36,329] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 130
+[2016-09-01 20:51:36,329] [DEBUG] [db:1676] (24181) 0 namespace-change states at 130
+[2016-09-01 20:51:36,330] [DEBUG] [db:1627] (24181) 0 name-preorder states at 131
+[2016-09-01 20:51:36,330] [DEBUG] [db:1638] (24181) 0 name-change states at 131
+[2016-09-01 20:51:36,330] [DEBUG] [db:1655] (24181) 0 preorders created at 131
+[2016-09-01 20:51:36,330] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 131
+[2016-09-01 20:51:36,330] [DEBUG] [db:1676] (24181) 0 namespace-change states at 131
+[2016-09-01 20:51:36,330] [DEBUG] [db:1627] (24181) 0 name-preorder states at 132
+[2016-09-01 20:51:36,330] [DEBUG] [db:1638] (24181) 0 name-change states at 132
+[2016-09-01 20:51:36,330] [DEBUG] [db:1655] (24181) 0 preorders created at 132
+[2016-09-01 20:51:36,330] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 132
+[2016-09-01 20:51:36,330] [DEBUG] [db:1676] (24181) 0 namespace-change states at 132
+[2016-09-01 20:51:36,330] [DEBUG] [db:1627] (24181) 0 name-preorder states at 133
+[2016-09-01 20:51:36,330] [DEBUG] [db:1638] (24181) 0 name-change states at 133
+[2016-09-01 20:51:36,331] [DEBUG] [db:1655] (24181) 0 preorders created at 133
+[2016-09-01 20:51:36,331] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 133
+[2016-09-01 20:51:36,331] [DEBUG] [db:1676] (24181) 0 namespace-change states at 133
+[2016-09-01 20:51:36,331] [DEBUG] [db:1627] (24181) 0 name-preorder states at 134
+[2016-09-01 20:51:36,331] [DEBUG] [db:1638] (24181) 0 name-change states at 134
+[2016-09-01 20:51:36,331] [DEBUG] [db:1655] (24181) 0 preorders created at 134
+[2016-09-01 20:51:36,331] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 134
+[2016-09-01 20:51:36,331] [DEBUG] [db:1676] (24181) 0 namespace-change states at 134
+[2016-09-01 20:51:36,331] [DEBUG] [db:1627] (24181) 0 name-preorder states at 135
+[2016-09-01 20:51:36,331] [DEBUG] [db:1638] (24181) 0 name-change states at 135
+[2016-09-01 20:51:36,331] [DEBUG] [db:1655] (24181) 0 preorders created at 135
+[2016-09-01 20:51:36,332] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 135
+[2016-09-01 20:51:36,332] [DEBUG] [db:1676] (24181) 0 namespace-change states at 135
+[2016-09-01 20:51:36,332] [DEBUG] [db:1627] (24181) 0 name-preorder states at 136
+[2016-09-01 20:51:36,332] [DEBUG] [db:1638] (24181) 0 name-change states at 136
+[2016-09-01 20:51:36,332] [DEBUG] [db:1655] (24181) 0 preorders created at 136
+[2016-09-01 20:51:36,332] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 136
+[2016-09-01 20:51:36,332] [DEBUG] [db:1676] (24181) 0 namespace-change states at 136
+[2016-09-01 20:51:36,332] [DEBUG] [db:1627] (24181) 0 name-preorder states at 137
+[2016-09-01 20:51:36,332] [DEBUG] [db:1638] (24181) 0 name-change states at 137
+[2016-09-01 20:51:36,332] [DEBUG] [db:1655] (24181) 0 preorders created at 137
+[2016-09-01 20:51:36,332] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 137
+[2016-09-01 20:51:36,332] [DEBUG] [db:1676] (24181) 0 namespace-change states at 137
+[2016-09-01 20:51:36,333] [DEBUG] [db:1627] (24181) 0 name-preorder states at 138
+[2016-09-01 20:51:36,333] [DEBUG] [db:1638] (24181) 0 name-change states at 138
+[2016-09-01 20:51:36,333] [DEBUG] [db:1655] (24181) 0 preorders created at 138
+[2016-09-01 20:51:36,333] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 138
+[2016-09-01 20:51:36,333] [DEBUG] [db:1676] (24181) 0 namespace-change states at 138
+[2016-09-01 20:51:36,333] [DEBUG] [db:1627] (24181) 0 name-preorder states at 139
+[2016-09-01 20:51:36,333] [DEBUG] [db:1638] (24181) 0 name-change states at 139
+[2016-09-01 20:51:36,333] [DEBUG] [db:1655] (24181) 0 preorders created at 139
+[2016-09-01 20:51:36,334] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 139
+[2016-09-01 20:51:36,334] [DEBUG] [db:1676] (24181) 0 namespace-change states at 139
+[2016-09-01 20:51:36,334] [DEBUG] [db:1627] (24181) 0 name-preorder states at 140
+[2016-09-01 20:51:36,334] [DEBUG] [db:1638] (24181) 0 name-change states at 140
+[2016-09-01 20:51:36,334] [DEBUG] [db:1655] (24181) 0 preorders created at 140
+[2016-09-01 20:51:36,334] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 140
+[2016-09-01 20:51:36,334] [DEBUG] [db:1676] (24181) 0 namespace-change states at 140
+[2016-09-01 20:51:36,335] [DEBUG] [db:1627] (24181) 0 name-preorder states at 141
+[2016-09-01 20:51:36,335] [DEBUG] [db:1638] (24181) 0 name-change states at 141
+[2016-09-01 20:51:36,335] [DEBUG] [db:1655] (24181) 0 preorders created at 141
+[2016-09-01 20:51:36,335] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 141
+[2016-09-01 20:51:36,335] [DEBUG] [db:1676] (24181) 0 namespace-change states at 141
+[2016-09-01 20:51:36,335] [DEBUG] [db:1627] (24181) 0 name-preorder states at 142
+[2016-09-01 20:51:36,335] [DEBUG] [db:1638] (24181) 0 name-change states at 142
+[2016-09-01 20:51:36,336] [DEBUG] [db:1655] (24181) 0 preorders created at 142
+[2016-09-01 20:51:36,336] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 142
+[2016-09-01 20:51:36,336] [DEBUG] [db:1676] (24181) 0 namespace-change states at 142
+[2016-09-01 20:51:36,336] [DEBUG] [db:1627] (24181) 0 name-preorder states at 143
+[2016-09-01 20:51:36,336] [DEBUG] [db:1638] (24181) 0 name-change states at 143
+[2016-09-01 20:51:36,336] [DEBUG] [db:1655] (24181) 0 preorders created at 143
+[2016-09-01 20:51:36,336] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 143
+[2016-09-01 20:51:36,337] [DEBUG] [db:1676] (24181) 0 namespace-change states at 143
+[2016-09-01 20:51:36,337] [DEBUG] [db:1627] (24181) 0 name-preorder states at 144
+[2016-09-01 20:51:36,337] [DEBUG] [db:1638] (24181) 0 name-change states at 144
+[2016-09-01 20:51:36,337] [DEBUG] [db:1655] (24181) 0 preorders created at 144
+[2016-09-01 20:51:36,337] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 144
+[2016-09-01 20:51:36,337] [DEBUG] [db:1676] (24181) 0 namespace-change states at 144
+[2016-09-01 20:51:36,337] [DEBUG] [db:1627] (24181) 0 name-preorder states at 145
+[2016-09-01 20:51:36,338] [DEBUG] [db:1638] (24181) 0 name-change states at 145
+[2016-09-01 20:51:36,338] [DEBUG] [db:1655] (24181) 0 preorders created at 145
+[2016-09-01 20:51:36,338] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 145
+[2016-09-01 20:51:36,338] [DEBUG] [db:1676] (24181) 0 namespace-change states at 145
+[2016-09-01 20:51:36,338] [DEBUG] [db:1627] (24181) 0 name-preorder states at 146
+[2016-09-01 20:51:36,338] [DEBUG] [db:1638] (24181) 0 name-change states at 146
+[2016-09-01 20:51:36,338] [DEBUG] [db:1655] (24181) 0 preorders created at 146
+[2016-09-01 20:51:36,338] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 146
+[2016-09-01 20:51:36,339] [DEBUG] [db:1676] (24181) 0 namespace-change states at 146
+[2016-09-01 20:51:36,339] [DEBUG] [db:1627] (24181) 0 name-preorder states at 147
+[2016-09-01 20:51:36,339] [DEBUG] [db:1638] (24181) 0 name-change states at 147
+[2016-09-01 20:51:36,339] [DEBUG] [db:1655] (24181) 0 preorders created at 147
+[2016-09-01 20:51:36,339] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 147
+[2016-09-01 20:51:36,339] [DEBUG] [db:1676] (24181) 0 namespace-change states at 147
+[2016-09-01 20:51:36,339] [DEBUG] [db:1627] (24181) 0 name-preorder states at 148
+[2016-09-01 20:51:36,340] [DEBUG] [db:1638] (24181) 0 name-change states at 148
+[2016-09-01 20:51:36,340] [DEBUG] [db:1655] (24181) 0 preorders created at 148
+[2016-09-01 20:51:36,340] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 148
+[2016-09-01 20:51:36,340] [DEBUG] [db:1676] (24181) 0 namespace-change states at 148
+[2016-09-01 20:51:36,340] [DEBUG] [db:1627] (24181) 0 name-preorder states at 149
+[2016-09-01 20:51:36,340] [DEBUG] [db:1638] (24181) 0 name-change states at 149
+[2016-09-01 20:51:36,340] [DEBUG] [db:1655] (24181) 0 preorders created at 149
+[2016-09-01 20:51:36,341] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 149
+[2016-09-01 20:51:36,341] [DEBUG] [db:1676] (24181) 0 namespace-change states at 149
+[2016-09-01 20:51:36,341] [DEBUG] [db:1627] (24181) 0 name-preorder states at 150
+[2016-09-01 20:51:36,341] [DEBUG] [db:1638] (24181) 0 name-change states at 150
+[2016-09-01 20:51:36,341] [DEBUG] [db:1655] (24181) 0 preorders created at 150
+[2016-09-01 20:51:36,341] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 150
+[2016-09-01 20:51:36,341] [DEBUG] [db:1676] (24181) 0 namespace-change states at 150
+[2016-09-01 20:51:36,341] [DEBUG] [db:1627] (24181) 0 name-preorder states at 151
+[2016-09-01 20:51:36,341] [DEBUG] [db:1638] (24181) 0 name-change states at 151
+[2016-09-01 20:51:36,341] [DEBUG] [db:1655] (24181) 0 preorders created at 151
+[2016-09-01 20:51:36,341] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 151
+[2016-09-01 20:51:36,342] [DEBUG] [db:1676] (24181) 0 namespace-change states at 151
+[2016-09-01 20:51:36,342] [DEBUG] [db:1627] (24181) 0 name-preorder states at 152
+[2016-09-01 20:51:36,342] [DEBUG] [db:1638] (24181) 0 name-change states at 152
+[2016-09-01 20:51:36,342] [DEBUG] [db:1655] (24181) 0 preorders created at 152
+[2016-09-01 20:51:36,342] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 152
+[2016-09-01 20:51:36,342] [DEBUG] [db:1676] (24181) 0 namespace-change states at 152
+[2016-09-01 20:51:36,342] [DEBUG] [db:1627] (24181) 0 name-preorder states at 153
+[2016-09-01 20:51:36,342] [DEBUG] [db:1638] (24181) 0 name-change states at 153
+[2016-09-01 20:51:36,342] [DEBUG] [db:1655] (24181) 0 preorders created at 153
+[2016-09-01 20:51:36,342] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 153
+[2016-09-01 20:51:36,342] [DEBUG] [db:1676] (24181) 0 namespace-change states at 153
+[2016-09-01 20:51:36,342] [DEBUG] [db:1627] (24181) 0 name-preorder states at 154
+[2016-09-01 20:51:36,343] [DEBUG] [db:1638] (24181) 0 name-change states at 154
+[2016-09-01 20:51:36,343] [DEBUG] [db:1655] (24181) 0 preorders created at 154
+[2016-09-01 20:51:36,343] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 154
+[2016-09-01 20:51:36,343] [DEBUG] [db:1676] (24181) 0 namespace-change states at 154
+[2016-09-01 20:51:36,343] [DEBUG] [db:1627] (24181) 0 name-preorder states at 155
+[2016-09-01 20:51:36,343] [DEBUG] [db:1638] (24181) 0 name-change states at 155
+[2016-09-01 20:51:36,343] [DEBUG] [db:1655] (24181) 0 preorders created at 155
+[2016-09-01 20:51:36,343] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 155
+[2016-09-01 20:51:36,343] [DEBUG] [db:1676] (24181) 0 namespace-change states at 155
+[2016-09-01 20:51:36,343] [DEBUG] [db:1627] (24181) 0 name-preorder states at 156
+[2016-09-01 20:51:36,343] [DEBUG] [db:1638] (24181) 0 name-change states at 156
+[2016-09-01 20:51:36,343] [DEBUG] [db:1655] (24181) 0 preorders created at 156
+[2016-09-01 20:51:36,344] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 156
+[2016-09-01 20:51:36,344] [DEBUG] [db:1676] (24181) 0 namespace-change states at 156
+[2016-09-01 20:51:36,344] [DEBUG] [db:1627] (24181) 0 name-preorder states at 157
+[2016-09-01 20:51:36,344] [DEBUG] [db:1638] (24181) 0 name-change states at 157
+[2016-09-01 20:51:36,344] [DEBUG] [db:1655] (24181) 0 preorders created at 157
+[2016-09-01 20:51:36,344] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 157
+[2016-09-01 20:51:36,344] [DEBUG] [db:1676] (24181) 0 namespace-change states at 157
+[2016-09-01 20:51:36,344] [DEBUG] [db:1627] (24181) 0 name-preorder states at 158
+[2016-09-01 20:51:36,344] [DEBUG] [db:1638] (24181) 0 name-change states at 158
+[2016-09-01 20:51:36,344] [DEBUG] [db:1655] (24181) 0 preorders created at 158
+[2016-09-01 20:51:36,344] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 158
+[2016-09-01 20:51:36,344] [DEBUG] [db:1676] (24181) 0 namespace-change states at 158
+[2016-09-01 20:51:36,345] [DEBUG] [db:1627] (24181) 0 name-preorder states at 159
+[2016-09-01 20:51:36,345] [DEBUG] [db:1638] (24181) 0 name-change states at 159
+[2016-09-01 20:51:36,345] [DEBUG] [db:1655] (24181) 0 preorders created at 159
+[2016-09-01 20:51:36,345] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 159
+[2016-09-01 20:51:36,345] [DEBUG] [db:1676] (24181) 0 namespace-change states at 159
+[2016-09-01 20:51:36,345] [DEBUG] [db:1627] (24181) 0 name-preorder states at 160
+[2016-09-01 20:51:36,345] [DEBUG] [db:1638] (24181) 0 name-change states at 160
+[2016-09-01 20:51:36,345] [DEBUG] [db:1655] (24181) 0 preorders created at 160
+[2016-09-01 20:51:36,345] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 160
+[2016-09-01 20:51:36,345] [DEBUG] [db:1676] (24181) 0 namespace-change states at 160
+[2016-09-01 20:51:36,345] [DEBUG] [db:1627] (24181) 0 name-preorder states at 161
+[2016-09-01 20:51:36,345] [DEBUG] [db:1638] (24181) 0 name-change states at 161
+[2016-09-01 20:51:36,346] [DEBUG] [db:1655] (24181) 0 preorders created at 161
+[2016-09-01 20:51:36,346] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 161
+[2016-09-01 20:51:36,346] [DEBUG] [db:1676] (24181) 0 namespace-change states at 161
+[2016-09-01 20:51:36,346] [DEBUG] [db:1627] (24181) 0 name-preorder states at 162
+[2016-09-01 20:51:36,346] [DEBUG] [db:1638] (24181) 0 name-change states at 162
+[2016-09-01 20:51:36,346] [DEBUG] [db:1655] (24181) 0 preorders created at 162
+[2016-09-01 20:51:36,346] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 162
+[2016-09-01 20:51:36,346] [DEBUG] [db:1676] (24181) 0 namespace-change states at 162
+[2016-09-01 20:51:36,346] [DEBUG] [db:1627] (24181) 0 name-preorder states at 163
+[2016-09-01 20:51:36,346] [DEBUG] [db:1638] (24181) 0 name-change states at 163
+[2016-09-01 20:51:36,346] [DEBUG] [db:1655] (24181) 0 preorders created at 163
+[2016-09-01 20:51:36,346] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 163
+[2016-09-01 20:51:36,347] [DEBUG] [db:1676] (24181) 0 namespace-change states at 163
+[2016-09-01 20:51:36,347] [DEBUG] [db:1627] (24181) 0 name-preorder states at 164
+[2016-09-01 20:51:36,347] [DEBUG] [db:1638] (24181) 0 name-change states at 164
+[2016-09-01 20:51:36,347] [DEBUG] [db:1655] (24181) 0 preorders created at 164
+[2016-09-01 20:51:36,347] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 164
+[2016-09-01 20:51:36,347] [DEBUG] [db:1676] (24181) 0 namespace-change states at 164
+[2016-09-01 20:51:36,347] [DEBUG] [db:1627] (24181) 0 name-preorder states at 165
+[2016-09-01 20:51:36,347] [DEBUG] [db:1638] (24181) 0 name-change states at 165
+[2016-09-01 20:51:36,347] [DEBUG] [db:1655] (24181) 0 preorders created at 165
+[2016-09-01 20:51:36,347] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 165
+[2016-09-01 20:51:36,347] [DEBUG] [db:1676] (24181) 0 namespace-change states at 165
+[2016-09-01 20:51:36,348] [DEBUG] [db:1627] (24181) 0 name-preorder states at 166
+[2016-09-01 20:51:36,348] [DEBUG] [db:1638] (24181) 0 name-change states at 166
+[2016-09-01 20:51:36,348] [DEBUG] [db:1655] (24181) 0 preorders created at 166
+[2016-09-01 20:51:36,348] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 166
+[2016-09-01 20:51:36,348] [DEBUG] [db:1676] (24181) 0 namespace-change states at 166
+[2016-09-01 20:51:36,348] [DEBUG] [db:1627] (24181) 0 name-preorder states at 167
+[2016-09-01 20:51:36,348] [DEBUG] [db:1638] (24181) 0 name-change states at 167
+[2016-09-01 20:51:36,348] [DEBUG] [db:1655] (24181) 0 preorders created at 167
+[2016-09-01 20:51:36,348] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 167
+[2016-09-01 20:51:36,348] [DEBUG] [db:1676] (24181) 0 namespace-change states at 167
+[2016-09-01 20:51:36,348] [DEBUG] [db:1627] (24181) 0 name-preorder states at 168
+[2016-09-01 20:51:36,348] [DEBUG] [db:1638] (24181) 0 name-change states at 168
+[2016-09-01 20:51:36,349] [DEBUG] [db:1655] (24181) 0 preorders created at 168
+[2016-09-01 20:51:36,349] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 168
+[2016-09-01 20:51:36,349] [DEBUG] [db:1676] (24181) 0 namespace-change states at 168
+[2016-09-01 20:51:36,349] [DEBUG] [db:1627] (24181) 0 name-preorder states at 169
+[2016-09-01 20:51:36,349] [DEBUG] [db:1638] (24181) 0 name-change states at 169
+[2016-09-01 20:51:36,349] [DEBUG] [db:1655] (24181) 0 preorders created at 169
+[2016-09-01 20:51:36,349] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 169
+[2016-09-01 20:51:36,349] [DEBUG] [db:1676] (24181) 0 namespace-change states at 169
+[2016-09-01 20:51:36,349] [DEBUG] [db:1627] (24181) 0 name-preorder states at 170
+[2016-09-01 20:51:36,349] [DEBUG] [db:1638] (24181) 0 name-change states at 170
+[2016-09-01 20:51:36,349] [DEBUG] [db:1655] (24181) 0 preorders created at 170
+[2016-09-01 20:51:36,350] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 170
+[2016-09-01 20:51:36,350] [DEBUG] [db:1676] (24181) 0 namespace-change states at 170
+[2016-09-01 20:51:36,350] [DEBUG] [db:1627] (24181) 0 name-preorder states at 171
+[2016-09-01 20:51:36,350] [DEBUG] [db:1638] (24181) 0 name-change states at 171
+[2016-09-01 20:51:36,350] [DEBUG] [db:1655] (24181) 0 preorders created at 171
+[2016-09-01 20:51:36,350] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 171
+[2016-09-01 20:51:36,350] [DEBUG] [db:1676] (24181) 0 namespace-change states at 171
+[2016-09-01 20:51:36,350] [DEBUG] [db:1627] (24181) 0 name-preorder states at 172
+[2016-09-01 20:51:36,351] [DEBUG] [db:1638] (24181) 0 name-change states at 172
+[2016-09-01 20:51:36,351] [DEBUG] [db:1655] (24181) 0 preorders created at 172
+[2016-09-01 20:51:36,351] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 172
+[2016-09-01 20:51:36,351] [DEBUG] [db:1676] (24181) 0 namespace-change states at 172
+[2016-09-01 20:51:36,351] [DEBUG] [db:1627] (24181) 0 name-preorder states at 173
+[2016-09-01 20:51:36,351] [DEBUG] [db:1638] (24181) 0 name-change states at 173
+[2016-09-01 20:51:36,351] [DEBUG] [db:1655] (24181) 0 preorders created at 173
+[2016-09-01 20:51:36,351] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 173
+[2016-09-01 20:51:36,351] [DEBUG] [db:1676] (24181) 0 namespace-change states at 173
+[2016-09-01 20:51:36,352] [DEBUG] [db:1627] (24181) 0 name-preorder states at 174
+[2016-09-01 20:51:36,352] [DEBUG] [db:1638] (24181) 0 name-change states at 174
+[2016-09-01 20:51:36,352] [DEBUG] [db:1655] (24181) 0 preorders created at 174
+[2016-09-01 20:51:36,352] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 174
+[2016-09-01 20:51:36,352] [DEBUG] [db:1676] (24181) 0 namespace-change states at 174
+[2016-09-01 20:51:36,352] [DEBUG] [db:1627] (24181) 0 name-preorder states at 175
+[2016-09-01 20:51:36,352] [DEBUG] [db:1638] (24181) 0 name-change states at 175
+[2016-09-01 20:51:36,352] [DEBUG] [db:1655] (24181) 0 preorders created at 175
+[2016-09-01 20:51:36,352] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 175
+[2016-09-01 20:51:36,352] [DEBUG] [db:1676] (24181) 0 namespace-change states at 175
+[2016-09-01 20:51:36,352] [DEBUG] [db:1627] (24181) 0 name-preorder states at 176
+[2016-09-01 20:51:36,353] [DEBUG] [db:1638] (24181) 0 name-change states at 176
+[2016-09-01 20:51:36,353] [DEBUG] [db:1655] (24181) 0 preorders created at 176
+[2016-09-01 20:51:36,353] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 176
+[2016-09-01 20:51:36,353] [DEBUG] [db:1676] (24181) 0 namespace-change states at 176
+[2016-09-01 20:51:36,353] [DEBUG] [db:1627] (24181) 0 name-preorder states at 177
+[2016-09-01 20:51:36,353] [DEBUG] [db:1638] (24181) 0 name-change states at 177
+[2016-09-01 20:51:36,353] [DEBUG] [db:1655] (24181) 0 preorders created at 177
+[2016-09-01 20:51:36,353] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 177
+[2016-09-01 20:51:36,354] [DEBUG] [db:1676] (24181) 0 namespace-change states at 177
+[2016-09-01 20:51:36,354] [DEBUG] [db:1627] (24181) 0 name-preorder states at 178
+[2016-09-01 20:51:36,354] [DEBUG] [db:1638] (24181) 0 name-change states at 178
+[2016-09-01 20:51:36,354] [DEBUG] [db:1655] (24181) 0 preorders created at 178
+[2016-09-01 20:51:36,354] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 178
+[2016-09-01 20:51:36,354] [DEBUG] [db:1676] (24181) 0 namespace-change states at 178
+[2016-09-01 20:51:36,354] [DEBUG] [db:1627] (24181) 0 name-preorder states at 179
+[2016-09-01 20:51:36,355] [DEBUG] [db:1638] (24181) 0 name-change states at 179
+[2016-09-01 20:51:36,355] [DEBUG] [db:1655] (24181) 0 preorders created at 179
+[2016-09-01 20:51:36,355] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 179
+[2016-09-01 20:51:36,355] [DEBUG] [db:1676] (24181) 0 namespace-change states at 179
+[2016-09-01 20:51:36,355] [DEBUG] [db:1627] (24181) 0 name-preorder states at 180
+[2016-09-01 20:51:36,355] [DEBUG] [db:1638] (24181) 0 name-change states at 180
+[2016-09-01 20:51:36,355] [DEBUG] [db:1655] (24181) 0 preorders created at 180
+[2016-09-01 20:51:36,355] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 180
+[2016-09-01 20:51:36,356] [DEBUG] [db:1676] (24181) 0 namespace-change states at 180
+[2016-09-01 20:51:36,356] [DEBUG] [db:1627] (24181) 0 name-preorder states at 181
+[2016-09-01 20:51:36,356] [DEBUG] [db:1638] (24181) 0 name-change states at 181
+[2016-09-01 20:51:36,356] [DEBUG] [db:1655] (24181) 0 preorders created at 181
+[2016-09-01 20:51:36,356] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 181
+[2016-09-01 20:51:36,356] [DEBUG] [db:1676] (24181) 0 namespace-change states at 181
+[2016-09-01 20:51:36,356] [DEBUG] [db:1627] (24181) 0 name-preorder states at 182
+[2016-09-01 20:51:36,356] [DEBUG] [db:1638] (24181) 0 name-change states at 182
+[2016-09-01 20:51:36,356] [DEBUG] [db:1655] (24181) 0 preorders created at 182
+[2016-09-01 20:51:36,356] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 182
+[2016-09-01 20:51:36,356] [DEBUG] [db:1676] (24181) 0 namespace-change states at 182
+[2016-09-01 20:51:36,357] [DEBUG] [db:1627] (24181) 0 name-preorder states at 183
+[2016-09-01 20:51:36,357] [DEBUG] [db:1638] (24181) 0 name-change states at 183
+[2016-09-01 20:51:36,357] [DEBUG] [db:1655] (24181) 0 preorders created at 183
+[2016-09-01 20:51:36,357] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 183
+[2016-09-01 20:51:36,357] [DEBUG] [db:1676] (24181) 0 namespace-change states at 183
+[2016-09-01 20:51:36,357] [DEBUG] [db:1627] (24181) 0 name-preorder states at 184
+[2016-09-01 20:51:36,357] [DEBUG] [db:1638] (24181) 0 name-change states at 184
+[2016-09-01 20:51:36,357] [DEBUG] [db:1655] (24181) 0 preorders created at 184
+[2016-09-01 20:51:36,357] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 184
+[2016-09-01 20:51:36,357] [DEBUG] [db:1676] (24181) 0 namespace-change states at 184
+[2016-09-01 20:51:36,357] [DEBUG] [db:1627] (24181) 0 name-preorder states at 185
+[2016-09-01 20:51:36,357] [DEBUG] [db:1638] (24181) 0 name-change states at 185
+[2016-09-01 20:51:36,358] [DEBUG] [db:1655] (24181) 0 preorders created at 185
+[2016-09-01 20:51:36,358] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 185
+[2016-09-01 20:51:36,358] [DEBUG] [db:1676] (24181) 0 namespace-change states at 185
+[2016-09-01 20:51:36,358] [DEBUG] [db:1627] (24181) 0 name-preorder states at 186
+[2016-09-01 20:51:36,358] [DEBUG] [db:1638] (24181) 0 name-change states at 186
+[2016-09-01 20:51:36,358] [DEBUG] [db:1655] (24181) 0 preorders created at 186
+[2016-09-01 20:51:36,358] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 186
+[2016-09-01 20:51:36,358] [DEBUG] [db:1676] (24181) 0 namespace-change states at 186
+[2016-09-01 20:51:36,358] [DEBUG] [db:1627] (24181) 0 name-preorder states at 187
+[2016-09-01 20:51:36,358] [DEBUG] [db:1638] (24181) 0 name-change states at 187
+[2016-09-01 20:51:36,358] [DEBUG] [db:1655] (24181) 0 preorders created at 187
+[2016-09-01 20:51:36,358] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 187
+[2016-09-01 20:51:36,359] [DEBUG] [db:1676] (24181) 0 namespace-change states at 187
+[2016-09-01 20:51:36,359] [DEBUG] [db:1627] (24181) 0 name-preorder states at 188
+[2016-09-01 20:51:36,359] [DEBUG] [db:1638] (24181) 0 name-change states at 188
+[2016-09-01 20:51:36,359] [DEBUG] [db:1655] (24181) 0 preorders created at 188
+[2016-09-01 20:51:36,359] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 188
+[2016-09-01 20:51:36,359] [DEBUG] [db:1676] (24181) 0 namespace-change states at 188
+[2016-09-01 20:51:36,359] [DEBUG] [db:1627] (24181) 0 name-preorder states at 189
+[2016-09-01 20:51:36,359] [DEBUG] [db:1638] (24181) 0 name-change states at 189
+[2016-09-01 20:51:36,359] [DEBUG] [db:1655] (24181) 0 preorders created at 189
+[2016-09-01 20:51:36,359] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 189
+[2016-09-01 20:51:36,359] [DEBUG] [db:1676] (24181) 0 namespace-change states at 189
+[2016-09-01 20:51:36,359] [DEBUG] [db:1627] (24181) 0 name-preorder states at 190
+[2016-09-01 20:51:36,360] [DEBUG] [db:1638] (24181) 0 name-change states at 190
+[2016-09-01 20:51:36,360] [DEBUG] [db:1655] (24181) 0 preorders created at 190
+[2016-09-01 20:51:36,360] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 190
+[2016-09-01 20:51:36,360] [DEBUG] [db:1676] (24181) 0 namespace-change states at 190
+[2016-09-01 20:51:36,360] [DEBUG] [db:1627] (24181) 0 name-preorder states at 191
+[2016-09-01 20:51:36,360] [DEBUG] [db:1638] (24181) 0 name-change states at 191
+[2016-09-01 20:51:36,360] [DEBUG] [db:1655] (24181) 0 preorders created at 191
+[2016-09-01 20:51:36,360] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 191
+[2016-09-01 20:51:36,360] [DEBUG] [db:1676] (24181) 0 namespace-change states at 191
+[2016-09-01 20:51:36,360] [DEBUG] [db:1627] (24181) 0 name-preorder states at 192
+[2016-09-01 20:51:36,360] [DEBUG] [db:1638] (24181) 0 name-change states at 192
+[2016-09-01 20:51:36,360] [DEBUG] [db:1655] (24181) 0 preorders created at 192
+[2016-09-01 20:51:36,361] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 192
+[2016-09-01 20:51:36,361] [DEBUG] [db:1676] (24181) 0 namespace-change states at 192
+[2016-09-01 20:51:36,361] [DEBUG] [db:1627] (24181) 0 name-preorder states at 193
+[2016-09-01 20:51:36,361] [DEBUG] [db:1638] (24181) 0 name-change states at 193
+[2016-09-01 20:51:36,361] [DEBUG] [db:1655] (24181) 0 preorders created at 193
+[2016-09-01 20:51:36,361] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 193
+[2016-09-01 20:51:36,361] [DEBUG] [db:1676] (24181) 0 namespace-change states at 193
+[2016-09-01 20:51:36,361] [DEBUG] [db:1627] (24181) 0 name-preorder states at 194
+[2016-09-01 20:51:36,361] [DEBUG] [db:1638] (24181) 0 name-change states at 194
+[2016-09-01 20:51:36,361] [DEBUG] [db:1655] (24181) 0 preorders created at 194
+[2016-09-01 20:51:36,361] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 194
+[2016-09-01 20:51:36,361] [DEBUG] [db:1676] (24181) 0 namespace-change states at 194
+[2016-09-01 20:51:36,362] [DEBUG] [db:1627] (24181) 0 name-preorder states at 195
+[2016-09-01 20:51:36,362] [DEBUG] [db:1638] (24181) 0 name-change states at 195
+[2016-09-01 20:51:36,362] [DEBUG] [db:1655] (24181) 0 preorders created at 195
+[2016-09-01 20:51:36,362] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 195
+[2016-09-01 20:51:36,362] [DEBUG] [db:1676] (24181) 0 namespace-change states at 195
+[2016-09-01 20:51:36,362] [DEBUG] [db:1627] (24181) 0 name-preorder states at 196
+[2016-09-01 20:51:36,362] [DEBUG] [db:1638] (24181) 0 name-change states at 196
+[2016-09-01 20:51:36,362] [DEBUG] [db:1655] (24181) 0 preorders created at 196
+[2016-09-01 20:51:36,362] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 196
+[2016-09-01 20:51:36,362] [DEBUG] [db:1676] (24181) 0 namespace-change states at 196
+[2016-09-01 20:51:36,362] [DEBUG] [db:1627] (24181) 0 name-preorder states at 197
+[2016-09-01 20:51:36,363] [DEBUG] [db:1638] (24181) 0 name-change states at 197
+[2016-09-01 20:51:36,363] [DEBUG] [db:1655] (24181) 0 preorders created at 197
+[2016-09-01 20:51:36,363] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 197
+[2016-09-01 20:51:36,363] [DEBUG] [db:1676] (24181) 0 namespace-change states at 197
+[2016-09-01 20:51:36,363] [DEBUG] [db:1627] (24181) 0 name-preorder states at 198
+[2016-09-01 20:51:36,363] [DEBUG] [db:1638] (24181) 0 name-change states at 198
+[2016-09-01 20:51:36,363] [DEBUG] [db:1655] (24181) 0 preorders created at 198
+[2016-09-01 20:51:36,363] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 198
+[2016-09-01 20:51:36,363] [DEBUG] [db:1676] (24181) 0 namespace-change states at 198
+[2016-09-01 20:51:36,363] [DEBUG] [db:1627] (24181) 0 name-preorder states at 199
+[2016-09-01 20:51:36,363] [DEBUG] [db:1638] (24181) 0 name-change states at 199
+[2016-09-01 20:51:36,364] [DEBUG] [db:1655] (24181) 0 preorders created at 199
+[2016-09-01 20:51:36,364] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 199
+[2016-09-01 20:51:36,364] [DEBUG] [db:1676] (24181) 0 namespace-change states at 199
+[2016-09-01 20:51:36,364] [DEBUG] [db:1627] (24181) 0 name-preorder states at 200
+[2016-09-01 20:51:36,364] [DEBUG] [db:1638] (24181) 0 name-change states at 200
+[2016-09-01 20:51:36,364] [DEBUG] [db:1655] (24181) 0 preorders created at 200
+[2016-09-01 20:51:36,364] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 200
+[2016-09-01 20:51:36,364] [DEBUG] [db:1676] (24181) 0 namespace-change states at 200
+[2016-09-01 20:51:36,364] [DEBUG] [db:1627] (24181) 0 name-preorder states at 201
+[2016-09-01 20:51:36,364] [DEBUG] [db:1638] (24181) 0 name-change states at 201
+[2016-09-01 20:51:36,364] [DEBUG] [db:1655] (24181) 0 preorders created at 201
+[2016-09-01 20:51:36,364] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 201
+[2016-09-01 20:51:36,365] [DEBUG] [db:1676] (24181) 0 namespace-change states at 201
+[2016-09-01 20:51:36,365] [DEBUG] [db:1627] (24181) 0 name-preorder states at 202
+[2016-09-01 20:51:36,365] [DEBUG] [db:1638] (24181) 0 name-change states at 202
+[2016-09-01 20:51:36,365] [DEBUG] [db:1655] (24181) 0 preorders created at 202
+[2016-09-01 20:51:36,365] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 202
+[2016-09-01 20:51:36,365] [DEBUG] [db:1676] (24181) 0 namespace-change states at 202
+[2016-09-01 20:51:36,365] [DEBUG] [db:1627] (24181) 0 name-preorder states at 203
+[2016-09-01 20:51:36,365] [DEBUG] [db:1638] (24181) 0 name-change states at 203
+[2016-09-01 20:51:36,365] [DEBUG] [db:1655] (24181) 0 preorders created at 203
+[2016-09-01 20:51:36,365] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 203
+[2016-09-01 20:51:36,365] [DEBUG] [db:1676] (24181) 0 namespace-change states at 203
+[2016-09-01 20:51:36,366] [DEBUG] [db:1627] (24181) 0 name-preorder states at 204
+[2016-09-01 20:51:36,366] [DEBUG] [db:1638] (24181) 0 name-change states at 204
+[2016-09-01 20:51:36,366] [DEBUG] [db:1655] (24181) 0 preorders created at 204
+[2016-09-01 20:51:36,366] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 204
+[2016-09-01 20:51:36,366] [DEBUG] [db:1676] (24181) 0 namespace-change states at 204
+[2016-09-01 20:51:36,366] [DEBUG] [db:1627] (24181) 0 name-preorder states at 205
+[2016-09-01 20:51:36,366] [DEBUG] [db:1638] (24181) 0 name-change states at 205
+[2016-09-01 20:51:36,366] [DEBUG] [db:1655] (24181) 0 preorders created at 205
+[2016-09-01 20:51:36,366] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 205
+[2016-09-01 20:51:36,367] [DEBUG] [db:1676] (24181) 0 namespace-change states at 205
+[2016-09-01 20:51:36,367] [DEBUG] [db:1627] (24181) 0 name-preorder states at 206
+[2016-09-01 20:51:36,367] [DEBUG] [db:1638] (24181) 0 name-change states at 206
+[2016-09-01 20:51:36,367] [DEBUG] [db:1655] (24181) 0 preorders created at 206
+[2016-09-01 20:51:36,367] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 206
+[2016-09-01 20:51:36,367] [DEBUG] [db:1676] (24181) 0 namespace-change states at 206
+[2016-09-01 20:51:36,367] [DEBUG] [db:1627] (24181) 0 name-preorder states at 207
+[2016-09-01 20:51:36,368] [DEBUG] [db:1638] (24181) 0 name-change states at 207
+[2016-09-01 20:51:36,368] [DEBUG] [db:1655] (24181) 0 preorders created at 207
+[2016-09-01 20:51:36,368] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 207
+[2016-09-01 20:51:36,368] [DEBUG] [db:1676] (24181) 0 namespace-change states at 207
+[2016-09-01 20:51:36,368] [DEBUG] [db:1627] (24181) 0 name-preorder states at 208
+[2016-09-01 20:51:36,368] [DEBUG] [db:1638] (24181) 0 name-change states at 208
+[2016-09-01 20:51:36,368] [DEBUG] [db:1655] (24181) 0 preorders created at 208
+[2016-09-01 20:51:36,368] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 208
+[2016-09-01 20:51:36,369] [DEBUG] [db:1676] (24181) 0 namespace-change states at 208
+[2016-09-01 20:51:36,369] [DEBUG] [db:1627] (24181) 0 name-preorder states at 209
+[2016-09-01 20:51:36,369] [DEBUG] [db:1638] (24181) 0 name-change states at 209
+[2016-09-01 20:51:36,369] [DEBUG] [db:1655] (24181) 0 preorders created at 209
+[2016-09-01 20:51:36,369] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 209
+[2016-09-01 20:51:36,369] [DEBUG] [db:1676] (24181) 0 namespace-change states at 209
+[2016-09-01 20:51:36,369] [DEBUG] [db:1627] (24181) 0 name-preorder states at 210
+[2016-09-01 20:51:36,370] [DEBUG] [db:1638] (24181) 0 name-change states at 210
+[2016-09-01 20:51:36,370] [DEBUG] [db:1655] (24181) 0 preorders created at 210
+[2016-09-01 20:51:36,370] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 210
+[2016-09-01 20:51:36,370] [DEBUG] [db:1676] (24181) 0 namespace-change states at 210
+[2016-09-01 20:51:36,370] [DEBUG] [db:1627] (24181) 0 name-preorder states at 211
+[2016-09-01 20:51:36,370] [DEBUG] [db:1638] (24181) 0 name-change states at 211
+[2016-09-01 20:51:36,370] [DEBUG] [db:1655] (24181) 0 preorders created at 211
+[2016-09-01 20:51:36,370] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 211
+[2016-09-01 20:51:36,371] [DEBUG] [db:1676] (24181) 0 namespace-change states at 211
+[2016-09-01 20:51:36,371] [DEBUG] [db:1627] (24181) 0 name-preorder states at 212
+[2016-09-01 20:51:36,371] [DEBUG] [db:1638] (24181) 0 name-change states at 212
+[2016-09-01 20:51:36,371] [DEBUG] [db:1655] (24181) 0 preorders created at 212
+[2016-09-01 20:51:36,371] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 212
+[2016-09-01 20:51:36,371] [DEBUG] [db:1676] (24181) 0 namespace-change states at 212
+[2016-09-01 20:51:36,371] [DEBUG] [db:1627] (24181) 0 name-preorder states at 213
+[2016-09-01 20:51:36,372] [DEBUG] [db:1638] (24181) 0 name-change states at 213
+[2016-09-01 20:51:36,372] [DEBUG] [db:1655] (24181) 0 preorders created at 213
+[2016-09-01 20:51:36,372] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 213
+[2016-09-01 20:51:36,372] [DEBUG] [db:1676] (24181) 0 namespace-change states at 213
+[2016-09-01 20:51:36,372] [DEBUG] [db:1627] (24181) 0 name-preorder states at 214
+[2016-09-01 20:51:36,372] [DEBUG] [db:1638] (24181) 0 name-change states at 214
+[2016-09-01 20:51:36,372] [DEBUG] [db:1655] (24181) 0 preorders created at 214
+[2016-09-01 20:51:36,373] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 214
+[2016-09-01 20:51:36,373] [DEBUG] [db:1676] (24181) 0 namespace-change states at 214
+[2016-09-01 20:51:36,373] [DEBUG] [db:1627] (24181) 0 name-preorder states at 215
+[2016-09-01 20:51:36,373] [DEBUG] [db:1638] (24181) 0 name-change states at 215
+[2016-09-01 20:51:36,373] [DEBUG] [db:1655] (24181) 0 preorders created at 215
+[2016-09-01 20:51:36,373] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 215
+[2016-09-01 20:51:36,374] [DEBUG] [db:1676] (24181) 0 namespace-change states at 215
+[2016-09-01 20:51:36,374] [DEBUG] [db:1627] (24181) 0 name-preorder states at 216
+[2016-09-01 20:51:36,374] [DEBUG] [db:1638] (24181) 0 name-change states at 216
+[2016-09-01 20:51:36,374] [DEBUG] [db:1655] (24181) 0 preorders created at 216
+[2016-09-01 20:51:36,374] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 216
+[2016-09-01 20:51:36,374] [DEBUG] [db:1676] (24181) 0 namespace-change states at 216
+[2016-09-01 20:51:36,374] [DEBUG] [db:1627] (24181) 0 name-preorder states at 217
+[2016-09-01 20:51:36,374] [DEBUG] [db:1638] (24181) 0 name-change states at 217
+[2016-09-01 20:51:36,374] [DEBUG] [db:1655] (24181) 0 preorders created at 217
+[2016-09-01 20:51:36,374] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 217
+[2016-09-01 20:51:36,374] [DEBUG] [db:1676] (24181) 0 namespace-change states at 217
+[2016-09-01 20:51:36,374] [DEBUG] [db:1627] (24181) 0 name-preorder states at 218
+[2016-09-01 20:51:36,375] [DEBUG] [db:1638] (24181) 0 name-change states at 218
+[2016-09-01 20:51:36,375] [DEBUG] [db:1655] (24181) 0 preorders created at 218
+[2016-09-01 20:51:36,375] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 218
+[2016-09-01 20:51:36,375] [DEBUG] [db:1676] (24181) 0 namespace-change states at 218
+[2016-09-01 20:51:36,375] [DEBUG] [db:1627] (24181) 0 name-preorder states at 219
+[2016-09-01 20:51:36,375] [DEBUG] [db:1638] (24181) 0 name-change states at 219
+[2016-09-01 20:51:36,375] [DEBUG] [db:1655] (24181) 0 preorders created at 219
+[2016-09-01 20:51:36,375] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 219
+[2016-09-01 20:51:36,375] [DEBUG] [db:1676] (24181) 0 namespace-change states at 219
+[2016-09-01 20:51:36,375] [DEBUG] [db:1627] (24181) 0 name-preorder states at 220
+[2016-09-01 20:51:36,375] [DEBUG] [db:1638] (24181) 0 name-change states at 220
+[2016-09-01 20:51:36,375] [DEBUG] [db:1655] (24181) 0 preorders created at 220
+[2016-09-01 20:51:36,376] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 220
+[2016-09-01 20:51:36,376] [DEBUG] [db:1676] (24181) 0 namespace-change states at 220
+[2016-09-01 20:51:36,376] [DEBUG] [db:1627] (24181) 0 name-preorder states at 221
+[2016-09-01 20:51:36,376] [DEBUG] [db:1638] (24181) 0 name-change states at 221
+[2016-09-01 20:51:36,376] [DEBUG] [db:1655] (24181) 0 preorders created at 221
+[2016-09-01 20:51:36,376] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 221
+[2016-09-01 20:51:36,376] [DEBUG] [db:1676] (24181) 0 namespace-change states at 221
+[2016-09-01 20:51:36,376] [DEBUG] [db:1627] (24181) 0 name-preorder states at 222
+[2016-09-01 20:51:36,376] [DEBUG] [db:1638] (24181) 0 name-change states at 222
+[2016-09-01 20:51:36,376] [DEBUG] [db:1655] (24181) 0 preorders created at 222
+[2016-09-01 20:51:36,376] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 222
+[2016-09-01 20:51:36,376] [DEBUG] [db:1676] (24181) 0 namespace-change states at 222
+[2016-09-01 20:51:36,377] [DEBUG] [db:1627] (24181) 0 name-preorder states at 223
+[2016-09-01 20:51:36,377] [DEBUG] [db:1638] (24181) 0 name-change states at 223
+[2016-09-01 20:51:36,377] [DEBUG] [db:1655] (24181) 0 preorders created at 223
+[2016-09-01 20:51:36,377] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 223
+[2016-09-01 20:51:36,377] [DEBUG] [db:1676] (24181) 0 namespace-change states at 223
+[2016-09-01 20:51:36,377] [DEBUG] [db:1627] (24181) 0 name-preorder states at 224
+[2016-09-01 20:51:36,377] [DEBUG] [db:1638] (24181) 0 name-change states at 224
+[2016-09-01 20:51:36,377] [DEBUG] [db:1655] (24181) 0 preorders created at 224
+[2016-09-01 20:51:36,377] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 224
+[2016-09-01 20:51:36,377] [DEBUG] [db:1676] (24181) 0 namespace-change states at 224
+[2016-09-01 20:51:36,377] [DEBUG] [db:1627] (24181) 0 name-preorder states at 225
+[2016-09-01 20:51:36,377] [DEBUG] [db:1638] (24181) 0 name-change states at 225
+[2016-09-01 20:51:36,378] [DEBUG] [db:1655] (24181) 0 preorders created at 225
+[2016-09-01 20:51:36,378] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 225
+[2016-09-01 20:51:36,378] [DEBUG] [db:1676] (24181) 0 namespace-change states at 225
+[2016-09-01 20:51:36,378] [DEBUG] [db:1627] (24181) 0 name-preorder states at 226
+[2016-09-01 20:51:36,378] [DEBUG] [db:1638] (24181) 0 name-change states at 226
+[2016-09-01 20:51:36,378] [DEBUG] [db:1655] (24181) 0 preorders created at 226
+[2016-09-01 20:51:36,378] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 226
+[2016-09-01 20:51:36,378] [DEBUG] [db:1676] (24181) 0 namespace-change states at 226
+[2016-09-01 20:51:36,378] [DEBUG] [db:1627] (24181) 0 name-preorder states at 227
+[2016-09-01 20:51:36,378] [DEBUG] [db:1638] (24181) 0 name-change states at 227
+[2016-09-01 20:51:36,378] [DEBUG] [db:1655] (24181) 0 preorders created at 227
+[2016-09-01 20:51:36,378] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 227
+[2016-09-01 20:51:36,379] [DEBUG] [db:1676] (24181) 0 namespace-change states at 227
+[2016-09-01 20:51:36,379] [DEBUG] [db:1627] (24181) 0 name-preorder states at 228
+[2016-09-01 20:51:36,379] [DEBUG] [db:1638] (24181) 0 name-change states at 228
+[2016-09-01 20:51:36,379] [DEBUG] [db:1655] (24181) 0 preorders created at 228
+[2016-09-01 20:51:36,379] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 228
+[2016-09-01 20:51:36,379] [DEBUG] [db:1676] (24181) 0 namespace-change states at 228
+[2016-09-01 20:51:36,379] [DEBUG] [db:1627] (24181) 0 name-preorder states at 229
+[2016-09-01 20:51:36,379] [DEBUG] [db:1638] (24181) 0 name-change states at 229
+[2016-09-01 20:51:36,379] [DEBUG] [db:1655] (24181) 0 preorders created at 229
+[2016-09-01 20:51:36,379] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 229
+[2016-09-01 20:51:36,379] [DEBUG] [db:1676] (24181) 0 namespace-change states at 229
+[2016-09-01 20:51:36,380] [DEBUG] [db:1627] (24181) 0 name-preorder states at 230
+[2016-09-01 20:51:36,380] [DEBUG] [db:1638] (24181) 0 name-change states at 230
+[2016-09-01 20:51:36,380] [DEBUG] [db:1655] (24181) 0 preorders created at 230
+[2016-09-01 20:51:36,380] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 230
+[2016-09-01 20:51:36,380] [DEBUG] [db:1676] (24181) 0 namespace-change states at 230
+[2016-09-01 20:51:36,380] [DEBUG] [db:1627] (24181) 0 name-preorder states at 231
+[2016-09-01 20:51:36,380] [DEBUG] [db:1638] (24181) 0 name-change states at 231
+[2016-09-01 20:51:36,380] [DEBUG] [db:1655] (24181) 0 preorders created at 231
+[2016-09-01 20:51:36,380] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 231
+[2016-09-01 20:51:36,380] [DEBUG] [db:1676] (24181) 0 namespace-change states at 231
+[2016-09-01 20:51:36,380] [DEBUG] [db:1627] (24181) 0 name-preorder states at 232
+[2016-09-01 20:51:36,380] [DEBUG] [db:1638] (24181) 0 name-change states at 232
+[2016-09-01 20:51:36,381] [DEBUG] [db:1655] (24181) 0 preorders created at 232
+[2016-09-01 20:51:36,381] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 232
+[2016-09-01 20:51:36,381] [DEBUG] [db:1676] (24181) 0 namespace-change states at 232
+[2016-09-01 20:51:36,381] [DEBUG] [db:1627] (24181) 0 name-preorder states at 233
+[2016-09-01 20:51:36,381] [DEBUG] [db:1638] (24181) 0 name-change states at 233
+[2016-09-01 20:51:36,381] [DEBUG] [db:1655] (24181) 0 preorders created at 233
+[2016-09-01 20:51:36,381] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 233
+[2016-09-01 20:51:36,381] [DEBUG] [db:1676] (24181) 0 namespace-change states at 233
+[2016-09-01 20:51:36,381] [DEBUG] [db:1627] (24181) 0 name-preorder states at 234
+[2016-09-01 20:51:36,381] [DEBUG] [db:1638] (24181) 0 name-change states at 234
+[2016-09-01 20:51:36,381] [DEBUG] [db:1655] (24181) 0 preorders created at 234
+[2016-09-01 20:51:36,381] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 234
+[2016-09-01 20:51:36,382] [DEBUG] [db:1676] (24181) 0 namespace-change states at 234
+[2016-09-01 20:51:36,382] [DEBUG] [db:1627] (24181) 0 name-preorder states at 235
+[2016-09-01 20:51:36,382] [DEBUG] [db:1638] (24181) 0 name-change states at 235
+[2016-09-01 20:51:36,382] [DEBUG] [db:1655] (24181) 0 preorders created at 235
+[2016-09-01 20:51:36,382] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 235
+[2016-09-01 20:51:36,382] [DEBUG] [db:1676] (24181) 0 namespace-change states at 235
+[2016-09-01 20:51:36,382] [DEBUG] [db:1627] (24181) 0 name-preorder states at 236
+[2016-09-01 20:51:36,382] [DEBUG] [db:1638] (24181) 0 name-change states at 236
+[2016-09-01 20:51:36,382] [DEBUG] [db:1655] (24181) 0 preorders created at 236
+[2016-09-01 20:51:36,382] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 236
+[2016-09-01 20:51:36,382] [DEBUG] [db:1676] (24181) 0 namespace-change states at 236
+[2016-09-01 20:51:36,382] [DEBUG] [db:1627] (24181) 0 name-preorder states at 237
+[2016-09-01 20:51:36,383] [DEBUG] [db:1638] (24181) 0 name-change states at 237
+[2016-09-01 20:51:36,383] [DEBUG] [db:1655] (24181) 0 preorders created at 237
+[2016-09-01 20:51:36,383] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 237
+[2016-09-01 20:51:36,383] [DEBUG] [db:1676] (24181) 0 namespace-change states at 237
+[2016-09-01 20:51:36,383] [DEBUG] [db:1627] (24181) 0 name-preorder states at 238
+[2016-09-01 20:51:36,383] [DEBUG] [db:1638] (24181) 0 name-change states at 238
+[2016-09-01 20:51:36,383] [DEBUG] [db:1655] (24181) 0 preorders created at 238
+[2016-09-01 20:51:36,383] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 238
+[2016-09-01 20:51:36,384] [DEBUG] [db:1676] (24181) 0 namespace-change states at 238
+[2016-09-01 20:51:36,384] [DEBUG] [db:1627] (24181) 0 name-preorder states at 239
+[2016-09-01 20:51:36,384] [DEBUG] [db:1638] (24181) 0 name-change states at 239
+[2016-09-01 20:51:36,384] [DEBUG] [db:1655] (24181) 0 preorders created at 239
+[2016-09-01 20:51:36,384] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 239
+[2016-09-01 20:51:36,384] [DEBUG] [db:1676] (24181) 0 namespace-change states at 239
+[2016-09-01 20:51:36,384] [DEBUG] [db:1627] (24181) 0 name-preorder states at 240
+[2016-09-01 20:51:36,385] [DEBUG] [db:1638] (24181) 0 name-change states at 240
+[2016-09-01 20:51:36,385] [DEBUG] [db:1655] (24181) 0 preorders created at 240
+[2016-09-01 20:51:36,385] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 240
+[2016-09-01 20:51:36,385] [DEBUG] [db:1676] (24181) 0 namespace-change states at 240
+[2016-09-01 20:51:36,385] [DEBUG] [db:1627] (24181) 0 name-preorder states at 241
+[2016-09-01 20:51:36,385] [DEBUG] [db:1638] (24181) 0 name-change states at 241
+[2016-09-01 20:51:36,385] [DEBUG] [db:1655] (24181) 0 preorders created at 241
+[2016-09-01 20:51:36,386] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 241
+[2016-09-01 20:51:36,386] [DEBUG] [db:1676] (24181) 0 namespace-change states at 241
+[2016-09-01 20:51:36,386] [DEBUG] [db:1627] (24181) 0 name-preorder states at 242
+[2016-09-01 20:51:36,386] [DEBUG] [db:1638] (24181) 0 name-change states at 242
+[2016-09-01 20:51:36,386] [DEBUG] [db:1655] (24181) 0 preorders created at 242
+[2016-09-01 20:51:36,386] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 242
+[2016-09-01 20:51:36,386] [DEBUG] [db:1676] (24181) 0 namespace-change states at 242
+[2016-09-01 20:51:36,386] [DEBUG] [db:1627] (24181) 0 name-preorder states at 243
+[2016-09-01 20:51:36,387] [DEBUG] [db:1638] (24181) 0 name-change states at 243
+[2016-09-01 20:51:36,387] [DEBUG] [db:1655] (24181) 0 preorders created at 243
+[2016-09-01 20:51:36,387] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 243
+[2016-09-01 20:51:36,387] [DEBUG] [db:1676] (24181) 0 namespace-change states at 243
+[2016-09-01 20:51:36,387] [DEBUG] [db:1627] (24181) 0 name-preorder states at 244
+[2016-09-01 20:51:36,387] [DEBUG] [db:1638] (24181) 0 name-change states at 244
+[2016-09-01 20:51:36,387] [DEBUG] [db:1655] (24181) 0 preorders created at 244
+[2016-09-01 20:51:36,388] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 244
+[2016-09-01 20:51:36,388] [DEBUG] [db:1676] (24181) 0 namespace-change states at 244
+[2016-09-01 20:51:36,388] [DEBUG] [db:1627] (24181) 0 name-preorder states at 245
+[2016-09-01 20:51:36,388] [DEBUG] [db:1638] (24181) 0 name-change states at 245
+[2016-09-01 20:51:36,388] [DEBUG] [db:1655] (24181) 0 preorders created at 245
+[2016-09-01 20:51:36,388] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 245
+[2016-09-01 20:51:36,388] [DEBUG] [db:1676] (24181) 0 namespace-change states at 245
+[2016-09-01 20:51:36,388] [DEBUG] [db:1627] (24181) 0 name-preorder states at 246
+[2016-09-01 20:51:36,389] [DEBUG] [db:1638] (24181) 0 name-change states at 246
+[2016-09-01 20:51:36,389] [DEBUG] [db:1655] (24181) 0 preorders created at 246
+[2016-09-01 20:51:36,389] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 246
+[2016-09-01 20:51:36,389] [DEBUG] [db:1676] (24181) 0 namespace-change states at 246
+[2016-09-01 20:51:36,389] [DEBUG] [db:1627] (24181) 0 name-preorder states at 247
+[2016-09-01 20:51:36,389] [DEBUG] [db:1638] (24181) 0 name-change states at 247
+[2016-09-01 20:51:36,389] [DEBUG] [db:1655] (24181) 0 preorders created at 247
+[2016-09-01 20:51:36,390] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 247
+[2016-09-01 20:51:36,390] [DEBUG] [db:1676] (24181) 0 namespace-change states at 247
+[2016-09-01 20:51:36,390] [DEBUG] [db:1627] (24181) 0 name-preorder states at 248
+[2016-09-01 20:51:36,390] [DEBUG] [db:1638] (24181) 0 name-change states at 248
+[2016-09-01 20:51:36,390] [DEBUG] [db:1655] (24181) 0 preorders created at 248
+[2016-09-01 20:51:36,390] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 248
+[2016-09-01 20:51:36,390] [DEBUG] [db:1676] (24181) 0 namespace-change states at 248
+[2016-09-01 20:51:36,391] [DEBUG] [db:1627] (24181) 0 name-preorder states at 249
+[2016-09-01 20:51:36,391] [DEBUG] [db:1638] (24181) 0 name-change states at 249
+[2016-09-01 20:51:36,391] [DEBUG] [db:1655] (24181) 0 preorders created at 249
+[2016-09-01 20:51:36,391] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 249
+[2016-09-01 20:51:36,391] [DEBUG] [db:1676] (24181) 0 namespace-change states at 249
+[2016-09-01 20:51:36,391] [DEBUG] [db:1627] (24181) 0 name-preorder states at 250
+[2016-09-01 20:51:36,391] [DEBUG] [db:1638] (24181) 0 name-change states at 250
+[2016-09-01 20:51:36,391] [DEBUG] [db:1655] (24181) 0 preorders created at 250
+[2016-09-01 20:51:36,391] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 250
+[2016-09-01 20:51:36,391] [DEBUG] [db:1676] (24181) 0 namespace-change states at 250
+[2016-09-01 20:51:36,391] [DEBUG] [db:1627] (24181) 0 name-preorder states at 251
+[2016-09-01 20:51:36,392] [DEBUG] [db:1638] (24181) 0 name-change states at 251
+[2016-09-01 20:51:36,392] [DEBUG] [db:1655] (24181) 0 preorders created at 251
+[2016-09-01 20:51:36,392] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 251
+[2016-09-01 20:51:36,392] [DEBUG] [db:1676] (24181) 0 namespace-change states at 251
+[2016-09-01 20:51:36,392] [DEBUG] [db:1627] (24181) 0 name-preorder states at 252
+[2016-09-01 20:51:36,392] [DEBUG] [db:1638] (24181) 0 name-change states at 252
+[2016-09-01 20:51:36,392] [DEBUG] [db:1655] (24181) 0 preorders created at 252
+[2016-09-01 20:51:36,392] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 252
+[2016-09-01 20:51:36,392] [DEBUG] [db:1676] (24181) 0 namespace-change states at 252
+[2016-09-01 20:51:36,392] [DEBUG] [db:1627] (24181) 0 name-preorder states at 253
+[2016-09-01 20:51:36,392] [DEBUG] [db:1638] (24181) 0 name-change states at 253
+[2016-09-01 20:51:36,392] [DEBUG] [db:1655] (24181) 0 preorders created at 253
+[2016-09-01 20:51:36,393] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 253
+[2016-09-01 20:51:36,393] [DEBUG] [db:1676] (24181) 0 namespace-change states at 253
+[2016-09-01 20:51:36,393] [DEBUG] [db:1627] (24181) 0 name-preorder states at 254
+[2016-09-01 20:51:36,393] [DEBUG] [db:1638] (24181) 0 name-change states at 254
+[2016-09-01 20:51:36,393] [DEBUG] [db:1655] (24181) 0 preorders created at 254
+[2016-09-01 20:51:36,393] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 254
+[2016-09-01 20:51:36,393] [DEBUG] [db:1676] (24181) 0 namespace-change states at 254
+[2016-09-01 20:51:36,393] [DEBUG] [db:1627] (24181) 0 name-preorder states at 255
+[2016-09-01 20:51:36,393] [DEBUG] [db:1638] (24181) 0 name-change states at 255
+[2016-09-01 20:51:36,393] [DEBUG] [db:1655] (24181) 0 preorders created at 255
+[2016-09-01 20:51:36,393] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 255
+[2016-09-01 20:51:36,393] [DEBUG] [db:1676] (24181) 0 namespace-change states at 255
+[2016-09-01 20:51:36,394] [DEBUG] [atlas:669] (24181) Queued 0 zonefiles from 0-255
+[2016-09-01 20:51:36,394] [DEBUG] [atlas:1074] (24181) Refreshing seed peers
+[2016-09-01 20:51:36,394] [DEBUG] [atlas:1080] (24181) Loading peer table
+[2016-09-01 20:51:36,394] [DEBUG] [atlas:3493] (24181) Starting Atlas component 'zonefile_pusher'
+[2016-09-01 20:51:36,395] [DEBUG] [atlas:3412] (24181) localhost:16264: AtlasZonefilePusher step
+[2016-09-01 20:51:36,395] [DEBUG] [atlas:3493] (24181) Starting Atlas component 'health_checker'
+[2016-09-01 20:51:36,395] [DEBUG] [atlas:3150] (24181) localhost:16264: AtlasHealthChecker step
+[2016-09-01 20:51:36,395] [DEBUG] [atlas:3493] (24181) Starting Atlas component 'peer_crawler'
+[2016-09-01 20:51:36,395] [DEBUG] [atlas:3168] (24181) Refresh zonefile inventories for at most 0 peers
+[2016-09-01 20:51:36,396] [DEBUG] [atlas:3044] (24181) localhost:16264: AtlasPeerCrawler step
+[2016-09-01 20:51:36,396] [DEBUG] [atlas:3493] (24181) Starting Atlas component 'zonefile_crawler'
+[2016-09-01 20:51:36,396] [DEBUG] [atlas:3048] (24181) localhost:16264: max neighbors is 80
+[2016-09-01 20:51:36,396] [DEBUG] [blockstackd:1300] (24181) Starting RPC
+[2016-09-01 20:51:36,396] [DEBUG] [atlas:3241] (24181) localhost:16264: AtlasZonefileCrawler step
+[2016-09-01 20:51:36,396] [DEBUG] [atlas:2970] (24181) Add at most 10 new peers out of 0 options
+[2016-09-01 20:51:36,396] [INFO] [blockstackd:344] (24181) Listening on 0.0.0.0:16264
+[2016-09-01 20:51:36,397] [DEBUG] [atlas:3000] (24181) localhost:16264: revalidate old peers
+[2016-09-01 20:51:36,397] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:36,397] [DEBUG] [atlas:3281] (24181) localhost:16264: missing 0 zonefiles
+[2016-09-01 20:51:36,397] [DEBUG] [atlas:3362] (24181) localhost:16264: fetched 0 zonefiles
+[2016-09-01 20:51:36,402] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:36,525] [DEBUG] [blockstack-test-scenario:685] (24181) next block (now at 256)
+[2016-09-01 20:51:36,525] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:36,527] [DEBUG] [blockstack-test-scenario:291] (24181) sync virtualchain up to 256
+[2016-09-01 20:51:36,527] [DEBUG] [indexer:1130] (24181) Sync virtualchain state from 256 to 257
+
+blockstack opts
+{
+    "serve_zonefiles": true, 
+    "analytics_key": "abcdef0123456789", 
+    "profile_storage_drivers": "disk", 
+    "zonefiles": "/tmp/blockstack-test/zonefiles", 
+    "zonefile_storage_drivers": "disk", 
+    "backup_max_age": 30, 
+    "atlasdb_path": "/tmp/blockstack-test/atlas.db", 
+    "email": "", 
+    "atlas_hostname": "localhost", 
+    "serve_profiles": true, 
+    "atlas_blacklist": "", 
+    "backup_frequency": 3, 
+    "atlas": true, 
+    "announcers": "judecn.id,muneeb.id,shea256.id", 
+    "blockchain_proxy": true, 
+    "rpc_port": 16264, 
+    "server_version": "0.14.0", 
+    "atlas_seeds": ""
+}
+
+blockchain opts
+{
+    "bitcoind_use_https": false, 
+    "bitcoind_passwd": "blockstacksystem", 
+    "bitcoind_user": "blockstack", 
+    "bitcoind_server": "localhost", 
+    "bitcoind_spv_path": "/tmp/blockstack-test/spv_headers.dat", 
+    "bitcoind_p2p_port": 18444, 
+    "bitcoind_port": 18332, 
+    "bitcoind_regtest": true
+}
+
+blockchain service opts
+{
+    "multiprocessing_num_procs": 1, 
+    "spv_headers_path": "/tmp/blockstack-test/spv_headers.dat", 
+    "rpc_password": "blockstacksystem", 
+    "utxo_provider": "bitcoind_utxo", 
+    "port": 18332, 
+    "rpc_username": "blockstack", 
+    "multiprocessing_num_blocks": 10, 
+    "blockchain_port": 18332, 
+    "server": "localhost", 
+    "version_byte": 0, 
+    "use_https": false, 
+    "blockchain_server": "localhost"
+}
+blockchain headers: /tmp/blockstack-test/spv_headers.dat
+
+atlas node initialization
+
+
+bitcoind connection
+
+working_dir: /tmp/blockstack-test
+[01 Sep 2016 20:51:36] [DEBUG]	[virtualchain-bits]:	Will download SPV headers to /tmp/blockstack-test/spv_headers.dat
+[2016-09-01 20:51:36,527] [DEBUG] [spv:741] (24181) Synchronize testnet 0 to 256
+[2016-09-01 20:51:36,527] [DEBUG] [spv:761] (24181) connect to localhost:18444
+[2016-09-01 20:51:36,528] [DEBUG] [spv:365] (24181) handshake (version 60002)
+[2016-09-01 20:51:36,528] [DEBUG] [spv:368] (24181) send Version
+[2016-09-01 20:51:36,529] [DEBUG] [spv:381] (24181) handle version
+[2016-09-01 20:51:36,529] [DEBUG] [spv:383] (24181) send VerAck
+[2016-09-01 20:51:36,529] [DEBUG] [spv:355] (24181) send getheaders
+[2016-09-01 20:51:36,568] [DEBUG] [spv:400] (24181) handle ping
+[2016-09-01 20:51:36,569] [DEBUG] [spv:403] (24181) send pong
+[2016-09-01 20:51:36,581] [DEBUG] [spv:250] (24181) handle headers (256)
+[2016-09-01 20:51:36,581] [DEBUG] [spv:272] (24181) Receive 256 testnet headers (0 to 255)
+[2016-09-01 20:51:36,611] [DEBUG] [spv:777] (24181) synced headers from -1 to 256 in /tmp/blockstack-test/spv_headers.dat
+[2016-09-01 20:51:36,611] [DEBUG] [blocks:116] (24181) BlockDownloader: fetch blocks 256-256
+[2016-09-01 20:51:36,611] [DEBUG] [blocks:298] (24181) handshake (version 60002)
+[2016-09-01 20:51:36,611] [DEBUG] [blocks:301] (24181) send Version
+[2016-09-01 20:51:36,612] [DEBUG] [blocks:314] (24181) handle version
+[2016-09-01 20:51:36,612] [DEBUG] [blocks:316] (24181) send VerAck
+[2016-09-01 20:51:36,612] [DEBUG] [blocks:332] (24181) send getdata for 256-256 (5d81649a19f5faece3a34bf93faa75f0df1d320c3c78155856ada4a0127db646-5d81649a19f5faece3a34bf93faa75f0df1d320c3c78155856ada4a0127db646)
+[2016-09-01 20:51:36,656] [DEBUG] [blocks:357] (24181) handle ping
+[2016-09-01 20:51:36,656] [DEBUG] [blocks:360] (24181) send pong
+[2016-09-01 20:51:36,958] [DEBUG] [blocks:196] (24181) num blocks received = 0, num requested = 1
+[2016-09-01 20:51:36,958] [DEBUG] [blocks:562] (24181) handle block 256 (5d81649a19f5faece3a34bf93faa75f0df1d320c3c78155856ada4a0127db646)
+[2016-09-01 20:51:36,959] [DEBUG] [blocks:650] (24181) Request 0 nulldata sender TXs
+[2016-09-01 20:51:36,959] [DEBUG] [indexer:1060] (24181) Process block 256 (0 virtual transactions)
+[2016-09-01 20:51:36,960] [DEBUG] [indexer:803] (24181) Snapshotting block 256
+[2016-09-01 20:51:36,960] [DEBUG] [indexer:724] (24181) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-01 20:51:36,960] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test/blockstack-server.lastblock.tmp --> /tmp/blockstack-test/blockstack-server.lastblock
+[2016-09-01 20:51:36,961] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test/blockstack-server.snapshots.tmp --> /tmp/blockstack-test/blockstack-server.snapshots
+[2016-09-01 20:51:36,961] [DEBUG] [indexer:1153] (24181) CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:36,961] [DEBUG] [indexer:1173] (24181) Last block is 256
+[2016-09-01 20:51:36,962] [INFO] [virtualchain:80] (24181) 0 seconds
+[2016-09-01 20:51:36,962] [DEBUG] [blockstack-test-scenario:294] (24181) sync atlas node up to 256
+[2016-09-01 20:51:36,962] [DEBUG] [blockstack-test-scenario:299] (24181) Synchronize Atlas DB from 256 to 257
+[2016-09-01 20:51:36,962] [DEBUG] [db:1627] (24181) 0 name-preorder states at 256
+[2016-09-01 20:51:36,962] [DEBUG] [db:1638] (24181) 0 name-change states at 256
+[2016-09-01 20:51:36,963] [DEBUG] [db:1655] (24181) 0 preorders created at 256
+[2016-09-01 20:51:36,963] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 256
+[2016-09-01 20:51:36,963] [DEBUG] [db:1676] (24181) 0 namespace-change states at 256
+[2016-09-01 20:51:36,963] [DEBUG] [atlas:669] (24181) Queued 0 zonefiles from 256-256
+[2016-09-01 20:51:36,993] [DEBUG] [client:134] (24181) Loaded storage driver 'disk'
+[2016-09-01 20:51:36,995] [DEBUG] [blockstackd:316] (24181) Inbound RPC begin rpc_get_namespace_cost(('test',))
+[2016-09-01 20:51:36,995] [DEBUG] [blockstackd:326] (24181) Inbound RPC end rpc_get_namespace_cost(('test',))
+127.0.0.1 - - [01/Sep/2016 20:51:36] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-01 20:51:37,186] [DEBUG] [blockstackd:316] (24181) Inbound RPC begin rpc_getinfo(())
+[2016-09-01 20:51:37,187] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-01 20:51:37,257] [DEBUG] [namedb:98] (24181) Connect to database '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-01 20:51:37,258] [DEBUG] [indexer:220] (24181) Lastblock: 256 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-01 20:51:37,273] [DEBUG] [blockstackd:326] (24181) Inbound RPC end rpc_getinfo(())
+127.0.0.1 - - [01/Sep/2016 20:51:37] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-01 20:51:37,399] [DEBUG] [atlas:3412] (24181) localhost:16264: AtlasZonefilePusher step
+[2016-09-01 20:51:37,400] [DEBUG] [atlas:3044] (24181) localhost:16264: AtlasPeerCrawler step
+[2016-09-01 20:51:37,401] [DEBUG] [atlas:3241] (24181) localhost:16264: AtlasZonefileCrawler step
+[2016-09-01 20:51:37,396] [DEBUG] [atlas:3150] (24181) localhost:16264: AtlasHealthChecker step
+[2016-09-01 20:51:37,413] [DEBUG] [atlas:2970] (24181) Add at most 10 new peers out of 0 options
+[2016-09-01 20:51:37,428] [DEBUG] [atlas:3281] (24181) localhost:16264: missing 0 zonefiles
+[2016-09-01 20:51:37,428] [DEBUG] [atlas:3000] (24181) localhost:16264: revalidate old peers
+[2016-09-01 20:51:37,428] [DEBUG] [atlas:3168] (24181) Refresh zonefile inventories for at most 0 peers
+[2016-09-01 20:51:37,443] [DEBUG] [atlas:3362] (24181) localhost:16264: fetched 0 zonefiles
+[2016-09-01 20:51:37,606] [DEBUG] [blockchain:45] (24181) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-01 20:51:37,606] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-01 20:51:37,607] [DEBUG] [nameops:426] (24181) namespace preorder tx 614 bytes, 1649 satoshis
+[2016-09-01 20:51:37,607] [DEBUG] [nameops:1040] (24181) Preordering namespace (test, mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC, mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq), tx_fee = 1649.0
+[2016-09-01 20:51:37,747] [DEBUG] [tx:140] (24181) Send 0100000001aad59855e3badca9f4ef0d13be445cc2166a54aca135053955b645b9d1ff580d010000008a47304402201772dcc60b51417bec2d06e9c3a438ff80f755e381719657c3fc5f4e6604d0d302203ebca3a30e2795f01344040a43c01413a88bd06a3a0b059f542fd2b3e57d7450014104d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fbffffffff030000000000000000296a2769642adb207fcd2150f332a53a8ff0be2a12a85445a2a92a9148d8b13939723d2aca16c75c6d680b002e12010000001976a9140e1c669e2756a79185299cb25ed043ab145f08f088ac0084d717000000001976a914000000000000000000000000000000000000000088ac00000000
+[2016-09-01 20:51:37,750] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:37,836] [DEBUG] [blockstack-test-scenario:685] (24181) next block (now at 257)
+[2016-09-01 20:51:37,836] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:37,838] [DEBUG] [blockstack-test-scenario:291] (24181) sync virtualchain up to 257
+[2016-09-01 20:51:37,838] [DEBUG] [indexer:1130] (24181) Sync virtualchain state from 257 to 258
+[2016-09-01 20:51:37,839] [DEBUG] [spv:741] (24181) Synchronize testnet 257 to 257
+[2016-09-01 20:51:37,839] [DEBUG] [spv:761] (24181) connect to localhost:18444
+[2016-09-01 20:51:37,840] [DEBUG] [spv:365] (24181) handshake (version 60002)
+[2016-09-01 20:51:37,840] [DEBUG] [spv:368] (24181) send Version
+[2016-09-01 20:51:37,841] [DEBUG] [spv:381] (24181) handle version
+[2016-09-01 20:51:37,841] [DEBUG] [spv:383] (24181) send VerAck
+[2016-09-01 20:51:37,841] [DEBUG] [spv:355] (24181) send getheaders
+[2016-09-01 20:51:37,880] [DEBUG] [spv:400] (24181) handle ping
+[2016-09-01 20:51:37,880] [DEBUG] [spv:403] (24181) send pong
+[2016-09-01 20:51:38,282] [DEBUG] [spv:250] (24181) handle headers (1)
+[2016-09-01 20:51:38,282] [DEBUG] [spv:268] (24181) Receive 1 headers (256 to 257)
+[2016-09-01 20:51:38,283] [DEBUG] [spv:777] (24181) synced headers from 256 to 257 in /tmp/blockstack-test/spv_headers.dat
+[2016-09-01 20:51:38,284] [DEBUG] [blocks:116] (24181) BlockDownloader: fetch blocks 257-257
+[2016-09-01 20:51:38,284] [DEBUG] [blocks:298] (24181) handshake (version 60002)
+[2016-09-01 20:51:38,284] [DEBUG] [blocks:301] (24181) send Version
+[2016-09-01 20:51:38,285] [DEBUG] [blocks:314] (24181) handle version
+[2016-09-01 20:51:38,285] [DEBUG] [blocks:316] (24181) send VerAck
+[2016-09-01 20:51:38,285] [DEBUG] [blocks:332] (24181) send getdata for 257-257 (57dcc19c8f86e7505d1746df8acf7c55605ef3474afee4881d8facee7cc03718-57dcc19c8f86e7505d1746df8acf7c55605ef3474afee4881d8facee7cc03718)
+[2016-09-01 20:51:38,324] [DEBUG] [blocks:357] (24181) handle ping
+[2016-09-01 20:51:38,324] [DEBUG] [blocks:360] (24181) send pong
+[2016-09-01 20:51:38,397] [DEBUG] [atlas:3150] (24181) localhost:16264: AtlasHealthChecker step
+[2016-09-01 20:51:38,398] [DEBUG] [atlas:3168] (24181) Refresh zonefile inventories for at most 0 peers
+[2016-09-01 20:51:38,401] [DEBUG] [atlas:3412] (24181) localhost:16264: AtlasZonefilePusher step
+[2016-09-01 20:51:38,401] [DEBUG] [atlas:3044] (24181) localhost:16264: AtlasPeerCrawler step
+[2016-09-01 20:51:38,401] [DEBUG] [atlas:2970] (24181) Add at most 10 new peers out of 0 options
+[2016-09-01 20:51:38,401] [DEBUG] [atlas:3000] (24181) localhost:16264: revalidate old peers
+[2016-09-01 20:51:38,403] [DEBUG] [atlas:3241] (24181) localhost:16264: AtlasZonefileCrawler step
+[2016-09-01 20:51:38,403] [DEBUG] [atlas:3281] (24181) localhost:16264: missing 0 zonefiles
+[2016-09-01 20:51:38,403] [DEBUG] [atlas:3362] (24181) localhost:16264: fetched 0 zonefiles
+[2016-09-01 20:51:38,826] [DEBUG] [blocks:196] (24181) num blocks received = 0, num requested = 1
+[2016-09-01 20:51:38,827] [DEBUG] [blocks:562] (24181) handle block 257 (57dcc19c8f86e7505d1746df8acf7c55605ef3474afee4881d8facee7cc03718)
+[2016-09-01 20:51:38,829] [DEBUG] [blocks:650] (24181) Request 1 nulldata sender TXs
+[2016-09-01 20:51:38,829] [DEBUG] [blocks:227] (24181) Fetch 1 TXs via JSON-RPC (0-1 of 1)
+[2016-09-01 20:51:38,851] [DEBUG] [virtualchain_hooks:223] (24181) PARSE NAMESPACE_PREORDER at (257, 1): db207fcd2150f332a53a8ff0be2a12a85445a2a92a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:38,894] [DEBUG] [indexer:1060] (24181) Process block 257 (1 virtual transactions)
+[2016-09-01 20:51:38,895] [DEBUG] [namedb:359] (24181) ACCEPT NAMESPACE_PREORDER at (257, 1) data: address='mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', block_number='257', consensus_hash='2a9148d8b13939723d2aca16c75c6d68', op='*', op_fee='400000000', preorder_hash='db207fcd2150f332a53a8ff0be2a12a85445a2a9', sender='76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', sender_pubkey='04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', txid='c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', vtxindex='1'
+[2016-09-01 20:51:38,895] [DEBUG] [db:283] (24181) INSERT INTO preorders (address,block_number,consensus_hash,op,op_fee,preorder_hash,sender,sender_pubkey,txid,vtxindex) VALUES ( 'mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', 257, '2a9148d8b13939723d2aca16c75c6d68', '*', 400000000, 'db207fcd2150f332a53a8ff0be2a12a85445a2a9', '76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', '04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', 'c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', 1); ''
+[2016-09-01 20:51:38,967] [DEBUG] [namedb:374] (24181) COMMIT NAMESPACE_PREORDER (*) at (257, 1) data: address='mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', block_number='257', consensus_hash='2a9148d8b13939723d2aca16c75c6d68', op='*', op_fee='400000000', preorder_hash='db207fcd2150f332a53a8ff0be2a12a85445a2a9', sender='76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', sender_pubkey='04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', txid='c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', vtxindex='1'
+[2016-09-01 20:51:38,968] [DEBUG] [indexer:803] (24181) Snapshotting block 257
+[2016-09-01 20:51:38,968] [DEBUG] [indexer:765] (24181) SERIALIZE: *:preorder_hash=40:db207fcd2150f332a53a8ff0be2a12a85445a2a9,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb,vtxindex=1:1,block_number=3:257,sender=50:76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC
+[2016-09-01 20:51:38,968] [DEBUG] [indexer:816] (24181) Snapshotting block 257: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:38,968] [DEBUG] [indexer:724] (24181) Snapshot('30de5acc42c49a4cdfab995949edc56fb280caec5920f6de0cb126f128e32d09', ['2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-01 20:51:38,969] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test/blockstack-server.lastblock.tmp --> /tmp/blockstack-test/blockstack-server.lastblock
+[2016-09-01 20:51:38,969] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test/blockstack-server.snapshots.tmp --> /tmp/blockstack-test/blockstack-server.snapshots
+[2016-09-01 20:51:38,969] [DEBUG] [indexer:1153] (24181) CONSENSUS(257): 11f5adaf52e423f2e30982bd59d0ab2b
+[2016-09-01 20:51:38,969] [DEBUG] [indexer:1173] (24181) Last block is 257
+[2016-09-01 20:51:38,969] [INFO] [virtualchain:80] (24181) 1 seconds
+[2016-09-01 20:51:38,970] [DEBUG] [blockstack-test-scenario:294] (24181) sync atlas node up to 257
+[2016-09-01 20:51:38,970] [DEBUG] [blockstack-test-scenario:299] (24181) Synchronize Atlas DB from 257 to 258
+[2016-09-01 20:51:38,970] [DEBUG] [db:1627] (24181) 0 name-preorder states at 257
+[2016-09-01 20:51:38,970] [DEBUG] [db:1638] (24181) 0 name-change states at 257
+[2016-09-01 20:51:38,970] [DEBUG] [db:1655] (24181) 1 preorders created at 257
+[2016-09-01 20:51:38,970] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 257
+[2016-09-01 20:51:38,970] [DEBUG] [db:1676] (24181) 0 namespace-change states at 257
+[2016-09-01 20:51:38,971] [DEBUG] [atlas:669] (24181) Queued 0 zonefiles from 257-257
+[2016-09-01 20:51:38,978] [DEBUG] [client:134] (24181) Loaded storage driver 'disk'
+[2016-09-01 20:51:38,980] [DEBUG] [blockstackd:316] (24181) Inbound RPC begin rpc_get_namespace_cost(('test',))
+[2016-09-01 20:51:38,980] [DEBUG] [blockstackd:326] (24181) Inbound RPC end rpc_get_namespace_cost(('test',))
+127.0.0.1 - - [01/Sep/2016 20:51:38] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-01 20:51:39,167] [DEBUG] [blockstackd:316] (24181) Inbound RPC begin rpc_getinfo(())
+[2016-09-01 20:51:39,168] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-01 20:51:39,262] [DEBUG] [namedb:98] (24181) Connect to database '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-01 20:51:39,262] [DEBUG] [indexer:220] (24181) Lastblock: 257 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-01 20:51:39,272] [DEBUG] [blockstackd:326] (24181) Inbound RPC end rpc_getinfo(())
+127.0.0.1 - - [01/Sep/2016 20:51:39] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-01 20:51:39,408] [DEBUG] [atlas:3150] (24181) localhost:16264: AtlasHealthChecker step
+[2016-09-01 20:51:39,424] [DEBUG] [atlas:3168] (24181) Refresh zonefile inventories for at most 0 peers
+[2016-09-01 20:51:39,408] [DEBUG] [atlas:3412] (24181) localhost:16264: AtlasZonefilePusher step
+[2016-09-01 20:51:39,408] [DEBUG] [atlas:3044] (24181) localhost:16264: AtlasPeerCrawler step
+[2016-09-01 20:51:39,434] [DEBUG] [atlas:2970] (24181) Add at most 10 new peers out of 0 options
+[2016-09-01 20:51:39,434] [DEBUG] [atlas:3241] (24181) localhost:16264: AtlasZonefileCrawler step
+[2016-09-01 20:51:39,436] [DEBUG] [atlas:3000] (24181) localhost:16264: revalidate old peers
+[2016-09-01 20:51:39,453] [DEBUG] [atlas:3281] (24181) localhost:16264: missing 0 zonefiles
+[2016-09-01 20:51:39,453] [DEBUG] [atlas:3362] (24181) localhost:16264: fetched 0 zonefiles
+[2016-09-01 20:51:39,628] [DEBUG] [blockchain:45] (24181) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-01 20:51:39,628] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-01 20:51:39,630] [DEBUG] [nameops:426] (24181) namespace preorder tx 614 bytes, 1649 satoshis
+[2016-09-01 20:51:39,630] [DEBUG] [nameops:1040] (24181) Preordering namespace (test, n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4, mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx), tx_fee = 1649.0
+[2016-09-01 20:51:39,792] [DEBUG] [tx:140] (24181) Send 01000000012060b34ee7f65a4b64daf17314534b7bd9e7e85ce6cb799718b5e424fa1fe095010000008a4730440220108888aa24e1952ba019134af17694308380de90e7544d393c78004a218e1b8702203fc6f864c785cc2be15b562f40df2c9c7578b09417417dcf2faa73c7a8e18e00014104bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279eaffffffff030000000000000000296a2769642a2db42c41c440c8a675ddb7fc5b7707f97977891e11f5adaf52e423f2e30982bd59d0ab2b0b002e12010000001976a914f75b20399d771f515a3cd80f941aa7461d92518c88ac0084d717000000001976a914000000000000000000000000000000000000000088ac00000000
+[2016-09-01 20:51:39,794] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:39,932] [DEBUG] [blockstack-test-scenario:685] (24181) next block (now at 258)
+[2016-09-01 20:51:39,932] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:39,934] [DEBUG] [blockstack-test-scenario:291] (24181) sync virtualchain up to 258
+[2016-09-01 20:51:39,935] [DEBUG] [indexer:1130] (24181) Sync virtualchain state from 258 to 259
+[2016-09-01 20:51:39,935] [DEBUG] [spv:741] (24181) Synchronize testnet 258 to 258
+[2016-09-01 20:51:39,935] [DEBUG] [spv:761] (24181) connect to localhost:18444
+[2016-09-01 20:51:39,936] [DEBUG] [spv:365] (24181) handshake (version 60002)
+[2016-09-01 20:51:39,936] [DEBUG] [spv:368] (24181) send Version
+[2016-09-01 20:51:39,937] [DEBUG] [spv:381] (24181) handle version
+[2016-09-01 20:51:39,937] [DEBUG] [spv:383] (24181) send VerAck
+[2016-09-01 20:51:39,937] [DEBUG] [spv:355] (24181) send getheaders
+[2016-09-01 20:51:39,976] [DEBUG] [spv:400] (24181) handle ping
+[2016-09-01 20:51:39,976] [DEBUG] [spv:403] (24181) send pong
+[2016-09-01 20:51:40,378] [DEBUG] [spv:250] (24181) handle headers (1)
+[2016-09-01 20:51:40,378] [DEBUG] [spv:268] (24181) Receive 1 headers (257 to 258)
+[2016-09-01 20:51:40,379] [DEBUG] [spv:777] (24181) synced headers from 257 to 258 in /tmp/blockstack-test/spv_headers.dat
+[2016-09-01 20:51:40,380] [DEBUG] [blocks:116] (24181) BlockDownloader: fetch blocks 258-258
+[2016-09-01 20:51:40,380] [DEBUG] [blocks:298] (24181) handshake (version 60002)
+[2016-09-01 20:51:40,380] [DEBUG] [blocks:301] (24181) send Version
+[2016-09-01 20:51:40,381] [DEBUG] [blocks:314] (24181) handle version
+[2016-09-01 20:51:40,381] [DEBUG] [blocks:316] (24181) send VerAck
+[2016-09-01 20:51:40,381] [DEBUG] [blocks:332] (24181) send getdata for 258-258 (4d70de418d36af142d11244db9cffd8af10fd404e1e77a1dc53069aa732cec2b-4d70de418d36af142d11244db9cffd8af10fd404e1e77a1dc53069aa732cec2b)
+[2016-09-01 20:51:40,409] [DEBUG] [atlas:3150] (24181) localhost:16264: AtlasHealthChecker step
+[2016-09-01 20:51:40,409] [DEBUG] [atlas:3412] (24181) localhost:16264: AtlasZonefilePusher step
+[2016-09-01 20:51:40,409] [DEBUG] [atlas:3168] (24181) Refresh zonefile inventories for at most 0 peers
+[2016-09-01 20:51:40,409] [DEBUG] [atlas:3044] (24181) localhost:16264: AtlasPeerCrawler step
+[2016-09-01 20:51:40,410] [DEBUG] [atlas:2970] (24181) Add at most 10 new peers out of 0 options
+[2016-09-01 20:51:40,410] [DEBUG] [atlas:3000] (24181) localhost:16264: revalidate old peers
+[2016-09-01 20:51:40,420] [DEBUG] [blocks:357] (24181) handle ping
+[2016-09-01 20:51:40,420] [DEBUG] [blocks:360] (24181) send pong
+[2016-09-01 20:51:40,436] [DEBUG] [atlas:3241] (24181) localhost:16264: AtlasZonefileCrawler step
+[2016-09-01 20:51:40,436] [DEBUG] [atlas:3281] (24181) localhost:16264: missing 0 zonefiles
+[2016-09-01 20:51:40,436] [DEBUG] [atlas:3362] (24181) localhost:16264: fetched 0 zonefiles
+[2016-09-01 20:51:40,822] [DEBUG] [blocks:196] (24181) num blocks received = 0, num requested = 1
+[2016-09-01 20:51:40,822] [DEBUG] [blocks:562] (24181) handle block 258 (4d70de418d36af142d11244db9cffd8af10fd404e1e77a1dc53069aa732cec2b)
+[2016-09-01 20:51:40,824] [DEBUG] [blocks:650] (24181) Request 1 nulldata sender TXs
+[2016-09-01 20:51:40,824] [DEBUG] [blocks:227] (24181) Fetch 1 TXs via JSON-RPC (0-1 of 1)
+[2016-09-01 20:51:40,845] [DEBUG] [virtualchain_hooks:223] (24181) PARSE NAMESPACE_PREORDER at (258, 1): 2db42c41c440c8a675ddb7fc5b7707f97977891e11f5adaf52e423f2e30982bd59d0ab2b
+[2016-09-01 20:51:40,896] [DEBUG] [indexer:1060] (24181) Process block 258 (1 virtual transactions)
+[2016-09-01 20:51:40,897] [DEBUG] [namedb:359] (24181) ACCEPT NAMESPACE_PREORDER at (258, 1) data: address='n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4', block_number='258', consensus_hash='11f5adaf52e423f2e30982bd59d0ab2b', op='*', op_fee='400000000', preorder_hash='2db42c41c440c8a675ddb7fc5b7707f97977891e', sender='76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac', sender_pubkey='04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea', txid='272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032', vtxindex='1'
+[2016-09-01 20:51:40,897] [DEBUG] [db:283] (24181) INSERT INTO preorders (address,block_number,consensus_hash,op,op_fee,preorder_hash,sender,sender_pubkey,txid,vtxindex) VALUES ( 'n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4', 258, '11f5adaf52e423f2e30982bd59d0ab2b', '*', 400000000, '2db42c41c440c8a675ddb7fc5b7707f97977891e', '76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac', '04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea', '272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032', 1); ''
+[2016-09-01 20:51:40,970] [DEBUG] [namedb:374] (24181) COMMIT NAMESPACE_PREORDER (*) at (258, 1) data: address='n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4', block_number='258', consensus_hash='11f5adaf52e423f2e30982bd59d0ab2b', op='*', op_fee='400000000', preorder_hash='2db42c41c440c8a675ddb7fc5b7707f97977891e', sender='76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac', sender_pubkey='04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea', txid='272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032', vtxindex='1'
+[2016-09-01 20:51:40,971] [DEBUG] [indexer:803] (24181) Snapshotting block 258
+[2016-09-01 20:51:40,971] [DEBUG] [indexer:765] (24181) SERIALIZE: *:preorder_hash=40:2db42c41c440c8a675ddb7fc5b7707f97977891e,consensus_hash=32:11f5adaf52e423f2e30982bd59d0ab2b,op=1:*,op_fee=9:400000000,txid=64:272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032,vtxindex=1:1,block_number=3:258,sender=50:76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac,sender_pubkey=130:04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea,address=34:n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4
+[2016-09-01 20:51:40,971] [DEBUG] [indexer:816] (24181) Snapshotting block 258: consensus hash of 257 is 11f5adaf52e423f2e30982bd59d0ab2b
+[2016-09-01 20:51:40,971] [DEBUG] [indexer:724] (24181) Snapshot('eabd0daa5da954f93b48dc257d16b3598f2f541dc092d72a3d4f76c37432ddcd', ['11f5adaf52e423f2e30982bd59d0ab2b'])
+[2016-09-01 20:51:40,972] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test/blockstack-server.lastblock.tmp --> /tmp/blockstack-test/blockstack-server.lastblock
+[2016-09-01 20:51:40,972] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test/blockstack-server.snapshots.tmp --> /tmp/blockstack-test/blockstack-server.snapshots
+[2016-09-01 20:51:40,973] [DEBUG] [indexer:1153] (24181) CONSENSUS(258): a5c0657d5be9615cc1b4a1ae8bbe2ce2
+[2016-09-01 20:51:40,974] [DEBUG] [indexer:1173] (24181) Last block is 258
+[2016-09-01 20:51:40,974] [INFO] [virtualchain:80] (24181) 1 seconds
+[2016-09-01 20:51:40,974] [DEBUG] [blockstack-test-scenario:294] (24181) sync atlas node up to 258
+[2016-09-01 20:51:40,974] [DEBUG] [blockstack-test-scenario:299] (24181) Synchronize Atlas DB from 258 to 259
+[2016-09-01 20:51:40,974] [DEBUG] [db:1627] (24181) 0 name-preorder states at 258
+[2016-09-01 20:51:40,974] [DEBUG] [db:1638] (24181) 0 name-change states at 258
+[2016-09-01 20:51:40,974] [DEBUG] [db:1655] (24181) 1 preorders created at 258
+[2016-09-01 20:51:40,974] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 258
+[2016-09-01 20:51:40,974] [DEBUG] [db:1676] (24181) 0 namespace-change states at 258
+[2016-09-01 20:51:40,975] [DEBUG] [atlas:669] (24181) Queued 0 zonefiles from 258-258
+[2016-09-01 20:51:40,982] [DEBUG] [client:134] (24181) Loaded storage driver 'disk'
+[2016-09-01 20:51:41,207] [DEBUG] [blockstackd:316] (24181) Inbound RPC begin rpc_get_namespace_blockchain_record(('test',))
+[2016-09-01 20:51:41,208] [DEBUG] [namedb:98] (24181) Connect to database '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-01 20:51:41,208] [DEBUG] [indexer:220] (24181) Lastblock: 258 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-01 20:51:41,209] [DEBUG] [blockstackd:326] (24181) Inbound RPC end rpc_get_namespace_blockchain_record(('test',))
+127.0.0.1 - - [01/Sep/2016 20:51:41] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-01 20:51:41,410] [DEBUG] [atlas:3412] (24181) localhost:16264: AtlasZonefilePusher step
+[2016-09-01 20:51:41,425] [DEBUG] [atlas:3150] (24181) localhost:16264: AtlasHealthChecker step
+[2016-09-01 20:51:41,436] [DEBUG] [atlas:3044] (24181) localhost:16264: AtlasPeerCrawler step
+[2016-09-01 20:51:41,436] [DEBUG] [atlas:3168] (24181) Refresh zonefile inventories for at most 0 peers
+[2016-09-01 20:51:41,458] [DEBUG] [atlas:3241] (24181) localhost:16264: AtlasZonefileCrawler step
+[2016-09-01 20:51:41,459] [DEBUG] [atlas:2970] (24181) Add at most 10 new peers out of 0 options
+[2016-09-01 20:51:41,501] [DEBUG] [atlas:3281] (24181) localhost:16264: missing 0 zonefiles
+[2016-09-01 20:51:41,501] [DEBUG] [atlas:3000] (24181) localhost:16264: revalidate old peers
+[2016-09-01 20:51:41,516] [DEBUG] [atlas:3362] (24181) localhost:16264: fetched 0 zonefiles
+[2016-09-01 20:51:41,578] [DEBUG] [blockchain:45] (24181) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-01 20:51:41,578] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-01 20:51:41,579] [DEBUG] [nameops:455] (24181) namespace reveal tx 586 bytes, 1574 satoshis
+[2016-09-01 20:51:41,579] [DEBUG] [nameops:1101] (24181) Revealing namespace (test, mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC, mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq), tx_fee = 1574.0
+[2016-09-01 20:51:41,731] [DEBUG] [tx:140] (24181) Send 0100000001cb00a758f5c50682f5114ef7544049ac92ace55bec2dbfd62176a9736cc6edc1010000008a47304402203555adfb86573891f6322b7944831f2874273fa075242f8c221ab9fcda57a5420220550eae41d004cea25482a74f0ad0ed212b636db4c1f931f2ad1b6a04f5d07471014104d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fbffffffff0300000000000000001a6a186964260000cd73fa046543210000000000aa0001746573747c150000000000001976a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788acb5732d12010000001976a9140e1c669e2756a79185299cb25ed043ab145f08f088ac00000000
+[2016-09-01 20:51:41,739] [DEBUG] [client:134] (24181) Loaded storage driver 'disk'
+[2016-09-01 20:51:41,922] [DEBUG] [blockstackd:316] (24181) Inbound RPC begin rpc_get_namespace_blockchain_record(('test',))
+[2016-09-01 20:51:41,922] [DEBUG] [namedb:98] (24181) Connect to database '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-01 20:51:41,923] [DEBUG] [indexer:220] (24181) Lastblock: 258 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-01 20:51:41,924] [DEBUG] [blockstackd:326] (24181) Inbound RPC end rpc_get_namespace_blockchain_record(('test',))
+127.0.0.1 - - [01/Sep/2016 20:51:41] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-01 20:51:42,200] [DEBUG] [blockchain:45] (24181) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-01 20:51:42,200] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-01 20:51:42,203] [DEBUG] [nameops:455] (24181) namespace reveal tx 586 bytes, 1574 satoshis
+[2016-09-01 20:51:42,203] [DEBUG] [nameops:1101] (24181) Revealing namespace (test, n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4, mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx), tx_fee = 1574.0
+[2016-09-01 20:51:42,347] [DEBUG] [tx:140] (24181) Send 0100000001329086e96cc851130818e2de63f1e7af1fe1d40f1cd2e233f6e87e701fd02c27010000008a4730440220072976d2e5d958b7ec9c90abe3807a709a24d009b74064cb1ce37a02c96bc8a202203dc882cb2fcb1a5f94d5dbe40a9761829745b3dfd52873a39cad47f7e1bc0445014104bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279eaffffffff0300000000000000001a6a1869642600002b67de034567891234567890bc0001746573747c150000000000001976a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288acb5732d12010000001976a914f75b20399d771f515a3cd80f941aa7461d92518c88ac00000000
+[2016-09-01 20:51:42,350] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:42,411] [DEBUG] [atlas:3412] (24181) localhost:16264: AtlasZonefilePusher step
+[2016-09-01 20:51:42,426] [DEBUG] [atlas:3150] (24181) localhost:16264: AtlasHealthChecker step
+[2016-09-01 20:51:42,426] [DEBUG] [atlas:3168] (24181) Refresh zonefile inventories for at most 0 peers
+[2016-09-01 20:51:42,437] [DEBUG] [atlas:3044] (24181) localhost:16264: AtlasPeerCrawler step
+[2016-09-01 20:51:42,437] [DEBUG] [atlas:2970] (24181) Add at most 10 new peers out of 0 options
+[2016-09-01 20:51:42,437] [DEBUG] [atlas:3000] (24181) localhost:16264: revalidate old peers
+[2016-09-01 20:51:42,459] [DEBUG] [atlas:3241] (24181) localhost:16264: AtlasZonefileCrawler step
+[2016-09-01 20:51:42,460] [DEBUG] [atlas:3281] (24181) localhost:16264: missing 0 zonefiles
+[2016-09-01 20:51:42,460] [DEBUG] [atlas:3362] (24181) localhost:16264: fetched 0 zonefiles
+[2016-09-01 20:51:42,546] [DEBUG] [blockstack-test-scenario:685] (24181) next block (now at 259)
+[2016-09-01 20:51:42,546] [DEBUG] [session:129] (24181) [24181] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-01 20:51:42,548] [DEBUG] [blockstack-test-scenario:291] (24181) sync virtualchain up to 259
+[2016-09-01 20:51:42,548] [DEBUG] [indexer:1130] (24181) Sync virtualchain state from 259 to 260
+[2016-09-01 20:51:42,548] [DEBUG] [spv:741] (24181) Synchronize testnet 259 to 259
+[2016-09-01 20:51:42,548] [DEBUG] [spv:761] (24181) connect to localhost:18444
+[2016-09-01 20:51:42,548] [DEBUG] [spv:365] (24181) handshake (version 60002)
+[2016-09-01 20:51:42,549] [DEBUG] [spv:368] (24181) send Version
+[2016-09-01 20:51:42,549] [DEBUG] [spv:381] (24181) handle version
+[2016-09-01 20:51:42,549] [DEBUG] [spv:383] (24181) send VerAck
+[2016-09-01 20:51:42,550] [DEBUG] [spv:355] (24181) send getheaders
+[2016-09-01 20:51:42,588] [DEBUG] [spv:400] (24181) handle ping
+[2016-09-01 20:51:42,588] [DEBUG] [spv:403] (24181) send pong
+[2016-09-01 20:51:43,090] [DEBUG] [spv:250] (24181) handle headers (1)
+[2016-09-01 20:51:43,091] [DEBUG] [spv:268] (24181) Receive 1 headers (258 to 259)
+[2016-09-01 20:51:43,091] [DEBUG] [spv:777] (24181) synced headers from 258 to 259 in /tmp/blockstack-test/spv_headers.dat
+[2016-09-01 20:51:43,092] [DEBUG] [blocks:116] (24181) BlockDownloader: fetch blocks 259-259
+[2016-09-01 20:51:43,092] [DEBUG] [blocks:298] (24181) handshake (version 60002)
+[2016-09-01 20:51:43,092] [DEBUG] [blocks:301] (24181) send Version
+[2016-09-01 20:51:43,093] [DEBUG] [blocks:314] (24181) handle version
+[2016-09-01 20:51:43,093] [DEBUG] [blocks:316] (24181) send VerAck
+[2016-09-01 20:51:43,093] [DEBUG] [blocks:332] (24181) send getdata for 259-259 (76c00b1ab7908771cd8692959dc197a967723006d15b4c278a0c81b913f6d0f9-76c00b1ab7908771cd8692959dc197a967723006d15b4c278a0c81b913f6d0f9)
+[2016-09-01 20:51:43,132] [DEBUG] [blocks:357] (24181) handle ping
+[2016-09-01 20:51:43,132] [DEBUG] [blocks:360] (24181) send pong
+[2016-09-01 20:51:43,411] [DEBUG] [atlas:3412] (24181) localhost:16264: AtlasZonefilePusher step
+[2016-09-01 20:51:43,427] [DEBUG] [atlas:3150] (24181) localhost:16264: AtlasHealthChecker step
+[2016-09-01 20:51:43,428] [DEBUG] [atlas:3168] (24181) Refresh zonefile inventories for at most 0 peers
+[2016-09-01 20:51:43,438] [DEBUG] [atlas:3044] (24181) localhost:16264: AtlasPeerCrawler step
+[2016-09-01 20:51:43,438] [DEBUG] [atlas:2970] (24181) Add at most 10 new peers out of 0 options
+[2016-09-01 20:51:43,438] [DEBUG] [atlas:3000] (24181) localhost:16264: revalidate old peers
+[2016-09-01 20:51:43,461] [DEBUG] [atlas:3241] (24181) localhost:16264: AtlasZonefileCrawler step
+[2016-09-01 20:51:43,461] [DEBUG] [atlas:3281] (24181) localhost:16264: missing 0 zonefiles
+[2016-09-01 20:51:43,461] [DEBUG] [atlas:3362] (24181) localhost:16264: fetched 0 zonefiles
+[2016-09-01 20:51:43,534] [DEBUG] [blocks:196] (24181) num blocks received = 0, num requested = 1
+[2016-09-01 20:51:43,534] [DEBUG] [blocks:562] (24181) handle block 259 (76c00b1ab7908771cd8692959dc197a967723006d15b4c278a0c81b913f6d0f9)
+[2016-09-01 20:51:43,538] [DEBUG] [blocks:650] (24181) Request 2 nulldata sender TXs
+[2016-09-01 20:51:43,539] [DEBUG] [blocks:227] (24181) Fetch 2 TXs via JSON-RPC (0-2 of 2)
+[2016-09-01 20:51:43,560] [DEBUG] [virtualchain_hooks:223] (24181) PARSE NAMESPACE_REVEAL at (259, 1): 00002b67de034567891234567890bc000174657374
+[2016-09-01 20:51:43,603] [DEBUG] [virtualchain_hooks:223] (24181) PARSE NAMESPACE_REVEAL at (259, 2): 0000cd73fa046543210000000000aa000174657374
+[2016-09-01 20:51:43,640] [DEBUG] [indexer:1060] (24181) Process block 259 (2 virtual transactions)
+[2016-09-01 20:51:43,641] [DEBUG] [__init__:191] (24181) COLLISION on namespace_id 'test'
+[2016-09-01 20:51:43,642] [DEBUG] [__init__:191] (24181) COLLISION on namespace_id 'test'
+[2016-09-01 20:51:43,642] [DEBUG] [namedb:389] (24181) REJECT NAMESPACE_REVEAL at (259, 1) data: address='n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4', base='3', buckets='[4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]', coeff='222', lifetime='11111', namespace_id='test', no_vowel_discount='12', nonalpha_discount='11', op='&', preorder_hash='2db42c41c440c8a675ddb7fc5b7707f97977891e', recipient='76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac', recipient_address='mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx', reveal_block='259', sender='76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac', sender_pubkey='04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea', txid='2eb6237bc3fd54c8f31966846c4f8e71dd4a868ada53abfbb5e502291b33acc0', version='1', vtxindex='1'
+[2016-09-01 20:51:43,643] [DEBUG] [__init__:191] (24181) COLLISION on namespace_id 'test'
+[2016-09-01 20:51:43,643] [DEBUG] [namedb:389] (24181) REJECT NAMESPACE_REVEAL at (259, 2) data: address='mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', base='4', buckets='[6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]', coeff='250', lifetime='52595', namespace_id='test', no_vowel_discount='10', nonalpha_discount='10', op='&', preorder_hash='db207fcd2150f332a53a8ff0be2a12a85445a2a9', recipient='76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac', recipient_address='mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq', reveal_block='259', sender='76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', sender_pubkey='04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', txid='805df6c1f957f337aa81e28cba0fe5e41856728cebb7baab852d484ddd7737bf', version='1', vtxindex='2'
+[2016-09-01 20:51:43,643] [DEBUG] [indexer:803] (24181) Snapshotting block 259
+[2016-09-01 20:51:43,643] [DEBUG] [indexer:816] (24181) Snapshotting block 259: consensus hash of 258 is a5c0657d5be9615cc1b4a1ae8bbe2ce2
+[2016-09-01 20:51:43,643] [DEBUG] [indexer:816] (24181) Snapshotting block 259: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:43,643] [DEBUG] [indexer:724] (24181) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', ['a5c0657d5be9615cc1b4a1ae8bbe2ce2', '2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-01 20:51:43,644] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test/blockstack-server.lastblock.tmp --> /tmp/blockstack-test/blockstack-server.lastblock
+[2016-09-01 20:51:43,644] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test/blockstack-server.snapshots.tmp --> /tmp/blockstack-test/blockstack-server.snapshots
+[2016-09-01 20:51:43,644] [DEBUG] [indexer:1153] (24181) CONSENSUS(259): 326f8921c2522e32478717514c91dd47
+[2016-09-01 20:51:43,645] [DEBUG] [indexer:1173] (24181) Last block is 259
+[2016-09-01 20:51:43,645] [INFO] [virtualchain:80] (24181) 1 seconds
+[2016-09-01 20:51:43,645] [DEBUG] [blockstack-test-scenario:294] (24181) sync atlas node up to 259
+[2016-09-01 20:51:43,645] [DEBUG] [blockstack-test-scenario:299] (24181) Synchronize Atlas DB from 259 to 260
+[2016-09-01 20:51:43,645] [DEBUG] [db:1627] (24181) 0 name-preorder states at 259
+[2016-09-01 20:51:43,645] [DEBUG] [db:1638] (24181) 0 name-change states at 259
+[2016-09-01 20:51:43,645] [DEBUG] [db:1655] (24181) 0 preorders created at 259
+[2016-09-01 20:51:43,645] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 259
+[2016-09-01 20:51:43,645] [DEBUG] [db:1676] (24181) 0 namespace-change states at 259
+[2016-09-01 20:51:43,645] [DEBUG] [atlas:669] (24181) Queued 0 zonefiles from 259-259
+[2016-09-01 20:51:43,713] [DEBUG] [atlas:3504] (24181) Stopping Atlas component 'zonefile_pusher'
+[2016-09-01 20:51:44,412] [DEBUG] [atlas:3504] (24181) Stopping Atlas component 'health_checker'
+[2016-09-01 20:51:44,428] [DEBUG] [atlas:3504] (24181) Stopping Atlas component 'peer_crawler'
+[2016-09-01 20:51:44,439] [DEBUG] [atlas:3504] (24181) Stopping Atlas component 'zonefile_crawler'
+[2016-09-01 20:51:44,462] [INFO] [blockstack-test-scenario:464] (24181) Scenario checks passed; verifying history
+[2016-09-01 20:51:44,463] [DEBUG] [namedb:98] (24181) Connect to database '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-01 20:51:44,464] [DEBUG] [indexer:220] (24181) Lastblock: 259 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-01 20:51:44,466] [DEBUG] [consensus:250] (24181) Rebuilding database from 256 to 256
+[2016-09-01 20:51:44,466] [DEBUG] [namedb:98] (24181) Connect to database '/tmp/blockstack-test-databases-INiH8s/blockstack.db.256'
+[2016-09-01 20:51:44,467] [DEBUG] [namedb:96] (24181) Initialize database from '/tmp/blockstack-test-databases-INiH8s/work.256/blockstack.db.256'
+[2016-09-01 20:51:45,162] [DEBUG] [indexer:220] (24181) Lastblock: 255 (/tmp/blockstack-test-databases-INiH8s/work.256/blockstack-server.lastblock)
+[2016-09-01 20:51:45,164] [DEBUG] [db:1627] (24181) 0 name-preorder states at 256
+[2016-09-01 20:51:45,164] [DEBUG] [db:1638] (24181) 0 name-change states at 256
+[2016-09-01 20:51:45,164] [DEBUG] [db:1655] (24181) 0 preorders created at 256
+[2016-09-01 20:51:45,165] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 256
+[2016-09-01 20:51:45,165] [DEBUG] [db:1676] (24181) 0 namespace-change states at 256
+[2016-09-01 20:51:45,165] [DEBUG] [consensus:147] (24181) Records at 256: 0
+[2016-09-01 20:51:45,165] [DEBUG] [indexer:1060] (24181) Process block 256 (0 virtual transactions)
+[2016-09-01 20:51:45,166] [DEBUG] [indexer:803] (24181) Snapshotting block 256
+[2016-09-01 20:51:45,166] [DEBUG] [indexer:724] (24181) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-01 20:51:45,167] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test-databases-INiH8s/work.256/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-INiH8s/work.256/blockstack-server.lastblock
+[2016-09-01 20:51:45,167] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test-databases-INiH8s/work.256/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-INiH8s/work.256/blockstack-server.snapshots
+[2016-09-01 20:51:45,167] [DEBUG] [consensus:272] (24181) VERIFY CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:45,168] [DEBUG] [consensus:250] (24181) Rebuilding database from 256 to 257
+[2016-09-01 20:51:45,168] [DEBUG] [namedb:98] (24181) Connect to database '/tmp/blockstack-test-databases-INiH8s/blockstack.db.257'
+[2016-09-01 20:51:45,169] [DEBUG] [namedb:96] (24181) Initialize database from '/tmp/blockstack-test-databases-INiH8s/work.257/blockstack.db.257'
+[2016-09-01 20:51:45,901] [DEBUG] [indexer:220] (24181) Lastblock: 255 (/tmp/blockstack-test-databases-INiH8s/work.257/blockstack-server.lastblock)
+[2016-09-01 20:51:45,902] [DEBUG] [db:1627] (24181) 0 name-preorder states at 256
+[2016-09-01 20:51:45,903] [DEBUG] [db:1638] (24181) 0 name-change states at 256
+[2016-09-01 20:51:45,903] [DEBUG] [db:1655] (24181) 0 preorders created at 256
+[2016-09-01 20:51:45,903] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 256
+[2016-09-01 20:51:45,904] [DEBUG] [db:1676] (24181) 0 namespace-change states at 256
+[2016-09-01 20:51:45,904] [DEBUG] [consensus:147] (24181) Records at 256: 0
+[2016-09-01 20:51:45,904] [DEBUG] [indexer:1060] (24181) Process block 256 (0 virtual transactions)
+[2016-09-01 20:51:45,904] [DEBUG] [indexer:803] (24181) Snapshotting block 256
+[2016-09-01 20:51:45,904] [DEBUG] [indexer:724] (24181) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-01 20:51:45,905] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test-databases-INiH8s/work.257/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-INiH8s/work.257/blockstack-server.lastblock
+[2016-09-01 20:51:45,905] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test-databases-INiH8s/work.257/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-INiH8s/work.257/blockstack-server.snapshots
+[2016-09-01 20:51:45,906] [DEBUG] [consensus:272] (24181) VERIFY CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:45,906] [DEBUG] [db:1627] (24181) 0 name-preorder states at 257
+[2016-09-01 20:51:45,906] [DEBUG] [db:1638] (24181) 0 name-change states at 257
+[2016-09-01 20:51:45,906] [DEBUG] [db:1655] (24181) 1 preorders created at 257
+[2016-09-01 20:51:45,907] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 257
+[2016-09-01 20:51:45,907] [DEBUG] [db:1676] (24181) 0 namespace-change states at 257
+[2016-09-01 20:51:45,907] [DEBUG] [consensus:147] (24181) Records at 257: 1
+[2016-09-01 20:51:45,907] [DEBUG] [consensus:208] (24181) Recover NAMESPACE_PREORDER
+[2016-09-01 20:51:45,908] [DEBUG] [indexer:1060] (24181) Process block 257 (1 virtual transactions)
+[2016-09-01 20:51:45,909] [DEBUG] [namedb:359] (24181) ACCEPT NAMESPACE_PREORDER at (257, 1) data: address='mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', block_number='257', consensus_hash='2a9148d8b13939723d2aca16c75c6d68', op='*', op_fee='400000000', preorder_hash='db207fcd2150f332a53a8ff0be2a12a85445a2a9', sender='76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', sender_pubkey='04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', txid='c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', vtxindex='1'
+[2016-09-01 20:51:45,909] [DEBUG] [db:283] (24181) INSERT INTO preorders (address,block_number,consensus_hash,op,op_fee,preorder_hash,sender,sender_pubkey,txid,vtxindex) VALUES ( 'mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', 257, '2a9148d8b13939723d2aca16c75c6d68', '*', 400000000, 'db207fcd2150f332a53a8ff0be2a12a85445a2a9', '76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', '04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', 'c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', 1); ''
+[2016-09-01 20:51:45,987] [DEBUG] [namedb:374] (24181) COMMIT NAMESPACE_PREORDER (*) at (257, 1) data: address='mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', block_number='257', consensus_hash='2a9148d8b13939723d2aca16c75c6d68', op='*', op_fee='400000000', preorder_hash='db207fcd2150f332a53a8ff0be2a12a85445a2a9', sender='76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', sender_pubkey='04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', txid='c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', vtxindex='1'
+[2016-09-01 20:51:45,987] [DEBUG] [indexer:803] (24181) Snapshotting block 257
+[2016-09-01 20:51:45,987] [DEBUG] [indexer:765] (24181) SERIALIZE: *:preorder_hash=40:db207fcd2150f332a53a8ff0be2a12a85445a2a9,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb,vtxindex=1:1,block_number=3:257,sender=50:76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC
+[2016-09-01 20:51:45,988] [DEBUG] [indexer:816] (24181) Snapshotting block 257: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:45,988] [DEBUG] [indexer:724] (24181) Snapshot('30de5acc42c49a4cdfab995949edc56fb280caec5920f6de0cb126f128e32d09', ['2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-01 20:51:45,988] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test-databases-INiH8s/work.257/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-INiH8s/work.257/blockstack-server.lastblock
+[2016-09-01 20:51:45,988] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test-databases-INiH8s/work.257/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-INiH8s/work.257/blockstack-server.snapshots
+[2016-09-01 20:51:45,988] [DEBUG] [consensus:272] (24181) VERIFY CONSENSUS(257): 11f5adaf52e423f2e30982bd59d0ab2b
+[2016-09-01 20:51:45,989] [DEBUG] [consensus:250] (24181) Rebuilding database from 256 to 258
+[2016-09-01 20:51:45,989] [DEBUG] [namedb:98] (24181) Connect to database '/tmp/blockstack-test-databases-INiH8s/blockstack.db.258'
+[2016-09-01 20:51:45,989] [DEBUG] [namedb:96] (24181) Initialize database from '/tmp/blockstack-test-databases-INiH8s/work.258/blockstack.db.258'
+[2016-09-01 20:51:46,797] [DEBUG] [indexer:220] (24181) Lastblock: 255 (/tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.lastblock)
+[2016-09-01 20:51:46,798] [DEBUG] [db:1627] (24181) 0 name-preorder states at 256
+[2016-09-01 20:51:46,798] [DEBUG] [db:1638] (24181) 0 name-change states at 256
+[2016-09-01 20:51:46,799] [DEBUG] [db:1655] (24181) 0 preorders created at 256
+[2016-09-01 20:51:46,799] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 256
+[2016-09-01 20:51:46,799] [DEBUG] [db:1676] (24181) 0 namespace-change states at 256
+[2016-09-01 20:51:46,800] [DEBUG] [consensus:147] (24181) Records at 256: 0
+[2016-09-01 20:51:46,800] [DEBUG] [indexer:1060] (24181) Process block 256 (0 virtual transactions)
+[2016-09-01 20:51:46,800] [DEBUG] [indexer:803] (24181) Snapshotting block 256
+[2016-09-01 20:51:46,800] [DEBUG] [indexer:724] (24181) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-01 20:51:46,800] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.lastblock
+[2016-09-01 20:51:46,800] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.snapshots
+[2016-09-01 20:51:46,801] [DEBUG] [consensus:272] (24181) VERIFY CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:46,801] [DEBUG] [db:1627] (24181) 0 name-preorder states at 257
+[2016-09-01 20:51:46,801] [DEBUG] [db:1638] (24181) 0 name-change states at 257
+[2016-09-01 20:51:46,801] [DEBUG] [db:1655] (24181) 1 preorders created at 257
+[2016-09-01 20:51:46,801] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 257
+[2016-09-01 20:51:46,801] [DEBUG] [db:1676] (24181) 0 namespace-change states at 257
+[2016-09-01 20:51:46,801] [DEBUG] [consensus:147] (24181) Records at 257: 1
+[2016-09-01 20:51:46,801] [DEBUG] [consensus:208] (24181) Recover NAMESPACE_PREORDER
+[2016-09-01 20:51:46,801] [DEBUG] [indexer:1060] (24181) Process block 257 (1 virtual transactions)
+[2016-09-01 20:51:46,802] [DEBUG] [namedb:359] (24181) ACCEPT NAMESPACE_PREORDER at (257, 1) data: address='mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', block_number='257', consensus_hash='2a9148d8b13939723d2aca16c75c6d68', op='*', op_fee='400000000', preorder_hash='db207fcd2150f332a53a8ff0be2a12a85445a2a9', sender='76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', sender_pubkey='04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', txid='c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', vtxindex='1'
+[2016-09-01 20:51:46,802] [DEBUG] [db:283] (24181) INSERT INTO preorders (address,block_number,consensus_hash,op,op_fee,preorder_hash,sender,sender_pubkey,txid,vtxindex) VALUES ( 'mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', 257, '2a9148d8b13939723d2aca16c75c6d68', '*', 400000000, 'db207fcd2150f332a53a8ff0be2a12a85445a2a9', '76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', '04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', 'c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', 1); ''
+[2016-09-01 20:51:46,929] [DEBUG] [namedb:374] (24181) COMMIT NAMESPACE_PREORDER (*) at (257, 1) data: address='mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', block_number='257', consensus_hash='2a9148d8b13939723d2aca16c75c6d68', op='*', op_fee='400000000', preorder_hash='db207fcd2150f332a53a8ff0be2a12a85445a2a9', sender='76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', sender_pubkey='04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', txid='c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', vtxindex='1'
+[2016-09-01 20:51:46,929] [DEBUG] [indexer:803] (24181) Snapshotting block 257
+[2016-09-01 20:51:46,929] [DEBUG] [indexer:765] (24181) SERIALIZE: *:preorder_hash=40:db207fcd2150f332a53a8ff0be2a12a85445a2a9,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb,vtxindex=1:1,block_number=3:257,sender=50:76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC
+[2016-09-01 20:51:46,929] [DEBUG] [indexer:816] (24181) Snapshotting block 257: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:46,930] [DEBUG] [indexer:724] (24181) Snapshot('30de5acc42c49a4cdfab995949edc56fb280caec5920f6de0cb126f128e32d09', ['2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-01 20:51:46,930] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.lastblock
+[2016-09-01 20:51:46,931] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.snapshots
+[2016-09-01 20:51:46,931] [DEBUG] [consensus:272] (24181) VERIFY CONSENSUS(257): 11f5adaf52e423f2e30982bd59d0ab2b
+[2016-09-01 20:51:46,931] [DEBUG] [db:1627] (24181) 0 name-preorder states at 258
+[2016-09-01 20:51:46,932] [DEBUG] [db:1638] (24181) 0 name-change states at 258
+[2016-09-01 20:51:46,932] [DEBUG] [db:1655] (24181) 1 preorders created at 258
+[2016-09-01 20:51:46,932] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 258
+[2016-09-01 20:51:46,932] [DEBUG] [db:1676] (24181) 0 namespace-change states at 258
+[2016-09-01 20:51:46,932] [DEBUG] [consensus:147] (24181) Records at 258: 1
+[2016-09-01 20:51:46,933] [DEBUG] [consensus:208] (24181) Recover NAMESPACE_PREORDER
+[2016-09-01 20:51:46,933] [DEBUG] [indexer:1060] (24181) Process block 258 (1 virtual transactions)
+[2016-09-01 20:51:46,934] [DEBUG] [namedb:359] (24181) ACCEPT NAMESPACE_PREORDER at (258, 1) data: address='n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4', block_number='258', consensus_hash='11f5adaf52e423f2e30982bd59d0ab2b', op='*', op_fee='400000000', preorder_hash='2db42c41c440c8a675ddb7fc5b7707f97977891e', sender='76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac', sender_pubkey='04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea', txid='272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032', vtxindex='1'
+[2016-09-01 20:51:46,935] [DEBUG] [db:283] (24181) INSERT INTO preorders (address,block_number,consensus_hash,op,op_fee,preorder_hash,sender,sender_pubkey,txid,vtxindex) VALUES ( 'n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4', 258, '11f5adaf52e423f2e30982bd59d0ab2b', '*', 400000000, '2db42c41c440c8a675ddb7fc5b7707f97977891e', '76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac', '04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea', '272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032', 1); ''
+[2016-09-01 20:51:47,019] [DEBUG] [namedb:374] (24181) COMMIT NAMESPACE_PREORDER (*) at (258, 1) data: address='n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4', block_number='258', consensus_hash='11f5adaf52e423f2e30982bd59d0ab2b', op='*', op_fee='400000000', preorder_hash='2db42c41c440c8a675ddb7fc5b7707f97977891e', sender='76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac', sender_pubkey='04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea', txid='272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032', vtxindex='1'
+[2016-09-01 20:51:47,019] [DEBUG] [indexer:803] (24181) Snapshotting block 258
+[2016-09-01 20:51:47,019] [DEBUG] [indexer:765] (24181) SERIALIZE: *:preorder_hash=40:2db42c41c440c8a675ddb7fc5b7707f97977891e,consensus_hash=32:11f5adaf52e423f2e30982bd59d0ab2b,op=1:*,op_fee=9:400000000,txid=64:272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032,vtxindex=1:1,block_number=3:258,sender=50:76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac,sender_pubkey=130:04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea,address=34:n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4
+[2016-09-01 20:51:47,019] [DEBUG] [indexer:816] (24181) Snapshotting block 258: consensus hash of 257 is 11f5adaf52e423f2e30982bd59d0ab2b
+[2016-09-01 20:51:47,020] [DEBUG] [indexer:724] (24181) Snapshot('eabd0daa5da954f93b48dc257d16b3598f2f541dc092d72a3d4f76c37432ddcd', ['11f5adaf52e423f2e30982bd59d0ab2b'])
+[2016-09-01 20:51:47,020] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.lastblock
+[2016-09-01 20:51:47,020] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-INiH8s/work.258/blockstack-server.snapshots
+[2016-09-01 20:51:47,020] [DEBUG] [consensus:272] (24181) VERIFY CONSENSUS(258): a5c0657d5be9615cc1b4a1ae8bbe2ce2
+[2016-09-01 20:51:47,021] [DEBUG] [consensus:250] (24181) Rebuilding database from 256 to 259
+[2016-09-01 20:51:47,021] [DEBUG] [namedb:98] (24181) Connect to database '/tmp/blockstack-test-databases-INiH8s/blockstack.db.259'
+[2016-09-01 20:51:47,022] [DEBUG] [namedb:96] (24181) Initialize database from '/tmp/blockstack-test-databases-INiH8s/work.259/blockstack.db.259'
+[2016-09-01 20:51:47,720] [DEBUG] [indexer:220] (24181) Lastblock: 255 (/tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.lastblock)
+[2016-09-01 20:51:47,722] [DEBUG] [db:1627] (24181) 0 name-preorder states at 256
+[2016-09-01 20:51:47,722] [DEBUG] [db:1638] (24181) 0 name-change states at 256
+[2016-09-01 20:51:47,722] [DEBUG] [db:1655] (24181) 0 preorders created at 256
+[2016-09-01 20:51:47,723] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 256
+[2016-09-01 20:51:47,723] [DEBUG] [db:1676] (24181) 0 namespace-change states at 256
+[2016-09-01 20:51:47,723] [DEBUG] [consensus:147] (24181) Records at 256: 0
+[2016-09-01 20:51:47,723] [DEBUG] [indexer:1060] (24181) Process block 256 (0 virtual transactions)
+[2016-09-01 20:51:47,724] [DEBUG] [indexer:803] (24181) Snapshotting block 256
+[2016-09-01 20:51:47,724] [DEBUG] [indexer:724] (24181) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-01 20:51:47,725] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.lastblock
+[2016-09-01 20:51:47,725] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.snapshots
+[2016-09-01 20:51:47,725] [DEBUG] [consensus:272] (24181) VERIFY CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:47,725] [DEBUG] [db:1627] (24181) 0 name-preorder states at 257
+[2016-09-01 20:51:47,726] [DEBUG] [db:1638] (24181) 0 name-change states at 257
+[2016-09-01 20:51:47,726] [DEBUG] [db:1655] (24181) 1 preorders created at 257
+[2016-09-01 20:51:47,726] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 257
+[2016-09-01 20:51:47,727] [DEBUG] [db:1676] (24181) 0 namespace-change states at 257
+[2016-09-01 20:51:47,727] [DEBUG] [consensus:147] (24181) Records at 257: 1
+[2016-09-01 20:51:47,727] [DEBUG] [consensus:208] (24181) Recover NAMESPACE_PREORDER
+[2016-09-01 20:51:47,728] [DEBUG] [indexer:1060] (24181) Process block 257 (1 virtual transactions)
+[2016-09-01 20:51:47,729] [DEBUG] [namedb:359] (24181) ACCEPT NAMESPACE_PREORDER at (257, 1) data: address='mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', block_number='257', consensus_hash='2a9148d8b13939723d2aca16c75c6d68', op='*', op_fee='400000000', preorder_hash='db207fcd2150f332a53a8ff0be2a12a85445a2a9', sender='76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', sender_pubkey='04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', txid='c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', vtxindex='1'
+[2016-09-01 20:51:47,730] [DEBUG] [db:283] (24181) INSERT INTO preorders (address,block_number,consensus_hash,op,op_fee,preorder_hash,sender,sender_pubkey,txid,vtxindex) VALUES ( 'mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', 257, '2a9148d8b13939723d2aca16c75c6d68', '*', 400000000, 'db207fcd2150f332a53a8ff0be2a12a85445a2a9', '76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', '04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', 'c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', 1); ''
+[2016-09-01 20:51:47,820] [DEBUG] [namedb:374] (24181) COMMIT NAMESPACE_PREORDER (*) at (257, 1) data: address='mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC', block_number='257', consensus_hash='2a9148d8b13939723d2aca16c75c6d68', op='*', op_fee='400000000', preorder_hash='db207fcd2150f332a53a8ff0be2a12a85445a2a9', sender='76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac', sender_pubkey='04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb', txid='c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb', vtxindex='1'
+[2016-09-01 20:51:47,820] [DEBUG] [indexer:803] (24181) Snapshotting block 257
+[2016-09-01 20:51:47,820] [DEBUG] [indexer:765] (24181) SERIALIZE: *:preorder_hash=40:db207fcd2150f332a53a8ff0be2a12a85445a2a9,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:c1edc66c73a97621d6bf2dec5be5ac92ac494054f74e11f58206c5f558a700cb,vtxindex=1:1,block_number=3:257,sender=50:76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC
+[2016-09-01 20:51:47,820] [DEBUG] [indexer:816] (24181) Snapshotting block 257: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:47,821] [DEBUG] [indexer:724] (24181) Snapshot('30de5acc42c49a4cdfab995949edc56fb280caec5920f6de0cb126f128e32d09', ['2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-01 20:51:47,822] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.lastblock
+[2016-09-01 20:51:47,822] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.snapshots
+[2016-09-01 20:51:47,822] [DEBUG] [consensus:272] (24181) VERIFY CONSENSUS(257): 11f5adaf52e423f2e30982bd59d0ab2b
+[2016-09-01 20:51:47,822] [DEBUG] [db:1627] (24181) 0 name-preorder states at 258
+[2016-09-01 20:51:47,823] [DEBUG] [db:1638] (24181) 0 name-change states at 258
+[2016-09-01 20:51:47,823] [DEBUG] [db:1655] (24181) 1 preorders created at 258
+[2016-09-01 20:51:47,823] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 258
+[2016-09-01 20:51:47,823] [DEBUG] [db:1676] (24181) 0 namespace-change states at 258
+[2016-09-01 20:51:47,823] [DEBUG] [consensus:147] (24181) Records at 258: 1
+[2016-09-01 20:51:47,824] [DEBUG] [consensus:208] (24181) Recover NAMESPACE_PREORDER
+[2016-09-01 20:51:47,824] [DEBUG] [indexer:1060] (24181) Process block 258 (1 virtual transactions)
+[2016-09-01 20:51:47,825] [DEBUG] [namedb:359] (24181) ACCEPT NAMESPACE_PREORDER at (258, 1) data: address='n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4', block_number='258', consensus_hash='11f5adaf52e423f2e30982bd59d0ab2b', op='*', op_fee='400000000', preorder_hash='2db42c41c440c8a675ddb7fc5b7707f97977891e', sender='76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac', sender_pubkey='04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea', txid='272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032', vtxindex='1'
+[2016-09-01 20:51:47,826] [DEBUG] [db:283] (24181) INSERT INTO preorders (address,block_number,consensus_hash,op,op_fee,preorder_hash,sender,sender_pubkey,txid,vtxindex) VALUES ( 'n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4', 258, '11f5adaf52e423f2e30982bd59d0ab2b', '*', 400000000, '2db42c41c440c8a675ddb7fc5b7707f97977891e', '76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac', '04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea', '272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032', 1); ''
+[2016-09-01 20:51:47,902] [DEBUG] [namedb:374] (24181) COMMIT NAMESPACE_PREORDER (*) at (258, 1) data: address='n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4', block_number='258', consensus_hash='11f5adaf52e423f2e30982bd59d0ab2b', op='*', op_fee='400000000', preorder_hash='2db42c41c440c8a675ddb7fc5b7707f97977891e', sender='76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac', sender_pubkey='04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea', txid='272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032', vtxindex='1'
+[2016-09-01 20:51:47,902] [DEBUG] [indexer:803] (24181) Snapshotting block 258
+[2016-09-01 20:51:47,903] [DEBUG] [indexer:765] (24181) SERIALIZE: *:preorder_hash=40:2db42c41c440c8a675ddb7fc5b7707f97977891e,consensus_hash=32:11f5adaf52e423f2e30982bd59d0ab2b,op=1:*,op_fee=9:400000000,txid=64:272cd01f707ee8f633e2d21c0fd4e11fafe7f163dee218081351c86ce9869032,vtxindex=1:1,block_number=3:258,sender=50:76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac,sender_pubkey=130:04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea,address=34:n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4
+[2016-09-01 20:51:47,903] [DEBUG] [indexer:816] (24181) Snapshotting block 258: consensus hash of 257 is 11f5adaf52e423f2e30982bd59d0ab2b
+[2016-09-01 20:51:47,903] [DEBUG] [indexer:724] (24181) Snapshot('eabd0daa5da954f93b48dc257d16b3598f2f541dc092d72a3d4f76c37432ddcd', ['11f5adaf52e423f2e30982bd59d0ab2b'])
+[2016-09-01 20:51:47,903] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.lastblock
+[2016-09-01 20:51:47,903] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.snapshots
+[2016-09-01 20:51:47,904] [DEBUG] [consensus:272] (24181) VERIFY CONSENSUS(258): a5c0657d5be9615cc1b4a1ae8bbe2ce2
+[2016-09-01 20:51:47,904] [DEBUG] [db:1627] (24181) 0 name-preorder states at 259
+[2016-09-01 20:51:47,904] [DEBUG] [db:1638] (24181) 0 name-change states at 259
+[2016-09-01 20:51:47,904] [DEBUG] [db:1655] (24181) 0 preorders created at 259
+[2016-09-01 20:51:47,904] [DEBUG] [db:1665] (24181) 0 namespace-preorder states at 259
+[2016-09-01 20:51:47,904] [DEBUG] [db:1676] (24181) 0 namespace-change states at 259
+[2016-09-01 20:51:47,904] [DEBUG] [consensus:147] (24181) Records at 259: 0
+[2016-09-01 20:51:47,904] [DEBUG] [indexer:1060] (24181) Process block 259 (0 virtual transactions)
+[2016-09-01 20:51:47,904] [DEBUG] [indexer:803] (24181) Snapshotting block 259
+[2016-09-01 20:51:47,905] [DEBUG] [indexer:816] (24181) Snapshotting block 259: consensus hash of 258 is a5c0657d5be9615cc1b4a1ae8bbe2ce2
+[2016-09-01 20:51:47,905] [DEBUG] [indexer:816] (24181) Snapshotting block 259: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-01 20:51:47,905] [DEBUG] [indexer:724] (24181) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', ['a5c0657d5be9615cc1b4a1ae8bbe2ce2', '2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-01 20:51:47,905] [DEBUG] [indexer:414] (24181) Rename 'lastblock': /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.lastblock
+[2016-09-01 20:51:47,905] [DEBUG] [indexer:414] (24181) Rename 'snapshots': /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-INiH8s/work.259/blockstack-server.snapshots
+[2016-09-01 20:51:47,905] [DEBUG] [consensus:272] (24181) VERIFY CONSENSUS(259): 326f8921c2522e32478717514c91dd47
+[2016-09-01 20:51:47,905] [INFO] [blockstack-test-scenario:475] (24181) History check passes!
+[2016-09-01 20:51:47,905] [DEBUG] [namedb:98] (24181) Connect to database '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-01 20:51:47,906] [DEBUG] [indexer:220] (24181) Lastblock: 259 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-01 20:51:47,913] [DEBUG] [testlib:801] (24181) API call: namespace_preorder test at 257
+[2016-09-01 20:51:47,913] [DEBUG] [testlib:801] (24181) API call: namespace_preorder test at 258
+[2016-09-01 20:51:47,914] [DEBUG] [testlib:801] (24181) API call: namespace_reveal test at 259
+[2016-09-01 20:51:47,914] [DEBUG] [testlib:801] (24181) API call: namespace_reveal test at 259
+[2016-09-01 20:51:47,914] [DEBUG] [testlib:832] (24181) SNV verify 0 names
+[2016-09-01 20:51:47,914] [INFO] [blockstack-test-scenario:486] (24181) SNV check passes!
+[2016-09-01 20:51:47,914] [DEBUG] [namedb:98] (24181) Connect to database '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-01 20:51:47,914] [DEBUG] [indexer:220] (24181) Lastblock: 259 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-01 20:51:47,915] [INFO] [blockstack-test-scenario:497] (24181) Atlas zonefile checks pass!
+[2016-09-01 20:51:47,915] [DEBUG] [blockstackd:1310] (24181) Shutting down RPC
+[2016-09-01 20:51:47,967] [DEBUG] [blockstackd:1313] (24181) RPC joined
+Bitcoin server stopping
+Not running (/tmp/blockstack-test/client/api_endpoint.pid)
+
+
+verify 256 - 257 (/tmp/blockstack-test-databases-INiH8s/blockstack.db.256), expect 2a9148d8b13939723d2aca16c75c6d68
+
+
+
+
+verify 256 - 258 (/tmp/blockstack-test-databases-INiH8s/blockstack.db.257), expect 11f5adaf52e423f2e30982bd59d0ab2b
+
+
+
+
+verify 256 - 259 (/tmp/blockstack-test-databases-INiH8s/blockstack.db.258), expect a5c0657d5be9615cc1b4a1ae8bbe2ce2
+
+
+
+
+verify 256 - 260 (/tmp/blockstack-test-databases-INiH8s/blockstack.db.259), expect 326f8921c2522e32478717514c91dd47
+
+
+SUCCESS blockstack_integration_tests.scenarios.namespace_preorder_reveal_nodups
+Not running (/tmp/blockstack-test/client/api_endpoint.pid)
+Bitcoin server stopping
+Bitcoin server starting

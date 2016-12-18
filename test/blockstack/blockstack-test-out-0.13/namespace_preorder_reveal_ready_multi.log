@@ -1,0 +1,948 @@
+[2016-09-06 11:45:36,855] [DEBUG] [spv:110] (26596) Using testnet/regtest
+WARN (26596): in test environment
+[2016-09-06 11:45:37,056] [DEBUG] [blockstack-test-scenario:591] (26596) Starting up bitcoind in regtest mode
+Bitcoin server starting
+[2016-09-06 11:45:37,066] [DEBUG] [blockstack-test-scenario:598] (26596) Waiting for bitcoind to start up
+[2016-09-06 11:45:38,067] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:39,072] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:40,076] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:41,079] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:42,083] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:43,087] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:44,091] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:44,269] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:44,518] [DEBUG] [blockstack-test-scenario:621] (26596) bitcoind -regtest is ready
+[2016-09-06 11:45:44,838] [DEBUG] [testlib:71] (26596) Wallet 92RVyTBdj4xC2M7KQo2kea6xwtHzomD136BM9eh6LKkonLkWaR4 (mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC)
+[2016-09-06 11:45:45,154] [DEBUG] [testlib:71] (26596) Wallet 934UTTHhRoBFdv4sj3Jt2QASm7GaJb3VxM8VcoeoXKmHSkUw2P4 (mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq)
+[2016-09-06 11:45:45,468] [DEBUG] [testlib:71] (26596) Wallet 93SiL3Qwt9p999a8w8c9eH9AmhcXiz98NNbaFBbVoPQuvpcsQpL (mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx)
+[2016-09-06 11:45:45,780] [DEBUG] [testlib:71] (26596) Wallet 92g8TYFgxoytqWG7s5VPSZ4uKva7kXUbDBXkVooKgZRGJ3vKUC8 (n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4)
+[2016-09-06 11:45:46,126] [DEBUG] [testlib:71] (26596) Wallet 931TJBFPbQvb6yvVjgDB4qKsHU7ArBFYdYaQmymKgNgEideRBtz (mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed)
+[2016-09-06 11:45:46,439] [DEBUG] [testlib:71] (26596) Wallet 92rKoeoL9KJYpcZwJCWc5YX3s14M2QY6eqKAFHQDBNcF6cEZgFe (mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9)
+[2016-09-06 11:45:46,748] [DEBUG] [testlib:71] (26596) Wallet 91onAG4BsvDUuiuLuJyQbFM5XGCRdWij6L94XCho4h3kDVb4svf (mzq1bGkwPZzz5HCQJN2CuErBCCVCvZdu6a)
+[2016-09-06 11:45:47,065] [DEBUG] [testlib:71] (26596) Wallet 92uyM6ERLdDsM5KQGKcZCoibpmHaKtbTf5ViLzefsAkt4BciQvu (msRqhLkzbGef23awMJ3SKg6RjnkPLKGs4P)
+[2016-09-06 11:45:47,532] [DEBUG] [testlib:84] (26596) Multisig wallet 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz
+[2016-09-06 11:45:47,532] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:47,896] [DEBUG] [blockstack-test-scenario:642] (26596) Fill mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC with 50
+[2016-09-06 11:45:48,486] [DEBUG] [blockstack-test-scenario:642] (26596) Fill mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq with 50
+[2016-09-06 11:45:48,912] [DEBUG] [blockstack-test-scenario:642] (26596) Fill mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx with 50
+[2016-09-06 11:45:49,401] [DEBUG] [blockstack-test-scenario:642] (26596) Fill n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4 with 50
+[2016-09-06 11:45:49,923] [DEBUG] [blockstack-test-scenario:642] (26596) Fill mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed with 50
+[2016-09-06 11:45:50,485] [DEBUG] [blockstack-test-scenario:642] (26596) Fill mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9 with 50
+[2016-09-06 11:45:50,928] [DEBUG] [blockstack-test-scenario:642] (26596) Fill mzq1bGkwPZzz5HCQJN2CuErBCCVCvZdu6a with 50
+[2016-09-06 11:45:51,377] [DEBUG] [blockstack-test-scenario:642] (26596) Fill msRqhLkzbGef23awMJ3SKg6RjnkPLKGs4P with 50
+[2016-09-06 11:45:53,021] [DEBUG] [blockstack-test-scenario:660] (26596) Fill 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz with 250
+
+Address mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC loaded with 5000000000 satoshis
+Address mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq loaded with 5000000000 satoshis
+Address mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx loaded with 5000000000 satoshis
+Address n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4 loaded with 5000000000 satoshis
+Address mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed loaded with 5000000000 satoshis
+Address mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9 loaded with 5000000000 satoshis
+Address mzq1bGkwPZzz5HCQJN2CuErBCCVCvZdu6a loaded with 5000000000 satoshis
+Address msRqhLkzbGef23awMJ3SKg6RjnkPLKGs4P loaded with 5000000000 satoshis
+Address 2MzigrtcR3PfZZW6wK5W16SMcZa5b2LRhxz loaded with 25000000000 satoshis
+
+[2016-09-06 11:45:53,655] [DEBUG] [config:692] (26596) Load config from '/tmp/blockstack-test/blockstack-server.ini'
+Saving configuration to /tmp/blockstack-test/blockstack-server.ini
+Saving configuration to /tmp/blockstack-test/client/client.ini
+[2016-09-06 11:45:53,700] [DEBUG] [virtualchain_hooks:298] (26596) cache consistency: DB is not in RAM
+[2016-09-06 11:45:53,700] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:45:53,702] [WARNING] [namedb:148] (26596) Failed to open '/tmp/blockstack-test/blockstack-server.db'; creating a new database
+[2016-09-06 11:45:53,702] [DEBUG] [atlas:1089] (26596) Initializing Atlas DB at /tmp/blockstack-test/atlas.db
+[2016-09-06 11:45:53,856] [DEBUG] [atlas:1100] (26596) Queuing all zonefiles
+[2016-09-06 11:45:53,856] [DEBUG] [atlas:669] (26596) Queued 0 zonefiles from 256-255
+[2016-09-06 11:45:53,856] [DEBUG] [atlas:1103] (26596) Adding seed peers
+[2016-09-06 11:45:53,856] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:53,856] [DEBUG] [atlas:1062] (26596) Atlas DB exists at /tmp/blockstack-test/atlas.db
+[2016-09-06 11:45:53,857] [DEBUG] [atlas:1068] (26596) Synchronize zonefiles from 0 to 255
+[2016-09-06 11:45:53,858] [DEBUG] [atlas:669] (26596) Queued 0 zonefiles from 0-255
+[2016-09-06 11:45:53,858] [DEBUG] [atlas:1074] (26596) Refreshing seed peers
+[2016-09-06 11:45:53,858] [DEBUG] [atlas:1080] (26596) Loading peer table
+[2016-09-06 11:45:53,859] [DEBUG] [atlas:3493] (26596) Starting Atlas component 'zonefile_pusher'
+[2016-09-06 11:45:53,859] [DEBUG] [atlas:3412] (26596) localhost:16264: AtlasZonefilePusher step
+[2016-09-06 11:45:53,859] [DEBUG] [atlas:3493] (26596) Starting Atlas component 'health_checker'
+[2016-09-06 11:45:53,859] [DEBUG] [atlas:3150] (26596) localhost:16264: AtlasHealthChecker step
+[2016-09-06 11:45:53,859] [DEBUG] [atlas:3493] (26596) Starting Atlas component 'peer_crawler'
+[2016-09-06 11:45:53,859] [DEBUG] [atlas:3168] (26596) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 11:45:53,860] [DEBUG] [atlas:3044] (26596) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 11:45:53,860] [DEBUG] [atlas:3493] (26596) Starting Atlas component 'zonefile_crawler'
+[2016-09-06 11:45:53,860] [DEBUG] [atlas:3048] (26596) localhost:16264: max neighbors is 80
+[2016-09-06 11:45:53,860] [DEBUG] [blockstackd:1297] (26596) Starting RPC
+[2016-09-06 11:45:53,860] [DEBUG] [atlas:2970] (26596) Add at most 10 new peers out of 0 options
+[2016-09-06 11:45:53,860] [DEBUG] [atlas:3241] (26596) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 11:45:53,861] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:53,860] [INFO] [blockstackd:338] (26596) Listening on 0.0.0.0:16264
+[2016-09-06 11:45:53,860] [DEBUG] [atlas:3000] (26596) localhost:16264: revalidate old peers
+[2016-09-06 11:45:53,862] [DEBUG] [atlas:3281] (26596) localhost:16264: missing 0 zonefiles
+[2016-09-06 11:45:53,863] [DEBUG] [atlas:3362] (26596) localhost:16264: fetched 0 zonefiles
+[2016-09-06 11:45:53,864] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:54,032] [DEBUG] [blockstack-test-scenario:722] (26596) next block (now at 256)
+[2016-09-06 11:45:54,032] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:54,034] [DEBUG] [virtualchain_hooks:303] (26596) cache consistency: DB does not exist on disk
+[2016-09-06 11:45:54,034] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:45:54,036] [DEBUG] [indexer:220] (26596) Lastblock: 255 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:45:54,036] [WARNING] [namedb:148] (26596) Failed to open '/tmp/blockstack-test/blockstack-server.db'; creating a new database
+[2016-09-06 11:45:54,045] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 db_refresh
+[2016-09-06 11:45:54,046] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 11:45:54,046] [INFO] [virtualchain_hooks:369] (26596) Invalidating cached blockstack state
+[2016-09-06 11:45:54,046] [DEBUG] [virtualchain_hooks:298] (26596) cache consistency: DB is not in RAM
+[2016-09-06 11:45:54,046] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:45:54,048] [DEBUG] [indexer:220] (26596) Lastblock: 255 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:45:54,048] [WARNING] [namedb:148] (26596) Failed to open '/tmp/blockstack-test/blockstack-server.db'; creating a new database
+[2016-09-06 11:45:54,048] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 11:45:54] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:54,049] [DEBUG] [blockstack-test-scenario:312] (26596) sync virtualchain up to 256
+[2016-09-06 11:45:54,049] [DEBUG] [indexer:1130] (26596) Sync virtualchain state from 256 to 257
+
+blockstack opts
+{
+    "serve_zonefiles": true, 
+    "analytics_key": "abcdef0123456789", 
+    "profile_storage_drivers": "disk", 
+    "zonefiles": "/tmp/blockstack-test/zonefiles", 
+    "zonefile_storage_drivers": "disk", 
+    "backup_max_age": 30, 
+    "atlasdb_path": "/tmp/blockstack-test/atlas.db", 
+    "email": "", 
+    "atlas_hostname": "localhost", 
+    "serve_profiles": true, 
+    "atlas_blacklist": "", 
+    "backup_frequency": 3, 
+    "atlas": true, 
+    "announcers": "judecn.id,muneeb.id,shea256.id", 
+    "blockchain_proxy": true, 
+    "rpc_port": 16264, 
+    "server_version": "0.14.0", 
+    "atlas_seeds": ""
+}
+
+blockchain opts
+{
+    "bitcoind_use_https": false, 
+    "bitcoind_passwd": "blockstacksystem", 
+    "bitcoind_user": "blockstack", 
+    "bitcoind_server": "localhost", 
+    "bitcoind_spv_path": "/tmp/blockstack-test/spv_headers.dat", 
+    "bitcoind_p2p_port": 18444, 
+    "bitcoind_port": 18332, 
+    "bitcoind_regtest": true
+}
+
+blockchain service opts
+{
+    "multiprocessing_num_procs": 1, 
+    "spv_headers_path": "/tmp/blockstack-test/spv_headers.dat", 
+    "rpc_password": "blockstacksystem", 
+    "utxo_provider": "bitcoind_utxo", 
+    "port": 18332, 
+    "rpc_username": "blockstack", 
+    "multiprocessing_num_blocks": 10, 
+    "blockchain_port": 18332, 
+    "server": "localhost", 
+    "version_byte": 0, 
+    "use_https": false, 
+    "blockchain_server": "localhost"
+}
+blockchain headers: /tmp/blockstack-test/spv_headers.dat
+
+atlas node initialization
+
+
+bitcoind connection
+
+working_dir: /tmp/blockstack-test
+[06 Sep 2016 11:45:54] [DEBUG]	[virtualchain-bits]:	Will download SPV headers to /tmp/blockstack-test/spv_headers.dat
+[2016-09-06 11:45:54,050] [DEBUG] [spv:741] (26596) Synchronize testnet 0 to 256
+[2016-09-06 11:45:54,050] [DEBUG] [spv:761] (26596) connect to localhost:18444
+[2016-09-06 11:45:54,050] [DEBUG] [spv:365] (26596) handshake (version 60002)
+[2016-09-06 11:45:54,050] [DEBUG] [spv:368] (26596) send Version
+[2016-09-06 11:45:54,051] [DEBUG] [spv:381] (26596) handle version
+[2016-09-06 11:45:54,051] [DEBUG] [spv:383] (26596) send VerAck
+[2016-09-06 11:45:54,051] [DEBUG] [spv:355] (26596) send getheaders
+[2016-09-06 11:45:54,092] [DEBUG] [spv:400] (26596) handle ping
+[2016-09-06 11:45:54,092] [DEBUG] [spv:403] (26596) send pong
+[2016-09-06 11:45:54,106] [DEBUG] [spv:250] (26596) handle headers (256)
+[2016-09-06 11:45:54,106] [DEBUG] [spv:272] (26596) Receive 256 testnet headers (0 to 255)
+[2016-09-06 11:45:54,132] [DEBUG] [spv:777] (26596) synced headers from -1 to 256 in /tmp/blockstack-test/spv_headers.dat
+[2016-09-06 11:45:54,132] [DEBUG] [blocks:116] (26596) BlockDownloader: fetch blocks 256-256
+[2016-09-06 11:45:54,132] [DEBUG] [blocks:298] (26596) handshake (version 60002)
+[2016-09-06 11:45:54,132] [DEBUG] [blocks:301] (26596) send Version
+[2016-09-06 11:45:54,133] [DEBUG] [blocks:314] (26596) handle version
+[2016-09-06 11:45:54,133] [DEBUG] [blocks:316] (26596) send VerAck
+[2016-09-06 11:45:54,133] [DEBUG] [blocks:332] (26596) send getdata for 256-256 (11269c1f362074537e64154df14c6f6984908bd7eabbc4b30d197a74800ad406-11269c1f362074537e64154df14c6f6984908bd7eabbc4b30d197a74800ad406)
+[2016-09-06 11:45:54,172] [DEBUG] [blocks:357] (26596) handle ping
+[2016-09-06 11:45:54,172] [DEBUG] [blocks:360] (26596) send pong
+[2016-09-06 11:45:54,373] [DEBUG] [blocks:196] (26596) num blocks received = 0, num requested = 1
+[2016-09-06 11:45:54,373] [DEBUG] [blocks:562] (26596) handle block 256 (11269c1f362074537e64154df14c6f6984908bd7eabbc4b30d197a74800ad406)
+[2016-09-06 11:45:54,374] [DEBUG] [blocks:650] (26596) Request 0 nulldata sender TXs
+[2016-09-06 11:45:54,375] [DEBUG] [indexer:1060] (26596) Process block 256 (0 virtual transactions)
+[2016-09-06 11:45:54,375] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:45:54,375] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 256
+[2016-09-06 11:45:54,375] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 256
+[2016-09-06 11:45:54,375] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 256
+[2016-09-06 11:45:54,376] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 256
+[2016-09-06 11:45:54,376] [DEBUG] [indexer:803] (26596) Snapshotting block 256
+[2016-09-06 11:45:54,376] [DEBUG] [indexer:724] (26596) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-06 11:45:54,376] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test/blockstack-server.db.tmp
+[2016-09-06 11:45:54,377] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test/blockstack-server.lastblock.tmp --> /tmp/blockstack-test/blockstack-server.lastblock
+[2016-09-06 11:45:54,377] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test/blockstack-server.snapshots.tmp --> /tmp/blockstack-test/blockstack-server.snapshots
+[2016-09-06 11:45:54,377] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test/blockstack-server.db.tmp --> /tmp/blockstack-test/blockstack-server.db
+[2016-09-06 11:45:54,378] [DEBUG] [indexer:1153] (26596) CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:45:54,378] [DEBUG] [indexer:1173] (26596) Last block is 256
+[2016-09-06 11:45:54,378] [INFO] [virtualchain:80] (26596) 0 seconds
+[2016-09-06 11:45:54,378] [DEBUG] [virtualchain_hooks:308] (26596) cache consistency: DB was modified; in-RAM copy is stale
+[2016-09-06 11:45:54,378] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:45:54,380] [DEBUG] [indexer:220] (26596) Lastblock: 256 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:45:54,390] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 db_refresh
+[2016-09-06 11:45:54,391] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 11:45:54,391] [INFO] [virtualchain_hooks:369] (26596) Invalidating cached blockstack state
+[2016-09-06 11:45:54,391] [DEBUG] [virtualchain_hooks:298] (26596) cache consistency: DB is not in RAM
+[2016-09-06 11:45:54,391] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:45:54,394] [DEBUG] [indexer:220] (26596) Lastblock: 256 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:45:54,394] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 11:45:54] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:54,395] [DEBUG] [blockstack-test-scenario:321] (26596) sync atlas node up to 256
+[2016-09-06 11:45:54,395] [DEBUG] [blockstack-test-scenario:326] (26596) Synchronize Atlas DB from 256 to 257
+[2016-09-06 11:45:54,395] [DEBUG] [atlas:669] (26596) Queued 0 zonefiles from 256-256
+[2016-09-06 11:45:54,429] [DEBUG] [client:134] (26596) Loaded storage driver 'disk'
+[2016-09-06 11:45:54,430] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 get_namespace_cost
+[2016-09-06 11:45:54,431] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_get_namespace_cost(('test1',))
+[2016-09-06 11:45:54,431] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_get_namespace_cost(('test1',))
+127.0.0.1 - - [06/Sep/2016 11:45:54] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:54,588] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 getinfo
+[2016-09-06 11:45:54,589] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_getinfo(())
+[2016-09-06 11:45:54,590] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:45:54,643] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:45:54,652] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_getinfo(())
+127.0.0.1 - - [06/Sep/2016 11:45:54] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:54,860] [DEBUG] [atlas:3150] (26596) localhost:16264: AtlasHealthChecker step
+[2016-09-06 11:45:54,861] [DEBUG] [atlas:3412] (26596) localhost:16264: AtlasZonefilePusher step
+[2016-09-06 11:45:54,874] [DEBUG] [atlas:3168] (26596) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 11:45:54,874] [DEBUG] [atlas:3044] (26596) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 11:45:54,908] [DEBUG] [atlas:3241] (26596) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 11:45:54,933] [DEBUG] [atlas:2970] (26596) Add at most 10 new peers out of 0 options
+[2016-09-06 11:45:54,933] [DEBUG] [atlas:3000] (26596) localhost:16264: revalidate old peers
+[2016-09-06 11:45:54,934] [DEBUG] [atlas:3281] (26596) localhost:16264: missing 0 zonefiles
+[2016-09-06 11:45:54,934] [DEBUG] [atlas:3362] (26596) localhost:16264: fetched 0 zonefiles
+[2016-09-06 11:45:54,935] [DEBUG] [blockchain:45] (26596) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-06 11:45:54,935] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:45:54,936] [DEBUG] [nameops:426] (26596) namespace preorder tx 614 bytes, 1649 satoshis
+[2016-09-06 11:45:54,936] [DEBUG] [nameops:1040] (26596) Preordering namespace (test1, mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC, mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq), tx_fee = 1649.0
+[2016-09-06 11:45:55,075] [DEBUG] [tx:140] (26596) Send 0100000001814135c4b76992b622b8eb86679c15867c524a7c596af0e55ddd26cf5be88596000000008b483045022100cc3c277c753ef7260827238d4fed73cea01fada8279a481152af9e2fa41ce7b0022015ce728a5e248150fc1bf6b2dae4296f1bf53f248605d429df91376e2609c27b014104d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fbffffffff030000000000000000296a2769642aebfcfca1a1810d333a3b5150bd4d91716dd52c032a9148d8b13939723d2aca16c75c6d680b002e12010000001976a9140e1c669e2756a79185299cb25ed043ab145f08f088ac0084d717000000001976a914000000000000000000000000000000000000000088ac00000000
+[2016-09-06 11:45:55,084] [DEBUG] [client:134] (26596) Loaded storage driver 'disk'
+[2016-09-06 11:45:55,084] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 get_namespace_cost
+[2016-09-06 11:45:55,085] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_get_namespace_cost(('test2',))
+[2016-09-06 11:45:55,086] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_get_namespace_cost(('test2',))
+127.0.0.1 - - [06/Sep/2016 11:45:55] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:55,264] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 getinfo
+[2016-09-06 11:45:55,265] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_getinfo(())
+[2016-09-06 11:45:55,266] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:45:55,302] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:45:55,309] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_getinfo(())
+127.0.0.1 - - [06/Sep/2016 11:45:55] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:55,608] [DEBUG] [blockchain:45] (26596) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-06 11:45:55,608] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:45:55,610] [DEBUG] [nameops:426] (26596) namespace preorder tx 614 bytes, 1649 satoshis
+[2016-09-06 11:45:55,610] [DEBUG] [nameops:1040] (26596) Preordering namespace (test2, mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx, n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4), tx_fee = 1649.0
+[2016-09-06 11:45:55,744] [DEBUG] [tx:140] (26596) Send 0100000001a31e03cb1ceea57a36a17d41771d48054b92f6e249872495e34e4ffab949e6c4010000008b483045022100dc870e86eba3eaaabcfb7a5c7d372548b2af42b045ac7e35987720f1c10766b202203dd8a08eb6d4df7ade2f763a0bacadd038fa332bc161c18279f95ce3d1bb04820141046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87ffffffff030000000000000000296a2769642a74109eb26958f0703998f1a01e32314b1e0ecbe42a9148d8b13939723d2aca16c75c6d680b002e12010000001976a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac0084d717000000001976a914000000000000000000000000000000000000000088ac00000000
+[2016-09-06 11:45:55,753] [DEBUG] [client:134] (26596) Loaded storage driver 'disk'
+[2016-09-06 11:45:55,753] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 get_namespace_cost
+[2016-09-06 11:45:55,754] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_get_namespace_cost(('test3',))
+[2016-09-06 11:45:55,754] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_get_namespace_cost(('test3',))
+127.0.0.1 - - [06/Sep/2016 11:45:55] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:55,862] [DEBUG] [atlas:3412] (26596) localhost:16264: AtlasZonefilePusher step
+[2016-09-06 11:45:55,874] [DEBUG] [atlas:3150] (26596) localhost:16264: AtlasHealthChecker step
+[2016-09-06 11:45:55,874] [DEBUG] [atlas:3168] (26596) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 11:45:55,891] [DEBUG] [atlas:3044] (26596) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 11:45:55,939] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 getinfo
+[2016-09-06 11:45:55,940] [DEBUG] [atlas:2970] (26596) Add at most 10 new peers out of 0 options
+[2016-09-06 11:45:55,940] [DEBUG] [atlas:3241] (26596) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 11:45:55,940] [DEBUG] [atlas:3000] (26596) localhost:16264: revalidate old peers
+[2016-09-06 11:45:55,940] [DEBUG] [atlas:3281] (26596) localhost:16264: missing 0 zonefiles
+[2016-09-06 11:45:55,941] [DEBUG] [atlas:3362] (26596) localhost:16264: fetched 0 zonefiles
+[2016-09-06 11:45:55,941] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_getinfo(())
+[2016-09-06 11:45:55,942] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:45:56,079] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:45:56,092] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_getinfo(())
+127.0.0.1 - - [06/Sep/2016 11:45:56] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:56,369] [DEBUG] [blockchain:45] (26596) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-06 11:45:56,369] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:45:56,370] [DEBUG] [nameops:426] (26596) namespace preorder tx 614 bytes, 1649 satoshis
+[2016-09-06 11:45:56,370] [DEBUG] [nameops:1040] (26596) Preordering namespace (test3, mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed, mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9), tx_fee = 1649.0
+[2016-09-06 11:45:56,510] [DEBUG] [tx:140] (26596) Send 01000000019351b695d39365163979f215e54020215a506fa392d656afed8475d9d866df56010000008b483045022100d7d706665ac07c4500f6a27c479efc3102451c6b8b509a7f2535f7070b94236902201bf1d62a9e94a82234dfe0c8afc8363c8d87faa30e9e002aa67392a29b2ad5ee014104ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451ffffffff030000000000000000296a2769642a79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee2a9148d8b13939723d2aca16c75c6d680b002e12010000001976a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac0084d717000000001976a914000000000000000000000000000000000000000088ac00000000
+[2016-09-06 11:45:56,512] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:56,600] [DEBUG] [blockstack-test-scenario:722] (26596) next block (now at 257)
+[2016-09-06 11:45:56,600] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:56,602] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:45:56,610] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 db_refresh
+[2016-09-06 11:45:56,611] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 11:45:56,611] [INFO] [virtualchain_hooks:369] (26596) Invalidating cached blockstack state
+[2016-09-06 11:45:56,611] [DEBUG] [virtualchain_hooks:298] (26596) cache consistency: DB is not in RAM
+[2016-09-06 11:45:56,611] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:45:56,613] [DEBUG] [indexer:220] (26596) Lastblock: 256 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:45:56,614] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 11:45:56] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:56,615] [DEBUG] [blockstack-test-scenario:312] (26596) sync virtualchain up to 257
+[2016-09-06 11:45:56,615] [DEBUG] [indexer:1130] (26596) Sync virtualchain state from 257 to 258
+[2016-09-06 11:45:56,615] [DEBUG] [spv:741] (26596) Synchronize testnet 257 to 257
+[2016-09-06 11:45:56,615] [DEBUG] [spv:761] (26596) connect to localhost:18444
+[2016-09-06 11:45:56,615] [DEBUG] [spv:365] (26596) handshake (version 60002)
+[2016-09-06 11:45:56,616] [DEBUG] [spv:368] (26596) send Version
+[2016-09-06 11:45:56,616] [DEBUG] [spv:381] (26596) handle version
+[2016-09-06 11:45:56,617] [DEBUG] [spv:383] (26596) send VerAck
+[2016-09-06 11:45:56,617] [DEBUG] [spv:355] (26596) send getheaders
+[2016-09-06 11:45:56,656] [DEBUG] [spv:400] (26596) handle ping
+[2016-09-06 11:45:56,656] [DEBUG] [spv:403] (26596) send pong
+[2016-09-06 11:45:56,857] [DEBUG] [spv:250] (26596) handle headers (1)
+[2016-09-06 11:45:56,858] [DEBUG] [spv:268] (26596) Receive 1 headers (256 to 257)
+[2016-09-06 11:45:56,858] [DEBUG] [spv:777] (26596) synced headers from 256 to 257 in /tmp/blockstack-test/spv_headers.dat
+[2016-09-06 11:45:56,859] [DEBUG] [blocks:116] (26596) BlockDownloader: fetch blocks 257-257
+[2016-09-06 11:45:56,859] [DEBUG] [blocks:298] (26596) handshake (version 60002)
+[2016-09-06 11:45:56,859] [DEBUG] [blocks:301] (26596) send Version
+[2016-09-06 11:45:56,860] [DEBUG] [blocks:314] (26596) handle version
+[2016-09-06 11:45:56,860] [DEBUG] [blocks:316] (26596) send VerAck
+[2016-09-06 11:45:56,861] [DEBUG] [blocks:332] (26596) send getdata for 257-257 (5706684f778befab93abb349354b955304df4f2496d3df434c9d559b9e2263d1-5706684f778befab93abb349354b955304df4f2496d3df434c9d559b9e2263d1)
+[2016-09-06 11:45:56,863] [DEBUG] [atlas:3412] (26596) localhost:16264: AtlasZonefilePusher step
+[2016-09-06 11:45:56,875] [DEBUG] [atlas:3150] (26596) localhost:16264: AtlasHealthChecker step
+[2016-09-06 11:45:56,875] [DEBUG] [atlas:3168] (26596) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 11:45:56,891] [DEBUG] [atlas:3044] (26596) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 11:45:56,891] [DEBUG] [atlas:2970] (26596) Add at most 10 new peers out of 0 options
+[2016-09-06 11:45:56,892] [DEBUG] [atlas:3000] (26596) localhost:16264: revalidate old peers
+[2016-09-06 11:45:56,900] [DEBUG] [blocks:357] (26596) handle ping
+[2016-09-06 11:45:56,900] [DEBUG] [blocks:360] (26596) send pong
+[2016-09-06 11:45:56,941] [DEBUG] [atlas:3241] (26596) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 11:45:56,942] [DEBUG] [atlas:3281] (26596) localhost:16264: missing 0 zonefiles
+[2016-09-06 11:45:56,942] [DEBUG] [atlas:3362] (26596) localhost:16264: fetched 0 zonefiles
+[2016-09-06 11:45:57,102] [DEBUG] [blocks:196] (26596) num blocks received = 0, num requested = 1
+[2016-09-06 11:45:57,102] [DEBUG] [blocks:562] (26596) handle block 257 (5706684f778befab93abb349354b955304df4f2496d3df434c9d559b9e2263d1)
+[2016-09-06 11:45:57,108] [DEBUG] [blocks:650] (26596) Request 3 nulldata sender TXs
+[2016-09-06 11:45:57,108] [DEBUG] [blocks:227] (26596) Fetch 3 TXs via JSON-RPC (0-3 of 3)
+[2016-09-06 11:45:57,179] [DEBUG] [virtualchain_hooks:190] (26596) Parse NAMESPACE_PREORDER: 74109eb26958f0703998f1a01e32314b1e0ecbe42a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:45:57,217] [DEBUG] [virtualchain_hooks:190] (26596) Parse NAMESPACE_PREORDER: ebfcfca1a1810d333a3b5150bd4d91716dd52c032a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:45:57,254] [DEBUG] [virtualchain_hooks:190] (26596) Parse NAMESPACE_PREORDER: 79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:45:57,254] [DEBUG] [indexer:1060] (26596) Process block 257 (3 virtual transactions)
+[2016-09-06 11:45:57,255] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:45:57,255] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "fee": 28149, "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3", "vtxindex": 1})
+[2016-09-06 11:45:57,255] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "fee": 28149, "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3", "vtxindex": 1})
+[2016-09-06 11:45:57,256] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "fee": 28149, "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1", "vtxindex": 2})
+[2016-09-06 11:45:57,256] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "fee": 28149, "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1", "vtxindex": 2})
+[2016-09-06 11:45:57,256] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "fee": 28149, "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212", "vtxindex": 3})
+[2016-09-06 11:45:57,257] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "fee": 28149, "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212", "vtxindex": 3})
+[2016-09-06 11:45:57,257] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 257
+[2016-09-06 11:45:57,257] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 257
+[2016-09-06 11:45:57,257] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 257
+[2016-09-06 11:45:57,257] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 257
+[2016-09-06 11:45:57,257] [DEBUG] [indexer:803] (26596) Snapshotting block 257
+[2016-09-06 11:45:57,257] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:74109eb26958f0703998f1a01e32314b1e0ecbe4,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3,vtxindex=1:1,block_number=3:257,sender=50:76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac,sender_pubkey=130:046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87,address=34:mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx
+[2016-09-06 11:45:57,257] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:ebfcfca1a1810d333a3b5150bd4d91716dd52c03,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1,vtxindex=1:2,block_number=3:257,sender=50:76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC
+[2016-09-06 11:45:57,257] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212,vtxindex=1:3,block_number=3:257,sender=50:76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac,sender_pubkey=130:04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451,address=34:mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed
+[2016-09-06 11:45:57,257] [DEBUG] [indexer:816] (26596) Snapshotting block 257: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:45:57,257] [DEBUG] [indexer:724] (26596) Snapshot('87744c17370cdeae8bdad3fae57c0374bf5cf74af54621ce0de144b52b573b3e', [u'2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-06 11:45:57,259] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test/blockstack-server.db.tmp
+[2016-09-06 11:45:57,259] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test/blockstack-server.lastblock.tmp --> /tmp/blockstack-test/blockstack-server.lastblock
+[2016-09-06 11:45:57,260] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test/blockstack-server.snapshots.tmp --> /tmp/blockstack-test/blockstack-server.snapshots
+[2016-09-06 11:45:57,260] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test/blockstack-server.db.tmp --> /tmp/blockstack-test/blockstack-server.db
+[2016-09-06 11:45:57,260] [DEBUG] [indexer:1153] (26596) CONSENSUS(257): d14b9b5ce8a16994611b5724ca303bfb
+[2016-09-06 11:45:57,260] [DEBUG] [indexer:1173] (26596) Last block is 257
+[2016-09-06 11:45:57,260] [INFO] [virtualchain:80] (26596) 0 seconds
+[2016-09-06 11:45:57,260] [DEBUG] [virtualchain_hooks:308] (26596) cache consistency: DB was modified; in-RAM copy is stale
+[2016-09-06 11:45:57,260] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:45:57,261] [DEBUG] [indexer:220] (26596) Lastblock: 257 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:45:57,269] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 db_refresh
+[2016-09-06 11:45:57,270] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 11:45:57,270] [INFO] [virtualchain_hooks:369] (26596) Invalidating cached blockstack state
+[2016-09-06 11:45:57,270] [DEBUG] [virtualchain_hooks:298] (26596) cache consistency: DB is not in RAM
+[2016-09-06 11:45:57,270] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:45:57,271] [DEBUG] [indexer:220] (26596) Lastblock: 257 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:45:57,271] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 11:45:57] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:57,272] [DEBUG] [blockstack-test-scenario:321] (26596) sync atlas node up to 257
+[2016-09-06 11:45:57,272] [DEBUG] [blockstack-test-scenario:326] (26596) Synchronize Atlas DB from 257 to 258
+[2016-09-06 11:45:57,273] [DEBUG] [atlas:669] (26596) Queued 0 zonefiles from 257-257
+[2016-09-06 11:45:57,281] [DEBUG] [client:134] (26596) Loaded storage driver 'disk'
+[2016-09-06 11:45:57,447] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 get_namespace_blockchain_record
+[2016-09-06 11:45:57,448] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_get_namespace_blockchain_record(('test1',))
+[2016-09-06 11:45:57,448] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:45:57,448] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_get_namespace_blockchain_record(('test1',))
+127.0.0.1 - - [06/Sep/2016 11:45:57] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:57,744] [DEBUG] [blockchain:45] (26596) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-06 11:45:57,744] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:45:57,746] [DEBUG] [nameops:455] (26596) namespace reveal tx 586 bytes, 1574 satoshis
+[2016-09-06 11:45:57,746] [DEBUG] [nameops:1101] (26596) Revealing namespace (test1, mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC, mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq), tx_fee = 1574.0
+[2016-09-06 11:45:57,875] [DEBUG] [atlas:3412] (26596) localhost:16264: AtlasZonefilePusher step
+[2016-09-06 11:45:57,876] [DEBUG] [atlas:3150] (26596) localhost:16264: AtlasHealthChecker step
+[2016-09-06 11:45:57,876] [DEBUG] [atlas:3168] (26596) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 11:45:57,889] [DEBUG] [tx:140] (26596) Send 0100000001d12cd097e60b3a1a5fe4eebd6f1a7869c333c20b6313d431ee36391e44e6a022010000008b483045022100c0b37b7d6aec5fb0b19c95bc3e85655d0d3ca05a6f7c8c3d088e949d8048a4d802206a62b22f21657c8918ac8b1783a7d918e02f47a0f3f98ff12b940fad1b90f294014104d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fbffffffff0300000000000000001b6a196964260000cd73fa046543210000000000ab000174657374317c150000000000001976a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788acb5732d12010000001976a9140e1c669e2756a79185299cb25ed043ab145f08f088ac00000000
+[2016-09-06 11:45:57,892] [DEBUG] [atlas:3044] (26596) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 11:45:57,893] [DEBUG] [atlas:2970] (26596) Add at most 10 new peers out of 0 options
+[2016-09-06 11:45:57,893] [DEBUG] [atlas:3000] (26596) localhost:16264: revalidate old peers
+[2016-09-06 11:45:57,898] [DEBUG] [client:134] (26596) Loaded storage driver 'disk'
+[2016-09-06 11:45:58,014] [DEBUG] [atlas:3241] (26596) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 11:45:58,079] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 get_namespace_blockchain_record
+[2016-09-06 11:45:58,079] [DEBUG] [atlas:3281] (26596) localhost:16264: missing 0 zonefiles
+[2016-09-06 11:45:58,080] [DEBUG] [atlas:3362] (26596) localhost:16264: fetched 0 zonefiles
+[2016-09-06 11:45:58,081] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_get_namespace_blockchain_record(('test2',))
+[2016-09-06 11:45:58,081] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:45:58,081] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_get_namespace_blockchain_record(('test2',))
+127.0.0.1 - - [06/Sep/2016 11:45:58] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:58,360] [DEBUG] [blockchain:45] (26596) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-06 11:45:58,360] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:45:58,361] [DEBUG] [nameops:455] (26596) namespace reveal tx 588 bytes, 1579 satoshis
+[2016-09-06 11:45:58,361] [DEBUG] [nameops:1101] (26596) Revealing namespace (test2, mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx, n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4), tx_fee = 1579.0
+[2016-09-06 11:45:58,495] [DEBUG] [tx:140] (26596) Send 0100000001d34238954cd5445f8bdc4721c07b08206f59c051ed82f81652309595f672b7f2010000008b483045022100fa7b51d7738c93d972386538489e256e93753efe1c8221330c12be09cd4ae65d02201ae316c7b61bb16637cbbeb166b9f7c4667a7f7b5e5cbc63a68876f217dfe31b0141046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87ffffffff0300000000000000001b6a196964260000cd74fb057654321111111111bc000174657374327c150000000000001976a914f75b20399d771f515a3cd80f941aa7461d92518c88acba732d12010000001976a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac00000000
+[2016-09-06 11:45:58,504] [DEBUG] [client:134] (26596) Loaded storage driver 'disk'
+[2016-09-06 11:45:58,666] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 get_namespace_blockchain_record
+[2016-09-06 11:45:58,667] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_get_namespace_blockchain_record(('test3',))
+[2016-09-06 11:45:58,667] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:45:58,667] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_get_namespace_blockchain_record(('test3',))
+127.0.0.1 - - [06/Sep/2016 11:45:58] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:58,875] [DEBUG] [atlas:3412] (26596) localhost:16264: AtlasZonefilePusher step
+[2016-09-06 11:45:58,893] [DEBUG] [atlas:3150] (26596) localhost:16264: AtlasHealthChecker step
+[2016-09-06 11:45:58,893] [DEBUG] [atlas:3044] (26596) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 11:45:58,905] [DEBUG] [atlas:3168] (26596) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 11:45:58,951] [DEBUG] [atlas:2970] (26596) Add at most 10 new peers out of 0 options
+[2016-09-06 11:45:58,956] [DEBUG] [atlas:3000] (26596) localhost:16264: revalidate old peers
+[2016-09-06 11:45:58,957] [DEBUG] [blockchain:45] (26596) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-06 11:45:58,957] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:45:58,958] [DEBUG] [nameops:455] (26596) namespace reveal tx 586 bytes, 1574 satoshis
+[2016-09-06 11:45:58,959] [DEBUG] [nameops:1101] (26596) Revealing namespace (test3, mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed, mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9), tx_fee = 1574.0
+[2016-09-06 11:45:59,023] [DEBUG] [atlas:3241] (26596) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 11:45:59,092] [DEBUG] [atlas:3281] (26596) localhost:16264: missing 0 zonefiles
+[2016-09-06 11:45:59,095] [DEBUG] [atlas:3362] (26596) localhost:16264: fetched 0 zonefiles
+[2016-09-06 11:45:59,111] [DEBUG] [tx:140] (26596) Send 01000000011202e108d011b1cc08f5db65937784ceab173fc0fe50ac1d867574623d1023af010000008b483045022100f7566679f355e7f17f2f3974587b86789f42325a67a29dc2b39613f823ef7ee5022020438dd4687833a63e14e4194c9cf3ffc7b7ac88e0c7afd0834820ea4333c338014104ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451ffffffff0300000000000000001b6a196964260000cd75fc068765432222222222cd000174657374337c150000000000001976a914b23d901e09fbab825cfad5f336d46488f2cd89cf88acb5732d12010000001976a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac00000000
+[2016-09-06 11:45:59,113] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:59,306] [DEBUG] [blockstack-test-scenario:722] (26596) next block (now at 258)
+[2016-09-06 11:45:59,306] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:45:59,308] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:45:59,320] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 db_refresh
+[2016-09-06 11:45:59,321] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 11:45:59,321] [INFO] [virtualchain_hooks:369] (26596) Invalidating cached blockstack state
+[2016-09-06 11:45:59,321] [DEBUG] [virtualchain_hooks:298] (26596) cache consistency: DB is not in RAM
+[2016-09-06 11:45:59,321] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:45:59,323] [DEBUG] [indexer:220] (26596) Lastblock: 257 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:45:59,323] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 11:45:59] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:59,324] [DEBUG] [blockstack-test-scenario:312] (26596) sync virtualchain up to 258
+[2016-09-06 11:45:59,324] [DEBUG] [indexer:1130] (26596) Sync virtualchain state from 258 to 259
+[2016-09-06 11:45:59,324] [DEBUG] [spv:741] (26596) Synchronize testnet 258 to 258
+[2016-09-06 11:45:59,324] [DEBUG] [spv:761] (26596) connect to localhost:18444
+[2016-09-06 11:45:59,324] [DEBUG] [spv:365] (26596) handshake (version 60002)
+[2016-09-06 11:45:59,324] [DEBUG] [spv:368] (26596) send Version
+[2016-09-06 11:45:59,325] [DEBUG] [spv:381] (26596) handle version
+[2016-09-06 11:45:59,325] [DEBUG] [spv:383] (26596) send VerAck
+[2016-09-06 11:45:59,326] [DEBUG] [spv:355] (26596) send getheaders
+[2016-09-06 11:45:59,364] [DEBUG] [spv:400] (26596) handle ping
+[2016-09-06 11:45:59,364] [DEBUG] [spv:403] (26596) send pong
+[2016-09-06 11:45:59,365] [DEBUG] [spv:250] (26596) handle headers (1)
+[2016-09-06 11:45:59,365] [DEBUG] [spv:268] (26596) Receive 1 headers (257 to 258)
+[2016-09-06 11:45:59,366] [DEBUG] [spv:777] (26596) synced headers from 257 to 258 in /tmp/blockstack-test/spv_headers.dat
+[2016-09-06 11:45:59,367] [DEBUG] [blocks:116] (26596) BlockDownloader: fetch blocks 258-258
+[2016-09-06 11:45:59,368] [DEBUG] [blocks:298] (26596) handshake (version 60002)
+[2016-09-06 11:45:59,368] [DEBUG] [blocks:301] (26596) send Version
+[2016-09-06 11:45:59,368] [DEBUG] [blocks:314] (26596) handle version
+[2016-09-06 11:45:59,369] [DEBUG] [blocks:316] (26596) send VerAck
+[2016-09-06 11:45:59,369] [DEBUG] [blocks:332] (26596) send getdata for 258-258 (10a6430ea2c53984b440b3182a80996079d3b139b4e4f8aa7db1690c833e1807-10a6430ea2c53984b440b3182a80996079d3b139b4e4f8aa7db1690c833e1807)
+[2016-09-06 11:45:59,408] [DEBUG] [blocks:357] (26596) handle ping
+[2016-09-06 11:45:59,408] [DEBUG] [blocks:360] (26596) send pong
+[2016-09-06 11:45:59,710] [DEBUG] [blocks:196] (26596) num blocks received = 0, num requested = 1
+[2016-09-06 11:45:59,710] [DEBUG] [blocks:562] (26596) handle block 258 (10a6430ea2c53984b440b3182a80996079d3b139b4e4f8aa7db1690c833e1807)
+[2016-09-06 11:45:59,715] [DEBUG] [blocks:650] (26596) Request 3 nulldata sender TXs
+[2016-09-06 11:45:59,715] [DEBUG] [blocks:227] (26596) Fetch 3 TXs via JSON-RPC (0-3 of 3)
+[2016-09-06 11:45:59,780] [DEBUG] [virtualchain_hooks:197] (26596) Parse NAMESPACE_REVEAL: 0000cd73fa046543210000000000ab00017465737431
+[2016-09-06 11:45:59,817] [DEBUG] [virtualchain_hooks:197] (26596) Parse NAMESPACE_REVEAL: 0000cd75fc068765432222222222cd00017465737433
+[2016-09-06 11:45:59,870] [DEBUG] [virtualchain_hooks:197] (26596) Parse NAMESPACE_REVEAL: 0000cd74fb057654321111111111bc00017465737432
+[2016-09-06 11:45:59,871] [DEBUG] [indexer:1060] (26596) Process block 258 (3 virtual transactions)
+[2016-09-06 11:45:59,872] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:45:59,872] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '&' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "base": 4, "buckets": [6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "coeff": 250, "fee": 30426, "lifetime": 52595, "namespace_id": "test1", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "no_vowel_discount": 11, "nonalpha_discount": 10, "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "recipient_address": "mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq", "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "db9025d30a9e21d8d04d9252b6b7cae39566899067147c66dac45e08ea3fcf96", "version": 1, "vtxindex": 1})
+[2016-09-06 11:45:59,873] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '&' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "base": 4, "block_number": 257, "buckets": [6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "coeff": 250, "fee": 30426, "lifetime": 52595, "namespace_id": "test1", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "no_vowel_discount": 11, "nonalpha_discount": 10, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "recipient_address": "mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq", "reveal_block": 258, "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "db9025d30a9e21d8d04d9252b6b7cae39566899067147c66dac45e08ea3fcf96", "version": 1, "vtxindex": 1})
+[2016-09-06 11:45:59,874] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '&' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "base": 6, "buckets": [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "coeff": 252, "fee": 30426, "lifetime": 52597, "namespace_id": "test3", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "no_vowel_discount": 13, "nonalpha_discount": 12, "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "recipient_address": "mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9", "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "baba53f9f12fc4ff965fee8090c981a0d501e10665e64ca61461a7d573b11d32", "version": 1, "vtxindex": 2})
+[2016-09-06 11:45:59,874] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '&' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "base": 6, "block_number": 257, "buckets": [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "coeff": 252, "fee": 30426, "lifetime": 52597, "namespace_id": "test3", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "no_vowel_discount": 13, "nonalpha_discount": 12, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "recipient_address": "mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9", "reveal_block": 258, "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "baba53f9f12fc4ff965fee8090c981a0d501e10665e64ca61461a7d573b11d32", "version": 1, "vtxindex": 2})
+[2016-09-06 11:45:59,875] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '&' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "base": 5, "buckets": [7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "coeff": 251, "fee": 30421, "lifetime": 52596, "namespace_id": "test2", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "no_vowel_discount": 12, "nonalpha_discount": 11, "opcode": "NAMESPACE_REVEAL", "recipient": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "recipient_address": "n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4", "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f1ca1849acb660b3ae0f127165344d6399084b6606b4616c0abd320d4db77a2f", "version": 1, "vtxindex": 3})
+[2016-09-06 11:45:59,875] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '&' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "base": 5, "block_number": 257, "buckets": [7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "coeff": 251, "fee": 30421, "lifetime": 52596, "namespace_id": "test2", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "no_vowel_discount": 12, "nonalpha_discount": 11, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "recipient_address": "n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4", "reveal_block": 258, "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f1ca1849acb660b3ae0f127165344d6399084b6606b4616c0abd320d4db77a2f", "version": 1, "vtxindex": 3})
+[2016-09-06 11:45:59,876] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 258
+[2016-09-06 11:45:59,876] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 258
+[2016-09-06 11:45:59,876] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 258
+[2016-09-06 11:45:59,876] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 258
+[2016-09-06 11:45:59,876] [DEBUG] [indexer:803] (26596) Snapshotting block 258
+[2016-09-06 11:45:59,876] [DEBUG] [indexer:765] (26596) SERIALIZE: &:namespace_id=5:test1,namespace_id_hash=40:ebfcfca1a1810d333a3b5150bd4d91716dd52c03,version=1:1,sender=50:76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC,recipient=50:76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac,recipient_address=34:mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq,block_number=3:257,reveal_block=3:258,op=1:&,txid=64:db9025d30a9e21d8d04d9252b6b7cae39566899067147c66dac45e08ea3fcf96,vtxindex=1:1,lifetime=5:52595,coeff=3:250,base=1:4,buckets=48:[6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],nonalpha_discount=2:10,no_vowel_discount=2:11
+[2016-09-06 11:45:59,877] [DEBUG] [indexer:765] (26596) SERIALIZE: &:namespace_id=5:test3,namespace_id_hash=40:79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee,version=1:1,sender=50:76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac,sender_pubkey=130:04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451,address=34:mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed,recipient=50:76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac,recipient_address=34:mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9,block_number=3:257,reveal_block=3:258,op=1:&,txid=64:baba53f9f12fc4ff965fee8090c981a0d501e10665e64ca61461a7d573b11d32,vtxindex=1:2,lifetime=5:52597,coeff=3:252,base=1:6,buckets=48:[8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],nonalpha_discount=2:12,no_vowel_discount=2:13
+[2016-09-06 11:45:59,877] [DEBUG] [atlas:3412] (26596) localhost:16264: AtlasZonefilePusher step
+[2016-09-06 11:45:59,877] [DEBUG] [indexer:765] (26596) SERIALIZE: &:namespace_id=5:test2,namespace_id_hash=40:74109eb26958f0703998f1a01e32314b1e0ecbe4,version=1:1,sender=50:76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac,sender_pubkey=130:046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87,address=34:mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx,recipient=50:76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac,recipient_address=34:n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4,block_number=3:257,reveal_block=3:258,op=1:&,txid=64:f1ca1849acb660b3ae0f127165344d6399084b6606b4616c0abd320d4db77a2f,vtxindex=1:3,lifetime=5:52596,coeff=3:251,base=1:5,buckets=48:[7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],nonalpha_discount=2:11,no_vowel_discount=2:12
+[2016-09-06 11:45:59,877] [DEBUG] [indexer:816] (26596) Snapshotting block 258: consensus hash of 257 is d14b9b5ce8a16994611b5724ca303bfb
+[2016-09-06 11:45:59,877] [DEBUG] [indexer:724] (26596) Snapshot('63c374ed7e516fd4ba0a90ac24f0be77f8798b83ec20bf00e66ac61b6bf02286', [u'd14b9b5ce8a16994611b5724ca303bfb'])
+[2016-09-06 11:45:59,882] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test/blockstack-server.db.tmp
+[2016-09-06 11:45:59,883] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test/blockstack-server.lastblock.tmp --> /tmp/blockstack-test/blockstack-server.lastblock
+[2016-09-06 11:45:59,883] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test/blockstack-server.snapshots.tmp --> /tmp/blockstack-test/blockstack-server.snapshots
+[2016-09-06 11:45:59,883] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test/blockstack-server.db.tmp --> /tmp/blockstack-test/blockstack-server.db
+[2016-09-06 11:45:59,884] [DEBUG] [indexer:1153] (26596) CONSENSUS(258): 8617b6481509a174921cfec275cfdb0b
+[2016-09-06 11:45:59,884] [DEBUG] [indexer:1173] (26596) Last block is 258
+[2016-09-06 11:45:59,885] [INFO] [virtualchain:80] (26596) 0 seconds
+[2016-09-06 11:45:59,885] [DEBUG] [virtualchain_hooks:308] (26596) cache consistency: DB was modified; in-RAM copy is stale
+[2016-09-06 11:45:59,885] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:45:59,887] [DEBUG] [indexer:220] (26596) Lastblock: 258 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:45:59,887] [WARNING] [namedb:239] (26596) No public key found for namespace test1
+[2016-09-06 11:45:59,887] [WARNING] [namedb:239] (26596) No public key found for namespace test3
+[2016-09-06 11:45:59,887] [WARNING] [namedb:239] (26596) No public key found for namespace test2
+[2016-09-06 11:45:59,894] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 db_refresh
+[2016-09-06 11:45:59,894] [DEBUG] [atlas:3150] (26596) localhost:16264: AtlasHealthChecker step
+[2016-09-06 11:45:59,894] [DEBUG] [atlas:3168] (26596) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 11:45:59,895] [DEBUG] [atlas:3044] (26596) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 11:45:59,895] [DEBUG] [atlas:2970] (26596) Add at most 10 new peers out of 0 options
+[2016-09-06 11:45:59,895] [DEBUG] [atlas:3000] (26596) localhost:16264: revalidate old peers
+[2016-09-06 11:45:59,895] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 11:45:59,896] [INFO] [virtualchain_hooks:369] (26596) Invalidating cached blockstack state
+[2016-09-06 11:45:59,896] [DEBUG] [virtualchain_hooks:298] (26596) cache consistency: DB is not in RAM
+[2016-09-06 11:45:59,896] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:45:59,897] [DEBUG] [indexer:220] (26596) Lastblock: 258 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:45:59,897] [WARNING] [namedb:239] (26596) No public key found for namespace test1
+[2016-09-06 11:45:59,897] [WARNING] [namedb:239] (26596) No public key found for namespace test3
+[2016-09-06 11:45:59,897] [WARNING] [namedb:239] (26596) No public key found for namespace test2
+[2016-09-06 11:45:59,898] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 11:45:59] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:45:59,898] [DEBUG] [blockstack-test-scenario:321] (26596) sync atlas node up to 258
+[2016-09-06 11:45:59,898] [DEBUG] [blockstack-test-scenario:326] (26596) Synchronize Atlas DB from 258 to 259
+[2016-09-06 11:45:59,899] [DEBUG] [atlas:669] (26596) Queued 0 zonefiles from 258-258
+[2016-09-06 11:45:59,909] [DEBUG] [client:134] (26596) Loaded storage driver 'disk'
+[2016-09-06 11:46:00,158] [DEBUG] [atlas:3241] (26596) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 11:46:00,237] [DEBUG] [atlas:3281] (26596) localhost:16264: missing 0 zonefiles
+[2016-09-06 11:46:00,238] [DEBUG] [atlas:3362] (26596) localhost:16264: fetched 0 zonefiles
+[2016-09-06 11:46:00,514] [DEBUG] [blockchain:45] (26596) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-06 11:46:00,514] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:46:00,515] [DEBUG] [nameops:483] (26596) namespace ready tx 844 bytes, 2267 satoshis
+[2016-09-06 11:46:00,515] [DEBUG] [nameops:1161] (26596) Readying namespace (test1, mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq), tx_fee = 2267.0
+[2016-09-06 11:46:00,784] [DEBUG] [tx:140] (26596) Send 010000000222b9ff4d09b32299431dc64d24add00a44ecd43c7170ea67624e8e58e8b4b2fa000000008a473044022079a5824e814d03a4ade3ec04ee4821bf2c014bf756c3ea6e8f4647bde3e6016c02207c848bd214abcb8048750fce45b77f633e2d948da775e5d3411051c6c286b73001410497cb0fccbbcf48b2b9516920ca8d973cd81ce032ef1abc0e627c7fd0e4dcee58f0de02424a937af13930910c81cde3ca794980e3035b034033e4b7758e46b018ffffffff96cf3fea085ec4da667c146790896695e3cab7b652924dd0d8219e0ad32590db010000008a47304402203dd59fdc05f25f473af020da4152e69ee69b6b01d109dd2608ed8879ada420ce022072814a8104187f7ed258197e4f8b889f663f3cc96a4a8ef835c84b5311abb42e01410497cb0fccbbcf48b2b9516920ca8d973cd81ce032ef1abc0e627c7fd0e4dcee58f0de02424a937af13930910c81cde3ca794980e3035b034033e4b7758e46b018ffffffff0200000000000000000b6a096964212e746573743191d7052a010000001976a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac00000000
+[2016-09-06 11:46:00,793] [DEBUG] [client:134] (26596) Loaded storage driver 'disk'
+[2016-09-06 11:46:00,891] [DEBUG] [atlas:3412] (26596) localhost:16264: AtlasZonefilePusher step
+[2016-09-06 11:46:00,896] [DEBUG] [atlas:3044] (26596) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 11:46:00,896] [DEBUG] [atlas:2970] (26596) Add at most 10 new peers out of 0 options
+[2016-09-06 11:46:00,907] [DEBUG] [atlas:3000] (26596) localhost:16264: revalidate old peers
+[2016-09-06 11:46:00,907] [DEBUG] [atlas:3150] (26596) localhost:16264: AtlasHealthChecker step
+[2016-09-06 11:46:00,947] [DEBUG] [atlas:3168] (26596) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 11:46:01,295] [DEBUG] [atlas:3241] (26596) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 11:46:01,355] [DEBUG] [atlas:3281] (26596) localhost:16264: missing 0 zonefiles
+[2016-09-06 11:46:01,365] [DEBUG] [atlas:3362] (26596) localhost:16264: fetched 0 zonefiles
+[2016-09-06 11:46:01,413] [DEBUG] [blockchain:45] (26596) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-06 11:46:01,413] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:46:01,414] [DEBUG] [nameops:483] (26596) namespace ready tx 846 bytes, 2272 satoshis
+[2016-09-06 11:46:01,415] [DEBUG] [nameops:1161] (26596) Readying namespace (test2, n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4), tx_fee = 2272.0
+[2016-09-06 11:46:01,701] [DEBUG] [tx:140] (26596) Send 01000000020c6ad6584626894e52c391b838c26bda5106e83ce88c049c75c5488658f23400010000008a473044022052de1f968ea6c061da6208c0e8834a1b4fcd82fe399addf4bd5424cbc61f38b70220456ffe6bd8767e7d8e0c916be330a14c63fa58c99646fff93f6d98868c3b55bb014104bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279eaffffffff2f7ab74d0d32bd0a6c61b406664b0899634d346571120faeb360b6ac4918caf1010000008a47304402203b001e41878a05ed634a53d17785e70eed97498ba596974107cd93c0d7e5cc120220153335f21c8e3f8b93e97a27a8a8d08c9df6831f13e882830cc346e128197067014104bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279eaffffffff0200000000000000000b6a096964212e74657374328cd7052a010000001976a914f75b20399d771f515a3cd80f941aa7461d92518c88ac00000000
+[2016-09-06 11:46:01,734] [DEBUG] [client:134] (26596) Loaded storage driver 'disk'
+[2016-09-06 11:46:01,898] [DEBUG] [atlas:3412] (26596) localhost:16264: AtlasZonefilePusher step
+[2016-09-06 11:46:01,925] [DEBUG] [atlas:3044] (26596) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 11:46:01,987] [DEBUG] [atlas:3150] (26596) localhost:16264: AtlasHealthChecker step
+[2016-09-06 11:46:02,050] [DEBUG] [atlas:2970] (26596) Add at most 10 new peers out of 0 options
+[2016-09-06 11:46:02,050] [DEBUG] [atlas:3168] (26596) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 11:46:02,050] [DEBUG] [atlas:3000] (26596) localhost:16264: revalidate old peers
+[2016-09-06 11:46:02,317] [DEBUG] [atlas:3241] (26596) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 11:46:02,318] [DEBUG] [atlas:3281] (26596) localhost:16264: missing 0 zonefiles
+[2016-09-06 11:46:02,318] [DEBUG] [blockchain:45] (26596) Connect to bitcoind at localhost:18332 (/tmp/blockstack-test/client/client.ini)
+[2016-09-06 11:46:02,318] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=300.0
+[2016-09-06 11:46:02,318] [DEBUG] [atlas:3362] (26596) localhost:16264: fetched 0 zonefiles
+[2016-09-06 11:46:02,319] [DEBUG] [nameops:483] (26596) namespace ready tx 846 bytes, 2272 satoshis
+[2016-09-06 11:46:02,319] [DEBUG] [nameops:1161] (26596) Readying namespace (test3, mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9), tx_fee = 2272.0
+[2016-09-06 11:46:02,601] [DEBUG] [tx:140] (26596) Send 0100000002321db173d5a76114a64ce66506e101d5a081c99080ee5f96ffc42ff1f953baba010000008b483045022100826d3f511ef41c5c4097379feba61f1782ca47de2dc3e015e9fd79c1ee70efb802200fafe341d1e48f85b39c128e8e5d6cb5e9c54057ce2666bf245c63935ba82045014104f52b0c1558202cb4403faacb6a74ad8a0d23538f448184b1c8ce80a0325aad9af0877061c2fd72cebec8524a99951d5834a8b8b96ddf4e2d582ee9dd61864daeffffffffda15568c5ceafb8eee23c3ac89fed8017a3983c36773fa14211a61cf6878fdd2010000008b483045022100f688a8dd51b74cad6b76a1da1ce1160108b8df0f61b94da5293e01db989be14302204f4fa98c2c3e4ba9723b6ab9a56a62b889d1193aac18d8712dcd7a348afd3c5d014104f52b0c1558202cb4403faacb6a74ad8a0d23538f448184b1c8ce80a0325aad9af0877061c2fd72cebec8524a99951d5834a8b8b96ddf4e2d582ee9dd61864daeffffffff0200000000000000000b6a096964212e74657374338cd7052a010000001976a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac00000000
+[2016-09-06 11:46:02,603] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:46:02,713] [DEBUG] [blockstack-test-scenario:722] (26596) next block (now at 259)
+[2016-09-06 11:46:02,714] [DEBUG] [session:129] (26596) [26596] Connect to bitcoind at http://blockstack@localhost:18332, timeout=60.0
+[2016-09-06 11:46:02,716] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:46:02,728] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 db_refresh
+[2016-09-06 11:46:02,729] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 11:46:02,729] [INFO] [virtualchain_hooks:369] (26596) Invalidating cached blockstack state
+[2016-09-06 11:46:02,729] [DEBUG] [virtualchain_hooks:298] (26596) cache consistency: DB is not in RAM
+[2016-09-06 11:46:02,729] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:46:02,731] [DEBUG] [indexer:220] (26596) Lastblock: 258 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:46:02,732] [WARNING] [namedb:239] (26596) No public key found for namespace test1
+[2016-09-06 11:46:02,732] [WARNING] [namedb:239] (26596) No public key found for namespace test3
+[2016-09-06 11:46:02,732] [WARNING] [namedb:239] (26596) No public key found for namespace test2
+[2016-09-06 11:46:02,732] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 11:46:02] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:46:02,733] [DEBUG] [blockstack-test-scenario:312] (26596) sync virtualchain up to 259
+[2016-09-06 11:46:02,733] [DEBUG] [indexer:1130] (26596) Sync virtualchain state from 259 to 260
+[2016-09-06 11:46:02,733] [DEBUG] [spv:741] (26596) Synchronize testnet 259 to 259
+[2016-09-06 11:46:02,733] [DEBUG] [spv:761] (26596) connect to localhost:18444
+[2016-09-06 11:46:02,734] [DEBUG] [spv:365] (26596) handshake (version 60002)
+[2016-09-06 11:46:02,734] [DEBUG] [spv:368] (26596) send Version
+[2016-09-06 11:46:02,735] [DEBUG] [spv:381] (26596) handle version
+[2016-09-06 11:46:02,735] [DEBUG] [spv:383] (26596) send VerAck
+[2016-09-06 11:46:02,735] [DEBUG] [spv:355] (26596) send getheaders
+[2016-09-06 11:46:02,772] [DEBUG] [spv:400] (26596) handle ping
+[2016-09-06 11:46:02,772] [DEBUG] [spv:403] (26596) send pong
+[2016-09-06 11:46:02,873] [DEBUG] [spv:250] (26596) handle headers (1)
+[2016-09-06 11:46:02,873] [DEBUG] [spv:268] (26596) Receive 1 headers (258 to 259)
+[2016-09-06 11:46:02,874] [DEBUG] [spv:777] (26596) synced headers from 258 to 259 in /tmp/blockstack-test/spv_headers.dat
+[2016-09-06 11:46:02,874] [DEBUG] [blocks:116] (26596) BlockDownloader: fetch blocks 259-259
+[2016-09-06 11:46:02,874] [DEBUG] [blocks:298] (26596) handshake (version 60002)
+[2016-09-06 11:46:02,875] [DEBUG] [blocks:301] (26596) send Version
+[2016-09-06 11:46:02,876] [DEBUG] [blocks:314] (26596) handle version
+[2016-09-06 11:46:02,876] [DEBUG] [blocks:316] (26596) send VerAck
+[2016-09-06 11:46:02,876] [DEBUG] [blocks:332] (26596) send getdata for 259-259 (092b9c20a5e4a8f1b75bff47c8e4c2a0a9c6cd5250c2478a03cf3038c6c1d9d4-092b9c20a5e4a8f1b75bff47c8e4c2a0a9c6cd5250c2478a03cf3038c6c1d9d4)
+[2016-09-06 11:46:02,899] [DEBUG] [atlas:3412] (26596) localhost:16264: AtlasZonefilePusher step
+[2016-09-06 11:46:02,916] [DEBUG] [blocks:357] (26596) handle ping
+[2016-09-06 11:46:02,916] [DEBUG] [blocks:360] (26596) send pong
+[2016-09-06 11:46:02,926] [DEBUG] [atlas:3044] (26596) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 11:46:02,926] [DEBUG] [atlas:2970] (26596) Add at most 10 new peers out of 0 options
+[2016-09-06 11:46:02,926] [DEBUG] [atlas:3000] (26596) localhost:16264: revalidate old peers
+[2016-09-06 11:46:02,988] [DEBUG] [atlas:3150] (26596) localhost:16264: AtlasHealthChecker step
+[2016-09-06 11:46:02,989] [DEBUG] [atlas:3168] (26596) Refresh zonefile inventories for at most 0 peers
+[2016-09-06 11:46:03,118] [DEBUG] [blocks:196] (26596) num blocks received = 0, num requested = 1
+[2016-09-06 11:46:03,118] [DEBUG] [blocks:562] (26596) handle block 259 (092b9c20a5e4a8f1b75bff47c8e4c2a0a9c6cd5250c2478a03cf3038c6c1d9d4)
+[2016-09-06 11:46:03,123] [DEBUG] [blocks:650] (26596) Request 6 nulldata sender TXs
+[2016-09-06 11:46:03,124] [DEBUG] [blocks:227] (26596) Fetch 6 TXs via JSON-RPC (0-6 of 6)
+[2016-09-06 11:46:03,203] [DEBUG] [virtualchain_hooks:204] (26596) Parse NAMESPACE_READY: 2e7465737432
+[2016-09-06 11:46:03,242] [DEBUG] [virtualchain_hooks:204] (26596) Parse NAMESPACE_READY: 2e7465737431
+[2016-09-06 11:46:03,282] [DEBUG] [virtualchain_hooks:204] (26596) Parse NAMESPACE_READY: 2e7465737433
+[2016-09-06 11:46:03,282] [DEBUG] [indexer:1060] (26596) Process block 259 (3 virtual transactions)
+[2016-09-06 11:46:03,283] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:46:03,283] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '!' ({"address": "n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4", "fee": 12272, "namespace_id": "test2", "opcode": "NAMESPACE_READY", "sender": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "sender_pubkey": "04bef7a01263d130b21117973503ae7bdeec123202c3dfaa3bf56728ff054abcd05eaf4b232455182ff81846c7e8a8bb1d82066e7a06d9831c3870c03772b279ea", "txid": "0dbb23b5d8e70e65e6994634bc6a09ee6888542a7b5923173534c9222207f076", "vtxindex": 1})
+[2016-09-06 11:46:03,284] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '!' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "base": 5, "block_number": 257, "buckets": [7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "coeff": 251, "fee": 30421, "lifetime": 52596, "namespace_id": "test2", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "no_vowel_discount": 12, "nonalpha_discount": 11, "op": "!", "opcode": "NAMESPACE_READY", "ready_block": 259, "recipient": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "recipient_address": "n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4", "reveal_block": 258, "sender": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "0dbb23b5d8e70e65e6994634bc6a09ee6888542a7b5923173534c9222207f076", "version": 1, "vtxindex": 1})
+[2016-09-06 11:46:03,284] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '!' ({"address": "mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq", "fee": 12267, "namespace_id": "test1", "opcode": "NAMESPACE_READY", "sender": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "sender_pubkey": "0497cb0fccbbcf48b2b9516920ca8d973cd81ce032ef1abc0e627c7fd0e4dcee58f0de02424a937af13930910c81cde3ca794980e3035b034033e4b7758e46b018", "txid": "abc41e7ad1d347431b8c85e37f308bfaf2e615fd1c9bcb05cde90bee3bc49e40", "vtxindex": 2})
+[2016-09-06 11:46:03,285] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '!' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "base": 4, "block_number": 257, "buckets": [6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "coeff": 250, "fee": 30426, "lifetime": 52595, "namespace_id": "test1", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "no_vowel_discount": 11, "nonalpha_discount": 10, "op": "!", "opcode": "NAMESPACE_READY", "ready_block": 259, "recipient": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "recipient_address": "mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq", "reveal_block": 258, "sender": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "abc41e7ad1d347431b8c85e37f308bfaf2e615fd1c9bcb05cde90bee3bc49e40", "version": 1, "vtxindex": 2})
+[2016-09-06 11:46:03,285] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '!' ({"address": "mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9", "fee": 12272, "namespace_id": "test3", "opcode": "NAMESPACE_READY", "sender": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "sender_pubkey": "04f52b0c1558202cb4403faacb6a74ad8a0d23538f448184b1c8ce80a0325aad9af0877061c2fd72cebec8524a99951d5834a8b8b96ddf4e2d582ee9dd61864dae", "txid": "c96db74112e8c17818a09837b5bd5a53ebeaa77f69b9eed93491852919456377", "vtxindex": 3})
+[2016-09-06 11:46:03,286] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '!' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "base": 6, "block_number": 257, "buckets": [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "coeff": 252, "fee": 30426, "lifetime": 52597, "namespace_id": "test3", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "no_vowel_discount": 13, "nonalpha_discount": 12, "op": "!", "opcode": "NAMESPACE_READY", "ready_block": 259, "recipient": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "recipient_address": "mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9", "reveal_block": 258, "sender": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "c96db74112e8c17818a09837b5bd5a53ebeaa77f69b9eed93491852919456377", "version": 1, "vtxindex": 3})
+[2016-09-06 11:46:03,286] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 259
+[2016-09-06 11:46:03,286] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 259
+[2016-09-06 11:46:03,286] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 259
+[2016-09-06 11:46:03,286] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 259
+[2016-09-06 11:46:03,286] [DEBUG] [indexer:803] (26596) Snapshotting block 259
+[2016-09-06 11:46:03,286] [DEBUG] [indexer:765] (26596) SERIALIZE: !:namespace_id=5:test2,namespace_id_hash=40:74109eb26958f0703998f1a01e32314b1e0ecbe4,version=1:1,sender=50:76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac,sender_pubkey=130:046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87,address=34:mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx,recipient=50:76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac,recipient_address=34:n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4,block_number=3:257,reveal_block=3:258,op=1:!,txid=64:0dbb23b5d8e70e65e6994634bc6a09ee6888542a7b5923173534c9222207f076,vtxindex=1:1,lifetime=5:52596,coeff=3:251,base=1:5,buckets=48:[7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],nonalpha_discount=2:11,no_vowel_discount=2:12,ready_block=3:259
+[2016-09-06 11:46:03,286] [DEBUG] [indexer:765] (26596) SERIALIZE: !:namespace_id=5:test1,namespace_id_hash=40:ebfcfca1a1810d333a3b5150bd4d91716dd52c03,version=1:1,sender=50:76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC,recipient=50:76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac,recipient_address=34:mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq,block_number=3:257,reveal_block=3:258,op=1:!,txid=64:abc41e7ad1d347431b8c85e37f308bfaf2e615fd1c9bcb05cde90bee3bc49e40,vtxindex=1:2,lifetime=5:52595,coeff=3:250,base=1:4,buckets=48:[6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],nonalpha_discount=2:10,no_vowel_discount=2:11,ready_block=3:259
+[2016-09-06 11:46:03,286] [DEBUG] [indexer:765] (26596) SERIALIZE: !:namespace_id=5:test3,namespace_id_hash=40:79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee,version=1:1,sender=50:76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac,sender_pubkey=130:04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451,address=34:mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed,recipient=50:76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac,recipient_address=34:mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9,block_number=3:257,reveal_block=3:258,op=1:!,txid=64:c96db74112e8c17818a09837b5bd5a53ebeaa77f69b9eed93491852919456377,vtxindex=1:3,lifetime=5:52597,coeff=3:252,base=1:6,buckets=48:[8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],nonalpha_discount=2:12,no_vowel_discount=2:13,ready_block=3:259
+[2016-09-06 11:46:03,287] [DEBUG] [indexer:816] (26596) Snapshotting block 259: consensus hash of 258 is 8617b6481509a174921cfec275cfdb0b
+[2016-09-06 11:46:03,287] [DEBUG] [indexer:816] (26596) Snapshotting block 259: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:46:03,287] [DEBUG] [indexer:724] (26596) Snapshot('5ac28578dc2c805263659c52f8e82ebc44fcd38281761de87d68bcdec0417000', [u'8617b6481509a174921cfec275cfdb0b', u'2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-06 11:46:03,289] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test/blockstack-server.db.tmp
+[2016-09-06 11:46:03,289] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test/blockstack-server.lastblock.tmp --> /tmp/blockstack-test/blockstack-server.lastblock
+[2016-09-06 11:46:03,290] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test/blockstack-server.snapshots.tmp --> /tmp/blockstack-test/blockstack-server.snapshots
+[2016-09-06 11:46:03,290] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test/blockstack-server.db.tmp --> /tmp/blockstack-test/blockstack-server.db
+[2016-09-06 11:46:03,290] [DEBUG] [indexer:1153] (26596) CONSENSUS(259): 9adef3f0fa69d19f8b4ccab7e563dc38
+[2016-09-06 11:46:03,290] [DEBUG] [indexer:1173] (26596) Last block is 259
+[2016-09-06 11:46:03,290] [INFO] [virtualchain:80] (26596) 0 seconds
+[2016-09-06 11:46:03,290] [DEBUG] [virtualchain_hooks:308] (26596) cache consistency: DB was modified; in-RAM copy is stale
+[2016-09-06 11:46:03,290] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:46:03,291] [DEBUG] [indexer:220] (26596) Lastblock: 259 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:46:03,298] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 db_refresh
+[2016-09-06 11:46:03,299] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 11:46:03,299] [INFO] [virtualchain_hooks:369] (26596) Invalidating cached blockstack state
+[2016-09-06 11:46:03,300] [DEBUG] [virtualchain_hooks:298] (26596) cache consistency: DB is not in RAM
+[2016-09-06 11:46:03,300] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:46:03,302] [DEBUG] [indexer:220] (26596) Lastblock: 259 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:46:03,303] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 11:46:03] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:46:03,303] [DEBUG] [blockstack-test-scenario:321] (26596) sync atlas node up to 259
+[2016-09-06 11:46:03,304] [DEBUG] [blockstack-test-scenario:326] (26596) Synchronize Atlas DB from 259 to 260
+[2016-09-06 11:46:03,305] [DEBUG] [atlas:669] (26596) Queued 0 zonefiles from 259-259
+[2016-09-06 11:46:03,318] [DEBUG] [atlas:3241] (26596) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 11:46:03,319] [DEBUG] [atlas:3281] (26596) localhost:16264: missing 0 zonefiles
+[2016-09-06 11:46:03,319] [DEBUG] [atlas:3362] (26596) localhost:16264: fetched 0 zonefiles
+[2016-09-06 11:46:03,356] [DEBUG] [atlas:3504] (26596) Stopping Atlas component 'zonefile_pusher'
+[2016-09-06 11:46:03,899] [DEBUG] [atlas:3504] (26596) Stopping Atlas component 'health_checker'
+[2016-09-06 11:46:03,927] [DEBUG] [atlas:3044] (26596) localhost:16264: AtlasPeerCrawler step
+[2016-09-06 11:46:03,927] [DEBUG] [atlas:2970] (26596) Add at most 10 new peers out of 0 options
+[2016-09-06 11:46:03,927] [DEBUG] [atlas:3000] (26596) localhost:16264: revalidate old peers
+[2016-09-06 11:46:03,990] [DEBUG] [atlas:3504] (26596) Stopping Atlas component 'peer_crawler'
+[2016-09-06 11:46:04,320] [DEBUG] [atlas:3241] (26596) localhost:16264: AtlasZonefileCrawler step
+[2016-09-06 11:46:04,320] [DEBUG] [atlas:3281] (26596) localhost:16264: missing 0 zonefiles
+[2016-09-06 11:46:04,320] [DEBUG] [atlas:3362] (26596) localhost:16264: fetched 0 zonefiles
+[2016-09-06 11:46:04,927] [DEBUG] [atlas:3504] (26596) Stopping Atlas component 'zonefile_crawler'
+[2016-09-06 11:46:05,321] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:46:05,321] [INFO] [blockstack-test-scenario:495] (26596) Scenario checks passed; verifying history
+[2016-09-06 11:46:05,321] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:46:05,322] [DEBUG] [blockstackd:2183] (26596) Rebuilding database from 256 to 256
+[2016-09-06 11:46:05,324] [DEBUG] [indexer:220] (26596) Lastblock: 255 (/tmp/blockstack-test-databases-FrfVxO/work.256/blockstack-server.lastblock)
+[2016-09-06 11:46:05,325] [WARNING] [namedb:148] (26596) Failed to open '/tmp/blockstack-test-databases-FrfVxO/work.256/blockstack.db.256'; creating a new database
+[2016-09-06 11:46:05,325] [DEBUG] [blockstackd:2195] (26596) Working DB: /tmp/blockstack-test-databases-FrfVxO/work.256/blockstack.db.256
+[2016-09-06 11:46:05,325] [DEBUG] [blockstackd:2196] (26596) Untrusted DB: /tmp/blockstack-test-databases-FrfVxO/blockstack.db.256
+[2016-09-06 11:46:05,325] [DEBUG] [indexer:1060] (26596) Process block 256 (0 virtual transactions)
+[2016-09-06 11:46:05,325] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:46:05,325] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 256
+[2016-09-06 11:46:05,326] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 256
+[2016-09-06 11:46:05,326] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 256
+[2016-09-06 11:46:05,326] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 256
+[2016-09-06 11:46:05,326] [DEBUG] [indexer:803] (26596) Snapshotting block 256
+[2016-09-06 11:46:05,326] [DEBUG] [indexer:724] (26596) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-06 11:46:05,327] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test-databases-FrfVxO/work.256/blockstack-server.db.tmp
+[2016-09-06 11:46:05,327] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test-databases-FrfVxO/work.256/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.256/blockstack-server.lastblock
+[2016-09-06 11:46:05,328] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test-databases-FrfVxO/work.256/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.256/blockstack-server.snapshots
+[2016-09-06 11:46:05,328] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test-databases-FrfVxO/work.256/blockstack-server.db.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.256/blockstack-server.db
+[2016-09-06 11:46:05,328] [DEBUG] [blockstackd:2207] (26596) VERIFY CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:46:05,329] [DEBUG] [indexer:220] (26596) Lastblock: 256 (/tmp/blockstack-test-databases-FrfVxO/work.256/blockstack-server.lastblock)
+[2016-09-06 11:46:05,330] [DEBUG] [blockstackd:2183] (26596) Rebuilding database from 256 to 257
+[2016-09-06 11:46:05,332] [DEBUG] [indexer:220] (26596) Lastblock: 255 (/tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.lastblock)
+[2016-09-06 11:46:05,332] [WARNING] [namedb:148] (26596) Failed to open '/tmp/blockstack-test-databases-FrfVxO/work.257/blockstack.db.257'; creating a new database
+[2016-09-06 11:46:05,332] [DEBUG] [blockstackd:2195] (26596) Working DB: /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack.db.257
+[2016-09-06 11:46:05,332] [DEBUG] [blockstackd:2196] (26596) Untrusted DB: /tmp/blockstack-test-databases-FrfVxO/blockstack.db.257
+[2016-09-06 11:46:05,332] [DEBUG] [indexer:1060] (26596) Process block 256 (0 virtual transactions)
+[2016-09-06 11:46:05,332] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:46:05,332] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 256
+[2016-09-06 11:46:05,332] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 256
+[2016-09-06 11:46:05,332] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 256
+[2016-09-06 11:46:05,332] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 256
+[2016-09-06 11:46:05,333] [DEBUG] [indexer:803] (26596) Snapshotting block 256
+[2016-09-06 11:46:05,333] [DEBUG] [indexer:724] (26596) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-06 11:46:05,333] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.db.tmp
+[2016-09-06 11:46:05,333] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.lastblock
+[2016-09-06 11:46:05,334] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.snapshots
+[2016-09-06 11:46:05,334] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.db.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.db
+[2016-09-06 11:46:05,334] [DEBUG] [blockstackd:2207] (26596) VERIFY CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:46:05,334] [DEBUG] [indexer:220] (26596) Lastblock: 256 (/tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.lastblock)
+[2016-09-06 11:46:05,335] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_PREORDER': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,335] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_PREORDER': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,335] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_PREORDER': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,336] [DEBUG] [indexer:1060] (26596) Process block 257 (3 virtual transactions)
+[2016-09-06 11:46:05,336] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:46:05,336] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3", "vtxindex": 1})
+[2016-09-06 11:46:05,337] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3", "vtxindex": 1})
+[2016-09-06 11:46:05,337] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1", "vtxindex": 2})
+[2016-09-06 11:46:05,337] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1", "vtxindex": 2})
+[2016-09-06 11:46:05,337] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212", "vtxindex": 3})
+[2016-09-06 11:46:05,338] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212", "vtxindex": 3})
+[2016-09-06 11:46:05,338] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 257
+[2016-09-06 11:46:05,338] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 257
+[2016-09-06 11:46:05,338] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 257
+[2016-09-06 11:46:05,338] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 257
+[2016-09-06 11:46:05,338] [DEBUG] [indexer:803] (26596) Snapshotting block 257
+[2016-09-06 11:46:05,338] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:74109eb26958f0703998f1a01e32314b1e0ecbe4,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3,vtxindex=1:1,block_number=3:257,sender=50:76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac,sender_pubkey=130:046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87,address=34:mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx
+[2016-09-06 11:46:05,338] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:ebfcfca1a1810d333a3b5150bd4d91716dd52c03,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1,vtxindex=1:2,block_number=3:257,sender=50:76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC
+[2016-09-06 11:46:05,339] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212,vtxindex=1:3,block_number=3:257,sender=50:76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac,sender_pubkey=130:04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451,address=34:mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed
+[2016-09-06 11:46:05,339] [DEBUG] [indexer:816] (26596) Snapshotting block 257: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:46:05,339] [DEBUG] [indexer:724] (26596) Snapshot('87744c17370cdeae8bdad3fae57c0374bf5cf74af54621ce0de144b52b573b3e', [u'2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-06 11:46:05,340] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.db.tmp
+[2016-09-06 11:46:05,340] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.lastblock
+[2016-09-06 11:46:05,340] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.snapshots
+[2016-09-06 11:46:05,340] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.db.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.db
+[2016-09-06 11:46:05,340] [DEBUG] [blockstackd:2207] (26596) VERIFY CONSENSUS(257): d14b9b5ce8a16994611b5724ca303bfb
+[2016-09-06 11:46:05,341] [DEBUG] [indexer:220] (26596) Lastblock: 257 (/tmp/blockstack-test-databases-FrfVxO/work.257/blockstack-server.lastblock)
+[2016-09-06 11:46:05,341] [DEBUG] [blockstackd:2183] (26596) Rebuilding database from 256 to 258
+[2016-09-06 11:46:05,342] [WARNING] [namedb:239] (26596) No public key found for namespace test1
+[2016-09-06 11:46:05,342] [WARNING] [namedb:239] (26596) No public key found for namespace test3
+[2016-09-06 11:46:05,342] [WARNING] [namedb:239] (26596) No public key found for namespace test2
+[2016-09-06 11:46:05,343] [DEBUG] [indexer:220] (26596) Lastblock: 255 (/tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.lastblock)
+[2016-09-06 11:46:05,343] [WARNING] [namedb:148] (26596) Failed to open '/tmp/blockstack-test-databases-FrfVxO/work.258/blockstack.db.258'; creating a new database
+[2016-09-06 11:46:05,343] [DEBUG] [blockstackd:2195] (26596) Working DB: /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack.db.258
+[2016-09-06 11:46:05,343] [DEBUG] [blockstackd:2196] (26596) Untrusted DB: /tmp/blockstack-test-databases-FrfVxO/blockstack.db.258
+[2016-09-06 11:46:05,343] [DEBUG] [indexer:1060] (26596) Process block 256 (0 virtual transactions)
+[2016-09-06 11:46:05,343] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:46:05,343] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 256
+[2016-09-06 11:46:05,344] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 256
+[2016-09-06 11:46:05,344] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 256
+[2016-09-06 11:46:05,344] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 256
+[2016-09-06 11:46:05,344] [DEBUG] [indexer:803] (26596) Snapshotting block 256
+[2016-09-06 11:46:05,344] [DEBUG] [indexer:724] (26596) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-06 11:46:05,344] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.db.tmp
+[2016-09-06 11:46:05,344] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.lastblock
+[2016-09-06 11:46:05,344] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.snapshots
+[2016-09-06 11:46:05,344] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.db.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.db
+[2016-09-06 11:46:05,345] [DEBUG] [blockstackd:2207] (26596) VERIFY CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:46:05,345] [DEBUG] [indexer:220] (26596) Lastblock: 256 (/tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.lastblock)
+[2016-09-06 11:46:05,346] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_PREORDER': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,346] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_PREORDER': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,346] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_PREORDER': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,346] [DEBUG] [indexer:1060] (26596) Process block 257 (3 virtual transactions)
+[2016-09-06 11:46:05,347] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:46:05,347] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3", "vtxindex": 1})
+[2016-09-06 11:46:05,347] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3", "vtxindex": 1})
+[2016-09-06 11:46:05,347] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1", "vtxindex": 2})
+[2016-09-06 11:46:05,348] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1", "vtxindex": 2})
+[2016-09-06 11:46:05,348] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212", "vtxindex": 3})
+[2016-09-06 11:46:05,348] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212", "vtxindex": 3})
+[2016-09-06 11:46:05,348] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 257
+[2016-09-06 11:46:05,348] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 257
+[2016-09-06 11:46:05,348] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 257
+[2016-09-06 11:46:05,348] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 257
+[2016-09-06 11:46:05,348] [DEBUG] [indexer:803] (26596) Snapshotting block 257
+[2016-09-06 11:46:05,349] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:74109eb26958f0703998f1a01e32314b1e0ecbe4,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3,vtxindex=1:1,block_number=3:257,sender=50:76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac,sender_pubkey=130:046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87,address=34:mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx
+[2016-09-06 11:46:05,349] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:ebfcfca1a1810d333a3b5150bd4d91716dd52c03,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1,vtxindex=1:2,block_number=3:257,sender=50:76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC
+[2016-09-06 11:46:05,349] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212,vtxindex=1:3,block_number=3:257,sender=50:76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac,sender_pubkey=130:04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451,address=34:mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed
+[2016-09-06 11:46:05,349] [DEBUG] [indexer:816] (26596) Snapshotting block 257: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:46:05,349] [DEBUG] [indexer:724] (26596) Snapshot('87744c17370cdeae8bdad3fae57c0374bf5cf74af54621ce0de144b52b573b3e', [u'2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-06 11:46:05,350] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.db.tmp
+[2016-09-06 11:46:05,350] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.lastblock
+[2016-09-06 11:46:05,350] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.snapshots
+[2016-09-06 11:46:05,350] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.db.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.db
+[2016-09-06 11:46:05,350] [DEBUG] [blockstackd:2207] (26596) VERIFY CONSENSUS(257): d14b9b5ce8a16994611b5724ca303bfb
+[2016-09-06 11:46:05,351] [DEBUG] [indexer:220] (26596) Lastblock: 257 (/tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.lastblock)
+[2016-09-06 11:46:05,352] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_REVEAL': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,352] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_REVEAL': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,352] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_REVEAL': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,353] [DEBUG] [indexer:1060] (26596) Process block 258 (3 virtual transactions)
+[2016-09-06 11:46:05,353] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:46:05,354] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '&' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "base": 4, "block_number": 257, "buckets": [6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "coeff": 250, "lifetime": 52595, "namespace_id": "test1", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "no_vowel_discount": 11, "nonalpha_discount": 10, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "recipient_address": "mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq", "reveal_block": 258, "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "db9025d30a9e21d8d04d9252b6b7cae39566899067147c66dac45e08ea3fcf96", "version": 1, "vtxindex": 1})
+[2016-09-06 11:46:05,354] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '&' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "base": 4, "block_number": 257, "buckets": [6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "coeff": 250, "lifetime": 52595, "namespace_id": "test1", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "no_vowel_discount": 11, "nonalpha_discount": 10, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "recipient_address": "mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq", "reveal_block": 258, "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "db9025d30a9e21d8d04d9252b6b7cae39566899067147c66dac45e08ea3fcf96", "version": 1, "vtxindex": 1})
+[2016-09-06 11:46:05,354] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '&' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "base": 6, "block_number": 257, "buckets": [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "coeff": 252, "lifetime": 52597, "namespace_id": "test3", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "no_vowel_discount": 13, "nonalpha_discount": 12, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "recipient_address": "mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9", "reveal_block": 258, "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "baba53f9f12fc4ff965fee8090c981a0d501e10665e64ca61461a7d573b11d32", "version": 1, "vtxindex": 2})
+[2016-09-06 11:46:05,355] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '&' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "base": 6, "block_number": 257, "buckets": [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "coeff": 252, "lifetime": 52597, "namespace_id": "test3", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "no_vowel_discount": 13, "nonalpha_discount": 12, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "recipient_address": "mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9", "reveal_block": 258, "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "baba53f9f12fc4ff965fee8090c981a0d501e10665e64ca61461a7d573b11d32", "version": 1, "vtxindex": 2})
+[2016-09-06 11:46:05,355] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '&' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "base": 5, "block_number": 257, "buckets": [7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "coeff": 251, "lifetime": 52596, "namespace_id": "test2", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "no_vowel_discount": 12, "nonalpha_discount": 11, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "recipient_address": "n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4", "reveal_block": 258, "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f1ca1849acb660b3ae0f127165344d6399084b6606b4616c0abd320d4db77a2f", "version": 1, "vtxindex": 3})
+[2016-09-06 11:46:05,356] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '&' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "base": 5, "block_number": 257, "buckets": [7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "coeff": 251, "lifetime": 52596, "namespace_id": "test2", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "no_vowel_discount": 12, "nonalpha_discount": 11, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "recipient_address": "n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4", "reveal_block": 258, "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f1ca1849acb660b3ae0f127165344d6399084b6606b4616c0abd320d4db77a2f", "version": 1, "vtxindex": 3})
+[2016-09-06 11:46:05,356] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 258
+[2016-09-06 11:46:05,356] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 258
+[2016-09-06 11:46:05,356] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 258
+[2016-09-06 11:46:05,356] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 258
+[2016-09-06 11:46:05,356] [DEBUG] [indexer:803] (26596) Snapshotting block 258
+[2016-09-06 11:46:05,356] [DEBUG] [indexer:765] (26596) SERIALIZE: &:namespace_id=5:test1,namespace_id_hash=40:ebfcfca1a1810d333a3b5150bd4d91716dd52c03,version=1:1,sender=50:76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC,recipient=50:76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac,recipient_address=34:mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq,block_number=3:257,reveal_block=3:258,op=1:&,txid=64:db9025d30a9e21d8d04d9252b6b7cae39566899067147c66dac45e08ea3fcf96,vtxindex=1:1,lifetime=5:52595,coeff=3:250,base=1:4,buckets=48:[6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],nonalpha_discount=2:10,no_vowel_discount=2:11
+[2016-09-06 11:46:05,356] [DEBUG] [indexer:765] (26596) SERIALIZE: &:namespace_id=5:test3,namespace_id_hash=40:79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee,version=1:1,sender=50:76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac,sender_pubkey=130:04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451,address=34:mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed,recipient=50:76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac,recipient_address=34:mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9,block_number=3:257,reveal_block=3:258,op=1:&,txid=64:baba53f9f12fc4ff965fee8090c981a0d501e10665e64ca61461a7d573b11d32,vtxindex=1:2,lifetime=5:52597,coeff=3:252,base=1:6,buckets=48:[8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],nonalpha_discount=2:12,no_vowel_discount=2:13
+[2016-09-06 11:46:05,357] [DEBUG] [indexer:765] (26596) SERIALIZE: &:namespace_id=5:test2,namespace_id_hash=40:74109eb26958f0703998f1a01e32314b1e0ecbe4,version=1:1,sender=50:76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac,sender_pubkey=130:046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87,address=34:mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx,recipient=50:76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac,recipient_address=34:n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4,block_number=3:257,reveal_block=3:258,op=1:&,txid=64:f1ca1849acb660b3ae0f127165344d6399084b6606b4616c0abd320d4db77a2f,vtxindex=1:3,lifetime=5:52596,coeff=3:251,base=1:5,buckets=48:[7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],nonalpha_discount=2:11,no_vowel_discount=2:12
+[2016-09-06 11:46:05,357] [DEBUG] [indexer:816] (26596) Snapshotting block 258: consensus hash of 257 is d14b9b5ce8a16994611b5724ca303bfb
+[2016-09-06 11:46:05,357] [DEBUG] [indexer:724] (26596) Snapshot('63c374ed7e516fd4ba0a90ac24f0be77f8798b83ec20bf00e66ac61b6bf02286', [u'd14b9b5ce8a16994611b5724ca303bfb'])
+[2016-09-06 11:46:05,358] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.db.tmp
+[2016-09-06 11:46:05,358] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.lastblock
+[2016-09-06 11:46:05,358] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.snapshots
+[2016-09-06 11:46:05,359] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.db.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.db
+[2016-09-06 11:46:05,359] [DEBUG] [blockstackd:2207] (26596) VERIFY CONSENSUS(258): 8617b6481509a174921cfec275cfdb0b
+[2016-09-06 11:46:05,359] [DEBUG] [indexer:220] (26596) Lastblock: 258 (/tmp/blockstack-test-databases-FrfVxO/work.258/blockstack-server.lastblock)
+[2016-09-06 11:46:05,360] [WARNING] [namedb:239] (26596) No public key found for namespace test1
+[2016-09-06 11:46:05,360] [WARNING] [namedb:239] (26596) No public key found for namespace test3
+[2016-09-06 11:46:05,360] [WARNING] [namedb:239] (26596) No public key found for namespace test2
+[2016-09-06 11:46:05,360] [DEBUG] [blockstackd:2183] (26596) Rebuilding database from 256 to 259
+[2016-09-06 11:46:05,361] [DEBUG] [indexer:220] (26596) Lastblock: 255 (/tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock)
+[2016-09-06 11:46:05,361] [WARNING] [namedb:148] (26596) Failed to open '/tmp/blockstack-test-databases-FrfVxO/work.259/blockstack.db.259'; creating a new database
+[2016-09-06 11:46:05,361] [DEBUG] [blockstackd:2195] (26596) Working DB: /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack.db.259
+[2016-09-06 11:46:05,361] [DEBUG] [blockstackd:2196] (26596) Untrusted DB: /tmp/blockstack-test-databases-FrfVxO/blockstack.db.259
+[2016-09-06 11:46:05,361] [DEBUG] [indexer:1060] (26596) Process block 256 (0 virtual transactions)
+[2016-09-06 11:46:05,361] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:46:05,361] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 256
+[2016-09-06 11:46:05,361] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 256
+[2016-09-06 11:46:05,362] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 256
+[2016-09-06 11:46:05,362] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 256
+[2016-09-06 11:46:05,362] [DEBUG] [indexer:803] (26596) Snapshotting block 256
+[2016-09-06 11:46:05,362] [DEBUG] [indexer:724] (26596) Snapshot('5df6e0e2761359d30a8275058e299fcc0381534545f55cf43e41983f5d4c9456', [])
+[2016-09-06 11:46:05,362] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db.tmp
+[2016-09-06 11:46:05,362] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock
+[2016-09-06 11:46:05,362] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.snapshots
+[2016-09-06 11:46:05,362] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db
+[2016-09-06 11:46:05,362] [DEBUG] [blockstackd:2207] (26596) VERIFY CONSENSUS(256): 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:46:05,363] [DEBUG] [indexer:220] (26596) Lastblock: 256 (/tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock)
+[2016-09-06 11:46:05,364] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_PREORDER': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,364] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_PREORDER': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,365] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_PREORDER': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,365] [DEBUG] [indexer:1060] (26596) Process block 257 (3 virtual transactions)
+[2016-09-06 11:46:05,365] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:46:05,365] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3", "vtxindex": 1})
+[2016-09-06 11:46:05,366] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3", "vtxindex": 1})
+[2016-09-06 11:46:05,366] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1", "vtxindex": 2})
+[2016-09-06 11:46:05,366] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1", "vtxindex": 2})
+[2016-09-06 11:46:05,366] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '*' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212", "vtxindex": 3})
+[2016-09-06 11:46:05,366] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '*' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "block_number": 257, "consensus_hash": "2a9148d8b13939723d2aca16c75c6d68", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "op": "*", "op_fee": 400000000, "opcode": "NAMESPACE_PREORDER", "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212", "vtxindex": 3})
+[2016-09-06 11:46:05,367] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 257
+[2016-09-06 11:46:05,367] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 257
+[2016-09-06 11:46:05,367] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 257
+[2016-09-06 11:46:05,367] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 257
+[2016-09-06 11:46:05,367] [DEBUG] [indexer:803] (26596) Snapshotting block 257
+[2016-09-06 11:46:05,367] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:74109eb26958f0703998f1a01e32314b1e0ecbe4,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:f2b772f69595305216f882ed51c0596f20087bc02147dc8b5f44d54c953842d3,vtxindex=1:1,block_number=3:257,sender=50:76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac,sender_pubkey=130:046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87,address=34:mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx
+[2016-09-06 11:46:05,367] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:ebfcfca1a1810d333a3b5150bd4d91716dd52c03,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:22a0e6441e3936ee31d413630bc233c369781a6fbdeee45f1a3a0be697d02cd1,vtxindex=1:2,block_number=3:257,sender=50:76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC
+[2016-09-06 11:46:05,367] [DEBUG] [indexer:765] (26596) SERIALIZE: *:namespace_id_hash=40:79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee,consensus_hash=32:2a9148d8b13939723d2aca16c75c6d68,op=1:*,op_fee=9:400000000,txid=64:af23103d627475861dac50fec03f17abce84779365dbf508ccb111d008e10212,vtxindex=1:3,block_number=3:257,sender=50:76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac,sender_pubkey=130:04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451,address=34:mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed
+[2016-09-06 11:46:05,367] [DEBUG] [indexer:816] (26596) Snapshotting block 257: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:46:05,367] [DEBUG] [indexer:724] (26596) Snapshot('87744c17370cdeae8bdad3fae57c0374bf5cf74af54621ce0de144b52b573b3e', [u'2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-06 11:46:05,368] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db.tmp
+[2016-09-06 11:46:05,368] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock
+[2016-09-06 11:46:05,368] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.snapshots
+[2016-09-06 11:46:05,368] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db
+[2016-09-06 11:46:05,369] [DEBUG] [blockstackd:2207] (26596) VERIFY CONSENSUS(257): d14b9b5ce8a16994611b5724ca303bfb
+[2016-09-06 11:46:05,369] [DEBUG] [indexer:220] (26596) Lastblock: 257 (/tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock)
+[2016-09-06 11:46:05,370] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_REVEAL': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,371] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_REVEAL': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,371] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_REVEAL': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,371] [DEBUG] [indexer:1060] (26596) Process block 258 (3 virtual transactions)
+[2016-09-06 11:46:05,372] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:46:05,372] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '&' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "base": 4, "block_number": 257, "buckets": [6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "coeff": 250, "lifetime": 52595, "namespace_id": "test1", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "no_vowel_discount": 11, "nonalpha_discount": 10, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "recipient_address": "mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq", "reveal_block": 258, "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "db9025d30a9e21d8d04d9252b6b7cae39566899067147c66dac45e08ea3fcf96", "version": 1, "vtxindex": 1})
+[2016-09-06 11:46:05,373] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '&' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "base": 4, "block_number": 257, "buckets": [6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "coeff": 250, "lifetime": 52595, "namespace_id": "test1", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "no_vowel_discount": 11, "nonalpha_discount": 10, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "recipient_address": "mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq", "reveal_block": 258, "sender": "76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "db9025d30a9e21d8d04d9252b6b7cae39566899067147c66dac45e08ea3fcf96", "version": 1, "vtxindex": 1})
+[2016-09-06 11:46:05,373] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '&' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "base": 6, "block_number": 257, "buckets": [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "coeff": 252, "lifetime": 52597, "namespace_id": "test3", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "no_vowel_discount": 13, "nonalpha_discount": 12, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "recipient_address": "mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9", "reveal_block": 258, "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "baba53f9f12fc4ff965fee8090c981a0d501e10665e64ca61461a7d573b11d32", "version": 1, "vtxindex": 2})
+[2016-09-06 11:46:05,374] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '&' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "base": 6, "block_number": 257, "buckets": [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "coeff": 252, "lifetime": 52597, "namespace_id": "test3", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "no_vowel_discount": 13, "nonalpha_discount": 12, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "recipient_address": "mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9", "reveal_block": 258, "sender": "76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "baba53f9f12fc4ff965fee8090c981a0d501e10665e64ca61461a7d573b11d32", "version": 1, "vtxindex": 2})
+[2016-09-06 11:46:05,374] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '&' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "base": 5, "block_number": 257, "buckets": [7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "coeff": 251, "lifetime": 52596, "namespace_id": "test2", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "no_vowel_discount": 12, "nonalpha_discount": 11, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "recipient_address": "n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4", "reveal_block": 258, "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f1ca1849acb660b3ae0f127165344d6399084b6606b4616c0abd320d4db77a2f", "version": 1, "vtxindex": 3})
+[2016-09-06 11:46:05,374] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '&' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "base": 5, "block_number": 257, "buckets": [7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "coeff": 251, "lifetime": 52596, "namespace_id": "test2", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "no_vowel_discount": 12, "nonalpha_discount": 11, "op": "&", "opcode": "NAMESPACE_REVEAL", "recipient": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "recipient_address": "n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4", "reveal_block": 258, "sender": "76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "f1ca1849acb660b3ae0f127165344d6399084b6606b4616c0abd320d4db77a2f", "version": 1, "vtxindex": 3})
+[2016-09-06 11:46:05,375] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 258
+[2016-09-06 11:46:05,375] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 258
+[2016-09-06 11:46:05,375] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 258
+[2016-09-06 11:46:05,375] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 258
+[2016-09-06 11:46:05,375] [DEBUG] [indexer:803] (26596) Snapshotting block 258
+[2016-09-06 11:46:05,375] [DEBUG] [indexer:765] (26596) SERIALIZE: &:namespace_id=5:test1,namespace_id_hash=40:ebfcfca1a1810d333a3b5150bd4d91716dd52c03,version=1:1,sender=50:76a9140e1c669e2756a79185299cb25ed043ab145f08f088ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC,recipient=50:76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac,recipient_address=34:mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq,block_number=3:257,reveal_block=3:258,op=1:&,txid=64:db9025d30a9e21d8d04d9252b6b7cae39566899067147c66dac45e08ea3fcf96,vtxindex=1:1,lifetime=5:52595,coeff=3:250,base=1:4,buckets=48:[6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],nonalpha_discount=2:10,no_vowel_discount=2:11
+[2016-09-06 11:46:05,375] [DEBUG] [indexer:765] (26596) SERIALIZE: &:namespace_id=5:test3,namespace_id_hash=40:79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee,version=1:1,sender=50:76a914675b1aef98733dce5ed716ae4d72d340e7b1c13188ac,sender_pubkey=130:04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451,address=34:mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed,recipient=50:76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac,recipient_address=34:mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9,block_number=3:257,reveal_block=3:258,op=1:&,txid=64:baba53f9f12fc4ff965fee8090c981a0d501e10665e64ca61461a7d573b11d32,vtxindex=1:2,lifetime=5:52597,coeff=3:252,base=1:6,buckets=48:[8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],nonalpha_discount=2:12,no_vowel_discount=2:13
+[2016-09-06 11:46:05,375] [DEBUG] [indexer:765] (26596) SERIALIZE: &:namespace_id=5:test2,namespace_id_hash=40:74109eb26958f0703998f1a01e32314b1e0ecbe4,version=1:1,sender=50:76a9147144b3fef9fe537e2445f1c0dfb4ce007c51461288ac,sender_pubkey=130:046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87,address=34:mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx,recipient=50:76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac,recipient_address=34:n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4,block_number=3:257,reveal_block=3:258,op=1:&,txid=64:f1ca1849acb660b3ae0f127165344d6399084b6606b4616c0abd320d4db77a2f,vtxindex=1:3,lifetime=5:52596,coeff=3:251,base=1:5,buckets=48:[7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],nonalpha_discount=2:11,no_vowel_discount=2:12
+[2016-09-06 11:46:05,375] [DEBUG] [indexer:816] (26596) Snapshotting block 258: consensus hash of 257 is d14b9b5ce8a16994611b5724ca303bfb
+[2016-09-06 11:46:05,375] [DEBUG] [indexer:724] (26596) Snapshot('63c374ed7e516fd4ba0a90ac24f0be77f8798b83ec20bf00e66ac61b6bf02286', [u'd14b9b5ce8a16994611b5724ca303bfb'])
+[2016-09-06 11:46:05,377] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db.tmp
+[2016-09-06 11:46:05,377] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock
+[2016-09-06 11:46:05,377] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.snapshots
+[2016-09-06 11:46:05,377] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db
+[2016-09-06 11:46:05,377] [DEBUG] [blockstackd:2207] (26596) VERIFY CONSENSUS(258): 8617b6481509a174921cfec275cfdb0b
+[2016-09-06 11:46:05,378] [DEBUG] [indexer:220] (26596) Lastblock: 258 (/tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock)
+[2016-09-06 11:46:05,378] [WARNING] [namedb:239] (26596) No public key found for namespace test1
+[2016-09-06 11:46:05,378] [WARNING] [namedb:239] (26596) No public key found for namespace test3
+[2016-09-06 11:46:05,378] [WARNING] [namedb:239] (26596) No public key found for namespace test2
+[2016-09-06 11:46:05,379] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_READY': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,380] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_READY': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,380] [WARNING] [blockstackd:2133] (26596) OP 'NAMESPACE_READY': Removing untrusted field 'fee'
+[2016-09-06 11:46:05,380] [DEBUG] [indexer:1060] (26596) Process block 259 (3 virtual transactions)
+[2016-09-06 11:46:05,381] [DEBUG] [indexer:996] (26596) Compat: no db_scan_block
+[2016-09-06 11:46:05,381] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '!' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "base": 5, "block_number": 257, "buckets": [7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "coeff": 251, "lifetime": 52596, "namespace_id": "test2", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "no_vowel_discount": 12, "nonalpha_discount": 11, "op": "!", "opcode": "NAMESPACE_READY", "ready_block": 259, "recipient": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "recipient_address": "n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4", "reveal_block": 258, "sender": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "0dbb23b5d8e70e65e6994634bc6a09ee6888542a7b5923173534c9222207f076", "version": 1, "vtxindex": 1})
+[2016-09-06 11:46:05,382] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '!' ({"address": "mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx", "base": 5, "block_number": 257, "buckets": [7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "coeff": 251, "lifetime": 52596, "namespace_id": "test2", "namespace_id_hash": "74109eb26958f0703998f1a01e32314b1e0ecbe4", "no_vowel_discount": 12, "nonalpha_discount": 11, "op": "!", "opcode": "NAMESPACE_READY", "ready_block": 259, "recipient": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "recipient_address": "n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4", "reveal_block": 258, "sender": "76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac", "sender_pubkey": "046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87", "txid": "0dbb23b5d8e70e65e6994634bc6a09ee6888542a7b5923173534c9222207f076", "version": 1, "vtxindex": 1})
+[2016-09-06 11:46:05,382] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '!' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "base": 4, "block_number": 257, "buckets": [6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "coeff": 250, "lifetime": 52595, "namespace_id": "test1", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "no_vowel_discount": 11, "nonalpha_discount": 10, "op": "!", "opcode": "NAMESPACE_READY", "ready_block": 259, "recipient": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "recipient_address": "mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq", "reveal_block": 258, "sender": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "abc41e7ad1d347431b8c85e37f308bfaf2e615fd1c9bcb05cde90bee3bc49e40", "version": 1, "vtxindex": 2})
+[2016-09-06 11:46:05,383] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '!' ({"address": "mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC", "base": 4, "block_number": 257, "buckets": [6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "coeff": 250, "lifetime": 52595, "namespace_id": "test1", "namespace_id_hash": "ebfcfca1a1810d333a3b5150bd4d91716dd52c03", "no_vowel_discount": 11, "nonalpha_discount": 10, "op": "!", "opcode": "NAMESPACE_READY", "ready_block": 259, "recipient": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "recipient_address": "mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq", "reveal_block": 258, "sender": "76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac", "sender_pubkey": "04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb", "txid": "abc41e7ad1d347431b8c85e37f308bfaf2e615fd1c9bcb05cde90bee3bc49e40", "version": 1, "vtxindex": 2})
+[2016-09-06 11:46:05,383] [DEBUG] [virtualchain_hooks:585] (26596) ACCEPT op '!' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "base": 6, "block_number": 257, "buckets": [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "coeff": 252, "lifetime": 52597, "namespace_id": "test3", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "no_vowel_discount": 13, "nonalpha_discount": 12, "op": "!", "opcode": "NAMESPACE_READY", "ready_block": 259, "recipient": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "recipient_address": "mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9", "reveal_block": 258, "sender": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "c96db74112e8c17818a09837b5bd5a53ebeaa77f69b9eed93491852919456377", "version": 1, "vtxindex": 3})
+[2016-09-06 11:46:05,384] [DEBUG] [virtualchain_hooks:660] (26596) COMMIT op '!' ({"address": "mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed", "base": 6, "block_number": 257, "buckets": [8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "coeff": 252, "lifetime": 52597, "namespace_id": "test3", "namespace_id_hash": "79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee", "no_vowel_discount": 13, "nonalpha_discount": 12, "op": "!", "opcode": "NAMESPACE_READY", "ready_block": 259, "recipient": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "recipient_address": "mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9", "reveal_block": 258, "sender": "76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac", "sender_pubkey": "04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451", "txid": "c96db74112e8c17818a09837b5bd5a53ebeaa77f69b9eed93491852919456377", "version": 1, "vtxindex": 3})
+[2016-09-06 11:46:05,384] [DEBUG] [virtualchain_hooks:666] (26596) Clear all expired names at 259
+[2016-09-06 11:46:05,384] [DEBUG] [virtualchain_hooks:669] (26596) Clear all expired preorders at 259
+[2016-09-06 11:46:05,384] [DEBUG] [virtualchain_hooks:672] (26596) Clear all expired namespace preorders at 259
+[2016-09-06 11:46:05,384] [DEBUG] [virtualchain_hooks:675] (26596) Clear all expired partial namespace imports at 259
+[2016-09-06 11:46:05,384] [DEBUG] [indexer:803] (26596) Snapshotting block 259
+[2016-09-06 11:46:05,384] [DEBUG] [indexer:765] (26596) SERIALIZE: !:namespace_id=5:test2,namespace_id_hash=40:74109eb26958f0703998f1a01e32314b1e0ecbe4,version=1:1,sender=50:76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac,sender_pubkey=130:046a6582a6566aa4059b7361536e7e4ac3df4d77bf6e843c4c8207eaa12e0ca19e15fc59c959b4a5d6d1de975ab059d9255a795dd57b9c78656a070ea5002efe87,address=34:mqqrxJjc2tLtxHioFTgYH6EiJdTtBwi2Kx,recipient=50:76a914f75b20399d771f515a3cd80f941aa7461d92518c88ac,recipient_address=34:n44rMyQ9rhTf7KjFdRwDNMWUSJ3MWLsDQ4,block_number=3:257,reveal_block=3:258,op=1:!,txid=64:0dbb23b5d8e70e65e6994634bc6a09ee6888542a7b5923173534c9222207f076,vtxindex=1:1,lifetime=5:52596,coeff=3:251,base=1:5,buckets=48:[7, 6, 5, 4, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],nonalpha_discount=2:11,no_vowel_discount=2:12,ready_block=3:259
+[2016-09-06 11:46:05,384] [DEBUG] [indexer:765] (26596) SERIALIZE: !:namespace_id=5:test1,namespace_id_hash=40:ebfcfca1a1810d333a3b5150bd4d91716dd52c03,version=1:1,sender=50:76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac,sender_pubkey=130:04d6fd1ba0effaf1e8d94ea7b7a3d0ef26fea00a14ce5ffcc1495fe588a2c6d0f35eaa22c01a35bee5817f03d769a3a38a3bb50182c61449ad125555daf26396fb,address=34:mgoZn4k6LuqiTYsVqQz9eu4LgpGVSz6NUC,recipient=50:76a914b7e40511f53f69045cb14c6c5a714d6a4ffe3a3788ac,recipient_address=34:mxHH7Fch85gD2i74yaWQxeqBkwk2NvzdWq,block_number=3:257,reveal_block=3:258,op=1:!,txid=64:abc41e7ad1d347431b8c85e37f308bfaf2e615fd1c9bcb05cde90bee3bc49e40,vtxindex=1:2,lifetime=5:52595,coeff=3:250,base=1:4,buckets=48:[6, 5, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],nonalpha_discount=2:10,no_vowel_discount=2:11,ready_block=3:259
+[2016-09-06 11:46:05,385] [DEBUG] [indexer:765] (26596) SERIALIZE: !:namespace_id=5:test3,namespace_id_hash=40:79e9cfb70b6d76b1c465bb9b6b3e9c86943c19ee,version=1:1,sender=50:76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac,sender_pubkey=130:04ea5d8c2a3ba84eb17625162320bb53440557c71f7977a57d61405e86be7bdcdab63a7f1eda1e6c1670c64a9f532b9f55458019d9b80fdf41748d06cd7f60d451,address=34:mpwT2uyJbVvmf8jzaPsdAhaXC26yThyTed,recipient=50:76a914b23d901e09fbab825cfad5f336d46488f2cd89cf88ac,recipient_address=34:mwmQKfmM4aBBMhH6cTVVbPTb4CbzpzRsy9,block_number=3:257,reveal_block=3:258,op=1:!,txid=64:c96db74112e8c17818a09837b5bd5a53ebeaa77f69b9eed93491852919456377,vtxindex=1:3,lifetime=5:52597,coeff=3:252,base=1:6,buckets=48:[8, 7, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],nonalpha_discount=2:12,no_vowel_discount=2:13,ready_block=3:259
+[2016-09-06 11:46:05,385] [DEBUG] [indexer:816] (26596) Snapshotting block 259: consensus hash of 258 is 8617b6481509a174921cfec275cfdb0b
+[2016-09-06 11:46:05,385] [DEBUG] [indexer:816] (26596) Snapshotting block 259: consensus hash of 256 is 2a9148d8b13939723d2aca16c75c6d68
+[2016-09-06 11:46:05,385] [DEBUG] [indexer:724] (26596) Snapshot('5ac28578dc2c805263659c52f8e82ebc44fcd38281761de87d68bcdec0417000', [u'8617b6481509a174921cfec275cfdb0b', u'2a9148d8b13939723d2aca16c75c6d68'])
+[2016-09-06 11:46:05,386] [DEBUG] [virtualchain_hooks:708] (26596) Save database /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db.tmp
+[2016-09-06 11:46:05,387] [DEBUG] [indexer:414] (26596) Rename 'lastblock': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock
+[2016-09-06 11:46:05,387] [DEBUG] [indexer:414] (26596) Rename 'snapshots': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.snapshots.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.snapshots
+[2016-09-06 11:46:05,387] [DEBUG] [indexer:414] (26596) Rename 'db': /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db.tmp --> /tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.db
+[2016-09-06 11:46:05,387] [DEBUG] [blockstackd:2207] (26596) VERIFY CONSENSUS(259): 9adef3f0fa69d19f8b4ccab7e563dc38
+[2016-09-06 11:46:05,388] [DEBUG] [indexer:220] (26596) Lastblock: 259 (/tmp/blockstack-test-databases-FrfVxO/work.259/blockstack-server.lastblock)
+[2016-09-06 11:46:05,388] [INFO] [blockstack-test-scenario:506] (26596) History check passes!
+[2016-09-06 11:46:05,394] [DEBUG] [proxy:120] (26596) RPC http://localhost:16264 db_refresh
+[2016-09-06 11:46:05,395] [DEBUG] [blockstackd:314] (26596) Inbound RPC begin rpc_db_refresh(())
+[2016-09-06 11:46:05,396] [INFO] [virtualchain_hooks:369] (26596) Invalidating cached blockstack state
+[2016-09-06 11:46:05,396] [DEBUG] [virtualchain_hooks:298] (26596) cache consistency: DB is not in RAM
+[2016-09-06 11:46:05,396] [INFO] [virtualchain_hooks:346] (26596) (Re)Loading blockstack state from '/tmp/blockstack-test/blockstack-server.db'
+[2016-09-06 11:46:05,398] [DEBUG] [indexer:220] (26596) Lastblock: 259 (/tmp/blockstack-test/blockstack-server.lastblock)
+[2016-09-06 11:46:05,399] [DEBUG] [blockstackd:321] (26596) Inbound RPC end rpc_db_refresh(())
+127.0.0.1 - - [06/Sep/2016 11:46:05] "POST /RPC2 HTTP/1.0" 200 -
+[2016-09-06 11:46:05,400] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:46:05,408] [DEBUG] [testlib:802] (26596) API call: namespace_preorder test1 at 257
+[2016-09-06 11:46:05,408] [DEBUG] [testlib:802] (26596) API call: namespace_preorder test2 at 257
+[2016-09-06 11:46:05,408] [DEBUG] [testlib:802] (26596) API call: namespace_preorder test3 at 257
+[2016-09-06 11:46:05,408] [DEBUG] [testlib:802] (26596) API call: namespace_reveal test1 at 258
+[2016-09-06 11:46:05,408] [DEBUG] [testlib:802] (26596) API call: namespace_reveal test2 at 258
+[2016-09-06 11:46:05,408] [DEBUG] [testlib:802] (26596) API call: namespace_reveal test3 at 258
+[2016-09-06 11:46:05,408] [DEBUG] [testlib:802] (26596) API call: namespace_ready test1 at 259
+[2016-09-06 11:46:05,408] [DEBUG] [testlib:802] (26596) API call: namespace_ready test2 at 259
+[2016-09-06 11:46:05,408] [DEBUG] [testlib:802] (26596) API call: namespace_ready test3 at 259
+[2016-09-06 11:46:05,408] [DEBUG] [testlib:833] (26596) SNV verify 0 names
+[2016-09-06 11:46:05,409] [INFO] [blockstack-test-scenario:521] (26596) SNV check passes!
+[2016-09-06 11:46:05,409] [DEBUG] [virtualchain_hooks:354] (26596) cache consistency: Using cached blockstack state
+[2016-09-06 11:46:05,409] [INFO] [blockstack-test-scenario:534] (26596) Atlas zonefile checks pass!
+[2016-09-06 11:46:05,409] [DEBUG] [blockstackd:1307] (26596) Shutting down RPC
+[2016-09-06 11:46:05,900] [DEBUG] [blockstackd:1310] (26596) RPC joined
+Bitcoin server stopping
+Not running (/tmp/blockstack-test/client/api_endpoint.pid)
+
+
+verify 256 - 257 (/tmp/blockstack-test-databases-FrfVxO/blockstack.db.256), expect 2a9148d8b13939723d2aca16c75c6d68
+
+
+
+
+verify 256 - 258 (/tmp/blockstack-test-databases-FrfVxO/blockstack.db.257), expect d14b9b5ce8a16994611b5724ca303bfb
+
+
+
+
+verify 256 - 259 (/tmp/blockstack-test-databases-FrfVxO/blockstack.db.258), expect 8617b6481509a174921cfec275cfdb0b
+
+
+
+
+verify 256 - 260 (/tmp/blockstack-test-databases-FrfVxO/blockstack.db.259), expect 9adef3f0fa69d19f8b4ccab7e563dc38
+
+
+SUCCESS blockstack_integration_tests.scenarios.namespace_preorder_reveal_ready_multi
+Not running (/tmp/blockstack-test/client/api_endpoint.pid)
+Bitcoin server stopping
+Bitcoin server starting

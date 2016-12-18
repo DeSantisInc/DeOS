@@ -22,6 +22,7 @@ logger:
 
 install:
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	# brew install tree
 	@-mkdir $(BASEDIR)/.swap/
 	sh $(BASEDIR)/src/install.sh
 endif

@@ -24,7 +24,6 @@ test/main.py
 yarn-error.log
 
 #[folders]
-var/build/
 node_modules/
 
 #[wildcards]

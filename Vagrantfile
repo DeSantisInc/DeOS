@@ -1,6 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-require './src/plugins/reboot'
+require './plugin/vagrant/reboot'
 Vagrant.configure('2') do |config|
   config.vm.define :DeVM do |t| end
   config.vm.box = ENV['DeOS_VM_BOX']

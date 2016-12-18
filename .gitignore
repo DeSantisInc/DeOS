@@ -19,6 +19,7 @@ app/index.min.html
 bin/logic
 bin/main*
 npm-debug.log
+test/main.py
 yarn-error.log
 
 #[folders]

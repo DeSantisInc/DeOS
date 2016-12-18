@@ -22,7 +22,6 @@ npm-debug.log
 yarn-error.log
 
 #[folders]
-ext/
 var/build/
 node_modules/
 

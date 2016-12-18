@@ -1,0 +1,3 @@
+[submodule "app/terminal"]
+	path = app/terminal
+	url = https://github.com/zeit/hyper

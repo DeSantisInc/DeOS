@@ -55,3 +55,9 @@
 [submodule "test/blockstack"]
 	path = test/blockstack
 	url = https://github.com/blockstack/blockstack-integration-tests.git
+[submodule "ext/zerotier/ZeroTierOne"]
+	path = ext/zerotier/ZeroTierOne
+	url = https://github.com/zerotier/ZeroTierOne.git
+[submodule "ext/zerotier/ZeroTierSDK"]
+	path = ext/zerotier/ZeroTierSDK
+	url = https://github.com/zerotier/ZeroTierSDK.git

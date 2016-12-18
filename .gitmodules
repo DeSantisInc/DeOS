@@ -43,3 +43,15 @@
 [submodule "app/gitiles"]
 	path = app/gitiles
 	url = https://github.com/google/gitiles.git
+[submodule "ext/bitcoin/picocoin"]
+	path = ext/bitcoin/picocoin
+	url = https://github.com/jgarzik/picocoin.git
+[submodule "ext/electrum/electrum"]
+	path = ext/electrum/electrum
+	url = https://github.com/spesmilo/electrum.git
+[submodule "ext/electrum/electrum-server"]
+	path = ext/electrum/electrum-server
+	url = https://github.com/spesmilo/electrum-server.git
+[submodule "doc/electrum"]
+	path = doc/electrum
+	url = https://github.com/spesmilo/electrum-docs.git

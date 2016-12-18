@@ -72,7 +72,7 @@ DEOS:=$(BASEDIR)/bin/deos
 LIB:=$(BASEDIR)/lib
 PRINT:=$(BASEDIR)/bin/printm
 SRC:=$(BASEDIR)/src
-STATIC:=$(BASEDIR)/static
+STATIC:=$(BASEDIR)/var
 VENV:=$(BASEDIR)/.deos/venv
 
 export VM_BASHRC:=/home/$(DeOS_VM_USER)/.bashrc

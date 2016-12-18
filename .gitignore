@@ -22,7 +22,7 @@ npm-debug.log
 yarn-error.log
 
 #[folders]
-static/build/
+var/build/
 node_modules/
 
 #[wildcards]

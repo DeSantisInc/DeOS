@@ -17,6 +17,9 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@(if [[ -n "$(x)" ]]; then ($(PRINTM) cyan $@ stop); fi)
 endif
 
+logger:
+	python src/logger.py
+
 install:
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@-mkdir $(BASEDIR)/.swap/
@@ -45,9 +48,9 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@-rm -rf $(BASEDIR)/.zerotier/
 	@-rm -rf $(BASEDIR)/.swap/
 	@-rm -rf $(VENV)/darwin/*
-	@-cp $(BASEDIR)/template/git/gitignore.tao.txt $(VENV)/darwin/.gitignore
+	@-cp $(BASEDIR)/tao/static/gitignore.txt $(VENV)/darwin/.gitignore
 	@-rm -rf $(VENV)/linux/*
-	@-cp $(BASEDIR)/template/git/gitignore.tao.txt $(VENV)/linux/.gitignore
+	@-cp $(BASEDIR)/tao/static/gitignore.txt $(VENV)/linux/.gitignore
 	@$(PRINTM) magenta $@ stop
 endif
 

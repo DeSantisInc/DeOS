@@ -25,9 +25,6 @@
 [submodule "ext/blockstack/blockstack-gpg"]
 	path = ext/blockstack/blockstack-gpg
 	url = https://github.com/blockstack/blockstack-gpg.git
-[submodule "test/blockstack"]
-	path = test/blockstack
-	url = https://github.com/blockstack/blockstack-integration-tests.git
 [submodule "ext/blockstack/pybitcoin"]
 	path = ext/blockstack/pybitcoin
 	url = https://github.com/blockstack/pybitcoin.git
@@ -55,3 +52,6 @@
 [submodule "doc/electrum"]
 	path = doc/electrum
 	url = https://github.com/spesmilo/electrum-docs.git
+[submodule "test/blockstack"]
+	path = test/blockstack
+	url = https://github.com/blockstack/blockstack-integration-tests.git

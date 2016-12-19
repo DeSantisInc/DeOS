@@ -1,79 +1,56 @@
 compiler:
-
 - clang
-
 - gcc
 
 dist:
-
 - trusty
 
 env:
-
   global:
-
   - TSET=zero
-
   matrix:
-
   - TEST=one
-
   - TEST=two
 
 language:
-
 - c
 
 os:
-
 - linux
-
 - osx
 
 osx_image:
-
 - xcode8
 
 sudo:
-
 - false
 
 before_install:
-
-- echo 'before_install'
+- if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update; fi
 
 install:
-
 - echo 'install'
 
 before_script:
-
 - echo 'before_script'
 
 script:
-
 - echo 'script'
 
 after_success:
-
 - echo 'after_success'
 
 after_failure:
-
 - echo 'after_failure'
 
 before_deploy:
-
 - echo 'before_deploy'
 
 deploy:
-
 - echo 'deploy'
 
 after_deploy:
-
 - echo 'after_deploy'
 
 after_script:
-
 - echo 'after_script'

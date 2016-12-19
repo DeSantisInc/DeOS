@@ -1,25 +1,37 @@
 sudo: required
+
 dist: trusty
+
 os: linux
+
 language: generic
 
 before_install:
 - echo 'before_install'
+
 install:
 - echo 'install'
+
 before_script:
 - echo 'before_script'
+
 script:
 - echo 'script'
+
 after_success:
 - echo 'after_success'
+
 after_failure:
 - echo 'after_failure'
+
 before_deploy:
 - echo 'before_deploy'
+
 deploy:
 - echo 'deploy'
+
 after_deploy:
 - echo 'after_deploy'
+
 after_script:
 - echo 'after_script'

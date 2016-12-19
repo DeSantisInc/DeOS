@@ -1,22 +1,22 @@
 sudo: false
+
 language: generic
-os:
-  - linux
-  - osx
+
+os: linux
+
 dist: trusty
-osx_image: xcode8
-env:
-  global:
-    - A=one
-  matrix:
-    - B=two
+
 before_install:
-  - echo 'before_install'
+- echo 'before_install'
+
 install:
-  - echo 'install'
+- echo 'install'
+
 before_script:
-  - echo 'before_script'
+- echo 'before_script'
+
 script:
-  - echo 'script'
+- echo 'script'
+
 after_script:
-  - echo 'after_script'
+- echo 'after_script'

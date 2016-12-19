@@ -1,7 +1,3 @@
-compiler:
-- clang
-- gcc
-
 dist:
 - trusty
 
@@ -12,7 +8,7 @@ env:
   - B=two
 
 language:
-- c
+- generic
 
 os:
 - linux

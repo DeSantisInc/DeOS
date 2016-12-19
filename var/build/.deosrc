@@ -1,53 +1,59 @@
-include host/common.mk
+include src/host/common.mk
 
 BASEDIR:=$(CURDIR)
 BIN:=$(BASEDIR)/bin
 
-DeOS_YUBIKEY_GIT_REPO:=https://github.com/scumjr/yubikeyedup
-DeOS_YUBIKEY_PATH_DB:=$(BASEDIR)/data/private/yubikeys.sqlite3
-DeOS_YUBIKEY_PATH_SRC:=$(BASEDIR)/dev/yubikey/src
-DeOS_YUBIKEY_PATH_TOOLS:=$(BASEDIR)/dev/yubikey/tools
+#[config]
+export DeOS_CONFIG_DEBUG:=$(FALSE)
+export DeOS_CONFIG_FASTBOOT:=$(TRUE)
 
-DeOS_YUBIKEY_APP:=deos
-DeOS_YUBIKEY_USER:=atd@gmx.it
-
-export DeOS_BOOT_ARGS_BITCOIN:=-c bitcoind
-export DeOS_BOOT_ARGS_BLOCKSTACK:=-c blockstack
-export DeOS_BOOT_ARGS_BOOTSTRAP:=-c init
+#[boot]
+export DeOS_BOOT_ARGS_BITCOIN:=-b
+export DeOS_BOOT_ARGS_BLOCKSTACK:=-d
+export DeOS_BOOT_ARGS_BOOTSTRAP:=-a test
 export DeOS_BOOT_ARGS_DOCKER:=-f
 export DeOS_BOOT_ARGS_NGINX:=-e
-export DeOS_BOOT_ARGS_PYTHON:=-c python
-export DeOS_BOOT_PATH:=/deos/boot
-export DeOS_BOOT_SCRIPT:=./src/build.sh
+export DeOS_BOOT_ARGS_PYTHON:=-c
+ifeq ($(DeOS_CONFIG_DEBUG),$(IS_TRUE))
+export DeOS_BOOT_DEBUG:=
+else
+export DeOS_BOOT_DEBUG:=2> /dev/null
+endif
+export DeOS_BOOT_PATH:=/deos/src/boot
+export DeOS_BOOT_SCRIPT:=./src/boot/index.sh
+
+#[build]
+ifeq ($(DeOS_CONFIG_FASTBOOT),$(IS_TRUE))
+export DeOS_BUILD_APT_UPGRADE:=$(FALSE)
+else
+export DeOS_BUILD_APT_UPGRADE:=$(TRUE)
+endif
 export DeOS_BUILD_BITCOIN:=$(FALSE)
 export DeOS_BUILD_BLOCKSTACK:=$(FALSE)
 export DeOS_BUILD_DOCKER:=$(FALSE)
-export DeOS_BUILD_NGINX:=$(FALSE)
+export DeOS_BUILD_NGINX:=$(TRUE)
 export DeOS_BUILD_PYTHON:=$(FALSE)
-export DeOS_CONFIG_DEBUG:=$(FALSE)
-export DeOS_CONFIG_FASTBOOT:=$(TRUE)
+
+#[cmd]
+ifeq ($(DeOS_CONFIG_FASTBOOT),$(IS_TRUE))
+export DeOS_CMD_APT_UPGRADE:=echo 'FASTBOOT!'
+else
+export DeOS_CMD_APT_UPGRADE:=apt-get -y upgrade $(DeOS_BOOT_DEBUG)
+endif
+
+#[host]
 export DeOS_HOST_OS:=$(shell uname -s)
+
+#[run]
 export DeOS_RUN_SERVER:=$(FALSE)
+
+#[vm]
 export DeOS_VM_BOX:=bento/ubuntu-16.04
 export DeOS_VM_PATH:=/deos
 export DeOS_VM_PATH_ZT:=/var/lib/zerotier-one
 export DeOS_VM_USER:=vagrant
 export DeOS_VM_SHELL_DEFAULT:=bash -c 'BASH_ENV=/etc/profile exec bash'
 export DeOS_VM_SHELL_SSH:=bash -l
-
-ifeq ($(DeOS_CONFIG_DEBUG),$(IS_TRUE))
-export DeOS_BOOT_DEBUG:=
-else
-export DeOS_BOOT_DEBUG:=2> /dev/null
-endif
-
-ifeq ($(DeOS_CONFIG_FASTBOOT),$(IS_TRUE))
-export DeOS_BUILD_APT_UPGRADE:=$(FALSE)
-export DeOS_CMD_APT_UPGRADE:=echo 'FASTBOOT!'
-else
-export DeOS_BUILD_APT_UPGRADE:=$(TRUE)
-export DeOS_CMD_APT_UPGRADE:=apt-get -y upgrade $(DeOS_BOOT_DEBUG)
-endif
 
 ###
 
@@ -59,15 +65,13 @@ export BUILDNOTEBOOK:=$(FALSE)
 export DeOS_FILESYNC:=$(TRUE)
 
 export BOOT:=$(BASEDIR)/boot
-DELTA:=$(BASEDIR)/bin/darwin/spinner
+DELTA:=$(BASEDIR)/bin/delta
 DEOS:=$(BASEDIR)/bin/deos
 LIB:=$(BASEDIR)/lib
-PRINTM:=$(BASEDIR)/bin/darwin/printm
-LAGGER:=python ./src/logger.py
-LOGGER:=bin/darwin/logger
+PRINT:=$(BASEDIR)/bin/printm
 SRC:=$(BASEDIR)/src
 STATIC:=$(BASEDIR)/var
-VENV:=$(BASEDIR)/venv
+VENV:=$(BASEDIR)/.deos/venv
 
 export VM_BASHRC:=/home/$(DeOS_VM_USER)/.bashrc
 export VM_PATH_NVM:=/home/$(DeOS_VM_USER)/.nvm
@@ -106,7 +110,6 @@ UPCMD:="vagrant up --provider virtualbox"
 VMCMD:="cd /deos; bash -i -c 'ipython --profile=deos'"
 GIT_BITCOIN:=git@github.com:DeSantisInc/bitcoin.git
 
-include host/files.mk
-include host/test.mk
-include host/vbox.mk
-include host/yubikey.mk
+include src/host/files.mk
+include src/host/test.mk
+include src/host/vbox.mk

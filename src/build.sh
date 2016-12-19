@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 RUN() {
+  #python /deos/src/logger.py "DEBUG" "$1"
   printf "\x1b[34;01mΔ => [ $1 ]\x1b[34;01m\n"
   echo "$1" | bash
 }

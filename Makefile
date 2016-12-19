@@ -9,6 +9,7 @@ export MAKEFLAGS=--no-print-directory
 include .deosrc
 
 all: chmod
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0"
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@(if [[ -z "$(x)" ]]; then ($(MAKE) install); fi)
 	@(if [[ -n "$(x)" ]]; then ($(PRINTM) cyan $@ start); fi)
@@ -16,31 +17,38 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	else [ "$(x)" = "run" ] && ($(MAKE) wallet) || ($(MAKE) x=all); fi
 	@(if [[ -n "$(x)" ]]; then ($(PRINTM) cyan $@ stop); fi)
 endif
-
-logger:
-	python src/logger.py
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1"
 
 install:
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0"
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	# brew install tree
 	@-mkdir $(BASEDIR)/.swap/
 	sh $(BASEDIR)/src/install.sh
 endif
+	@$(LAGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1" #!BIN
 
 chmod:
+	@$(LAGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0" #!BIN
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+	cp src/logger.py bin/darwin/logger
 	@-chmod +x $(PRINTM) $(DEOS)
+	@-chmod +x bin/darwin/logger
 endif
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1"
 
 build: venv check
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0"
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@$(PRINTM) cyan $@ start
 	-mkdir $(BASEDIR)/config/nginx/
 	-$(MAKE) vm
 	@$(PRINTM) cyan $@ stop
 endif
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1"
 
 clean:
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0"
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@$(PRINTM) magenta $@ start
 	@-$(MAKE) rm
@@ -54,8 +62,10 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@-cp $(BASEDIR)/tao/static/gitignore.txt $(VENV)/linux/.gitignore
 	@$(PRINTM) magenta $@ stop
 endif
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1"
 
 check:
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0"
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@$(PRINTM) cyan $@ start
 	@-$(MAKE) deos.check
@@ -63,8 +73,10 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 else
 	@-$(MAKE) deos.check
 endif
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1"
 
 venv:
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0"
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@$(PRINTM) cyan $@ start
 	[ "$(x)" = "blockstack" ]\
@@ -74,8 +86,10 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 		&& virtualenv default --no-site-packages)
 	@$(PRINTM) cyan $@ stop
 endif
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1"
 
 rm:
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0"
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@$(PRINTM) yellow $@ start
 	-rm -rf $(BASEDIR)/.deos/
@@ -83,27 +97,35 @@ ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	-$(MAKE) vm.uninstall
 	@$(PRINTM) yellow $@ stop
 endif
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1"
 
 sh:
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0"
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@$(PRINTM) cyan $@ start
 	-$(MAKE) vm.ssh
 	@$(PRINTM) cyan $@ stop
 endif
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1"
 
 vm:
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0"
 ifeq ($(DeOS_HOST_OS),$(IS_MAC))
 	@$(PRINTM) cyan $@ start
 	-$(MAKE) vm.install
 	@$(PRINTM) cyan $@ stop
 endif
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1"
 
 yubikey:
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0"
 	@$(PRINTM) cyan $@ start
 	$(DeOS_YUBIKEY_PATH_SRC)/yubiserve.py --db $(DeOS_YUBIKEY_PATH_DB)
 	@$(PRINTM) cyan $@ stop
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1"
 
 wallet:
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 0"
 	@-$(PRINTM) cyan $@ start
 	#brew install libusb-1.0-0
 	# clean
@@ -123,3 +145,4 @@ wallet:
 	&& chmod +x bin/wallet\
 	&& ./bin/wallet
 	@-$(PRINTM) cyan $@ stop
+	@$(LOGGER) "DEBUG" "$(DeOS_HOST_OS) : make : $@ : 1"

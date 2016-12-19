@@ -7,11 +7,9 @@ dist:
 
 env:
   global:
-  - TSET=zero
-
+  - A=one
   matrix:
-  - TEST=one
-  - TEST=two
+  - B=two
 
 language:
 - c
@@ -27,7 +25,7 @@ sudo:
 - false
 
 before_install:
-- if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update; fi
+- echo 'before_install'
 
 install:
 - echo 'install'

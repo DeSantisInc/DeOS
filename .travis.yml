@@ -1,10 +1,28 @@
-sudo: false
+compiler:
+- clang
+- gcc
 
-language: generic
+dist:
+- trusty
 
-os: linux
+env:
+  global:
+  - A=one
+  matrix:
+  - B=two
 
-dist: trusty
+language:
+- c
+
+os:
+- linux
+- osx
+
+osx_image:
+- xcode8
+
+sudo:
+- false
 
 before_install:
 - echo 'before_install'
@@ -17,6 +35,21 @@ before_script:
 
 script:
 - echo 'script'
+
+after_success:
+- echo 'after_success'
+
+after_failure:
+- echo 'after_failure'
+
+before_deploy:
+- echo 'before_deploy'
+
+deploy:
+- echo 'deploy'
+
+after_deploy:
+- echo 'after_deploy'
 
 after_script:
 - echo 'after_script'

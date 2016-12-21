@@ -14,6 +14,7 @@ required:
 - all
 - bips
 - cache
+- install
 - lint
 - meta
 - terminal
@@ -43,6 +44,13 @@ properties:
       required: [pre, post]
 
   cache:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  install:
     type: object
     required: [hook]
     hook:
@@ -120,6 +128,13 @@ bips:
       @$(PRINTM) cyan $@ stop
 
 cache:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
+install:
   hook:
     pre: >
       @$(PRINTM) cyan $@ start
@@ -268,7 +283,9 @@ clean:
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
 
 install:
+    Δ(data['install']['hook']['pre'])
     @([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
+    Δ(data['install']['hook']['post'])
 
 build:
     @([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")

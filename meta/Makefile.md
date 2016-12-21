@@ -4,26 +4,35 @@
 
 ```yaml
 type: object
+
 required: [makeflags, default_goal, phony, sublime_targets, config_file, all,
           two]
+
 properties:
+
+  makeflags: {type: string}
+
+  default_goal: {type: string}
+
+  phony: {type: string}
+
+  sublime_targets: {type: string}
+
+  config_file: {type: string}
+
   all:
     type: object
     required: [hook, 'if:host;is:mac', else]
     hook:
       type: object
       required: [pre, post]
+
   two:
     type: object
     required: [hook, 'if:host;is:mac', else]
     hook:
       type: object
       required: [pre, post]
-  makeflags: {type: string}
-  default_goal: {type: string}
-  phony: {type: string}
-  sublime_targets: {type: string}
-  config_file: {type: string}
 ```
 
 ## Environment

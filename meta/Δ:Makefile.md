@@ -114,6 +114,13 @@ webpy.clone:
     mv src/web/LICENSE.txt doc/web/LICENSE.txt
     mv src/web/ChangeLog.txt doc/web/ChangeLog.txt
 
+bips: bips.clone
+
+bips.clone:
+    -rm -rf doc/bips
+     cd doc/ && git clone git@github.com:bitcoin/bips.git
+     rm -rf doc/bips/.git/
+
 terminal: terminal.clone
 
 terminal.clone:
@@ -137,6 +144,7 @@ meta:
     $(MAKE) wiki
     $(MAKE) webpy
     $(MAKE) terminal
+    $(MAKE) bips
 
 clean:
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")

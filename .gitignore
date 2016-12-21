@@ -21,7 +21,6 @@ var/log/deos/*
 #[files]
 npm-debug.log
 src/example.sh
-Vagrantfile
 yarn-error.log
 
 #[except]

@@ -8,5 +8,12 @@ IS_MAC:=Darwin
 IS_LINUX:=Linux
 
 BASEDIR:=$(CURDIR)
+HOSTOS:=$(shell uname -s)
 SETCACHE:=$(FALSE)
 USECACHE:=$(TRUE)
+
+ifeq ($(HOSTOS),$(IS_MAC))
+PRINTM:=$(BASEDIR)/.deos/bin/darwin/print
+else
+PRINTM:=$(BASEDIR)/.deos/bin/travis/print
+endif

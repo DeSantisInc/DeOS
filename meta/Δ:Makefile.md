@@ -12,7 +12,8 @@ required:
 - sublime_targets
 - config_file
 - all
-- two
+- meta
+- wiki
 
 properties:
   makeflags: {type: string}
@@ -28,9 +29,16 @@ properties:
       type: object
       required: [pre, post]
 
-  two:
+  meta:
     type: object
-    required: [hook, 'if:host;is:mac', else]
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  wiki:
+    type: object
+    required: [hook]
     hook:
       type: object
       required: [pre, post]
@@ -48,29 +56,33 @@ config_file: .deosrc
 all:
   hook:
     pre: >
-      @echo && $(PRINT) cyan $@ start
+      @echo && $(PRINTM) cyan $@ start
     post: >
-      @$(PRINT) cyan $@ stop && echo
+      @$(PRINTM) cyan $@ stop && echo
   if:host;is:mac: >
     @(python src/hello.py)
   else: >
     @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 
-two:
+meta:
   hook:
     pre: >
-      @echo && $(PRINT) cyan $@ start
+      @$(PRINTM) cyan $@ start
     post: >
-      @$(PRINT) cyan $@ stop && echo
-  if:host;is:mac: >
-    @(python src/hello.py)
-  else: >
-    @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
+      @$(PRINTM) cyan $@ stop
+
+wiki:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
 ```
 
 ## Template
 
-```makefile
+```sh
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])
@@ -86,20 +98,20 @@ DeOS_BIN_TRAVIS:=$(shell which travis)
 DeOS_RM_DOTDEOS:=rm -rf .deos
 
 all: #clean install build venv lint
-#    Δ(data['all']['hook']['pre'])
-#ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+    Δ(data['all']['hook']['pre'])
+ifeq ($(HOSTOS),$(IS_MAC))
     Δ(data['all']['if:host;is:mac'])
-#else
-#    Δ(data['all']['else'])
-#endif
-#    Δ(data['all']['hook']['post'])
+else
+    Δ(data['all']['else'])
+endif
+    Δ(data['all']['hook']['post'])
 
-wiki: wiki.clone
-
-wiki.clone:
+wiki:
+    Δ(data['wiki']['hook']['pre'])
     -rm -rf var/wiki/
     cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
     rm -rf var/wiki/.git/
+    Δ(data['wiki']['hook']['post'])
 
 cache:
 ifeq ($(SETCACHE),$(IS_TRUE))
@@ -114,9 +126,7 @@ ifeq ($(SETCACHE),$(IS_TRUE))
     rm -rf .cache/hyper/
 endif
 
-webpy: webpy.clone
-
-webpy.clone:
+webpy:
     -rm -rf src/web/
 ifeq ($(USECACHE),$(IS_TRUE))
     -rm src/web.tar
@@ -134,32 +144,19 @@ endif
     mv src/web/LICENSE.txt doc/web/LICENSE.txt
     mv src/web/ChangeLog.txt doc/web/ChangeLog.txt
 
-
-bips: bips.clone
-
-bips.clone:
+bips:
     -rm -rf doc/bips
      cd doc/ && git clone git@github.com:bitcoin/bips.git
      rm -rf doc/bips/.git/
 
-terminal: terminal.clone
-
-terminal.clone:
+terminal:
     -rm -rf app/terminal
     cd app/ && git clone git@github.com:zeit/hyper.git terminal
     rm -rf app/terminal/.git/
     rm -rf app/terminal/.github/
 
-two: #clean install build venv lint
-#    Δ(data['two']['hook']['pre'])
-#ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-    Δ(data['two']['if:host;is:mac'])
-#else
-#    Δ(data['two']['else'])
-#endif
-#    Δ(data['two']['hook']['post'])
-
 meta:
+    Δ(data['meta']['hook']['pre'])
     sh bootstrap.sh
     python src/hello.py
     #$(MAKE) cache
@@ -167,6 +164,7 @@ meta:
     $(MAKE) webpy
     $(MAKE) terminal
     $(MAKE) bips
+    Δ(data['meta']['hook']['post'])
 
 clean:
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")

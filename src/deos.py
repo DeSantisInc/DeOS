@@ -66,7 +66,7 @@ def main():
     #    write('var/build/Makefile', code)
     config = load_config('Deosfile')
     for key, value in config.iteritems():
-        if key != '__meta__' and 'type' in value:
+        if key not in ('author', 'version') and 'type' in value:
             if value['type'] == 'make':
                 template_file = "%s/%s.tao.mk" % (TEMPLATE_PATH, key)
                 print(template_file)

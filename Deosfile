@@ -1,10 +1,14 @@
-[__meta__]
 author=atd@gmx.it
-root=true
 version=v0.8-alpha.1
 
 [.deosrc]
+meta=meta/.deosrc.md
 type=make
 
+[.nvmrc]
+meta=meta/.nvmrc.md
+type=nvmrc
+
 [Makefile]
+meta=meta/Makefile.md
 type=make

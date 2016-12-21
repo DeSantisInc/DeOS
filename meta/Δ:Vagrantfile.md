@@ -25,7 +25,7 @@ c: 3
 Δ with (data=None)
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-require './plugin/vagrant/reboot'
+require './src/vagrant/reboot'
 Vagrant.configure('2') do |config|
   config.vm.define :DeVM do |t| end
   config.vm.box = ENV['DeOS_VM_BOX']
@@ -104,7 +104,6 @@ Vagrant.configure('2') do |config|
   end # nginx
   ###
   if ENV['BUILDJS'] != '0'
-
     config.vm.provision :shell,
       env: {
         'BOOT_DEBUG' => ENV['BOOT_DEBUG'],
@@ -112,7 +111,6 @@ Vagrant.configure('2') do |config|
       },
       path: ENV['DeOS_BOOT_SCRIPT'],
     :args=>'-n' # node
-
     config.vm.provision :shell,
       env: {
         'NVM_GIT_REPO' => ENV['NVM_GIT_REPO'],
@@ -121,15 +119,11 @@ Vagrant.configure('2') do |config|
       },
       path: ENV['DeOS_BOOT_SCRIPT'],
     :args=>'-u' # nvm
-
     #config.vm.provision :shell,
       #path: ENV['DeOS_BOOT_SCRIPT'],
     #:args => '-y' # yarn
-
   end # nodejs
-
   if ENV['DeOS_BUILD_PYTHON'] != '0'
-
     config.vm.provision :shell,
       env: {
         'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
@@ -138,7 +132,6 @@ Vagrant.configure('2') do |config|
       },
       path:ENV['DeOS_BOOT_SCRIPT'],
     :args=>ENV['DeOS_BOOT_ARGS_PYTHON']
-
     if ENV['DeOS_BUILD_BLOCKSTACK'] != '0'
       config.vm.provision :shell,
         env: {
@@ -149,17 +142,13 @@ Vagrant.configure('2') do |config|
         privileged: false,
       :args => ENV['DeOS_BOOT_ARGS_BLOCKSTACK']
     end # blockstack
-
     if ENV['BUILDNOTEBOOK'] != '0'
       config.vm.provision :shell,
         path: ENV['DeOS_BOOT_SCRIPT'],
       :args=>'-j'
     end # jupyter
-
   end # python
-
   if ENV['BUILDDOCKER'] != '0'
-
     config.vm.provision :shell,
       env: {
         'BOOT_DEBUG' => ENV['BOOT_DEBUG'],
@@ -173,9 +162,7 @@ Vagrant.configure('2') do |config|
       },
       path: ENV['DeOS_BOOT_SCRIPT'],
     :args=>'-w'
-
     config.vm.provision :unix_reboot
-
     config.vm.provision :shell,
       env: {
         'DOCKER_VERSION' => ENV['DOCKER_VERSION'],
@@ -186,19 +173,41 @@ Vagrant.configure('2') do |config|
       path: ENV['DeOS_BOOT_SCRIPT'],
       privileged: false,
     :args=>'-m' # dvm
-
     config.vm.provision :shell,
       path: ENV['DeOS_BOOT_SCRIPT'],
     :args => '-z' # compose
-
     config.vm.provision :shell,
       env: {
         'DOCKER_PY_PATH' => ENV['DOCKER_PY_PATH']
       },
       path: ENV['DeOS_BOOT_SCRIPT'],
     :args=>'-i' # flask
-
   end # docker
-
 end # Vagrant.configure('2') do |config|
+```
+
+## Test[Environment]
+
+```yaml
+a: 1
+b: 2
+c: 3
+```
+
+## Test[Pass]
+
+```sh
+#!/bin/sh
+echo "1"
+echo "2"
+echo "3"
+```
+
+## Test[Fail]
+
+```sh
+#!/bin/sh
+echo "3"
+echo "2"
+echo "1"
 ```

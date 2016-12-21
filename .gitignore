@@ -1,4 +1,4 @@
-[wildcards]
+#[wildcards]
 *.o
 *.pyc
 
@@ -30,4 +30,3 @@ yarn-error.log
 !etc/zerotier/.gitprivate
 !var/backup/.gitprivate
 !var/log/deos/.gitprivate
-

@@ -49,9 +49,13 @@ all:
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])
+
 .DEFAULT_GOAL:=Δ(data['default_goal'])
+
 .PHONY:Δ(data['phony'])
+
 .SUBLIME_TARGETS:Δ(data['sublime_targets'])
+
 include Δ(data['config_file'])
 
 all:

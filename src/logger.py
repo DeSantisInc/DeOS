@@ -8,7 +8,6 @@ import ruamel.yaml as yaml
 
 CONFIG_FILE = './etc/logger/logger.yml'
 
-
 def get_config(fname):
     config = None
     with open(fname) as f:

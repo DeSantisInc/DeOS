@@ -14,13 +14,13 @@ deos_bin() {
   for path in .deos/bin/darwin .deos/bin/vagrant .deos/bin/travis
   do
     [ ! -f "$path/deos" ] && cp src/deos.py $path/deos
+    [ -f "$path/deos" ] && chmod +x $path/deos
     [ ! -f "$path/logger" ] && cp src/logger.py $path/logger
+    [ -f "$path/logger" ] && chmod +x $path/logger
     [ ! -f "$path/print" ] && cp src/print.py $path/print
+    [ -f "$path/print" ] && chmod +x $path/print
     [ ! -f "$path/spinner" ] && cp src/spinner.sh $path/spinner
-    chmod +x $path/deos # add: if-darwin
-    chmod +x $path/logger # add: if-darwin
-    chmod +x $path/print # add: if-darwin
-    chmod +x $path/spinner # add: if-darwin
+    [ -f "$path/spinner" ] && chmod +x $path/spinner
   done
 }
 
@@ -43,15 +43,15 @@ deos_init() {
 }
 
 deos_clean() {
-  path=.deos
-  [ -d "$path" ] && rm -rf $path
+  [ -d ".deos" ] && rm -rf .deos
+  [ -f "Makefile" ] && rm Makefile
 }
 
 deos_darwin() {
   deos_clean
   deos_init
+  deos_venv "darwin"
   deos_bin
-  #deos_venv "darwin"
   .deos/bin/darwin/deos
   EXIT_SUCCESS
 }

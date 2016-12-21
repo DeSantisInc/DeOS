@@ -23,6 +23,7 @@ required:
 - venv
 - webpy
 - wiki
+- wikiup
 
 properties:
   makeflags: {type: string}
@@ -110,7 +111,14 @@ properties:
 
   wiki:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
+    hook:
+      type: object
+      required: [pre, post]
+
+  wikiup:
+    type: object
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
@@ -134,8 +142,8 @@ all:
 
 bips:
   hook:
-    pre: $(PRINTM) yellow $@ start
-    post: $(PRINTM) yellow $@ stop
+    pre: $(PRINTM) magenta $@ start
+    post: $(PRINTM) magenta $@ stop
   else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 build:
@@ -146,8 +154,8 @@ build:
 
 cache:
   hook:
-    pre: $(PRINTM) cyan $@ start
-    post: $(PRINTM) cyan $@ stop
+    pre: $(PRINTM) magenta $@ start
+    post: $(PRINTM) magenta $@ stop
   else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 clean:
@@ -164,8 +172,8 @@ install:
 
 lint:
   hook:
-    pre: $(PRINTM) cyan $@ start
-    post: $(PRINTM) cyan $@ stop
+    pre: $(PRINTM) magenta $@ start
+    post: $(PRINTM) magenta $@ stop
   if:host;is:mac: (travis lint .travis.yml)
   else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
@@ -189,16 +197,23 @@ venv:
 
 webpy:
   hook:
-    pre: $(PRINTM) cyan $@ start
-    post: $(PRINTM) cyan $@ stop
+    pre: $(PRINTM) magenta $@ start
+    post: $(PRINTM) magenta $@ stop
   if:repo;is:cached: (cp .cache/webpy.tar.gz src/web.tar.gz && gunzip src/web.tar.gz && cd src && tar -xvf web.tar && mv webpy web)
   else:repo: (cd src/ && git clone git@github.com:webpy/webpy.git web)
   else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 wiki:
   hook:
-    pre: $(PRINTM) yellow $@ start
-    post: $(PRINTM) yellow $@ stop
+    pre: $(PRINTM) cyan $@ start
+    post: $(PRINTM) cyan $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+
+wikiup:
+  hook:
+    pre: $(PRINTM) cyan $@ start
+    post: $(PRINTM) cyan $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 ```
 
@@ -223,21 +238,43 @@ DeOS_RM_DOTDEOS:=rm -rf .deos
 
 
 all: #clean install build venv lint
-    @Δ(data['all']['hook']['pre'])
 ifeq ($(HOSTOS),$(IS_MAC))
+    @Δ(data['all']['hook']['pre'])
     @Δ(data['all']['if:host;is:mac'])
+    @Δ(data['all']['hook']['post'])
 else
     @Δ(data['all']['else:host'])
 endif
-    @Δ(data['all']['hook']['post'])
 
 
 wiki:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['wiki']['hook']['pre'])
     -rm -rf var/wiki/
     cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
     rm -rf var/wiki/.git/
     @Δ(data['wiki']['hook']['post'])
+else
+    @Δ(data['wiki']['else:host'])
+endif
+
+
+wikiup:
+ifeq ($(HOSTOS),$(IS_MAC))
+    @Δ(data['wikiup']['hook']['pre'])
+    -rm -rf var/wiki/
+    cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+    cp meta/* var/wiki/
+    -cd var/wiki/ && git add .
+    -cd var/wiki/ && git commit -S -m "wiki: update"
+    -cd var/wiki/ && git push
+    -rm -rf var/wiki/
+    cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+    rm -rf var/wiki/.git/
+    @Δ(data['wikiup']['hook']['post'])
+else
+    @Δ(data['wikiup']['else:host'])
+endif
 
 
 cache:
@@ -288,11 +325,12 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['meta']['hook']['pre'])
     sh bootstrap.sh
     python src/hello.py
-    $(MAKE) cache
-    $(MAKE) wiki
-    $(MAKE) webpy
-    $(MAKE) terminal
-    $(MAKE) bips
+    @$(MAKE) cache
+    @$(MAKE) wiki
+    @$(MAKE) webpy
+    @$(MAKE) terminal
+    @$(MAKE) bips
+    @-$(MAKE) wikiup
     @Δ(data['meta']['hook']['post'])
 else
     @Δ(data['meta']['else:host'])
@@ -363,13 +401,13 @@ endif
 
 
 lint:
-    @Δ(data['lint']['hook']['pre'])
 ifeq ($(HOSTOS),$(IS_MAC))
+    @Δ(data['lint']['hook']['pre'])
     @Δ(data['lint']['if:host;is:mac'])
+    @Δ(data['lint']['hook']['post'])
 else
     @Δ(data['lint']['else:host'])
 endif
-    @Δ(data['lint']['hook']['post'])
 ```
 
 ## Test: Environment
@@ -397,3 +435,4 @@ echo "3"
 echo "2"
 echo "1"
 ```
+

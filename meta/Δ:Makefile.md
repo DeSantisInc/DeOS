@@ -23,6 +23,7 @@ required:
 - venv
 - webpy
 - wiki
+- wikiup
 
 properties:
   makeflags: {type: string}
@@ -109,6 +110,13 @@ properties:
       required: [pre, post]
 
   wiki:
+    type: object
+    required: [hook, 'else:host']
+    hook:
+      type: object
+      required: [pre, post]
+
+  wikiup:
     type: object
     required: [hook, 'else:host']
     hook:
@@ -201,6 +209,12 @@ wiki:
     post: $(PRINTM) cyan $@ stop
   else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
+wikiup:
+  hook:
+    pre: $(PRINTM) cyan $@ start
+    post: $(PRINTM) cyan $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+
 ```
 
 ## Template
@@ -242,6 +256,24 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['wiki']['hook']['post'])
 else
     @Δ(data['wiki']['else:host'])
+endif
+
+
+wikiup:
+ifeq ($(HOSTOS),$(IS_MAC))
+    @Δ(data['wikiup']['hook']['pre'])
+    -rm -rf var/wiki/
+    cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+    cp meta/* var/wiki/
+    -cd var/wiki/ && git add .
+    -cd var/wiki/ && git commit -S -m "wiki: update"
+    -cd var/wiki/ && git push
+    -rm -rf var/wiki/
+    cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+    rm -rf var/wiki/.git/
+    @Δ(data['wikiup']['hook']['post'])
+else
+    @Δ(data['wikiup']['else:host'])
 endif
 
 
@@ -298,6 +330,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @$(MAKE) webpy
     @$(MAKE) terminal
     @$(MAKE) bips
+    @-$(MAKE) wikiup
     @Δ(data['meta']['hook']['post'])
 else
     @Δ(data['meta']['else:host'])

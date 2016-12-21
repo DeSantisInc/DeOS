@@ -35,6 +35,24 @@ else
 endif
 
 
+wikiup:
+ifeq ($(HOSTOS),$(IS_MAC))
+	@$(PRINTM) cyan $@ start
+	-rm -rf var/wiki/
+	cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+	cp meta/* var/wiki/
+	-cd var/wiki/ && git add .
+	-cd var/wiki/ && git commit -S -m "wiki: update"
+	-cd var/wiki/ && git push
+	-rm -rf var/wiki/
+	cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+	rm -rf var/wiki/.git/
+	@$(PRINTM) cyan $@ stop
+else
+	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+endif
+
+
 cache:
 ifeq ($(HOSTOS),$(IS_MAC))
 ifeq ($(SETCACHE),$(IS_TRUE))
@@ -88,6 +106,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
 	@$(MAKE) webpy
 	@$(MAKE) terminal
 	@$(MAKE) bips
+	@-$(MAKE) wikiup
 	@$(PRINTM) yellow $@ stop
 else
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")

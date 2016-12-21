@@ -4,7 +4,8 @@
 
 ```yaml
 type: object
-required: [makeflags, default_goal, phony, sublime_targets, config_file, all]
+required: [makeflags, default_goal, phony, sublime_targets, config_file, all,
+          two]
 properties:
 
   makeflags: {type: string}
@@ -14,6 +15,14 @@ properties:
   config_file: {type: string}
 
   all:
+    type: object
+    required: [hook, 'if:host;is:mac', else]
+
+    hook:
+      type: object
+      required: [pre, post]
+
+  two:
     type: object
     required: [hook, 'if:host;is:mac', else]
 
@@ -32,6 +41,17 @@ sublime_targets: all
 config_file: .deosrc
 
 all:
+  hook:
+    pre: >
+      @echo && $(PRINT) cyan $@ start
+    post: >
+      @$(PRINT) cyan $@ stop && echo
+  if:host;is:mac: >
+    @(python src/hello.py)
+  else: >
+    @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
+
+two:
   hook:
     pre: >
       @echo && $(PRINT) cyan $@ start
@@ -67,6 +87,15 @@ all: #clean install build venv lint
 #    Δ(data['all']['else'])
 #endif
 #    Δ(data['all']['hook']['post'])
+
+two: #clean install build venv lint
+#    Δ(data['two']['hook']['pre'])
+#ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+    Δ(data['two']['if:host;is:mac'])
+#else
+#    Δ(data['two']['else'])
+#endif
+#    Δ(data['two']['hook']['post'])
 
 meta:
     sh bootstrap.sh

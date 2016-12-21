@@ -108,6 +108,11 @@ webpy.clone:
     rm -rf src/web/.git/
     rm src/web/.gitignore
     rm src/web/.travis.yml
+    mv src/web/test/ test/web/
+    mv src/web/docs/ doc/web/
+    mv src/web/README.md doc/web/README.md
+    mv src/web/LICENSE.txt doc/web/LICENSE.txt
+    mv src/web/ChangeLog.txt doc/web/ChangeLog.txt
 
 two: #clean install build venv lint
 #    Δ(data['two']['hook']['pre'])

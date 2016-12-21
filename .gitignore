@@ -1,24 +1,24 @@
-#[dotfiles]
-.DS_Store
+#[wildcards]
+*.o
+*.pyc
 
 #[dotfolders]
 .deos/
-
-#[files]
-npm-debug.log
-yarn-error.log
 
 #[folders]
 etc/blockstack/*
 etc/zerotier/*
 node_modules/
-var/log/*
+var/log/deos/*
 
-#[wildcards]
-*.o
-*.pyc
+#[dotfiles]
+.DS_Store
+
+#[files]
+npm-debug.log
+yarn-error.log
 
 #[except]
 !etc/blockstack/.gitprivate
 !etc/zerotier/.gitprivate
-!var/log/.gitprivate
+!var/log/deos/.gitprivate

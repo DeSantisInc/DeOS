@@ -5,6 +5,14 @@ version=v0.8-alpha.1
 meta=meta/Δ:.nvmrc.md
 type=nvmrc
 
+[boot/init.lz]
+meta=meta/Δ:boot:init.md
+type=lz
+
+[boot/python.lz]
+meta=meta/Δ:boot:python.md
+type=lz
+
 [src/example.sh]
 meta=meta/Δ:src:example.md
 type=sh

@@ -1,6 +1,15 @@
-[this:author:name]: # (Andrew T. DeSantis)
-[this:author:email]: # (andrew@desantis.email)
+[[[https://github.com/DeSantisInc/DeOS/raw/master/var/assets/icons/512x512.png|alt="21 Logo"|height=210px|width=210px]]](https://www.desantisinc.com)
 
-[[[https://pbs.twimg.com/profile_images/755527203434160128/HfcssWnZ.jpg|alt="DeSantis Inc. Logo"|height=210px|width=210px]]](https://www.desantisinc.com)
+# Knowledge Base
+### __[[Home]]__
 
-# [Knowledge Base](https://github.com/desantis/DeOS/wiki)
+## Projects
+* __[ΔGIT](https://github.com/DeSantisInc/DeOS/wiki/DeGIT)__
+* __[ΔNGINX](https://github.com/DeSantisInc/DeOS/wiki/DeNGINX)__
+* __[ΔOS](https://github.com/DeSantisInc/DeOS/wiki/DeOS)__
+* __[[ΔWEB]]__
+
+## Releases
+* __[ΔGIT v0.1-alpha](#)__
+* __[ΔOS v0.3-alpha](https://github.com/DeSantisInc/DeOS/wiki/%CE%94OS-:-v0.3)__
+* __[ΔWEB v0.1-alpha](#)__

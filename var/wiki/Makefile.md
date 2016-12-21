@@ -93,13 +93,6 @@ all: #clean install build venv lint
 #endif
 #    Δ(data['all']['hook']['post'])
 
-wiki: wiki.clone
-
-wiki.clone:
-    -rm -rf var/wiki/
-    cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
-    rm -rf var/wiki/.git/
-
 two: #clean install build venv lint
 #    Δ(data['two']['hook']['pre'])
 #ifeq ($(DeOS_HOST_OS),$(IS_MAC))

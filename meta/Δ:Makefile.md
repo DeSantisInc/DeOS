@@ -12,7 +12,9 @@ required:
 - sublime_targets
 - config_file
 - all
+- bips
 - meta
+- terminal
 - webpy
 - wiki
 
@@ -30,7 +32,21 @@ properties:
       type: object
       required: [pre, post]
 
+  bips:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
   meta:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  terminal:
     type: object
     required: [hook]
     hook:
@@ -72,7 +88,21 @@ all:
   else: >
     @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 
+bips:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
 meta:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
+terminal:
   hook:
     pre: >
       @$(PRINTM) cyan $@ start
@@ -97,7 +127,7 @@ wiki:
 
 ## Template
 
-```sh
+```makefile
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])
@@ -162,15 +192,19 @@ endif
     Δ(data['webpy']['hook']['post'])
 
 bips:
+    Δ(data['bips']['hook']['pre'])
     -rm -rf doc/bips
      cd doc/ && git clone git@github.com:bitcoin/bips.git
      rm -rf doc/bips/.git/
+     Δ(data['bips']['hook']['post'])
 
 terminal:
+    Δ(data['terminal']['hook']['pre'])
     -rm -rf app/terminal
     cd app/ && git clone git@github.com:zeit/hyper.git terminal
     rm -rf app/terminal/.git/
     rm -rf app/terminal/.github/
+    Δ(data['terminal']['hook']['post'])
 
 meta:
     Δ(data['meta']['hook']['pre'])

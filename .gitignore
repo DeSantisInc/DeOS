@@ -19,7 +19,6 @@ var/log/deos/*
 .nvmrc
 
 #[files]
-Makefile
 npm-debug.log
 src/example.sh
 Vagrantfile

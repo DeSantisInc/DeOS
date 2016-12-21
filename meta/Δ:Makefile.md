@@ -134,10 +134,8 @@ all:
 
 bips:
   hook:
-    pre: >
-      @$(PRINTM) yellow $@ start
-    post: >
-      @$(PRINTM) yellow $@ stop
+    pre: $(PRINTM) yellow $@ start
+    post: $(PRINTM) yellow $@ stop
 
 build:
   hook:
@@ -191,10 +189,8 @@ webpy:
 
 wiki:
   hook:
-    pre: >
-      @$(PRINTM) yellow $@ start
-    post: >
-      @$(PRINTM) yellow $@ stop
+    pre: $(PRINTM) yellow $@ start
+    post: $(PRINTM) yellow $@ stop
 
 ```
 
@@ -206,14 +202,17 @@ wiki:
 export MAKEFLAGS=Δ(data['makeflags'])
 include .deosrc
 
+
 .DEFAULT_GOAL:=Δ(data['default_goal'])
 .PHONY:Δ(data['phony'])
 .SUBLIME_TARGETS:Δ(data['sublime_targets'])
+
 
 DeOS_ADD_DOTDEOS:=mkdir .deos .deos/bin .deos/bin/darwin .deos/bin/vagrant .deos/bin/travis .deos/obj .deos/obj/darwin .deos/obj/vagrant .deos/obj/travis .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis
 DeOS_ADD_TRAVIS:=gem install travis --no-rdoc --no-ri
 DeOS_BIN_TRAVIS:=$(shell which travis)
 DeOS_RM_DOTDEOS:=rm -rf .deos
+
 
 all: #clean install build venv lint
     @Δ(data['all']['hook']['pre'])
@@ -224,12 +223,14 @@ else
 endif
     @Δ(data['all']['hook']['post'])
 
+
 wiki:
-    Δ(data['wiki']['hook']['pre'])
+    @Δ(data['wiki']['hook']['pre'])
     -rm -rf var/wiki/
     cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
     rm -rf var/wiki/.git/
-    Δ(data['wiki']['hook']['post'])
+    @Δ(data['wiki']['hook']['post'])
+
 
 cache:
 ifeq ($(SETCACHE),$(IS_TRUE))
@@ -245,12 +246,14 @@ ifeq ($(SETCACHE),$(IS_TRUE))
     @Δ(data['cache']['hook']['post'])
 endif
 
+
 bips:
-    Δ(data['bips']['hook']['pre'])
+    @Δ(data['bips']['hook']['pre'])
     -rm -rf doc/bips
     cd doc/ && git clone git@github.com:bitcoin/bips.git
     rm -rf doc/bips/.git/
-    Δ(data['bips']['hook']['post'])
+    @Δ(data['bips']['hook']['post'])
+
 
 terminal:
     @Δ(data['terminal']['hook']['pre'])
@@ -258,6 +261,7 @@ terminal:
     cd app/ && git clone git@github.com:zeit/hyper.git terminal
     rm -rf app/terminal/.git/ app/terminal/.github/
     @Δ(data['terminal']['hook']['post'])
+
 
 meta:
     @Δ(data['meta']['hook']['pre'])
@@ -269,6 +273,7 @@ meta:
     $(MAKE) terminal
     $(MAKE) bips
     @Δ(data['meta']['hook']['post'])
+
 
 webpy:
 ifeq ($(HOSTOS),$(IS_MAC))
@@ -291,26 +296,31 @@ else
     @Δ(data['webpy']['else:host'])
 endif
 
+
 clean:
     @Δ(data['clean']['hook']['pre'])
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
     @Δ(data['clean']['hook']['post'])
+
 
 install:
     @Δ(data['install']['hook']['pre'])
     @([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
     @Δ(data['install']['hook']['post'])
 
+
 build:
     @Δ(data['build']['hook']['pre'])
     @([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
     @Δ(data['build']['hook']['post'])
+
 
 venv:
     @Δ(data['venv']['hook']['pre'])
     @([ -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
     @([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
     @Δ(data['venv']['hook']['post'])
+
 
 lint:
     @Δ(data['lint']['hook']['pre'])

@@ -1,5 +1,5 @@
 all: clean install build venv lint
-	@(python src/meta.py)
+	@(python src/deos.py)
 
 clean:
 	@([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")

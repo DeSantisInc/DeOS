@@ -14,6 +14,7 @@ required:
 - all
 - bips
 - cache
+- clean
 - install
 - lint
 - meta
@@ -50,6 +51,13 @@ properties:
       type: object
       required: [pre, post]
 
+  clean:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
   install:
     type: object
     required: [hook]
@@ -59,7 +67,7 @@ properties:
 
   lint:
     type: object
-    required: [hook]
+    required: [hook, 'if:host;is:mac', else]
     hook:
       type: object
       required: [pre, post]
@@ -118,7 +126,7 @@ all:
   if:host;is:mac: >
     @(python src/hello.py)
   else: >
-    @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
+    @(echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 bips:
   hook:
@@ -128,6 +136,13 @@ bips:
       @$(PRINTM) yellow $@ stop
 
 cache:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
+clean:
   hook:
     pre: >
       @$(PRINTM) cyan $@ start
@@ -147,6 +162,10 @@ lint:
       @$(PRINTM) cyan $@ start
     post: >
       @$(PRINTM) cyan $@ stop
+  if:host;is:mac: >
+    @(travis lint .travis.yml)
+  else: >
+    @(echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 meta:
   hook:
@@ -277,7 +296,9 @@ meta:
     Δ(data['meta']['hook']['post'])
 
 clean:
+    Δ(data['clean']['hook']['pre'])
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
+    Δ(data['clean']['hook']['post'])
 
 install:
     Δ(data['install']['hook']['pre'])
@@ -295,7 +316,11 @@ venv:
 
 lint:
     Δ(data['lint']['hook']['pre'])
-    @(travis lint .travis.yml)
+ifeq ($(HOSTOS),$(IS_MAC))
+    Δ(data['lint']['if:host;is:mac'])
+else
+    Δ(data['lint']['else'])
+endif
     Δ(data['lint']['hook']['post'])
 ```
 

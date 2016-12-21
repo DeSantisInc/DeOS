@@ -12,7 +12,15 @@ required:
 - sublime_targets
 - config_file
 - all
-- two
+- bips
+- cache
+- install
+- lint
+- meta
+- terminal
+- venv
+- webpy
+- wiki
 
 properties:
   makeflags: {type: string}
@@ -28,9 +36,65 @@ properties:
       type: object
       required: [pre, post]
 
-  two:
+  bips:
     type: object
-    required: [hook, 'if:host;is:mac', else]
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  cache:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  install:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  lint:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  meta:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  terminal:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  venv:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  webpy:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  wiki:
+    type: object
+    required: [hook]
     hook:
       type: object
       required: [pre, post]
@@ -48,24 +112,77 @@ config_file: .deosrc
 all:
   hook:
     pre: >
-      @echo && $(PRINT) cyan $@ start
+      @echo && $(PRINTM) cyan $@ start
     post: >
-      @$(PRINT) cyan $@ stop && echo
+      @$(PRINTM) cyan $@ stop && echo
   if:host;is:mac: >
     @(python src/hello.py)
   else: >
     @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 
-two:
+bips:
   hook:
     pre: >
-      @echo && $(PRINT) cyan $@ start
+      @$(PRINTM) yellow $@ start
     post: >
-      @$(PRINT) cyan $@ stop && echo
-  if:host;is:mac: >
-    @(python src/hello.py)
-  else: >
-    @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
+      @$(PRINTM) yellow $@ stop
+
+cache:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
+install:
+  hook:
+    pre: >
+      @$(PRINTM) yellow $@ start
+    post: >
+      @$(PRINTM) yellow $@ stop
+
+lint:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
+meta:
+  hook:
+    pre: >
+      @$(PRINTM) yellow $@ start
+    post: >
+      @$(PRINTM) yellow $@ stop
+
+terminal:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
+venv:
+  hook:
+    pre: >
+      @$(PRINTM) yellow $@ start
+    post: >
+      @$(PRINTM) yellow $@ stop
+
+webpy:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
+wiki:
+  hook:
+    pre: >
+      @$(PRINTM) yellow $@ start
+    post: >
+      @$(PRINTM) yellow $@ stop
+
 ```
 
 ## Template
@@ -74,6 +191,7 @@ two:
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])
+include .deosrc
 
 .DEFAULT_GOAL:=Δ(data['default_goal'])
 .PHONY:Δ(data['phony'])
@@ -85,40 +203,124 @@ DeOS_BIN_TRAVIS:=$(shell which travis)
 DeOS_RM_DOTDEOS:=rm -rf .deos
 
 all: #clean install build venv lint
-#    Δ(data['all']['hook']['pre'])
-#ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+    Δ(data['all']['hook']['pre'])
+ifeq ($(HOSTOS),$(IS_MAC))
     Δ(data['all']['if:host;is:mac'])
-#else
-#    Δ(data['all']['else'])
-#endif
-#    Δ(data['all']['hook']['post'])
+else
+    Δ(data['all']['else'])
+endif
+    Δ(data['all']['hook']['post'])
 
-two: #clean install build venv lint
-#    Δ(data['two']['hook']['pre'])
-#ifeq ($(DeOS_HOST_OS),$(IS_MAC))
-    Δ(data['two']['if:host;is:mac'])
-#else
-#    Δ(data['two']['else'])
-#endif
-#    Δ(data['two']['hook']['post'])
+wiki:
+    Δ(data['wiki']['hook']['pre'])
+    -rm -rf var/wiki/
+    cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+    rm -rf var/wiki/.git/
+    Δ(data['wiki']['hook']['post'])
+
+cache:
+ifeq ($(SETCACHE),$(IS_TRUE))
+    Δ(data['cache']['hook']['pre'])
+    -rm -rf .cache/webpy/
+    cd .cache && git clone git@github.com:webpy/webpy.git
+    cd .cache && tar -cvzf webpy.tar.gz webpy/*
+    rm -rf .cache/webpy/
+
+    -rm -rf .cache/hyper/
+    cd .cache && git clone git@github.com:zeit/hyper.git
+    cd .cache && tar -cvzf hyper.tar.gz hyper/*
+    rm -rf .cache/hyper/
+    Δ(data['cache']['hook']['post'])
+endif
+
+webpy:
+    Δ(data['webpy']['hook']['pre'])
+    -rm -rf src/web/
+ifeq ($(USECACHE),$(IS_TRUE))
+    -rm src/web.tar
+    [ -f ".cache/webpy.tar.gz" ] && (cp .cache/webpy.tar.gz src/web.tar.gz && gunzip src/web.tar.gz && cd src && tar -xvf web.tar && mv webpy web) || (cd src/ && git clone git@github.com:webpy/webpy.git web)
+    -rm src/web.tar
+else
+    cd src/ && git clone git@github.com:webpy/webpy.git web
+endif
+    rm -rf src/web/.git/
+    -rm src/web/.gitignore
+    -rm src/web/.travis.yml
+    mv src/web/test/ test/web/
+    mv src/web/docs/ doc/web/
+    Δ(data['webpy']['hook']['post'])
+
+bips:
+    Δ(data['bips']['hook']['pre'])
+    -rm -rf doc/bips
+    cd doc/ && git clone git@github.com:bitcoin/bips.git
+    rm -rf doc/bips/.git/
+    Δ(data['bips']['hook']['post'])
+
+terminal:
+    Δ(data['terminal']['hook']['pre'])
+    -rm -rf app/terminal
+    cd app/ && git clone git@github.com:zeit/hyper.git terminal
+    rm -rf app/terminal/.git/
+    rm -rf app/terminal/.github/
+    Δ(data['terminal']['hook']['post'])
 
 meta:
+    Δ(data['meta']['hook']['pre'])
     sh bootstrap.sh
     python src/hello.py
+    $(MAKE) cache
+    $(MAKE) wiki
+    $(MAKE) webpy
+    $(MAKE) terminal
+    $(MAKE) bips
+    Δ(data['meta']['hook']['post'])
 
 clean:
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
 
 install:
+    Δ(data['install']['hook']['pre'])
     @([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
+    Δ(data['install']['hook']['post'])
 
 build:
     @([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
 
 venv:
+    Δ(data['venv']['hook']['pre'])
     @([ -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
     @([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
+    Δ(data['venv']['hook']['post'])
 
 lint:
+    Δ(data['lint']['hook']['pre'])
     @(travis lint .travis.yml)
+    Δ(data['lint']['hook']['post'])
+```
+
+## Test: Environment
+
+```yaml
+a: 1
+b: 2
+c: 3
+```
+
+## Test: Pass
+
+```sh
+#!/bin/sh
+echo "1"
+echo "2"
+echo "3"
+```
+
+## Test: Fail
+
+```sh
+#!/bin/sh
+echo "3"
+echo "2"
+echo "1"
 ```

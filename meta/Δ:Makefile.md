@@ -96,7 +96,7 @@ properties:
 
   venv:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
@@ -178,6 +178,7 @@ venv:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 webpy:
   hook:
@@ -316,10 +317,14 @@ build:
 
 
 venv:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['venv']['hook']['pre'])
     @([ -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
     @([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
     @Δ(data['venv']['hook']['post'])
+else
+    @Δ(data['webpy']['else:host'])
+endif
 
 
 lint:

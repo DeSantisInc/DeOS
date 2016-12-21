@@ -13,6 +13,7 @@ required:
 - config_file
 - all
 - bips
+- build
 - cache
 - clean
 - install
@@ -38,6 +39,13 @@ properties:
       required: [pre, post]
 
   bips:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  build:
     type: object
     required: [hook]
     hook:
@@ -129,6 +137,13 @@ all:
     @(echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 bips:
+  hook:
+    pre: >
+      @$(PRINTM) yellow $@ start
+    post: >
+      @$(PRINTM) yellow $@ stop
+
+build:
   hook:
     pre: >
       @$(PRINTM) yellow $@ start
@@ -306,7 +321,9 @@ install:
     Δ(data['install']['hook']['post'])
 
 build:
+    Δ(data['build']['hook']['pre'])
     @([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
+    Δ(data['build']['hook']['post'])
 
 venv:
     Δ(data['venv']['hook']['pre'])

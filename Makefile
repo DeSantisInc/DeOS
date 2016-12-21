@@ -14,7 +14,7 @@ build:
 
 venv:
 	@([ -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
-	@([ ! -d ".deos/venv" ] && mkdir .deos/venv || echo "$@:else")
+	@([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
 
 lint:
 	@(travis lint .travis.yml)

@@ -1,5 +1,5 @@
 export MAKEFLAGS=--no-print-directory
-DeOS_ADD_DOTDEOS:=mkdir .deos .deos/bin .deos/obj .deos/venv
+DeOS_ADD_DOTDEOS:=mkdir .deos .deos/bin .deos/bin/darwin .deos/bin/vagrant .deos/bin/travis .deos/obj .deos/obj/darwin .deos/obj/vagrant .deos/obj/travis .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis
 DeOS_ADD_TRAVIS:=gem install travis --no-rdoc --no-ri
 DeOS_BIN_TRAVIS:=$(shell which travis)
 DeOS_RM_DOTDEOS:=rm -rf .deos

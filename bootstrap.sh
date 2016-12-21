@@ -63,7 +63,7 @@ deos_clean() {
 deos_darwin() {
   deos_clean
   deos_init
-  #deos_venv "darwin"
+  deos_venv "darwin"
   deos_bin
   .deos/bin/darwin/tao
   EXIT_SUCCESS

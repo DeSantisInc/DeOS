@@ -74,6 +74,7 @@ two:
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])
+include .deosrc
 
 .DEFAULT_GOAL:=Δ(data['default_goal'])
 .PHONY:Δ(data['phony'])

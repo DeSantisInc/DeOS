@@ -9,6 +9,8 @@ npm-debug.log
 yarn-error.log
 
 #[folders]
+etc/blockstack/*
+etc/zerotier/*
 node_modules/
 var/log/*
 
@@ -17,4 +19,6 @@ var/log/*
 *.pyc
 
 #[except]
+!etc/blockstack/.gitprivate
+!etc/zerotier/.gitprivate
 !var/log/.gitprivate

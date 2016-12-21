@@ -38,6 +38,6 @@ URL: ["https://atlas.hashicorp.com/ubuntu/trusty64"]
 Error:
 ```
 
-Try the solution here: http://stackoverflow.com/a/40521433
+Try the solution here: https://stackoverflow.com/a/40521433
 
 ---

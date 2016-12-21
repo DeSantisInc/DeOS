@@ -9,9 +9,11 @@ import jsonschema
 import web
 import ruamel.yaml as yaml
 
-TEMPLATE_PATH = "src/template/"
+TEMPLATE_PATH = "src/template"
 
-# config = configobj.ConfigObj('Deosfile')
+def load_config(fname):
+    config = configobj.ConfigObj(fname)
+    return config
 
 def read(fname):
     data = open(TEMPLATE_PATH+fname).read()
@@ -56,12 +58,18 @@ def load():
     return data
 
 def main():
-    data = load()
-    if isinstance(data, dict):
-        code = build('deosrc.tao.mk', data['.deosrc'])
-        write('var/build/.deosrc', code)
-        code = build('makefile.tao.mk', data['Makefile'])
-        write('var/build/Makefile', code)
+    #data = load()
+    #if isinstance(data, dict):
+    #    code = build('deosrc.tao.mk', data['.deosrc'])
+    #    write('var/build/.deosrc', code)
+    #    code = build('makefile.tao.mk', data['Makefile'])
+    #    write('var/build/Makefile', code)
+    config = load_config('Deosfile')
+    for key, value in config.iteritems():
+        if key != '__meta__' and 'type' in value:
+            if value['type'] == 'make':
+                template_file = "%s/%s.tao.mk" % (TEMPLATE_PATH, key)
+                print(template_file)
 
 if __name__ == "__main__":
     main()

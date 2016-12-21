@@ -116,15 +116,22 @@ webpy: webpy.clone
 
 webpy.clone:
     -rm -rf src/web/
+ifeq ($(USECACHE),$(IS_TRUE))
+    -rm src/web.tar
+    [ -f ".cache/webpy.tar.gz" ] && (cp .cache/webpy.tar.gz src/web.tar.gz && gunzip src/web.tar.gz && cd src && tar -xvf web.tar && mv webpy web) || (cd src/ && git clone git@github.com:webpy/webpy.git web)
+    -rm src/web.tar
+else
     cd src/ && git clone git@github.com:webpy/webpy.git web
+endif
     rm -rf src/web/.git/
-    rm src/web/.gitignore
-    rm src/web/.travis.yml
+    -rm src/web/.gitignore
+    -rm src/web/.travis.yml
     mv src/web/test/ test/web/
     mv src/web/docs/ doc/web/
     mv src/web/README.md doc/web/README.md
     mv src/web/LICENSE.txt doc/web/LICENSE.txt
     mv src/web/ChangeLog.txt doc/web/ChangeLog.txt
+
 
 bips: bips.clone
 
@@ -153,7 +160,7 @@ two: #clean install build venv lint
 meta:
     sh bootstrap.sh
     python src/hello.py
-    $(MAKE) cache
+    #$(MAKE) cache
     $(MAKE) wiki
     $(MAKE) webpy
     $(MAKE) terminal

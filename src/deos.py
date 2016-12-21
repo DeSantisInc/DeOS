@@ -111,5 +111,5 @@ def main():
                                 with open(name,'w') as f:
                                     f.write(code)
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()

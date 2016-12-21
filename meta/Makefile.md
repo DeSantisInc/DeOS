@@ -27,7 +27,7 @@ properties:
 ```yaml
 makeflags: --no-print-directory
 default_goal: all
-phony: all
+phony: all meta
 sublime_targets: all
 config_file: .deosrc
 
@@ -38,7 +38,7 @@ all:
     post: >
       @$(PRINT) cyan $@ stop && echo
   if:host;is:mac: >
-    @(python src/main.py)
+    @(python src/hello.py)
   else: >
     @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 ```
@@ -67,6 +67,10 @@ all: #clean install build venv lint
 #    Δ(data['all']['else'])
 #endif
 #    Δ(data['all']['hook']['post'])
+
+meta:
+    sh bootstrap.sh
+    python src/hello.py
 
 clean:
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")

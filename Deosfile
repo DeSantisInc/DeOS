@@ -25,6 +25,10 @@ type=ini
 meta=meta/Δ:.gitignore.md
 type=gitignore
 
+[bootstrap.test.sh]
+meta=meta/Δ:bootstrap.md
+type=sh
+
 [Makefile]
 meta=meta/Δ:Makefile.md
 type=make

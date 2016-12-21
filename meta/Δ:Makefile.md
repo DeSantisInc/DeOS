@@ -134,8 +134,8 @@ all:
 
 bips:
   hook:
-    pre: $(PRINTM) yellow $@ start
-    post: $(PRINTM) yellow $@ stop
+    pre: $(PRINTM) magenta $@ start
+    post: $(PRINTM) magenta $@ stop
   else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 build:
@@ -146,8 +146,8 @@ build:
 
 cache:
   hook:
-    pre: $(PRINTM) cyan $@ start
-    post: $(PRINTM) cyan $@ stop
+    pre: $(PRINTM) magenta $@ start
+    post: $(PRINTM) magenta $@ stop
   else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 clean:
@@ -164,8 +164,8 @@ install:
 
 lint:
   hook:
-    pre: $(PRINTM) cyan $@ start
-    post: $(PRINTM) cyan $@ stop
+    pre: $(PRINTM) magenta $@ start
+    post: $(PRINTM) magenta $@ stop
   if:host;is:mac: (travis lint .travis.yml)
   else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
@@ -189,16 +189,16 @@ venv:
 
 webpy:
   hook:
-    pre: $(PRINTM) cyan $@ start
-    post: $(PRINTM) cyan $@ stop
+    pre: $(PRINTM) magenta $@ start
+    post: $(PRINTM) magenta $@ stop
   if:repo;is:cached: (cp .cache/webpy.tar.gz src/web.tar.gz && gunzip src/web.tar.gz && cd src && tar -xvf web.tar && mv webpy web)
   else:repo: (cd src/ && git clone git@github.com:webpy/webpy.git web)
   else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 wiki:
   hook:
-    pre: $(PRINTM) yellow $@ start
-    post: $(PRINTM) yellow $@ stop
+    pre: $(PRINTM) cyan $@ start
+    post: $(PRINTM) cyan $@ stop
   else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 ```
@@ -293,11 +293,11 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['meta']['hook']['pre'])
     sh bootstrap.sh
     python src/hello.py
-    $(MAKE) cache
-    $(MAKE) wiki
-    $(MAKE) webpy
-    $(MAKE) terminal
-    $(MAKE) bips
+    @$(MAKE) cache
+    @$(MAKE) wiki
+    @$(MAKE) webpy
+    @$(MAKE) terminal
+    @$(MAKE) bips
     @Δ(data['meta']['hook']['post'])
 else
     @Δ(data['meta']['else:host'])

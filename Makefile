@@ -25,11 +25,11 @@ endif
 
 wiki:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@$(PRINTM) yellow $@ start
+	@$(PRINTM) cyan $@ start
 	-rm -rf var/wiki/
 	cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
 	rm -rf var/wiki/.git/
-	@$(PRINTM) yellow $@ stop
+	@$(PRINTM) cyan $@ stop
 else
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -38,7 +38,7 @@ endif
 cache:
 ifeq ($(HOSTOS),$(IS_MAC))
 ifeq ($(SETCACHE),$(IS_TRUE))
-	@$(PRINTM) cyan $@ start
+	@$(PRINTM) magenta $@ start
 	-rm -rf .cache/webpy/
 	cd .cache && git clone git@github.com:webpy/webpy.git
 	cd .cache && tar -cvzf webpy.tar.gz webpy/*
@@ -47,7 +47,7 @@ ifeq ($(SETCACHE),$(IS_TRUE))
 	cd .cache && git clone git@github.com:zeit/hyper.git
 	cd .cache && tar -cvzf hyper.tar.gz hyper/*
 	rm -rf .cache/hyper/
-	@$(PRINTM) cyan $@ stop
+	@$(PRINTM) magenta $@ stop
 endif
 else
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
@@ -56,11 +56,11 @@ endif
 
 bips:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@$(PRINTM) yellow $@ start
+	@$(PRINTM) magenta $@ start
 	-rm -rf doc/bips
 	cd doc/ && git clone git@github.com:bitcoin/bips.git
 	rm -rf doc/bips/.git/
-	@$(PRINTM) yellow $@ stop
+	@$(PRINTM) magenta $@ stop
 else
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -83,11 +83,11 @@ ifeq ($(HOSTOS),$(IS_MAC))
 	@$(PRINTM) yellow $@ start
 	sh bootstrap.sh
 	python src/hello.py
-	$(MAKE) cache
-	$(MAKE) wiki
-	$(MAKE) webpy
-	$(MAKE) terminal
-	$(MAKE) bips
+	@$(MAKE) cache
+	@$(MAKE) wiki
+	@$(MAKE) webpy
+	@$(MAKE) terminal
+	@$(MAKE) bips
 	@$(PRINTM) yellow $@ stop
 else
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
@@ -96,7 +96,7 @@ endif
 
 webpy:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@$(PRINTM) cyan $@ start
+	@$(PRINTM) magenta $@ start
 	-rm -rf src/web/
 ifeq ($(USECACHE),$(IS_TRUE))
 	-rm src/web.tar
@@ -110,7 +110,7 @@ endif
 	-rm src/web/.travis.yml
 	mv src/web/test/ test/web/
 	mv src/web/docs/ doc/web/
-	@$(PRINTM) cyan $@ stop
+	@$(PRINTM) magenta $@ stop
 else
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -159,9 +159,9 @@ endif
 
 lint:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@$(PRINTM) cyan $@ start
+	@$(PRINTM) magenta $@ start
 	@(travis lint .travis.yml)
-	@$(PRINTM) cyan $@ stop
+	@$(PRINTM) magenta $@ stop
 else
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif

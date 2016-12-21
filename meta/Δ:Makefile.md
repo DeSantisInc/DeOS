@@ -114,6 +114,14 @@ webpy.clone:
     mv src/web/LICENSE.txt doc/web/LICENSE.txt
     mv src/web/ChangeLog.txt doc/web/ChangeLog.txt
 
+terminal: terminal.clone
+
+terminal.clone:
+    -rm -rf app/terminal
+    cd app/ && git clone git@github.com:zeit/hyper.git terminal
+    rm -rf app/terminal/.git/
+    rm -rf app/terminal/.github/
+
 two: #clean install build venv lint
 #    Δ(data['two']['hook']['pre'])
 #ifeq ($(DeOS_HOST_OS),$(IS_MAC))
@@ -128,6 +136,7 @@ meta:
     python src/hello.py
     $(MAKE) wiki
     $(MAKE) webpy
+    $(MAKE) terminal
 
 clean:
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")

@@ -20,16 +20,16 @@ properties:
   config_file: {type: string}
   all:
     type: object
+    required: [hook, 'if:host;is:mac', else]
     hook:
       type: object
       required: [pre, post]
-    required: [hook, 'if:host;is:mac', else]
   two:
     type: object
+    required: [hook, 'if:host;is:mac', else]
     hook:
       type: object
       required: [pre, post]
-    required: [hook, 'if:host;is:mac', else]
 ```
 
 ## Environment

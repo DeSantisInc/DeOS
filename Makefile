@@ -4,6 +4,6 @@ ifeq ($(HOSTOS),Darwin)
 	include make-darwin.mk
 endif
 
-ifeq ($(OSTYPE),Linux)
+ifeq ($(HOSTOS),Linux)
 	include make-travis.mk
 endif

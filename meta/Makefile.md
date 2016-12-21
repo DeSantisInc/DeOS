@@ -27,7 +27,7 @@ properties:
 ```yaml
 makeflags: --no-print-directory
 default_goal: all
-phony: all bin build check chmod clean init rm sh venv vm
+phony: all
 sublime_targets: all
 config_file: .deosrc
 
@@ -49,13 +49,9 @@ all:
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])
-
 .DEFAULT_GOAL:=Δ(data['default_goal'])
-
 .PHONY:Δ(data['phony'])
-
 .SUBLIME_TARGETS:Δ(data['sublime_targets'])
-
 include Δ(data['config_file'])
 
 all:
@@ -66,4 +62,20 @@ else
     Δ(data['all']['else'])
 endif
     Δ(data['all']['hook']['post'])
+
+clean:
+    @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
+
+install:
+    @([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
+
+build:
+    @([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
+
+venv:
+    @([ -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
+    @([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
+
+lint:
+    @(travis lint .travis.yml)
 ```

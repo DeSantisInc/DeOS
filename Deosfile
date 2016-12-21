@@ -1,13 +1,13 @@
 author=atd@gmx.it
 version=v0.8-alpha.1
 
-[.deosrc]
-meta=meta/.deosrc.md
-type=make
+#[.deosrc]
+#meta=meta/.deosrc.md
+#type=make
 
-[.nvmrc]
-meta=meta/.nvmrc.md
-type=nvmrc
+#[.nvmrc]
+#meta=meta/.nvmrc.md
+#type=nvmrc
 
 [Makefile]
 meta=meta/Makefile.md

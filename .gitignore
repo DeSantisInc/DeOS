@@ -17,6 +17,7 @@ var/log/deos/*
 .DS_Store
 
 #[files]
+Makefile
 npm-debug.log
 yarn-error.log
 

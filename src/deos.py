@@ -92,6 +92,7 @@ def main():
                 with open(value['meta']) as f:
                     raw=f.read()
             if isinstance(raw,basestring):
+                print(key)
                 data=raw
                 name=get_name(data)
                 if isinstance(name,basestring):
@@ -107,7 +108,7 @@ def main():
                             template=get_template(data,raw,debug=debug)
                             if isinstance(template,basestring):
                                 code = build(template,env)
-                                with open('var/build/%s'%name,'w') as f:
+                                with open(name,'w') as f:
                                     f.write(code)
 
 if __name__ == "__main__":

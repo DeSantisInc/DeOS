@@ -43,7 +43,7 @@ all:
     @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 ```
 
-### Template
+## Template
 
 ```makefile
 Δ with (data=None)

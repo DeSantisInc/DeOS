@@ -257,7 +257,7 @@ meta:
     Δ(data['meta']['hook']['pre'])
     sh bootstrap.sh
     python src/hello.py
-    #$(MAKE) cache
+    $(MAKE) cache
     $(MAKE) wiki
     $(MAKE) webpy
     $(MAKE) terminal

@@ -100,6 +100,15 @@ wiki.clone:
     cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
     rm -rf var/wiki/.git/
 
+webpy: webpy.clone
+
+webpy.clone:
+    -rm -rf src/web/
+    cd src/ && git clone git@github.com:webpy/webpy.git web
+    rm -rf src/web/.git/
+    rm src/web/.gitignore
+    rm src/web/.travis.yml
+
 two: #clean install build venv lint
 #    Δ(data['two']['hook']['pre'])
 #ifeq ($(DeOS_HOST_OS),$(IS_MAC))

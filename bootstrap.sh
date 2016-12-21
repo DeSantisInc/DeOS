@@ -43,7 +43,8 @@ deos_init() {
 }
 
 deos_clean() {
-  [ -d ".deos" ] && rm -rf .deos
+  [ -d ".deos" ] && rm -rf .deos/
+  [ -d "src/web" ] && rm -rf src/web/
   [ -f "src/example.sh" ] && rm src/example.sh
   [ -f ".editorconfig" ] && rm .editorconfig
   [ -f ".gitignore" ] && rm .gitignore

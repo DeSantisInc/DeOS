@@ -9,8 +9,6 @@ import jsonschema
 import web
 import ruamel.yaml as yaml
 
-TEMPLATE_PATH = "src/template"
-
 def load_config(fname):
     config = configobj.ConfigObj(fname)
     return config
@@ -41,35 +39,43 @@ def build(fname, data):
                          ).replace('\n\nendif', '\nendif'
                          )[1:]
 
-def load():
-    data, schema = None, None
-    with open('Deosfile') as f:
-        raw = f.read().split('---')
-    if isinstance(raw, list):
-        if isinstance(raw[1], basestring):
-            data = yaml.safe_load(raw[2])
-        if isinstance(raw[0], basestring):
-            schema = yaml.safe_load(raw[1])
-    if isinstance(data, dict) and isinstance(schema, dict):
-        jsonschema.validate(data, schema)
-        print(json.dumps(data, sort_keys=True, indent=2))
+def get_name(data, debug=False):
+    res = None
+    try:
+        name = data.split('\n')[0]
+        if name[0:3] == '# `' and name[-1] == '`':
+            res = name[3:-1]
+    except:
+        name = None
     else:
-        return None
+        if debug:
+            print(name)
+    finally:
+        return res
+
+def load(fname):
+    data, name, raw, schema = None, None, None, None
+    with open(fname) as f:
+        raw = f.read()
+    if isinstance(raw, basestring):
+        data = raw
+        name = get_name(data)
+        if isinstance(name, basestring):
+            raw = raw.split('\n')[1:]
+            if '## Environment' in raw:
+                print('env: found')
+            if '## Schema' in raw:
+                print('schema: found')
+            if '## Template' in raw:
+                print('template: found')
     return data
 
 def main():
-    #data = load()
-    #if isinstance(data, dict):
-    #    code = build('deosrc.tao.mk', data['.deosrc'])
-    #    write('var/build/.deosrc', code)
-    #    code = build('makefile.tao.mk', data['Makefile'])
-    #    write('var/build/Makefile', code)
     config = load_config('Deosfile')
     for key, value in config.iteritems():
         if key not in ('author', 'version') and 'type' in value:
             if value['type'] == 'make':
-                template_file = "%s/%s.tao.mk" % (TEMPLATE_PATH, key)
-                print(template_file)
+                data = load(value['meta'])
 
 if __name__ == "__main__":
     main()

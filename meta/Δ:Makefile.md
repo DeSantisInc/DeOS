@@ -100,6 +100,17 @@ wiki.clone:
     cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
     rm -rf var/wiki/.git/
 
+cache:
+    -rm -rf .cache/webpy/
+    cd .cache && git clone git@github.com:webpy/webpy.git
+    cd .cache && tar -cvzf webpy.tar.gz webpy/*
+    rm -rf .cache/webpy/
+
+    -rm -rf .cache/hyper/
+    cd .cache && git clone git@github.com:zeit/hyper.git
+    cd .cache && tar -cvzf hyper.tar.gz hyper/*
+    rm -rf .cache/hyper/
+
 webpy: webpy.clone
 
 webpy.clone:
@@ -141,6 +152,7 @@ two: #clean install build venv lint
 meta:
     sh bootstrap.sh
     python src/hello.py
+    $(MAKE) cache
     $(MAKE) wiki
     $(MAKE) webpy
     $(MAKE) terminal

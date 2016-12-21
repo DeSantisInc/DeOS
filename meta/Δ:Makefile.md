@@ -126,6 +126,8 @@ two: #clean install build venv lint
 meta:
     sh bootstrap.sh
     python src/hello.py
+    $(MAKE) wiki
+    $(MAKE) webpy
 
 clean:
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")

@@ -5,6 +5,18 @@ version=v0.8-alpha.1
 #meta=meta/.nvmrc.md
 #type=nvmrc
 
+[src/example.sh]
+meta=meta/example.md
+type=sh
+
+[.editorconfig]
+meta=meta/.editorconfig.md
+type=ini
+
+[.gitignore]
+meta=meta/.gitignore.md
+type=gitignore
+
 [Makefile]
 meta=meta/Makefile.md
 type=make

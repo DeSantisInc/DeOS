@@ -44,6 +44,9 @@ deos_init() {
 
 deos_clean() {
   [ -d ".deos" ] && rm -rf .deos
+  [ -f "src/example.sh" ] && rm src/example.sh
+  [ -f ".editorconfig" ] && rm .editorconfig
+  [ -f ".gitignore" ] && rm .gitignore
   [ -f "Makefile" ] && rm Makefile
 }
 

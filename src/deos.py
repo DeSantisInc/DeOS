@@ -13,7 +13,8 @@ import ruamel.yaml as yaml
 def build(template,data):
     code=web.template.Template(template.replace('$','$$'
                                       ).replace('Δ with', '$def with'
-                                      ).replace('Δ','$'))
+                                      ).replace('Δ','$'
+                                      ).replace('#!/bin/sh','##!/bin/sh'))
     return str(code(data)).replace(4*' ','\t'
                          ).replace('$(False)','$(FALSE)'
                          ).replace('$(True)','$(TRUE)'
@@ -88,7 +89,8 @@ def main():
         if key not in ('author','version') and 'type' in value:
             debug=False
             data,env,name,raw,schema,template=None,None,None,None,None,None
-            if value['type']=='make':
+            if value['type']=='make' or value['type']=='sh'\
+                or value['type']=='gitignore' or value['type']=='ini':
                 with open(value['meta']) as f:
                     raw=f.read()
             if isinstance(raw,basestring):

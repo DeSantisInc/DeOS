@@ -40,14 +40,14 @@ properties:
 
   bips:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
 
   build:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
@@ -82,21 +82,21 @@ properties:
 
   meta:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
 
   terminal:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
 
   venv:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
@@ -136,11 +136,13 @@ bips:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 build:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 cache:
   hook:
@@ -168,16 +170,19 @@ meta:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 terminal:
   hook:
     pre: $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 venv:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 webpy:
   hook:
@@ -248,22 +253,31 @@ endif
 
 
 bips:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['bips']['hook']['pre'])
     -rm -rf doc/bips
     cd doc/ && git clone git@github.com:bitcoin/bips.git
     rm -rf doc/bips/.git/
     @Δ(data['bips']['hook']['post'])
+else
+    @Δ(data['bips']['else:host'])
+endif
 
 
 terminal:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['terminal']['hook']['pre'])
     -rm -rf app/terminal
     cd app/ && git clone git@github.com:zeit/hyper.git terminal
     rm -rf app/terminal/.git/ app/terminal/.github/
     @Δ(data['terminal']['hook']['post'])
+else
+    @Δ(data['terminal']['else:host'])
+endif
 
 
 meta:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['meta']['hook']['pre'])
     sh bootstrap.sh
     python src/hello.py
@@ -273,6 +287,9 @@ meta:
     $(MAKE) terminal
     $(MAKE) bips
     @Δ(data['meta']['hook']['post'])
+else
+    @Δ(data['meta']['else:host'])
+endif
 
 
 webpy:
@@ -310,16 +327,24 @@ install:
 
 
 build:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['build']['hook']['pre'])
     @([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
     @Δ(data['build']['hook']['post'])
+else
+    @Δ(data['build']['else:host'])
+endif
 
 
 venv:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['venv']['hook']['pre'])
     @([ -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
     @([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
     @Δ(data['venv']['hook']['post'])
+else
+    @Δ(data['venv']['else:host'])
+endif
 
 
 lint:

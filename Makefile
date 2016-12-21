@@ -32,6 +32,7 @@ wiki:
 
 
 cache:
+ifeq ($(HOSTOS),$(IS_MAC))
 ifeq ($(SETCACHE),$(IS_TRUE))
 	@$(PRINTM) cyan $@ start
 	-rm -rf .cache/webpy/
@@ -43,6 +44,9 @@ ifeq ($(SETCACHE),$(IS_TRUE))
 	cd .cache && tar -cvzf hyper.tar.gz hyper/*
 	rm -rf .cache/hyper/
 	@$(PRINTM) cyan $@ stop
+endif
+else
+	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
 
 
@@ -121,9 +125,13 @@ install:
 
 
 build:
+ifeq ($(HOSTOS),$(IS_MAC))
 	@$(PRINTM) yellow $@ start
 	@([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
 	@$(PRINTM) yellow $@ stop
+else
+	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+endif
 
 
 venv:

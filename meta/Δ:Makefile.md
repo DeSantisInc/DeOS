@@ -47,14 +47,14 @@ properties:
 
   build:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
 
   cache:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
@@ -142,11 +142,13 @@ build:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 cache:
   hook:
     pre: $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 clean:
   hook:
@@ -237,6 +239,7 @@ wiki:
 
 
 cache:
+ifeq ($(HOSTOS),$(IS_MAC))
 ifeq ($(SETCACHE),$(IS_TRUE))
     @Δ(data['cache']['hook']['pre'])
     -rm -rf .cache/webpy/
@@ -248,6 +251,9 @@ ifeq ($(SETCACHE),$(IS_TRUE))
     cd .cache && tar -cvzf hyper.tar.gz hyper/*
     rm -rf .cache/hyper/
     @Δ(data['cache']['hook']['post'])
+endif
+else
+    @Δ(data['cache']['else:host'])
 endif
 
 
@@ -326,9 +332,13 @@ install:
 
 
 build:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['build']['hook']['pre'])
     @([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
     @Δ(data['build']['hook']['post'])
+else
+    @Δ(data['build']['else:host'])
+endif
 
 
 venv:

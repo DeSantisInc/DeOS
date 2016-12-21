@@ -14,7 +14,8 @@ def build(template,data):
     code=web.template.Template(template.replace('$','$$'
                                       ).replace('Δ with', '$def with'
                                       ).replace('Δ','$'
-                                      ).replace('#!/bin/sh','##!/bin/sh'))
+                                      ).replace('#!/bin/sh','##!/bin/sh'
+                                      ).replace('# -*-','## -*-'))
     return str(code(data)).replace(4*' ','\t'
                          ).replace('$(False)','$(FALSE)'
                          ).replace('$(True)','$(TRUE)'
@@ -91,7 +92,7 @@ def main():
             data,env,name,raw,schema,template=None,None,None,None,None,None
             if value['type']=='make' or value['type']=='sh'\
                 or value['type']=='gitignore' or value['type']=='ini'\
-                or value['type']=='nvmrc':
+                or value['type']=='nvmrc' or value['type']=='ruby':
                 with open(value['meta']) as f:
                     raw=f.read()
             if isinstance(raw,basestring):

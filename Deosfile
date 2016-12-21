@@ -20,3 +20,7 @@ type=gitignore
 [Makefile]
 meta=meta/Δ:Makefile.md
 type=make
+
+[Vagrantfile]
+meta=meta/Δ:Vagrantfile.md
+type=ruby

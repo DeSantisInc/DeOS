@@ -123,9 +123,9 @@ all:
 bips:
   hook:
     pre: >
-      @$(PRINTM) cyan $@ start
+      @$(PRINTM) yellow $@ start
     post: >
-      @$(PRINTM) cyan $@ stop
+      @$(PRINTM) yellow $@ stop
 
 cache:
   hook:
@@ -137,9 +137,9 @@ cache:
 install:
   hook:
     pre: >
-      @$(PRINTM) cyan $@ start
+      @$(PRINTM) yellow $@ start
     post: >
-      @$(PRINTM) cyan $@ stop
+      @$(PRINTM) yellow $@ stop
 
 lint:
   hook:
@@ -151,9 +151,9 @@ lint:
 meta:
   hook:
     pre: >
-      @$(PRINTM) cyan $@ start
+      @$(PRINTM) yellow $@ start
     post: >
-      @$(PRINTM) cyan $@ stop
+      @$(PRINTM) yellow $@ stop
 
 terminal:
   hook:
@@ -165,9 +165,9 @@ terminal:
 venv:
   hook:
     pre: >
-      @$(PRINTM) cyan $@ start
+      @$(PRINTM) yellow $@ start
     post: >
-      @$(PRINTM) cyan $@ stop
+      @$(PRINTM) yellow $@ stop
 
 webpy:
   hook:
@@ -179,9 +179,9 @@ webpy:
 wiki:
   hook:
     pre: >
-      @$(PRINTM) cyan $@ start
+      @$(PRINTM) yellow $@ start
     post: >
-      @$(PRINTM) cyan $@ stop
+      @$(PRINTM) yellow $@ stop
 
 ```
 
@@ -248,9 +248,6 @@ endif
     -rm src/web/.travis.yml
     mv src/web/test/ test/web/
     mv src/web/docs/ doc/web/
-    mv src/web/README.md doc/web/README.md
-    mv src/web/LICENSE.txt doc/web/LICENSE.txt
-    mv src/web/ChangeLog.txt doc/web/ChangeLog.txt
     Δ(data['webpy']['hook']['post'])
 
 bips:

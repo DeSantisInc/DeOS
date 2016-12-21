@@ -33,7 +33,7 @@ properties:
 
   all:
     type: object
-    required: [hook, 'if:host;is:mac', else]
+    required: [hook, 'if:host;is:mac', 'else:host']
     hook:
       type: object
       required: [pre, post]
@@ -61,21 +61,21 @@ properties:
 
   clean:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
 
   install:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
 
   lint:
     type: object
-    required: [hook, 'if:host;is:mac', else]
+    required: [hook, 'if:host;is:mac', 'else:host']
     hook:
       type: object
       required: [pre, post]
@@ -130,7 +130,7 @@ all:
     pre: echo && $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop && echo
   if:host;is:mac: (python src/hello.py)
-  else: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 bips:
   hook:
@@ -154,18 +154,20 @@ clean:
   hook:
     pre: $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 install:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 lint:
   hook:
     pre: $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop
   if:host;is:mac: (travis lint .travis.yml)
-  else: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 meta:
   hook:
@@ -225,7 +227,7 @@ all: #clean install build venv lint
 ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['all']['if:host;is:mac'])
 else
-    @Δ(data['all']['else'])
+    @Δ(data['all']['else:host'])
 endif
     @Δ(data['all']['hook']['post'])
 
@@ -320,15 +322,23 @@ endif
 
 
 clean:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['clean']['hook']['pre'])
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
     @Δ(data['clean']['hook']['post'])
+else
+    @Δ(data['clean']['else:host'])
+endif
 
 
 install:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['install']['hook']['pre'])
     @([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
     @Δ(data['install']['hook']['post'])
+else
+    @Δ(data['install']['else:host'])
+endif
 
 
 build:
@@ -357,7 +367,7 @@ lint:
 ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['lint']['if:host;is:mac'])
 else
-    @Δ(data['lint']['else'])
+    @Δ(data['lint']['else:host'])
 endif
     @Δ(data['lint']['hook']['post'])
 ```

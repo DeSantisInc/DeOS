@@ -110,7 +110,7 @@ properties:
 
   wiki:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
@@ -199,6 +199,7 @@ wiki:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 ```
 
@@ -223,21 +224,25 @@ DeOS_RM_DOTDEOS:=rm -rf .deos
 
 
 all: #clean install build venv lint
-    @Δ(data['all']['hook']['pre'])
 ifeq ($(HOSTOS),$(IS_MAC))
+    @Δ(data['all']['hook']['pre'])
     @Δ(data['all']['if:host;is:mac'])
+    @Δ(data['all']['hook']['post'])
 else
     @Δ(data['all']['else:host'])
 endif
-    @Δ(data['all']['hook']['post'])
 
 
 wiki:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['wiki']['hook']['pre'])
     -rm -rf var/wiki/
     cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
     rm -rf var/wiki/.git/
     @Δ(data['wiki']['hook']['post'])
+else
+    @Δ(data['wiki']['else:host'])
+endif
 
 
 cache:
@@ -363,13 +368,13 @@ endif
 
 
 lint:
-    @Δ(data['lint']['hook']['pre'])
 ifeq ($(HOSTOS),$(IS_MAC))
+    @Δ(data['lint']['hook']['pre'])
     @Δ(data['lint']['if:host;is:mac'])
+    @Δ(data['lint']['hook']['post'])
 else
     @Δ(data['lint']['else:host'])
 endif
-    @Δ(data['lint']['hook']['post'])
 ```
 
 ## Test: Environment

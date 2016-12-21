@@ -14,21 +14,25 @@ DeOS_RM_DOTDEOS:=rm -rf .deos
 
 
 all: #clean install build venv lint
-	@echo && $(PRINTM) cyan $@ start
 ifeq ($(HOSTOS),$(IS_MAC))
+	@echo && $(PRINTM) cyan $@ start
 	@(python src/hello.py)
+	@$(PRINTM) cyan $@ stop && echo
 else
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
-	@$(PRINTM) cyan $@ stop && echo
 
 
 wiki:
+ifeq ($(HOSTOS),$(IS_MAC))
 	@$(PRINTM) yellow $@ start
 	-rm -rf var/wiki/
 	cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
 	rm -rf var/wiki/.git/
 	@$(PRINTM) yellow $@ stop
+else
+	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+endif
 
 
 cache:
@@ -154,10 +158,10 @@ endif
 
 
 lint:
-	@$(PRINTM) cyan $@ start
 ifeq ($(HOSTOS),$(IS_MAC))
+	@$(PRINTM) cyan $@ start
 	@(travis lint .travis.yml)
+	@$(PRINTM) cyan $@ stop
 else
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
-	@$(PRINTM) cyan $@ stop

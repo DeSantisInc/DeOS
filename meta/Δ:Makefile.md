@@ -102,6 +102,7 @@ wiki.clone:
     rm -rf var/wiki/.git/
 
 cache:
+ifeq ($(SETCACHE),$(IS_TRUE))
     -rm -rf .cache/webpy/
     cd .cache && git clone git@github.com:webpy/webpy.git
     cd .cache && tar -cvzf webpy.tar.gz webpy/*
@@ -111,6 +112,7 @@ cache:
     cd .cache && git clone git@github.com:zeit/hyper.git
     cd .cache && tar -cvzf hyper.tar.gz hyper/*
     rm -rf .cache/hyper/
+endif
 
 webpy: webpy.clone
 

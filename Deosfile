@@ -17,6 +17,10 @@ type=lz
 meta=meta/Δ:src:example.md
 type=sh
 
+[var/build/bootstrap.sh]
+meta=meta/Δ:bootstrap.md
+type=sh
+
 [.editorconfig]
 meta=meta/Δ:.editorconfig.md
 type=ini
@@ -24,10 +28,6 @@ type=ini
 [.gitignore]
 meta=meta/Δ:.gitignore.md
 type=gitignore
-
-[bootstrap.test.sh]
-meta=meta/Δ:bootstrap.md
-type=sh
 
 [Makefile]
 meta=meta/Δ:Makefile.md

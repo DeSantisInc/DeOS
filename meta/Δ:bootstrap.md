@@ -1,4 +1,4 @@
-# `bootstrap.test.sh`
+# `var/build/bootstrap.sh`
 
 ## Schema
 

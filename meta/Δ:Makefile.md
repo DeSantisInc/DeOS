@@ -13,8 +13,11 @@ required:
 - config_file
 - all
 - bips
+- cache
+- lint
 - meta
 - terminal
+- venv
 - webpy
 - wiki
 
@@ -39,6 +42,20 @@ properties:
       type: object
       required: [pre, post]
 
+  cache:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  lint:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
   meta:
     type: object
     required: [hook]
@@ -47,6 +64,13 @@ properties:
       required: [pre, post]
 
   terminal:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  venv:
     type: object
     required: [hook]
     hook:
@@ -95,6 +119,20 @@ bips:
     post: >
       @$(PRINTM) cyan $@ stop
 
+cache:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
+lint:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
 meta:
   hook:
     pre: >
@@ -103,6 +141,13 @@ meta:
       @$(PRINTM) cyan $@ stop
 
 terminal:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
+venv:
   hook:
     pre: >
       @$(PRINTM) cyan $@ start
@@ -160,6 +205,7 @@ wiki:
 
 cache:
 ifeq ($(SETCACHE),$(IS_TRUE))
+    Δ(data['cache']['hook']['pre'])
     -rm -rf .cache/webpy/
     cd .cache && git clone git@github.com:webpy/webpy.git
     cd .cache && tar -cvzf webpy.tar.gz webpy/*
@@ -169,6 +215,7 @@ ifeq ($(SETCACHE),$(IS_TRUE))
     cd .cache && git clone git@github.com:zeit/hyper.git
     cd .cache && tar -cvzf hyper.tar.gz hyper/*
     rm -rf .cache/hyper/
+    Δ(data['cache']['hook']['post'])
 endif
 
 webpy:
@@ -194,9 +241,9 @@ endif
 bips:
     Δ(data['bips']['hook']['pre'])
     -rm -rf doc/bips
-     cd doc/ && git clone git@github.com:bitcoin/bips.git
-     rm -rf doc/bips/.git/
-     Δ(data['bips']['hook']['post'])
+    cd doc/ && git clone git@github.com:bitcoin/bips.git
+    rm -rf doc/bips/.git/
+    Δ(data['bips']['hook']['post'])
 
 terminal:
     Δ(data['terminal']['hook']['pre'])
@@ -227,11 +274,15 @@ build:
     @([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
 
 venv:
+    Δ(data['venv']['hook']['pre'])
     @([ -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
     @([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
+    Δ(data['venv']['hook']['post'])
 
 lint:
+    Δ(data['lint']['hook']['pre'])
     @(travis lint .travis.yml)
+    Δ(data['lint']['hook']['post'])
 ```
 
 ## Test: Environment

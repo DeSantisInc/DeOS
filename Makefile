@@ -113,15 +113,23 @@ endif
 
 
 clean:
+ifeq ($(HOSTOS),$(IS_MAC))
 	@$(PRINTM) cyan $@ start
 	@([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
 	@$(PRINTM) cyan $@ stop
+else
+	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+endif
 
 
 install:
+ifeq ($(HOSTOS),$(IS_MAC))
 	@$(PRINTM) yellow $@ start
 	@([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
 	@$(PRINTM) yellow $@ stop
+else
+	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+endif
 
 
 build:

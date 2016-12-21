@@ -63,6 +63,7 @@ terminal:
 
 
 meta:
+ifeq ($(HOSTOS),$(IS_MAC))
 	@$(PRINTM) yellow $@ start
 	sh bootstrap.sh
 	python src/hello.py
@@ -72,6 +73,9 @@ meta:
 	$(MAKE) terminal
 	$(MAKE) bips
 	@$(PRINTM) yellow $@ stop
+else
+	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+endif
 
 
 webpy:

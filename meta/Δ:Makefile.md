@@ -82,7 +82,7 @@ properties:
 
   meta:
     type: object
-    required: [hook]
+    required: [hook, 'else:host']
     hook:
       type: object
       required: [pre, post]
@@ -168,6 +168,7 @@ meta:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
+  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 terminal:
   hook:
@@ -265,6 +266,7 @@ terminal:
 
 
 meta:
+ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['meta']['hook']['pre'])
     sh bootstrap.sh
     python src/hello.py
@@ -274,6 +276,9 @@ meta:
     $(MAKE) terminal
     $(MAKE) bips
     @Δ(data['meta']['hook']['post'])
+else
+    @Δ(data['webpy']['else:host'])
+endif
 
 
 webpy:

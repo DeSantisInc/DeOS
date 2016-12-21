@@ -29,7 +29,7 @@ echo "Δ(data['b'])"
 echo "Δ(data['c'])"
 ```
 
-## Test[Environment]
+## Test: Environment
 
 ```yaml
 a: 1
@@ -37,7 +37,7 @@ b: 2
 c: 3
 ```
 
-## Test[Pass]
+## Test: Pass
 
 ```sh
 #!/bin/sh
@@ -46,7 +46,7 @@ echo "2"
 echo "3"
 ```
 
-## Test[Fail]
+## Test: Fail
 
 ```sh
 #!/bin/sh

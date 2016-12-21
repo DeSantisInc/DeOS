@@ -36,7 +36,7 @@ RUN "cd /deos/venv/linux/ && virtualenv default --no-site-packages"
 EXIT_SUCCESS
 ```
 
-## Test[Environment]
+## Test: Environment
 
 ```yaml
 a: 1
@@ -44,7 +44,7 @@ b: 2
 c: 3
 ```
 
-## Test[Pass]
+## Test: Pass
 
 ```sh
 #!/bin/sh
@@ -53,7 +53,7 @@ echo "2"
 echo "3"
 ```
 
-## Test[Fail]
+## Test: Fail
 
 ```sh
 #!/bin/sh
@@ -61,3 +61,4 @@ echo "3"
 echo "2"
 echo "1"
 ```
+

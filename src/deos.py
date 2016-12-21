@@ -72,7 +72,7 @@ def get_template(data,raw,debug=False):
     try:
         res=''
         template=data.split('## Template\n\n```')[1].split(\
-            '```\n\n## Test[Environment]')[0]
+            '```\n\n## Test: Environment')[0]
         line=template.split('\n')
         for i in range(0,len(line)):
             if i!=0 and i!=len(line)-1:

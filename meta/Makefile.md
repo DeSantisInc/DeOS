@@ -38,7 +38,7 @@ all:
     post: >
       @$(PRINT) cyan $@ stop && echo
   if:host;is:mac: >
-    @$(MAKE) templates
+    @(python src/main.py)
   else: >
     @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 ```
@@ -51,21 +51,22 @@ all:
 export MAKEFLAGS=Δ(data['makeflags'])
 
 .DEFAULT_GOAL:=Δ(data['default_goal'])
-
 .PHONY:Δ(data['phony'])
-
 .SUBLIME_TARGETS:Δ(data['sublime_targets'])
 
-include Δ(data['config_file'])
+DeOS_ADD_DOTDEOS:=mkdir .deos .deos/bin .deos/bin/darwin .deos/bin/vagrant .deos/bin/travis .deos/obj .deos/obj/darwin .deos/obj/vagrant .deos/obj/travis .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis
+DeOS_ADD_TRAVIS:=gem install travis --no-rdoc --no-ri
+DeOS_BIN_TRAVIS:=$(shell which travis)
+DeOS_RM_DOTDEOS:=rm -rf .deos
 
-all:
-    Δ(data['all']['hook']['pre'])
-ifeq ($(DeOS_HOST_OS),$(IS_MAC))
+all: #clean install build venv lint
+#    Δ(data['all']['hook']['pre'])
+#ifeq ($(DeOS_HOST_OS),$(IS_MAC))
     Δ(data['all']['if:host;is:mac'])
-else
-    Δ(data['all']['else'])
-endif
-    Δ(data['all']['hook']['post'])
+#else
+#    Δ(data['all']['else'])
+#endif
+#    Δ(data['all']['hook']['post'])
 
 clean:
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")

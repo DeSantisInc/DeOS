@@ -9,8 +9,8 @@ IS_LINUX:=Linux
 
 BASEDIR:=$(CURDIR)
 HOSTOS:=$(shell uname -s)
-SETCACHE:=$(FALSE)
-USECACHE:=$(TRUE)
+SETCACHE:=$(TRUE)
+USECACHE:=$(FALSE)
 
 ifeq ($(HOSTOS),$(IS_MAC))
 PRINTM:=$(BASEDIR)/.deos/bin/darwin/print

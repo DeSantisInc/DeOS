@@ -3,6 +3,7 @@
 *.pyc
 
 #[dotfolders]
+.cache/
 .deos/
 
 #[folders]

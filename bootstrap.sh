@@ -33,6 +33,7 @@ deos_venv() {
 }
 
 deos_init() {
+  [ ! -d ".cache" ] && mkdir .cache
   for path in .deos .deos/bin .deos/obj .deos/venv\
               .deos/bin/darwin .deos/bin/vagrant .deos/bin/travis\
               .deos/obj/darwin .deos/obj/vagrant .deos/obj/travis\

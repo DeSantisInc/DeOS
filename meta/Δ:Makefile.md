@@ -13,6 +13,7 @@ required:
 - config_file
 - all
 - meta
+- webpy
 - wiki
 
 properties:
@@ -30,6 +31,13 @@ properties:
       required: [pre, post]
 
   meta:
+    type: object
+    required: [hook]
+    hook:
+      type: object
+      required: [pre, post]
+
+  webpy:
     type: object
     required: [hook]
     hook:
@@ -65,6 +73,13 @@ all:
     @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")
 
 meta:
+  hook:
+    pre: >
+      @$(PRINTM) cyan $@ start
+    post: >
+      @$(PRINTM) cyan $@ stop
+
+webpy:
   hook:
     pre: >
       @$(PRINTM) cyan $@ start
@@ -127,6 +142,7 @@ ifeq ($(SETCACHE),$(IS_TRUE))
 endif
 
 webpy:
+    Δ(data['webpy']['hook']['pre'])
     -rm -rf src/web/
 ifeq ($(USECACHE),$(IS_TRUE))
     -rm src/web.tar
@@ -143,6 +159,7 @@ endif
     mv src/web/README.md doc/web/README.md
     mv src/web/LICENSE.txt doc/web/LICENSE.txt
     mv src/web/ChangeLog.txt doc/web/ChangeLog.txt
+    Δ(data['webpy']['hook']['post'])
 
 bips:
     -rm -rf doc/bips

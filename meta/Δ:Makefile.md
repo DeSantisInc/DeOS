@@ -70,7 +70,7 @@ two:
 
 ## Template
 
-```sh
+```makefile
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])

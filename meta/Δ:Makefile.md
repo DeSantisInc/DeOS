@@ -70,7 +70,7 @@ two:
 
 ## Template
 
-```makefile
+```sh
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])
@@ -108,7 +108,7 @@ webpy.clone:
     rm -rf src/web/.git/
     rm src/web/.gitignore
     rm src/web/.travis.yml
-    mv src/web/test/ test/web/
+    mv src/web/test/ test/src/web/
     mv src/web/docs/ doc/web/
     mv src/web/README.md doc/web/README.md
     mv src/web/LICENSE.txt doc/web/LICENSE.txt

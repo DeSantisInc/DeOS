@@ -6,15 +6,15 @@
 
 ## Getting Started
 
-### Install:
+### Install
 
-#### 1. Clone the Repo:
+#### *1. Clone the Repo*
 
 ```sh
 Δ git clone git@github.com:DeSantisInc/DeOS.git && cd DeOS
 ```
 
-#### 2. Bootstrap the Environment:
+#### *2. Bootstrap the Environment*
 
 ```sh
 Δ sh bootstrap.sh

@@ -47,19 +47,27 @@ endif
 
 
 bips:
+ifeq ($(HOSTOS),$(IS_MAC))
 	@$(PRINTM) yellow $@ start
 	-rm -rf doc/bips
 	cd doc/ && git clone git@github.com:bitcoin/bips.git
 	rm -rf doc/bips/.git/
 	@$(PRINTM) yellow $@ stop
+else
+	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+endif
 
 
 terminal:
+ifeq ($(HOSTOS),$(IS_MAC))
 	@$(PRINTM) cyan $@ start
 	-rm -rf app/terminal
 	cd app/ && git clone git@github.com:zeit/hyper.git terminal
 	rm -rf app/terminal/.git/ app/terminal/.github/
 	@$(PRINTM) cyan $@ stop
+else
+	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+endif
 
 
 meta:

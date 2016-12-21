@@ -90,7 +90,8 @@ def main():
             debug=False
             data,env,name,raw,schema,template=None,None,None,None,None,None
             if value['type']=='make' or value['type']=='sh'\
-                or value['type']=='gitignore' or value['type']=='ini':
+                or value['type']=='gitignore' or value['type']=='ini'\
+                or value['type']=='nvmrc':
                 with open(value['meta']) as f:
                     raw=f.read()
             if isinstance(raw,basestring):

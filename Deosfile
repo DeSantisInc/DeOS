@@ -1,22 +1,22 @@
 author=atd@gmx.it
 version=v0.8-alpha.1
 
-#[.nvmrc]
-#meta=meta/.nvmrc.md
-#type=nvmrc
+[.nvmrc]
+meta=meta/Δ:.nvmrc.md
+type=nvmrc
 
 [src/example.sh]
-meta=meta/example.md
+meta=meta/Δ:src:example.md
 type=sh
 
 [.editorconfig]
-meta=meta/.editorconfig.md
+meta=meta/Δ:.editorconfig.md
 type=ini
 
 [.gitignore]
-meta=meta/.gitignore.md
+meta=meta/Δ:.gitignore.md
 type=gitignore
 
 [Makefile]
-meta=meta/Makefile.md
+meta=meta/Δ:Makefile.md
 type=make

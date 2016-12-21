@@ -15,6 +15,7 @@ var/log/deos/*
 
 #[dotfiles]
 .DS_Store
+.nvmrc
 
 #[files]
 Makefile

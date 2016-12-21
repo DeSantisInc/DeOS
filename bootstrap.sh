@@ -47,6 +47,7 @@ deos_clean() {
   [ -f "src/example.sh" ] && rm src/example.sh
   [ -f ".editorconfig" ] && rm .editorconfig
   [ -f ".gitignore" ] && rm .gitignore
+  [ -f ".nvmrc" ] && rm .nvmrc
   [ -f "Makefile" ] && rm Makefile
 }
 

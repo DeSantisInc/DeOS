@@ -1,9 +1,11 @@
-HOSTOS=$(shell uname -s)
+export MAKEFLAGS=--no-print-directory
 
-ifeq ($(HOSTOS),Darwin)
-	include make-darwin.mk
+include .deosrc
+
+ifeq ($(DeOS_HOST_OS),Darwin)
+	include etc/deos/darwin.mk
 endif
 
-ifeq ($(HOSTOS),Linux)
-	include make-travis.mk
+ifeq ($(DeOS_HOST_OS),Linux)
+	include etc/deos/travis.mk
 endif

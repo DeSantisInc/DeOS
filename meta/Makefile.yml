@@ -1,0 +1,20 @@
+makeflags: --no-print-directory
+
+default_goal: all
+
+phony: all bin build check chmod clean init rm sh venv vm
+
+sublime_targets: all
+
+config_file: .deosrc
+
+all:
+  hook:
+    pre: >
+      @echo && $(PRINT) cyan $@ start
+    post: >
+      @$(PRINT) cyan $@ stop && echo
+  if:host;is:mac: >
+    @$(MAKE) templates
+  else: >
+    @(echo "'make $@' isn't yet supported on $(DeOS_HOST_OS).")

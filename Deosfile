@@ -1,5 +1,5 @@
 author=atd@gmx.it
-version=v0.8-alpha.1
+version=v0.8-alpha.3
 
 [.nvmrc]
 meta=meta/Δ:.nvmrc.md
@@ -28,6 +28,10 @@ type=ini
 [.gitignore]
 meta=meta/Δ:.gitignore.md
 type=gitignore
+
+[.travis.yml]
+meta=meta/Δ:.travis.md
+type=yaml
 
 [Makefile]
 meta=meta/Δ:Makefile.md

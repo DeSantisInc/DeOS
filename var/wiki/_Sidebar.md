@@ -3,13 +3,7 @@
 # Knowledge Base
 ### __[[Home]]__
 
-## Projects
-* __[ΔGIT](https://github.com/DeSantisInc/DeOS/wiki/DeGIT)__
-* __[ΔNGINX](https://github.com/DeSantisInc/DeOS/wiki/DeNGINX)__
-* __[ΔOS](https://github.com/DeSantisInc/DeOS/wiki/DeOS)__
-* __[[ΔWEB]]__
-
-## Releases
-* __[ΔGIT v0.1-alpha](#)__
-* __[ΔOS v0.3-alpha](https://github.com/DeSantisInc/DeOS/wiki/%CE%94OS-:-v0.3)__
-* __[ΔWEB v0.1-alpha](#)__
+## ΔOS
+* __[`.editorconfig`](https://github.com/DeSantisInc/DeOS/wiki/Δ:.editorconfig)__
+* __[`.gitignore`](https://github.com/DeSantisInc/DeOS/wiki/Δ:.gitignore)__
+* __[`.nvmrc`](https://github.com/DeSantisInc/DeOS/wiki/Δ:.nvmrc)__

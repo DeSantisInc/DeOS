@@ -1,6 +1,10 @@
 author=atd@gmx.it
 version=v0.8-alpha.4
 
+[.deosrc]
+meta=meta/Δ:.deosrc.md
+type=make
+
 [.nvmrc]
 meta=meta/Δ:.nvmrc.md
 type=nvmrc

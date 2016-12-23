@@ -11,7 +11,6 @@ BASEDIR:=$(CURDIR)
 HOSTOS:=$(shell uname -s)
 SETCACHE:=$(TRUE)
 USECACHE:=$(FALSE)
-
 ifeq ($(HOSTOS),$(IS_MAC))
 PRINTM:=$(BASEDIR)/.deos/bin/darwin/print
 else

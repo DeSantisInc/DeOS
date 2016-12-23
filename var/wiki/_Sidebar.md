@@ -16,5 +16,5 @@
 * [`.nvmrc`](https://github.com/DeSantisInc/DeOS/wiki/Δ:.nvmrc)
 * [`.travis.yml`](https://github.com/DeSantisInc/DeOS/wiki/Δ:.travis)
 * [`bootstrap.sh`](https://github.com/DeSantisInc/DeOS/wiki/Δ:bootstrap)
-* [`Makefile`](https://github.com/DeSantisInc/DeOS/wiki/Δ:Makefile)
-* [`Vagrantfile`](https://github.com/DeSantisInc/DeOS/wiki/Δ:Vagrantfile)
+* [`Makefile`](https://github.com/DeSantisInc/DeOS/wiki/Δ:makefile)
+* [`Vagrantfile`](https://github.com/DeSantisInc/DeOS/wiki/Δ:vagrantfile)

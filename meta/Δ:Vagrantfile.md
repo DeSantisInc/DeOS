@@ -4,7 +4,7 @@
 
 ```yaml
 type: object
-required: [config, plugin]
+required: [config, plugins]
 properties:
   config:
     type: object
@@ -15,7 +15,7 @@ properties:
         required: [name]
         properties:
           name: {type: string}
-  plugin:
+  plugins:
     type: object
     required: [reboot]
     properties:
@@ -28,7 +28,7 @@ properties:
 config:
   vm:
     name: DeVM
-plugin:
+plugins:
   reboot: './src/vagrant/reboot'
 ```
 
@@ -38,7 +38,7 @@ plugin:
 Δ with (data=None)
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-require Δ(data['plugin']['reboot'])
+require Δ(data['plugins']['reboot'])
 Vagrant.configure('2') do |config|
   config.vm.define :Δ(data['config']['vm']['name']) do |t| end
   #config.vm.box = ENV['DeOS_VM_BOX']

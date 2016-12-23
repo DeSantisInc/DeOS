@@ -17,6 +17,14 @@ type=lz
 meta=meta/Δ:src:example.md
 type=sh
 
+[src/hello.c]
+meta=meta/Δ:src:hello:c.md
+type=c
+
+[src/hello.py]
+meta=meta/Δ:src:hello:py.md
+type=python
+
 [var/build/bootstrap.sh]
 meta=meta/Δ:bootstrap.md
 type=sh

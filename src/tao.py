@@ -14,17 +14,23 @@ def build(template,data,ftype):
     code=None
     if 'sh'==ftype:
         code=web.template.Template(template.replace('$','$$'
-                                          ).replace('Δ with', '$def with'
+                                          ).replace('Δ with','$def with'
                                           ).replace('Δ','$'
                                           ).replace('#!/bin/sh','##!/bin/sh'))
     elif 'ruby'==ftype:
         code=web.template.Template(template.replace('$','$$'
-                                          ).replace('Δ with', '$def with'
+                                          ).replace('Δ with','$def with'
                                           ).replace('Δ','$'
                                           ).replace('# -*-','## -*-'))
+    elif 'python'==ftype:
+        code=web.template.Template(template.replace('$','$$'
+                                          ).replace('Δ with','$def with'
+                                          ).replace('Δ','$'
+                                          ).replace('#!/usr/bin/env python',
+                                                    '##!/usr/bin/env python'))
     else:
         code=web.template.Template(template.replace('$','$$'
-                                          ).replace('Δ with', '$def with'
+                                          ).replace('Δ with','$def with'
                                           ).replace('Δ','$'))
     return str(code(data)).replace(4*' ','\t'
                          ).replace('$(False)','$(FALSE)'
@@ -104,7 +110,8 @@ def main():
             if value['type']=='make' or value['type']=='sh'\
                 or value['type']=='gitignore' or value['type']=='ini'\
                 or value['type']=='nvmrc' or value['type']=='ruby'\
-                or value['type']=='lz' or value['type']=='yaml':
+                or value['type']=='lz' or value['type']=='yaml'\
+                or value['type']=='c' or value['type']=='python':
                 with open(value['meta']) as f:
                     raw=f.read()
             if isinstance(raw,basestring):

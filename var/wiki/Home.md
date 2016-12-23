@@ -1,12 +1,16 @@
 # ΔOS: Decentralized Operating System
 
+> *The languages of intelligence (writing) and self-interest (money) are the*
+> *mind's greatest creations; both must be decentralized or all is lost.*
+> **[—DeSantis](https://twitter.com/desantis/status/795023340704595968)**
+
 <table>
   <tbody>
     <tr>
     </tr>
     <tr>
       <td>
-        <h5>Table of Contents</h5>
+        <h5>Contents</h5>
         <b>﹂</b> <a href="#rules">
         Rules
         </a><br>

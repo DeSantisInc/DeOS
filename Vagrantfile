@@ -1,14 +1,19 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-require ./src/vagrant/reboot
+
+require './src/vagrant/reboot'
+
 Vagrant.configure('2') do |config|
+
   config.vm.define :DeVM do |t| end
-  #config.vm.box = ENV['DeOS_VM_BOX']
-  #config.vm.box_check_update = true
+  config.vm.box = ENV['DeOS_VM_BOX']
+  config.vm.box_check_update = true
+
   #config.ssh.paranoid = true
   #if ARGV[0] == 'ssh' ? config.ssh.shell = ENV['DeOS_VM_SHELL_SSH']
   #					: config.ssh.shell = ENV['DeOS_VM_SHELL_DEFAULT']
   #end # set_shell
+
   #if ENV['DeOS_RUN_SERVER'] != '0'
   #  config.vm.network :forwarded_port,
   #	guest: ENV['DeOS_VM_PORT_GUEST_0'],
@@ -20,6 +25,7 @@ Vagrant.configure('2') do |config|
   #	guest: ENV['DeOS_VM_PORT_GUEST_2'],
   #	host: ENV['DeOS_VM_PORT_HOST_2']
   #end # run_server
+
   #if ENV['DeOS_FILESYNC'] != '0'
   #  config.vm.synced_folder '.', '/vagrant',
   #	disabled: true
@@ -33,6 +39,7 @@ Vagrant.configure('2') do |config|
   #	group: 'vagrant',
   #  create: true
   #end # file_sync
+
   #config.vm.provision :shell,
   #  env: {
   #	'DeOS_BOOT_PATH' => ENV['DeOS_BOOT_PATH'],
@@ -44,4 +51,5 @@ Vagrant.configure('2') do |config|
   #:args => ENV['DeOS_BOOT_ARGS_BOOTSTRAP']
   #config.vm.provision :unix_reboot
   #end # bitcoin
+
 end # Vagrant.configure('2') do |config|

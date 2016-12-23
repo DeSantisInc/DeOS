@@ -42,9 +42,9 @@ meta=meta/Δ:.travis.md
 type=yaml
 
 [Makefile]
-meta=meta/Δ:Makefile.md
+meta=meta/Δ:makefile.md
 type=make
 
 [Vagrantfile]
-meta=meta/Δ:Vagrantfile.md
+meta=meta/Δ:vagrantfile.md
 type=ruby

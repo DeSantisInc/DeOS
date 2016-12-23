@@ -47,9 +47,11 @@ properties:
 
 ```yaml
 config:
+
   box:
     check_update: 'true'
     name: ENV['DeOS_VM_BOX']
+
   vm:
     name: DeVM
 

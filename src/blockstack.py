@@ -37,8 +37,8 @@ def whois(name):
     class A: pass
     A.name=name
     data = blockstack_client.actions.cli_whois(A)
-    if 'error' not in data:
-        print(name, json.dumps(data,sort_keys=True,indent=2))
+    if 'error' not in data and 'atd.id' != name:
+        print(name, yaml.dump(data, Dumper=yaml.RoundTripDumper))
         return data
     return None
 

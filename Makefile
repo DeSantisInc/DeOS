@@ -133,7 +133,9 @@ endif
 
 pycpp:
 ifeq ($(HOSTOS),$(ISMAC))
-	cd src && git@github.com:evanplaice/pypreprocessor.git
+	-cd src && rm -rf pypreprocessor
+	cd src && git clone git@github.com:evanplaice/pypreprocessor.git
+	cd src/pypreprocessor && rm -rf .git
 endif
 
 

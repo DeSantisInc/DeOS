@@ -142,13 +142,26 @@ ifeq ($(HOSTOS),$(ISMAC))
 	-cd src/blockstack && rm -rf blockstack-cli
 	cd src/blockstack && git clone git@github.com:blockstack/blockstack-cli.git
 	cd src/blockstack/blockstack-cli && rm -rf .git
+
 	-cd docs/blockstack && rm -rf blockstack_client
 	mv src/blockstack/blockstack-cli/docs docs/blockstack/blockstack_client
+	mv src/blockstack/blockstack-cli/README.md docs/blockstack/blockstack_client/README.md
+	mv src/blockstack/blockstack-cli/LICENSE docs/blockstack/blockstack_client/LICENSE
+	-cd docs/blockstack && rm -rf blockstack_registrar
+	mv src/blockstack/blockstack-cli/blockstack_registrar/doc docs/blockstack/blockstack_registrar
+	mv src/blockstack/blockstack-cli/blockstack_registrar/README.md docs/blockstack/blockstack_registrar/README.md
+	mv src/blockstack/blockstack-cli/blockstack_registrar/LICENSE docs/blockstack/blockstack_registrar/LICENSE
+
 	-cd tools/blockstack && rm -rf blockstack_client
 	mv src/blockstack/blockstack-cli/tools tools/blockstack/blockstack_client
+	-cd tools/blockstack && rm -rf blockstack_registrar
+	mv src/blockstack/blockstack-cli/blockstack_registrar/tools tools/blockstack/blockstack_registrar
+
 	-cd tests/blockstack && rm -rf blockstack_client
 	cd tests/blockstack && mkdir blockstack_client
 	mv src/blockstack/blockstack-cli/unit_tests.py tests/blockstack/blockstack_client/unit_tests.py
+	-cd tests/blockstack && rm -rf blockstack_registrar
+	mv src/blockstack/blockstack-cli/blockstack_registrar/tests tests/blockstack/blockstack_registrar
 endif
 
 

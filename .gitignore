@@ -13,6 +13,7 @@ node_modules/
 var/backup/*
 var/log/deos/*
 var/privkey/*
+tests/blockstack/integration/*
 
 #[dotfiles]
 .DS_Store

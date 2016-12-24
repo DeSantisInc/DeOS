@@ -459,6 +459,10 @@ ifeq ($(HOSTOS),$(ISMAC))
     -cd tests/blockstack && rm -rf blockstack_registrar
     mv src/blockstack/blockstack/blockstack_registrar/tests tests/blockstack/blockstack_registrar
 
+    -rm -rf tests/blockstack/integration
+    #cd tests/blockstack && git clone git@github.com:blockstack/blockstack-integration-tests.git integration
+    #rm -rf tests/blockstack/integration/.git
+
     -rm -rf src/blockstack/keychain
     cd src/blockstack && git clone git@github.com:blockstack/keychain-manager-py.git keychain
     rm -rf src/blockstack/keychain/.git

@@ -183,6 +183,8 @@ endif
 	@ (rm -rf src/web/.git)
 	@-(rm src/web/.gitignore)
 	@-(rm src/web/.travis.yml)
+	@-(rm -rf tools/web)
+	@ (mv src/web/tools tools/web)
 	@ (mv src/web/test tests/web)
 	@ (mv src/web/docs docs/web)
 	@ ($(PRINTM) magenta $@ stop)

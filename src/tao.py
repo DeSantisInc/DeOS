@@ -32,13 +32,30 @@ def build(template,data,ftype):
         code=web.template.Template(template.replace('$','$$'
                                           ).replace('Δ with','$def with'
                                           ).replace('Δ','$'))
-    return str(code(data)).replace(4*' ','\t'
-                         ).replace('$(False)','$(FALSE)'
-                         ).replace('$(True)','$(TRUE)'
-                         ).replace('\n\nifeq','\nifeq'
-                         ).replace('\n\nelse','\nelse'
-                         ).replace('\n\nendif','\nendif'
-                         )[1:]
+
+    if 'ruby'==ftype:
+        return str(code(data)).replace('$(False)','$(FALSE)'
+                             ).replace('$(True)','$(TRUE)'
+                             ).replace('\n\nifeq','\nifeq'
+                             ).replace('\n\nelse','\nelse'
+                             ).replace('\n\nendif','\nendif'
+                             )[1:]
+    elif 'sh'==ftype:
+        return str(code(data)).replace('\\\\n','\\'
+                             ).replace('$(False)','$(FALSE)'
+                             ).replace('$(True)','$(TRUE)'
+                             ).replace('\n\nifeq','\nifeq'
+                             ).replace('\n\nelse','\nelse'
+                             ).replace('\n\nendif','\nendif'
+                             )[1:]
+    else:
+        return str(code(data)).replace(4*' ','\t'
+                             ).replace('$(False)','$(FALSE)'
+                             ).replace('$(True)','$(TRUE)'
+                             ).replace('\n\nifeq','\nifeq'
+                             ).replace('\n\nelse','\nelse'
+                             ).replace('\n\nendif','\nendif'
+                             )[1:]
 
 def get_environment(data,raw,debug=False):
     try:

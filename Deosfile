@@ -29,10 +29,6 @@ type=c
 meta=meta/Δ:src:hello:py.md
 type=python
 
-[var/build/bootstrap.sh]
-meta=meta/Δ:bootstrap.md
-type=sh
-
 [.editorconfig]
 meta=meta/Δ:.editorconfig.md
 type=ini
@@ -52,3 +48,7 @@ type=make
 [Vagrantfile]
 meta=meta/Δ:vagrantfile.md
 type=ruby
+
+[bootstrap.sh]
+meta=meta/Δ:bootstrap.md
+type=sh

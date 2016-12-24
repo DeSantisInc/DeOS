@@ -1,4 +1,4 @@
-# `var/build/bootstrap.sh`
+# `bootstrap.sh`
 
 ## Schema
 
@@ -38,8 +38,8 @@ EXIT_FAILURE() {
 deos_bin() {
   for path in .deos/bin/darwin .deos/bin/vagrant .deos/bin/travis
   do
-    [ ! -f "$path/deos" ] && cp src/deos.py $path/deos
-    [ -f "$path/deos" ] && chmod +x $path/deos
+    [ ! -f "$path/tao" ] && cp src/tao.py $path/tao
+    [ -f "$path/tao" ] && chmod +x $path/tao
     [ ! -f "$path/logger" ] && cp src/logger.py $path/logger
     [ -f "$path/logger" ] && chmod +x $path/logger
     [ ! -f "$path/print" ] && cp src/print.py $path/print
@@ -58,10 +58,12 @@ deos_venv() {
 }
 
 deos_init() {
-  for path in .deos .deos/bin .deos/obj .deos/venv\
-              .deos/bin/darwin .deos/bin/vagrant .deos/bin/travis\
-              .deos/obj/darwin .deos/obj/vagrant .deos/obj/travis\
-              .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis
+  [ ! -d ".cache" ] && mkdir .cache
+  for path in .deos .deos/bin .deos/obj .deos/venv\\n
+              .deos/bin/darwin .deos/bin/vagrant .deos/bin/travis\\n
+              .deos/obj/darwin .deos/obj/vagrant .deos/obj/travis\\n
+              .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis\\n
+              var/build
   do
     [ ! -d "$path" ] && mkdir $path
   done
@@ -72,21 +74,24 @@ deos_clean() {
   [ -d "src/web" ] && rm -rf src/web/
   [ -d "doc/web" ] && rm -rf doc/web/
   [ -d "test/web" ] && rm -rf test/web/
+  [ -d "var/build" ] && rm -rf var/build/
   [ -f "boot/init.lz" ] && rm boot/init.lz
   [ -f "boot/python.lz" ] && rm boot/python.lz
   [ -f "src/example.sh" ] && rm src/example.sh
   [ -f ".editorconfig" ] && rm .editorconfig
   [ -f ".gitignore" ] && rm .gitignore
   [ -f ".nvmrc" ] && rm .nvmrc
+  [ -f ".travis.yml" ] && rm .travis.yml
+  [ -f "bootstrap.test.sh" ] && rm bootstrap.test.sh
   [ -f "Makefile" ] && rm Makefile
 }
 
 deos_darwin() {
   deos_clean
   deos_init
-  #deos_venv "darwin"
+  deos_venv "darwin"
   deos_bin
-  .deos/bin/darwin/deos
+  .deos/bin/darwin/tao
   EXIT_SUCCESS
 }
 

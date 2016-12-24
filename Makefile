@@ -7,12 +7,6 @@ include .deosrc
 .SUBLIME_TARGETS:all
 
 
-DeOS_ADD_DOTDEOS:=mkdir .deos .deos/bin .deos/bin/darwin .deos/bin/vagrant .deos/bin/travis .deos/obj .deos/obj/darwin .deos/obj/vagrant .deos/obj/travis .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis
-DeOS_ADD_TRAVIS:=gem install travis --no-rdoc --no-ri
-DeOS_BIN_TRAVIS:=$(shell which travis)
-DeOS_RM_DOTDEOS:=rm -rf .deos
-
-
 all: #clean install build venv lint
 ifeq ($(HOSTOS),$(IS_MAC))
 	@echo && $(PRINTM) cyan $@ start
@@ -25,12 +19,22 @@ endif
 
 vm:
 ifeq ($(HOSTOS),$(IS_MAC))
+	@
+	@$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
 	@$(PRINTM) cyan $@ start
-	[ ! -d $(BASEDIR)/.vagrant/ ]\
-	&& $(SPINNER) vagrant up --provider virtualbox
+	@
+	@-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)
+	@-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)
+	@ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))
+	@
 	@$(PRINTM) cyan $@ stop
+	@$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+	@
+else
+	@
+	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+	@
 endif
-
 
 wiki:
 ifeq ($(HOSTOS),$(IS_MAC))
@@ -109,6 +113,7 @@ meta:
 ifeq ($(HOSTOS),$(IS_MAC))
 	@$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
 	@$(PRINTM) yellow $@ start
+	@
 	sh bootstrap.sh
 	python src/hello.py
 	@$(MAKE) cache
@@ -117,6 +122,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
 	@$(MAKE) terminal
 	@$(MAKE) bips
 	@-$(MAKE) wikiup
+	@
 	@$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
 	@$(PRINTM) yellow $@ stop
 else

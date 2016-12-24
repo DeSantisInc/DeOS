@@ -69,6 +69,7 @@ deos_init() {
 }
 
 deos_clean() {
+  [ -d ".vagrant" ] && rm -rf .vagrant/
   [ -d ".deos" ] && rm -rf .deos/
   [ -d "src/web" ] && rm -rf src/web/
   [ -d "doc/web" ] && rm -rf doc/web/

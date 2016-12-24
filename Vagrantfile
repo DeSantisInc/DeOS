@@ -54,7 +54,7 @@ Vagrant.configure('2') do |config|
   #  },
   #  path: ENV['DeOS_BOOT_SCRIPT'],
   #:args => ENV['DeOS_BOOT_ARGS_BOOTSTRAP']
-  #config.vm.provision :unix_reboot
+  config.vm.provision :unix_reboot
   #end # bitcoin
 
 

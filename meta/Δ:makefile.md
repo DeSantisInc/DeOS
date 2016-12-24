@@ -265,13 +265,12 @@ lint:
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 meta:
-  test:
-  - one
-  - two
-  - three
-  - four
-  - five
-  - six
+  make:
+  - cache
+  - wiki
+  - webpy
+  - terminal
+  - bips
   hook:
     logger:
       pre: '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"'
@@ -445,12 +444,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @
     @ (sh bootstrap.sh)
     @ (python src/hello.py)
-    Δfor var in range(0, 10): @#(Δ(var))
-    @ ($(MAKE) cache)
-    @ ($(MAKE) wiki)
-    @ ($(MAKE) webpy)
-    @ ($(MAKE) terminal)
-    @ ($(MAKE) bips)
+    Δfor cmd in data['meta']['make']: @ ($(MAKE) Δ(cmd))
     @-($(MAKE) wikiup)
     @
     @ (Δ(data['meta']['hook']['printm']['post']))

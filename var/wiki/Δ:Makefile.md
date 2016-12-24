@@ -138,9 +138,24 @@ properties:
   meta:
     type: object
     required: [hook, 'else:host']
-    hook:
-      type: object
-      required: [pre, post]
+    properties:
+      else:host: {type: string}
+      hook:
+        type: object
+        required: [logger, printm]
+        properties:
+          logger:
+            type: object
+            required: [pre, post]
+            properties:
+              pre: {type: string}
+              post: {type: string}
+          printm:
+            type: object
+            required: [pre, post]
+            properties:
+              pre: {type: string}
+              post: {type: string}
 
   terminal:
     type: object
@@ -250,9 +265,20 @@ lint:
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 meta:
+  test:
+  - one
+  - two
+  - three
+  - four
+  - five
+  - six
   hook:
-    pre: $(PRINTM) yellow $@ start
-    post: $(PRINTM) yellow $@ stop
+    logger:
+      pre: '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"'
+      post: '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"'
+    printm:
+      pre: $(PRINTM) yellow $@ start
+      post: $(PRINTM) yellow $@ stop
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 terminal:
@@ -414,18 +440,21 @@ endif
 
 meta:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
-    @ (Δ(data['meta']['hook']['pre']))
+    @ (Δ(data['meta']['hook']['logger']['pre']))
+    @ (Δ(data['meta']['hook']['printm']['pre']))
+    @
     @ (sh bootstrap.sh)
     @ (python src/hello.py)
+    Δfor var in range(0, 10): @#(Δ(var))
     @ ($(MAKE) cache)
     @ ($(MAKE) wiki)
     @ ($(MAKE) webpy)
     @ ($(MAKE) terminal)
     @ ($(MAKE) bips)
     @-($(MAKE) wikiup)
-    @ (Δ(data['meta']['hook']['post']))
-    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
+    @
+    @ (Δ(data['meta']['hook']['printm']['post']))
+    @ (Δ(data['meta']['hook']['logger']['post']))
 else
     @ (Δ(data['meta']['else:host']))
 endif

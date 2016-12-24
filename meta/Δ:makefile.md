@@ -58,25 +58,23 @@ properties:
 
   vm:
     type: object
-    required: [hook, 'else:host']
+    required: [do, else, hook]
     properties:
-      else:host: {type: string}
+      else:
+        type: object
+        required: [host]
+        properties:
+          host: {type: string}
       hook:
         type: object
-        required: [logger, printm]
+        required: [pre, post]
         properties:
-          logger:
+          pre:
             type: object
-            required: [pre, post]
-            properties:
-              pre: {type: string}
-              post: {type: string}
-          printm:
+            required: [do]
+          post:
             type: object
-            required: [pre, post]
-            properties:
-              pre: {type: string}
-              post: {type: string}
+            required: [do]
 
   bips:
     type: object
@@ -215,13 +213,20 @@ all:
 
 vm:
   hook:
-    logger:
-      pre: '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"'
-      post: '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"'
-    printm:
-      pre: $(PRINTM) cyan $@ start
-      post: $(PRINTM) cyan $@ stop
-  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
+    pre:
+      do:
+      - '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"'
+      - '$(PRINTM) cyan $@ start'
+    post:
+      do:
+      - '$(PRINTM) cyan $@ stop'
+      - '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"'
+  do:
+  - '@-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)'
+  - '@-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)'
+  - '@ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))'
+  else:
+    host: "@ (echo \"'make $@' isn't yet supported on $(HOSTOS).\")"
 
 bips:
   hook:
@@ -344,17 +349,11 @@ endif
 
 vm:
 ifeq ($(HOSTOS),$(ISMAC))
-    @ (Δ(data['vm']['hook']['logger']['pre']))
-    @ (Δ(data['vm']['hook']['printm']['pre']))
-    @
-    @-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)
-    @-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)
-    @ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))
-    @
-    @ (Δ(data['vm']['hook']['printm']['post']))
-    @ (Δ(data['vm']['hook']['logger']['post']))
+    Δfor action in data['vm']['hook']['pre']['do']: Δ(action)
+    Δfor action in data['vm']['do']: Δ(action)
+    Δfor action in data['vm']['hook']['post']['do']: Δ(action)
 else
-    @ (Δ(data['vm']['else:host']))
+    Δ(data['vm']['else']['host'])
 endif
 
 
@@ -441,12 +440,10 @@ meta:
 ifeq ($(HOSTOS),$(ISMAC))
     @ (Δ(data['meta']['hook']['logger']['pre']))
     @ (Δ(data['meta']['hook']['printm']['pre']))
-    @
     @ (sh bootstrap.sh)
     @ (python src/hello.py)
     Δfor cmd in data['meta']['make']: @ ($(MAKE) Δ(cmd))
     @-($(MAKE) wikiup)
-    @
     @ (Δ(data['meta']['hook']['printm']['post']))
     @ (Δ(data['meta']['hook']['logger']['post']))
 else

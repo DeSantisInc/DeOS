@@ -23,15 +23,13 @@ endif
 
 vm:
 ifeq ($(HOSTOS),$(ISMAC))
-	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
-	@ ($(PRINTM) cyan $@ start)
-	@
+	$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
+	$(PRINTM) cyan $@ start
 	@-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)
 	@-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)
 	@ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))
-	@
-	@ ($(PRINTM) cyan $@ stop)
-	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
+	$(PRINTM) cyan $@ stop
+	$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -120,7 +118,6 @@ meta:
 ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) yellow $@ start)
-	@
 	@ (sh bootstrap.sh)
 	@ (python src/hello.py)
 	@ ($(MAKE) cache)
@@ -129,7 +126,6 @@ ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(MAKE) terminal)
 	@ ($(MAKE) bips)
 	@-($(MAKE) wikiup)
-	@
 	@ ($(PRINTM) yellow $@ stop)
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else

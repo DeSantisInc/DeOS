@@ -7,8 +7,16 @@ import blockstack_client
 import simplejson as json
 
 def main():
-    wallet=blockstack_client.wallet.load_wallet()
-    print(json.dumps(wallet,sort_keys=True,indent=2))
+    exists=blockstack_client.wallet.wallet_exists()
+    if isinstance(exists,bool):
+        if exists:
+            wallet=blockstack_client.wallet.load_wallet()
+            if 'status' in wallet:
+                if isinstance(wallet['status'],bool):
+                    addr=wallet['wallet']['payment_addresses']
+                    balance=blockstack_client.wallet.get_balance(addr)
+                    print(balance)
+                    #print(json.dumps(wallet,sort_keys=True,indent=2))
 
 if __name__=="__main__":
     main()

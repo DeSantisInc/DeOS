@@ -135,7 +135,7 @@ endif
 
 
 blockstack:
-	source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && python $(BASEDIR)/src/wallet.py
+	source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && python $(BASEDIR)/src/blockstack.py
 
 blockstack.clone:
 ifeq ($(HOSTOS),$(ISMAC))

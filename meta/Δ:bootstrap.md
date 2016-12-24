@@ -115,29 +115,10 @@ main() {
 main
 ```
 
-## Test: Environment
+## Test
 
 ```yaml
 a: 1
 b: 2
 c: 3
 ```
-
-## Test: Pass
-
-```sh
-#!/bin/sh
-echo "1"
-echo "2"
-echo "3"
-```
-
-## Test: Fail
-
-```sh
-#!/bin/sh
-echo "3"
-echo "2"
-echo "1"
-```
-

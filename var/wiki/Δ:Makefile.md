@@ -440,7 +440,6 @@ ifeq ($(HOSTOS),$(ISMAC))
     -cd src/blockstack && rm -rf blockstack-cli
     cd src/blockstack && git clone git@github.com:blockstack/blockstack-cli.git
     cd src/blockstack/blockstack-cli && rm -rf .git
-
     -cd docs/blockstack && rm -rf blockstack_client
     mv src/blockstack/blockstack-cli/docs docs/blockstack/blockstack_client
     mv src/blockstack/blockstack-cli/README.md docs/blockstack/blockstack_client/README.md
@@ -449,17 +448,29 @@ ifeq ($(HOSTOS),$(ISMAC))
     mv src/blockstack/blockstack-cli/blockstack_registrar/doc docs/blockstack/blockstack_registrar
     mv src/blockstack/blockstack-cli/blockstack_registrar/README.md docs/blockstack/blockstack_registrar/README.md
     mv src/blockstack/blockstack-cli/blockstack_registrar/LICENSE docs/blockstack/blockstack_registrar/LICENSE
-
     -cd tools/blockstack && rm -rf blockstack_client
     mv src/blockstack/blockstack-cli/tools tools/blockstack/blockstack_client
     -cd tools/blockstack && rm -rf blockstack_registrar
     mv src/blockstack/blockstack-cli/blockstack_registrar/tools tools/blockstack/blockstack_registrar
-
     -cd tests/blockstack && rm -rf blockstack_client
     cd tests/blockstack && mkdir blockstack_client
     mv src/blockstack/blockstack-cli/unit_tests.py tests/blockstack/blockstack_client/unit_tests.py
     -cd tests/blockstack && rm -rf blockstack_registrar
     mv src/blockstack/blockstack-cli/blockstack_registrar/tests tests/blockstack/blockstack_registrar
+
+    -cd src/blockstack && rm -rf pybitcoin
+    cd src/blockstack && git clone git@github.com:blockstack/pybitcoin.git
+    cd src/blockstack/pybitcoin && rm -rf .git
+    -cd tests/blockstack && rm -rf pybitcoin
+    mv src/blockstack/pybitcoin/tests tests/blockstack/pybitcoin
+    mv src/blockstack/pybitcoin/unit_tests.py tests/blockstack/pybitcoin/unit_tests.py
+    -cd docs/blockstack && rm -rf pybitcoin
+    mkdir docs/blockstack/pybitcoin
+    mv src/blockstack/pybitcoin/AUTHORS docs/blockstack/pybitcoin/AUTHORS
+    mv src/blockstack/pybitcoin/DEPRECATED.md docs/blockstack/pybitcoin/DEPRECATED.md
+    mv src/blockstack/pybitcoin/LICENSE docs/blockstack/pybitcoin/LICENSE
+    mv src/blockstack/pybitcoin/README.md docs/blockstack/pybitcoin/README.md
+    mv src/blockstack/pybitcoin/MANIFEST.in docs/blockstack/pybitcoin/MANIFEST.in
 endif
 
 
@@ -476,9 +487,9 @@ ifeq ($(HOSTOS),$(ISMAC))
     -cd src && rm -rf pypreprocessor
     cd src && git clone git@github.com:evanplaice/pypreprocessor.git
     cd src/pypreprocessor && rm -rf .git
-    -cd tests/pypreprocessor && rm test.py
+    -rm tests/pypreprocessor test.py
     mv src/pypreprocessor/test.py tests/pypreprocessor/test.py
-    -cd docs && rm -rf pypreprocessor
+    -rm -rf docs/pypreprocessor
     mkdir docs/pypreprocessor
     mv src/pypreprocessor/Examples docs/pypreprocessor/examples
     mv src/pypreprocessor/LICENSE docs/pypreprocessor/LICENSE

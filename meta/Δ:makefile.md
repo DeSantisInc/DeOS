@@ -444,52 +444,82 @@ endif
 
 clean:
 ifeq ($(HOSTOS),$(IS_MAC))
+    @
     @Δ(data['clean']['hook']['pre'])
+    @
     @([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
+    @
     @Δ(data['clean']['hook']['post'])
+    @
 else
+    @
     @Δ(data['clean']['else:host'])
+    @
 endif
 
 
 install:
 ifeq ($(HOSTOS),$(IS_MAC))
+    @
     @Δ(data['install']['hook']['pre'])
+    @
     @([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
+    @
     @Δ(data['install']['hook']['post'])
+    @
 else
+    @
     @Δ(data['install']['else:host'])
+    @
 endif
 
 
 build:
 ifeq ($(HOSTOS),$(IS_MAC))
+    @
     @Δ(data['build']['hook']['pre'])
+    @
     @([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
+    @
     @Δ(data['build']['hook']['post'])
+    @
 else
+    @
     @Δ(data['build']['else:host'])
+    @
 endif
 
 
 venv:
 ifeq ($(HOSTOS),$(IS_MAC))
+    @
     @Δ(data['venv']['hook']['pre'])
+    @
     @([ -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
     @([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
+    @
     @Δ(data['venv']['hook']['post'])
+    @
 else
+    @
     @Δ(data['venv']['else:host'])
+    @
 endif
 
 
 lint:
 ifeq ($(HOSTOS),$(IS_MAC))
+    @
     @Δ(data['lint']['hook']['pre'])
+    @
     @Δ(data['lint']['if:host;is:mac'])
+    @
     @Δ(data['lint']['hook']['post'])
+    @
 else
+    @
     @Δ(data['lint']['else:host'])
+    @
 endif
 ```
 

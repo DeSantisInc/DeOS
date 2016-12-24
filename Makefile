@@ -220,50 +220,80 @@ endif
 
 clean:
 ifeq ($(HOSTOS),$(IS_MAC))
+	@
 	@$(PRINTM) cyan $@ start
+	@
 	@([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
+	@
 	@$(PRINTM) cyan $@ stop
+	@
 else
+	@
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+	@
 endif
 
 
 install:
 ifeq ($(HOSTOS),$(IS_MAC))
+	@
 	@$(PRINTM) yellow $@ start
+	@
 	@([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
+	@
 	@$(PRINTM) yellow $@ stop
+	@
 else
+	@
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+	@
 endif
 
 
 build:
 ifeq ($(HOSTOS),$(IS_MAC))
+	@
 	@$(PRINTM) yellow $@ start
+	@
 	@([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
+	@
 	@$(PRINTM) yellow $@ stop
+	@
 else
+	@
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+	@
 endif
 
 
 venv:
 ifeq ($(HOSTOS),$(IS_MAC))
+	@
 	@$(PRINTM) yellow $@ start
+	@
 	@([ -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
 	@([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
+	@
 	@$(PRINTM) yellow $@ stop
+	@
 else
+	@
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+	@
 endif
 
 
 lint:
 ifeq ($(HOSTOS),$(IS_MAC))
+	@
 	@$(PRINTM) magenta $@ start
+	@
 	@(travis lint .travis.yml)
+	@
 	@$(PRINTM) magenta $@ stop
+	@
 else
+	@
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+	@
 endif

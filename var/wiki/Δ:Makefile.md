@@ -21,6 +21,7 @@ required:
 - meta
 - terminal
 - venv
+- vm
 - webpy
 - wiki
 - wikiup
@@ -37,6 +38,28 @@ properties:
     required: [hook, 'if:host;is:mac', 'else:host']
     properties:
       if:host;is:mac: {type: string}
+      else:host: {type: string}
+      hook:
+        type: object
+        required: [logger, printm]
+        properties:
+          logger:
+            type: object
+            required: [pre, post]
+            properties:
+              pre: {type: string}
+              post: {type: string}
+          printm:
+            type: object
+            required: [pre, post]
+            properties:
+              pre: {type: string}
+              post: {type: string}
+
+  vm:
+    type: object
+    required: [hook, 'else:host']
+    properties:
       else:host: {type: string}
       hook:
         type: object
@@ -175,6 +198,16 @@ all:
   if:host;is:mac: python src/hello.py
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
+vm:
+  hook:
+    logger:
+      pre: '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"'
+      post: '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"'
+    printm:
+      pre: $(PRINTM) cyan $@ start
+      post: $(PRINTM) cyan $@ stop
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
+
 bips:
   hook:
     logger:
@@ -274,7 +307,9 @@ all:
 ifeq ($(HOSTOS),$(IS_MAC))
     @ (Δ(data['all']['hook']['logger']['pre']))
     @ (Δ(data['all']['hook']['printm']['pre']))
+    @
     @ (Δ(data['all']['if:host;is:mac']))
+    @
     @ (Δ(data['all']['hook']['printm']['post']))
     @ (Δ(data['all']['hook']['logger']['post']))
 else
@@ -284,15 +319,17 @@ endif
 
 vm:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
-    @ ($(PRINTM) cyan $@ start)
+    @ (Δ(data['vm']['hook']['logger']['pre']))
+    @ (Δ(data['vm']['hook']['printm']['pre']))
+    @
     @-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)
     @-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)
     @ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))
-    @ ($(PRINTM) cyan $@ stop)
-    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
+    @
+    @ (Δ(data['vm']['hook']['printm']['post']))
+    @ (Δ(data['vm']['hook']['logger']['post']))
 else
-    @ (echo "'make $@' isn't yet supported on $(HOSTOS).")
+    @ (Δ(data['vm']['else:host']))
 endif
 
 

@@ -458,6 +458,15 @@ ifeq ($(HOSTOS),$(ISMAC))
     -cd tests/blockstack && rm -rf blockstack_registrar
     mv src/blockstack/blockstack-cli/blockstack_registrar/tests tests/blockstack/blockstack_registrar
 
+    -rm -rf src/blockstack/virtualchain
+    cd src/blockstack && git clone git@github.com:blockstack/virtualchain.git
+    rm -rf src/blockstack/virtualchain/.git
+    -rm -rf docs/blockstack/virtualchain
+    mkdir docs/blockstack/virtualchain
+    mv src/blockstack/virtualchain/LICENSE docs/blockstack/virtualchain/LICENSE
+    mv src/blockstack/virtualchain/README.md docs/blockstack/virtualchain/README.md
+    mv src/blockstack/virtualchain/virtualchain/impl_ref docs/blockstack/virtualchain/impl_ref
+
     -cd src/blockstack && rm -rf pybitcoin
     cd src/blockstack && git clone git@github.com:blockstack/pybitcoin.git
     cd src/blockstack/pybitcoin && rm -rf .git

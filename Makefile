@@ -98,6 +98,7 @@ endif
 
 meta:
 ifeq ($(HOSTOS),$(IS_MAC))
+	@$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
 	@$(PRINTM) yellow $@ start
 	sh bootstrap.sh
 	python src/hello.py
@@ -107,6 +108,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
 	@$(MAKE) terminal
 	@$(MAKE) bips
 	@-$(MAKE) wikiup
+	@$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
 	@$(PRINTM) yellow $@ stop
 else
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")

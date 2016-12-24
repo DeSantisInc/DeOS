@@ -322,6 +322,7 @@ endif
 
 meta:
 ifeq ($(HOSTOS),$(IS_MAC))
+    @$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
     @Δ(data['meta']['hook']['pre'])
     sh bootstrap.sh
     python src/hello.py
@@ -331,6 +332,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @$(MAKE) terminal
     @$(MAKE) bips
     @-$(MAKE) wikiup
+    @$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
     @Δ(data['meta']['hook']['post'])
 else
     @Δ(data['meta']['else:host'])

@@ -7,7 +7,7 @@ import logging,logging.config
 import ruamel.yaml as yaml
 
 
-CONFIG_FILE="./etc/logger/logger.yml"
+CONFIG_FILE="etc/logger/deos.yml"
 
 
 def get_config(fname):

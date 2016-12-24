@@ -139,26 +139,37 @@ blockstack:
 
 blockstack.clone:
 ifeq ($(HOSTOS),$(ISMAC))
-	-cd src/blockstack && rm -rf blockstack-cli
-	cd src/blockstack && git clone git@github.com:blockstack/blockstack-cli.git
-	cd src/blockstack/blockstack-cli && rm -rf .git
+	-cd src/blockstack && rm -rf blockstack
+	cd src/blockstack && git clone git@github.com:blockstack/blockstack-cli.git blockstack
+	cd src/blockstack/blockstack && rm -rf .git
 	-cd docs/blockstack && rm -rf blockstack_client
-	mv src/blockstack/blockstack-cli/docs docs/blockstack/blockstack_client
-	mv src/blockstack/blockstack-cli/README.md docs/blockstack/blockstack_client/README.md
-	mv src/blockstack/blockstack-cli/LICENSE docs/blockstack/blockstack_client/LICENSE
+	mv src/blockstack/blockstack/docs docs/blockstack/blockstack_client
+	mv src/blockstack/blockstack/README.md docs/blockstack/blockstack_client/README.md
+	mv src/blockstack/blockstack/LICENSE docs/blockstack/blockstack_client/LICENSE
 	-cd docs/blockstack && rm -rf blockstack_registrar
-	mv src/blockstack/blockstack-cli/blockstack_registrar/doc docs/blockstack/blockstack_registrar
-	mv src/blockstack/blockstack-cli/blockstack_registrar/README.md docs/blockstack/blockstack_registrar/README.md
-	mv src/blockstack/blockstack-cli/blockstack_registrar/LICENSE docs/blockstack/blockstack_registrar/LICENSE
+	mv src/blockstack/blockstack/blockstack_registrar/doc docs/blockstack/blockstack_registrar
+	mv src/blockstack/blockstack/blockstack_registrar/README.md docs/blockstack/blockstack_registrar/README.md
+	mv src/blockstack/blockstack/blockstack_registrar/LICENSE docs/blockstack/blockstack_registrar/LICENSE
 	-cd tools/blockstack && rm -rf blockstack_client
-	mv src/blockstack/blockstack-cli/tools tools/blockstack/blockstack_client
+	mv src/blockstack/blockstack/tools tools/blockstack/blockstack_client
 	-cd tools/blockstack && rm -rf blockstack_registrar
-	mv src/blockstack/blockstack-cli/blockstack_registrar/tools tools/blockstack/blockstack_registrar
+	mv src/blockstack/blockstack/blockstack_registrar/tools tools/blockstack/blockstack_registrar
 	-cd tests/blockstack && rm -rf blockstack_client
 	cd tests/blockstack && mkdir blockstack_client
-	mv src/blockstack/blockstack-cli/unit_tests.py tests/blockstack/blockstack_client/unit_tests.py
+	mv src/blockstack/blockstack/unit_tests.py tests/blockstack/blockstack_client/unit_tests.py
 	-cd tests/blockstack && rm -rf blockstack_registrar
-	mv src/blockstack/blockstack-cli/blockstack_registrar/tests tests/blockstack/blockstack_registrar
+	mv src/blockstack/blockstack/blockstack_registrar/tests tests/blockstack/blockstack_registrar
+
+	-rm -rf src/blockstack/keychain
+	cd src/blockstack && git clone git@github.com:blockstack/keychain-manager-py.git keychain
+	rm -rf src/blockstack/keychain/.git
+	-rm -rf docs/blockstack/keychain
+	mkdir docs/blockstack/keychain
+	mv src/blockstack/keychain/LICENSE docs/blockstack/keychain/LICENSE
+	mv src/blockstack/keychain/README.md docs/blockstack/keychain/README.md
+	-rm -rf tests/blockstack/keychain
+	mkdir tests/blockstack/keychain
+	mv src/blockstack/keychain/unit_tests.py tests/blockstack/keychain/unit_tests.py
 
 	-rm -rf src/blockstack/keylib
 	cd src/blockstack && git clone git@github.com:blockstack/keylib-py.git keylib

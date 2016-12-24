@@ -12,6 +12,9 @@ import simplejson as json
 import ruamel.yaml as yaml
 
 
+DOMAIN_PATH='root/id'
+
+
 #def main():
 #    exists=blockstack_client.wallet.wallet_exists()
 #    if isinstance(exists,bool):
@@ -38,7 +41,9 @@ def whois(name):
     A.name=name
     data = blockstack_client.actions.cli_whois(A)
     if 'error' not in data and 'atd.id' != name:
-        print(name, yaml.dump(data, Dumper=yaml.RoundTripDumper))
+        out = yaml.dump(data, Dumper=yaml.RoundTripDumper)
+        with open('%s/@%s.yml'%(DOMAIN_PATH,name),'w') as f:
+            f.write(out)
         return data
     return None
 
@@ -48,7 +53,8 @@ def main():
         if isinstance(sys.argv[1],basestring)\
             and isinstance(sys.argv[2],basestring):
             if 'whois'==sys.argv[1]:
-                if 2==len(sys.argv[2].split('.')):
+                if 2==len(sys.argv[2].split('.'))\
+                    and 'id'==sys.argv[2].split('.')[1]:
                     data=whois(sys.argv[2])
             elif 'wallet'==sys.argv[1]:
                 if 'test'==sys.argv[2]:

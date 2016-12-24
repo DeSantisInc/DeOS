@@ -76,6 +76,7 @@ deos_clean() {
   [ -f "boot/init.lz" ] && rm boot/init.lz
   [ -f "boot/python.lz" ] && rm boot/python.lz
   [ -f "src/example.sh" ] && rm src/example.sh
+  [ -f "src/logger.py" ] && rm src/logger.py
   [ -f ".editorconfig" ] && rm .editorconfig
   [ -f ".gitignore" ] && rm .gitignore
   [ -f ".nvmrc" ] && rm .nvmrc

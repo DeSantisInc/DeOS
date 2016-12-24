@@ -29,6 +29,10 @@ type=c
 meta=meta/Δ:src:hello:py.md
 type=python
 
+[src/logger.py]
+meta=meta/Δ:src:logger.md
+type=python
+
 [.editorconfig]
 meta=meta/Δ:.editorconfig.md
 type=ini

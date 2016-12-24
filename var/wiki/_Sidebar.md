@@ -11,6 +11,7 @@
   - [`example.sh`](https://github.com/DeSantisInc/DeOS/wiki/Δ:src:example)
   - [`hello.c`](https://github.com/DeSantisInc/DeOS/wiki/Δ:src:hello:c)
   - [`hello.py`](https://github.com/DeSantisInc/DeOS/wiki/Δ:src:hello:py)
+  - [`logger.py`](https://github.com/DeSantisInc/DeOS/wiki/Δ:src:logger)
 * [`.deosrc`](https://github.com/DeSantisInc/DeOS/wiki/Δ:.deosrc)
 * [`.editorconfig`](https://github.com/DeSantisInc/DeOS/wiki/Δ:.editorconfig)
 * [`.gitignore`](https://github.com/DeSantisInc/DeOS/wiki/Δ:.gitignore)

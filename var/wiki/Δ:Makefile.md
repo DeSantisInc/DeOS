@@ -433,7 +433,8 @@ endif
 
 
 blockstack:
-    source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && python $(BASEDIR)/src/blockstack.py
+    source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && python $(BASEDIR)/src/blockstack.py whois atd.id
+    source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && python $(BASEDIR)/src/blockstack.py wallet test
 
 blockstack.clone:
 ifeq ($(HOSTOS),$(ISMAC))

@@ -62,8 +62,7 @@ deos_init() {
   for path in .deos .deos/bin .deos/obj .deos/venv\\n
               .deos/bin/darwin .deos/bin/vagrant .deos/bin/travis\\n
               .deos/obj/darwin .deos/obj/vagrant .deos/obj/travis\\n
-              .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis\\n
-              var/build
+              .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis
   do
     [ ! -d "$path" ] && mkdir $path
   done
@@ -74,7 +73,6 @@ deos_clean() {
   [ -d "src/web" ] && rm -rf src/web/
   [ -d "doc/web" ] && rm -rf doc/web/
   [ -d "test/web" ] && rm -rf test/web/
-  [ -d "var/build" ] && rm -rf var/build/
   [ -f "boot/init.lz" ] && rm boot/init.lz
   [ -f "boot/python.lz" ] && rm boot/python.lz
   [ -f "src/example.sh" ] && rm src/example.sh

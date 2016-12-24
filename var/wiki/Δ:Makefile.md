@@ -463,6 +463,8 @@ ifeq ($(HOSTOS),$(ISMAC))
     -cd src && rm -rf pypreprocessor
     cd src && git clone git@github.com:evanplaice/pypreprocessor.git
     cd src/pypreprocessor && rm -rf .git
+    -cd tests/pypreprocessor && rm test.py
+    mv src/pypreprocessor/test.py tests/pypreprocessor/test.py
 endif
 
 
@@ -485,6 +487,9 @@ endif
     @ (mv src/web/tools tools/web)
     @ (mv src/web/test tests/web)
     @ (mv src/web/docs docs/web)
+    @ (mv src/web/LICENSE.txt docs/web/LICENSE.txt)
+    @ (mv src/web/ChangeLog.txt docs/web/ChangeLog.txt)
+    @ (mv src/web/README.md docs/web/README.md)
     @ (Δ(data['webpy']['hook']['post']))
     @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else

@@ -514,7 +514,7 @@ blockstack.venv:
 ifeq ($(HOSTOS),$(ISMAC))
     -([ -d "$(BASEDIR)/.deos/venv/darwin/blockstack" ] && rm -rf $(BASEDIR)/.deos/venv/darwin/blockstack)
     cd $(BASEDIR)/.deos/venv/darwin && virtualenv blockstack --no-site-packages
-    source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && pip install blockstack && pip install simplejson
+    source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && pip install blockstack && pip install simplejson && pip install ruamel.yaml
 endif
 
 

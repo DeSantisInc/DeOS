@@ -219,7 +219,7 @@ wikiup:
 
 ## Template
 
-```makefile
+```sh
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])
@@ -244,6 +244,15 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @Δ(data['all']['hook']['post'])
 else
     @Δ(data['all']['else:host'])
+endif
+
+
+vm:
+ifeq ($(HOSTOS),$(IS_MAC))
+    @$(PRINTM) cyan $@ start
+    [ ! -d $(BASEDIR)/.vagrant/ ]\\n
+    && $(SPINNER) vagrant up --provider virtualbox
+    @$(PRINTM) cyan $@ stop
 endif
 
 

@@ -23,6 +23,15 @@ else
 endif
 
 
+vm:
+ifeq ($(HOSTOS),$(IS_MAC))
+	@$(PRINTM) cyan $@ start
+	[ ! -d $(BASEDIR)/.vagrant/ ]\
+	&& $(SPINNER) vagrant up --provider virtualbox
+	@$(PRINTM) cyan $@ stop
+endif
+
+
 wiki:
 ifeq ($(HOSTOS),$(IS_MAC))
 	@$(PRINTM) cyan $@ start

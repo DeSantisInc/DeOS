@@ -48,6 +48,15 @@ def build(template,data,ftype):
                              ).replace('\n\nelse','\nelse'
                              ).replace('\n\nendif','\nendif'
                              )[1:]
+    elif 'make'==ftype:
+        return str(code(data)).replace('\\\\n','\\'
+                             ).replace(4*' ','\t'
+                             ).replace('$(False)','$(FALSE)'
+                             ).replace('$(True)','$(TRUE)'
+                             ).replace('\n\nifeq','\nifeq'
+                             ).replace('\n\nelse','\nelse'
+                             ).replace('\n\nendif','\nendif'
+                             )[1:]
     else:
         return str(code(data)).replace(4*' ','\t'
                              ).replace('$(False)','$(FALSE)'

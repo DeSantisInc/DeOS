@@ -239,7 +239,7 @@ webpy:
     pre: $(PRINTM) magenta $@ start
     post: $(PRINTM) magenta $@ stop
   if:repo;is:cached: (cp .cache/webpy.tar.gz src/web.tar.gz && gunzip src/web.tar.gz && cd src && tar -xvf web.tar && mv webpy web)
-  else:repo: (cd src/ && git clone git@github.com:webpy/webpy.git web)
+  else:repo: (cd src/ && git clone $(DeOS_GIT_REPO_WEB) web)
   else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
 
 wiki:
@@ -274,7 +274,9 @@ all: #clean install build venv lint
 ifeq ($(HOSTOS),$(IS_MAC))
     @ (Δ(data['all']['hook']['logger']['pre']))
     @ (Δ(data['all']['hook']['printm']['pre']))
+    @
     @ (Δ(data['all']['if:host;is:mac']))
+    @
     @ (Δ(data['all']['hook']['printm']['post']))
     @ (Δ(data['all']['hook']['logger']['post']))
 else
@@ -304,7 +306,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @ Δ(data['wiki']['hook']['pre'])
     @
     @-(rm -rf var/wiki/)
-    @ (cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki)
+    @ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
     @ (rm -rf var/wiki/.git/)
     @
     @ Δ(data['wiki']['hook']['post'])
@@ -320,13 +322,13 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @ Δ(data['wikiup']['hook']['pre'])
     @
     @-(rm -rf var/wiki/)
-    @ (cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki)
+    @ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
     @ (cp meta/* var/wiki/)
     @-(cd var/wiki/ && git add .)
     @-(cd var/wiki/ && git commit -S -m "wiki: update")
     @-(cd var/wiki/ && git push)
     @-(rm -rf var/wiki/)
-    @ (cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki)
+    @ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
     @ (rm -rf var/wiki/.git/)
     @
     @ Δ(data['wikiup']['hook']['post'])
@@ -343,12 +345,12 @@ ifeq ($(SETCACHE),$(IS_TRUE))
     @ Δ(data['cache']['hook']['pre'])
     @
     @-(rm -rf .cache/webpy/)
-    @ (cd .cache && git clone git@github.com:webpy/webpy.git)
+    @ (cd .cache && git clone $(DeOS_GIT_REPO_WEB))
     @ (cd .cache && tar -cvzf webpy.tar.gz webpy/*)
     @ (rm -rf .cache/webpy/)
     @
     @-(rm -rf .cache/hyper/)
-    @ (cd .cache && git clone git@github.com:zeit/hyper.git)
+    @ (cd .cache && git clone $(DeOS_GIT_REPO_HYPER))
     @ (cd .cache && tar -cvzf hyper.tar.gz hyper/*)
     @ (rm -rf .cache/hyper/)
     @
@@ -366,7 +368,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @ (Δ(data['bips']['hook']['printm']['pre']))
     @
     @-(rm -rf doc/bips)
-    @ (cd doc/ && git clone git@github.com:bitcoin/bips.git)
+    @ (cd doc/ && git clone $(DeOS_GIT_REPO_BIPS))
     @ (rm -rf doc/bips/.git/)
     @
     @ (Δ(data['bips']['hook']['printm']['post']))
@@ -381,7 +383,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @ Δ(data['terminal']['hook']['pre'])
     @
     @-(rm -rf app/terminal)
-    @ (cd app/ && git clone git@github.com:zeit/hyper.git terminal)
+    @ (cd app/ && git clone $(DeOS_GIT_REPO_HYPER) terminal)
     @ (rm -rf app/terminal/.git/ app/terminal/.github/)
     @
     @ Δ(data['terminal']['hook']['post'])
@@ -422,7 +424,7 @@ ifeq ($(USECACHE),$(IS_TRUE))
     @ ([ -f ".cache/webpy.tar.gz" ] && Δ(data['webpy']['if:repo;is:cached']) || Δ(data['webpy']['else:repo']))
     @-(rm src/web.tar)
 else
-    @ (cd src/ && git clone git@github.com:webpy/webpy.git web)
+    @ (cd src/ && git clone $(DeOS_GIT_REPO_WEB) web)
 endif
     @ (rm -rf src/web/.git/)
     @-(rm src/web/.gitignore)

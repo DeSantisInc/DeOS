@@ -23,6 +23,11 @@ PRINTM:=$(BASEDIR)/.deos/bin/travis/print
 SPINNER:=$(BASEDIR)/.deos/bin/travis/spinner
 endif
 
+DeOS_GIT_REPO_BIPS:=git@github.com:bitcoin/bips.git
+DeOS_GIT_REPO_HYPER:=git@github.com:zeit/hyper.git
+DeOS_GIT_REPO_WEB:=git@github.com:webpy/webpy.git
+DeOS_GIT_REPO_WIKI:=git@github.com:DeSantisInc/DeOS.wiki.git
+
 export DeOS_VM_BOX:=bento/ubuntu-16.04
 export DeOS_VM_SHELL_DEFAULT:=bash -c 'BASH_ENV=/etc/profile exec bash'
 export DeOS_VM_SHELL_SSH:=bash -l

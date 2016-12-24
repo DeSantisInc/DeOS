@@ -11,7 +11,9 @@ all: #clean install build venv lint
 ifeq ($(HOSTOS),$(IS_MAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) cyan $@ start)
+	@
 	@ (python src/hello.py)
+	@
 	@ ($(PRINTM) cyan $@ stop)
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
@@ -41,7 +43,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
 	@ $(PRINTM) cyan $@ start
 	@
 	@-(rm -rf var/wiki/)
-	@ (cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki)
+	@ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
 	@ (rm -rf var/wiki/.git/)
 	@
 	@ $(PRINTM) cyan $@ stop
@@ -57,13 +59,13 @@ ifeq ($(HOSTOS),$(IS_MAC))
 	@ $(PRINTM) cyan $@ start
 	@
 	@-(rm -rf var/wiki/)
-	@ (cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki)
+	@ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
 	@ (cp meta/* var/wiki/)
 	@-(cd var/wiki/ && git add .)
 	@-(cd var/wiki/ && git commit -S -m "wiki: update")
 	@-(cd var/wiki/ && git push)
 	@-(rm -rf var/wiki/)
-	@ (cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki)
+	@ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
 	@ (rm -rf var/wiki/.git/)
 	@
 	@ $(PRINTM) cyan $@ stop
@@ -80,12 +82,12 @@ ifeq ($(SETCACHE),$(IS_TRUE))
 	@ $(PRINTM) magenta $@ start
 	@
 	@-(rm -rf .cache/webpy/)
-	@ (cd .cache && git clone git@github.com:webpy/webpy.git)
+	@ (cd .cache && git clone $(DeOS_GIT_REPO_WEB))
 	@ (cd .cache && tar -cvzf webpy.tar.gz webpy/*)
 	@ (rm -rf .cache/webpy/)
 	@
 	@-(rm -rf .cache/hyper/)
-	@ (cd .cache && git clone git@github.com:zeit/hyper.git)
+	@ (cd .cache && git clone $(DeOS_GIT_REPO_HYPER))
 	@ (cd .cache && tar -cvzf hyper.tar.gz hyper/*)
 	@ (rm -rf .cache/hyper/)
 	@
@@ -103,7 +105,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
 	@ ($(PRINTM) magenta $@ start)
 	@
 	@-(rm -rf doc/bips)
-	@ (cd doc/ && git clone git@github.com:bitcoin/bips.git)
+	@ (cd doc/ && git clone $(DeOS_GIT_REPO_BIPS))
 	@ (rm -rf doc/bips/.git/)
 	@
 	@ ($(PRINTM) magenta $@ stop)
@@ -118,7 +120,7 @@ ifeq ($(HOSTOS),$(IS_MAC))
 	@ $(PRINTM) cyan $@ start
 	@
 	@-(rm -rf app/terminal)
-	@ (cd app/ && git clone git@github.com:zeit/hyper.git terminal)
+	@ (cd app/ && git clone $(DeOS_GIT_REPO_HYPER) terminal)
 	@ (rm -rf app/terminal/.git/ app/terminal/.github/)
 	@
 	@ $(PRINTM) cyan $@ stop
@@ -156,10 +158,10 @@ ifeq ($(HOSTOS),$(IS_MAC))
 	@-(rm -rf src/web/)
 ifeq ($(USECACHE),$(IS_TRUE))
 	@-(rm src/web.tar)
-	@ ([ -f ".cache/webpy.tar.gz" ] && (cp .cache/webpy.tar.gz src/web.tar.gz && gunzip src/web.tar.gz && cd src && tar -xvf web.tar && mv webpy web) || (cd src/ && git clone git@github.com:webpy/webpy.git web))
+	@ ([ -f ".cache/webpy.tar.gz" ] && (cp .cache/webpy.tar.gz src/web.tar.gz && gunzip src/web.tar.gz && cd src && tar -xvf web.tar && mv webpy web) || (cd src/ && git clone $(DeOS_GIT_REPO_WEB) web))
 	@-(rm src/web.tar)
 else
-	@ (cd src/ && git clone git@github.com:webpy/webpy.git web)
+	@ (cd src/ && git clone $(DeOS_GIT_REPO_WEB) web)
 endif
 	@ (rm -rf src/web/.git/)
 	@-(rm src/web/.gitignore)

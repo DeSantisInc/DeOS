@@ -131,6 +131,12 @@ else
 endif
 
 
+pycpp:
+ifeq ($(HOSTOS),$(ISMAC))
+	cd src && git@github.com:evanplaice/pypreprocessor.git
+endif
+
+
 webpy:
 ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")

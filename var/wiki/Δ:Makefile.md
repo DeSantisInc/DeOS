@@ -58,23 +58,7 @@ properties:
 
   vm:
     type: object
-    required: [do, else, hook]
-    properties:
-      else:
-        type: object
-        required: [host]
-        properties:
-          host: {type: string}
-      hook:
-        type: object
-        required: [pre, post]
-        properties:
-          pre:
-            type: object
-            required: [do]
-          post:
-            type: object
-            required: [do]
+    required: [hook, 'if:host', 'else:host']
 
   bips:
     type: object
@@ -215,18 +199,21 @@ vm:
   hook:
     pre:
       do:
-      - '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"'
-      - '$(PRINTM) cyan $@ start'
+      - '@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")'
+      - '@ ($(PRINTM) cyan $@ start)'
     post:
       do:
-      - '$(PRINTM) cyan $@ stop'
-      - '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"'
-  do:
-  - '@-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)'
-  - '@-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)'
-  - '@ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))'
-  else:
-    host: "@ (echo \"'make $@' isn't yet supported on $(HOSTOS).\")"
+      - '@ ($(PRINTM) cyan $@ stop)'
+      - '@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")'
+  if:host:
+    is:mac:
+      do:
+      - '@-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)'
+      - '@-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)'
+      - '@ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))'
+  else:host:
+    do:
+    - "@ (echo \"'make $@' isn't yet supported on $(HOSTOS).\")"
 
 bips:
   hook:
@@ -321,7 +308,7 @@ wikiup:
 
 ## Template
 
-```sh
+```makefile
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])
@@ -350,10 +337,10 @@ endif
 vm:
 ifeq ($(HOSTOS),$(ISMAC))
     Δfor action in data['vm']['hook']['pre']['do']: Δ(action)
-    Δfor action in data['vm']['do']: Δ(action)
+    Δfor action in data['vm']['if:host']['is:mac']['do']: Δ(action)
     Δfor action in data['vm']['hook']['post']['do']: Δ(action)
 else
-    Δ(data['vm']['else']['host'])
+    Δfor action in data['vm']['else:host']['do']: Δ(action)
 endif
 
 

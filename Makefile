@@ -118,16 +118,38 @@ ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(PRINTM) yellow $@ start)
 	@ (sh bootstrap.sh)
 	@ (python src/hello.py)
+	$(MAKE) blockstack.clone
+	$(MAKE) blockstack.venv
 	@ ($(MAKE) cache)
 	@ ($(MAKE) wiki)
 	@ ($(MAKE) webpy)
 	@ ($(MAKE) terminal)
 	@ ($(MAKE) bips)
+	@ ($(MAKE) pycpp)
 	@-($(MAKE) wikiup)
 	@ ($(PRINTM) yellow $@ stop)
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
+endif
+
+
+blockstack:
+	source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && python $(BASEDIR)/src/wallet.py
+
+blockstack.clone:
+ifeq ($(HOSTOS),$(ISMAC))
+	-cd src && rm -rf blockstack-cli
+	cd src && git clone git@github.com:blockstack/blockstack-cli.git
+	cd src/blockstack-cli && rm -rf .git
+endif
+
+
+blockstack.venv:
+ifeq ($(HOSTOS),$(ISMAC))
+	-([ -d "$(BASEDIR)/.deos/venv/darwin/blockstack" ] && rm -rf $(BASEDIR)/.deos/venv/darwin/blockstack)
+	cd $(BASEDIR)/.deos/venv/darwin && virtualenv blockstack --no-site-packages
+	source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && pip install blockstack
 endif
 
 

@@ -35,26 +35,7 @@ properties:
 
   all:
     type: object
-    required: [hook, 'if:host;is:mac', 'else:host']
-    properties:
-      if:host;is:mac: {type: string}
-      else:host: {type: string}
-      hook:
-        type: object
-        required: [logger, printm]
-        properties:
-          logger:
-            type: object
-            required: [pre, post]
-            properties:
-              pre: {type: string}
-              post: {type: string}
-          printm:
-            type: object
-            required: [pre, post]
-            properties:
-              pre: {type: string}
-              post: {type: string}
+    required: [hook, if, else]
 
   vm:
     type: object
@@ -186,14 +167,24 @@ config_file: .deosrc
 
 all:
   hook:
-    logger:
-      pre: '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"'
-      post: '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"'
-    printm:
-      pre: $(PRINTM) cyan $@ start
-      post: $(PRINTM) cyan $@ stop
-  if:host;is:mac: python src/hello.py
-  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
+    pre:
+      do:
+      - '@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")'
+      - '@ ($(PRINTM) cyan $@ start)'
+    post:
+      do:
+      - '@ ($(PRINTM) cyan $@ stop)'
+      - '@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")'
+  if:
+    host:
+      is:
+        mac:
+          do:
+          - '@ (python src/hello.py)'
+  else:
+    host:
+      do:
+      - "@ (echo \"'make $@' isn't yet supported on $(HOSTOS).\")"
 
 vm:
   hook:
@@ -325,15 +316,11 @@ include .deosrc
 
 all:
 ifeq ($(HOSTOS),$(ISMAC))
-    @ (Δ(data['all']['hook']['logger']['pre']))
-    @ (Δ(data['all']['hook']['printm']['pre']))
-    @
-    @ (Δ(data['all']['if:host;is:mac']))
-    @
-    @ (Δ(data['all']['hook']['printm']['post']))
-    @ (Δ(data['all']['hook']['logger']['post']))
+    Δfor action in data['all']['hook']['pre']['do']: Δ(action)
+    Δfor action in data['all']['if']['host']['is']['mac']['do']: Δ(action)
+    Δfor action in data['all']['hook']['post']['do']: Δ(action)
 else
-    @ (Δ(data['all']['else:host']))
+    Δfor action in data['all']['else']['host']['do']: Δ(action)
 endif
 
 

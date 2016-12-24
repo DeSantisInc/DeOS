@@ -11,9 +11,7 @@ all:
 ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) cyan $@ start)
-	@
 	@ (python src/hello.py)
-	@
 	@ ($(PRINTM) cyan $@ stop)
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else

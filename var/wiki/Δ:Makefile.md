@@ -270,7 +270,7 @@ include .deosrc
 .SUBLIME_TARGETS:Δ(data['sublime_targets'])
 
 
-all: #clean install build venv lint
+all:
 ifeq ($(HOSTOS),$(IS_MAC))
     @ (Δ(data['all']['hook']['logger']['pre']))
     @ (Δ(data['all']['hook']['printm']['pre']))

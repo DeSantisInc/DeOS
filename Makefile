@@ -7,7 +7,7 @@ include .deosrc
 .SUBLIME_TARGETS:all
 
 
-all: #clean install build venv lint
+all:
 ifeq ($(HOSTOS),$(IS_MAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) cyan $@ start)

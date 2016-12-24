@@ -39,9 +39,9 @@ def wallet_test():
 def whois(name):
     class A: pass
     A.name=name
-    data = blockstack_client.actions.cli_whois(A)
-    if 'error' not in data and 'atd.id' != name:
-        out = yaml.dump(data, Dumper=yaml.RoundTripDumper)
+    data=blockstack_client.actions.cli_whois(A)
+    if 'error' not in data and 'atd.id'!=name:
+        out=yaml.dump(data,Dumper=yaml.RoundTripDumper)
         with open('%s/@%s.yml'%(DOMAIN_PATH,name),'w') as f:
             f.write(out)
         return data

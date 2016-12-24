@@ -437,9 +437,16 @@ blockstack:
 
 blockstack.clone:
 ifeq ($(HOSTOS),$(ISMAC))
-    -cd src && rm -rf blockstack-cli
-    cd src && git clone git@github.com:blockstack/blockstack-cli.git
-    cd src/blockstack-cli && rm -rf .git
+    -cd src/blockstack && rm -rf blockstack-cli
+    cd src/blockstack && git clone git@github.com:blockstack/blockstack-cli.git
+    cd src/blockstack/blockstack-cli && rm -rf .git
+    -cd docs/blockstack && rm -rf blockstack_client
+    mv src/blockstack/blockstack-cli/docs docs/blockstack/blockstack_client
+    -cd tools/blockstack && rm -rf blockstack_client
+    mv src/blockstack/blockstack-cli/tools tools/blockstack/blockstack_client
+    -cd tests/blockstack && rm -rf blockstack_client
+    cd tests/blockstack && mkdir blockstack_client
+    mv src/blockstack/blockstack-cli/unit_tests.py tests/blockstack/blockstack_client/unit_tests.py
 endif
 
 

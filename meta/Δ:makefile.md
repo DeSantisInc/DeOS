@@ -165,6 +165,7 @@ phony: all meta
 sublime_targets: all
 config_file: .deosrc
 
+
 all:
   hook:
     pre:
@@ -185,6 +186,7 @@ all:
     host:
       do:
       - "@ (echo \"'make $@' isn't yet supported on $(HOSTOS).\")"
+
 
 vm:
   hook:
@@ -209,6 +211,7 @@ vm:
       do:
       - "@ (echo \"'make $@' isn't yet supported on $(HOSTOS).\")"
 
+
 bips:
   hook:
     logger:
@@ -219,11 +222,13 @@ bips:
       post: $(PRINTM) magenta $@ stop
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
+
 build:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
+
 
 cache:
   hook:
@@ -231,11 +236,13 @@ cache:
     post: $(PRINTM) magenta $@ stop
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
+
 clean:
   hook:
     pre: $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
+
 
 install:
   hook:
@@ -243,12 +250,14 @@ install:
     post: $(PRINTM) yellow $@ stop
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
+
 lint:
   hook:
     pre: $(PRINTM) magenta $@ start
     post: $(PRINTM) magenta $@ stop
   if:host;is:mac: travis lint .travis.yml
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
+
 
 meta:
   make:
@@ -266,17 +275,20 @@ meta:
       post: $(PRINTM) yellow $@ stop
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
+
 terminal:
   hook:
     pre: $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
+
 venv:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
+
 
 webpy:
   hook:
@@ -286,11 +298,13 @@ webpy:
   else:repo: cd src && git clone $(DeOS_GIT_REPO_WEB) web
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
+
 wiki:
   hook:
     pre: $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop
   else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
+
 
 wikiup:
   hook:

@@ -58,7 +58,7 @@ properties:
 
   vm:
     type: object
-    required: [hook, 'if:host', 'else:host']
+    required: [hook, if, else]
 
   bips:
     type: object
@@ -205,15 +205,18 @@ vm:
       do:
       - '@ ($(PRINTM) cyan $@ stop)'
       - '@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")'
-  if:host:
-    is:mac:
+  if:
+    host:
+      is:
+        mac:
+          do:
+          - '@-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)'
+          - '@-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)'
+          - '@ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))'
+  else:
+    host:
       do:
-      - '@-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)'
-      - '@-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)'
-      - '@ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))'
-  else:host:
-    do:
-    - "@ (echo \"'make $@' isn't yet supported on $(HOSTOS).\")"
+      - "@ (echo \"'make $@' isn't yet supported on $(HOSTOS).\")"
 
 bips:
   hook:
@@ -337,10 +340,10 @@ endif
 vm:
 ifeq ($(HOSTOS),$(ISMAC))
     Δfor action in data['vm']['hook']['pre']['do']: Δ(action)
-    Δfor action in data['vm']['if:host']['is:mac']['do']: Δ(action)
+    Δfor action in data['vm']['if']['host']['is']['mac']['do']: Δ(action)
     Δfor action in data['vm']['hook']['post']['do']: Δ(action)
 else
-    Δfor action in data['vm']['else:host']['do']: Δ(action)
+    Δfor action in data['vm']['else']['host']['do']: Δ(action)
 endif
 
 

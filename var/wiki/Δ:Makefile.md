@@ -203,9 +203,9 @@ bips:
       is:
         mac:
           do:
-          - '@-(rm -rf doc/bips)'
-          - '@ (cd doc && git clone $(DeOS_GIT_REPO_BIPS))'
-          - '@ (rm -rf doc/bips/.git)'
+          - '@-(rm -rf docs/bips)'
+          - '@ (cd docs && git clone $(DeOS_GIT_REPO_BIPS))'
+          - '@ (rm -rf docs/bips/.git)'
   else:
     host:
       do:
@@ -445,7 +445,7 @@ endif
     @-(rm src/web/.gitignore)
     @-(rm src/web/.travis.yml)
     @ (mv src/web/test test/web)
-    @ (mv src/web/docs doc/web)
+    @ (mv src/web/docs docs/web)
     @ (Δ(data['webpy']['hook']['post']))
     @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else

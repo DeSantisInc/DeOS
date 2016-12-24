@@ -180,6 +180,13 @@ ifeq ($(HOSTOS),$(ISMAC))
 	cd src/pypreprocessor && rm -rf .git
 	-cd tests/pypreprocessor && rm test.py
 	mv src/pypreprocessor/test.py tests/pypreprocessor/test.py
+	-cd docs && rm -rf pypreprocessor
+	mkdir docs/pypreprocessor
+	mv src/pypreprocessor/Examples docs/pypreprocessor/examples
+	mv src/pypreprocessor/LICENSE docs/pypreprocessor/LICENSE
+	mv src/pypreprocessor/INSTALL.md docs/pypreprocessor/INSTALL.md
+	mv src/pypreprocessor/README.md docs/pypreprocessor/README.md
+	mv src/pypreprocessor/MANIFEST docs/pypreprocessor/MANIFEST
 endif
 
 

@@ -35,9 +35,25 @@ properties:
   all:
     type: object
     required: [hook, 'if:host;is:mac', 'else:host']
-    hook:
-      type: object
-      required: [pre, post]
+    properties:
+      if:host;is:mac: {type: string}
+      else:host: {type: string}
+      hook:
+        type: object
+        required: [logger, printm]
+        properties:
+          logger:
+            type: object
+            required: [pre, post]
+            properties:
+              pre: {type: string}
+              post: {type: string}
+          printm:
+            type: object
+            required: [pre, post]
+            properties:
+              pre: {type: string}
+              post: {type: string}
 
   bips:
     type: object
@@ -135,10 +151,14 @@ config_file: .deosrc
 
 all:
   hook:
-    pre: echo && $(PRINTM) cyan $@ start
-    post: $(PRINTM) cyan $@ stop && echo
-  if:host;is:mac: (python src/hello.py)
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+    logger:
+      pre: '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"'
+      post: '$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"'
+    printm:
+      pre: $(PRINTM) cyan $@ start
+      post: $(PRINTM) cyan $@ stop
+  if:host;is:mac: python src/hello.py
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 bips:
   hook:
@@ -219,7 +239,7 @@ wikiup:
 
 ## Template
 
-```makefile
+```sh
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])
@@ -233,39 +253,27 @@ include .deosrc
 
 all: #clean install build venv lint
 ifeq ($(HOSTOS),$(IS_MAC))
-    @
-    @$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-    @Δ(data['all']['hook']['pre'])
-    @
-    @Δ(data['all']['if:host;is:mac'])
-    @
-    @Δ(data['all']['hook']['post'])
-    @$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
-    @
+    @(Δ(data['all']['hook']['logger']['pre']))
+    @(Δ(data['all']['hook']['printm']['pre']))
+    @(Δ(data['all']['if:host;is:mac']))
+    @(Δ(data['all']['hook']['printm']['post']))
+    @(Δ(data['all']['hook']['logger']['post']))
 else
-    @
-    @Δ(data['all']['else:host'])
-    @
+    @(Δ(data['all']['else:host']))
 endif
 
 
 vm:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @
     @$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
     @$(PRINTM) cyan $@ start
-    @
     @-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)
     @-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)
     @ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))
-    @
     @$(PRINTM) cyan $@ stop
     @$(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
-    @
 else
-    @
     @(echo "'make $@' isn't yet supported on $(HOSTOS).")
-    @
 endif
 
 

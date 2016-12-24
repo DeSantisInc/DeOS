@@ -8,7 +8,7 @@ include .deosrc
 
 
 all:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) cyan $@ start)
 	@
@@ -22,7 +22,7 @@ endif
 
 
 vm:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) cyan $@ start)
 	@
@@ -38,7 +38,7 @@ endif
 
 
 wiki:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) cyan $@ start)
 	@-(rm -rf var/wiki)
@@ -52,7 +52,7 @@ endif
 
 
 wikiup:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) cyan $@ start)
 	@-(rm -rf var/wiki)
@@ -70,8 +70,8 @@ endif
 
 
 cache:
-ifeq ($(HOSTOS),$(IS_MAC))
-ifeq ($(SETCACHE),$(IS_TRUE))
+ifeq ($(HOSTOS),$(ISMAC))
+ifeq ($(SETCACHE),$(ISTRUE))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) magenta $@ start)
 	@-(rm -rf .cache/webpy)
@@ -91,7 +91,7 @@ endif
 
 
 bips:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) magenta $@ start)
 	@-(rm -rf doc/bips)
@@ -105,7 +105,7 @@ endif
 
 
 terminal:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(PRINTM) cyan $@ start)
 	@-(rm -rf app/terminal)
 	@ (cd app && git clone $(DeOS_GIT_REPO_HYPER) terminal)
@@ -117,7 +117,7 @@ endif
 
 
 meta:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) yellow $@ start)
 	@
@@ -138,11 +138,11 @@ endif
 
 
 webpy:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) magenta $@ start)
 	@-(rm -rf src/web/)
-ifeq ($(USECACHE),$(IS_TRUE))
+ifeq ($(USECACHE),$(ISTRUE))
 	@-(rm src/web.tar)
 	@ ([ -f ".cache/webpy.tar.gz" ] && (cp .cache/webpy.tar.gz src/web.tar.gz && gunzip src/web.tar.gz && cd src && tar -xvf web.tar && mv webpy web) || cd src && git clone $(DeOS_GIT_REPO_WEB) web)
 	@-(rm src/web.tar)
@@ -162,7 +162,7 @@ endif
 
 
 clean:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(PRINTM) cyan $@ start)
 	@ ([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
 	@ ($(PRINTM) cyan $@ stop)
@@ -172,7 +172,7 @@ endif
 
 
 install:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(PRINTM) yellow $@ start)
 	@ ([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
 	@ ($(PRINTM) yellow $@ stop)
@@ -182,7 +182,7 @@ endif
 
 
 build:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(PRINTM) yellow $@ start)
 	@ ([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
 	@ ($(PRINTM) yellow $@ stop)
@@ -192,7 +192,7 @@ endif
 
 
 venv:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(PRINTM) yellow $@ start)
 	@ ([   -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
 	@ ([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
@@ -203,7 +203,7 @@ endif
 
 
 lint:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
 	@ ($(PRINTM) magenta $@ start)
 	@ (travis lint .travis.yml)
 	@ ($(PRINTM) magenta $@ stop)

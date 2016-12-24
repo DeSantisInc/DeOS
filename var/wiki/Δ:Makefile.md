@@ -329,7 +329,7 @@ include .deosrc
 
 
 all:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ (Δ(data['all']['hook']['logger']['pre']))
     @ (Δ(data['all']['hook']['printm']['pre']))
     @
@@ -343,7 +343,7 @@ endif
 
 
 vm:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ (Δ(data['vm']['hook']['logger']['pre']))
     @ (Δ(data['vm']['hook']['printm']['pre']))
     @
@@ -359,7 +359,7 @@ endif
 
 
 wiki:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
     @ (Δ(data['wiki']['hook']['pre']))
     @-(rm -rf var/wiki)
@@ -373,7 +373,7 @@ endif
 
 
 wikiup:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
     @ (Δ(data['wikiup']['hook']['pre']))
     @-(rm -rf var/wiki)
@@ -391,8 +391,8 @@ endif
 
 
 cache:
-ifeq ($(HOSTOS),$(IS_MAC))
-ifeq ($(SETCACHE),$(IS_TRUE))
+ifeq ($(HOSTOS),$(ISMAC))
+ifeq ($(SETCACHE),$(ISTRUE))
     @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
     @ (Δ(data['cache']['hook']['pre']))
     @-(rm -rf .cache/webpy)
@@ -412,7 +412,7 @@ endif
 
 
 bips:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ (Δ(data['bips']['hook']['logger']['pre']))
     @ (Δ(data['bips']['hook']['printm']['pre']))
     @-(rm -rf doc/bips)
@@ -426,7 +426,7 @@ endif
 
 
 terminal:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ (Δ(data['terminal']['hook']['pre']))
     @-(rm -rf app/terminal)
     @ (cd app && git clone $(DeOS_GIT_REPO_HYPER) terminal)
@@ -438,7 +438,7 @@ endif
 
 
 meta:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ (Δ(data['meta']['hook']['logger']['pre']))
     @ (Δ(data['meta']['hook']['printm']['pre']))
     @
@@ -455,11 +455,11 @@ endif
 
 
 webpy:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
     @ (Δ(data['webpy']['hook']['pre']))
     @-(rm -rf src/web/)
-ifeq ($(USECACHE),$(IS_TRUE))
+ifeq ($(USECACHE),$(ISTRUE))
     @-(rm src/web.tar)
     @ ([ -f ".cache/webpy.tar.gz" ] && Δ(data['webpy']['if:repo;is:cached']) || Δ(data['webpy']['else:repo']))
     @-(rm src/web.tar)
@@ -479,7 +479,7 @@ endif
 
 
 clean:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ (Δ(data['clean']['hook']['pre']))
     @ ([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
     @ (Δ(data['clean']['hook']['post']))
@@ -489,7 +489,7 @@ endif
 
 
 install:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ (Δ(data['install']['hook']['pre']))
     @ ([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
     @ (Δ(data['install']['hook']['post']))
@@ -499,7 +499,7 @@ endif
 
 
 build:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ (Δ(data['build']['hook']['pre']))
     @ ([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
     @ (Δ(data['build']['hook']['post']))
@@ -509,7 +509,7 @@ endif
 
 
 venv:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ (Δ(data['venv']['hook']['pre']))
     @ ([   -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
     @ ([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
@@ -520,7 +520,7 @@ endif
 
 
 lint:
-ifeq ($(HOSTOS),$(IS_MAC))
+ifeq ($(HOSTOS),$(ISMAC))
     @ (Δ(data['lint']['hook']['pre']))
     @ (Δ(data['lint']['if:host;is:mac']))
     @ (Δ(data['lint']['hook']['post']))

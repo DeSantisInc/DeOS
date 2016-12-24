@@ -189,76 +189,76 @@ build:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 cache:
   hook:
     pre: $(PRINTM) magenta $@ start
     post: $(PRINTM) magenta $@ stop
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 clean:
   hook:
     pre: $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 install:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 lint:
   hook:
     pre: $(PRINTM) magenta $@ start
     post: $(PRINTM) magenta $@ stop
-  if:host;is:mac: (travis lint .travis.yml)
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  if:host;is:mac: travis lint .travis.yml
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 meta:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 terminal:
   hook:
     pre: $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 venv:
   hook:
     pre: $(PRINTM) yellow $@ start
     post: $(PRINTM) yellow $@ stop
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 webpy:
   hook:
     pre: $(PRINTM) magenta $@ start
     post: $(PRINTM) magenta $@ stop
   if:repo;is:cached: (cp .cache/webpy.tar.gz src/web.tar.gz && gunzip src/web.tar.gz && cd src && tar -xvf web.tar && mv webpy web)
-  else:repo: (cd src/ && git clone $(DeOS_GIT_REPO_WEB) web)
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:repo: cd src && git clone $(DeOS_GIT_REPO_WEB) web
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 wiki:
   hook:
     pre: $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 wikiup:
   hook:
     pre: $(PRINTM) cyan $@ start
     post: $(PRINTM) cyan $@ stop
-  else:host: (echo "'make $@' isn't yet supported on $(HOSTOS).")
+  else:host: echo "'make $@' isn't yet supported on $(HOSTOS)."
 
 ```
 
 ## Template
 
-```makefile
+```sh
 Δ with (data=None)
 
 export MAKEFLAGS=Δ(data['makeflags'])
@@ -274,9 +274,7 @@ all:
 ifeq ($(HOSTOS),$(IS_MAC))
     @ (Δ(data['all']['hook']['logger']['pre']))
     @ (Δ(data['all']['hook']['printm']['pre']))
-    @
     @ (Δ(data['all']['if:host;is:mac']))
-    @
     @ (Δ(data['all']['hook']['printm']['post']))
     @ (Δ(data['all']['hook']['logger']['post']))
 else
@@ -286,15 +284,13 @@ endif
 
 vm:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-    @ $(PRINTM) cyan $@ start
-    @
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+    @ ($(PRINTM) cyan $@ start)
     @-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)
     @-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)
     @ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))
-    @
-    @ $(PRINTM) cyan $@ stop
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+    @ ($(PRINTM) cyan $@ stop)
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
     @ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -302,63 +298,54 @@ endif
 
 wiki:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-    @ Δ(data['wiki']['hook']['pre'])
-    @
-    @-(rm -rf var/wiki/)
-    @ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
-    @ (rm -rf var/wiki/.git/)
-    @
-    @ Δ(data['wiki']['hook']['post'])
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+    @ (Δ(data['wiki']['hook']['pre']))
+    @-(rm -rf var/wiki)
+    @ (cd var && git clone $(DeOS_GIT_REPO_WIKI) wiki)
+    @ (rm -rf var/wiki/.git)
+    @ (Δ(data['wiki']['hook']['post']))
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
-    @ Δ(data['wiki']['else:host'])
+    @ (Δ(data['wiki']['else:host']))
 endif
 
 
 wikiup:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-    @ Δ(data['wikiup']['hook']['pre'])
-    @
-    @-(rm -rf var/wiki/)
-    @ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
-    @ (cp meta/* var/wiki/)
-    @-(cd var/wiki/ && git add .)
-    @-(cd var/wiki/ && git commit -S -m "wiki: update")
-    @-(cd var/wiki/ && git push)
-    @-(rm -rf var/wiki/)
-    @ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
-    @ (rm -rf var/wiki/.git/)
-    @
-    @ Δ(data['wikiup']['hook']['post'])
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+    @ (Δ(data['wikiup']['hook']['pre']))
+    @-(rm -rf var/wiki)
+    @ (cd var && git clone $(DeOS_GIT_REPO_WIKI) wiki)
+    @ (cp meta/* var/wiki)
+    @-(cd var/wiki && git add . && git commit -S -m "wiki: update" && git push)
+    @-(rm -rf var/wiki)
+    @ (cd var && git clone $(DeOS_GIT_REPO_WIKI) wiki)
+    @ (rm -rf var/wiki/.git)
+    @ (Δ(data['wikiup']['hook']['post']))
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
-    @ Δ(data['wikiup']['else:host'])
+    @ (Δ(data['wikiup']['else:host']))
 endif
 
 
 cache:
 ifeq ($(HOSTOS),$(IS_MAC))
 ifeq ($(SETCACHE),$(IS_TRUE))
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-    @ Δ(data['cache']['hook']['pre'])
-    @
-    @-(rm -rf .cache/webpy/)
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+    @ (Δ(data['cache']['hook']['pre']))
+    @-(rm -rf .cache/webpy)
     @ (cd .cache && git clone $(DeOS_GIT_REPO_WEB))
     @ (cd .cache && tar -cvzf webpy.tar.gz webpy/*)
-    @ (rm -rf .cache/webpy/)
-    @
-    @-(rm -rf .cache/hyper/)
+    @ (rm -rf .cache/webpy)
+    @-(rm -rf .cache/hyper)
     @ (cd .cache && git clone $(DeOS_GIT_REPO_HYPER))
     @ (cd .cache && tar -cvzf hyper.tar.gz hyper/*)
-    @ (rm -rf .cache/hyper/)
-    @
-    @ Δ(data['cache']['hook']['post'])
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+    @ (rm -rf .cache/hyper)
+    @ (Δ(data['cache']['hook']['post']))
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 endif
 else
-    @ Δ(data['cache']['else:host'])
+    @ (Δ(data['cache']['else:host']))
 endif
 
 
@@ -366,11 +353,9 @@ bips:
 ifeq ($(HOSTOS),$(IS_MAC))
     @ (Δ(data['bips']['hook']['logger']['pre']))
     @ (Δ(data['bips']['hook']['printm']['pre']))
-    @
     @-(rm -rf doc/bips)
-    @ (cd doc/ && git clone $(DeOS_GIT_REPO_BIPS))
-    @ (rm -rf doc/bips/.git/)
-    @
+    @ (cd doc && git clone $(DeOS_GIT_REPO_BIPS))
+    @ (rm -rf doc/bips/.git)
     @ (Δ(data['bips']['hook']['printm']['post']))
     @ (Δ(data['bips']['hook']['logger']['post']))
 else
@@ -380,23 +365,20 @@ endif
 
 terminal:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ Δ(data['terminal']['hook']['pre'])
-    @
+    @ (Δ(data['terminal']['hook']['pre']))
     @-(rm -rf app/terminal)
-    @ (cd app/ && git clone $(DeOS_GIT_REPO_HYPER) terminal)
-    @ (rm -rf app/terminal/.git/ app/terminal/.github/)
-    @
-    @ Δ(data['terminal']['hook']['post'])
+    @ (cd app && git clone $(DeOS_GIT_REPO_HYPER) terminal)
+    @ (rm -rf app/terminal/.git app/terminal/.github)
+    @ (Δ(data['terminal']['hook']['post']))
 else
-    @ Δ(data['terminal']['else:host'])
+    @ (Δ(data['terminal']['else:host']))
 endif
 
 
 meta:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-    @ Δ(data['meta']['hook']['pre'])
-    @
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+    @ (Δ(data['meta']['hook']['pre']))
     @ (sh bootstrap.sh)
     @ (python src/hello.py)
     @ ($(MAKE) cache)
@@ -405,19 +387,17 @@ ifeq ($(HOSTOS),$(IS_MAC))
     @ ($(MAKE) terminal)
     @ ($(MAKE) bips)
     @-($(MAKE) wikiup)
-    @
-    @ Δ(data['meta']['hook']['post'])
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+    @ (Δ(data['meta']['hook']['post']))
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
-    @ Δ(data['meta']['else:host'])
+    @ (Δ(data['meta']['else:host']))
 endif
 
 
 webpy:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-    @ Δ(data['webpy']['hook']['pre'])
-    @
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+    @ (Δ(data['webpy']['hook']['pre']))
     @-(rm -rf src/web/)
 ifeq ($(USECACHE),$(IS_TRUE))
     @-(rm src/web.tar)
@@ -426,14 +406,13 @@ ifeq ($(USECACHE),$(IS_TRUE))
 else
     @ (cd src/ && git clone $(DeOS_GIT_REPO_WEB) web)
 endif
-    @ (rm -rf src/web/.git/)
+    @ (rm -rf src/web/.git)
     @-(rm src/web/.gitignore)
     @-(rm src/web/.travis.yml)
-    @ (mv src/web/test/ test/web/)
-    @ (mv src/web/docs/ doc/web/)
-    @
-    @ Δ(data['webpy']['hook']['post'])
-    @ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+    @ (mv src/web/test test/web)
+    @ (mv src/web/docs doc/web)
+    @ (Δ(data['webpy']['hook']['post']))
+    @ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
     @ Δ(data['webpy']['else:host'])
 endif
@@ -441,48 +420,40 @@ endif
 
 clean:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ Δ(data['clean']['hook']['pre'])
-    @
+    @ (Δ(data['clean']['hook']['pre']))
     @ ([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
-    @
-    @ Δ(data['clean']['hook']['post'])
+    @ (Δ(data['clean']['hook']['post']))
 else
-    @ Δ(data['clean']['else:host'])
+    @ (Δ(data['clean']['else:host']))
 endif
 
 
 install:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ Δ(data['install']['hook']['pre'])
-    @
+    @ (Δ(data['install']['hook']['pre']))
     @ ([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
-    @
-    @ Δ(data['install']['hook']['post'])
+    @ (Δ(data['install']['hook']['post']))
 else
-    @ Δ(data['install']['else:host'])
+    @ (Δ(data['install']['else:host']))
 endif
 
 
 build:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ Δ(data['build']['hook']['pre'])
-    @
+    @ (Δ(data['build']['hook']['pre']))
     @ ([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
-    @
-    @ Δ(data['build']['hook']['post'])
+    @ (Δ(data['build']['hook']['post']))
 else
-    @ Δ(data['build']['else:host'])
+    @ (Δ(data['build']['else:host']))
 endif
 
 
 venv:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ Δ(data['venv']['hook']['pre'])
-    @
+    @ (Δ(data['venv']['hook']['pre']))
     @ ([   -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
     @ ([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
-    @
-    @ Δ(data['venv']['hook']['post'])
+    @ (Δ(data['venv']['hook']['post']))
 else
     @ Δ(data['venv']['else:host'])
 endif
@@ -490,13 +461,11 @@ endif
 
 lint:
 ifeq ($(HOSTOS),$(IS_MAC))
-    @ Δ(data['lint']['hook']['pre'])
-    @
-    @ Δ(data['lint']['if:host;is:mac'])
-    @
-    @ Δ(data['lint']['hook']['post'])
+    @ (Δ(data['lint']['hook']['pre']))
+    @ (Δ(data['lint']['if:host;is:mac']))
+    @ (Δ(data['lint']['hook']['post']))
 else
-    @ Δ(data['lint']['else:host'])
+    @ (Δ(data['lint']['else:host']))
 endif
 ```
 

@@ -11,9 +11,7 @@ all:
 ifeq ($(HOSTOS),$(IS_MAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) cyan $@ start)
-	@
 	@ (python src/hello.py)
-	@
 	@ ($(PRINTM) cyan $@ stop)
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
@@ -23,15 +21,13 @@ endif
 
 vm:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-	@ $(PRINTM) cyan $@ start
-	@
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+	@ ($(PRINTM) cyan $@ start)
 	@-([   -d "$(BASEDIR)/.vagrant/" ] && vagrant destroy DeVM --force)
 	@-([   -d "$(BASEDIR)/.vagrant/" ] && rm -rf $(BASEDIR)/.vagrant/)
 	@ ([ ! -d "$(BASEDIR)/.vagrant/" ] && $(SPINNER) $(UPCMD))
-	@
-	@ $(PRINTM) cyan $@ stop
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+	@ ($(PRINTM) cyan $@ stop)
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -39,15 +35,13 @@ endif
 
 wiki:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-	@ $(PRINTM) cyan $@ start
-	@
-	@-(rm -rf var/wiki/)
-	@ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
-	@ (rm -rf var/wiki/.git/)
-	@
-	@ $(PRINTM) cyan $@ stop
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+	@ ($(PRINTM) cyan $@ start)
+	@-(rm -rf var/wiki)
+	@ (cd var && git clone $(DeOS_GIT_REPO_WIKI) wiki)
+	@ (rm -rf var/wiki/.git)
+	@ ($(PRINTM) cyan $@ stop)
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -55,21 +49,17 @@ endif
 
 wikiup:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-	@ $(PRINTM) cyan $@ start
-	@
-	@-(rm -rf var/wiki/)
-	@ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
-	@ (cp meta/* var/wiki/)
-	@-(cd var/wiki/ && git add .)
-	@-(cd var/wiki/ && git commit -S -m "wiki: update")
-	@-(cd var/wiki/ && git push)
-	@-(rm -rf var/wiki/)
-	@ (cd var/ && git clone $(DeOS_GIT_REPO_WIKI) wiki)
-	@ (rm -rf var/wiki/.git/)
-	@
-	@ $(PRINTM) cyan $@ stop
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+	@ ($(PRINTM) cyan $@ start)
+	@-(rm -rf var/wiki)
+	@ (cd var && git clone $(DeOS_GIT_REPO_WIKI) wiki)
+	@ (cp meta/* var/wiki)
+	@-(cd var/wiki && git add . && git commit -S -m "wiki: update" && git push)
+	@-(rm -rf var/wiki)
+	@ (cd var && git clone $(DeOS_GIT_REPO_WIKI) wiki)
+	@ (rm -rf var/wiki/.git)
+	@ ($(PRINTM) cyan $@ stop)
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -78,21 +68,18 @@ endif
 cache:
 ifeq ($(HOSTOS),$(IS_MAC))
 ifeq ($(SETCACHE),$(IS_TRUE))
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-	@ $(PRINTM) magenta $@ start
-	@
-	@-(rm -rf .cache/webpy/)
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+	@ ($(PRINTM) magenta $@ start)
+	@-(rm -rf .cache/webpy)
 	@ (cd .cache && git clone $(DeOS_GIT_REPO_WEB))
 	@ (cd .cache && tar -cvzf webpy.tar.gz webpy/*)
-	@ (rm -rf .cache/webpy/)
-	@
-	@-(rm -rf .cache/hyper/)
+	@ (rm -rf .cache/webpy)
+	@-(rm -rf .cache/hyper)
 	@ (cd .cache && git clone $(DeOS_GIT_REPO_HYPER))
 	@ (cd .cache && tar -cvzf hyper.tar.gz hyper/*)
-	@ (rm -rf .cache/hyper/)
-	@
-	@ $(PRINTM) magenta $@ stop
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+	@ (rm -rf .cache/hyper)
+	@ ($(PRINTM) magenta $@ stop)
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 endif
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
@@ -103,11 +90,9 @@ bips:
 ifeq ($(HOSTOS),$(IS_MAC))
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
 	@ ($(PRINTM) magenta $@ start)
-	@
 	@-(rm -rf doc/bips)
-	@ (cd doc/ && git clone $(DeOS_GIT_REPO_BIPS))
-	@ (rm -rf doc/bips/.git/)
-	@
+	@ (cd doc && git clone $(DeOS_GIT_REPO_BIPS))
+	@ (rm -rf doc/bips/.git)
 	@ ($(PRINTM) magenta $@ stop)
 	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
@@ -117,13 +102,11 @@ endif
 
 terminal:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@ $(PRINTM) cyan $@ start
-	@
+	@ ($(PRINTM) cyan $@ start)
 	@-(rm -rf app/terminal)
-	@ (cd app/ && git clone $(DeOS_GIT_REPO_HYPER) terminal)
-	@ (rm -rf app/terminal/.git/ app/terminal/.github/)
-	@
-	@ $(PRINTM) cyan $@ stop
+	@ (cd app && git clone $(DeOS_GIT_REPO_HYPER) terminal)
+	@ (rm -rf app/terminal/.git app/terminal/.github)
+	@ ($(PRINTM) cyan $@ stop)
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -131,9 +114,8 @@ endif
 
 meta:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-	@ $(PRINTM) yellow $@ start
-	@
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+	@ ($(PRINTM) yellow $@ start)
 	@ (sh bootstrap.sh)
 	@ (python src/hello.py)
 	@ ($(MAKE) cache)
@@ -142,9 +124,8 @@ ifeq ($(HOSTOS),$(IS_MAC))
 	@ ($(MAKE) terminal)
 	@ ($(MAKE) bips)
 	@-($(MAKE) wikiup)
-	@
-	@ $(PRINTM) yellow $@ stop
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+	@ ($(PRINTM) yellow $@ stop)
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -152,37 +133,33 @@ endif
 
 webpy:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0"
-	@ $(PRINTM) magenta $@ start
-	@
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 0")
+	@ ($(PRINTM) magenta $@ start)
 	@-(rm -rf src/web/)
 ifeq ($(USECACHE),$(IS_TRUE))
 	@-(rm src/web.tar)
-	@ ([ -f ".cache/webpy.tar.gz" ] && (cp .cache/webpy.tar.gz src/web.tar.gz && gunzip src/web.tar.gz && cd src && tar -xvf web.tar && mv webpy web) || (cd src/ && git clone $(DeOS_GIT_REPO_WEB) web))
+	@ ([ -f ".cache/webpy.tar.gz" ] && (cp .cache/webpy.tar.gz src/web.tar.gz && gunzip src/web.tar.gz && cd src && tar -xvf web.tar && mv webpy web) || cd src && git clone $(DeOS_GIT_REPO_WEB) web)
 	@-(rm src/web.tar)
 else
 	@ (cd src/ && git clone $(DeOS_GIT_REPO_WEB) web)
 endif
-	@ (rm -rf src/web/.git/)
+	@ (rm -rf src/web/.git)
 	@-(rm src/web/.gitignore)
 	@-(rm src/web/.travis.yml)
-	@ (mv src/web/test/ test/web/)
-	@ (mv src/web/docs/ doc/web/)
-	@
-	@ $(PRINTM) magenta $@ stop
-	@ $(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1"
+	@ (mv src/web/test test/web)
+	@ (mv src/web/docs doc/web)
+	@ ($(PRINTM) magenta $@ stop)
+	@ ($(LOGGER) "INFO" "$(HOSTOS) : make : $@ : 1")
 else
-	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
+	@ echo "'make $@' isn't yet supported on $(HOSTOS)."
 endif
 
 
 clean:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@ $(PRINTM) cyan $@ start
-	@
+	@ ($(PRINTM) cyan $@ start)
 	@ ([ -d ".deos" ] && $(DeOS_RM_DOTDEOS) || echo "$@:else")
-	@
-	@ $(PRINTM) cyan $@ stop
+	@ ($(PRINTM) cyan $@ stop)
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -190,11 +167,9 @@ endif
 
 install:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@ $(PRINTM) yellow $@ start
-	@
+	@ ($(PRINTM) yellow $@ start)
 	@ ([ ! -x "$(DeOS_BIN_TRAVIS)" ] && $(DeOS_ADD_TRAVIS) || echo "$@:else")
-	@
-	@ $(PRINTM) yellow $@ stop
+	@ ($(PRINTM) yellow $@ stop)
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -202,11 +177,9 @@ endif
 
 build:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@ $(PRINTM) yellow $@ start
-	@
+	@ ($(PRINTM) yellow $@ start)
 	@ ([ ! -d ".deos" ] && $(DeOS_ADD_DOTDEOS) || echo "$@:else")
-	@
-	@ $(PRINTM) yellow $@ stop
+	@ ($(PRINTM) yellow $@ stop)
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
@@ -214,24 +187,20 @@ endif
 
 venv:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@ $(PRINTM) yellow $@ start
-	@
+	@ ($(PRINTM) yellow $@ start)
 	@ ([   -d ".deos/venv" ] && rm -rf .deos/venv || echo "$@:else")
 	@ ([ ! -d ".deos/venv" ] && mkdir .deos/venv .deos/venv/darwin .deos/venv/vagrant .deos/venv/travis || echo "$@:else")
-	@
-	@ $(PRINTM) yellow $@ stop
+	@ ($(PRINTM) yellow $@ stop)
 else
-	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
+	@ echo "'make $@' isn't yet supported on $(HOSTOS)."
 endif
 
 
 lint:
 ifeq ($(HOSTOS),$(IS_MAC))
-	@ $(PRINTM) magenta $@ start
-	@
+	@ ($(PRINTM) magenta $@ start)
 	@ (travis lint .travis.yml)
-	@
-	@ $(PRINTM) magenta $@ stop
+	@ ($(PRINTM) magenta $@ stop)
 else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif

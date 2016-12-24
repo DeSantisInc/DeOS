@@ -4,13 +4,13 @@
 
 ```yaml
 type: object
-required: [config, ssh, plugins]
+required: [config, plugins]
 properties:
 
 
   config:
     type: object
-    required: [box, vm]
+    required: [box, ssh, vm]
     properties:
 
 
@@ -22,18 +22,25 @@ properties:
           name: {type: string}
 
 
+      ssh:
+        type: object
+        required: [paranoid, shell]
+        properties:
+          paranoid: {type: string}
+
+
+          shell:
+            type: object
+            required: [default, ssh]
+            properties:
+              default: {type: string}
+              ssh: {type: string}
+
       vm:
         type: object
         required: [name]
         properties:
           name: {type: string}
-
-
-  ssh:
-    type: object
-    required: [paranoid]
-    properties:
-      paranoid: {type: string}
 
 
   plugins:
@@ -55,8 +62,11 @@ config:
   vm:
     name: DeVM
 
-ssh:
-  paranoid: 'true'
+  ssh:
+    paranoid: 'true'
+    shell:
+      default: ENV['DeOS_VM_SHELL_DEFAULT']
+      ssh: ENV['DeOS_VM_SHELL_SSH']
 
 plugins:
   reboot: ./src/vagrant/reboot
@@ -79,9 +89,9 @@ Vagrant.configure('2') do |config|
   config.vm.box_check_update = Δ(data['config']['box']['check_update'])
 
 
-  config.ssh.paranoid = Δ(data['ssh']['paranoid'])
-  if ARGV[0] == 'ssh' ? config.ssh.shell = ENV['DeOS_VM_SHELL_SSH']
-                      : config.ssh.shell = ENV['DeOS_VM_SHELL_DEFAULT']
+  config.ssh.paranoid = Δ(data['config']['ssh']['paranoid'])
+  if ARGV[0] == 'ssh' ? config.ssh.shell = Δ(data['config']['ssh']['shell']['ssh'])
+                      : config.ssh.shell = Δ(data['config']['ssh']['shell']['default'])
   end # set_shell
 
 

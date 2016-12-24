@@ -21,3 +21,5 @@ PRINTM:=$(BASEDIR)/.deos/bin/travis/print
 endif
 
 export DeOS_VM_BOX:=bento/ubuntu-16.04
+export DeOS_VM_SHELL_DEFAULT:=bash -c 'BASH_ENV=/etc/profile exec bash'
+export DeOS_VM_SHELL_SSH:=bash -l

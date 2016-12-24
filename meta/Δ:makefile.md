@@ -233,11 +233,17 @@ include .deosrc
 
 all: #clean install build venv lint
 ifeq ($(HOSTOS),$(IS_MAC))
+    @
     @Δ(data['all']['hook']['pre'])
+    @
     @Δ(data['all']['if:host;is:mac'])
+    @
     @Δ(data['all']['hook']['post'])
+    @
 else
+    @
     @Δ(data['all']['else:host'])
+    @
 endif
 
 
@@ -260,33 +266,46 @@ else
     @
 endif
 
+
 wiki:
 ifeq ($(HOSTOS),$(IS_MAC))
+    @
     @Δ(data['wiki']['hook']['pre'])
-    -rm -rf var/wiki/
-    cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
-    rm -rf var/wiki/.git/
+    @
+    @-rm -rf var/wiki/
+    @cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+    @rm -rf var/wiki/.git/
+    @
     @Δ(data['wiki']['hook']['post'])
+    @
 else
+    @
     @Δ(data['wiki']['else:host'])
+    @
 endif
 
 
 wikiup:
 ifeq ($(HOSTOS),$(IS_MAC))
+    @
     @Δ(data['wikiup']['hook']['pre'])
-    -rm -rf var/wiki/
-    cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
-    cp meta/* var/wiki/
-    -cd var/wiki/ && git add .
-    -cd var/wiki/ && git commit -S -m "wiki: update"
-    -cd var/wiki/ && git push
-    -rm -rf var/wiki/
-    cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
-    rm -rf var/wiki/.git/
+    @
+    @-rm -rf var/wiki/
+    @cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+    @cp meta/* var/wiki/
+    @-cd var/wiki/ && git add .
+    @-cd var/wiki/ && git commit -S -m "wiki: update"
+    @-cd var/wiki/ && git push
+    @-rm -rf var/wiki/
+    @cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+    @rm -rf var/wiki/.git/
+    @
     @Δ(data['wikiup']['hook']['post'])
+    @
 else
+    @
     @Δ(data['wikiup']['else:host'])
+    @
 endif
 
 

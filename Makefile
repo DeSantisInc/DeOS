@@ -9,11 +9,17 @@ include .deosrc
 
 all: #clean install build venv lint
 ifeq ($(HOSTOS),$(IS_MAC))
+	@
 	@echo && $(PRINTM) cyan $@ start
+	@
 	@(python src/hello.py)
+	@
 	@$(PRINTM) cyan $@ stop && echo
+	@
 else
+	@
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+	@
 endif
 
 
@@ -36,33 +42,46 @@ else
 	@
 endif
 
+
 wiki:
 ifeq ($(HOSTOS),$(IS_MAC))
+	@
 	@$(PRINTM) cyan $@ start
-	-rm -rf var/wiki/
-	cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
-	rm -rf var/wiki/.git/
+	@
+	@-rm -rf var/wiki/
+	@cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+	@rm -rf var/wiki/.git/
+	@
 	@$(PRINTM) cyan $@ stop
+	@
 else
+	@
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+	@
 endif
 
 
 wikiup:
 ifeq ($(HOSTOS),$(IS_MAC))
+	@
 	@$(PRINTM) cyan $@ start
-	-rm -rf var/wiki/
-	cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
-	cp meta/* var/wiki/
-	-cd var/wiki/ && git add .
-	-cd var/wiki/ && git commit -S -m "wiki: update"
-	-cd var/wiki/ && git push
-	-rm -rf var/wiki/
-	cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
-	rm -rf var/wiki/.git/
+	@
+	@-rm -rf var/wiki/
+	@cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+	@cp meta/* var/wiki/
+	@-cd var/wiki/ && git add .
+	@-cd var/wiki/ && git commit -S -m "wiki: update"
+	@-cd var/wiki/ && git push
+	@-rm -rf var/wiki/
+	@cd var/ && git clone git@github.com:DeSantisInc/DeOS.wiki.git wiki
+	@rm -rf var/wiki/.git/
+	@
 	@$(PRINTM) cyan $@ stop
+	@
 else
+	@
 	@(echo "'make $@' isn't yet supported on $(HOSTOS).")
+	@
 endif
 
 

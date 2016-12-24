@@ -160,6 +160,17 @@ ifeq ($(HOSTOS),$(ISMAC))
 	-cd tests/blockstack && rm -rf blockstack_registrar
 	mv src/blockstack/blockstack-cli/blockstack_registrar/tests tests/blockstack/blockstack_registrar
 
+	-rm -rf src/blockstack/keylib
+	cd src/blockstack && git clone git@github.com:blockstack/keylib-py.git keylib
+	rm -rf src/blockstack/keylib/.git
+	-rm -rf docs/blockstack/keylib
+	mkdir docs/blockstack/keylib
+	mv src/blockstack/keylib/LICENSE docs/blockstack/keylib/LICENSE
+	mv src/blockstack/keylib/README.md docs/blockstack/keylib/README.md
+	-rm -rf tests/blockstack/keylib
+	mkdir tests/blockstack/keylib
+	mv src/blockstack/keylib/unit_tests.py tests/blockstack/keylib/unit_tests.py
+
 	-rm -rf src/blockstack/virtualchain
 	cd src/blockstack && git clone git@github.com:blockstack/virtualchain.git
 	rm -rf src/blockstack/virtualchain/.git

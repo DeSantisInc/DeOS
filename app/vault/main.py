@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
+from __future__ import division
 
 import configobj
 import jsonschema
@@ -10,47 +11,36 @@ import web
 import simplejson as json
 import ruamel.yaml as yaml
 
-TEMPLATES=['add_password_dialog']
+MACRO_BUILD="build/%s.ui"
+MACRO_CONFIG="config/%s.yml"
+MACRO_TEMPLATES="templates/%s.xml"
+PATH_TEMPLATES="./templates/"
+PATH_TEMPLATES_PARTIALS="./templates/partials/"
+TEMPLATES=["add_password_dialog"]
 
-def _partial(filename, env=None):
-    code,res=None,None
-    try:
-        if isinstance(filename,basestring):
-            with open('./templates/partials/'+filename+'.xml') as f:
-                raw=str(f.read())
-                code=web.template.Template(raw)
-                if isinstance(code,web.template.Template):
-                    res=str(code(env))
-                else:
-                    print('not instance!')
-    except:
-        print('render_partial: filename:%s env=%s'%(filename,env))
-    else:
-        if isinstance(res, basestring):
-            with open('./build/partials/'+filename+'.ui','w') as f:
-                f.write(res)
-    finally:
-        return res
-
-def partial(name, env=None):
-    render=web.template.render('./templates/partials/')
+def partial(name, env=None, factor=12):
+    render=web.template.render(PATH_TEMPLATES_PARTIALS)
+    render._add_global(partial,'render')
     if 'item'==name:
-        res=str(render.item(env=env))
-        res='\n'.join([12*' '+x for x in res.split('\n')[0:-1]])[10:]
+        res=str(render.item(env=env,factor=factor))
+        if factor==12: rm,back,div=4,0,6
+        elif factor==10: rm,back,div=6,2,6
+        else: rm,back,div=0,0,0
+        res='\n'.join([div*' '+x for x in res.split('\n')[0:-1]])[rm:].replace((back*' ')+'</item>','</item>')
         return res
-    return '</error func=partial>'
+    return "</error func=partial>"
 
 def render():
     for template in TEMPLATES:
-        with open('templates/'+template+'.xml') as f:
-            code=web.template.render('./templates/')
+        with open(MACRO_TEMPLATES%template) as f:
+            code=web.template.render(PATH_TEMPLATES)
             code._add_global(partial,'render')
-            with open('config/'+template+'.yml') as y:
+            with open(MACRO_CONFIG%template) as y:
                 data=y.read()
                 if isinstance(data, basestring):
                     env=yaml.safe_load(data)
-                    with open('build/'+template+'.ui','w') as p:
-                        res=str(code.add_password_dialog(env))
+                    with open(MACRO_BUILD%template,'w') as p:
+                        res=str(getattr(code,template)(env))
                         p.write(res)
 
 def main():

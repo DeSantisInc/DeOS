@@ -5,6 +5,7 @@
 #[dotfolders]
 .cache/
 .deos/
+.venv/
 
 #[folders]
 etc/blockstack/*

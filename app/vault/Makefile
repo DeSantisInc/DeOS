@@ -1,6 +1,8 @@
 export MAKEFLAGS=--no-print-directory
 
-all: build
+all:
+	source /Users/atd/Desktop/Electrum/venv/bin/activate && \
+	python main.py
 
 clone:
 	-rm -rf src
@@ -23,6 +25,7 @@ brew:
 venv:
 	-rm -rf .venv
 	-virtualenv --always-copy --no-site-packages .venv
+	source .venv/bin/activate && pip install web.py
 
 sip:
 	-rm -rf ext/sip

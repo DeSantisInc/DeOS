@@ -133,6 +133,23 @@ else
 	@ (echo "'make $@' isn't yet supported on $(HOSTOS).")
 endif
 
+trezor: trezor.clone
+
+trezor.clone:
+ifeq ($(HOSTOS),$(ISMAC))
+	-rm -rf src/trezor
+	cd src && git clone git@github.com:trezor/python-trezor.git trezor
+	rm -rf src/trezor/.git
+	-rm -rf tests/trezor
+	mv src/trezor/tests tests/trezor
+	-rm -rf tools/trezor
+	mv src/trezor/tools tools/trezor
+	-rm -rf docs/trezor
+	mkdir docs/trezor
+	mv src/trezor/COPYING docs/trezor/COPYING
+	mv src/trezor/README.rst docs/trezor/README.rst
+	mv src/trezor/MANIFEST.in docs/trezor/MANIFEST.in
+endif
 
 blockstack:
 	source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && python $(BASEDIR)/src/blockstack.py whois atom.id

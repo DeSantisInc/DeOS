@@ -12,22 +12,15 @@ import web
 import simplejson as json
 import ruamel.yaml as yaml
 
-
-VAULT_MACRO_BUILD             = os.getenv('VAULT_MACRO_BUILD',
-                                          'build/%s.ui')
-VAULT_MACRO_CONFIG            = os.getenv('VAULT_MACRO_CONFIG',
-                                          'config/%s.yml')
-VAULT_MACRO_TEMPLATES         = os.getenv('VAULT_MACRO_TEMPLATES',
-                                          'templates/%s.xml')
-VAULT_PATH_TEMPLATES          = os.getenv('VAULT_PATH_TEMPLATES',
-                                          './templates/')
-VAULT_PATH_TEMPLATES_PARTIALS = os.getenv('VAULT_PATH_TEMPLATES_PARTIALS',
-                                          './templates/partials/')
-VAULT_TEMPLATES               = ['add_password_dialog']
-
+VAULT_MACRO_BUILD=os.getenv('VAULT_MACRO_BUILD','build/%s.ui')
+VAULT_MACRO_CONFIG=os.getenv('VAULT_MACRO_CONFIG','config/%s.yml')
+VAULT_MACRO_TEMPLATES=os.getenv('VAULT_MACRO_TEMPLATES','templates/%s.xml')
+VAULT_PATH_TEMPLATES=os.getenv('VAULT_PATH_TEMPLATES','./templates/')
+VAULT_PATH_PARTIALS=os.getenv('VAULT_PATH_PARTIALS','./templates/partials/')
+VAULT_TEMPLATES=['add_password_dialog']
 
 def partial(name,env=None,factor=12):
-    render=web.template.render(VAULT_PATH_TEMPLATES_PARTIALS)
+    render=web.template.render(VAULT_PATH_PARTIALS)
     render._add_global(partial,'render')
     if 'item'==name:
         res=str(render.item(env=env,factor=factor))
@@ -38,7 +31,6 @@ def partial(name,env=None,factor=12):
             '\n')[0:-1]])[rm:].replace((back*' ')+'</item>','</item>')
         return res
     return '</error func=partial>'
-
 
 def render():
     for template in VAULT_TEMPLATES:
@@ -53,10 +45,8 @@ def render():
                         res=str(getattr(code,template)(env))
                         p.write(res)
 
-
 def main():
     render()
 
-
-if __name__ == "__main__":
+if __name__=="__main__":
     main()

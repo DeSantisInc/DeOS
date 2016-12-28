@@ -31,6 +31,7 @@ venv:
 	source .venv/bin/activate && pip install simplejson
 	source .venv/bin/activate && pip install ruamel.yaml
 	source .venv/bin/activate && pip install jsonschema
+	source .venv/bin/activate && pip install configobj
 
 sip:
 	-rm -rf ext/sip

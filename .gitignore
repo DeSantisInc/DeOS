@@ -31,3 +31,4 @@ yarn-error.log
 !var/backup/.gitprivate
 !var/log/deos/.gitprivate
 !var/privkey/.gitprivate
+

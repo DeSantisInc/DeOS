@@ -1,7 +1,7 @@
 export MAKEFLAGS=--no-print-directory
 
-all:
-	source /Users/atd/Desktop/Electrum/venv/bin/activate && \
+all: build
+	source .venv/bin/activate && \
 	python main.py
 
 clone:
@@ -10,7 +10,7 @@ clone:
 	rm -rf src/.git
 
 build: clone
-	source /Users/atd/Desktop/Electrum/venv/bin/activate && \
+	source .venv/bin/activate && \
 	cd src && \
 	make && \
 	python TrezorPass.py
@@ -23,9 +23,10 @@ brew:
 	-brew install sip
 
 venv:
-	-rm -rf .venv
-	-virtualenv --always-copy --no-site-packages .venv
+	#-rm -rf .venv
+	#-virtualenv --always-copy --no-site-packages .venv
 	source .venv/bin/activate && pip install web.py
+	source .venv/bin/activate && pip install PyCrypto
 
 sip:
 	-rm -rf ext/sip

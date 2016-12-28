@@ -1,6 +1,19 @@
 export MAKEFLAGS=--no-print-directory
 
-all: venv sip pyqt
+all: build
+
+clone:
+	-rm -rf src
+	git clone git@github.com:hiviah/TrezorPass.git src
+	rm -rf src/.git
+
+build: clone
+	source /Users/atd/Desktop/Electrum/venv/bin/activate && \
+	cd src && \
+	make && \
+	python TrezorPass.py
+
+install: brew venv sip pyqt
 
 brew:
 	-brew install protobuf

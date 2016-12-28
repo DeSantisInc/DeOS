@@ -1,6 +1,6 @@
 export MAKEFLAGS=--no-print-directory
 
-all: build
+all: #build
 	source .venv/bin/activate && \
 	python main.py
 
@@ -27,6 +27,10 @@ venv:
 	#-virtualenv --always-copy --no-site-packages .venv
 	source .venv/bin/activate && pip install web.py
 	source .venv/bin/activate && pip install PyCrypto
+	source .venv/bin/activate && pip install trezor
+	source .venv/bin/activate && pip install simplejson
+	source .venv/bin/activate && pip install ruamel.yaml
+	source .venv/bin/activate && pip install jsonschema
 
 sip:
 	-rm -rf ext/sip

@@ -22,16 +22,16 @@ VAULT_TEMPLATES=['add_password_dialog']
 
 
 def partial(name,env=None,factor=0):
-    rm,back,div=0,0,0
     render=web.template.render(VAULT_PATH_PARTIALS)
     render._add_global(partial,'render')
-    res=str(getattr(render,name)(env=env,factor=factor))
+    rm,back,div,res=0,0,0,str(getattr(render,name)(env=env,factor=factor))
+    if   'item'==name and 12==factor:rm,back,div=4,0,6
+    elif 'item'==name and 10==factor:rm,back,div=6,2,6
+    elif 'rect'==name:               rm,back,div=6,2,6
+    if name in['resources','rect','item']:
+        res='\n'.join([div*' '+x for x in res.split('\n')[0:-1]])[rm:]
     if 'item'==name:
-        if   12==factor:rm,back,div=4,0,6
-        elif 10==factor:rm,back,div=6,2,6
-    elif 'rect'==name:  rm,back,div=6,2,6
-    res='\n'.join([div*' '+x for x in res.split('\n')[0:-1]])[rm:].replace((
-        back*' ')+'</item>','</item>')
+        res=res.replace((back*' ')+'</item>','</item>')
     return res
 
 

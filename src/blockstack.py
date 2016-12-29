@@ -49,6 +49,7 @@ def whois(name):
 
 
 def main():
+    data=None
     if 3==len(sys.argv):
         if isinstance(sys.argv[1],basestring)\
             and isinstance(sys.argv[2],basestring):
@@ -59,7 +60,7 @@ def main():
             elif 'wallet'==sys.argv[1]:
                 if 'test'==sys.argv[2]:
                     data=wallet_test()
-
+    print(data)
 
 if __name__=="__main__":
     main()

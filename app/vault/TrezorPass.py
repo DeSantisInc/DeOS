@@ -11,7 +11,7 @@ from trezorlib.transport import ConnectionError
 from trezorlib.transport_hid import HidTransport
 from trezorlib import messages_pb2 as proto
 
-from ui_mainwindow import Ui_MainWindow
+from build.ui_mainwindow import Ui_MainWindow
 
 import password_map
 from encoding import q2s, s2q

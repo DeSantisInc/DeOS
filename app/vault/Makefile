@@ -1,19 +1,59 @@
-export MAKEFLAGS=--no-print-directory
+export MAKEFLAGS:=--no-print-directory
+export VAULT_MACRO_BUILD:=build/%s.ui
+export VAULT_MACRO_CONFIG:=config/%s.yml
+export VAULT_MACRO_TEMPLATES:=templates/%s.xml
+export VAULT_PATH_PARTIALS:=./templates/partials/
+export VAULT_PATH_TEMPLATES:=./templates/
+export VAULT_TEMPLATES:=add_password_dialog
+export VAULT_TODO:=\
+src/ui_addgroup_dialog.py\
+src/ui_enter_pin_dialog.py\
+src/ui_initialize_dialog.py\
+src/ui_mainwindow.py\
+src/ui_trezor_chooser_dialog.py\
+src/ui_trezor_passphrase_dialog.py
 
-all: #build
-	source .venv/bin/activate && \
-	python main.py
+all:
+	@source .venv/bin/activate && python main.py render
+	$(MAKE) build
+	@source .venv/bin/activate && python main.py replace
+	-rm dialogs.py && mv dialogs.swap.py dialogs.py
+	-rm TrezorPass.py && mv TrezorPass.swap.py TrezorPass.py
+	-$(MAKE) run
 
-clone:
-	-rm -rf src
-	git clone git@github.com:hiviah/TrezorPass.git src
-	rm -rf src/.git
+src/ui_%.py: src/%.ui
+	mv $< $(patsubst src/%.ui,build/%.ui,$<)
+
+run:
+	-source .venv/bin/activate && python TrezorPass.py
+	-rm *.pyc build/*.pyc
 
 build: clone
-	source .venv/bin/activate && \
-	cd src && \
-	make && \
-	python TrezorPass.py
+	-cp -rf build/*.ui src
+	source .venv/bin/activate && cd src && make
+	$(MAKE) $(VAULT_TODO)
+	@-mv src/Makefile docs/Makefile
+	cp src/*.ui build/
+	@-rm src/*.ui
+	@-mv src/ui_*.py build/
+	@-mv src/*.py .
+	@-rm -rf src
+
+clone: clean
+	@-rm build/ui_*.py
+	@-rm -rf src
+	@-git clone git@github.com:hiviah/TrezorPass.git src
+	@-cp -rf build/*.ui src
+	@-rm -rf src/.git
+	@-rm src/.gitignore
+	@-mv src/README.md docs/README.md
+	@-mv src/TrezorPass.pro docs/TrezorPass.pro
+	@-mv src/COPYING docs/COPYING
+
+clean:
+	@-rm *.pyc
+	@-rm -rf src/*.pyc
+	@-rm src/COPYING
 
 install: brew venv sip pyqt
 

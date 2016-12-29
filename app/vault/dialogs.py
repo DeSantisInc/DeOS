@@ -1,11 +1,11 @@
 from PyQt4 import QtGui, QtCore
 
-from ui_addgroup_dialog import Ui_AddGroupDialog
-from ui_trezor_passphrase_dialog import Ui_TrezorPassphraseDialog
-from ui_add_password_dialog import Ui_AddPasswordDialog
-from ui_initialize_dialog import Ui_InitializeDialog
-from ui_enter_pin_dialog import Ui_EnterPinDialog
-from ui_trezor_chooser_dialog import Ui_TrezorChooserDialog
+from build.ui_addgroup_dialog import Ui_AddGroupDialog
+from build.ui_trezor_passphrase_dialog import Ui_TrezorPassphraseDialog
+from build.ui_add_password_dialog import Ui_AddPasswordDialog
+from build.ui_initialize_dialog import Ui_InitializeDialog
+from build.ui_enter_pin_dialog import Ui_EnterPinDialog
+from build.ui_trezor_chooser_dialog import Ui_TrezorChooserDialog
 
 class AddGroupDialog(QtGui.QDialog, Ui_AddGroupDialog):
 	

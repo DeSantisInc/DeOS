@@ -8,9 +8,18 @@ from __future__ import division
 import configobj
 import jsonschema
 import os
-import simplejson as json
 import ruamel.yaml as yaml
+import simplejson as json
+import sys
 import web
+
+
+def _envtolist(s):
+    if isinstance(s,basestring):
+        a=s.split(' ')
+        if isinstance(a,list):
+            return a
+    return None
 
 
 VAULT_MACRO_BUILD=os.getenv('VAULT_MACRO_BUILD','build/%s.ui')
@@ -18,7 +27,8 @@ VAULT_MACRO_CONFIG=os.getenv('VAULT_MACRO_CONFIG','config/%s.yml')
 VAULT_MACRO_TEMPLATES=os.getenv('VAULT_MACRO_TEMPLATES','templates/%s.xml')
 VAULT_PATH_TEMPLATES=os.getenv('VAULT_PATH_TEMPLATES','./templates/')
 VAULT_PATH_PARTIALS=os.getenv('VAULT_PATH_PARTIALS','./templates/partials/')
-VAULT_TEMPLATES=['add_password_dialog']
+VAULT_TEMPLATES=_envtolist(os.getenv('VAULT_TEMPLATES',None))
+VAULT_TODO=_envtolist(os.getenv('VAULT_TODO',None))
 
 
 def partial(name,env=None,factor=0):
@@ -50,7 +60,13 @@ def render():
 
 
 def main():
-    render()
+    if 'replace' in sys.argv:
+        for fname in ['dialogs','TrezorPass']:
+            with open(fname+'.py') as f:
+                with open(fname+'.swap.py','w') as p:
+                    p.write(f.read().replace('from ui_','from build.ui_'))
+    elif 'render' in sys.argv:
+        render()
 
 
 if __name__=="__main__":

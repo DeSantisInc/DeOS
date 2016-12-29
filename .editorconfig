@@ -15,15 +15,11 @@ indent_style=tab
 indent_style=space
 indent_size=2
 
-[*.xml]
-indent_style=space
-indent_size=2
-
 [*.{lz,sh}]
 indent_style=space
 indent_size=2
 
-[*.{css,ui,html,hcl,json,js,jsx,pug,yml}]
+[*.{css,html,hcl,xml,ui,json,js,jsx,pug,yml}]
 indent_style=space
 indent_size=2
 

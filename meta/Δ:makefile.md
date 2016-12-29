@@ -432,6 +432,12 @@ else
 endif
 
 
+vault:
+ifeq ($(HOSTOS),$(ISMAC))
+    cd app/vault && make
+endif
+
+
 blockstack:
     source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && python $(BASEDIR)/src/blockstack.py whois atom.id
     source $(BASEDIR)/.deos/venv/darwin/blockstack/bin/activate && python $(BASEDIR)/src/blockstack.py wallet test

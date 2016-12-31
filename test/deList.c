@@ -1,5 +1,4 @@
-/*/ΔOS
-*/
+/*Δ*/
 #include "atdlib.h"
 
 const

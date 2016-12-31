@@ -1,0 +1,36 @@
+export MAKEFLAGS   := --no-print-directory
+.DEFAULT_GOAL      := all
+.SUBLIME_TARGETS:     all
+.PHONY:               all\
+                      build\
+                      clean\
+                      help\
+                      install\
+                      run\
+                      uninstall
+BIN                := $(CURDIR)/bin
+ETC                := $(CURDIR)/etc
+EXT                := $(CURDIR)/ext
+INCLUDE            := $(CURDIR)/include
+SRC                := $(CURDIR)/src
+MACRO              := $(INCLUDE)/.macro
+VENV               := $(CURDIR)/venv/darwin
+CC                 := clang
+CFLAGS             := -std=c89 -Wall -g
+CEXE               := $(BIN)/darwin/deos
+CINCLUDE           := -I$(VENV)/include/python2.7 -I$(MACRO)
+CLINK              := -lpython2.7
+CTARGET            := $(SRC)/main.c
+MKDIR              := mkdir
+NEWENV             := virtualenv --always-copy --no-site-packages
+PIP                := pip
+PYQT               := ext/pyqt
+RM                 := rm -rf
+SETENV             := source $(VENV)/bin/activate
+DEOS               := $(SETENV) && deos
+QMAKE              := /usr/local/Cellar/qt5/5.7.0/bin/qmake
+REQUIRE            := $(ETC)/python/requirements.txt
+SIP                := ext/sip
+VIRTUAL            := venv/darwin
+XMCC               := cd $(SRC) && python xmcc.py
+XMOD               := chmod +x

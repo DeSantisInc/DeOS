@@ -3,7 +3,6 @@ app/vault/.*.swp
 app/vault/*.kpf
 app/vault/*.pwdb*
 app/vault/ui_*py
-test/*.dot
 *.o
 *.pyc
 

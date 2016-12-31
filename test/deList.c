@@ -31,7 +31,7 @@ void(testGraphList(void))
     {deList*list=newList();
     int(i);for(i=1;i<10;++i)
         {appendList(list,i);
-    }FILE*fp=fopen("test/deList.dot","w+");
+    }FILE*fp=fopen("docs/atdlib/deList.dot","w+");
     graphList(list,fp);
     freeList(list);}
 

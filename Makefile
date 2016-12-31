@@ -35,10 +35,10 @@ clean:
 	@ clear
 
 test: $(OBJECTS)
-	@-rm test/deList.out test/deList.dot
-	@ clang -std=c89 -I$(INCLUDE) test/deList.c $(OBJECTS) -o test/deList.out
-	@ $(XMOD) test/deList.out
-	@ test/deList.out
+	@-rm test/deList.out test/deList.dot bin/darwin/test-deList.out
+	@ clang -std=c89 -I$(INCLUDE) test/deList.c $(OBJECTS) -o bin/darwin/test-deList.out
+	@ $(XMOD) bin/darwin/test-deList.out
+	@ bin/darwin/test-deList.out
 
 $(OBJ)/%.o:
 	@-rm $(OBJ)/$*.o

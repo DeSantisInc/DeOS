@@ -4,7 +4,6 @@ app/vault/*.kpf
 app/vault/*.pwdb*
 app/vault/ui_*py
 test/*.dot
-test/*.out
 *.o
 *.pyc
 

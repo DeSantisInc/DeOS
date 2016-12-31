@@ -26,40 +26,41 @@ If you would like to embed DeOS within a commercial application or
 redistribute it in a modified binary form, contact DeSantis Inc.
 */
 
-#ifndef __DELIST__
-#define __DELIST__
+#ifndef __ATDLIB__
+#define __ATDLIB__
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#ifndef __ATDLIB__
+#include <arpa/inet.h>
+#include <libgen.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#endif
+#include <sys/socket.h>
+#include <unistd.h>
 
+#include "deList.h"
 #include "deListNode.h"
-
-typedef struct deListObject
-{   int size;
-    deListNode *sentinel;
-} deList;
-
-extern deList *newList(void);
-extern void freeList(deList *list);
-extern int appendList(deList *ptr, int value);
-extern void deleteList(deList *lst, deListNode *n);
-extern void graphList(deList *list, FILE *fp);
-extern int prependList(deList *ptr, int value);
-extern int searchList(deList *ptr, int value);
-extern int getListSize(deList *ptr);
-extern deListNode *getListHead(deList *ptr);
-extern deListNode *getListTail(deList *ptr);
-extern deListNode *getListSentinel(deList *ptr);
+/*
+#include "deArray.h"
+#include "deContainer.h"
+#include "deGroup.h"
+#include "deNetwork.h"
+#include "deNode.h"
+#include "deObject.h"
+#include "deOS.h"
+#include "deShell.h"
+#include "dePython.h"
+#include "deTree.h"
+#include "deTreeNode.h"
+#include "deType.h"
+#include "deUser.h"
+*/
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* __DELIST__ */
+#endif /* __ATDLIB__ */

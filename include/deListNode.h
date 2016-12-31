@@ -26,8 +26,8 @@ If you would like to embed DeOS within a commercial application or
 redistribute it in a modified binary form, contact DeSantis Inc.
 */
 
-#ifndef __DELIST__
-#define __DELIST__
+#ifndef __DELISTNODE__
+#define __DELISTNODE__
 
 #ifdef __cplusplus
 extern "C" {
@@ -39,27 +39,22 @@ extern "C" {
 #include <string.h>
 #endif
 
-#include "deListNode.h"
+typedef struct deListNodeObject
+{   int key;
+    struct deListNodeObject *next;
+    struct deListNodeObject *prev;
+} deListNode;
 
-typedef struct deListObject
-{   int size;
-    deListNode *sentinel;
-} deList;
-
-extern deList *newList(void);
-extern void freeList(deList *list);
-extern int appendList(deList *ptr, int value);
-extern void deleteList(deList *lst, deListNode *n);
-extern void graphList(deList *list, FILE *fp);
-extern int prependList(deList *ptr, int value);
-extern int searchList(deList *ptr, int value);
-extern int getListSize(deList *ptr);
-extern deListNode *getListHead(deList *ptr);
-extern deListNode *getListTail(deList *ptr);
-extern deListNode *getListSentinel(deList *ptr);
+extern deListNode *newListNode(int key);
+extern deListNode *newListNodeSentinel(void);
+extern void freeListNode(deListNode *ptr);
+extern int getListNodeKey(deListNode *ptr);
+extern deListNode *getListNodeNext(deListNode *ptr);
+extern deListNode *getListNodePrev(deListNode *ptr);
+extern int setListNodeKey(deListNode *ptr, int key);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* __DELIST__ */
+#endif /* __DELISTNODE__ */

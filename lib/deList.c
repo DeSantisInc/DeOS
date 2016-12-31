@@ -1,4 +1,4 @@
-/* ΔOS: Decentralized Operating System
+/* DeOS: Decentralized Operating System
 
 Copyright (c) 2013-2017 Andrew DeSantis <atd@gmx.it>
 Copyright (c) 2016-2017 DeSantis Inc. <inc@gmx.it>
@@ -19,10 +19,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 This file incorporates work covered by the BSD 2-Clause License,
 as well as the following copyright, and permission notice:
 ---
-ΔOS may be used and distributed under the terms of the GPLv3,
+DeOS may be used and distributed under the terms of the GPLv3,
 which are available at: <http://www.gnu.org/licenses/gpl-3.0.html>
 
-If you would like to embed ΔOS within a commercial application or
+If you would like to embed DeOS within a commercial application or
 redistribute it in a modified binary form, contact DeSantis Inc.
 */
 

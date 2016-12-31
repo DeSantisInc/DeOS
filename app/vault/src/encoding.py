@@ -1,5 +1,7 @@
-import struct
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
+import struct
 from PyQt4 import QtCore
 
 def q2s(s):
@@ -40,10 +42,8 @@ class Padding(object):
     """
     def __init__(self, blocksize):
         self.blocksize = blocksize
-
     def pad(self, s):
         BS = self.blocksize
         return s + (BS - len(s) % BS) * chr(BS - len(s) % BS)
-
     def unpad(self, s):
         return s[0:-ord(s[-1])]

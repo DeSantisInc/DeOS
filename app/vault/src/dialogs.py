@@ -1,5 +1,7 @@
-from PyQt4 import QtGui, QtCore
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
+from PyQt4 import QtGui, QtCore
 from ui_addgroup_dialog import Ui_AddGroupDialog
 from ui_trezor_passphrase_dialog import Ui_TrezorPassphraseDialog
 from ui_add_password_dialog import Ui_AddPasswordDialog
@@ -153,7 +155,6 @@ class TrezorChooserDialog(QtGui.QDialog, Ui_TrezorChooserDialog):
     def __init__(self, deviceMap):
         """
         Create dialog and fill it with labels from deviceMap
-
         @param deviceMap: dict device string -> device label
         """
         QtGui.QDialog.__init__(self)

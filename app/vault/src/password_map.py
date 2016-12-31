@@ -1,11 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import struct
 import cPickle
 import hmac
 import hashlib
-
 from Crypto.Cipher import AES
 from Crypto import Random
-
 from backup import Backup
 from encoding import Magic, Padding
 
@@ -17,7 +18,7 @@ from encoding import Magic, Padding
 #  2 bytes  backup private key size (B)
 #  B bytes  encrypted backup key
 #  4 bytes  size of data following (N)
-#  N bytes  AES-CBC encrypted blob containing pickled structure for password map
+#  N bytes  AES-CBC encrypted blob containing pickled struct for password map
 # 32 bytes  HMAC-SHA256 over data with same key as AES-CBC data struct above
 
 BLOCKSIZE = 16
@@ -27,22 +28,24 @@ KEYSIZE   = 32
 class PasswordGroup(object):
     """
     Holds data for one password group.
-
     Each entry has three values:
     - key
     - symetrically AES-CBC encrypted password unlockable only by Trezor
     - RSA-encrypted password for creating backup of all password groups
     """
-
     def __init__(self):
         self.entries = []
 
     def addEntry(self, key, encryptedValue, backupValue):
-        """Add key-value-backud entry"""
+        """
+        Add key-value-backud entry.
+        """
         self.entries.append((key, encryptedValue, backupValue))
 
     def removeEntry(self, idx):
-        """Remove entry at given index"""
+        """
+        Remove entry at given index.
+        """
         self.entries.pop(idx)
 
     def updateEntry(self, idx, key, encryptedValue, backupValue):
@@ -53,12 +56,15 @@ class PasswordGroup(object):
         self.entries[idx] = (key, encryptedValue, backupValue)
 
     def entry(self, idx):
-        """Return entry with given index"""
+        """
+        Return entry with given index.
+        """
         return self.entries[idx]
 
 class PasswordMap(object):
-    """Storage of groups of passwords in memory"""
-
+    """
+    Storage of groups of passwords in memory.
+    """
     def __init__(self, trezor):
         assert trezor is not None
         self.groups = {}
@@ -74,14 +80,12 @@ class PasswordMap(object):
         groupName = groupName
         if groupName in self.groups:
             raise KeyError("Password group already exists")
-
         self.groups[groupName] = PasswordGroup()
 
     def load(self, fname):
         """
         Load encrypted passwords from disk file, decrypt outer
         layer containing key names. Requires Trezor connected.
-
         @throws IOError: if reading file failed
         """
         with file(fname) as f:
@@ -94,44 +98,36 @@ class PasswordMap(object):
             wrappedKey = f.read(KEYSIZE)
             if len(wrappedKey) != KEYSIZE:
                 raise IOError("Corrupted disk format - bad wrapped key length")
-
             self.outerKey = self.unwrapKey(wrappedKey)
             self.outerIv = f.read(BLOCKSIZE)
             if len(self.outerIv) != BLOCKSIZE:
                 raise IOError("Corrupted disk format - bad IV length")
-
             lb = f.read(2)
             if len(lb) != 2:
                 raise IOError("Corrupted disk format - bad backup key length")
             lb = struct.unpack("!H", lb)[0]
-
             self.backupKey = Backup(self.trezor)
             serializedBackup = f.read(lb)
             if len(serializedBackup) != lb:
                 raise IOError("Corrupted disk format - not enough encrypted backup key bytes")
             self.backupKey.deserialize(serializedBackup)
-
             ls = f.read(4)
             if len(ls) != 4:
                 raise IOError("Corrupted disk format - bad data length")
             l = struct.unpack("!I", ls)[0]
-
             encrypted = f.read(l)
             if len(encrypted) != l:
                 raise IOError("Corrupted disk format - not enough data bytes")
-
             hmacDigest = f.read(MACSIZE)
             if len(hmacDigest) != MACSIZE:
                 raise IOError("Corrupted disk format - HMAC not complete")
-
-            #time-invariant HMAC comparison that also works with python 2.6
+            # time-invariant HMAC comparison that also works with python 2.6
             newHmacDigest = hmac.new(self.outerKey, encrypted, hashlib.sha256).digest()
             hmacCompare = 0
             for (ch1, ch2) in zip(hmacDigest, newHmacDigest):
                 hmacCompare |= int(ch1 != ch2)
             if hmacCompare != 0:
                 raise IOError("Corrupted disk format - HMAC does not match or bad passphrase")
-
             serialized = self.decryptOuter(encrypted, self.outerIv)
             self.groups = cPickle.loads(serialized)
 
@@ -139,14 +135,12 @@ class PasswordMap(object):
         """
         Write password database to disk, encrypt it. Requires Trezor
         connected.
-
         @throws IOError: if writing file failed
         """
         assert len(self.outerKey) == KEYSIZE
         rnd = Random.new()
         self.outerIv = rnd.read(BLOCKSIZE)
         wrappedKey = self.wrapKey(self.outerKey)
-
         with file(fname, "wb") as f:
             version = 1
             f.write(Magic.headerStr)
@@ -155,7 +149,6 @@ class PasswordMap(object):
             f.write(self.outerIv)
             serialized = cPickle.dumps(self.groups, cPickle.HIGHEST_PROTOCOL)
             encrypted = self.encryptOuter(serialized, self.outerIv)
-
             hmacDigest = hmac.new(self.outerKey, encrypted, hashlib.sha256).digest()
             serializedBackup = self.backupKey.serialize()
             lb = struct.pack("!H", len(serializedBackup))
@@ -165,7 +158,6 @@ class PasswordMap(object):
             f.write(l)
             f.write(encrypted)
             f.write(hmacDigest)
-
             f.flush()
             f.close()
 
@@ -216,7 +208,6 @@ class PasswordMap(object):
         """
         Encrypt a password. Does PKCS#5 padding before encryption.
         Store IV as first block.
-
         @param groupName key that will be shown to user on Trezor and
             used to encrypt the password. A string in utf-8
         """
@@ -229,8 +220,8 @@ class PasswordMap(object):
 
     def decryptPassword(self, encryptedPassword, groupName):
         """
-        Decrypt a password. First block is IV. After decryption strips PKCS#5 padding.
-
+        Decrypt a password. First block is IV. After decryption strips
+        PKCS#5 padding.
         @param groupName key that will be shown to user on Trezor and
             was used to encrypt the password. A string in utf-8.
         """

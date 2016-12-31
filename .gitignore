@@ -3,6 +3,8 @@ app/vault/.*.swp
 app/vault/*.kpf
 app/vault/*.pwdb*
 app/vault/ui_*py
+test/*.dot
+test/*.out
 *.o
 *.pyc
 
@@ -16,6 +18,7 @@ etc/zerotier/*
 ext/pyqt/
 ext/sip/
 include/.macro/
+obj/
 node_modules/
 tests/blockstack/integration/*
 var/backup/*

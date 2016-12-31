@@ -1,5 +1,8 @@
 include .deosrc
 
+FILES=$(wildcard $(LIB)/*.c)
+OBJECTS=$(patsubst $(LIB)/%,$(OBJ)/%,$(FILES:.c=.o))
+
 all:
 	@ $(MAKE) install
 	@ $(MAKE) run
@@ -30,6 +33,16 @@ uninstall: clean
 clean:
 	@-$(RM) $(CEXE)* $(MACRO)/*.def
 	@ clear
+
+test: $(OBJECTS)
+	@-rm test/deList.out test/deList.dot
+	@ clang -std=c89 -I$(INCLUDE) test/deList.c $(OBJECTS) -o test/deList.out
+	@ $(XMOD) test/deList.out
+	@ test/deList.out
+
+$(OBJ)/%.o:
+	@-rm $(OBJ)/$*.o
+	@ $(CC) -std=c89 -Wall -g -I$(INCLUDE) -c $(LIB)/$*.c -o $(OBJ)/$*.o
 
 $(VIRTUAL):
 	@-$(MKDIR) venv $(VIRTUAL)

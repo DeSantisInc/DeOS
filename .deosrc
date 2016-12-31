@@ -7,12 +7,14 @@ export MAKEFLAGS   := --no-print-directory
                       help\
                       install\
                       run\
+                      test\
                       uninstall
 BIN                := $(CURDIR)/bin
 ETC                := $(CURDIR)/etc
 EXT                := $(CURDIR)/ext
 INCLUDE            := $(CURDIR)/include
 LIB                := $(CURDIR)/lib
+OBJ                := $(CURDIR)/obj/darwin
 SRC                := $(CURDIR)/src
 MACRO              := $(INCLUDE)/.macro
 VENV               := $(CURDIR)/venv/darwin

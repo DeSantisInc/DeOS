@@ -12,6 +12,7 @@ BIN                := $(CURDIR)/bin
 ETC                := $(CURDIR)/etc
 EXT                := $(CURDIR)/ext
 INCLUDE            := $(CURDIR)/include
+LIB                := $(CURDIR)/lib
 SRC                := $(CURDIR)/src
 MACRO              := $(INCLUDE)/.macro
 VENV               := $(CURDIR)/venv/darwin

@@ -1,5 +1,3 @@
-/*/Δ:test:deList.c
-*/
 #include "atdlib.h"
 
 const

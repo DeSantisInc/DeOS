@@ -1,4 +1,4 @@
-include .deos-env
+include .deosrc
 
 all: $(UI_GENERATED)
 

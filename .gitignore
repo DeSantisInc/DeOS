@@ -1,21 +1,27 @@
 #[wildcards]
+app/vault/.*.swp
+app/vault/*.kpf
+app/vault/*.pwdb*
+app/vault/ui_*py
 *.o
 *.pyc
 
 #[dotfolders]
-.cache/
-.deos/
 .backup/
-.venv/
 
 #[folders]
+bin/
 etc/blockstack/*
 etc/zerotier/*
+ext/pyqt/
+ext/sip/
+include/.macro/
 node_modules/
+tests/blockstack/integration/*
 var/backup/*
 var/log/deos/*
 var/privkey/*
-tests/blockstack/integration/*
+venv/
 
 #[dotfiles]
 .DS_Store
@@ -23,8 +29,11 @@ tests/blockstack/integration/*
 
 #[files]
 npm-debug.log
-src/example.sh
 yarn-error.log
+app/vault/Crypto
+app/vault/trezorlib
+app/vault/TrezorPass.pro.user
+src/example.sh
 
 #[except]
 !etc/blockstack/.gitprivate

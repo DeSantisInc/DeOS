@@ -20,6 +20,7 @@ class Backup(object):
     def __init__(self, trezor):
         """
         Create with no keys prepared.
+
         @param trezor: Trezor client object to use for encrypting private key
         """
         self.encryptedPrivate   = None # encrypted private key.
@@ -61,6 +62,7 @@ class Backup(object):
         Decrypt private RSA key using self.encryptedEphemeral from
         self.encryptedPrivate. Encrypted ephemeral key will be
         decrypted with Trezor.
+
         @returns RSA private key as Crypto.RSA._RSAobj
         """
         ephemeral = self.trezor.decrypt_keyvalue(Magic.backupNode,

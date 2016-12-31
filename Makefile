@@ -19,8 +19,8 @@ build:
 install: clean
 	@-$(MKDIR) $(BIN) $(BIN)/darwin $(EXT) $(INCLUDE) $(LIB) $(MACRO)
 	@ $(MAKE) $(VIRTUAL)
-	@#$(MAKE) $(SIP)
-	@#$(MAKE) $(PYQT)
+	@ $(MAKE) $(SIP)
+	@ $(MAKE) $(PYQT)
 	@ clear
 
 uninstall: clean

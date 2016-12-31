@@ -6,18 +6,20 @@ import os.path
 import password_map
 import sys
 
-from backup import Backup
-from Crypto import Random
-from dialogs import AddGroupDialog, TrezorPassphraseDialog
-from dialogs import AddPasswordDialog, InitializeDialog
-from dialogs import EnterPinDialog, TrezorChooserDialog
-from encoding import q2s, s2q
 from PyQt4 import QtGui, QtCore
+from Crypto import Random
+
 from trezorlib import messages_pb2 as proto
 from trezorlib.client import BaseClient, CallException
 from trezorlib.client import PinException, ProtocolMixin
 from trezorlib.transport import ConnectionError
 from trezorlib.transport_hid import HidTransport
+
+from backup import Backup
+from dialogs import AddGroupDialog, TrezorPassphraseDialog
+from dialogs import AddPasswordDialog, InitializeDialog
+from dialogs import EnterPinDialog, TrezorChooserDialog
+from encoding import q2s, s2q
 from ui_mainwindow import Ui_MainWindow
 
 class MainWindow(QtGui.QMainWindow, Ui_MainWindow):

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from PyQt4 import QtGui, QtCore
+
 from ui_addgroup_dialog import Ui_AddGroupDialog
 from ui_trezor_passphrase_dialog import Ui_TrezorPassphraseDialog
 from ui_add_password_dialog import Ui_AddPasswordDialog
@@ -25,8 +26,8 @@ class AddGroupDialog(QtGui.QDialog, Ui_AddGroupDialog):
 
     def validate(self):
         """
-        Validates input if name is not empty and is different from
-        existing group names.
+        Validates input if name is not empty and
+        is different from existing group names.
         """
         valid = True
         text = self.newGroupEdit.text()

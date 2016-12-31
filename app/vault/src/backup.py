@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import cPickle
+
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import AES, PKCS1_OAEP
 from Crypto import Random
+
 from encoding import Magic, Padding
 
 class Backup(object):

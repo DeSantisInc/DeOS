@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import struct
+
 from PyQt4 import QtCore
 
 def q2s(s):

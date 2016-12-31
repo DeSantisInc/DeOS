@@ -5,6 +5,7 @@
 #[dotfolders]
 .cache/
 .deos/
+.backup/
 .venv/
 
 #[folders]

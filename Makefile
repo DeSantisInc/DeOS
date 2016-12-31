@@ -36,7 +36,9 @@ clean:
 
 test: $(OBJECTS)
 	@-rm docs/atdlib/deList.dot bin/darwin/test-deList.out
-	@ clang -std=c89 -I$(INCLUDE) test/deList.c $(OBJECTS) -o bin/darwin/test-deList.out
+	@ clang -std=c89\
+	        -I$(INCLUDE) test/deList.c $(OBJECTS)\
+	        -o bin/darwin/test-deList.out
 	@ $(XMOD) bin/darwin/test-deList.out
 	@ bin/darwin/test-deList.out
 

@@ -18,10 +18,13 @@ INCLUDE            := $(CURDIR)/include
 LIB                := $(CURDIR)/lib
 OBJ                := $(CURDIR)/obj/darwin
 SRC                := $(CURDIR)/src
+TEST               := $(CURDIR)/test
 MACRO              := $(INCLUDE)/.macro
 VAULT              := $(APP)/vault
 VENV               := $(CURDIR)/venv/darwin
 FILES              := $(wildcard $(LIB)/*.c)
+TFILES             := $(wildcard $(TEST)/*.c)
+TBINS              := $(patsubst $(TEST)/%,$(BIN)/darwin/%,$(TFILES:.c=.test))
 OBJECTS            := $(patsubst $(LIB)/%,$(OBJ)/%,$(FILES:.c=.o))
 UI_GENERATED       := $(VAULT)/src/ui_mainwindow.py\
                       $(VAULT)/src/ui_addgroup_dialog.py\

@@ -45,17 +45,16 @@ clean:
 	        $(MACRO)/*.def
 	@ clear
 
-test: $(OBJECTS)
-	@-rm docs/atdlib/deList.dot \
-	     bin/darwin/deList.test
-	@ clang -std=c89      \
-            -I$(INCLUDE)  \
-            test/deList.c \
-            $(OBJECTS)    \
-            -o bin/darwin/deList.test
-	@ $(XMOD) bin/darwin/deList.test
-	@ bin/darwin/deList.test
-	@ dot -Tpng docs/atdlib/deList.dot > var/img/deList.png
+
+test: $(TBINS)
+
+$(BIN)/darwin/%.test: $(OBJECTS)
+	@#-rm docs/atdlib/$*.dot
+	@-clang -std=c89 -I$(INCLUDE) test/$*.c $(OBJECTS) -o bin/darwin/$*.test
+	@-$(XMOD) bin/darwin/$*.test
+	@-bin/darwin/$*.test
+	@-rm $(BIN)/darwin/*.test
+	@#dot -Tpng docs/atdlib/$*.dot > var/img/$*.png
 
 vault: $(UI_GENERATED)
 	@-rm $(VAULT)/src/*.pyc

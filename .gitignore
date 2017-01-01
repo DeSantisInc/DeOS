@@ -5,6 +5,7 @@ app/vault/*.pwdb*
 app/vault/ui_*py
 *.o
 *.pyc
+*.pwdb
 
 #[dotfolders]
 .backup/

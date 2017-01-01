@@ -16,6 +16,7 @@ typedef struct deActionObject
 } deAction;
 
 extern deAction *newAction(int id);
+extern int freeAction(deAction *self);
 
 #ifdef __cplusplus
 }

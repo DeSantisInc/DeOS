@@ -9,7 +9,7 @@ void(testFreeList(void))
     int(i);
     for(i=1;i<1000;++i)
         {appendList(ptr,i);
-    printf("%d\n",i);
+    /*printf("%d\n",i);*/
     }freeList(ptr);}
 
 static

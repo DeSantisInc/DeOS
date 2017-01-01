@@ -71,7 +71,7 @@ class Window(object):
 
 class Vault(object):
     def __init__(self):
-        self.group  = Group()
+        self.group = Group()
         self.passwd = Password()
         self.trezor = Trezor()
         self.backup = Backup()

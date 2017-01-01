@@ -13,6 +13,13 @@ newAction(int id)
     return ptr;
 }
 
+int
+freeAction(deAction *self)
+{   if (NULL == self) return -1;
+    free(self);
+    return 0;
+}
+
 #ifdef __cplusplus
 }
 #endif

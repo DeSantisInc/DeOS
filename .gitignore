@@ -32,6 +32,7 @@ venv/
 npm-debug.log
 yarn-error.log
 app/vault/src/ui_*_dialog.py
+app/vault/src/ui_mainwindow.py
 app/vault/Crypto
 app/vault/trezorlib
 app/vault/TrezorPass.pro.user

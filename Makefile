@@ -56,11 +56,11 @@ test: $(OBJECTS)
 	@ dot -Tpng docs/atdlib/deList.dot > var/img/deList.png
 
 vault: $(UI_GENERATED)
-	@-rm app/vault/src/*.pyc
-	@-$(SETENV) && app/vault/src/vault.py
-	@-rm app/vault/src/*.pyc
+	@-rm $(VAULT)/src/*.pyc
+	@-$(SETENV) && $(VAULT)/src/vault.py
+	@-rm $(VAULT)/src/*.pyc
 
-app/vault/src/ui_%.py: app/vault/view/%.ui
+$(VAULT)/src/ui_%.py: $(VAULT)/view/%.ui
 	@-$(SETENV) && $(VENV)/bin/pyuic4 -o $@ $<
 
 $(OBJ)/%.o:

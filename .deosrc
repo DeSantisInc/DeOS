@@ -23,6 +23,13 @@ VAULT              := $(APP)/vault
 VENV               := $(CURDIR)/venv/darwin
 FILES              := $(wildcard $(LIB)/*.c)
 OBJECTS            := $(patsubst $(LIB)/%,$(OBJ)/%,$(FILES:.c=.o))
+UI_GENERATED       := $(VAULT)/src/ui_mainwindow.py\
+                      $(VAULT)/src/ui_addgroup_dialog.py\
+                      $(VAULT)/src/ui_trezor_passphrase_dialog.py\
+                      $(VAULT)/src/ui_add_password_dialog.py\
+                      $(VAULT)/src/ui_initialize_dialog.py\
+                      $(VAULT)/src/ui_enter_pin_dialog.py\
+                      $(VAULT)/src/ui_trezor_chooser_dialog.py
 CC                 := clang
 CFLAGS             := -std=c89 -Wall -g
 CEXE               := $(BIN)/darwin/deos
@@ -42,11 +49,4 @@ SIP                := ext/sip
 VIRTUAL            := venv/darwin
 XMCC               := cd $(SRC) && python xmcc.py
 XMOD               := chmod +x
-UI_GENERATED := \
-	app/vault/src/ui_mainwindow.py \
-	app/vault/src/ui_addgroup_dialog.py \
-	app/vault/src/ui_trezor_passphrase_dialog.py \
-	app/vault/src/ui_add_password_dialog.py \
-	app/vault/src/ui_initialize_dialog.py \
-	app/vault/src/ui_enter_pin_dialog.py \
-	app/vault/src/ui_trezor_chooser_dialog.py
+

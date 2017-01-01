@@ -26,52 +26,70 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
     """
     Main window for the application with groups, and password lists.
     """
-    KEY_IDX      = 0 # column where key is shown in password table
+    KEY_IDX = 0 # column where key is shown in password table
     PASSWORD_IDX = 1 # column where password is shown in password table
-    CACHE_IDX    = 0 # column of QWidgetItem in whose data we cache
+    CACHE_IDX = 0 # column of QWidgetItem in whose data we cache
                      # decrypted passwords
-
     def __init__(self, pwMap, dbFilename):
         """
-        @param pwMap: a PasswordMap instance with encrypted passwords
+        @param pwMap:      a PasswordMap instance w/ encrypted passwords
         @param dbFilename: file name for saving pwMap
         """
         QtGui.QMainWindow.__init__(self)
         self.setupUi(self)
-        self.pwMap = pwMap
+        # Database & Password
+        self.pwMap         = pwMap
         self.selectedGroup = None
-        self.modified = False # modified flag "Save?" question on exit
-        self.dbFilename = dbFilename
-        self.groupsModel = QtGui.QStandardItemModel()
+        self.modified      = False # modified flag "Save?" question on exit
+        self.dbFilename    = dbFilename
+        # Groups Model
+        self.groupsModel   = QtGui.QStandardItemModel()
         self.groupsModel.setHorizontalHeaderLabels(["Password group"])
-        self.groupsFilter = QtGui.QSortFilterProxyModel()
+        # Groups Filter
+        self.groupsFilter  = QtGui.QSortFilterProxyModel()
         self.groupsFilter.setSourceModel(self.groupsModel)
+        # Groups Tree
         self.groupsTree.setModel(self.groupsFilter)
         self.groupsTree.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
-        self.groupsTree.customContextMenuRequested.connect(self.showGroupsContextMenu)
+        self.groupsTree.customContextMenuRequested.connect(
+            self.showGroupsContextMenu)
         self.groupsTree.clicked.connect(self.loadPasswordsBySelection)
-        self.groupsTree.selectionModel().selectionChanged.connect(self.loadPasswordsBySelection)
+        self.groupsTree.selectionModel().selectionChanged.connect(
+            self.loadPasswordsBySelection)
         self.groupsTree.setSortingEnabled(True)
+        # Password Table
         self.passwordTable.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
-        self.passwordTable.customContextMenuRequested.connect(self.showPasswdContextMenu)
-        self.passwordTable.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
-        self.passwordTable.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
-        shortcut = QtGui.QShortcut(QtGui.QKeySequence("Ctrl+C"), self.passwordTable, self.copyPasswordFromSelection)
+        self.passwordTable.customContextMenuRequested.connect(
+            self.showPasswdContextMenu)
+        self.passwordTable.setSelectionBehavior(
+            QtGui.QAbstractItemView.SelectRows)
+        self.passwordTable.setSelectionMode(
+            QtGui.QAbstractItemView.SingleSelection)
+        # Shortcut
+        shortcut = QtGui.QShortcut(QtGui.QKeySequence("Ctrl+C"),
+                                   self.passwordTable,
+                                   self.copyPasswordFromSelection)
         shortcut.setContext(QtCore.Qt.WidgetShortcut)
+        # Action Triggers
         self.actionQuit.triggered.connect(self.close)
         self.actionBackup.triggered.connect(self.saveBackup)
         self.actionSave.triggered.connect(self.saveDatabase)
         self.actionSave.setShortcut(QtGui.QKeySequence("Ctrl+S"))
+        # Header Key/Value Items
         headerKey = QtGui.QTableWidgetItem("Key");
         headerValue = QtGui.QTableWidgetItem("Value");
+        # Password Table
         self.passwordTable.setColumnCount(2)
         self.passwordTable.setHorizontalHeaderItem(self.KEY_IDX, headerKey)
         self.passwordTable.setHorizontalHeaderItem(self.PASSWORD_IDX, headerValue)
+        # Search Edit
         self.searchEdit.textChanged.connect(self.filterGroups)
+        # Groups
         groupNames = self.pwMap.groups.keys()
         for groupName in groupNames:
             item = QtGui.QStandardItem(s2q(groupName))
             self.groupsModel.appendRow(item)
+        # Groups Tree
         self.groupsTree.sortByColumn(0, QtCore.Qt.AscendingOrder)
 
     def setModified(self, modified):
@@ -529,8 +547,9 @@ def initializeStorage(trezor, pwMap, settings):
     backup passphrase and Trezor's cipher-key-value system. Makes sure
     a session is created on Trezor so that the passphrase will be cached
     until disconnect.
-    @param trezor: Trezor client
-    @param pwMap: PasswordMap where to put encrypted backupKeys
+
+    @param trezor:   Trezor client
+    @param pwMap:    PasswordMap where to put encrypted backupKeys
     @param settings: Settings object to store password database location
     """
     dialog = InitializeDialog()
@@ -544,45 +563,50 @@ def initializeStorage(trezor, pwMap, settings):
     settings.dbFilename = q2s(dialog.pwFile())
     settings.store()
 
-app = QtGui.QApplication(sys.argv)
-try:
-    trezorChooser = TrezorChooser()
-    trezor = trezorChooser.getDevice()
-except (ConnectionError, RuntimeError), e:
-    msgBox = QtGui.QMessageBox(
-        text="Connection to Trezor failed: " + e.message)
-    msgBox.exec_()
-    sys.exit(1)
-if trezor is None:
-    msgBox = QtGui.QMessageBox(text="No available Trezor found, quitting.")
-    msgBox.exec_()
-    sys.exit(1)
-trezor.clear_session()
-#print "label:", trezor.features.label
-pwMap = password_map.PasswordMap(trezor)
-settings = Settings()
-if settings.dbFilename and os.path.isfile(settings.dbFilename):
+def main():
+    app = QtGui.QApplication(sys.argv)
     try:
-        pwMap.load(settings.dbFilename)
-    except PinException:
-        msgBox = QtGui.QMessageBox(text="Invalid PIN")
+        trezorChooser = TrezorChooser()
+        trezor = trezorChooser.getDevice()
+    except (ConnectionError, RuntimeError), e:
+        msgText = "Connection to Trezor failed: " + e.message
+        msgBox = QtGui.QMessageBox(text=msgText)
         msgBox.exec_()
-        sys.exit(8)
-    except CallException:
-        # button cancel on Trezor, so exit
-        sys.exit(6)
-    except Exception, e:
-        msgBox = QtGui.QMessageBox(
-            text="Could not decrypt passwords: " + e.message)
+        sys.exit(1)
+    if trezor is None:
+        msgText = "No available Trezor found, quitting."
+        msgBox = QtGui.QMessageBox(text=msgText)
         msgBox.exec_()
-        sys.exit(5)
-else:
-    initializeStorage(trezor, pwMap, settings)
-rng = Random.new()
-pwMap.outerIv = rng.read(password_map.BLOCKSIZE)
-pwMap.outerKey = rng.read(password_map.KEYSIZE)
-pwMap.encryptedBackupKey = ""
-mainWindow = MainWindow(pwMap, settings.dbFilename)
-mainWindow.show()
-retCode = app.exec_()
-sys.exit(retCode)
+        sys.exit(1)
+    trezor.clear_session()
+    # print "label:", trezor.features.label
+    pwMap = password_map.PasswordMap(trezor)
+    settings = Settings()
+    if settings.dbFilename and os.path.isfile(settings.dbFilename):
+        try:
+            pwMap.load(settings.dbFilename)
+        except PinException:
+            msgBox = QtGui.QMessageBox(text="Invalid PIN")
+            msgBox.exec_()
+            sys.exit(8)
+        except CallException:
+            # button cancel on Trezor, so exit
+            sys.exit(6)
+        except Exception, e:
+            msgText = "Could not decrypt passwords: " + e.message
+            msgBox = QtGui.QMessageBox(text=msgText)
+            msgBox.exec_()
+            sys.exit(5)
+    else:
+        initializeStorage(trezor, pwMap, settings)
+    rng = Random.new()
+    pwMap.outerIv = rng.read(password_map.BLOCKSIZE)
+    pwMap.outerKey = rng.read(password_map.KEYSIZE)
+    pwMap.encryptedBackupKey = ""
+    mainWindow = MainWindow(pwMap, settings.dbFilename)
+    mainWindow.show()
+    retCode = app.exec_()
+    sys.exit(retCode)
+
+if __name__ == "__main__":
+    main()

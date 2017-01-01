@@ -55,6 +55,14 @@ test: $(OBJECTS)
 	@ bin/darwin/deList.test
 	@ dot -Tpng docs/atdlib/deList.dot > var/img/deList.png
 
+vault: $(UI_GENERATED)
+	@-rm app/vault/src/*.pyc
+	@-$(SETENV) && app/vault/src/vault.py
+	@-rm app/vault/src/*.pyc
+
+app/vault/src/ui_%.py: app/vault/view/%.ui
+	@-$(SETENV) && $(VENV)/bin/pyuic4 -o $@ $<
+
 $(OBJ)/%.o:
 	@-rm $(OBJ)/$*.o
 	@ $(CC) -std=c89 -Wall -g \
@@ -76,8 +84,7 @@ $(PYQT):
 	@ mv PyQt-mac-gpl-4.11.4 $(EXT)/pyqt
 	@ $(SETENV) &&      \
 	  cd $(EXT)/pyqt && \
-	  python configure-ng.py --confirm-license   \
-	                         --qmake=$(QMAKE) && \
+	  python configure-ng.py --confirm-license --qmake=$(QMAKE) && \
 	  make && make install
 	@ clear
 

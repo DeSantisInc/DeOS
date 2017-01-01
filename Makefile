@@ -60,6 +60,9 @@ vault: $(UI_GENERATED)
 	@-$(SETENV) && $(VAULT)/src/vault.py
 	@-rm $(VAULT)/src/*.pyc
 
+vault.sdk:
+	@-$(SETENV) && python src/vault.py
+
 $(VAULT)/src/ui_%.py: $(VAULT)/view/%.ui
 	@-$(SETENV) && $(VENV)/bin/pyuic4 -o $@ $<
 

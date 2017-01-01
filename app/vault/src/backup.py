@@ -115,4 +115,3 @@ class Backup(object):
         cipher = PKCS1_OAEP.new(privateKey)
         password = cipher.decrypt(encryptedPassword)
         return password
-

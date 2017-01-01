@@ -10,12 +10,14 @@ help:
 run: build
 	@ $(DEOS)
 
-build:
+build: $(OBJECTS)
 	@-$(XMCC)
-	@ $(CC) $(CFLAGS)   \
-	        $(CINCLUDE) \
-	        $(CTARGET)  \
-	        -o $(CEXE)  \
+	@ $(CC) $(CFLAGS)    \
+	        -I$(INCLUDE) \
+	        $(CINCLUDE)  \
+	        $(CTARGET)   \
+	        $(OBJECTS)   \
+	        -o $(CEXE)   \
 	        $(CLINK)
 	@ $(XMOD) $(CEXE)
 	@ clear
@@ -66,7 +68,7 @@ vault.sdk:
 $(VAULT)/src/ui_%.py: $(VAULT)/view/%.ui
 	@-$(SETENV) && $(VENV)/bin/pyuic4 -o $@ $<
 
-$(OBJ)/%.o:
+$(OBJ)/%.o: $(LIB)/%.c $(INCLUDE)/%.h
 	@-rm $(OBJ)/$*.o
 	@ $(CC) -std=c89 -Wall -g \
 	        -I$(INCLUDE)      \

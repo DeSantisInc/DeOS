@@ -1,15 +1,11 @@
 #include <Python.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "atdlib.h"
 
 int
 main(int argc, char const *argv[])
-{   printf("Hello, world!\n");
-    return EXIT_SUCCESS;
-    Py_Initialize();
-    #define X(python)\
-    PyRun_SimpleString(python);
-    #include "deos.def"
-    Py_Finalize();
+{   deArray(double) *a1;
+    a1 = newArray(double);
+    printf("%d\n",a1->size);
+    freeArray(double, a1);
     return EXIT_SUCCESS;
 }

@@ -1,8 +1,5 @@
 include .deosrc
 
-FILES=$(wildcard $(LIB)/*.c)
-OBJECTS=$(patsubst $(LIB)/%,$(OBJ)/%,$(FILES:.c=.o))
-
 all:
 	@ $(MAKE) install
 	@ $(MAKE) run

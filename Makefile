@@ -15,8 +15,7 @@ build:
 	@ $(CC) $(CFLAGS)   \
 	        $(CINCLUDE) \
 	        $(CTARGET)  \
-	        -o          \
-	        $(CEXE)     \
+	        -o $(CEXE)  \
 	        $(CLINK)
 	@ $(XMOD) $(CEXE)
 	@ clear
@@ -54,6 +53,7 @@ test: $(OBJECTS)
             -o bin/darwin/deList.test
 	@ $(XMOD) bin/darwin/deList.test
 	@ bin/darwin/deList.test
+	@ dot -Tpng docs/atdlib/deList.dot > var/img/deList.png
 
 $(OBJ)/%.o:
 	@-rm $(OBJ)/$*.o
@@ -66,33 +66,28 @@ $(OBJ)/%.o:
 $(VIRTUAL):
 	@-$(MKDIR) venv $(VIRTUAL)
 	@ $(NEWENV) $(VENV)
-	@ $(SETENV) && \
-	  $(PIP) install -r $(REQUIRE)
+	@ $(SETENV) && $(PIP) install -r $(REQUIRE)
 	@ clear
 
 $(PYQT):
 	@ cp $(EXT)/.cache/PyQt-mac-gpl-4.11.4.tar.gz $(EXT)/pyqt.tar.gz
-	@ gunzip $(EXT)/pyqt.tar.gz && \
-	  tar -xvf $(EXT)/pyqt.tar
+	@ gunzip $(EXT)/pyqt.tar.gz && tar -xvf $(EXT)/pyqt.tar
 	@-$(RM) $(EXT)/pyqt.tar
 	@ mv PyQt-mac-gpl-4.11.4 $(EXT)/pyqt
 	@ $(SETENV) &&      \
 	  cd $(EXT)/pyqt && \
 	  python configure-ng.py --confirm-license   \
 	                         --qmake=$(QMAKE) && \
-	  make &&           \
-	  make install
+	  make && make install
 	@ clear
 
 $(SIP):
 	@ cp $(EXT)/.cache/sip-4.18.1.tar.gz $(EXT)/sip.tar.gz
-	@ gunzip $(EXT)/sip.tar.gz && \
-	  tar -xvf $(EXT)/sip.tar
+	@ gunzip $(EXT)/sip.tar.gz && tar -xvf $(EXT)/sip.tar
 	@-$(RM) $(EXT)/sip.tar
 	@ mv sip-4.18.1 $(EXT)/sip
 	@ $(SETENV) &&     \
 	  cd $(EXT)/sip && \
 	  python configure.py --incdir=$(VENV)/include/python2.7 && \
-	  make &&          \
-	  make install
+	  make && make install
 	@ clear

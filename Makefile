@@ -78,7 +78,8 @@ $(PYQT):
 	@ mv PyQt-mac-gpl-4.11.4 $(EXT)/pyqt
 	@ $(SETENV) &&      \
 	  cd $(EXT)/pyqt && \
-	  python configure-ng.py --confirm-license --qmake=$(QMAKE) && \
+	  python configure-ng.py --confirm-license   \
+	                         --qmake=$(QMAKE) && \
 	  make &&           \
 	  make install
 	@ clear

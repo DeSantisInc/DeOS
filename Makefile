@@ -35,16 +35,20 @@ clean:
 	@ clear
 
 test: $(OBJECTS)
-	@-rm docs/atdlib/deList.dot bin/darwin/test-deList.out
+	@-rm docs/atdlib/deList.dot bin/darwin/deList.test
 	@ clang -std=c89\
-	        -I$(INCLUDE) test/deList.c $(OBJECTS)\
-	        -o bin/darwin/test-deList.out
-	@ $(XMOD) bin/darwin/test-deList.out
-	@ bin/darwin/test-deList.out
+            -I$(INCLUDE)\
+            test/deList.c\
+            $(OBJECTS)\
+            -o\
+            bin/darwin/deList.test
+	@ $(XMOD) bin/darwin/deList.test
+	@ bin/darwin/deList.test
 
 $(OBJ)/%.o:
 	@-rm $(OBJ)/$*.o
 	@ $(CC) -std=c89 -Wall -g -I$(INCLUDE) -c $(LIB)/$*.c -o $(OBJ)/$*.o
+	@ clear
 
 $(VIRTUAL):
 	@-$(MKDIR) venv $(VIRTUAL)

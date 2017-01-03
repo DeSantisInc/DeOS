@@ -23,10 +23,9 @@ class Trezor(object):
 
 class TrezorMixin(object):
 
-    """ Mixin for Input of Passhprases
-    """
-
     def __init__(self, *args, **kwargs):
+        """ Mixin for Input of Passhprases
+        """
         super(TrezorMixin, self).__init__(*args, **kwargs)
         self.passphrase = None
 

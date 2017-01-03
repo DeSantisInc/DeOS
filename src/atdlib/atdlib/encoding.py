@@ -2,9 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import division, print_function
-
 import struct
-
 from PyQt4 import QtCore
 
 __all__ = ["q2s", "s2q", "Magic", "Padding"]
@@ -34,7 +32,6 @@ class Magic(object):
     backupKey  = 'Decrypt backup  key?'
 
 class Padding(object):
-
     """ PKCS#7 Padding for block cipher having 16-byte blocks
     """
 

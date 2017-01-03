@@ -7,7 +7,6 @@ from os import getenv
 __all__ = ["PasswordMap"]
 
 class PasswordGroup(object):
-
     """ Holds data for one password group.
 
     Each entry has three values:
@@ -40,7 +39,6 @@ class PasswordGroup(object):
         return self.entries[index]
 
 class PasswordMap(object):
-
     """ Storage of groups of passwords in memory.
 
     On-Disk,    Format:

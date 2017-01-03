@@ -16,7 +16,6 @@ from encoding import Magic, Padding
 __all__ = ["Backup"]
 
 class Backup(object):
-
     """ Performs backup and restore for password storage.
     """
 

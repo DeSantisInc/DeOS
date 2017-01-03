@@ -7,7 +7,7 @@ from __future__ import print_function
 import configobj
 import os
 import ruamel.yaml as yaml
-import simplejson as json
+import simplejson  as json
 import sys
 
 RSA_KEYSIZE       = 2048
@@ -71,7 +71,7 @@ class Window(object):
 
 class Vault(object):
     def __init__(self):
-        self.group = Group()
+        self.group  = Group()
         self.passwd = Password()
         self.trezor = Trezor()
         self.backup = Backup()

@@ -12,39 +12,39 @@ run: build
 
 build: $(OBJECTS)
 	@-$(XMCC)
-	@ $(CC) $(CFLAGS)    \
-	        -I$(INCLUDE) \
-	        $(CINCLUDE)  \
-	        $(CTARGET)   \
-	        $(OBJECTS)   \
-	        -o $(CEXE)   \
-	        $(CLINK)
+	@ $(CC) $(CFLAGS) -I$(INCLUDE) $(CINCLUDE) $(CTARGET) $(OBJECTS) \
+		-o $(CEXE) $(CLINK)
 	@ $(XMOD) $(CEXE)
 	@ clear
 
 install: clean
-	@-$(MKDIR) $(BIN)        \
-	           $(BIN)/darwin \
-	           $(EXT)        \
-	           $(INCLUDE)    \
-	           $(LIB)        \
-	           $(MACRO)
+	@-$(MKDIR) $(BIN) $(BIN)/darwin $(EXT) $(INCLUDE) $(LIB) $(MACRO)
 	@ $(MAKE) $(VIRTUAL)
 	@ $(MAKE) $(SIP)
 	@ $(MAKE) $(PYQT)
 	@ clear
 
 uninstall: clean
-	@-$(RM) $(PYQT) \
-	        $(SIP)  \
-	        $(VENV)
+	@-$(RM) $(PYQT) $(SIP) $(VENV)
 	@ clear
 
 clean:
-	@-$(RM) $(CEXE)* \
-	        $(MACRO)/*.def
+	@-$(RM) $(CEXE)* $(MACRO)/*.def
 	@ clear
 
+freeze:
+	@ $(SETENV) && pip freeze > etc/python/requirements.txt
+
+tdd:
+	@-rm -rf app/tdd
+	@-$(SETENV) && cd app && django-admin.py startproject tdd && \
+		cd tdd && python manage.py migrate && python manage.py runserver &
+	@-$(SETENV) && python $(TEST)/functional_tests.py
+	@-rm geckodriver.log
+	@-pkill -f firefox
+	@-kill `ps aux | grep 'manage.py runserver' | awk '{print $2}'` \
+		>/dev/null 2>/dev/null
+	@-rm -rf app/tdd
 
 test: $(TBINS)
 
@@ -69,10 +69,7 @@ $(VAULT)/src/ui_%.py: $(VAULT)/view/%.ui
 
 $(OBJ)/%.o: $(LIB)/%.c $(INCLUDE)/%.h
 	@-rm $(OBJ)/$*.o
-	@ $(CC) -std=c89 -Wall -g \
-	        -I$(INCLUDE)      \
-	        -c $(LIB)/$*.c    \
-	        -o $(OBJ)/$*.o
+	@ $(CC) -std=c89 -Wall -g -I$(INCLUDE) -c $(LIB)/$*.c -o $(OBJ)/$*.o
 	@ clear
 
 $(VIRTUAL):
@@ -86,8 +83,7 @@ $(PYQT):
 	@ gunzip $(EXT)/pyqt.tar.gz && tar -xvf $(EXT)/pyqt.tar
 	@-$(RM) $(EXT)/pyqt.tar
 	@ mv PyQt-mac-gpl-4.11.4 $(EXT)/pyqt
-	@ $(SETENV) &&      \
-	  cd $(EXT)/pyqt && \
+	@ $(SETENV) && cd $(EXT)/pyqt && \
 	  python configure-ng.py --confirm-license --qmake=$(QMAKE) && \
 	  make && make install
 	@ clear
@@ -97,8 +93,7 @@ $(SIP):
 	@ gunzip $(EXT)/sip.tar.gz && tar -xvf $(EXT)/sip.tar
 	@-$(RM) $(EXT)/sip.tar
 	@ mv sip-4.18.1 $(EXT)/sip
-	@ $(SETENV) &&     \
-	  cd $(EXT)/sip && \
+	@ $(SETENV) && cd $(EXT)/sip && \
 	  python configure.py --incdir=$(VENV)/include/python2.7 && \
 	  make && make install
 	@ clear

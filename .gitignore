@@ -30,6 +30,7 @@ venv/
 .nvmrc
 
 #[files]
+geckodriver.log
 npm-debug.log
 yarn-error.log
 app/vault/src/ui_*_dialog.py

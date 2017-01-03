@@ -12,8 +12,8 @@ testCreateAndFreeAction(void)
 
 int
 main(int argc, char const *argv[])
-{   int test=0;
-    test+=testCreateAndFreeAction();
+{   int test = 0;
+    test += testCreateAndFreeAction();
     printf("%d\n",test);
     return EXIT_SUCCESS;
 }

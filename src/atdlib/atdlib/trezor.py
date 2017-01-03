@@ -2,9 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import division, print_function
-
 import sys
-
 from trezorlib.client import BaseClient, ProtocolMixin
 from trezorlib.transport_hid import HidTransport
 from trezorlib import messages_pb2

@@ -34,6 +34,7 @@ from atdlib.vault import DeOS_PasswordMap
 from atdlib.vault import DeOS_Vault
 from atdlib.vault import DeOS_VaultSettings
 from atdlib.vault import DeOS_Trezor
+from atdlib.vault import DeOS_TrezorClient
 
 from ui_mainwindow import Ui_MainWindow
 
@@ -415,48 +416,6 @@ class MainWindow(DeOS_Vault, Ui_MainWindow):
                 self.saveDatabase()
         event.accept()
 
-class QtTrezorMixin(object):
-    """
-    Mixin for input of passhprases.
-    """
-
-    def __init__(self, *args, **kwargs):
-        super(QtTrezorMixin, self).__init__(*args, **kwargs)
-        self.passphrase = None
-
-    def callback_ButtonRequest(self, msg):
-        return proto.ButtonAck()
-
-    def callback_PassphraseRequest(self, msg):
-        if self.passphrase is not None:
-            return proto.PassphraseAck(passphrase=self.passphrase)
-        dialog = TrezorPassphraseDialog()
-        if not dialog.exec_():
-            sys.exit(3)
-        else:
-            passphrase = dialog.passphraseEdit.text()
-            passphrase = unicode(passphrase)
-        return proto.PassphraseAck(passphrase=passphrase)
-
-    def callback_PinMatrixRequest(self, msg):
-        dialog = EnterPinDialog()
-        if not dialog.exec_():
-            sys.exit(7)
-        pin = q2s(dialog.pin())
-        return proto.PinMatrixAck(pin=pin)
-
-    def prefillPassphrase(self, passphrase):
-        """
-        Instead of asking for passphrase, use this one.
-        """
-        self.passphrase = passphrase.decode("utf-8")
-
-class QtTrezorClient(ProtocolMixin, QtTrezorMixin, BaseClient):
-    """
-    Trezor client with Qt input methods
-    """
-    pass
-
 class TrezorChooser(DeOS_Trezor):
     """
     Class for working with Trezor device via HID
@@ -473,15 +432,8 @@ class TrezorChooser(DeOS_Trezor):
         if not devices:
             return None
         transport = self.chooseDevice(devices)
-        client = QtTrezorClient(transport)
+        client = DeOS_TrezorClient(transport)
         return client
-
-    def enumerateHIDDevices(self):
-        """
-        Returns Trezor HID devices
-        """
-        devices = HidTransport.enumerate()
-        return devices
 
     def chooseDevice(self, devices):
         """
@@ -505,7 +457,7 @@ class TrezorChooser(DeOS_Trezor):
         for device in devices:
             try:
                 transport = HidTransport(device)
-                client = QtTrezorClient(transport)
+                client = DeOS_TrezorClient(transport)
                 label = client.features.label and client.features.label or "<no label>"
                 client.close()
 

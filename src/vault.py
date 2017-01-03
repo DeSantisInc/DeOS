@@ -20,7 +20,10 @@ from Crypto.Cipher import PKCS1_OAEP
 from Crypto import Random
 from PyQt4 import QtCore
 from PyQt4 import QtGui
+from trezorlib.client import BaseClient
+from trezorlib.client import ProtocolMixin
 from trezorlib.transport_hid import HidTransport
+from trezorlib import messages_pb2
 
 DeOS_VAULT_RSA_KEY_SIZE = 2048
 DeOS_VAULT_SYMMETRIC_KEY_SIZE = 32
@@ -501,10 +504,55 @@ class DeOS_VaultSettings(object):
     def store(self):
         self.settings.setValue("database/filename", s2q(self.dbFilename))
 
+class DeOS_TrezorMixin(object):
+    """
+    Mixin for input of passhprases.
+    """
+
+    def __init__(self, *args, **kwargs):
+        super(DeOS_TrezorMixin, self).__init__(*args, **kwargs)
+        self.passphrase = None
+
+    def callback_ButtonRequest(self, msg):
+        return messages_pb2.ButtonAck()
+
+    def callback_PassphraseRequest(self, msg):
+        if self.passphrase is not None:
+            return messages_pb2.PassphraseAck(passphrase=self.passphrase)
+        dialog = TrezorPassphraseDialog()
+        if not dialog.exec_():
+            sys.exit(3)
+        else:
+            passphrase = dialog.passphraseEdit.text()
+            passphrase = unicode(passphrase)
+        return messages_pb2.PassphraseAck(passphrase=passphrase)
+
+    def callback_PinMatrixRequest(self, msg):
+        dialog = EnterPinDialog()
+        if not dialog.exec_():
+            sys.exit(7)
+        pin = q2s(dialog.pin())
+        return messages_pb2.PinMatrixAck(pin=pin)
+
+    def prefillPassphrase(self, passphrase):
+        """
+        Instead of asking for passphrase, use this one.
+        """
+        self.passphrase = passphrase.decode("utf-8")
+
+class DeOS_TrezorClient(ProtocolMixin, DeOS_TrezorMixin, BaseClient):
+    """
+    Trezor client with Qt input methods
+    """
+    pass
+
 class DeOS_Trezor(object):
 
     def __init__(self):
         self.passphrase = None
 
     def _get_devices(self):
+        """
+        Returns Trezor HID devices
+        """
         return HidTransport.enumerate()

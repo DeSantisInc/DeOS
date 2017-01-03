@@ -3,72 +3,66 @@
 
 import csv
 import os.path
-import password_map
 import sys
+import password_map
 
-from PyQt4 import QtGui, QtCore
+from PyQt4 import QtCore
+from PyQt4 import QtGui
 from Crypto import Random
 
 from trezorlib import messages_pb2 as proto
-from trezorlib.client import BaseClient, CallException
-from trezorlib.client import PinException, ProtocolMixin
+from trezorlib.client import BaseClient
+from trezorlib.client import CallException
+from trezorlib.client import PinException
+from trezorlib.client import ProtocolMixin
 from trezorlib.transport import ConnectionError
 from trezorlib.transport_hid import HidTransport
 
 from backup import Backup
-from dialogs import AddGroupDialog, TrezorPassphraseDialog
-from dialogs import AddPasswordDialog, InitializeDialog
-from dialogs import EnterPinDialog, TrezorChooserDialog
-from encoding import q2s, s2q
+from dialogs import AddGroupDialog
+from dialogs import TrezorPassphraseDialog,
+from dialogs import AddPasswordDialog
+from dialogs import InitializeDialog
+from dialogs import EnterPinDialog
+from dialogs import TrezorChooserDialog
+from encoding import q2s
+from encoding import s2q
+
+from atdlib.vault import DeOS_VAULT_CACHE_INDEX
+from atdlib.vault import DeOS_VAULT_KEY_INDEX
+from atdlib.vault import DeOS_VAULT_PASSWD_INDEX
+from atdlib.vault import DeOS_Vault
+from atdlib.vault import DeOS_VaultSettings
+from atdlib.vault import DeOS_Trezor
+
 from ui_mainwindow import Ui_MainWindow
 
-class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
+class MainWindow(DeOS_Vault, Ui_MainWindow):
     """
     Main window for the application with groups, and password lists.
     """
-    KEY_IDX = 0 # column where key is shown in password table
-    PASSWORD_IDX = 1 # column where password is shown in password table
-    CACHE_IDX = 0 # column of QWidgetItem in whose data we cache
-                     # decrypted passwords
-    def __init__(self, pwMap, dbFilename):
+    KEY_IDX = DeOS_VAULT_KEY_INDEX
+    PASSWORD_IDX = DeOS_VAULT_PASSWD_INDEX
+    CACHE_IDX = DeOS_VAULT_CACHE_INDEX
+
+    def __init__(self, passwds, database):
         """
-        @param pwMap:      a PasswordMap instance w/ encrypted passwords
-        @param dbFilename: file name for saving pwMap
+        @param passwds: a PasswordMap instance w/ encrypted passwords
+        @param database: file name for saving pwMap
         """
-        QtGui.QMainWindow.__init__(self)
-        self.setupUi(self)
-        # Database & Password
-        self.pwMap         = pwMap
-        self.selectedGroup = None
-        self.modified      = False # modified flag "Save?" question on exit
-        self.dbFilename    = dbFilename
-        # Groups Model
-        self.groupsModel   = QtGui.QStandardItemModel()
-        self.groupsModel.setHorizontalHeaderLabels(["Password group"])
-        # Groups Filter
-        self.groupsFilter  = QtGui.QSortFilterProxyModel()
-        self.groupsFilter.setSourceModel(self.groupsModel)
-        # Groups Tree
+        DeOS_Vault.__init__(self, passwds, database)
         self.groupsTree.setModel(self.groupsFilter)
         self.groupsTree.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
-        self.groupsTree.customContextMenuRequested.connect(
-            self.showGroupsContextMenu)
+        self.groupsTree.customContextMenuRequested.connect(self.showGroupsContextMenu)
         self.groupsTree.clicked.connect(self.loadPasswordsBySelection)
-        self.groupsTree.selectionModel().selectionChanged.connect(
-            self.loadPasswordsBySelection)
+        self.groupsTree.selectionModel().selectionChanged.connect(self.loadPasswordsBySelection)
         self.groupsTree.setSortingEnabled(True)
-        # Password Table
         self.passwordTable.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
-        self.passwordTable.customContextMenuRequested.connect(
-            self.showPasswdContextMenu)
-        self.passwordTable.setSelectionBehavior(
-            QtGui.QAbstractItemView.SelectRows)
-        self.passwordTable.setSelectionMode(
-            QtGui.QAbstractItemView.SingleSelection)
+        self.passwordTable.customContextMenuRequested.connect(self.showPasswdContextMenu)
+        self.passwordTable.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.passwordTable.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
         # Shortcut
-        shortcut = QtGui.QShortcut(QtGui.QKeySequence("Ctrl+C"),
-                                   self.passwordTable,
-                                   self.copyPasswordFromSelection)
+        shortcut = QtGui.QShortcut(QtGui.QKeySequence("Ctrl+C"), self.passwordTable, self.copyPasswordFromSelection)
         shortcut.setContext(QtCore.Qt.WidgetShortcut)
         # Action Triggers
         self.actionQuit.triggered.connect(self.close)
@@ -97,8 +91,8 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
         Sets the modified flag so that user is notified when exiting
         with unsaved changes.
         """
-        self.modified = modified
-        self.setWindowTitle("TrezorPass" + "*" * int(self.modified))
+        self._set_modified(modified)
+        self.setWindowTitle(self._get_window_title(modified))
 
     def showGroupsContextMenu(self, point):
         """
@@ -463,18 +457,19 @@ class QtTrezorClient(ProtocolMixin, QtTrezorMixin, BaseClient):
     """
     pass
 
-class TrezorChooser(object):
+class TrezorChooser(DeOS_Trezor):
     """
     Class for working with Trezor device via HID
     """
-    def __init__(self): pass
+    def __init__(self):
+        DeOS_Trezor.__init__(self)
 
     def getDevice(self):
         """
         Get one from available devices. Widget will be shown if more
         devices are available.
         """
-        devices = self.enumerateHIDDevices()
+        devices = self._get_devices()
         if not devices:
             return None
         transport = self.chooseDevice(devices)
@@ -526,20 +521,6 @@ class TrezorChooser(object):
         deviceStr = dialog.chosenDeviceStr()
         return HidTransport([deviceStr, None])
 
-class Settings(object):
-    """
-    Settings for password database location
-    """
-    def __init__(self):
-        self.dbFilename = None
-        self.settings = QtCore.QSettings("ConstructibleUniverse", "TrezorPass")
-        fname = self.settings.value("database/filename")
-        if fname.isValid():
-            self.dbFilename = q2s(fname.toString())
-
-    def store(self):
-        self.settings.setValue("database/filename", s2q(self.dbFilename))
-
 def initializeStorage(trezor, pwMap, settings):
     """
     Initialize new encrypted password file, ask for master passphrase.
@@ -581,7 +562,7 @@ def main():
     trezor.clear_session()
     # print "label:", trezor.features.label
     pwMap = password_map.PasswordMap(trezor)
-    settings = Settings()
+    settings = DeOS_VaultSettings()
     if settings.dbFilename and os.path.isfile(settings.dbFilename):
         try:
             pwMap.load(settings.dbFilename)

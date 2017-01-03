@@ -11,6 +11,7 @@ app/vault/ui_*py
 .backup/
 
 #[folders]
+app/vault/src/atdlib/
 bin/
 etc/blockstack/*
 etc/zerotier/*

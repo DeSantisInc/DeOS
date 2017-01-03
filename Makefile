@@ -58,8 +58,13 @@ $(BIN)/darwin/%.test: $(OBJECTS)
 
 vault: $(UI_GENERATED)
 	@-rm $(VAULT)/src/*.pyc
-	@-$(SETENV) && $(VAULT)/src/vault.py
+	@-rm -rf $(VAULT)/src/atdlib
+	@-mkdir $(VAULT)/src/atdlib
+	@-touch $(VAULT)/src/atdlib/__init__.py
+	@-cp $(SRC)/vault.py $(VAULT)/src/atdlib/vault.py
+	@-$(SETENV) && python $(VAULT)/src/vault.py
 	@-rm $(VAULT)/src/*.pyc
+	@-rm -rf $(VAULT)/src/atdlib
 
 vault.sdk:
 	@-$(SETENV) && python src/vault.py

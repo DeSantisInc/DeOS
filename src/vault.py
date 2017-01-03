@@ -5,116 +5,157 @@ from __future__ import division
 from __future__ import print_function
 
 import configobj
-import os
-import ruamel.yaml as yaml
-import simplejson  as json
 import sys
+import os
+import simplejson as json
+import ruamel.yaml as yaml
 
-RSA_KEYSIZE       = 2048
-SYMMETRIC_KEYSIZE = 32
-BLOCKSIZE         = 16
+from PyQt4 import QtCore, QtGui
+from trezorlib.transport_hid import HidTransport
 
-class Menu(object):
-    def __init__(self): pass
-    def show_groups(self): pass
-    def show_passwd(self): pass
+DeOS_VAULT_RSA_KEYSIZE = 2048
+DeOS_VAULT_SYMMETRIC_KEYSIZE = 32
+DeOS_VAULT_BLOCKSIZE = 16
+DeOS_VAULT_WINDOW_TITLE = 'Vault'
+DeOS_VAULT_KEY_INDEX = 0 # column where key is shown in password table
+DeOS_VAULT_PASSWD_INDEX = 1 # column where password is shown in password table
+# column of QWidgetItem in whose data we cache decrypted passwords
+DeOS_VAULT_CACHE_INDEX = 0
 
-class Backup(object):
+class DeOS_PasswordGroup(object):
+    """
+    Holds data for one password group.
+    Each entry has three values:
+    - key
+    - symetrically AES-CBC encrypted password unlockable only by Trezor
+    - RSA-encrypted password for creating backup of all password groups
+    """
     def __init__(self):
-        self.RSA_KEYSIZE = RSA_KEYSIZE
-        self.SYMMETRIC_KEYSIZE = SYMMETRIC_KEYSIZE
-        self.BLOCKSIZE = BLOCKSIZE
-    def generate(self): pass
-    def wrap_private_key(self): pass
-    def unwrap_private_key(self): pass
-    def serialize(self): pass
-    def deserialize(self): pass
-    def encrypt_passwd(self): pass
-    def decrypt_passwd(self): pass
+        self.entries = []
 
-class Trezor(object):
+    def addEntry(self, key, encryptedValue, backupValue):
+        """
+        Add key-value-backud entry.
+        """
+        self.entries.append((key, encryptedValue, backupValue))
+
+    def removeEntry(self, index):
+        """
+        Remove entry at given index.
+        """
+        self.entries.pop(index)
+
+    def updateEntry(self, index, key, encryptedValue, backupValue):
+        """
+        Update pair at index with given key, value, and
+        backup-encrypted password.
+        """
+        self.entries[index] = (key, encryptedValue, backupValue)
+
+    def entry(self, index):
+        """
+        Return entry with given index.
+        """
+        return self.entries[index]
+
+class DeOS_PasswordMap(object):
+    """
+    Storage of groups of passwords in memory.
+    """
+    def __init__(self, trezor):
+        assert trezor is not None
+        self.groups = {}
+        self.trezor = trezor
+        self.outerKey = None # outer AES-CBC key
+        self.outerIv = None  # IV for data blob encrypted with outerKey
+        self.backupKey = None
+
+    def addGroup(self, groupName):
+        """
+        Add group by name as utf-8 encoded string
+        """
+        self._add_group(groupName)
+
+    def load(self, fname):
+        """
+        Load encrypted passwords from disk file, decrypt outer
+        layer containing key names. Requires Trezor connected.
+        @throws IOError: if reading file failed
+        """
+        self._load(fname)
+
+    def _add_group(self, groupName):
+        if groupName in self.groups:
+            raise KeyError("Group name already exists")
+        self.groups[groupName] = DeOS_PasswordGroup()
+
+    def _load(self, fname):
+        # here
+        with file(fname) as f:
+            header = f.read(len(Magic.headerStr))
+
+class DeOS_Vault(QtGui.QMainWindow):
+
+    def __init__(self, passwds, database):
+        """
+        @param passwds: a PasswordMap instance w/ encrypted passwords
+        @param database: file name for saving pwMap
+        """
+        QtGui.QMainWindow.__init__(self)
+        self.setupUi(self)
+        self._set_window_title()
+        self._set_modified()
+        self._set_database_filename(database)
+        self._set_password_map(passwds)
+        self._set_selected_group()
+        self._set_groups_model(header_labels=['Password group'])
+        self._set_groups_filter()
+
+    def _get_window_title(self, modified=False):
+        res = self.window_title
+        if modified:
+            res = res+'*'*int(modified)
+        return res
+
+    def _set_selected_group(self, selected_group=None):
+        self.selectedGroup = selected_group
+
+    def _set_password_map(self, passwds):
+        self.pwMap = passwds
+
+    def _set_database_filename(self, database):
+        self.dbFilename = database
+
+    def _set_groups_filter(self):
+        self.groupsFilter = QtGui.QSortFilterProxyModel()
+        self.groupsFilter.setSourceModel(self.groupsModel)
+
+    def _set_groups_model(self, header_labels):
+        self.groupsModel = QtGui.QStandardItemModel()
+        self.groupsModel.setHorizontalHeaderLabels(header_labels)
+
+    def _set_modified(self, modified=False):
+        self.modified = modified # modified flag "Save?" question on exit
+
+    def _set_window_title(self, title=DeOS_VAULT_WINDOW_TITLE):
+        self.window_title = title
+
+class DeOS_VaultSettings(object):
+
+    def __init__(self):
+        self.dbFilename = None
+        self.settings = QtCore.QSettings("ConstructibleUniverse", "TrezorPass")
+        fname = self.settings.value("database/filename")
+        if fname.isValid():
+            self.dbFilename = q2s(fname.toString())
+
+    def store(self):
+        self.settings.setValue("database/filename", s2q(self.dbFilename))
+
+class DeOS_Trezor(object):
+
     def __init__(self):
         self.passphrase = None
-    def callback_request_button(self, msg): pass
-    def callback_request_passphrase(self, msg): pass
-    def callback_request_pin_matrix(self, msg): pass
-    def prefill_passphrase(self, passphrase): pass
-    def get_device(self): pass
-    def enumerate_hid_devices(self): pass
-    def choose_device(self, devices): pass
 
-class Password(object):
-    def __init__(self): pass
-    def cache(self): pass
-    def cached(self): pass
-    def cached_or_decrypt(self): pass
-    def copy_from_item(self): pass
-    def copy_from_selection(self): pass
-    def create(self): pass
-    def delete(self): pass
-    def edit(self): pass
-    def show(self): pass
-    def list_all(self): pass
-    def load_all(self): pass
-    def load_all_from_selection(self): pass
-
-class Group(object):
-    def __init__(self): pass
-    def create(self): pass
-    def delete(self): pass
-    def filter(self): pass
-
-class Window(object):
-    def __init__(self):
-        self.context_menu = Menu()
-    def set_modified(self, modified): pass
-
-class Vault(object):
-    def __init__(self):
-        self.group  = Group()
-        self.passwd = Password()
-        self.trezor = Trezor()
-        self.backup = Backup()
-        self.main_window = Window()
-
-def main():
-    v = Vault()
-    print(v.main_window.context_menu.show_groups)
-    print(v.main_window.context_menu.show_passwd)
-    print(v.main_window.set_modified)
-    #print(v.trezor.passphrase)
-    print(v.trezor.callback_request_button)
-    print(v.trezor.callback_request_passphrase)
-    print(v.trezor.callback_request_pin_matrix)
-    print(v.trezor.prefill_passphrase)
-    print(v.trezor.get_device)
-    print(v.trezor.enumerate_hid_devices)
-    print(v.trezor.choose_device)
-    #print(v.backup.RSA_KEYSIZE)
-    #print(v.backup.SYMMETRIC_KEYSIZE)
-    #print(v.backup.BLOCKSIZE)
-    print(v.backup.generate)
-    print(v.backup.wrap_private_key)
-    print(v.backup.unwrap_private_key)
-    print(v.backup.serialize)
-    print(v.backup.deserialize)
-    print(v.backup.encrypt_passwd)
-    print(v.backup.decrypt_passwd)
-    print(v.group.create)
-    print(v.group.delete)
-    print(v.group.filter)
-    print(v.passwd.create)
-    print(v.passwd.cache)
-    print(v.passwd.cached)
-    print(v.passwd.cached_or_decrypt)
-    print(v.passwd.delete)
-    print(v.passwd.show)
-    print(v.passwd.edit)
-    print(v.passwd.copy_from_item)
-    print(v.passwd.copy_from_selection)
-    print(v.passwd.list_all)
-    print(v.passwd.load_all)
-    print(v.passwd.load_all_from_selection)
-
-if __name__ == "__main__":
-    main()
+    def _get_devices(self):
+        return HidTransport.enumerate()

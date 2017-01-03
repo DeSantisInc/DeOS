@@ -4,23 +4,157 @@
 from __future__ import division
 from __future__ import print_function
 
-import configobj
-import sys
+import cPickle
 import os
+import struct
+import sys
+import configobj
 import simplejson as json
 import ruamel.yaml as yaml
 
-from PyQt4 import QtCore, QtGui
+from Crypto.PublicKey import RSA
+from Crypto.Cipher import AES
+from Crypto.Cipher import PKCS1_OAEP
+from Crypto import Random
+from PyQt4 import QtCore
+from PyQt4 import QtGui
 from trezorlib.transport_hid import HidTransport
 
-DeOS_VAULT_RSA_KEYSIZE = 2048
-DeOS_VAULT_SYMMETRIC_KEYSIZE = 32
-DeOS_VAULT_BLOCKSIZE = 16
-DeOS_VAULT_WINDOW_TITLE = 'Vault'
+DeOS_VAULT_RSA_KEY_SIZE = 2048
+DeOS_VAULT_SYMMETRIC_KEY_SIZE = 32
+DeOS_VAULT_KEY_SIZE = 32
+DeOS_VAULT_BLOCK_SIZE = 16
+DeOS_VAULT_MAC_SIZE = 32
 DeOS_VAULT_KEY_INDEX = 0 # column where key is shown in password table
 DeOS_VAULT_PASSWD_INDEX = 1 # column where password is shown in password table
 # column of QWidgetItem in whose data we cache decrypted passwords
 DeOS_VAULT_CACHE_INDEX = 0
+DeOS_VAULT_WINDOW_TITLE = "Vault"
+
+class Magic(object):
+    """
+    Few magic constant definitions so that
+    we know which nodes to search for keys.
+    """
+    u = lambda fmt, s: struct.unpack(fmt, s)[0]
+    headerStr = 'TZPW'
+    hdr = u('!I', headerStr)
+    unlockNode = [hdr, u('!I', 'ULCK')] # for unlocking wrapped AES-CBC key.
+    # for generating keys for individual password groups.
+    groupNode = [hdr, u('!I', 'GRUP')]
+    # the unlock & backup keys are written this way to fit display nicely.
+    unlockKey = 'Decrypt master  key?' # string to derive wrapping key from.
+    # for unlocking wrapped backup private RSA key.
+    backupNode = [hdr, u('!I', 'BKUP')]
+    # string to derive backup wrapping key from.
+    backupKey  = 'Decrypt backup  key?'
+
+class DeOS_Backup(object):
+    """
+    Performs backup and restore for password storage.
+    """
+    RSA_KEYSIZE = DeOS_VAULT_RSA_KEY_SIZE
+    SYMMETRIC_KEYSIZE = DeOS_VAULT_SYMMETRIC_KEY_SIZE
+    BLOCKSIZE = DeOS_VAULT_BLOCK_SIZE
+
+    def __init__(self, trezor):
+        """
+        Create with no keys prepared.
+
+        @param trezor: client object used to encrypt private key
+        """
+        self.trezor = trezor
+        self.publicKey = None
+        self.encryptedPrivate = None # encrypted private key.
+        # ephemeral key used to encrypt private RSA key.
+        self.encryptedEphemeral = None
+        # IV used to encrypt private key with ephemeral key.
+        self.ephemeralIv = None
+
+    def generate(self):
+        """
+        Generate key and encrypt private key.
+        """
+        key = RSA.generate(self.RSA_KEYSIZE)
+        privateDer = key.exportKey(format="DER")
+        self.publicKey = key.publickey()
+        self.wrapPrivateKey(privateDer)
+
+    def wrapPrivateKey(self, privateKey):
+        """
+        Wrap serialized private key by encrypting it with trezor.
+        """
+        # Trezor client won't allow to encrypt whole serialized RSA key
+        # in one go - it's too big. We need an ephemeral symmetric key
+        # and encrypt the small ephemeral with Trezor.
+        rng = Random.new()
+        ephemeral = rng.read(self.SYMMETRIC_KEYSIZE)
+        self.ephemeralIv = rng.read(self.BLOCKSIZE)
+        cipher = AES.new(ephemeral, AES.MODE_CBC, self.ephemeralIv)
+        padded = Padding(self.BLOCKSIZE).pad(privateKey)
+        self.encryptedPrivate = cipher.encrypt(padded)
+        self.encryptedEphemeral = self.trezor.encrypt_keyvalue(
+            Magic.backupNode, Magic.backupKey, ephemeral,
+            ask_on_encrypt=False, ask_on_decrypt=True)
+
+    def unwrapPrivateKey(self):
+        """
+        Decrypt private RSA key using self.encryptedEphemeral from
+        self.encryptedPrivate. Encrypted ephemeral key will be
+        decrypted with Trezor.
+
+        @returns RSA private key as Crypto.RSA._RSAobj
+        """
+        ephemeral = self.trezor.decrypt_keyvalue(Magic.backupNode,
+                                                 Magic.backupKey,
+                                                 self.encryptedEphemeral,
+                                                 ask_on_encrypt=False,
+                                                 ask_on_decrypt=True)
+        cipher = AES.new(ephemeral, AES.MODE_CBC, self.ephemeralIv)
+        padded = cipher.decrypt(self.encryptedPrivate)
+        privateDer = Padding(self.BLOCKSIZE).unpad(padded)
+        privateKey = RSA.importKey(privateDer)
+        return privateKey
+
+    def serialize(self):
+        """
+        Return object data as serialized string.
+        """
+        publicDer = self.publicKey.exportKey(format="DER")
+        picklable = (self.ephemeralIv,
+                     self.encryptedEphemeral,
+                     self.encryptedPrivate,
+                     publicDer)
+        return cPickle.dumps(picklable, cPickle.HIGHEST_PROTOCOL)
+
+    def deserialize(self, serialized):
+        """
+        Set object data from serialized string
+        """
+        unpickled = cPickle.loads(serialized)
+        (self.ephemeralIv,
+            self.encryptedEphemeral,
+            self.encryptedPrivate,
+            publicDer) = unpickled
+        self.publicKey = RSA.importKey(publicDer)
+
+    def encryptPassword(self, password):
+        """
+        Encrypt password with RSA under OAEP padding and return it.
+        Password must be shorter than modulus length minus padding
+        length.
+        """
+        cipher = PKCS1_OAEP.new(self.publicKey)
+        encrypted = cipher.encrypt(password)
+        return encrypted
+
+    def decryptPassword(self, encryptedPassword, privateKey):
+        """
+        Decrypt RSA-OAEP encrypted password.
+        """
+        cipher = PKCS1_OAEP.new(privateKey)
+        password = cipher.decrypt(encryptedPassword)
+        return password
 
 class DeOS_PasswordGroup(object):
     """
@@ -84,15 +218,87 @@ class DeOS_PasswordMap(object):
         """
         self._load(fname)
 
+    def save(self, fname):
+        """
+        Write password database to disk, encrypt it. Requires Trezor
+        connected.
+        @throws IOError: if writing file failed
+        """
+        self._save(fname)
+
     def _add_group(self, groupName):
         if groupName in self.groups:
             raise KeyError("Group name already exists")
         self.groups[groupName] = DeOS_PasswordGroup()
 
     def _load(self, fname):
-        # here
         with file(fname) as f:
             header = f.read(len(Magic.headerStr))
+            if header != Magic.headerStr:
+                raise IOError("Bad header in storage file")
+            version = f.read(4)
+            if len(version) != 4 or struct.unpack("!I", version)[0] != 1:
+                raise IOError("Unknown version of storage file")
+            wrappedKey = f.read(DeOS_VAULT_KEY_SIZE)
+            if len(wrappedKey) != DeOS_VAULT_KEY_SIZE:
+                raise IOError("Corrupted disk format - bad wrapped key length")
+            self.outerKey = self.unwrapKey(wrappedKey)
+            self.outerIv = f.read(DeOS_VAULT_BLOCK_SIZE)
+            if len(self.outerIv) != DeOS_VAULT_BLOCK_SIZE:
+                raise IOError("Corrupted disk format - bad IV length")
+            lb = f.read(2)
+            if len(lb) != 2:
+                raise IOError("Corrupted disk format - bad backup key length")
+            lb = struct.unpack("!H", lb)[0]
+            self.backupKey = DeOS_Backup(self.trezor)
+            serializedBackup = f.read(lb)
+            if len(serializedBackup) != lb:
+                raise IOError("Corrupted disk format - not enough encrypted backup key bytes")
+            self.backupKey.deserialize(serializedBackup)
+            ls = f.read(4)
+            if len(ls) != 4:
+                raise IOError("Corrupted disk format - bad data length")
+            l = struct.unpack("!I", ls)[0]
+            encrypted = f.read(l)
+            if len(encrypted) != l:
+                raise IOError("Corrupted disk format - not enough data bytes")
+            hmacDigest = f.read(DeOS_VAULT_MAC_SIZE)
+            if len(hmacDigest) != DeOS_VAULT_MAC_SIZE:
+                raise IOError("Corrupted disk format - HMAC not complete")
+            # time-invariant HMAC comparison that also works with python 2.6
+            newHmacDigest = hmac.new(self.outerKey, encrypted, hashlib.sha256).digest()
+            hmacCompare = 0
+            for (ch1, ch2) in zip(hmacDigest, newHmacDigest):
+                hmacCompare |= int(ch1 != ch2)
+            if hmacCompare != 0:
+                raise IOError("Corrupted disk format - HMAC does not match or bad passphrase")
+            serialized = self.decryptOuter(encrypted, self.outerIv)
+            self.groups = cPickle.loads(serialized)
+
+    def _save(self, fname):
+        assert len(self.outerKey) == DeOS_VAULT_KEY_SIZE
+        rnd = Random.new()
+        self.outerIv = rnd.read(DeOS_VAULT_BLOCK_SIZE)
+        wrappedKey = self.wrapKey(self.outerKey)
+        with file(fname, "wb") as f:
+            version = 1
+            f.write(Magic.headerStr)
+            f.write(struct.pack("!I", version))
+            f.write(wrappedKey)
+            f.write(self.outerIv)
+            serialized = cPickle.dumps(self.groups, cPickle.HIGHEST_PROTOCOL)
+            encrypted = self.encryptOuter(serialized, self.outerIv)
+            hmacDigest = hmac.new(self.outerKey, encrypted, hashlib.sha256).digest()
+            serializedBackup = self.backupKey.serialize()
+            lb = struct.pack("!H", len(serializedBackup))
+            f.write(lb)
+            f.write(serializedBackup)
+            l = struct.pack("!I", len(encrypted))
+            f.write(l)
+            f.write(encrypted)
+            f.write(hmacDigest)
+            f.flush()
+            f.close()
 
 class DeOS_Vault(QtGui.QMainWindow):
 

@@ -46,10 +46,6 @@ def s2q(s):
     return QtCore.QString.fromUtf8(s)
 
 class Magic(object):
-    """
-    Few magic constant definitions so that
-    we know which nodes to search for keys.
-    """
     u = lambda fmt, s: struct.unpack(fmt, s)[0]
     headerStr = 'TZPW'
     hdr = u('!I', headerStr)
@@ -67,11 +63,14 @@ class Padding(object):
     """
     PKCS#7 Padding for block cipher having 16-byte blocks
     """
+
     def __init__(self, blocksize):
         self.blocksize = blocksize
+
     def pad(self, s):
         BS = self.blocksize
         return s + (BS - len(s) % BS) * chr(BS - len(s) % BS)
+
     def unpad(self, s):
         return s[0:-ord(s[-1])]
 
@@ -79,6 +78,7 @@ class DeOS_Backup(object):
     """
     Performs backup and restore for password storage.
     """
+
     RSA_KEYSIZE = DeOS_VAULT_RSA_KEY_SIZE
     SYMMETRIC_KEYSIZE = DeOS_VAULT_SYMMETRIC_KEY_SIZE
     BLOCKSIZE = DeOS_VAULT_BLOCK_SIZE
@@ -185,11 +185,13 @@ class DeOS_Backup(object):
 class DeOS_PasswordGroup(object):
     """
     Holds data for one password group.
+
     Each entry has three values:
     - key
     - symetrically AES-CBC encrypted password unlockable only by Trezor
     - RSA-encrypted password for creating backup of all password groups
     """
+
     def __init__(self):
         self.entries = []
 
@@ -222,9 +224,21 @@ class DeOS_PasswordMap(object):
     """
     Storage of groups of passwords in memory.
     """
+
     BLOCKSIZE = DeOS_VAULT_BLOCK_SIZE
     MACSIZE = DeOS_VAULT_MAC_SIZE
     KEYSIZE = DeOS_VAULT_KEY_SIZE
+
+    ## On-disk format
+    #  4 bytes  header "TZPW"
+    #  4 bytes  data storage version, network order uint32_t
+    # 32 bytes  AES-CBC-encrypted wrappedOuterKey
+    # 16 bytes  IV
+    #  2 bytes  backup private key size (B)
+    #  B bytes  encrypted backup key
+    #  4 bytes  size of data following (N)
+    #  N bytes  AES-CBC encrypted blob containing pickled struct for pwd map
+    # 32 bytes  HMAC-SHA256 over data w/ same key as AES-CBC data struct above
 
     def __init__(self, trezor):
         assert trezor is not None

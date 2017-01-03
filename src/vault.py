@@ -5,6 +5,8 @@ from __future__ import division
 from __future__ import print_function
 
 import cPickle
+import hashlib
+import hmac
 import os
 import struct
 import sys
@@ -31,6 +33,18 @@ DeOS_VAULT_PASSWD_INDEX = 1 # column where password is shown in password table
 DeOS_VAULT_CACHE_INDEX = 0
 DeOS_VAULT_WINDOW_TITLE = "Vault"
 
+def q2s(s):
+    """
+    Convert QString to UTF-8 string object
+    """
+    return str(s.toUtf8())
+
+def s2q(s):
+    """
+    Convert UTF-8 encoded string to QString
+    """
+    return QtCore.QString.fromUtf8(s)
+
 class Magic(object):
     """
     Few magic constant definitions so that
@@ -48,6 +62,18 @@ class Magic(object):
     backupNode = [hdr, u('!I', 'BKUP')]
     # string to derive backup wrapping key from.
     backupKey  = 'Decrypt backup  key?'
+
+class Padding(object):
+    """
+    PKCS#7 Padding for block cipher having 16-byte blocks
+    """
+    def __init__(self, blocksize):
+        self.blocksize = blocksize
+    def pad(self, s):
+        BS = self.blocksize
+        return s + (BS - len(s) % BS) * chr(BS - len(s) % BS)
+    def unpad(self, s):
+        return s[0:-ord(s[-1])]
 
 class DeOS_Backup(object):
     """
@@ -196,6 +222,10 @@ class DeOS_PasswordMap(object):
     """
     Storage of groups of passwords in memory.
     """
+    BLOCKSIZE = DeOS_VAULT_BLOCK_SIZE
+    MACSIZE = DeOS_VAULT_MAC_SIZE
+    KEYSIZE = DeOS_VAULT_KEY_SIZE
+
     def __init__(self, trezor):
         assert trezor is not None
         self.groups = {}
@@ -210,6 +240,11 @@ class DeOS_PasswordMap(object):
         """
         self._add_group(groupName)
 
+    def _add_group(self, groupName):
+        if groupName in self.groups:
+            raise KeyError("Group name already exists")
+        self.groups[groupName] = DeOS_PasswordGroup()
+
     def load(self, fname):
         """
         Load encrypted passwords from disk file, decrypt outer
@@ -217,19 +252,6 @@ class DeOS_PasswordMap(object):
         @throws IOError: if reading file failed
         """
         self._load(fname)
-
-    def save(self, fname):
-        """
-        Write password database to disk, encrypt it. Requires Trezor
-        connected.
-        @throws IOError: if writing file failed
-        """
-        self._save(fname)
-
-    def _add_group(self, groupName):
-        if groupName in self.groups:
-            raise KeyError("Group name already exists")
-        self.groups[groupName] = DeOS_PasswordGroup()
 
     def _load(self, fname):
         with file(fname) as f:
@@ -275,6 +297,14 @@ class DeOS_PasswordMap(object):
             serialized = self.decryptOuter(encrypted, self.outerIv)
             self.groups = cPickle.loads(serialized)
 
+    def save(self, fname):
+        """
+        Write password database to disk, encrypt it. Requires Trezor
+        connected.
+        @throws IOError: if writing file failed
+        """
+        self._save(fname)
+
     def _save(self, fname):
         assert len(self.outerKey) == DeOS_VAULT_KEY_SIZE
         rnd = Random.new()
@@ -299,6 +329,105 @@ class DeOS_PasswordMap(object):
             f.write(hmacDigest)
             f.flush()
             f.close()
+
+    def encryptOuter(self, plaintext, iv):
+        """
+        Pad and encrypt with self.outerKey
+        """
+        return self._encrypt(plaintext, iv, self.outerKey)
+
+    def _encrypt(self, plaintext, iv, key):
+        """
+        Pad plaintext with PKCS#5 and encrypt it.
+        """
+        cipher = AES.new(key, AES.MODE_CBC, iv)
+        padded = Padding(DeOS_VAULT_BLOCK_SIZE).pad(plaintext)
+        return cipher.encrypt(padded)
+
+    def decryptOuter(self, ciphertext, iv):
+        """
+        Decrypt with self.outerKey and unpad
+        """
+        return self._decrypt(ciphertext, iv, self.outerKey)
+
+    def _decrypt(self, ciphertext, iv, key):
+        """
+        Decrypt ciphertext, unpad it and return
+        """
+        cipher = AES.new(key, AES.MODE_CBC, iv)
+        plaintext = cipher.decrypt(ciphertext)
+        unpadded = Padding(DeOS_VAULT_BLOCK_SIZE).unpad(plaintext)
+        return unpadded
+
+    def unwrapKey(self, wrappedOuterKey):
+        """
+        Decrypt wrapped outer key using Trezor.
+        """
+        return self._unwrap_key(wrappedOuterKey)
+
+    def _unwrap_key(self, key):
+        return self.trezor.decrypt_keyvalue(Magic.unlockNode,
+                                            Magic.unlockKey,
+                                            key,
+                                            ask_on_encrypt=False,
+                                            ask_on_decrypt=True)
+
+    def wrapKey(self, keyToWrap):
+        """
+        Encrypt/wrap a key. Its size must be multiple of 16.
+        """
+        return self._wrap_key(keyToWrap)
+
+    def _wrap_key(self, key):
+        return self.trezor.encrypt_keyvalue(Magic.unlockNode,
+                                            Magic.unlockKey,
+                                            key,
+                                            ask_on_encrypt=False,
+                                            ask_on_decrypt=True)
+
+    def encryptPassword(self, password, groupName):
+        """
+        Encrypt a password. Does PKCS#5 padding before encryption.
+        Store IV as first block.
+
+        @param groupName key that will be shown to user on Trezor and
+            used to encrypt the password. A string in utf-8
+        """
+        return self._encrypt_password(password, groupName)
+
+    def _encrypt_password(self, password, groupName):
+        rnd = Random.new()
+        rndBlock = rnd.read(DeOS_VAULT_BLOCK_SIZE)
+        padded = Padding(DeOS_VAULT_BLOCK_SIZE).pad(password)
+        ugroup = groupName.decode("utf-8")
+        return rndBlock + self.trezor.encrypt_keyvalue(Magic.groupNode,
+                                                       ugroup,
+                                                       padded,
+                                                       ask_on_encrypt=False,
+                                                       ask_on_decrypt=True,
+                                                       iv=rndBlock)
+
+    def decryptPassword(self, encryptedPassword, groupName):
+        """
+        Decrypt a password. First block is IV. After decryption strips
+        PKCS#5 padding.
+
+        @param groupName key that will be shown to user on Trezor and
+            was used to encrypt the password. A string in utf-8.
+        """
+        return self._decrypt_password(encryptedPassword, groupName)
+
+    def _decrypt_password(self, encryptedPassword, groupName):
+        ugroup = groupName.decode("utf-8")
+        iv, encryptedPassword = encryptedPassword[:DeOS_VAULT_BLOCK_SIZE],\
+            encryptedPassword[DeOS_VAULT_BLOCK_SIZE:]
+        plain = self.trezor.decrypt_keyvalue(Magic.groupNode,
+                                             ugroup,
+                                             encryptedPassword,
+                                             ask_on_encrypt=False,
+                                             ask_on_decrypt=True,
+                                             iv=iv)
+        return Padding(DeOS_VAULT_BLOCK_SIZE).unpad(plain)
 
 class DeOS_Vault(QtGui.QMainWindow):
 

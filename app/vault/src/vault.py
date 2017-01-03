@@ -4,7 +4,6 @@
 import csv
 import os.path
 import sys
-import password_map
 
 from PyQt4 import QtCore
 from PyQt4 import QtGui
@@ -20,7 +19,7 @@ from trezorlib.transport_hid import HidTransport
 
 from backup import Backup
 from dialogs import AddGroupDialog
-from dialogs import TrezorPassphraseDialog,
+from dialogs import TrezorPassphraseDialog
 from dialogs import AddPasswordDialog
 from dialogs import InitializeDialog
 from dialogs import EnterPinDialog
@@ -31,6 +30,7 @@ from encoding import s2q
 from atdlib.vault import DeOS_VAULT_CACHE_INDEX
 from atdlib.vault import DeOS_VAULT_KEY_INDEX
 from atdlib.vault import DeOS_VAULT_PASSWD_INDEX
+from atdlib.vault import DeOS_PasswordMap
 from atdlib.vault import DeOS_Vault
 from atdlib.vault import DeOS_VaultSettings
 from atdlib.vault import DeOS_Trezor
@@ -561,7 +561,7 @@ def main():
         sys.exit(1)
     trezor.clear_session()
     # print "label:", trezor.features.label
-    pwMap = password_map.PasswordMap(trezor)
+    pwMap = DeOS_PasswordMap(trezor)
     settings = DeOS_VaultSettings()
     if settings.dbFilename and os.path.isfile(settings.dbFilename):
         try:
@@ -581,8 +581,8 @@ def main():
     else:
         initializeStorage(trezor, pwMap, settings)
     rng = Random.new()
-    pwMap.outerIv = rng.read(password_map.BLOCKSIZE)
-    pwMap.outerKey = rng.read(password_map.KEYSIZE)
+    pwMap.outerIv = rng.read(DeOS_PasswordMap.BLOCKSIZE)
+    pwMap.outerKey = rng.read(DeOS_PasswordMap.KEYSIZE)
     pwMap.encryptedBackupKey = ""
     mainWindow = MainWindow(pwMap, settings.dbFilename)
     mainWindow.show()

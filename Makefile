@@ -8,7 +8,7 @@ atdlib:
 	@-rm -rf src/atdlib/build/ src/atdlib/atdlib/*.pyc
 	@-$(SETENV) && cd src/atdlib && python setup.py install
 	@-$(SETENV) && cd src/atdlib && python setup.py build
-	@-$(SETENV) && cd dojo && python main.py
+	@-$(SETENV) && cd test && python main.py
 	@-rm -rf src/atdlib/atdlib/*.pyc
 
 help:

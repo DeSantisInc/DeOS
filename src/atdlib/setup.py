@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from setuptools import setup, find_packages
+from __future__ import division
+from __future__ import print_function
 
-setup(
-    name='DeOS',
-    version='v0.8-alpha.7',
-    description='ΔOS: Decentralized Operating System',
-    author='Andrew DeSantis',
-    author_email='atd@gmx.it',
-    url='https://github.com/DeSantisInc/DeOS',
-    packages=find_packages(),
-)
+from distutils.core import setup
+from distutils.core import Extension
+
+def main():
+    setup()
+
+__all__ = [ "main" ] if __name__ != "__main__" else main()

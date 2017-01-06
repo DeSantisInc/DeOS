@@ -4,6 +4,9 @@ all:
 	@ $(MAKE) install
 	@ $(MAKE) run
 
+atdlib:
+	@ echo $@
+
 help:
 	@ echo 'export PATH="$(BIN)/darwin:$(PATH)"'
 

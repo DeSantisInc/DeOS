@@ -17,6 +17,7 @@ etc/blockstack/*
 etc/zerotier/*
 ext/pyqt/
 ext/sip/
+ext/trezor-agent/
 include/.macro/
 obj/
 node_modules/

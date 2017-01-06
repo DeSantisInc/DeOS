@@ -1,27 +1,23 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import division
-from __future__ import print_function
+from __future__ import division, print_function
 
+import configobj
 import cPickle
 import hashlib
 import hmac
 import os
+import ruamel.yaml as yaml
+import simplejson as json
 import struct
 import sys
-import configobj
-import simplejson as json
-import ruamel.yaml as yaml
 
 from Crypto.PublicKey import RSA
-from Crypto.Cipher import AES
-from Crypto.Cipher import PKCS1_OAEP
+from Crypto.Cipher import AES, PKCS1_OAEP
 from Crypto import Random
-from PyQt4 import QtCore
-from PyQt4 import QtGui
-from trezorlib.client import BaseClient
-from trezorlib.client import ProtocolMixin
+from PyQt4 import QtCore, QtGui
+from trezorlib.client import BaseClient, ProtocolMixin
 from trezorlib.transport_hid import HidTransport
 from trezorlib import messages_pb2
 
@@ -36,7 +32,9 @@ DeOS_VAULT_PASSWD_INDEX = 1 # column where password is shown in password table
 DeOS_VAULT_CACHE_INDEX = 0
 DeOS_VAULT_WINDOW_TITLE = "Vault"
 
-class DeOS_Vault(QtGui.QMainWindow):
+__all__ = ["Vault", "VaultSettings"]
+
+class Vault(QtGui.QMainWindow):
 
     def __init__(self, passwds, database):
         """
@@ -82,7 +80,7 @@ class DeOS_Vault(QtGui.QMainWindow):
     def _set_window_title(self, title=DeOS_VAULT_WINDOW_TITLE):
         self.window_title = title
 
-class DeOS_VaultSettings(object):
+class VaultSettings(object):
 
     def __init__(self):
         self.dbFilename = None

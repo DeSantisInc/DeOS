@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import division, print_function
+
 import struct
+
 from PyQt4 import QtCore
 
 __all__ = ["q2s", "s2q", "Magic", "Padding"]

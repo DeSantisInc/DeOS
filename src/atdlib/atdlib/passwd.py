@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import division, print_function
+
 from os import getenv
 
 __all__ = ["PasswordMap"]

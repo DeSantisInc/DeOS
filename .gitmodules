@@ -1,0 +1,6 @@
+[submodule "src/bitcoin"]
+	path = src/bitcoin
+	url = git@github.com:47d/bitcoin.git
+[submodule "src/bit"]
+	path = src/bit
+	url = git@github.com:47d/bit.git

@@ -12,13 +12,11 @@ app/vault/ui_*py
 
 #[folders]
 app/vault/src/atdlib/
-bin/
 etc/blockstack/*
 etc/zerotier/*
 ext/pyqt/
 ext/sip/
 include/.macro/
-obj/
 node_modules/
 src/atdlib/build/
 tests/blockstack/integration/*

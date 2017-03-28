@@ -53,4 +53,3 @@ SIP                := ext/sip
 VIRTUAL            := venv/darwin
 XMCC               := cd $(SRC) && python xmcc.py
 XMOD               := chmod +x
-

@@ -45,7 +45,7 @@
 	url = git@github.com:47d/chainwiki.git
 [submodule "app/B.ws"]
 	path = app/B.ws
-	url = git@github.com:47d/B.ws.git
+	url = https://github.com/47d/47d.git
 [submodule "docs/macos-security"]
 	path = docs/macos-security
 	url = git@github.com:47d/macOS-Security-and-Privacy-Guide.git

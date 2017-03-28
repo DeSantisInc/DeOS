@@ -1,8 +1,4 @@
-title: DeOS
-description: ΔOS
-google_analytics: 
+title: 47d
+description: 47Δ
+google_analytics:
 show_downloads: true
-theme: jekyll-theme-tactile
-
-gems:
-  - jekyll-mentions

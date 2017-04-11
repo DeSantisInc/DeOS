@@ -1,0 +1,36 @@
+[submodule "app/bitcoin.sh"]
+	path = app/bitcoin.sh
+	url = https://github.com/0x47d/bitcoin.sh.git
+[submodule "app/urbit.sh"]
+	path = app/urbit.sh
+	url = https://github.com/0x47d/urbit.sh.git
+[submodule "app/code.news"]
+	path = app/code.news
+	url = https://github.com/0x47d/code.news.git
+[submodule "app/freebird.im"]
+	path = app/freebird.im
+	url = https://github.com/0x47d/freebird.im.git
+[submodule "app/urbit.news"]
+	path = app/urbit.news
+	url = https://github.com/0x47d/urbit.news.git
+[submodule "var/wiki"]
+	path = var/wiki
+	url = https://github.com/0x47d/deos-wiki.git
+[submodule "app/desantis.co"]
+	path = app/desantis.co
+	url = https://github.com/0x47d/desantis.co.git
+[submodule "ext/git-crypt"]
+	path = ext/git-crypt
+	url = https://github.com/0x47d/git-crypt.git
+[submodule "doc/bips"]
+	path = doc/bips
+	url = https://github.com/b17c01n/bips.git
+[submodule "doc/macos-security-and-privacy"]
+	path = doc/macos-security-and-privacy
+	url = https://github.com/0x47d/macos-security-and-privacy.git
+[submodule "doc/js-stack"]
+	path = doc/js-stack
+	url = https://github.com/0x47d/js-stack.git
+[submodule "ext/urbit"]
+	path = ext/urbit
+	url = https://github.com/0x47d/urbit.git

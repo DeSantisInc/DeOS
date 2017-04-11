@@ -1,1 +1,2 @@
 * text=auto
+*.key filter=git-crypt diff=git-crypt

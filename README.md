@@ -1,4 +1,4 @@
-# [47d](https://bitcoin.sh) | [![Build Status](https://travis-ci.org/DeSantisInc/DeOS.svg?branch=master)](https://travis-ci.org/DeSantisInc/DeOS)
+# [DeOS: Decentralized Operating System](https://bitcoin.sh) | [![Build Status](https://travis-ci.org/DeSantisInc/DeOS.svg?branch=master)](https://travis-ci.org/DeSantisInc/DeOS)
 
 > *The languages of intelligence (writing) and self-interest (money) are the*
 > *mind's greatest creations; both must be decentralized or all is lost.*

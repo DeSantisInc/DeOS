@@ -8,27 +8,25 @@ app/vault/ui_*py
 *.pwdb
 
 #[dotfolders]
-.backup/
+.DocumentRevisions-V100/
+.fseventsd/
+.TemporaryItems/
+.Trashes/
 
 #[folders]
 app/vault/src/atdlib/
-bin/
 etc/blockstack/*
 etc/zerotier/*
 ext/pyqt/
 ext/sip/
 include/.macro/
-obj/
 node_modules/
 src/atdlib/build/
 tests/blockstack/integration/*
-var/backup/*
-var/log/deos/*
-var/privkey/*
-venv/
 
 #[dotfiles]
 .DS_Store
+.metadata_never_index
 .nvmrc
 
 #[files]
